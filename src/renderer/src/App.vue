@@ -3,7 +3,7 @@
   <div class="tibar"><tibar /></div>
   <div class="App">
     <div class="config"></div>
-    <div class="Map"><baidumap></baidumap> </div>
+    <div class="Map"><baidumap ref="mapRef"/> </div>
     <div class="chat-wrapper"><Chat /></div>
     <div class="data"><div v-for="(msg, index) in messages" :key="index">{{ msg }}</div></div>
   </div>
@@ -20,14 +20,19 @@ import { ref, onMounted, onBeforeUnmount } from 'vue'
 const ws = ref(null)
 const messages = ref([])
 const inputMessage = ref('')
+const mapRef = ref(null);
 onMounted(() => {
   ws.value = new WebSocket('ws://127.0.0.1:8000/ws')
   ws.value.onopen = () => {
     console.log('WebSocket 连接成功')
   }
   ws.value.onmessage = (event) => {
-    messages.value.push(event.data)
-    console.log(event.data)
+    const msg = JSON.parse(event.data); 
+    console.log(msg)
+    if(msg.type=="draw-city"){
+      console.log("draw-city run")
+      mapRef.value.drawBoundaryByName(msg.data)
+    }
   }
 })
 </script>
