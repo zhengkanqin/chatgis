@@ -25,8 +25,6 @@
 <script setup>
 import { ref, nextTick } from 'vue'
 import MarkdownIt from 'markdown-it'
-import { full as emoji } from 'markdown-it-emoji'
-import MarkdownItMultimdTable from 'markdown-it-multimd-table'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/github.css'
 
@@ -91,6 +89,7 @@ const scrollToBottom = () => {
   padding: 1rem;
   box-sizing: border-box;
   overflow: hidden;
+  padding-top: 0;
 }
 
 .chat-history {
@@ -102,6 +101,7 @@ const scrollToBottom = () => {
   border-radius: 6px;
   background-color: #f6f8fa;
   min-height: 0;
+  
 }
 
 .chat-history::-webkit-scrollbar {

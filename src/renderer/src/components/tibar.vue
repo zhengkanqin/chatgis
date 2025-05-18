@@ -1,20 +1,16 @@
 <template>
   <div class="tibar">
-    <div class="title">chatgis demo v0.1</div>
+    <div class="title">ChatGIS</div>
     <div class="window-controls">
-      <button @click="minimize">-</button>
-      <button @click="close">x</button>
+      <i class="pi pi-minus" @click="minimize"></i>
+      <i class="pi pi-times" @click="close"></i>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
-const isDragging = ref(false);
-const startX = ref(0);
-const startY = ref(0);
-const startMouseX = ref(0);
-const startMouseY = ref(0);
+import 'primeicons/primeicons.css'
+
 const minimize = () => {
   window.api.minimizeWindow();
 };
@@ -27,35 +23,34 @@ const close = () => {
 <style>
 .tibar {
   width: 100%;
-  height: 50px; /* 设置一个固定高度 */
-  display: flex; /* 使用 Flexbox 布局 */
-  align-items: center; /* 垂直居中 */
-  justify-content: space-between; /* 子元素水平分布：标题居中，按钮靠右 */
-  padding: 0 10px; /* 添加一些内边距，使内容不紧贴边缘 */
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
   -webkit-app-region: drag;
 }
 
 .title {
-  flex-grow: 1; /* 让标题占据剩余空间 */
-  text-align: center; /* 标题文字居中 */
-  font-size: 18px; /* 设置标题字体大小 */
-  font-weight: bold; /* 设置标题字体为加粗 */
+  flex-grow: 1;
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .window-controls {
-  display: flex; /* 使用 Flexbox 布局 */
-  gap: 10px; /* 设置按钮之间的间距 */
+  display: flex;
+  gap: 10px;
   -webkit-app-region: no-drag;
 }
 
-.window-controls button {
-  border: none; /* 去掉按钮边框 */
-  background-color: transparent; /* 设置按钮背景为透明 */
-  font-size: 24px; /* 设置按钮字体大小 */
-  cursor: pointer; /* 鼠标悬停时显示手型 */
+.window-controls i {
+  cursor: pointer;
+  color: #444;
+  transition: color 0.3s ease;
 }
 
-.window-controls button:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* 鼠标悬停时的背景颜色 */
+.window-controls i:hover {
+  color: #0078d7; /* 悬浮时变蓝色 */
 }
 </style>

@@ -64,6 +64,7 @@ function createWindow() {
     resizable: false,       // 禁止调整大小
     maximizable: false,     // 禁止最大化
     minimizable: true,      // 允许最小化（可选）
+    hasShadow: true,       // 窗口阴影
     autoHideMenuBar: true,
     show: false,
     ...process.platform === "linux" ? { icon } : {},

@@ -1,5 +1,9 @@
 <template>
+  <div class="map-wrapper">
+    <div class="round">
   <div class="map-container" ref="mapContainer"></div>
+</div>
+</div>
 </template>
 
 <script setup>
@@ -69,5 +73,21 @@ defineExpose({
   width: 100%;
   height: 100%;
   min-height: 500px;
+  border-radius: 1%;
+}
+.map-wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  padding-right: 0;
+  padding-top: 0;
+}
+.round{
+  width: 100%;
+  height: 100%;
+  border-radius: 1%;
+  border-color: rgb(216, 216, 216);
+  border-style: solid;
+  border-width: 2px
 }
 </style>

@@ -20,6 +20,7 @@
   "dependencies": {
     "@electron-toolkit/preload": "^3.0.1",
     "@electron-toolkit/utils": "^4.0.0",
+    "@primeuix/themes": "^1.1.1",
     "element-plus": "^2.9.10",
     "markdown-it": "^14.1.0",
     "markdown-it-abbr": "^2.0.0",
@@ -36,7 +37,10 @@
     "markdown-it-sub": "^2.0.0",
     "markdown-it-sup": "^2.0.0",
     "markdown-it-toc-done-right": "^4.2.0",
-    "tree-kill": "^1.2.2"
+    "primeicons": "^7.0.0",
+    "primevue": "^4.3.4",
+    "tree-kill": "^1.2.2",
+    "vue-router": "^4.5.1"
   },
   "devDependencies": {
     "@electron-toolkit/eslint-config": "^2.0.0",
