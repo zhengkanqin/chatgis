@@ -1,84 +1,103 @@
 <template>
   <div class="chat-container">
-    <div class="chat-history">
-      <div v-for="(msg, index) in messages" :key="index" :class="msg.role">
-        <div class="message-header">
-          <strong>{{ msg.role === 'user' ? '你' : 'GIS助手' }}:</strong>
-        </div>
-        <div class="message-content" v-html="renderMarkdown(msg.content)"></div>
-      </div>
+    <ChatHistory ref="historyRef" :messages="messages" />
+
+<form @submit.prevent="sendMessage" class="input-area">
+  <textarea
+    ref="textarea"
+    v-model="input"
+    class="chat-input"
+    placeholder="请输入消息..."
+    :disabled="isSending"
+    rows="1"
+    @input="adjustHeight"
+    @keydown.enter="handleEnter"
+  ></textarea>
+
+  <div class="button-bar">
+    <div class="left-buttons">
+      <i class="pi pi-file" title="文件"></i>
+      <i class="pi pi-book" title="知识库"></i>
+      <i class="pi pi-paperclip" title="连接"></i>
     </div>
-    <form @submit.prevent="sendMessage">
-      <input v-model="input" type="text" placeholder="请输入消息..." :disabled="isSending" />
-      <button type="submit" :disabled="!input.trim() || isSending">
-        <template v-if="isSending">
-          <span class="spinner"></span>思考中...
-        </template>
-        <template v-else>
-          发送
-        </template>
-      </button>
-    </form>
+    <button type="submit" :disabled="!input.trim() || isSending">
+      <template v-if="isSending">
+        <span class="spinner"></span>思考中...
+      </template>
+      <template v-else>
+        发送
+      </template>
+    </button>
+  </div>
+</form>
+
   </div>
 </template>
 
 <script setup>
-import { ref, nextTick } from 'vue'
-import MarkdownIt from 'markdown-it'
-import hljs from 'highlight.js'
-import 'highlight.js/styles/github.css'
-
-const md = new MarkdownIt({
-  html: true,
-  linkify: true,
-  typographer: true,
-  highlight: function (str, lang) {
-    if (lang && hljs.getLanguage(lang)) {
-      try {
-        return hljs.highlight(str, { language: lang }).value
-      } catch (__) {}
-    }
-    return ''
-  }
-})
-
-const renderMarkdown = (content) => md.render(content)
+import { ref, nextTick, onMounted } from 'vue'
+import ChatHistory from './ChatHistory.vue'
 
 const input = ref('')
 const messages = ref([])
 const isSending = ref(false)
+const textarea = ref(null)
+const historyRef = ref(null)
 
 const sendMessage = async () => {
-  if (!input.value.trim()) return
+  const content = input.value.trim()
+  if (!content) return
 
-  const userMessage = { role: 'user', content: input.value }
-  messages.value.push(userMessage)
-  const currentInput = input.value
+  messages.value.push({ type: 'TextMessage', source: 'user', content })
   input.value = ''
   isSending.value = true
+  adjustHeight()
 
   try {
-    const response = await fetch(`http://localhost:8000/chat?q=${encodeURIComponent(currentInput)}`)
+    const response = await fetch(`http://localhost:8000/chat?q=${encodeURIComponent(content)}`)
     const data = await response.json()
-    const assistantMessage = { role: 'assistant', content: data.response }
-    messages.value.push(assistantMessage)
+    messages.value.push(...data.response.slice(1))
   } catch (error) {
-    console.error('Error fetching response:', error)
-    messages.value.push({ role: 'assistant', content: '❌ 响应出错，请稍后重试。' })
+    messages.value.push({ type: 'TextMessage', source: 'assistant', content: '❌ 响应出错，请稍后重试。' })
   } finally {
     isSending.value = false
     scrollToBottom()
   }
 }
 
-const scrollToBottom = () => {
+const handleEnter = (e) => {
+  if (!e.shiftKey) {
+    e.preventDefault()
+    sendMessage()
+  }
+}
+
+const adjustHeight = () => {
   nextTick(() => {
-    const chatHistory = document.querySelector('.chat-history')
-    if (chatHistory) {
-      chatHistory.scrollTop = chatHistory.scrollHeight
+    if (textarea.value) {
+      const el = textarea.value
+      el.style.height = 'auto' // 重置高度，让 scrollHeight 生效
+      const lineHeight = parseFloat(getComputedStyle(el).lineHeight)
+      const maxLines = 5
+      const maxHeight = lineHeight * maxLines
+
+      // 限制高度最多5行，超过出现滚动条
+      el.style.overflowY = el.scrollHeight > maxHeight ? 'auto' : 'hidden'
+      el.style.height = Math.min(el.scrollHeight, maxHeight) + 'px'
     }
   })
 }
+
+const scrollToBottom = () => {
+  nextTick(() => {
+    const el = historyRef.value?.$el || historyRef.value
+    if (el) el.scrollTop = el.scrollHeight
+  })
+}
+
+onMounted(() => {
+  adjustHeight()
+})
 </script>
 
 <style scoped>
@@ -101,114 +120,61 @@ const scrollToBottom = () => {
   border-radius: 6px;
   background-color: #f6f8fa;
   min-height: 0;
-  
 }
 
-.chat-history::-webkit-scrollbar {
-  width: 12px;
-}
-
-.chat-history::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.chat-history::-webkit-scrollbar-thumb {
-  background-color: rgba(150, 150, 150, 0.5);
-  border-radius: 8px;
-  border: 2px solid transparent;
-  background-clip: content-box;
-  transition: background-color 0.3s ease;
-}
-
-.chat-history::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(120, 120, 120, 0.7);
-}
-
-
-.chat-history > div {
-  animation: fadeIn 0.4s ease forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.message-header {
-  margin-bottom: 0.5rem;
-}
-
-.message-content {
-  padding: 0rem 0.9rem;
-  border-radius: 4px;
-}
-
-.message-content :deep(pre) {
-  background-color: #f6f8fa;
-  padding: 1rem;
-  border-radius: 6px;
-  overflow-x: auto;
-}
-
-.message-content :deep(code) {
-  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
-  font-size: 0.9em;
-}
-
-.message-content :deep(blockquote) {
-  border-left: 4px solid #dfe2e5;
-  padding-left: 1rem;
-  margin-left: 0;
-  color: #6a737d;
-}
-
-.user {
-  text-align: right;
-  margin-bottom: 1.5rem;
-}
-
-.user .message-content {
-  background-color: #d1eaff; /* 新颜色 */
-  color: #003366;
-  display: inline-block;
-  max-width: 80%;
-}
-
-.assistant {
-  text-align: left;
-  margin-bottom: 1.5rem;
-}
-
-.assistant .message-content {
-  color: #333;
-  display: inline-block;
-  max-width: 100%;
-}
-
-form {
+.input-area {
   display: flex;
+  flex-direction: column;
   gap: 0.5rem;
   width: 100%;
   flex-shrink: 0;
 }
 
-input {
+.chat-input {
   flex: 1;
-  padding: 0.75rem;
+  padding: 0.6rem 0.75rem;
   border: 1px solid #d1d5da;
   border-radius: 6px;
   font-size: 1rem;
-  min-width: 0;
+  resize: none;
+  max-height: 7.5rem; /* 1.5rem 行高 * 5 行 */
+  overflow-y: hidden; /* 默认隐藏滚动条 */
+  line-height: 1.5;
+  font-family: inherit;
+  /* 去掉 min-height，交给 rows=1 保证默认一行高度 */
+}
+
+.chat-input:focus {
+  outline: none; /* 取消默认的黄色轮廓 */
+  border-color: #2ea44f; /* 改成绿色边框 */
+  box-shadow: 0 0 5px 2px #2ea44f80; /* 绿色阴影，颜色透明度自己调 */
+}
+
+
+.button-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-buttons {
+  display: flex;
+  gap: 0.75rem;
+  color: #666;
+}
+
+.left-buttons i {
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.left-buttons i:hover {
+  color: #111;
 }
 
 button {
-  padding: 0 1.5rem;
+  padding: 0.4rem 1.2rem;
   background-color: #2ea44f;
   color: white;
   border: none;
@@ -245,6 +211,4 @@ button:hover:not(:disabled) {
     transform: rotate(360deg);
   }
 }
-
-
 </style>

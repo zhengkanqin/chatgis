@@ -2,7 +2,6 @@
     <div class="page-wrapper">
     <div class="Map"><baidumap ref="mapRef"/> </div>
     <div class="chat-wrapper"><Chat /></div>
-    <div class="data"><div v-for="(msg, index) in messages" :key="index">{{ msg }}</div></div>
   </div>
 </template>
 
@@ -38,8 +37,8 @@ onMounted(() => {
   overflow: hidden;
 }
 
-.data {
-  /* width: 50px; */
+.Side {
+  width: 50px;
   height: 100%;
 }
 
