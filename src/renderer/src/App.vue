@@ -4,11 +4,7 @@
     <SidebarNav class="SidebarNav" />
     <div class="MainContent">
       <div class="tibar"><tibar /></div>
-      <keep-alive>
-          <router-view v-slot="{ Component }">
-            <component :is="Component" />
-          </router-view>
-        </keep-alive>
+          <router-view />
       </div>
   </div>
 </div>
@@ -59,4 +55,5 @@ router-view {
   flex: 1;
   overflow: auto; /* 避免溢出时滚动 */
 }
+
 </style>

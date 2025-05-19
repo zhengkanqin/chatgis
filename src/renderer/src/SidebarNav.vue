@@ -1,40 +1,109 @@
-<!-- SidebarNav.vue -->
 <template>
-    <div class="sidebar">
-      <PanelMenu :model="items" class="w-full" />
+  <div class="sidebar-nav">
+    <!-- 主菜单按钮 -->
+    <div
+      v-for="item in items"
+      :key="item.path"
+      v-tooltip.right="item.label"
+      class="nav-icon"
+      :class="{ active: route.path === item.path }"
+      @click="router.push(item.path)"
+    >
+      <i :class="item.icon" />
     </div>
-  </template>
-  
-  <script setup>
-  import PanelMenu from 'primevue/panelmenu' // ✅ 默认导出
-  import { useRouter } from 'vue-router';
-  
-  const router = useRouter();
-  
-  const items = [
-    {
-      icon: 'pi pi-map',
-      command: () => router.push('/main')
-    },
-    {
-      icon: 'pi pi-comments',
-      command: () => router.push('/data')
-    },
-    {
-      icon: 'pi pi-database',
-      command: () => router.push('/config')
-    }
-  ];
-  </script>
-  
-  <style scoped>
-  .sidebar {
-    height: 100%;
-    border-right: 1px solid #ddd;
-    padding: 10px;
-    box-sizing: border-box;
-    box-shadow: 5px 0 8px -4px rgba(0, 0, 0, 0.3);
+
+    <!-- 信息按钮（无背景，底部固定） -->
+    <div
+      class="info-icon"
+      v-tooltip.right="'关于'"
+      @click="visible = true"
+    >
+      <i class="pi pi-info-circle" />
+    </div>
+
+    <!-- PrimeVue 弹窗组件 -->
+    <Dialog v-model:visible="visible" modal header="ChatGIS" :style="{ width: '350px' }" :draggable="false">
+      <p>Version：1.0</p>
+      <p>QQ：2335987512</p>
+    </Dialog>
+  </div>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
+import Tooltip from 'primevue/tooltip'
+import Dialog from 'primevue/dialog'
+
+const router = useRouter()
+const route = useRoute()
+
+const items = [
+  { path: '/main', label: '主页', icon: 'pi pi-map' },
+  { path: '/data', label: '数据', icon: 'pi pi-comments' },
+  { path: '/config', label: '配置', icon: 'pi pi-database' }
+]
+
+const visible = ref(false)
+</script>
+
+<script>
+export default {
+  directives: {
+    tooltip: Tooltip
   }
-  
-  </style>
-  
+}
+</script>
+
+<style scoped>
+.sidebar-nav {
+  width: 64px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-icon {
+  width: 48px;
+  height: 48px;
+  margin: 5px 0;
+  background-color: #f1f1f1;
+  color: #858585;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-icon:hover {
+  background-color: #5aa878;
+  color: #fff;
+}
+
+.nav-icon.active {
+  background-color: #459463;
+  color: #fff;
+}
+
+/* 信息按钮样式（透明背景、底部） */
+.info-icon {
+  margin-top: auto;
+  margin-bottom: 20px;
+  color: #858585;
+  font-size: 2.8rem;
+  cursor: pointer;
+  transition: color 0.3s;
+  background-color: transparent;
+  scale: 1.4;
+}
+
+.info-icon:hover {
+  color: #5aa878;
+}
+</style>

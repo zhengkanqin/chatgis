@@ -1,5 +1,5 @@
 // router/index.js
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory  } from 'vue-router'
 import Main from '../Main.vue'
 import Data from '../Data.vue'
 import Config from '../Config.vue'
@@ -11,7 +11,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes
 })
 

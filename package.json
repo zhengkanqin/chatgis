@@ -37,6 +37,7 @@
     "markdown-it-sub": "^2.0.0",
     "markdown-it-sup": "^2.0.0",
     "markdown-it-toc-done-right": "^4.2.0",
+    "marked": "^15.0.11",
     "primeicons": "^7.0.0",
     "primevue": "^4.3.4",
     "tree-kill": "^1.2.2",
