@@ -25,6 +25,9 @@
     <Dialog v-model:visible="visible" modal header="ChatGIS" :style="{ width: '350px' }" :draggable="false">
       <p>Version：1.0</p>
       <p>QQ：2335987512</p>
+      <a href="https://github.com/zhengkanqin/chatgis" target="_blank" style="color: #5aa878; text-decoration: underline;">
+    GitHub开源地址：ChatGIS
+  </a>
     </Dialog>
   </div>
 </template>

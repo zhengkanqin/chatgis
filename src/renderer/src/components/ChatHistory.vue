@@ -87,6 +87,21 @@ const renderMarkdown = (content) => md.render(content)
   padding: 1rem;
   overflow-y: auto;
   flex-grow: 1;
+  /* 美化滚动条 - WebKit 浏览器（Chrome, Edge, Safari） */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #d0d0d0 transparent; /* Firefox */
+}
+.chat-history::-webkit-scrollbar {
+  width: 6px;  /* 更细 */
+  border-radius: 9999px;   
+}
+.chat-history::-webkit-scrollbar-thumb {
+  background-color: #d0d0d0;  /* 浅灰色 */
+  border-radius: 9999px;         /* 圆角 */
+}
+
+.chat-history::-webkit-scrollbar-track {
+  background: transparent;    /* 轨道透明 */
 }
 
 .chat-item {
