@@ -1,0 +1,7 @@
+{
+  "Chat_Model_Name": "deepseek-chat",
+  "Chat_Model_Key": "sk-00d80e327eed4b40952e5ab249398eac",
+  "Chat_Model_Url": "https://api.deepseek.com",
+  "Embedding_Model_Type": "chatgpt-o4",
+  "Embedding_MOdel_Key": "123"
+}

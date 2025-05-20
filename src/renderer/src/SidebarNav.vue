@@ -43,8 +43,9 @@ const route = useRoute()
 
 const items = [
   { path: '/main', label: '主页', icon: 'pi pi-map' },
-  { path: '/data', label: '数据', icon: 'pi pi-comments' },
-  { path: '/config', label: '配置', icon: 'pi pi-database' }
+  { path: '/info', label: '文件', icon: 'pi pi-file' },
+  { path: '/data', label: '数据', icon: 'pi pi-database' },
+  { path: '/config', label: '配置', icon: 'pi pi-sliders-v' }
 ]
 
 const visible = ref(false)

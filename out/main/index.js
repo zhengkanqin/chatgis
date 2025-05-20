@@ -3,6 +3,7 @@ const electron = require("electron");
 const path = require("path");
 const utils = require("@electron-toolkit/utils");
 const child_process = require("child_process");
+const fs = require("fs").promises;
 const icon = path.join(__dirname, "../../resources/icon.png");
 const { screen } = electron;
 if (typeof electron === "string") {
@@ -69,6 +70,9 @@ function createWindow() {
   mainWindow.on("ready-to-show", () => {
     mainWindow.show();
   });
+  mainWindow.webContents.once("did-finish-load", () => {
+    mainWindow.webContents.send("is-dev", isDev);
+  });
   mainWindow.webContents.setWindowOpenHandler((details) => {
     electron.shell.openExternal(details.url);
     return { action: "deny" };
@@ -100,6 +104,24 @@ electron.app.whenReady().then(() => {
   electron.ipcMain.on("close-window", () => {
     console.log("Close event received");
     mainWindow.close();
+  });
+  electron.ipcMain.handle("save-config", async (event, configPath, config) => {
+    try {
+      await fs.writeFile(configPath, JSON.stringify(config, null, 2), "utf-8");
+      return { success: true };
+    } catch (error) {
+      console.error("保存配置失败:", error);
+      return { success: false, error: error.message };
+    }
+  });
+  electron.ipcMain.handle("read-config", async (event, configPath) => {
+    try {
+      const content = await fs.readFile(configPath, "utf-8");
+      return { success: true, data: JSON.parse(content) };
+    } catch (error) {
+      console.error("读取配置失败:", error);
+      return { success: false, error: error.message };
+    }
   });
   createWindow();
   electron.app.on("activate", function() {

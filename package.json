@@ -61,15 +61,15 @@
     "appId": "com.example.chatgis",
     "productName": "ChatGIS",
     "files": [
-      "dist/**",
       "out/**"
     ],
-    "extraResources": [
-      {
-        "from": "out/back/fastapi_server.exe",
-        "to": "fastapi_server.exe"
-      }
-    ],
+"extraResources": [
+  {
+    "from": "out/back/",
+    "to": ".",
+    "filter": ["**/*"]
+  }
+],
     "win": {
       "target": "nsis"
     }

@@ -10,7 +10,6 @@ import Chat from './components/chat.vue'
 import baidumap from './components/baidumap.vue';
 import { ref, onMounted } from 'vue'
 const ws = ref(null)
-const messages = ref([])
 const mapRef = ref(null);
 onMounted(() => {
   ws.value = new WebSocket('ws://127.0.0.1:8000/ws')
