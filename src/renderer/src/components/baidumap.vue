@@ -25,7 +25,7 @@
           >
             <i :class="getTypeIcon(item.type)" class="type-icon"></i>
             <span class="layer-name">{{ item.name }}</span>
-            <button class="delete-btn"><i class="pi pi-trash"></i></button>
+            <button class="delete-btn"><i class="pi pi-pen-to-square"></i></button>
           </div>
         </div>
       </div>
