@@ -1,6 +1,6 @@
 <template>
   <div class="tibar">
-    <div class="title">ChatGIS</div>
+    <div class="title">ChatGIS1</div>
     <div class="window-controls">
       <i class="pi pi-minus" @click="minimize"></i>
       <i class="pi pi-times" @click="close"></i>
