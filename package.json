@@ -42,7 +42,8 @@
     "primeicons": "^7.0.0",
     "primevue": "^4.3.4",
     "tree-kill": "^1.2.2",
-    "vue-router": "^4.5.1"
+    "vue-router": "^4.5.1",
+    "vue3-baidu-map-gl": "^2.6.5"
   },
   "devDependencies": {
     "@electron-toolkit/eslint-config": "^2.0.0",
