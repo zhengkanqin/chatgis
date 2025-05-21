@@ -1,18 +1,29 @@
 <template>
-    <div class="p-4" >
-      <div v-if="configLoaded">
-        <div v-for="(value, key) in config" :key="key" class="p-field p-my-3">
-          <label :for="key" class="p-d-block">{{ key }}</label>
-          <InputText
-            :id="key"
-            v-model="config[key]"
-            class="p-inputtext-sm p-d-block"
-          />
+    <div class="config-container">
+      <div v-if="configLoaded" class="config-content">
+        <h2 class="config-title">系统配置</h2>
+        <div class="config-form">
+          <div v-for="(value, key) in config" :key="key" class="config-field">
+            <label :for="key" class="field-label">{{ key }}</label>
+            <InputText
+              :id="key"
+              v-model="config[key]"
+              class="field-input"
+            />
+          </div>
+          <div class="button-container">
+            <Button 
+              label="保存配置" 
+              class="save-button"
+              @click="submitConfig"
+            />
+          </div>
         </div>
-        <div class="button-container"><Button label="保存配置" icon="pi pi-check" @click="submitConfig"/></div>
-        
       </div>
-      <div v-else>加载中...</div>
+      <div v-else class="loading-container">
+        <i class="pi pi-spin pi-spinner" style="font-size: 2rem"></i>
+        <span class="loading-text">加载中...</span>
+      </div>
     </div>
   </template>
   
@@ -62,25 +73,109 @@
   </script>
   
   <style scoped>
-  .p-field {
+  .config-container {
+    padding: 2rem;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+  }
+
+  .config-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .config-title {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  .config-form {
     display: flex;
     flex-direction: column;
-    margin: 3rem;
+    gap: 1.5rem;
+  }
+
+  .config-field {
+    display: flex;
+    flex-direction: column;
     gap: 0.5rem;
   }
 
-  .p-inputtext-sm {
+  .field-label {
+    font-size: 0.9rem;
+    color: #4a5568;
+    font-weight: 500;
+  }
+
+  .field-input {
     width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+  }
+
+  .field-input:hover {
+    border-color: #4299e1;
+  }
+
+  .field-input:focus {
+    border-color: #3182ce;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
   }
 
   .button-container {
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
-    padding: 5rem;
   }
-  .button-container button {
-    width: 100%;
+
+  .save-button {
+    background-color:rgb(93, 180, 93);
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    min-width: 200px;
+  }
+
+  .save-button:hover {
+    background-color: #3182ce;
+    transform: translateY(-1px);
+  }
+
+  .loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    gap: 1rem;
+  }
+
+  .loading-text {
+    color: #4a5568;
+    font-size: 1.1rem;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   </style>
   

@@ -20,6 +20,13 @@
 <script setup>
 import tibar from './components/tibar.vue';
 import SidebarNav from './SidebarNav.vue';
+import 'highlight.js/styles/github.css';
+import hljs from 'highlight.js';
+
+// 配置 highlight.js
+hljs.configure({
+  languages: ['javascript', 'vue', 'html', 'css', 'json', 'bash', 'markdown']
+});
 </script>
 
 <style>
@@ -47,7 +54,7 @@ html, body, #app {
   height: 100%;
   overflow: hidden;
 }
-
+/* 侧边栏 */
 .SidebarNav {
   width: 70px;
   flex-shrink: 0;  /* 禁止缩小 */
