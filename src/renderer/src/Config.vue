@@ -77,6 +77,7 @@
     padding: 2rem;
     min-height: 100vh;
     background-color: #f8f9fa;
+    overflow: hidden;
   }
 
   .config-content {
@@ -87,6 +88,13 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 2rem;
     animation: fadeIn 0.3s ease-in-out;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .config-content::-webkit-scrollbar {
+    display: none;
   }
 
   .config-title {

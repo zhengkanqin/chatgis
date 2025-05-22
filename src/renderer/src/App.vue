@@ -40,6 +40,16 @@ html, body, #app {
   box-sizing: border-box;
 }
 
+/* 隐藏所有滚动条 */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
 .container {
   height: 100vh;
   width: 100%;

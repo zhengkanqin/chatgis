@@ -14890,8 +14890,8 @@ function _toPrimitive$2(t2, r2) {
 }
 var _hoisted_1$8 = ["data-p"];
 var _hoisted_2$7 = ["aria-labelledby", "aria-modal", "data-p"];
-var _hoisted_3$5 = ["id"];
-var _hoisted_4$4 = ["data-p"];
+var _hoisted_3$6 = ["id"];
+var _hoisted_4$5 = ["data-p"];
 function render$1(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Button = resolveComponent("Button");
   var _component_Portal = resolveComponent("Portal");
@@ -14956,7 +14956,7 @@ function render$1(_ctx, _cache, $props, $setup, $data, $options) {
               key: 0,
               id: $options.ariaLabelledById,
               "class": _ctx.cx("title")
-            }, _ctx.ptm("title")), toDisplayString(_ctx.header), 17, _hoisted_3$5)) : createCommentVNode("", true)];
+            }, _ctx.ptm("title")), toDisplayString(_ctx.header), 17, _hoisted_3$6)) : createCommentVNode("", true)];
           }), createBaseVNode("div", mergeProps({
             "class": _ctx.cx("headerActions")
           }, _ctx.ptm("headerActions")), [_ctx.maximizable ? renderSlot(_ctx.$slots, "maximizebutton", {
@@ -15017,7 +15017,7 @@ function render$1(_ctx, _cache, $props, $setup, $data, $options) {
             "class": [_ctx.cx("content"), _ctx.contentClass],
             style: _ctx.contentStyle,
             "data-p": $options.dataP
-          }, _objectSpread$1(_objectSpread$1({}, _ctx.contentProps), _ctx.ptm("content"))), [renderSlot(_ctx.$slots, "default")], 16, _hoisted_4$4), _ctx.footer || _ctx.$slots.footer ? (openBlock(), createElementBlock("div", mergeProps({
+          }, _objectSpread$1(_objectSpread$1({}, _ctx.contentProps), _ctx.ptm("content"))), [renderSlot(_ctx.$slots, "default")], 16, _hoisted_4$5), _ctx.footer || _ctx.$slots.footer ? (openBlock(), createElementBlock("div", mergeProps({
             key: 1,
             ref: $options.footerContainerRef,
             "class": _ctx.cx("footer")
@@ -15118,5627 +15118,6 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign(__default__, {
   }
 });
 const SidebarNav = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["__scopeId", "data-v-1e524dc5"]]);
-const _hoisted_1$6 = { class: "container" };
-const _hoisted_2$5 = { class: "App" };
-const _hoisted_3$4 = { class: "MainContent" };
-const _hoisted_4$3 = { class: "tibar" };
-const _hoisted_5$2 = { class: "router-view-wrapper" };
-const _sfc_main$7 = {
-  __name: "App",
-  setup(__props) {
-    return (_ctx, _cache) => {
-      const _component_router_view = resolveComponent("router-view");
-      return openBlock(), createElementBlock("div", _hoisted_1$6, [
-        createBaseVNode("div", _hoisted_2$5, [
-          createVNode(SidebarNav, { class: "SidebarNav" }),
-          createBaseVNode("div", _hoisted_3$4, [
-            createBaseVNode("div", _hoisted_4$3, [
-              createVNode(_sfc_main$9)
-            ]),
-            createBaseVNode("div", _hoisted_5$2, [
-              createVNode(_component_router_view, null, {
-                default: withCtx(({ Component }) => [
-                  (openBlock(), createBlock(KeepAlive, null, [
-                    (openBlock(), createBlock(resolveDynamicComponent(Component)))
-                  ], 1024))
-                ]),
-                _: 1
-              })
-            ])
-          ])
-        ])
-      ]);
-    };
-  }
-};
-var FilterMatchMode = {
-  STARTS_WITH: "startsWith",
-  CONTAINS: "contains",
-  NOT_CONTAINS: "notContains",
-  ENDS_WITH: "endsWith",
-  EQUALS: "equals",
-  NOT_EQUALS: "notEquals",
-  LESS_THAN: "lt",
-  LESS_THAN_OR_EQUAL_TO: "lte",
-  GREATER_THAN: "gt",
-  GREATER_THAN_OR_EQUAL_TO: "gte",
-  DATE_IS: "dateIs",
-  DATE_IS_NOT: "dateIsNot",
-  DATE_BEFORE: "dateBefore",
-  DATE_AFTER: "dateAfter"
-};
-function _typeof$1(o2) {
-  "@babel/helpers - typeof";
-  return _typeof$1 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o3) {
-    return typeof o3;
-  } : function(o3) {
-    return o3 && "function" == typeof Symbol && o3.constructor === Symbol && o3 !== Symbol.prototype ? "symbol" : typeof o3;
-  }, _typeof$1(o2);
-}
-function ownKeys(e2, r2) {
-  var t2 = Object.keys(e2);
-  if (Object.getOwnPropertySymbols) {
-    var o2 = Object.getOwnPropertySymbols(e2);
-    r2 && (o2 = o2.filter(function(r3) {
-      return Object.getOwnPropertyDescriptor(e2, r3).enumerable;
-    })), t2.push.apply(t2, o2);
-  }
-  return t2;
-}
-function _objectSpread(e2) {
-  for (var r2 = 1; r2 < arguments.length; r2++) {
-    var t2 = null != arguments[r2] ? arguments[r2] : {};
-    r2 % 2 ? ownKeys(Object(t2), true).forEach(function(r3) {
-      _defineProperty$1(e2, r3, t2[r3]);
-    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e2, Object.getOwnPropertyDescriptors(t2)) : ownKeys(Object(t2)).forEach(function(r3) {
-      Object.defineProperty(e2, r3, Object.getOwnPropertyDescriptor(t2, r3));
-    });
-  }
-  return e2;
-}
-function _defineProperty$1(e2, r2, t2) {
-  return (r2 = _toPropertyKey$1(r2)) in e2 ? Object.defineProperty(e2, r2, { value: t2, enumerable: true, configurable: true, writable: true }) : e2[r2] = t2, e2;
-}
-function _toPropertyKey$1(t2) {
-  var i2 = _toPrimitive$1(t2, "string");
-  return "symbol" == _typeof$1(i2) ? i2 : i2 + "";
-}
-function _toPrimitive$1(t2, r2) {
-  if ("object" != _typeof$1(t2) || !t2) return t2;
-  var e2 = t2[Symbol.toPrimitive];
-  if (void 0 !== e2) {
-    var i2 = e2.call(t2, r2);
-    if ("object" != _typeof$1(i2)) return i2;
-    throw new TypeError("@@toPrimitive must return a primitive value.");
-  }
-  return ("string" === r2 ? String : Number)(t2);
-}
-var defaultOptions$1 = {
-  ripple: false,
-  inputStyle: null,
-  inputVariant: null,
-  locale: {
-    startsWith: "Starts with",
-    contains: "Contains",
-    notContains: "Not contains",
-    endsWith: "Ends with",
-    equals: "Equals",
-    notEquals: "Not equals",
-    noFilter: "No Filter",
-    lt: "Less than",
-    lte: "Less than or equal to",
-    gt: "Greater than",
-    gte: "Greater than or equal to",
-    dateIs: "Date is",
-    dateIsNot: "Date is not",
-    dateBefore: "Date is before",
-    dateAfter: "Date is after",
-    clear: "Clear",
-    apply: "Apply",
-    matchAll: "Match All",
-    matchAny: "Match Any",
-    addRule: "Add Rule",
-    removeRule: "Remove Rule",
-    accept: "Yes",
-    reject: "No",
-    choose: "Choose",
-    upload: "Upload",
-    cancel: "Cancel",
-    completed: "Completed",
-    pending: "Pending",
-    fileSizeTypes: ["B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"],
-    dayNames: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-    dayNamesShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-    dayNamesMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
-    monthNames: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-    monthNamesShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-    chooseYear: "Choose Year",
-    chooseMonth: "Choose Month",
-    chooseDate: "Choose Date",
-    prevDecade: "Previous Decade",
-    nextDecade: "Next Decade",
-    prevYear: "Previous Year",
-    nextYear: "Next Year",
-    prevMonth: "Previous Month",
-    nextMonth: "Next Month",
-    prevHour: "Previous Hour",
-    nextHour: "Next Hour",
-    prevMinute: "Previous Minute",
-    nextMinute: "Next Minute",
-    prevSecond: "Previous Second",
-    nextSecond: "Next Second",
-    am: "am",
-    pm: "pm",
-    today: "Today",
-    weekHeader: "Wk",
-    firstDayOfWeek: 0,
-    showMonthAfterYear: false,
-    dateFormat: "mm/dd/yy",
-    weak: "Weak",
-    medium: "Medium",
-    strong: "Strong",
-    passwordPrompt: "Enter a password",
-    emptyFilterMessage: "No results found",
-    searchMessage: "{0} results are available",
-    selectionMessage: "{0} items selected",
-    emptySelectionMessage: "No selected item",
-    emptySearchMessage: "No results found",
-    fileChosenMessage: "{0} files",
-    noFileChosenMessage: "No file chosen",
-    emptyMessage: "No available options",
-    aria: {
-      trueLabel: "True",
-      falseLabel: "False",
-      nullLabel: "Not Selected",
-      star: "1 star",
-      stars: "{star} stars",
-      selectAll: "All items selected",
-      unselectAll: "All items unselected",
-      close: "Close",
-      previous: "Previous",
-      next: "Next",
-      navigation: "Navigation",
-      scrollTop: "Scroll Top",
-      moveTop: "Move Top",
-      moveUp: "Move Up",
-      moveDown: "Move Down",
-      moveBottom: "Move Bottom",
-      moveToTarget: "Move to Target",
-      moveToSource: "Move to Source",
-      moveAllToTarget: "Move All to Target",
-      moveAllToSource: "Move All to Source",
-      pageLabel: "Page {page}",
-      firstPageLabel: "First Page",
-      lastPageLabel: "Last Page",
-      nextPageLabel: "Next Page",
-      prevPageLabel: "Previous Page",
-      rowsPerPageLabel: "Rows per page",
-      jumpToPageDropdownLabel: "Jump to Page Dropdown",
-      jumpToPageInputLabel: "Jump to Page Input",
-      selectRow: "Row Selected",
-      unselectRow: "Row Unselected",
-      expandRow: "Row Expanded",
-      collapseRow: "Row Collapsed",
-      showFilterMenu: "Show Filter Menu",
-      hideFilterMenu: "Hide Filter Menu",
-      filterOperator: "Filter Operator",
-      filterConstraint: "Filter Constraint",
-      editRow: "Row Edit",
-      saveEdit: "Save Edit",
-      cancelEdit: "Cancel Edit",
-      listView: "List View",
-      gridView: "Grid View",
-      slide: "Slide",
-      slideNumber: "{slideNumber}",
-      zoomImage: "Zoom Image",
-      zoomIn: "Zoom In",
-      zoomOut: "Zoom Out",
-      rotateRight: "Rotate Right",
-      rotateLeft: "Rotate Left",
-      listLabel: "Option List"
-    }
-  },
-  filterMatchModeOptions: {
-    text: [FilterMatchMode.STARTS_WITH, FilterMatchMode.CONTAINS, FilterMatchMode.NOT_CONTAINS, FilterMatchMode.ENDS_WITH, FilterMatchMode.EQUALS, FilterMatchMode.NOT_EQUALS],
-    numeric: [FilterMatchMode.EQUALS, FilterMatchMode.NOT_EQUALS, FilterMatchMode.LESS_THAN, FilterMatchMode.LESS_THAN_OR_EQUAL_TO, FilterMatchMode.GREATER_THAN, FilterMatchMode.GREATER_THAN_OR_EQUAL_TO],
-    date: [FilterMatchMode.DATE_IS, FilterMatchMode.DATE_IS_NOT, FilterMatchMode.DATE_BEFORE, FilterMatchMode.DATE_AFTER]
-  },
-  zIndex: {
-    modal: 1100,
-    overlay: 1e3,
-    menu: 1e3,
-    tooltip: 1100
-  },
-  theme: void 0,
-  unstyled: false,
-  pt: void 0,
-  ptOptions: {
-    mergeSections: true,
-    mergeProps: false
-  },
-  csp: {
-    nonce: void 0
-  }
-};
-var PrimeVueSymbol = Symbol();
-function setup(app2, options) {
-  var PrimeVue2 = {
-    config: reactive(options)
-  };
-  app2.config.globalProperties.$primevue = PrimeVue2;
-  app2.provide(PrimeVueSymbol, PrimeVue2);
-  clearConfig();
-  setupConfig(app2, PrimeVue2);
-  return PrimeVue2;
-}
-var stopWatchers = [];
-function clearConfig() {
-  service_default.clear();
-  stopWatchers.forEach(function(fn) {
-    return fn === null || fn === void 0 ? void 0 : fn();
-  });
-  stopWatchers = [];
-}
-function setupConfig(app2, PrimeVue2) {
-  var isThemeChanged = ref(false);
-  var loadCommonTheme = function loadCommonTheme2() {
-    var _PrimeVue$config;
-    if (((_PrimeVue$config = PrimeVue2.config) === null || _PrimeVue$config === void 0 ? void 0 : _PrimeVue$config.theme) === "none") return;
-    if (!config_default.isStyleNameLoaded("common")) {
-      var _BaseStyle$getCommonT, _PrimeVue$config2;
-      var _ref = ((_BaseStyle$getCommonT = BaseStyle.getCommonTheme) === null || _BaseStyle$getCommonT === void 0 ? void 0 : _BaseStyle$getCommonT.call(BaseStyle)) || {}, primitive = _ref.primitive, semantic = _ref.semantic, global2 = _ref.global, style2 = _ref.style;
-      var styleOptions = {
-        nonce: (_PrimeVue$config2 = PrimeVue2.config) === null || _PrimeVue$config2 === void 0 || (_PrimeVue$config2 = _PrimeVue$config2.csp) === null || _PrimeVue$config2 === void 0 ? void 0 : _PrimeVue$config2.nonce
-      };
-      BaseStyle.load(primitive === null || primitive === void 0 ? void 0 : primitive.css, _objectSpread({
-        name: "primitive-variables"
-      }, styleOptions));
-      BaseStyle.load(semantic === null || semantic === void 0 ? void 0 : semantic.css, _objectSpread({
-        name: "semantic-variables"
-      }, styleOptions));
-      BaseStyle.load(global2 === null || global2 === void 0 ? void 0 : global2.css, _objectSpread({
-        name: "global-variables"
-      }, styleOptions));
-      BaseStyle.loadStyle(_objectSpread({
-        name: "global-style"
-      }, styleOptions), style2);
-      config_default.setLoadedStyleName("common");
-    }
-  };
-  service_default.on("theme:change", function(newTheme) {
-    if (!isThemeChanged.value) {
-      app2.config.globalProperties.$primevue.config.theme = newTheme;
-      isThemeChanged.value = true;
-    }
-  });
-  var stopConfigWatcher = watch(PrimeVue2.config, function(newValue, oldValue) {
-    PrimeVueService.emit("config:change", {
-      newValue,
-      oldValue
-    });
-  }, {
-    immediate: true,
-    deep: true
-  });
-  var stopRippleWatcher = watch(function() {
-    return PrimeVue2.config.ripple;
-  }, function(newValue, oldValue) {
-    PrimeVueService.emit("config:ripple:change", {
-      newValue,
-      oldValue
-    });
-  }, {
-    immediate: true,
-    deep: true
-  });
-  var stopThemeWatcher = watch(function() {
-    return PrimeVue2.config.theme;
-  }, function(newValue, oldValue) {
-    if (!isThemeChanged.value) {
-      config_default.setTheme(newValue);
-    }
-    if (!PrimeVue2.config.unstyled) {
-      loadCommonTheme();
-    }
-    isThemeChanged.value = false;
-    PrimeVueService.emit("config:theme:change", {
-      newValue,
-      oldValue
-    });
-  }, {
-    immediate: true,
-    deep: false
-  });
-  var stopUnstyledWatcher = watch(function() {
-    return PrimeVue2.config.unstyled;
-  }, function(newValue, oldValue) {
-    if (!newValue && PrimeVue2.config.theme) {
-      loadCommonTheme();
-    }
-    PrimeVueService.emit("config:unstyled:change", {
-      newValue,
-      oldValue
-    });
-  }, {
-    immediate: true,
-    deep: true
-  });
-  stopWatchers.push(stopConfigWatcher);
-  stopWatchers.push(stopRippleWatcher);
-  stopWatchers.push(stopThemeWatcher);
-  stopWatchers.push(stopUnstyledWatcher);
-}
-var PrimeVue = {
-  install: function install(app2, options) {
-    var configOptions = mergeKeys(defaultOptions$1, options);
-    setup(app2, configOptions);
-  }
-};
-var o$1m = { transitionDuration: "{transition.duration}" }, r$1j = { borderWidth: "0 0 1px 0", borderColor: "{content.border.color}" }, t$E = { color: "{text.muted.color}", hoverColor: "{text.color}", activeColor: "{text.color}", padding: "1.125rem", fontWeight: "600", borderRadius: "0", borderWidth: "0", borderColor: "{content.border.color}", background: "{content.background}", hoverBackground: "{content.background}", activeBackground: "{content.background}", activeHoverBackground: "{content.background}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "-1px", shadow: "{focus.ring.shadow}" }, toggleIcon: { color: "{text.muted.color}", hoverColor: "{text.color}", activeColor: "{text.color}", activeHoverColor: "{text.color}" }, first: { topBorderRadius: "{content.border.radius}", borderWidth: "0" }, last: { bottomBorderRadius: "{content.border.radius}", activeBottomBorderRadius: "0" } }, e$V = { borderWidth: "0", borderColor: "{content.border.color}", background: "{content.background}", color: "{text.color}", padding: "0 1.125rem 1.125rem 1.125rem" }, c$p = { root: o$1m, panel: r$1j, header: t$E, content: e$V };
-var o$1l = { background: "{form.field.background}", disabledBackground: "{form.field.disabled.background}", filledBackground: "{form.field.filled.background}", filledHoverBackground: "{form.field.filled.hover.background}", filledFocusBackground: "{form.field.filled.focus.background}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.hover.border.color}", focusBorderColor: "{form.field.focus.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", color: "{form.field.color}", disabledColor: "{form.field.disabled.color}", placeholderColor: "{form.field.placeholder.color}", invalidPlaceholderColor: "{form.field.invalid.placeholder.color}", shadow: "{form.field.shadow}", paddingX: "{form.field.padding.x}", paddingY: "{form.field.padding.y}", borderRadius: "{form.field.border.radius}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}" }, r$1i = { background: "{overlay.select.background}", borderColor: "{overlay.select.border.color}", borderRadius: "{overlay.select.border.radius}", color: "{overlay.select.color}", shadow: "{overlay.select.shadow}" }, d$w = { padding: "{list.padding}", gap: "{list.gap}" }, e$U = { focusBackground: "{list.option.focus.background}", selectedBackground: "{list.option.selected.background}", selectedFocusBackground: "{list.option.selected.focus.background}", color: "{list.option.color}", focusColor: "{list.option.focus.color}", selectedColor: "{list.option.selected.color}", selectedFocusColor: "{list.option.selected.focus.color}", padding: "{list.option.padding}", borderRadius: "{list.option.border.radius}" }, l$g = { background: "{list.option.group.background}", color: "{list.option.group.color}", fontWeight: "{list.option.group.font.weight}", padding: "{list.option.group.padding}" }, i$r = { width: "2.5rem", sm: { width: "2rem" }, lg: { width: "3rem" }, borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.border.color}", activeBorderColor: "{form.field.border.color}", borderRadius: "{form.field.border.radius}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, c$o = { borderRadius: "{border.radius.sm}" }, f$9 = { padding: "{list.option.padding}" }, s$9 = { light: { chip: { focusBackground: "{surface.200}", focusColor: "{surface.800}" }, dropdown: { background: "{surface.100}", hoverBackground: "{surface.200}", activeBackground: "{surface.300}", color: "{surface.600}", hoverColor: "{surface.700}", activeColor: "{surface.800}" } }, dark: { chip: { focusBackground: "{surface.700}", focusColor: "{surface.0}" }, dropdown: { background: "{surface.800}", hoverBackground: "{surface.700}", activeBackground: "{surface.600}", color: "{surface.300}", hoverColor: "{surface.200}", activeColor: "{surface.100}" } } }, a$F = { root: o$1l, overlay: r$1i, list: d$w, option: e$U, optionGroup: l$g, dropdown: i$r, chip: c$o, emptyMessage: f$9, colorScheme: s$9 };
-var e$T = { width: "2rem", height: "2rem", fontSize: "1rem", background: "{content.border.color}", color: "{content.color}", borderRadius: "{content.border.radius}" }, r$1h = { size: "1rem" }, o$1k = { borderColor: "{content.background}", offset: "-0.75rem" }, t$D = { width: "3rem", height: "3rem", fontSize: "1.5rem", icon: { size: "1.5rem" }, group: { offset: "-1rem" } }, i$q = { width: "4rem", height: "4rem", fontSize: "2rem", icon: { size: "2rem" }, group: { offset: "-1.5rem" } }, n$B = { root: e$T, icon: r$1h, group: o$1k, lg: t$D, xl: i$q };
-var r$1g = { borderRadius: "{border.radius.md}", padding: "0 0.5rem", fontSize: "0.75rem", fontWeight: "700", minWidth: "1.5rem", height: "1.5rem" }, o$1j = { size: "0.5rem" }, e$S = { fontSize: "0.625rem", minWidth: "1.25rem", height: "1.25rem" }, c$n = { fontSize: "0.875rem", minWidth: "1.75rem", height: "1.75rem" }, a$E = { fontSize: "1rem", minWidth: "2rem", height: "2rem" }, n$A = { light: { primary: { background: "{primary.color}", color: "{primary.contrast.color}" }, secondary: { background: "{surface.100}", color: "{surface.600}" }, success: { background: "{green.500}", color: "{surface.0}" }, info: { background: "{sky.500}", color: "{surface.0}" }, warn: { background: "{orange.500}", color: "{surface.0}" }, danger: { background: "{red.500}", color: "{surface.0}" }, contrast: { background: "{surface.950}", color: "{surface.0}" } }, dark: { primary: { background: "{primary.color}", color: "{primary.contrast.color}" }, secondary: { background: "{surface.800}", color: "{surface.300}" }, success: { background: "{green.400}", color: "{green.950}" }, info: { background: "{sky.400}", color: "{sky.950}" }, warn: { background: "{orange.400}", color: "{orange.950}" }, danger: { background: "{red.400}", color: "{red.950}" }, contrast: { background: "{surface.0}", color: "{surface.950}" } } }, d$v = { root: r$1g, dot: o$1j, sm: e$S, lg: c$n, xl: a$E, colorScheme: n$A };
-var r$1f = { borderRadius: { none: "0", xs: "2px", sm: "4px", md: "6px", lg: "8px", xl: "12px" }, emerald: { 50: "#ecfdf5", 100: "#d1fae5", 200: "#a7f3d0", 300: "#6ee7b7", 400: "#34d399", 500: "#10b981", 600: "#059669", 700: "#047857", 800: "#065f46", 900: "#064e3b", 950: "#022c22" }, green: { 50: "#f0fdf4", 100: "#dcfce7", 200: "#bbf7d0", 300: "#86efac", 400: "#4ade80", 500: "#22c55e", 600: "#16a34a", 700: "#15803d", 800: "#166534", 900: "#14532d", 950: "#052e16" }, lime: { 50: "#f7fee7", 100: "#ecfccb", 200: "#d9f99d", 300: "#bef264", 400: "#a3e635", 500: "#84cc16", 600: "#65a30d", 700: "#4d7c0f", 800: "#3f6212", 900: "#365314", 950: "#1a2e05" }, red: { 50: "#fef2f2", 100: "#fee2e2", 200: "#fecaca", 300: "#fca5a5", 400: "#f87171", 500: "#ef4444", 600: "#dc2626", 700: "#b91c1c", 800: "#991b1b", 900: "#7f1d1d", 950: "#450a0a" }, orange: { 50: "#fff7ed", 100: "#ffedd5", 200: "#fed7aa", 300: "#fdba74", 400: "#fb923c", 500: "#f97316", 600: "#ea580c", 700: "#c2410c", 800: "#9a3412", 900: "#7c2d12", 950: "#431407" }, amber: { 50: "#fffbeb", 100: "#fef3c7", 200: "#fde68a", 300: "#fcd34d", 400: "#fbbf24", 500: "#f59e0b", 600: "#d97706", 700: "#b45309", 800: "#92400e", 900: "#78350f", 950: "#451a03" }, yellow: { 50: "#fefce8", 100: "#fef9c3", 200: "#fef08a", 300: "#fde047", 400: "#facc15", 500: "#eab308", 600: "#ca8a04", 700: "#a16207", 800: "#854d0e", 900: "#713f12", 950: "#422006" }, teal: { 50: "#f0fdfa", 100: "#ccfbf1", 200: "#99f6e4", 300: "#5eead4", 400: "#2dd4bf", 500: "#14b8a6", 600: "#0d9488", 700: "#0f766e", 800: "#115e59", 900: "#134e4a", 950: "#042f2e" }, cyan: { 50: "#ecfeff", 100: "#cffafe", 200: "#a5f3fc", 300: "#67e8f9", 400: "#22d3ee", 500: "#06b6d4", 600: "#0891b2", 700: "#0e7490", 800: "#155e75", 900: "#164e63", 950: "#083344" }, sky: { 50: "#f0f9ff", 100: "#e0f2fe", 200: "#bae6fd", 300: "#7dd3fc", 400: "#38bdf8", 500: "#0ea5e9", 600: "#0284c7", 700: "#0369a1", 800: "#075985", 900: "#0c4a6e", 950: "#082f49" }, blue: { 50: "#eff6ff", 100: "#dbeafe", 200: "#bfdbfe", 300: "#93c5fd", 400: "#60a5fa", 500: "#3b82f6", 600: "#2563eb", 700: "#1d4ed8", 800: "#1e40af", 900: "#1e3a8a", 950: "#172554" }, indigo: { 50: "#eef2ff", 100: "#e0e7ff", 200: "#c7d2fe", 300: "#a5b4fc", 400: "#818cf8", 500: "#6366f1", 600: "#4f46e5", 700: "#4338ca", 800: "#3730a3", 900: "#312e81", 950: "#1e1b4b" }, violet: { 50: "#f5f3ff", 100: "#ede9fe", 200: "#ddd6fe", 300: "#c4b5fd", 400: "#a78bfa", 500: "#8b5cf6", 600: "#7c3aed", 700: "#6d28d9", 800: "#5b21b6", 900: "#4c1d95", 950: "#2e1065" }, purple: { 50: "#faf5ff", 100: "#f3e8ff", 200: "#e9d5ff", 300: "#d8b4fe", 400: "#c084fc", 500: "#a855f7", 600: "#9333ea", 700: "#7e22ce", 800: "#6b21a8", 900: "#581c87", 950: "#3b0764" }, fuchsia: { 50: "#fdf4ff", 100: "#fae8ff", 200: "#f5d0fe", 300: "#f0abfc", 400: "#e879f9", 500: "#d946ef", 600: "#c026d3", 700: "#a21caf", 800: "#86198f", 900: "#701a75", 950: "#4a044e" }, pink: { 50: "#fdf2f8", 100: "#fce7f3", 200: "#fbcfe8", 300: "#f9a8d4", 400: "#f472b6", 500: "#ec4899", 600: "#db2777", 700: "#be185d", 800: "#9d174d", 900: "#831843", 950: "#500724" }, rose: { 50: "#fff1f2", 100: "#ffe4e6", 200: "#fecdd3", 300: "#fda4af", 400: "#fb7185", 500: "#f43f5e", 600: "#e11d48", 700: "#be123c", 800: "#9f1239", 900: "#881337", 950: "#4c0519" }, slate: { 50: "#f8fafc", 100: "#f1f5f9", 200: "#e2e8f0", 300: "#cbd5e1", 400: "#94a3b8", 500: "#64748b", 600: "#475569", 700: "#334155", 800: "#1e293b", 900: "#0f172a", 950: "#020617" }, gray: { 50: "#f9fafb", 100: "#f3f4f6", 200: "#e5e7eb", 300: "#d1d5db", 400: "#9ca3af", 500: "#6b7280", 600: "#4b5563", 700: "#374151", 800: "#1f2937", 900: "#111827", 950: "#030712" }, zinc: { 50: "#fafafa", 100: "#f4f4f5", 200: "#e4e4e7", 300: "#d4d4d8", 400: "#a1a1aa", 500: "#71717a", 600: "#52525b", 700: "#3f3f46", 800: "#27272a", 900: "#18181b", 950: "#09090b" }, neutral: { 50: "#fafafa", 100: "#f5f5f5", 200: "#e5e5e5", 300: "#d4d4d4", 400: "#a3a3a3", 500: "#737373", 600: "#525252", 700: "#404040", 800: "#262626", 900: "#171717", 950: "#0a0a0a" }, stone: { 50: "#fafaf9", 100: "#f5f5f4", 200: "#e7e5e4", 300: "#d6d3d1", 400: "#a8a29e", 500: "#78716c", 600: "#57534e", 700: "#44403c", 800: "#292524", 900: "#1c1917", 950: "#0c0a09" } }, o$1i = { transitionDuration: "0.2s", focusRing: { width: "1px", style: "solid", color: "{primary.color}", offset: "2px", shadow: "none" }, disabledOpacity: "0.6", iconSize: "1rem", anchorGutter: "2px", primary: { 50: "{emerald.50}", 100: "{emerald.100}", 200: "{emerald.200}", 300: "{emerald.300}", 400: "{emerald.400}", 500: "{emerald.500}", 600: "{emerald.600}", 700: "{emerald.700}", 800: "{emerald.800}", 900: "{emerald.900}", 950: "{emerald.950}" }, formField: { paddingX: "0.75rem", paddingY: "0.5rem", sm: { fontSize: "0.875rem", paddingX: "0.625rem", paddingY: "0.375rem" }, lg: { fontSize: "1.125rem", paddingX: "0.875rem", paddingY: "0.625rem" }, borderRadius: "{border.radius.md}", focusRing: { width: "0", style: "none", color: "transparent", offset: "0", shadow: "none" }, transitionDuration: "{transition.duration}" }, list: { padding: "0.25rem 0.25rem", gap: "2px", header: { padding: "0.5rem 1rem 0.25rem 1rem" }, option: { padding: "0.5rem 0.75rem", borderRadius: "{border.radius.sm}" }, optionGroup: { padding: "0.5rem 0.75rem", fontWeight: "600" } }, content: { borderRadius: "{border.radius.md}" }, mask: { transitionDuration: "0.15s" }, navigation: { list: { padding: "0.25rem 0.25rem", gap: "2px" }, item: { padding: "0.5rem 0.75rem", borderRadius: "{border.radius.sm}", gap: "0.5rem" }, submenuLabel: { padding: "0.5rem 0.75rem", fontWeight: "600" }, submenuIcon: { size: "0.875rem" } }, overlay: { select: { borderRadius: "{border.radius.md}", shadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)" }, popover: { borderRadius: "{border.radius.md}", padding: "0.75rem", shadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)" }, modal: { borderRadius: "{border.radius.xl}", padding: "1.25rem", shadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)" }, navigation: { shadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)" } }, colorScheme: { light: { surface: { 0: "#ffffff", 50: "{slate.50}", 100: "{slate.100}", 200: "{slate.200}", 300: "{slate.300}", 400: "{slate.400}", 500: "{slate.500}", 600: "{slate.600}", 700: "{slate.700}", 800: "{slate.800}", 900: "{slate.900}", 950: "{slate.950}" }, primary: { color: "{primary.500}", contrastColor: "#ffffff", hoverColor: "{primary.600}", activeColor: "{primary.700}" }, highlight: { background: "{primary.50}", focusBackground: "{primary.100}", color: "{primary.700}", focusColor: "{primary.800}" }, mask: { background: "rgba(0,0,0,0.4)", color: "{surface.200}" }, formField: { background: "{surface.0}", disabledBackground: "{surface.200}", filledBackground: "{surface.50}", filledHoverBackground: "{surface.50}", filledFocusBackground: "{surface.50}", borderColor: "{surface.300}", hoverBorderColor: "{surface.400}", focusBorderColor: "{primary.color}", invalidBorderColor: "{red.400}", color: "{surface.700}", disabledColor: "{surface.500}", placeholderColor: "{surface.500}", invalidPlaceholderColor: "{red.600}", floatLabelColor: "{surface.500}", floatLabelFocusColor: "{primary.600}", floatLabelActiveColor: "{surface.500}", floatLabelInvalidColor: "{form.field.invalid.placeholder.color}", iconColor: "{surface.400}", shadow: "0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgba(18, 18, 23, 0.05)" }, text: { color: "{surface.700}", hoverColor: "{surface.800}", mutedColor: "{surface.500}", hoverMutedColor: "{surface.600}" }, content: { background: "{surface.0}", hoverBackground: "{surface.100}", borderColor: "{surface.200}", color: "{text.color}", hoverColor: "{text.hover.color}" }, overlay: { select: { background: "{surface.0}", borderColor: "{surface.200}", color: "{text.color}" }, popover: { background: "{surface.0}", borderColor: "{surface.200}", color: "{text.color}" }, modal: { background: "{surface.0}", borderColor: "{surface.200}", color: "{text.color}" } }, list: { option: { focusBackground: "{surface.100}", selectedBackground: "{highlight.background}", selectedFocusBackground: "{highlight.focus.background}", color: "{text.color}", focusColor: "{text.hover.color}", selectedColor: "{highlight.color}", selectedFocusColor: "{highlight.focus.color}", icon: { color: "{surface.400}", focusColor: "{surface.500}" } }, optionGroup: { background: "transparent", color: "{text.muted.color}" } }, navigation: { item: { focusBackground: "{surface.100}", activeBackground: "{surface.100}", color: "{text.color}", focusColor: "{text.hover.color}", activeColor: "{text.hover.color}", icon: { color: "{surface.400}", focusColor: "{surface.500}", activeColor: "{surface.500}" } }, submenuLabel: { background: "transparent", color: "{text.muted.color}" }, submenuIcon: { color: "{surface.400}", focusColor: "{surface.500}", activeColor: "{surface.500}" } } }, dark: { surface: { 0: "#ffffff", 50: "{zinc.50}", 100: "{zinc.100}", 200: "{zinc.200}", 300: "{zinc.300}", 400: "{zinc.400}", 500: "{zinc.500}", 600: "{zinc.600}", 700: "{zinc.700}", 800: "{zinc.800}", 900: "{zinc.900}", 950: "{zinc.950}" }, primary: { color: "{primary.400}", contrastColor: "{surface.900}", hoverColor: "{primary.300}", activeColor: "{primary.200}" }, highlight: { background: "color-mix(in srgb, {primary.400}, transparent 84%)", focusBackground: "color-mix(in srgb, {primary.400}, transparent 76%)", color: "rgba(255,255,255,.87)", focusColor: "rgba(255,255,255,.87)" }, mask: { background: "rgba(0,0,0,0.6)", color: "{surface.200}" }, formField: { background: "{surface.950}", disabledBackground: "{surface.700}", filledBackground: "{surface.800}", filledHoverBackground: "{surface.800}", filledFocusBackground: "{surface.800}", borderColor: "{surface.600}", hoverBorderColor: "{surface.500}", focusBorderColor: "{primary.color}", invalidBorderColor: "{red.300}", color: "{surface.0}", disabledColor: "{surface.400}", placeholderColor: "{surface.400}", invalidPlaceholderColor: "{red.400}", floatLabelColor: "{surface.400}", floatLabelFocusColor: "{primary.color}", floatLabelActiveColor: "{surface.400}", floatLabelInvalidColor: "{form.field.invalid.placeholder.color}", iconColor: "{surface.400}", shadow: "0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgba(18, 18, 23, 0.05)" }, text: { color: "{surface.0}", hoverColor: "{surface.0}", mutedColor: "{surface.400}", hoverMutedColor: "{surface.300}" }, content: { background: "{surface.900}", hoverBackground: "{surface.800}", borderColor: "{surface.700}", color: "{text.color}", hoverColor: "{text.hover.color}" }, overlay: { select: { background: "{surface.900}", borderColor: "{surface.700}", color: "{text.color}" }, popover: { background: "{surface.900}", borderColor: "{surface.700}", color: "{text.color}" }, modal: { background: "{surface.900}", borderColor: "{surface.700}", color: "{text.color}" } }, list: { option: { focusBackground: "{surface.800}", selectedBackground: "{highlight.background}", selectedFocusBackground: "{highlight.focus.background}", color: "{text.color}", focusColor: "{text.hover.color}", selectedColor: "{highlight.color}", selectedFocusColor: "{highlight.focus.color}", icon: { color: "{surface.500}", focusColor: "{surface.400}" } }, optionGroup: { background: "transparent", color: "{text.muted.color}" } }, navigation: { item: { focusBackground: "{surface.800}", activeBackground: "{surface.800}", color: "{text.color}", focusColor: "{text.hover.color}", activeColor: "{text.hover.color}", icon: { color: "{surface.500}", focusColor: "{surface.400}", activeColor: "{surface.400}" } }, submenuLabel: { background: "transparent", color: "{text.muted.color}" }, submenuIcon: { color: "{surface.500}", focusColor: "{surface.400}", activeColor: "{surface.400}" } } } } }, e$R = { primitive: r$1f, semantic: o$1i };
-var r$1e = { borderRadius: "{content.border.radius}" }, o$1h = { root: r$1e };
-var o$1g = { padding: "1rem", background: "{content.background}", gap: "0.5rem", transitionDuration: "{transition.duration}" }, r$1d = { color: "{text.muted.color}", hoverColor: "{text.color}", borderRadius: "{content.border.radius}", gap: "{navigation.item.gap}", icon: { color: "{navigation.item.icon.color}", hoverColor: "{navigation.item.icon.focus.color}" }, focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, i$p = { color: "{navigation.item.icon.color}" }, t$C = { root: o$1g, item: r$1d, separator: i$p };
-var r$1c = { borderRadius: "{form.field.border.radius}", roundedBorderRadius: "2rem", gap: "0.5rem", paddingX: "{form.field.padding.x}", paddingY: "{form.field.padding.y}", iconOnlyWidth: "2.5rem", sm: { fontSize: "{form.field.sm.font.size}", paddingX: "{form.field.sm.padding.x}", paddingY: "{form.field.sm.padding.y}", iconOnlyWidth: "2rem" }, lg: { fontSize: "{form.field.lg.font.size}", paddingX: "{form.field.lg.padding.x}", paddingY: "{form.field.lg.padding.y}", iconOnlyWidth: "3rem" }, label: { fontWeight: "500" }, raisedShadow: "0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12)", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", offset: "{focus.ring.offset}" }, badgeSize: "1rem", transitionDuration: "{form.field.transition.duration}" }, o$1f = { light: { root: { primary: { background: "{primary.color}", hoverBackground: "{primary.hover.color}", activeBackground: "{primary.active.color}", borderColor: "{primary.color}", hoverBorderColor: "{primary.hover.color}", activeBorderColor: "{primary.active.color}", color: "{primary.contrast.color}", hoverColor: "{primary.contrast.color}", activeColor: "{primary.contrast.color}", focusRing: { color: "{primary.color}", shadow: "none" } }, secondary: { background: "{surface.100}", hoverBackground: "{surface.200}", activeBackground: "{surface.300}", borderColor: "{surface.100}", hoverBorderColor: "{surface.200}", activeBorderColor: "{surface.300}", color: "{surface.600}", hoverColor: "{surface.700}", activeColor: "{surface.800}", focusRing: { color: "{surface.600}", shadow: "none" } }, info: { background: "{sky.500}", hoverBackground: "{sky.600}", activeBackground: "{sky.700}", borderColor: "{sky.500}", hoverBorderColor: "{sky.600}", activeBorderColor: "{sky.700}", color: "#ffffff", hoverColor: "#ffffff", activeColor: "#ffffff", focusRing: { color: "{sky.500}", shadow: "none" } }, success: { background: "{green.500}", hoverBackground: "{green.600}", activeBackground: "{green.700}", borderColor: "{green.500}", hoverBorderColor: "{green.600}", activeBorderColor: "{green.700}", color: "#ffffff", hoverColor: "#ffffff", activeColor: "#ffffff", focusRing: { color: "{green.500}", shadow: "none" } }, warn: { background: "{orange.500}", hoverBackground: "{orange.600}", activeBackground: "{orange.700}", borderColor: "{orange.500}", hoverBorderColor: "{orange.600}", activeBorderColor: "{orange.700}", color: "#ffffff", hoverColor: "#ffffff", activeColor: "#ffffff", focusRing: { color: "{orange.500}", shadow: "none" } }, help: { background: "{purple.500}", hoverBackground: "{purple.600}", activeBackground: "{purple.700}", borderColor: "{purple.500}", hoverBorderColor: "{purple.600}", activeBorderColor: "{purple.700}", color: "#ffffff", hoverColor: "#ffffff", activeColor: "#ffffff", focusRing: { color: "{purple.500}", shadow: "none" } }, danger: { background: "{red.500}", hoverBackground: "{red.600}", activeBackground: "{red.700}", borderColor: "{red.500}", hoverBorderColor: "{red.600}", activeBorderColor: "{red.700}", color: "#ffffff", hoverColor: "#ffffff", activeColor: "#ffffff", focusRing: { color: "{red.500}", shadow: "none" } }, contrast: { background: "{surface.950}", hoverBackground: "{surface.900}", activeBackground: "{surface.800}", borderColor: "{surface.950}", hoverBorderColor: "{surface.900}", activeBorderColor: "{surface.800}", color: "{surface.0}", hoverColor: "{surface.0}", activeColor: "{surface.0}", focusRing: { color: "{surface.950}", shadow: "none" } } }, outlined: { primary: { hoverBackground: "{primary.50}", activeBackground: "{primary.100}", borderColor: "{primary.200}", color: "{primary.color}" }, secondary: { hoverBackground: "{surface.50}", activeBackground: "{surface.100}", borderColor: "{surface.200}", color: "{surface.500}" }, success: { hoverBackground: "{green.50}", activeBackground: "{green.100}", borderColor: "{green.200}", color: "{green.500}" }, info: { hoverBackground: "{sky.50}", activeBackground: "{sky.100}", borderColor: "{sky.200}", color: "{sky.500}" }, warn: { hoverBackground: "{orange.50}", activeBackground: "{orange.100}", borderColor: "{orange.200}", color: "{orange.500}" }, help: { hoverBackground: "{purple.50}", activeBackground: "{purple.100}", borderColor: "{purple.200}", color: "{purple.500}" }, danger: { hoverBackground: "{red.50}", activeBackground: "{red.100}", borderColor: "{red.200}", color: "{red.500}" }, contrast: { hoverBackground: "{surface.50}", activeBackground: "{surface.100}", borderColor: "{surface.700}", color: "{surface.950}" }, plain: { hoverBackground: "{surface.50}", activeBackground: "{surface.100}", borderColor: "{surface.200}", color: "{surface.700}" } }, text: { primary: { hoverBackground: "{primary.50}", activeBackground: "{primary.100}", color: "{primary.color}" }, secondary: { hoverBackground: "{surface.50}", activeBackground: "{surface.100}", color: "{surface.500}" }, success: { hoverBackground: "{green.50}", activeBackground: "{green.100}", color: "{green.500}" }, info: { hoverBackground: "{sky.50}", activeBackground: "{sky.100}", color: "{sky.500}" }, warn: { hoverBackground: "{orange.50}", activeBackground: "{orange.100}", color: "{orange.500}" }, help: { hoverBackground: "{purple.50}", activeBackground: "{purple.100}", color: "{purple.500}" }, danger: { hoverBackground: "{red.50}", activeBackground: "{red.100}", color: "{red.500}" }, contrast: { hoverBackground: "{surface.50}", activeBackground: "{surface.100}", color: "{surface.950}" }, plain: { hoverBackground: "{surface.50}", activeBackground: "{surface.100}", color: "{surface.700}" } }, link: { color: "{primary.color}", hoverColor: "{primary.color}", activeColor: "{primary.color}" } }, dark: { root: { primary: { background: "{primary.color}", hoverBackground: "{primary.hover.color}", activeBackground: "{primary.active.color}", borderColor: "{primary.color}", hoverBorderColor: "{primary.hover.color}", activeBorderColor: "{primary.active.color}", color: "{primary.contrast.color}", hoverColor: "{primary.contrast.color}", activeColor: "{primary.contrast.color}", focusRing: { color: "{primary.color}", shadow: "none" } }, secondary: { background: "{surface.800}", hoverBackground: "{surface.700}", activeBackground: "{surface.600}", borderColor: "{surface.800}", hoverBorderColor: "{surface.700}", activeBorderColor: "{surface.600}", color: "{surface.300}", hoverColor: "{surface.200}", activeColor: "{surface.100}", focusRing: { color: "{surface.300}", shadow: "none" } }, info: { background: "{sky.400}", hoverBackground: "{sky.300}", activeBackground: "{sky.200}", borderColor: "{sky.400}", hoverBorderColor: "{sky.300}", activeBorderColor: "{sky.200}", color: "{sky.950}", hoverColor: "{sky.950}", activeColor: "{sky.950}", focusRing: { color: "{sky.400}", shadow: "none" } }, success: { background: "{green.400}", hoverBackground: "{green.300}", activeBackground: "{green.200}", borderColor: "{green.400}", hoverBorderColor: "{green.300}", activeBorderColor: "{green.200}", color: "{green.950}", hoverColor: "{green.950}", activeColor: "{green.950}", focusRing: { color: "{green.400}", shadow: "none" } }, warn: { background: "{orange.400}", hoverBackground: "{orange.300}", activeBackground: "{orange.200}", borderColor: "{orange.400}", hoverBorderColor: "{orange.300}", activeBorderColor: "{orange.200}", color: "{orange.950}", hoverColor: "{orange.950}", activeColor: "{orange.950}", focusRing: { color: "{orange.400}", shadow: "none" } }, help: { background: "{purple.400}", hoverBackground: "{purple.300}", activeBackground: "{purple.200}", borderColor: "{purple.400}", hoverBorderColor: "{purple.300}", activeBorderColor: "{purple.200}", color: "{purple.950}", hoverColor: "{purple.950}", activeColor: "{purple.950}", focusRing: { color: "{purple.400}", shadow: "none" } }, danger: { background: "{red.400}", hoverBackground: "{red.300}", activeBackground: "{red.200}", borderColor: "{red.400}", hoverBorderColor: "{red.300}", activeBorderColor: "{red.200}", color: "{red.950}", hoverColor: "{red.950}", activeColor: "{red.950}", focusRing: { color: "{red.400}", shadow: "none" } }, contrast: { background: "{surface.0}", hoverBackground: "{surface.100}", activeBackground: "{surface.200}", borderColor: "{surface.0}", hoverBorderColor: "{surface.100}", activeBorderColor: "{surface.200}", color: "{surface.950}", hoverColor: "{surface.950}", activeColor: "{surface.950}", focusRing: { color: "{surface.0}", shadow: "none" } } }, outlined: { primary: { hoverBackground: "color-mix(in srgb, {primary.color}, transparent 96%)", activeBackground: "color-mix(in srgb, {primary.color}, transparent 84%)", borderColor: "{primary.700}", color: "{primary.color}" }, secondary: { hoverBackground: "rgba(255,255,255,0.04)", activeBackground: "rgba(255,255,255,0.16)", borderColor: "{surface.700}", color: "{surface.400}" }, success: { hoverBackground: "color-mix(in srgb, {green.400}, transparent 96%)", activeBackground: "color-mix(in srgb, {green.400}, transparent 84%)", borderColor: "{green.700}", color: "{green.400}" }, info: { hoverBackground: "color-mix(in srgb, {sky.400}, transparent 96%)", activeBackground: "color-mix(in srgb, {sky.400}, transparent 84%)", borderColor: "{sky.700}", color: "{sky.400}" }, warn: { hoverBackground: "color-mix(in srgb, {orange.400}, transparent 96%)", activeBackground: "color-mix(in srgb, {orange.400}, transparent 84%)", borderColor: "{orange.700}", color: "{orange.400}" }, help: { hoverBackground: "color-mix(in srgb, {purple.400}, transparent 96%)", activeBackground: "color-mix(in srgb, {purple.400}, transparent 84%)", borderColor: "{purple.700}", color: "{purple.400}" }, danger: { hoverBackground: "color-mix(in srgb, {red.400}, transparent 96%)", activeBackground: "color-mix(in srgb, {red.400}, transparent 84%)", borderColor: "{red.700}", color: "{red.400}" }, contrast: { hoverBackground: "{surface.800}", activeBackground: "{surface.700}", borderColor: "{surface.500}", color: "{surface.0}" }, plain: { hoverBackground: "{surface.800}", activeBackground: "{surface.700}", borderColor: "{surface.600}", color: "{surface.0}" } }, text: { primary: { hoverBackground: "color-mix(in srgb, {primary.color}, transparent 96%)", activeBackground: "color-mix(in srgb, {primary.color}, transparent 84%)", color: "{primary.color}" }, secondary: { hoverBackground: "{surface.800}", activeBackground: "{surface.700}", color: "{surface.400}" }, success: { hoverBackground: "color-mix(in srgb, {green.400}, transparent 96%)", activeBackground: "color-mix(in srgb, {green.400}, transparent 84%)", color: "{green.400}" }, info: { hoverBackground: "color-mix(in srgb, {sky.400}, transparent 96%)", activeBackground: "color-mix(in srgb, {sky.400}, transparent 84%)", color: "{sky.400}" }, warn: { hoverBackground: "color-mix(in srgb, {orange.400}, transparent 96%)", activeBackground: "color-mix(in srgb, {orange.400}, transparent 84%)", color: "{orange.400}" }, help: { hoverBackground: "color-mix(in srgb, {purple.400}, transparent 96%)", activeBackground: "color-mix(in srgb, {purple.400}, transparent 84%)", color: "{purple.400}" }, danger: { hoverBackground: "color-mix(in srgb, {red.400}, transparent 96%)", activeBackground: "color-mix(in srgb, {red.400}, transparent 84%)", color: "{red.400}" }, contrast: { hoverBackground: "{surface.800}", activeBackground: "{surface.700}", color: "{surface.0}" }, plain: { hoverBackground: "{surface.800}", activeBackground: "{surface.700}", color: "{surface.0}" } }, link: { color: "{primary.color}", hoverColor: "{primary.color}", activeColor: "{primary.color}" } } }, e$Q = { root: r$1c, colorScheme: o$1f };
-var o$1e = { background: "{content.background}", borderRadius: "{border.radius.xl}", color: "{content.color}", shadow: "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1)" }, r$1b = { padding: "1.25rem", gap: "0.5rem" }, t$B = { gap: "0.5rem" }, e$P = { fontSize: "1.25rem", fontWeight: "500" }, a$D = { color: "{text.muted.color}" }, d$u = { root: o$1e, body: r$1b, caption: t$B, title: e$P, subtitle: a$D };
-var r$1a = { transitionDuration: "{transition.duration}" }, o$1d = { gap: "0.25rem" }, a$C = { padding: "1rem", gap: "0.5rem" }, i$o = { width: "2rem", height: "0.5rem", borderRadius: "{content.border.radius}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, c$m = { light: { indicator: { background: "{surface.200}", hoverBackground: "{surface.300}", activeBackground: "{primary.color}" } }, dark: { indicator: { background: "{surface.700}", hoverBackground: "{surface.600}", activeBackground: "{primary.color}" } } }, t$A = { root: r$1a, content: o$1d, indicatorList: a$C, indicator: i$o, colorScheme: c$m };
-var o$1c = { background: "{form.field.background}", disabledBackground: "{form.field.disabled.background}", filledBackground: "{form.field.filled.background}", filledHoverBackground: "{form.field.filled.hover.background}", filledFocusBackground: "{form.field.filled.focus.background}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.hover.border.color}", focusBorderColor: "{form.field.focus.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", color: "{form.field.color}", disabledColor: "{form.field.disabled.color}", placeholderColor: "{form.field.placeholder.color}", invalidPlaceholderColor: "{form.field.invalid.placeholder.color}", shadow: "{form.field.shadow}", paddingX: "{form.field.padding.x}", paddingY: "{form.field.padding.y}", borderRadius: "{form.field.border.radius}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}", sm: { fontSize: "{form.field.sm.font.size}", paddingX: "{form.field.sm.padding.x}", paddingY: "{form.field.sm.padding.y}" }, lg: { fontSize: "{form.field.lg.font.size}", paddingX: "{form.field.lg.padding.x}", paddingY: "{form.field.lg.padding.y}" } }, r$19 = { width: "2.5rem", color: "{form.field.icon.color}" }, d$t = { background: "{overlay.select.background}", borderColor: "{overlay.select.border.color}", borderRadius: "{overlay.select.border.radius}", color: "{overlay.select.color}", shadow: "{overlay.select.shadow}" }, l$f = { padding: "{list.padding}", gap: "{list.gap}", mobileIndent: "1rem" }, e$O = { focusBackground: "{list.option.focus.background}", selectedBackground: "{list.option.selected.background}", selectedFocusBackground: "{list.option.selected.focus.background}", color: "{list.option.color}", focusColor: "{list.option.focus.color}", selectedColor: "{list.option.selected.color}", selectedFocusColor: "{list.option.selected.focus.color}", padding: "{list.option.padding}", borderRadius: "{list.option.border.radius}", icon: { color: "{list.option.icon.color}", focusColor: "{list.option.icon.focus.color}", size: "0.875rem" } }, i$n = { color: "{form.field.icon.color}" }, f$8 = { root: o$1c, dropdown: r$19, overlay: d$t, list: l$f, option: e$O, clearIcon: i$n };
-var r$18 = { borderRadius: "{border.radius.sm}", width: "1.25rem", height: "1.25rem", background: "{form.field.background}", checkedBackground: "{primary.color}", checkedHoverBackground: "{primary.hover.color}", disabledBackground: "{form.field.disabled.background}", filledBackground: "{form.field.filled.background}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.hover.border.color}", focusBorderColor: "{form.field.border.color}", checkedBorderColor: "{primary.color}", checkedHoverBorderColor: "{primary.hover.color}", checkedFocusBorderColor: "{primary.color}", checkedDisabledBorderColor: "{form.field.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", shadow: "{form.field.shadow}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}", sm: { width: "1rem", height: "1rem" }, lg: { width: "1.5rem", height: "1.5rem" } }, o$1b = { size: "0.875rem", color: "{form.field.color}", checkedColor: "{primary.contrast.color}", checkedHoverColor: "{primary.contrast.color}", disabledColor: "{form.field.disabled.color}", sm: { size: "0.75rem" }, lg: { size: "1rem" } }, e$N = { root: r$18, icon: o$1b };
-var o$1a = { borderRadius: "16px", paddingX: "0.75rem", paddingY: "0.5rem", gap: "0.5rem", transitionDuration: "{transition.duration}" }, r$17 = { width: "2rem", height: "2rem" }, e$M = { size: "1rem" }, c$l = { size: "1rem", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" } }, i$m = { light: { root: { background: "{surface.100}", color: "{surface.800}" }, icon: { color: "{surface.800}" }, removeIcon: { color: "{surface.800}" } }, dark: { root: { background: "{surface.800}", color: "{surface.0}" }, icon: { color: "{surface.0}" }, removeIcon: { color: "{surface.0}" } } }, s$8 = { root: o$1a, image: r$17, icon: e$M, removeIcon: c$l, colorScheme: i$m };
-var r$16 = { transitionDuration: "{transition.duration}" }, o$19 = { width: "1.5rem", height: "1.5rem", borderRadius: "{form.field.border.radius}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, e$L = { shadow: "{overlay.popover.shadow}", borderRadius: "{overlay.popover.borderRadius}" }, a$B = { light: { panel: { background: "{surface.800}", borderColor: "{surface.900}" }, handle: { color: "{surface.0}" } }, dark: { panel: { background: "{surface.900}", borderColor: "{surface.700}" }, handle: { color: "{surface.0}" } } }, s$7 = { root: r$16, preview: o$19, panel: e$L, colorScheme: a$B };
-var o$18 = { size: "2rem", color: "{overlay.modal.color}" }, e$K = { gap: "1rem" }, r$15 = { icon: o$18, content: e$K };
-var o$17 = { background: "{overlay.popover.background}", borderColor: "{overlay.popover.border.color}", color: "{overlay.popover.color}", borderRadius: "{overlay.popover.border.radius}", shadow: "{overlay.popover.shadow}", gutter: "10px", arrowOffset: "1.25rem" }, r$14 = { padding: "{overlay.popover.padding}", gap: "1rem" }, e$J = { size: "1.5rem", color: "{overlay.popover.color}" }, p$2 = { gap: "0.5rem", padding: "0 {overlay.popover.padding} {overlay.popover.padding} {overlay.popover.padding}" }, a$A = { root: o$17, content: r$14, icon: e$J, footer: p$2 };
-var o$16 = { background: "{content.background}", borderColor: "{content.border.color}", color: "{content.color}", borderRadius: "{content.border.radius}", shadow: "{overlay.navigation.shadow}", transitionDuration: "{transition.duration}" }, i$l = { padding: "{navigation.list.padding}", gap: "{navigation.list.gap}" }, n$z = { focusBackground: "{navigation.item.focus.background}", activeBackground: "{navigation.item.active.background}", color: "{navigation.item.color}", focusColor: "{navigation.item.focus.color}", activeColor: "{navigation.item.active.color}", padding: "{navigation.item.padding}", borderRadius: "{navigation.item.border.radius}", gap: "{navigation.item.gap}", icon: { color: "{navigation.item.icon.color}", focusColor: "{navigation.item.icon.focus.color}", activeColor: "{navigation.item.icon.active.color}" } }, a$z = { mobileIndent: "1rem" }, t$z = { size: "{navigation.submenu.icon.size}", color: "{navigation.submenu.icon.color}", focusColor: "{navigation.submenu.icon.focus.color}", activeColor: "{navigation.submenu.icon.active.color}" }, r$13 = { borderColor: "{content.border.color}" }, c$k = { root: o$16, list: i$l, item: n$z, submenu: a$z, submenuIcon: t$z, separator: r$13 };
-var o$15 = { transitionDuration: "{transition.duration}" }, r$12 = { background: "{content.background}", borderColor: "{datatable.border.color}", color: "{content.color}", borderWidth: "0 0 1px 0", padding: "0.75rem 1rem", sm: { padding: "0.375rem 0.5rem" }, lg: { padding: "1rem 1.25rem" } }, e$I = { background: "{content.background}", hoverBackground: "{content.hover.background}", selectedBackground: "{highlight.background}", borderColor: "{datatable.border.color}", color: "{content.color}", hoverColor: "{content.hover.color}", selectedColor: "{highlight.color}", gap: "0.5rem", padding: "0.75rem 1rem", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "-1px", shadow: "{focus.ring.shadow}" }, sm: { padding: "0.375rem 0.5rem" }, lg: { padding: "1rem 1.25rem" } }, d$s = { fontWeight: "600" }, t$y = { background: "{content.background}", hoverBackground: "{content.hover.background}", selectedBackground: "{highlight.background}", color: "{content.color}", hoverColor: "{content.hover.color}", selectedColor: "{highlight.color}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "-1px", shadow: "{focus.ring.shadow}" } }, l$e = { borderColor: "{datatable.border.color}", padding: "0.75rem 1rem", sm: { padding: "0.375rem 0.5rem" }, lg: { padding: "1rem 1.25rem" } }, c$j = { background: "{content.background}", borderColor: "{datatable.border.color}", color: "{content.color}", padding: "0.75rem 1rem", sm: { padding: "0.375rem 0.5rem" }, lg: { padding: "1rem 1.25rem" } }, n$y = { fontWeight: "600" }, a$y = { background: "{content.background}", borderColor: "{datatable.border.color}", color: "{content.color}", borderWidth: "0 0 1px 0", padding: "0.75rem 1rem", sm: { padding: "0.375rem 0.5rem" }, lg: { padding: "1rem 1.25rem" } }, i$k = { color: "{primary.color}" }, s$6 = { width: "0.5rem" }, g$4 = { width: "1px", color: "{primary.color}" }, u$5 = { color: "{text.muted.color}", hoverColor: "{text.hover.muted.color}", size: "0.875rem" }, b$3 = { size: "2rem" }, p$1 = { hoverBackground: "{content.hover.background}", selectedHoverBackground: "{content.background}", color: "{text.muted.color}", hoverColor: "{text.color}", selectedHoverColor: "{primary.color}", size: "1.75rem", borderRadius: "50%", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, m$3 = { inlineGap: "0.5rem", overlaySelect: { background: "{overlay.select.background}", borderColor: "{overlay.select.border.color}", borderRadius: "{overlay.select.border.radius}", color: "{overlay.select.color}", shadow: "{overlay.select.shadow}" }, overlayPopover: { background: "{overlay.popover.background}", borderColor: "{overlay.popover.border.color}", borderRadius: "{overlay.popover.border.radius}", color: "{overlay.popover.color}", shadow: "{overlay.popover.shadow}", padding: "{overlay.popover.padding}", gap: "0.5rem" }, rule: { borderColor: "{content.border.color}" }, constraintList: { padding: "{list.padding}", gap: "{list.gap}" }, constraint: { focusBackground: "{list.option.focus.background}", selectedBackground: "{list.option.selected.background}", selectedFocusBackground: "{list.option.selected.focus.background}", color: "{list.option.color}", focusColor: "{list.option.focus.color}", selectedColor: "{list.option.selected.color}", selectedFocusColor: "{list.option.selected.focus.color}", separator: { borderColor: "{content.border.color}" }, padding: "{list.option.padding}", borderRadius: "{list.option.border.radius}" } }, h$3 = { borderColor: "{datatable.border.color}", borderWidth: "0 0 1px 0" }, f$7 = { borderColor: "{datatable.border.color}", borderWidth: "0 0 1px 0" }, v$1 = { light: { root: { borderColor: "{content.border.color}" }, row: { stripedBackground: "{surface.50}" }, bodyCell: { selectedBorderColor: "{primary.100}" } }, dark: { root: { borderColor: "{surface.800}" }, row: { stripedBackground: "{surface.950}" }, bodyCell: { selectedBorderColor: "{primary.900}" } } }, k$2 = { root: o$15, header: r$12, headerCell: e$I, columnTitle: d$s, row: t$y, bodyCell: l$e, footerCell: c$j, columnFooter: n$y, footer: a$y, dropPoint: i$k, columnResizer: s$6, resizeIndicator: g$4, sortIcon: u$5, loadingIcon: b$3, rowToggleButton: p$1, filter: m$3, paginatorTop: h$3, paginatorBottom: f$7, colorScheme: v$1 };
-var o$14 = { borderColor: "transparent", borderWidth: "0", borderRadius: "0", padding: "0" }, r$11 = { background: "{content.background}", color: "{content.color}", borderColor: "{content.border.color}", borderWidth: "0 0 1px 0", padding: "0.75rem 1rem", borderRadius: "0" }, d$r = { background: "{content.background}", color: "{content.color}", borderColor: "transparent", borderWidth: "0", padding: "0", borderRadius: "0" }, e$H = { background: "{content.background}", color: "{content.color}", borderColor: "{content.border.color}", borderWidth: "1px 0 0 0", padding: "0.75rem 1rem", borderRadius: "0" }, t$x = { borderColor: "{content.border.color}", borderWidth: "0 0 1px 0" }, n$x = { borderColor: "{content.border.color}", borderWidth: "1px 0 0 0" }, c$i = { root: o$14, header: r$11, content: d$r, footer: e$H, paginatorTop: t$x, paginatorBottom: n$x };
-var o$13 = { transitionDuration: "{transition.duration}" }, r$10 = { background: "{content.background}", borderColor: "{content.border.color}", color: "{content.color}", borderRadius: "{content.border.radius}", shadow: "{overlay.popover.shadow}", padding: "{overlay.popover.padding}" }, e$G = { background: "{content.background}", borderColor: "{content.border.color}", color: "{content.color}", padding: "0 0 0.5rem 0" }, c$h = { gap: "0.5rem", fontWeight: "500" }, d$q = { width: "2.5rem", sm: { width: "2rem" }, lg: { width: "3rem" }, borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.border.color}", activeBorderColor: "{form.field.border.color}", borderRadius: "{form.field.border.radius}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, n$w = { color: "{form.field.icon.color}" }, t$w = { hoverBackground: "{content.hover.background}", color: "{content.color}", hoverColor: "{content.hover.color}", padding: "0.25rem 0.5rem", borderRadius: "{content.border.radius}" }, a$x = { hoverBackground: "{content.hover.background}", color: "{content.color}", hoverColor: "{content.hover.color}", padding: "0.25rem 0.5rem", borderRadius: "{content.border.radius}" }, i$j = { borderColor: "{content.border.color}", gap: "{overlay.popover.padding}" }, l$d = { margin: "0.5rem 0 0 0" }, u$4 = { padding: "0.25rem", fontWeight: "500", color: "{content.color}" }, s$5 = { hoverBackground: "{content.hover.background}", selectedBackground: "{primary.color}", rangeSelectedBackground: "{highlight.background}", color: "{content.color}", hoverColor: "{content.hover.color}", selectedColor: "{primary.contrast.color}", rangeSelectedColor: "{highlight.color}", width: "2rem", height: "2rem", borderRadius: "50%", padding: "0.25rem", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, g$3 = { margin: "0.5rem 0 0 0" }, f$6 = { padding: "0.375rem", borderRadius: "{content.border.radius}" }, h$2 = { margin: "0.5rem 0 0 0" }, b$2 = { padding: "0.375rem", borderRadius: "{content.border.radius}" }, m$2 = { padding: "0.5rem 0 0 0", borderColor: "{content.border.color}" }, p = { padding: "0.5rem 0 0 0", borderColor: "{content.border.color}", gap: "0.5rem", buttonGap: "0.25rem" }, v = { light: { dropdown: { background: "{surface.100}", hoverBackground: "{surface.200}", activeBackground: "{surface.300}", color: "{surface.600}", hoverColor: "{surface.700}", activeColor: "{surface.800}" }, today: { background: "{surface.200}", color: "{surface.900}" } }, dark: { dropdown: { background: "{surface.800}", hoverBackground: "{surface.700}", activeBackground: "{surface.600}", color: "{surface.300}", hoverColor: "{surface.200}", activeColor: "{surface.100}" }, today: { background: "{surface.700}", color: "{surface.0}" } } }, k$1 = { root: o$13, panel: r$10, header: e$G, title: c$h, dropdown: d$q, inputIcon: n$w, selectMonth: t$w, selectYear: a$x, group: i$j, dayView: l$d, weekDay: u$4, date: s$5, monthView: g$3, month: f$6, yearView: h$2, year: b$2, buttonbar: m$2, timePicker: p, colorScheme: v };
-var o$12 = { background: "{overlay.modal.background}", borderColor: "{overlay.modal.border.color}", color: "{overlay.modal.color}", borderRadius: "{overlay.modal.border.radius}", shadow: "{overlay.modal.shadow}" }, a$w = { padding: "{overlay.modal.padding}", gap: "0.5rem" }, d$p = { fontSize: "1.25rem", fontWeight: "600" }, r$$ = { padding: "0 {overlay.modal.padding} {overlay.modal.padding} {overlay.modal.padding}" }, l$c = { padding: "0 {overlay.modal.padding} {overlay.modal.padding} {overlay.modal.padding}", gap: "0.5rem" }, e$F = { root: o$12, header: a$w, title: d$p, content: r$$, footer: l$c };
-var r$_ = { borderColor: "{content.border.color}" }, o$11 = { background: "{content.background}", color: "{text.color}" }, n$v = { margin: "1rem 0", padding: "0 1rem", content: { padding: "0 0.5rem" } }, e$E = { margin: "0 1rem", padding: "0.5rem 0", content: { padding: "0.5rem 0" } }, t$v = { root: r$_, content: o$11, horizontal: n$v, vertical: e$E };
-var r$Z = { background: "rgba(255, 255, 255, 0.1)", borderColor: "rgba(255, 255, 255, 0.2)", padding: "0.5rem", borderRadius: "{border.radius.xl}" }, o$10 = { borderRadius: "{content.border.radius}", padding: "0.5rem", size: "3rem", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, d$o = { root: r$Z, item: o$10 };
-var o$$ = { background: "{overlay.modal.background}", borderColor: "{overlay.modal.border.color}", color: "{overlay.modal.color}", shadow: "{overlay.modal.shadow}" }, a$v = { padding: "{overlay.modal.padding}" }, d$n = { fontSize: "1.5rem", fontWeight: "600" }, r$Y = { padding: "0 {overlay.modal.padding} {overlay.modal.padding} {overlay.modal.padding}" }, l$b = { padding: "{overlay.modal.padding}" }, e$D = { root: o$$, header: a$v, title: d$n, content: r$Y, footer: l$b };
-var o$_ = { background: "{content.background}", borderColor: "{content.border.color}", borderRadius: "{content.border.radius}" }, r$X = { color: "{text.muted.color}", hoverColor: "{text.color}", activeColor: "{primary.color}" }, e$C = { background: "{overlay.select.background}", borderColor: "{overlay.select.border.color}", borderRadius: "{overlay.select.border.radius}", color: "{overlay.select.color}", shadow: "{overlay.select.shadow}", padding: "{list.padding}" }, t$u = { focusBackground: "{list.option.focus.background}", color: "{list.option.color}", focusColor: "{list.option.focus.color}", padding: "{list.option.padding}", borderRadius: "{list.option.border.radius}" }, d$m = { background: "{content.background}", borderColor: "{content.border.color}", color: "{content.color}", borderRadius: "{content.border.radius}" }, l$a = { toolbar: o$_, toolbarItem: r$X, overlay: e$C, overlayOption: t$u, content: d$m };
-var o$Z = { background: "{content.background}", borderColor: "{content.border.color}", borderRadius: "{content.border.radius}", color: "{content.color}", padding: "0 1.125rem 1.125rem 1.125rem", transitionDuration: "{transition.duration}" }, r$W = { background: "{content.background}", hoverBackground: "{content.hover.background}", color: "{content.color}", hoverColor: "{content.hover.color}", borderRadius: "{content.border.radius}", borderWidth: "1px", borderColor: "transparent", padding: "0.5rem 0.75rem", gap: "0.5rem", fontWeight: "600", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, t$t = { color: "{text.muted.color}", hoverColor: "{text.hover.muted.color}" }, n$u = { padding: "0" }, e$B = { root: o$Z, legend: r$W, toggleIcon: t$t, content: n$u };
-var r$V = { background: "{content.background}", borderColor: "{content.border.color}", color: "{content.color}", borderRadius: "{content.border.radius}", transitionDuration: "{transition.duration}" }, o$Y = { background: "transparent", color: "{text.color}", padding: "1.125rem", borderColor: "unset", borderWidth: "0", borderRadius: "0", gap: "0.5rem" }, e$A = { highlightBorderColor: "{primary.color}", padding: "0 1.125rem 1.125rem 1.125rem", gap: "1rem" }, t$s = { padding: "1rem", gap: "1rem", borderColor: "{content.border.color}", info: { gap: "0.5rem" } }, a$u = { gap: "0.5rem" }, n$t = { height: "0.25rem" }, d$l = { gap: "0.5rem" }, i$i = { root: r$V, header: o$Y, content: e$A, file: t$s, fileList: a$u, progressbar: n$t, basic: d$l };
-var o$X = { color: "{form.field.float.label.color}", focusColor: "{form.field.float.label.focus.color}", activeColor: "{form.field.float.label.active.color}", invalidColor: "{form.field.float.label.invalid.color}", transitionDuration: "0.2s", positionX: "{form.field.padding.x}", positionY: "{form.field.padding.y}", fontWeight: "500", active: { fontSize: "0.75rem", fontWeight: "400" } }, i$h = { active: { top: "-1.25rem" } }, r$U = { input: { paddingTop: "1.5rem", paddingBottom: "{form.field.padding.y}" }, active: { top: "{form.field.padding.y}" } }, a$t = { borderRadius: "{border.radius.xs}", active: { background: "{form.field.background}", padding: "0 0.125rem" } }, d$k = { root: o$X, over: i$h, in: r$U, on: a$t };
-var o$W = { borderWidth: "1px", borderColor: "{content.border.color}", borderRadius: "{content.border.radius}", transitionDuration: "{transition.duration}" }, r$T = { background: "rgba(255, 255, 255, 0.1)", hoverBackground: "rgba(255, 255, 255, 0.2)", color: "{surface.100}", hoverColor: "{surface.0}", size: "3rem", gutter: "0.5rem", prev: { borderRadius: "50%" }, next: { borderRadius: "50%" }, focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, e$z = { size: "1.5rem" }, t$r = { background: "{content.background}", padding: "1rem 0.25rem" }, c$g = { size: "2rem", borderRadius: "{content.border.radius}", gutter: "0.5rem", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, n$s = { size: "1rem" }, a$s = { background: "rgba(0, 0, 0, 0.5)", color: "{surface.100}", padding: "1rem" }, s$4 = { gap: "0.5rem", padding: "1rem" }, u$3 = { width: "1rem", height: "1rem", activeBackground: "{primary.color}", borderRadius: "50%", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, i$g = { background: "rgba(0, 0, 0, 0.5)" }, d$j = { background: "rgba(255, 255, 255, 0.4)", hoverBackground: "rgba(255, 255, 255, 0.6)", activeBackground: "rgba(255, 255, 255, 0.9)" }, g$2 = { size: "3rem", gutter: "0.5rem", background: "rgba(255, 255, 255, 0.1)", hoverBackground: "rgba(255, 255, 255, 0.2)", color: "{surface.50}", hoverColor: "{surface.0}", borderRadius: "50%", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, f$5 = { size: "1.5rem" }, h$1 = { light: { thumbnailNavButton: { hoverBackground: "{surface.100}", color: "{surface.600}", hoverColor: "{surface.700}" }, indicatorButton: { background: "{surface.200}", hoverBackground: "{surface.300}" } }, dark: { thumbnailNavButton: { hoverBackground: "{surface.700}", color: "{surface.400}", hoverColor: "{surface.0}" }, indicatorButton: { background: "{surface.700}", hoverBackground: "{surface.600}" } } }, l$9 = { root: o$W, navButton: r$T, navIcon: e$z, thumbnailsContent: t$r, thumbnailNavButton: c$g, thumbnailNavButtonIcon: n$s, caption: a$s, indicatorList: s$4, indicatorButton: u$3, insetIndicatorList: i$g, insetIndicatorButton: d$j, closeButton: g$2, closeButtonIcon: f$5, colorScheme: h$1 };
-var o$V = { color: "{form.field.icon.color}" }, r$S = { icon: o$V };
-var o$U = { color: "{form.field.float.label.color}", focusColor: "{form.field.float.label.focus.color}", invalidColor: "{form.field.float.label.invalid.color}", transitionDuration: "0.2s", positionX: "{form.field.padding.x}", top: "{form.field.padding.y}", fontSize: "0.75rem", fontWeight: "400" }, l$8 = { paddingTop: "1.5rem", paddingBottom: "{form.field.padding.y}" }, i$f = { root: o$U, input: l$8 };
-var o$T = { transitionDuration: "{transition.duration}" }, r$R = { icon: { size: "1.5rem" }, mask: { background: "{mask.background}", color: "{mask.color}" } }, a$r = { position: { left: "auto", right: "1rem", top: "1rem", bottom: "auto" }, blur: "8px", background: "rgba(255,255,255,0.1)", borderColor: "rgba(255,255,255,0.2)", borderWidth: "1px", borderRadius: "30px", padding: ".5rem", gap: "0.5rem" }, i$e = { hoverBackground: "rgba(255,255,255,0.1)", color: "{surface.50}", hoverColor: "{surface.0}", size: "3rem", iconSize: "1.5rem", borderRadius: "50%", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, e$y = { root: o$T, preview: r$R, toolbar: a$r, action: i$e };
-var o$S = { size: "15px", hoverSize: "30px", background: "rgba(255,255,255,0.3)", hoverBackground: "rgba(255,255,255,0.3)", borderColor: "unset", hoverBorderColor: "unset", borderWidth: "0", borderRadius: "50%", transitionDuration: "{transition.duration}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "rgba(255,255,255,0.3)", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, r$Q = { handle: o$S };
-var r$P = { padding: "{form.field.padding.y} {form.field.padding.x}", borderRadius: "{content.border.radius}", gap: "0.5rem" }, o$R = { fontWeight: "500" }, e$x = { size: "1rem" }, n$r = { light: { info: { background: "color-mix(in srgb, {blue.50}, transparent 5%)", borderColor: "{blue.200}", color: "{blue.600}", shadow: "0px 4px 8px 0px color-mix(in srgb, {blue.500}, transparent 96%)" }, success: { background: "color-mix(in srgb, {green.50}, transparent 5%)", borderColor: "{green.200}", color: "{green.600}", shadow: "0px 4px 8px 0px color-mix(in srgb, {green.500}, transparent 96%)" }, warn: { background: "color-mix(in srgb,{yellow.50}, transparent 5%)", borderColor: "{yellow.200}", color: "{yellow.600}", shadow: "0px 4px 8px 0px color-mix(in srgb, {yellow.500}, transparent 96%)" }, error: { background: "color-mix(in srgb, {red.50}, transparent 5%)", borderColor: "{red.200}", color: "{red.600}", shadow: "0px 4px 8px 0px color-mix(in srgb, {red.500}, transparent 96%)" }, secondary: { background: "{surface.100}", borderColor: "{surface.200}", color: "{surface.600}", shadow: "0px 4px 8px 0px color-mix(in srgb, {surface.500}, transparent 96%)" }, contrast: { background: "{surface.900}", borderColor: "{surface.950}", color: "{surface.50}", shadow: "0px 4px 8px 0px color-mix(in srgb, {surface.950}, transparent 96%)" } }, dark: { info: { background: "color-mix(in srgb, {blue.500}, transparent 84%)", borderColor: "color-mix(in srgb, {blue.700}, transparent 64%)", color: "{blue.500}", shadow: "0px 4px 8px 0px color-mix(in srgb, {blue.500}, transparent 96%)" }, success: { background: "color-mix(in srgb, {green.500}, transparent 84%)", borderColor: "color-mix(in srgb, {green.700}, transparent 64%)", color: "{green.500}", shadow: "0px 4px 8px 0px color-mix(in srgb, {green.500}, transparent 96%)" }, warn: { background: "color-mix(in srgb, {yellow.500}, transparent 84%)", borderColor: "color-mix(in srgb, {yellow.700}, transparent 64%)", color: "{yellow.500}", shadow: "0px 4px 8px 0px color-mix(in srgb, {yellow.500}, transparent 96%)" }, error: { background: "color-mix(in srgb, {red.500}, transparent 84%)", borderColor: "color-mix(in srgb, {red.700}, transparent 64%)", color: "{red.500}", shadow: "0px 4px 8px 0px color-mix(in srgb, {red.500}, transparent 96%)" }, secondary: { background: "{surface.800}", borderColor: "{surface.700}", color: "{surface.300}", shadow: "0px 4px 8px 0px color-mix(in srgb, {surface.500}, transparent 96%)" }, contrast: { background: "{surface.0}", borderColor: "{surface.100}", color: "{surface.950}", shadow: "0px 4px 8px 0px color-mix(in srgb, {surface.950}, transparent 96%)" } } }, a$q = { root: r$P, text: o$R, icon: e$x, colorScheme: n$r };
-var o$Q = { padding: "{form.field.padding.y} {form.field.padding.x}", borderRadius: "{content.border.radius}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" }, transitionDuration: "{transition.duration}" }, r$O = { hoverBackground: "{content.hover.background}", hoverColor: "{content.hover.color}" }, n$q = { root: o$Q, display: r$O };
-var o$P = { background: "{form.field.background}", disabledBackground: "{form.field.disabled.background}", filledBackground: "{form.field.filled.background}", filledFocusBackground: "{form.field.filled.focus.background}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.hover.border.color}", focusBorderColor: "{form.field.focus.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", color: "{form.field.color}", disabledColor: "{form.field.disabled.color}", placeholderColor: "{form.field.placeholder.color}", shadow: "{form.field.shadow}", paddingX: "{form.field.padding.x}", paddingY: "{form.field.padding.y}", borderRadius: "{form.field.border.radius}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}" }, r$N = { borderRadius: "{border.radius.sm}" }, d$i = { light: { chip: { focusBackground: "{surface.200}", color: "{surface.800}" } }, dark: { chip: { focusBackground: "{surface.700}", color: "{surface.0}" } } }, f$4 = { root: o$P, chip: r$N, colorScheme: d$i };
-var r$M = { background: "{form.field.background}", borderColor: "{form.field.border.color}", color: "{form.field.icon.color}", borderRadius: "{form.field.border.radius}", padding: "0.5rem", minWidth: "2.5rem" }, o$O = { addon: r$M };
-var r$L = { transitionDuration: "{transition.duration}" }, o$N = { width: "2.5rem", borderRadius: "{form.field.border.radius}", verticalPadding: "{form.field.padding.y}" }, e$w = { light: { button: { background: "transparent", hoverBackground: "{surface.100}", activeBackground: "{surface.200}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.border.color}", activeBorderColor: "{form.field.border.color}", color: "{surface.400}", hoverColor: "{surface.500}", activeColor: "{surface.600}" } }, dark: { button: { background: "transparent", hoverBackground: "{surface.800}", activeBackground: "{surface.700}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.border.color}", activeBorderColor: "{form.field.border.color}", color: "{surface.400}", hoverColor: "{surface.300}", activeColor: "{surface.200}" } } }, a$p = { root: r$L, button: o$N, colorScheme: e$w };
-var r$K = { gap: "0.5rem" }, t$q = { width: "2.5rem", sm: { width: "2rem" }, lg: { width: "3rem" } }, e$v = { root: r$K, input: t$q };
-var o$M = { background: "{form.field.background}", disabledBackground: "{form.field.disabled.background}", filledBackground: "{form.field.filled.background}", filledHoverBackground: "{form.field.filled.hover.background}", filledFocusBackground: "{form.field.filled.focus.background}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.hover.border.color}", focusBorderColor: "{form.field.focus.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", color: "{form.field.color}", disabledColor: "{form.field.disabled.color}", placeholderColor: "{form.field.placeholder.color}", invalidPlaceholderColor: "{form.field.invalid.placeholder.color}", shadow: "{form.field.shadow}", paddingX: "{form.field.padding.x}", paddingY: "{form.field.padding.y}", borderRadius: "{form.field.border.radius}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}", sm: { fontSize: "{form.field.sm.font.size}", paddingX: "{form.field.sm.padding.x}", paddingY: "{form.field.sm.padding.y}" }, lg: { fontSize: "{form.field.lg.font.size}", paddingX: "{form.field.lg.padding.x}", paddingY: "{form.field.lg.padding.y}" } }, d$h = { root: o$M };
-var o$L = { transitionDuration: "{transition.duration}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, r$J = { background: "{primary.color}" }, t$p = { background: "{content.border.color}" }, n$p = { color: "{text.muted.color}" }, c$f = { root: o$L, value: r$J, range: t$p, text: n$p };
-var o$K = { background: "{form.field.background}", disabledBackground: "{form.field.disabled.background}", borderColor: "{form.field.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", color: "{form.field.color}", disabledColor: "{form.field.disabled.color}", shadow: "{form.field.shadow}", borderRadius: "{form.field.border.radius}", transitionDuration: "{form.field.transition.duration}" }, r$I = { padding: "{list.padding}", gap: "{list.gap}", header: { padding: "{list.header.padding}" } }, d$g = { focusBackground: "{list.option.focus.background}", selectedBackground: "{list.option.selected.background}", selectedFocusBackground: "{list.option.selected.focus.background}", color: "{list.option.color}", focusColor: "{list.option.focus.color}", selectedColor: "{list.option.selected.color}", selectedFocusColor: "{list.option.selected.focus.color}", padding: "{list.option.padding}", borderRadius: "{list.option.border.radius}" }, i$d = { background: "{list.option.group.background}", color: "{list.option.group.color}", fontWeight: "{list.option.group.font.weight}", padding: "{list.option.group.padding}" }, t$o = { color: "{list.option.color}", gutterStart: "-0.375rem", gutterEnd: "0.375rem" }, e$u = { padding: "{list.option.padding}" }, l$7 = { light: { option: { stripedBackground: "{surface.50}" } }, dark: { option: { stripedBackground: "{surface.900}" } } }, n$o = { root: o$K, list: r$I, option: d$g, optionGroup: i$d, checkmark: t$o, emptyMessage: e$u, colorScheme: l$7 };
-var o$J = { background: "{content.background}", borderColor: "{content.border.color}", borderRadius: "{content.border.radius}", color: "{content.color}", gap: "0.5rem", verticalOrientation: { padding: "{navigation.list.padding}", gap: "{navigation.list.gap}" }, horizontalOrientation: { padding: "0.5rem 0.75rem", gap: "0.5rem" }, transitionDuration: "{transition.duration}" }, n$n = { borderRadius: "{content.border.radius}", padding: "{navigation.item.padding}" }, i$c = { focusBackground: "{navigation.item.focus.background}", activeBackground: "{navigation.item.active.background}", color: "{navigation.item.color}", focusColor: "{navigation.item.focus.color}", activeColor: "{navigation.item.active.color}", padding: "{navigation.item.padding}", borderRadius: "{navigation.item.border.radius}", gap: "{navigation.item.gap}", icon: { color: "{navigation.item.icon.color}", focusColor: "{navigation.item.icon.focus.color}", activeColor: "{navigation.item.icon.active.color}" } }, a$o = { padding: "0", background: "{content.background}", borderColor: "{content.border.color}", borderRadius: "{content.border.radius}", color: "{content.color}", shadow: "{overlay.navigation.shadow}", gap: "0.5rem" }, r$H = { padding: "{navigation.list.padding}", gap: "{navigation.list.gap}" }, t$n = { padding: "{navigation.submenu.label.padding}", fontWeight: "{navigation.submenu.label.font.weight}", background: "{navigation.submenu.label.background.}", color: "{navigation.submenu.label.color}" }, e$t = { size: "{navigation.submenu.icon.size}", color: "{navigation.submenu.icon.color}", focusColor: "{navigation.submenu.icon.focus.color}", activeColor: "{navigation.submenu.icon.active.color}" }, c$e = { borderColor: "{content.border.color}" }, d$f = { borderRadius: "50%", size: "1.75rem", color: "{text.muted.color}", hoverColor: "{text.hover.muted.color}", hoverBackground: "{content.hover.background}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, g$1 = { root: o$J, baseItem: n$n, item: i$c, overlay: a$o, submenu: r$H, submenuLabel: t$n, submenuIcon: e$t, separator: c$e, mobileButton: d$f };
-var o$I = { background: "{content.background}", borderColor: "{content.border.color}", color: "{content.color}", borderRadius: "{content.border.radius}", shadow: "{overlay.navigation.shadow}", transitionDuration: "{transition.duration}" }, n$m = { padding: "{navigation.list.padding}", gap: "{navigation.list.gap}" }, a$n = { focusBackground: "{navigation.item.focus.background}", color: "{navigation.item.color}", focusColor: "{navigation.item.focus.color}", padding: "{navigation.item.padding}", borderRadius: "{navigation.item.border.radius}", gap: "{navigation.item.gap}", icon: { color: "{navigation.item.icon.color}", focusColor: "{navigation.item.icon.focus.color}" } }, i$b = { padding: "{navigation.submenu.label.padding}", fontWeight: "{navigation.submenu.label.font.weight}", background: "{navigation.submenu.label.background}", color: "{navigation.submenu.label.color}" }, t$m = { borderColor: "{content.border.color}" }, r$G = { root: o$I, list: n$m, item: a$n, submenuLabel: i$b, separator: t$m };
-var o$H = { background: "{content.background}", borderColor: "{content.border.color}", borderRadius: "{content.border.radius}", color: "{content.color}", gap: "0.5rem", padding: "0.5rem 0.75rem", transitionDuration: "{transition.duration}" }, i$a = { borderRadius: "{content.border.radius}", padding: "{navigation.item.padding}" }, n$l = { focusBackground: "{navigation.item.focus.background}", activeBackground: "{navigation.item.active.background}", color: "{navigation.item.color}", focusColor: "{navigation.item.focus.color}", activeColor: "{navigation.item.active.color}", padding: "{navigation.item.padding}", borderRadius: "{navigation.item.border.radius}", gap: "{navigation.item.gap}", icon: { color: "{navigation.item.icon.color}", focusColor: "{navigation.item.icon.focus.color}", activeColor: "{navigation.item.icon.active.color}" } }, r$F = { padding: "{navigation.list.padding}", gap: "{navigation.list.gap}", background: "{content.background}", borderColor: "{content.border.color}", borderRadius: "{content.border.radius}", shadow: "{overlay.navigation.shadow}", mobileIndent: "1rem", icon: { size: "{navigation.submenu.icon.size}", color: "{navigation.submenu.icon.color}", focusColor: "{navigation.submenu.icon.focus.color}", activeColor: "{navigation.submenu.icon.active.color}" } }, a$m = { borderColor: "{content.border.color}" }, t$l = { borderRadius: "50%", size: "1.75rem", color: "{text.muted.color}", hoverColor: "{text.hover.muted.color}", hoverBackground: "{content.hover.background}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, e$s = { root: o$H, baseItem: i$a, item: n$l, submenu: r$F, separator: a$m, mobileButton: t$l };
-var o$G = { borderRadius: "{content.border.radius}", borderWidth: "1px", transitionDuration: "{transition.duration}" }, r$E = { padding: "0.5rem 0.75rem", gap: "0.5rem", sm: { padding: "0.375rem 0.625rem" }, lg: { padding: "0.625rem 0.875rem" } }, e$r = { fontSize: "1rem", fontWeight: "500", sm: { fontSize: "0.875rem" }, lg: { fontSize: "1.125rem" } }, n$k = { size: "1.125rem", sm: { size: "1rem" }, lg: { size: "1.25rem" } }, l$6 = { width: "1.75rem", height: "1.75rem", borderRadius: "50%", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", offset: "{focus.ring.offset}" } }, s$3 = { size: "1rem", sm: { size: "0.875rem" }, lg: { size: "1.125rem" } }, c$d = { root: { borderWidth: "1px" } }, a$l = { content: { padding: "0" } }, d$e = { light: { info: { background: "color-mix(in srgb, {blue.50}, transparent 5%)", borderColor: "{blue.200}", color: "{blue.600}", shadow: "0px 4px 8px 0px color-mix(in srgb, {blue.500}, transparent 96%)", closeButton: { hoverBackground: "{blue.100}", focusRing: { color: "{blue.600}", shadow: "none" } }, outlined: { color: "{blue.600}", borderColor: "{blue.600}" }, simple: { color: "{blue.600}" } }, success: { background: "color-mix(in srgb, {green.50}, transparent 5%)", borderColor: "{green.200}", color: "{green.600}", shadow: "0px 4px 8px 0px color-mix(in srgb, {green.500}, transparent 96%)", closeButton: { hoverBackground: "{green.100}", focusRing: { color: "{green.600}", shadow: "none" } }, outlined: { color: "{green.600}", borderColor: "{green.600}" }, simple: { color: "{green.600}" } }, warn: { background: "color-mix(in srgb,{yellow.50}, transparent 5%)", borderColor: "{yellow.200}", color: "{yellow.600}", shadow: "0px 4px 8px 0px color-mix(in srgb, {yellow.500}, transparent 96%)", closeButton: { hoverBackground: "{yellow.100}", focusRing: { color: "{yellow.600}", shadow: "none" } }, outlined: { color: "{yellow.600}", borderColor: "{yellow.600}" }, simple: { color: "{yellow.600}" } }, error: { background: "color-mix(in srgb, {red.50}, transparent 5%)", borderColor: "{red.200}", color: "{red.600}", shadow: "0px 4px 8px 0px color-mix(in srgb, {red.500}, transparent 96%)", closeButton: { hoverBackground: "{red.100}", focusRing: { color: "{red.600}", shadow: "none" } }, outlined: { color: "{red.600}", borderColor: "{red.600}" }, simple: { color: "{red.600}" } }, secondary: { background: "{surface.100}", borderColor: "{surface.200}", color: "{surface.600}", shadow: "0px 4px 8px 0px color-mix(in srgb, {surface.500}, transparent 96%)", closeButton: { hoverBackground: "{surface.200}", focusRing: { color: "{surface.600}", shadow: "none" } }, outlined: { color: "{surface.500}", borderColor: "{surface.500}" }, simple: { color: "{surface.500}" } }, contrast: { background: "{surface.900}", borderColor: "{surface.950}", color: "{surface.50}", shadow: "0px 4px 8px 0px color-mix(in srgb, {surface.950}, transparent 96%)", closeButton: { hoverBackground: "{surface.800}", focusRing: { color: "{surface.50}", shadow: "none" } }, outlined: { color: "{surface.950}", borderColor: "{surface.950}" }, simple: { color: "{surface.950}" } } }, dark: { info: { background: "color-mix(in srgb, {blue.500}, transparent 84%)", borderColor: "color-mix(in srgb, {blue.700}, transparent 64%)", color: "{blue.500}", shadow: "0px 4px 8px 0px color-mix(in srgb, {blue.500}, transparent 96%)", closeButton: { hoverBackground: "rgba(255, 255, 255, 0.05)", focusRing: { color: "{blue.500}", shadow: "none" } }, outlined: { color: "{blue.500}", borderColor: "{blue.500}" }, simple: { color: "{blue.500}" } }, success: { background: "color-mix(in srgb, {green.500}, transparent 84%)", borderColor: "color-mix(in srgb, {green.700}, transparent 64%)", color: "{green.500}", shadow: "0px 4px 8px 0px color-mix(in srgb, {green.500}, transparent 96%)", closeButton: { hoverBackground: "rgba(255, 255, 255, 0.05)", focusRing: { color: "{green.500}", shadow: "none" } }, outlined: { color: "{green.500}", borderColor: "{green.500}" }, simple: { color: "{green.500}" } }, warn: { background: "color-mix(in srgb, {yellow.500}, transparent 84%)", borderColor: "color-mix(in srgb, {yellow.700}, transparent 64%)", color: "{yellow.500}", shadow: "0px 4px 8px 0px color-mix(in srgb, {yellow.500}, transparent 96%)", closeButton: { hoverBackground: "rgba(255, 255, 255, 0.05)", focusRing: { color: "{yellow.500}", shadow: "none" } }, outlined: { color: "{yellow.500}", borderColor: "{yellow.500}" }, simple: { color: "{yellow.500}" } }, error: { background: "color-mix(in srgb, {red.500}, transparent 84%)", borderColor: "color-mix(in srgb, {red.700}, transparent 64%)", color: "{red.500}", shadow: "0px 4px 8px 0px color-mix(in srgb, {red.500}, transparent 96%)", closeButton: { hoverBackground: "rgba(255, 255, 255, 0.05)", focusRing: { color: "{red.500}", shadow: "none" } }, outlined: { color: "{red.500}", borderColor: "{red.500}" }, simple: { color: "{red.500}" } }, secondary: { background: "{surface.800}", borderColor: "{surface.700}", color: "{surface.300}", shadow: "0px 4px 8px 0px color-mix(in srgb, {surface.500}, transparent 96%)", closeButton: { hoverBackground: "{surface.700}", focusRing: { color: "{surface.300}", shadow: "none" } }, outlined: { color: "{surface.400}", borderColor: "{surface.400}" }, simple: { color: "{surface.400}" } }, contrast: { background: "{surface.0}", borderColor: "{surface.100}", color: "{surface.950}", shadow: "0px 4px 8px 0px color-mix(in srgb, {surface.950}, transparent 96%)", closeButton: { hoverBackground: "{surface.100}", focusRing: { color: "{surface.950}", shadow: "none" } }, outlined: { color: "{surface.0}", borderColor: "{surface.0}" }, simple: { color: "{surface.0}" } } } }, u$2 = { root: o$G, content: r$E, text: e$r, icon: n$k, closeButton: l$6, closeIcon: s$3, outlined: c$d, simple: a$l, colorScheme: d$e };
-var e$q = { borderRadius: "{content.border.radius}", gap: "1rem" }, r$D = { background: "{content.border.color}", size: "0.5rem" }, a$k = { gap: "0.5rem" }, o$F = { size: "0.5rem" }, l$5 = { size: "1rem" }, t$k = { verticalGap: "0.5rem", horizontalGap: "1rem" }, b$1 = { root: e$q, meters: r$D, label: a$k, labelMarker: o$F, labelIcon: l$5, labelList: t$k };
-var o$E = { background: "{form.field.background}", disabledBackground: "{form.field.disabled.background}", filledBackground: "{form.field.filled.background}", filledHoverBackground: "{form.field.filled.hover.background}", filledFocusBackground: "{form.field.filled.focus.background}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.hover.border.color}", focusBorderColor: "{form.field.focus.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", color: "{form.field.color}", disabledColor: "{form.field.disabled.color}", placeholderColor: "{form.field.placeholder.color}", invalidPlaceholderColor: "{form.field.invalid.placeholder.color}", shadow: "{form.field.shadow}", paddingX: "{form.field.padding.x}", paddingY: "{form.field.padding.y}", borderRadius: "{form.field.border.radius}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}", sm: { fontSize: "{form.field.sm.font.size}", paddingX: "{form.field.sm.padding.x}", paddingY: "{form.field.sm.padding.y}" }, lg: { fontSize: "{form.field.lg.font.size}", paddingX: "{form.field.lg.padding.x}", paddingY: "{form.field.lg.padding.y}" } }, d$d = { width: "2.5rem", color: "{form.field.icon.color}" }, r$C = { background: "{overlay.select.background}", borderColor: "{overlay.select.border.color}", borderRadius: "{overlay.select.border.radius}", color: "{overlay.select.color}", shadow: "{overlay.select.shadow}" }, l$4 = { padding: "{list.padding}", gap: "{list.gap}", header: { padding: "{list.header.padding}" } }, i$9 = { focusBackground: "{list.option.focus.background}", selectedBackground: "{list.option.selected.background}", selectedFocusBackground: "{list.option.selected.focus.background}", color: "{list.option.color}", focusColor: "{list.option.focus.color}", selectedColor: "{list.option.selected.color}", selectedFocusColor: "{list.option.selected.focus.color}", padding: "{list.option.padding}", borderRadius: "{list.option.border.radius}", gap: "0.5rem" }, e$p = { background: "{list.option.group.background}", color: "{list.option.group.color}", fontWeight: "{list.option.group.font.weight}", padding: "{list.option.group.padding}" }, f$3 = { color: "{form.field.icon.color}" }, a$j = { borderRadius: "{border.radius.sm}" }, c$c = { padding: "{list.option.padding}" }, n$j = { root: o$E, dropdown: d$d, overlay: r$C, list: l$4, option: i$9, optionGroup: e$p, chip: a$j, clearIcon: f$3, emptyMessage: c$c };
-var r$B = { gap: "1.125rem" }, a$i = { gap: "0.5rem" }, o$D = { root: r$B, controls: a$i };
-var o$C = { gutter: "0.75rem", transitionDuration: "{transition.duration}" }, r$A = { background: "{content.background}", hoverBackground: "{content.hover.background}", selectedBackground: "{highlight.background}", borderColor: "{content.border.color}", color: "{content.color}", selectedColor: "{highlight.color}", hoverColor: "{content.hover.color}", padding: "0.75rem 1rem", toggleablePadding: "0.75rem 1rem 1.25rem 1rem", borderRadius: "{content.border.radius}" }, e$o = { background: "{content.background}", hoverBackground: "{content.hover.background}", borderColor: "{content.border.color}", color: "{text.muted.color}", hoverColor: "{text.color}", size: "1.5rem", borderRadius: "50%", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, t$j = { color: "{content.border.color}", borderRadius: "{content.border.radius}", height: "24px" }, n$i = { root: o$C, node: r$A, nodeToggleButton: e$o, connector: t$j };
-var o$B = { outline: { width: "2px", color: "{content.background}" } }, t$i = { root: o$B };
-var o$A = { padding: "0.5rem 1rem", gap: "0.25rem", borderRadius: "{content.border.radius}", background: "{content.background}", color: "{content.color}", transitionDuration: "{transition.duration}" }, r$z = { background: "transparent", hoverBackground: "{content.hover.background}", selectedBackground: "{highlight.background}", color: "{text.muted.color}", hoverColor: "{text.hover.muted.color}", selectedColor: "{highlight.color}", width: "2.5rem", height: "2.5rem", borderRadius: "50%", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, t$h = { color: "{text.muted.color}" }, e$n = { maxWidth: "2.5rem" }, n$h = { root: o$A, navButton: r$z, currentPageReport: t$h, jumpToPageInput: e$n };
-var r$y = { background: "{content.background}", borderColor: "{content.border.color}", color: "{content.color}", borderRadius: "{content.border.radius}" }, o$z = { background: "transparent", color: "{text.color}", padding: "1.125rem", borderColor: "{content.border.color}", borderWidth: "0", borderRadius: "0" }, e$m = { padding: "0.375rem 1.125rem" }, d$c = { fontWeight: "600" }, t$g = { padding: "0 1.125rem 1.125rem 1.125rem" }, n$g = { padding: "0 1.125rem 1.125rem 1.125rem" }, a$h = { root: r$y, header: o$z, toggleableHeader: e$m, title: d$c, content: t$g, footer: n$g };
-var o$y = { gap: "0.5rem", transitionDuration: "{transition.duration}" }, r$x = { background: "{content.background}", borderColor: "{content.border.color}", borderWidth: "1px", color: "{content.color}", padding: "0.25rem 0.25rem", borderRadius: "{content.border.radius}", first: { borderWidth: "1px", topBorderRadius: "{content.border.radius}" }, last: { borderWidth: "1px", bottomBorderRadius: "{content.border.radius}" } }, n$f = { focusBackground: "{navigation.item.focus.background}", color: "{navigation.item.color}", focusColor: "{navigation.item.focus.color}", gap: "0.5rem", padding: "{navigation.item.padding}", borderRadius: "{content.border.radius}", icon: { color: "{navigation.item.icon.color}", focusColor: "{navigation.item.icon.focus.color}" } }, i$8 = { indent: "1rem" }, t$f = { color: "{navigation.submenu.icon.color}", focusColor: "{navigation.submenu.icon.focus.color}" }, a$g = { root: o$y, panel: r$x, item: n$f, submenu: i$8, submenuIcon: t$f };
-var r$w = { background: "{content.border.color}", borderRadius: "{content.border.radius}", height: ".75rem" }, o$x = { color: "{form.field.icon.color}" }, e$l = { background: "{overlay.popover.background}", borderColor: "{overlay.popover.border.color}", borderRadius: "{overlay.popover.border.radius}", color: "{overlay.popover.color}", padding: "{overlay.popover.padding}", shadow: "{overlay.popover.shadow}" }, a$f = { gap: "0.5rem" }, d$b = { light: { strength: { weakBackground: "{red.500}", mediumBackground: "{amber.500}", strongBackground: "{green.500}" } }, dark: { strength: { weakBackground: "{red.400}", mediumBackground: "{amber.400}", strongBackground: "{green.400}" } } }, n$e = { meter: r$w, icon: o$x, overlay: e$l, content: a$f, colorScheme: d$b };
-var r$v = { gap: "1.125rem" }, a$e = { gap: "0.5rem" }, o$w = { root: r$v, controls: a$e };
-var o$v = { background: "{overlay.popover.background}", borderColor: "{overlay.popover.border.color}", color: "{overlay.popover.color}", borderRadius: "{overlay.popover.border.radius}", shadow: "{overlay.popover.shadow}", gutter: "10px", arrowOffset: "1.25rem" }, r$u = { padding: "{overlay.popover.padding}" }, e$k = { root: o$v, content: r$u };
-var r$t = { background: "{content.border.color}", borderRadius: "{content.border.radius}", height: "1.25rem" }, o$u = { background: "{primary.color}" }, e$j = { color: "{primary.contrast.color}", fontSize: "0.75rem", fontWeight: "600" }, t$e = { root: r$t, value: o$u, label: e$j };
-var o$t = { light: { root: { colorOne: "{red.500}", colorTwo: "{blue.500}", colorThree: "{green.500}", colorFour: "{yellow.500}" } }, dark: { root: { colorOne: "{red.400}", colorTwo: "{blue.400}", colorThree: "{green.400}", colorFour: "{yellow.400}" } } }, r$s = { colorScheme: o$t };
-var o$s = { width: "1.25rem", height: "1.25rem", background: "{form.field.background}", checkedBackground: "{primary.color}", checkedHoverBackground: "{primary.hover.color}", disabledBackground: "{form.field.disabled.background}", filledBackground: "{form.field.filled.background}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.hover.border.color}", focusBorderColor: "{form.field.border.color}", checkedBorderColor: "{primary.color}", checkedHoverBorderColor: "{primary.hover.color}", checkedFocusBorderColor: "{primary.color}", checkedDisabledBorderColor: "{form.field.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", shadow: "{form.field.shadow}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}", sm: { width: "1rem", height: "1rem" }, lg: { width: "1.5rem", height: "1.5rem" } }, r$r = { size: "0.75rem", checkedColor: "{primary.contrast.color}", checkedHoverColor: "{primary.contrast.color}", disabledColor: "{form.field.disabled.color}", sm: { size: "0.5rem" }, lg: { size: "1rem" } }, e$i = { root: o$s, icon: r$r };
-var o$r = { gap: "0.25rem", transitionDuration: "{transition.duration}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, r$q = { size: "1rem", color: "{text.muted.color}", hoverColor: "{primary.color}", activeColor: "{primary.color}" }, i$7 = { root: o$r, icon: r$q };
-var r$p = { light: { root: { background: "rgba(0,0,0,0.1)" } }, dark: { root: { background: "rgba(255,255,255,0.3)" } } }, o$q = { colorScheme: r$p };
-var r$o = { transitionDuration: "{transition.duration}" }, o$p = { size: "9px", borderRadius: "{border.radius.sm}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, s$2 = { light: { bar: { background: "{surface.100}" } }, dark: { bar: { background: "{surface.800}" } } }, a$d = { root: r$o, bar: o$p, colorScheme: s$2 };
-var o$o = { background: "{form.field.background}", disabledBackground: "{form.field.disabled.background}", filledBackground: "{form.field.filled.background}", filledHoverBackground: "{form.field.filled.hover.background}", filledFocusBackground: "{form.field.filled.focus.background}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.hover.border.color}", focusBorderColor: "{form.field.focus.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", color: "{form.field.color}", disabledColor: "{form.field.disabled.color}", placeholderColor: "{form.field.placeholder.color}", invalidPlaceholderColor: "{form.field.invalid.placeholder.color}", shadow: "{form.field.shadow}", paddingX: "{form.field.padding.x}", paddingY: "{form.field.padding.y}", borderRadius: "{form.field.border.radius}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}", sm: { fontSize: "{form.field.sm.font.size}", paddingX: "{form.field.sm.padding.x}", paddingY: "{form.field.sm.padding.y}" }, lg: { fontSize: "{form.field.lg.font.size}", paddingX: "{form.field.lg.padding.x}", paddingY: "{form.field.lg.padding.y}" } }, r$n = { width: "2.5rem", color: "{form.field.icon.color}" }, d$a = { background: "{overlay.select.background}", borderColor: "{overlay.select.border.color}", borderRadius: "{overlay.select.border.radius}", color: "{overlay.select.color}", shadow: "{overlay.select.shadow}" }, l$3 = { padding: "{list.padding}", gap: "{list.gap}", header: { padding: "{list.header.padding}" } }, i$6 = { focusBackground: "{list.option.focus.background}", selectedBackground: "{list.option.selected.background}", selectedFocusBackground: "{list.option.selected.focus.background}", color: "{list.option.color}", focusColor: "{list.option.focus.color}", selectedColor: "{list.option.selected.color}", selectedFocusColor: "{list.option.selected.focus.color}", padding: "{list.option.padding}", borderRadius: "{list.option.border.radius}" }, e$h = { background: "{list.option.group.background}", color: "{list.option.group.color}", fontWeight: "{list.option.group.font.weight}", padding: "{list.option.group.padding}" }, f$2 = { color: "{form.field.icon.color}" }, c$b = { color: "{list.option.color}", gutterStart: "-0.375rem", gutterEnd: "0.375rem" }, a$c = { padding: "{list.option.padding}" }, n$d = { root: o$o, dropdown: r$n, overlay: d$a, list: l$3, option: i$6, optionGroup: e$h, clearIcon: f$2, checkmark: c$b, emptyMessage: a$c };
-var r$m = { borderRadius: "{form.field.border.radius}" }, o$n = { light: { root: { invalidBorderColor: "{form.field.invalid.border.color}" } }, dark: { root: { invalidBorderColor: "{form.field.invalid.border.color}" } } }, d$9 = { root: r$m, colorScheme: o$n };
-var r$l = { borderRadius: "{content.border.radius}" }, a$b = { light: { root: { background: "{surface.200}", animationBackground: "rgba(255,255,255,0.4)" } }, dark: { root: { background: "rgba(255, 255, 255, 0.06)", animationBackground: "rgba(255, 255, 255, 0.04)" } } }, o$m = { root: r$l, colorScheme: a$b };
-var o$l = { transitionDuration: "{transition.duration}" }, r$k = { background: "{content.border.color}", borderRadius: "{content.border.radius}", size: "3px" }, n$c = { background: "{primary.color}" }, t$d = { width: "20px", height: "20px", borderRadius: "50%", background: "{content.border.color}", hoverBackground: "{content.border.color}", content: { borderRadius: "50%", hoverBackground: "{content.background}", width: "16px", height: "16px", shadow: "0px 0.5px 0px 0px rgba(0, 0, 0, 0.08), 0px 1px 1px 0px rgba(0, 0, 0, 0.14)" }, focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, e$g = { light: { handle: { content: { background: "{surface.0}" } } }, dark: { handle: { content: { background: "{surface.950}" } } } }, a$a = { root: o$l, track: r$k, range: n$c, handle: t$d, colorScheme: e$g };
-var t$c = { gap: "0.5rem", transitionDuration: "{transition.duration}" }, a$9 = { root: t$c };
-var r$j = { borderRadius: "{form.field.border.radius}", roundedBorderRadius: "2rem", raisedShadow: "0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12)" }, d$8 = { root: r$j };
-var o$k = { background: "{content.background}", borderColor: "{content.border.color}", color: "{content.color}", transitionDuration: "{transition.duration}" }, r$i = { background: "{content.border.color}" }, n$b = { size: "24px", background: "transparent", borderRadius: "{content.border.radius}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, t$b = { root: o$k, gutter: r$i, handle: n$b };
-var o$j = { transitionDuration: "{transition.duration}" }, r$h = { background: "{content.border.color}", activeBackground: "{primary.color}", margin: "0 0 0 1.625rem", size: "2px" }, e$f = { padding: "0.5rem", gap: "1rem" }, t$a = { padding: "0", borderRadius: "{content.border.radius}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" }, gap: "0.5rem" }, n$a = { color: "{text.muted.color}", activeColor: "{primary.color}", fontWeight: "500" }, a$8 = { background: "{content.background}", activeBackground: "{content.background}", borderColor: "{content.border.color}", activeBorderColor: "{content.border.color}", color: "{text.muted.color}", activeColor: "{primary.color}", size: "2rem", fontSize: "1.143rem", fontWeight: "500", borderRadius: "50%", shadow: "0px 0.5px 0px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12)" }, c$a = { padding: "0.875rem 0.5rem 1.125rem 0.5rem" }, d$7 = { background: "{content.background}", color: "{content.color}", padding: "0", indent: "1rem" }, i$5 = { root: o$j, separator: r$h, step: e$f, stepHeader: t$a, stepTitle: n$a, stepNumber: a$8, steppanels: c$a, steppanel: d$7 };
-var o$i = { transitionDuration: "{transition.duration}" }, r$g = { background: "{content.border.color}" }, t$9 = { borderRadius: "{content.border.radius}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" }, gap: "0.5rem" }, e$e = { color: "{text.muted.color}", activeColor: "{primary.color}", fontWeight: "500" }, n$9 = { background: "{content.background}", activeBackground: "{content.background}", borderColor: "{content.border.color}", activeBorderColor: "{content.border.color}", color: "{text.muted.color}", activeColor: "{primary.color}", size: "2rem", fontSize: "1.143rem", fontWeight: "500", borderRadius: "50%", shadow: "0px 0.5px 0px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12)" }, c$9 = { root: o$i, separator: r$g, itemLink: t$9, itemLabel: e$e, itemNumber: n$9 };
-var o$h = { transitionDuration: "{transition.duration}" }, r$f = { borderWidth: "0 0 1px 0", background: "{content.background}", borderColor: "{content.border.color}" }, t$8 = { background: "transparent", hoverBackground: "transparent", activeBackground: "transparent", borderWidth: "0 0 1px 0", borderColor: "{content.border.color}", hoverBorderColor: "{content.border.color}", activeBorderColor: "{primary.color}", color: "{text.muted.color}", hoverColor: "{text.color}", activeColor: "{primary.color}", padding: "1rem 1.125rem", fontWeight: "600", margin: "0 0 -1px 0", gap: "0.5rem", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, e$d = { color: "{text.muted.color}", hoverColor: "{text.color}", activeColor: "{primary.color}" }, c$8 = { height: "1px", bottom: "-1px", background: "{primary.color}" }, n$8 = { root: o$h, tablist: r$f, item: t$8, itemIcon: e$d, activeBar: c$8 };
-var o$g = { transitionDuration: "{transition.duration}" }, r$e = { borderWidth: "0 0 1px 0", background: "{content.background}", borderColor: "{content.border.color}" }, t$7 = { background: "transparent", hoverBackground: "transparent", activeBackground: "transparent", borderWidth: "0 0 1px 0", borderColor: "{content.border.color}", hoverBorderColor: "{content.border.color}", activeBorderColor: "{primary.color}", color: "{text.muted.color}", hoverColor: "{text.color}", activeColor: "{primary.color}", padding: "1rem 1.125rem", fontWeight: "600", margin: "0 0 -1px 0", gap: "0.5rem", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "-1px", shadow: "{focus.ring.shadow}" } }, n$7 = { background: "{content.background}", color: "{content.color}", padding: "0.875rem 1.125rem 1.125rem 1.125rem", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "inset {focus.ring.shadow}" } }, c$7 = { background: "{content.background}", color: "{text.muted.color}", hoverColor: "{text.color}", width: "2.5rem", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "-1px", shadow: "{focus.ring.shadow}" } }, e$c = { height: "1px", bottom: "-1px", background: "{primary.color}" }, a$7 = { light: { navButton: { shadow: "0px 0px 10px 50px rgba(255, 255, 255, 0.6)" } }, dark: { navButton: { shadow: "0px 0px 10px 50px color-mix(in srgb, {content.background}, transparent 50%)" } } }, i$4 = { root: o$g, tablist: r$e, tab: t$7, tabpanel: n$7, navButton: c$7, activeBar: e$c, colorScheme: a$7 };
-var o$f = { transitionDuration: "{transition.duration}" }, r$d = { background: "{content.background}", borderColor: "{content.border.color}" }, t$6 = { borderColor: "{content.border.color}", activeBorderColor: "{primary.color}", color: "{text.muted.color}", hoverColor: "{text.color}", activeColor: "{primary.color}" }, n$6 = { background: "{content.background}", color: "{content.color}" }, a$6 = { background: "{content.background}", color: "{text.muted.color}", hoverColor: "{text.color}" }, c$6 = { light: { navButton: { shadow: "0px 0px 10px 50px rgba(255, 255, 255, 0.6)" } }, dark: { navButton: { shadow: "0px 0px 10px 50px color-mix(in srgb, {content.background}, transparent 50%)" } } }, e$b = { root: o$f, tabList: r$d, tab: t$6, tabPanel: n$6, navButton: a$6, colorScheme: c$6 };
-var r$c = { fontSize: "0.875rem", fontWeight: "700", padding: "0.25rem 0.5rem", gap: "0.25rem", borderRadius: "{content.border.radius}", roundedBorderRadius: "{border.radius.xl}" }, o$e = { size: "0.75rem" }, a$5 = { light: { primary: { background: "{primary.100}", color: "{primary.700}" }, secondary: { background: "{surface.100}", color: "{surface.600}" }, success: { background: "{green.100}", color: "{green.700}" }, info: { background: "{sky.100}", color: "{sky.700}" }, warn: { background: "{orange.100}", color: "{orange.700}" }, danger: { background: "{red.100}", color: "{red.700}" }, contrast: { background: "{surface.950}", color: "{surface.0}" } }, dark: { primary: { background: "color-mix(in srgb, {primary.500}, transparent 84%)", color: "{primary.300}" }, secondary: { background: "{surface.800}", color: "{surface.300}" }, success: { background: "color-mix(in srgb, {green.500}, transparent 84%)", color: "{green.300}" }, info: { background: "color-mix(in srgb, {sky.500}, transparent 84%)", color: "{sky.300}" }, warn: { background: "color-mix(in srgb, {orange.500}, transparent 84%)", color: "{orange.300}" }, danger: { background: "color-mix(in srgb, {red.500}, transparent 84%)", color: "{red.300}" }, contrast: { background: "{surface.0}", color: "{surface.950}" } } }, n$5 = { root: r$c, icon: o$e, colorScheme: a$5 };
-var r$b = { background: "{form.field.background}", borderColor: "{form.field.border.color}", color: "{form.field.color}", height: "18rem", padding: "{form.field.padding.y} {form.field.padding.x}", borderRadius: "{form.field.border.radius}" }, o$d = { gap: "0.25rem" }, d$6 = { margin: "2px 0" }, e$a = { root: r$b, prompt: o$d, commandResponse: d$6 };
-var o$c = { background: "{form.field.background}", disabledBackground: "{form.field.disabled.background}", filledBackground: "{form.field.filled.background}", filledHoverBackground: "{form.field.filled.hover.background}", filledFocusBackground: "{form.field.filled.focus.background}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.hover.border.color}", focusBorderColor: "{form.field.focus.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", color: "{form.field.color}", disabledColor: "{form.field.disabled.color}", placeholderColor: "{form.field.placeholder.color}", invalidPlaceholderColor: "{form.field.invalid.placeholder.color}", shadow: "{form.field.shadow}", paddingX: "{form.field.padding.x}", paddingY: "{form.field.padding.y}", borderRadius: "{form.field.border.radius}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}", sm: { fontSize: "{form.field.sm.font.size}", paddingX: "{form.field.sm.padding.x}", paddingY: "{form.field.sm.padding.y}" }, lg: { fontSize: "{form.field.lg.font.size}", paddingX: "{form.field.lg.padding.x}", paddingY: "{form.field.lg.padding.y}" } }, d$5 = { root: o$c };
-var o$b = { background: "{content.background}", borderColor: "{content.border.color}", color: "{content.color}", borderRadius: "{content.border.radius}", shadow: "{overlay.navigation.shadow}", transitionDuration: "{transition.duration}" }, i$3 = { padding: "{navigation.list.padding}", gap: "{navigation.list.gap}" }, n$4 = { focusBackground: "{navigation.item.focus.background}", activeBackground: "{navigation.item.active.background}", color: "{navigation.item.color}", focusColor: "{navigation.item.focus.color}", activeColor: "{navigation.item.active.color}", padding: "{navigation.item.padding}", borderRadius: "{navigation.item.border.radius}", gap: "{navigation.item.gap}", icon: { color: "{navigation.item.icon.color}", focusColor: "{navigation.item.icon.focus.color}", activeColor: "{navigation.item.icon.active.color}" } }, a$4 = { mobileIndent: "1rem" }, t$5 = { size: "{navigation.submenu.icon.size}", color: "{navigation.submenu.icon.color}", focusColor: "{navigation.submenu.icon.focus.color}", activeColor: "{navigation.submenu.icon.active.color}" }, r$a = { borderColor: "{content.border.color}" }, c$5 = { root: o$b, list: i$3, item: n$4, submenu: a$4, submenuIcon: t$5, separator: r$a };
-var e$9 = { minHeight: "5rem" }, r$9 = { eventContent: { padding: "1rem 0" } }, o$a = { eventContent: { padding: "0 1rem" } }, n$3 = { size: "1.125rem", borderRadius: "50%", borderWidth: "2px", background: "{content.background}", borderColor: "{content.border.color}", content: { borderRadius: "50%", size: "0.375rem", background: "{primary.color}", insetShadow: "0px 0.5px 0px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12)" } }, t$4 = { color: "{content.border.color}", size: "2px" }, d$4 = { event: e$9, horizontal: r$9, vertical: o$a, eventMarker: n$3, eventConnector: t$4 };
-var o$9 = { width: "25rem", borderRadius: "{content.border.radius}", borderWidth: "1px", transitionDuration: "{transition.duration}" }, r$8 = { size: "1.125rem" }, e$8 = { padding: "{overlay.popover.padding}", gap: "0.5rem" }, n$2 = { gap: "0.5rem" }, a$3 = { fontWeight: "500", fontSize: "1rem" }, s$1 = { fontWeight: "500", fontSize: "0.875rem" }, c$4 = { width: "1.75rem", height: "1.75rem", borderRadius: "50%", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", offset: "{focus.ring.offset}" } }, l$2 = { size: "1rem" }, t$3 = { light: { root: { blur: "1.5px" }, info: { background: "color-mix(in srgb, {blue.50}, transparent 5%)", borderColor: "{blue.200}", color: "{blue.600}", detailColor: "{surface.700}", shadow: "0px 4px 8px 0px color-mix(in srgb, {blue.500}, transparent 96%)", closeButton: { hoverBackground: "{blue.100}", focusRing: { color: "{blue.600}", shadow: "none" } } }, success: { background: "color-mix(in srgb, {green.50}, transparent 5%)", borderColor: "{green.200}", color: "{green.600}", detailColor: "{surface.700}", shadow: "0px 4px 8px 0px color-mix(in srgb, {green.500}, transparent 96%)", closeButton: { hoverBackground: "{green.100}", focusRing: { color: "{green.600}", shadow: "none" } } }, warn: { background: "color-mix(in srgb,{yellow.50}, transparent 5%)", borderColor: "{yellow.200}", color: "{yellow.600}", detailColor: "{surface.700}", shadow: "0px 4px 8px 0px color-mix(in srgb, {yellow.500}, transparent 96%)", closeButton: { hoverBackground: "{yellow.100}", focusRing: { color: "{yellow.600}", shadow: "none" } } }, error: { background: "color-mix(in srgb, {red.50}, transparent 5%)", borderColor: "{red.200}", color: "{red.600}", detailColor: "{surface.700}", shadow: "0px 4px 8px 0px color-mix(in srgb, {red.500}, transparent 96%)", closeButton: { hoverBackground: "{red.100}", focusRing: { color: "{red.600}", shadow: "none" } } }, secondary: { background: "{surface.100}", borderColor: "{surface.200}", color: "{surface.600}", detailColor: "{surface.700}", shadow: "0px 4px 8px 0px color-mix(in srgb, {surface.500}, transparent 96%)", closeButton: { hoverBackground: "{surface.200}", focusRing: { color: "{surface.600}", shadow: "none" } } }, contrast: { background: "{surface.900}", borderColor: "{surface.950}", color: "{surface.50}", detailColor: "{surface.0}", shadow: "0px 4px 8px 0px color-mix(in srgb, {surface.950}, transparent 96%)", closeButton: { hoverBackground: "{surface.800}", focusRing: { color: "{surface.50}", shadow: "none" } } } }, dark: { root: { blur: "10px" }, info: { background: "color-mix(in srgb, {blue.500}, transparent 84%)", borderColor: "color-mix(in srgb, {blue.700}, transparent 64%)", color: "{blue.500}", detailColor: "{surface.0}", shadow: "0px 4px 8px 0px color-mix(in srgb, {blue.500}, transparent 96%)", closeButton: { hoverBackground: "rgba(255, 255, 255, 0.05)", focusRing: { color: "{blue.500}", shadow: "none" } } }, success: { background: "color-mix(in srgb, {green.500}, transparent 84%)", borderColor: "color-mix(in srgb, {green.700}, transparent 64%)", color: "{green.500}", detailColor: "{surface.0}", shadow: "0px 4px 8px 0px color-mix(in srgb, {green.500}, transparent 96%)", closeButton: { hoverBackground: "rgba(255, 255, 255, 0.05)", focusRing: { color: "{green.500}", shadow: "none" } } }, warn: { background: "color-mix(in srgb, {yellow.500}, transparent 84%)", borderColor: "color-mix(in srgb, {yellow.700}, transparent 64%)", color: "{yellow.500}", detailColor: "{surface.0}", shadow: "0px 4px 8px 0px color-mix(in srgb, {yellow.500}, transparent 96%)", closeButton: { hoverBackground: "rgba(255, 255, 255, 0.05)", focusRing: { color: "{yellow.500}", shadow: "none" } } }, error: { background: "color-mix(in srgb, {red.500}, transparent 84%)", borderColor: "color-mix(in srgb, {red.700}, transparent 64%)", color: "{red.500}", detailColor: "{surface.0}", shadow: "0px 4px 8px 0px color-mix(in srgb, {red.500}, transparent 96%)", closeButton: { hoverBackground: "rgba(255, 255, 255, 0.05)", focusRing: { color: "{red.500}", shadow: "none" } } }, secondary: { background: "{surface.800}", borderColor: "{surface.700}", color: "{surface.300}", detailColor: "{surface.0}", shadow: "0px 4px 8px 0px color-mix(in srgb, {surface.500}, transparent 96%)", closeButton: { hoverBackground: "{surface.700}", focusRing: { color: "{surface.300}", shadow: "none" } } }, contrast: { background: "{surface.0}", borderColor: "{surface.100}", color: "{surface.950}", detailColor: "{surface.950}", shadow: "0px 4px 8px 0px color-mix(in srgb, {surface.950}, transparent 96%)", closeButton: { hoverBackground: "{surface.100}", focusRing: { color: "{surface.950}", shadow: "none" } } } } }, u$1 = { root: o$9, icon: r$8, content: e$8, text: n$2, summary: a$3, detail: s$1, closeButton: c$4, closeIcon: l$2, colorScheme: t$3 };
-var r$7 = { padding: "0.25rem", borderRadius: "{content.border.radius}", gap: "0.5rem", fontWeight: "500", disabledBackground: "{form.field.disabled.background}", disabledBorderColor: "{form.field.disabled.background}", disabledColor: "{form.field.disabled.color}", invalidBorderColor: "{form.field.invalid.border.color}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}", sm: { fontSize: "{form.field.sm.font.size}", padding: "0.25rem" }, lg: { fontSize: "{form.field.lg.font.size}", padding: "0.25rem" } }, o$8 = { disabledColor: "{form.field.disabled.color}" }, e$7 = { padding: "0.25rem 0.75rem", borderRadius: "{content.border.radius}", checkedShadow: "0px 1px 2px 0px rgba(0, 0, 0, 0.02), 0px 1px 2px 0px rgba(0, 0, 0, 0.04)", sm: { padding: "0.25rem 0.75rem" }, lg: { padding: "0.25rem 0.75rem" } }, d$3 = { light: { root: { background: "{surface.100}", checkedBackground: "{surface.100}", hoverBackground: "{surface.100}", borderColor: "{surface.100}", color: "{surface.500}", hoverColor: "{surface.700}", checkedColor: "{surface.900}", checkedBorderColor: "{surface.100}" }, content: { checkedBackground: "{surface.0}" }, icon: { color: "{surface.500}", hoverColor: "{surface.700}", checkedColor: "{surface.900}" } }, dark: { root: { background: "{surface.950}", checkedBackground: "{surface.950}", hoverBackground: "{surface.950}", borderColor: "{surface.950}", color: "{surface.400}", hoverColor: "{surface.300}", checkedColor: "{surface.0}", checkedBorderColor: "{surface.950}" }, content: { checkedBackground: "{surface.800}" }, icon: { color: "{surface.400}", hoverColor: "{surface.300}", checkedColor: "{surface.0}" } } }, c$3 = { root: r$7, icon: o$8, content: e$7, colorScheme: d$3 };
-var r$6 = { width: "2.5rem", height: "1.5rem", borderRadius: "30px", gap: "0.25rem", shadow: "{form.field.shadow}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" }, borderWidth: "1px", borderColor: "transparent", hoverBorderColor: "transparent", checkedBorderColor: "transparent", checkedHoverBorderColor: "transparent", invalidBorderColor: "{form.field.invalid.border.color}", transitionDuration: "{form.field.transition.duration}", slideDuration: "0.2s" }, o$7 = { borderRadius: "50%", size: "1rem" }, e$6 = { light: { root: { background: "{surface.300}", disabledBackground: "{form.field.disabled.background}", hoverBackground: "{surface.400}", checkedBackground: "{primary.color}", checkedHoverBackground: "{primary.hover.color}" }, handle: { background: "{surface.0}", disabledBackground: "{form.field.disabled.color}", hoverBackground: "{surface.0}", checkedBackground: "{surface.0}", checkedHoverBackground: "{surface.0}", color: "{text.muted.color}", hoverColor: "{text.color}", checkedColor: "{primary.color}", checkedHoverColor: "{primary.hover.color}" } }, dark: { root: { background: "{surface.700}", disabledBackground: "{surface.600}", hoverBackground: "{surface.600}", checkedBackground: "{primary.color}", checkedHoverBackground: "{primary.hover.color}" }, handle: { background: "{surface.400}", disabledBackground: "{surface.900}", hoverBackground: "{surface.300}", checkedBackground: "{surface.900}", checkedHoverBackground: "{surface.900}", color: "{surface.900}", hoverColor: "{surface.800}", checkedColor: "{primary.color}", checkedHoverColor: "{primary.hover.color}" } } }, c$2 = { root: r$6, handle: o$7, colorScheme: e$6 };
-var o$6 = { background: "{content.background}", borderColor: "{content.border.color}", borderRadius: "{content.border.radius}", color: "{content.color}", gap: "0.5rem", padding: "0.75rem" }, r$5 = { root: o$6 };
-var r$4 = { maxWidth: "12.5rem", gutter: "0.25rem", shadow: "{overlay.popover.shadow}", padding: "0.5rem 0.75rem", borderRadius: "{overlay.popover.border.radius}" }, o$5 = { light: { root: { background: "{surface.700}", color: "{surface.0}" } }, dark: { root: { background: "{surface.700}", color: "{surface.0}" } } }, e$5 = { root: r$4, colorScheme: o$5 };
-var o$4 = { background: "{content.background}", color: "{content.color}", padding: "1rem", gap: "2px", indent: "1rem", transitionDuration: "{transition.duration}" }, r$3 = { padding: "0.25rem 0.5rem", borderRadius: "{content.border.radius}", hoverBackground: "{content.hover.background}", selectedBackground: "{highlight.background}", color: "{text.color}", hoverColor: "{text.hover.color}", selectedColor: "{highlight.color}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "-1px", shadow: "{focus.ring.shadow}" }, gap: "0.25rem" }, e$4 = { color: "{text.muted.color}", hoverColor: "{text.hover.muted.color}", selectedColor: "{highlight.color}" }, t$2 = { borderRadius: "50%", size: "1.75rem", hoverBackground: "{content.hover.background}", selectedHoverBackground: "{content.background}", color: "{text.muted.color}", hoverColor: "{text.hover.muted.color}", selectedHoverColor: "{primary.color}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, c$1 = { size: "2rem" }, n$1 = { margin: "0 0 0.5rem 0" }, d$2 = { root: o$4, node: r$3, nodeIcon: e$4, nodeToggleButton: t$2, loadingIcon: c$1, filter: n$1 };
-var o$3 = { background: "{form.field.background}", disabledBackground: "{form.field.disabled.background}", filledBackground: "{form.field.filled.background}", filledHoverBackground: "{form.field.filled.hover.background}", filledFocusBackground: "{form.field.filled.focus.background}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.hover.border.color}", focusBorderColor: "{form.field.focus.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", color: "{form.field.color}", disabledColor: "{form.field.disabled.color}", placeholderColor: "{form.field.placeholder.color}", invalidPlaceholderColor: "{form.field.invalid.placeholder.color}", shadow: "{form.field.shadow}", paddingX: "{form.field.padding.x}", paddingY: "{form.field.padding.y}", borderRadius: "{form.field.border.radius}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}", sm: { fontSize: "{form.field.sm.font.size}", paddingX: "{form.field.sm.padding.x}", paddingY: "{form.field.sm.padding.y}" }, lg: { fontSize: "{form.field.lg.font.size}", paddingX: "{form.field.lg.padding.x}", paddingY: "{form.field.lg.padding.y}" } }, r$2 = { width: "2.5rem", color: "{form.field.icon.color}" }, d$1 = { background: "{overlay.select.background}", borderColor: "{overlay.select.border.color}", borderRadius: "{overlay.select.border.radius}", color: "{overlay.select.color}", shadow: "{overlay.select.shadow}" }, l$1 = { padding: "{list.padding}" }, e$3 = { padding: "{list.option.padding}" }, i$2 = { borderRadius: "{border.radius.sm}" }, f$1 = { color: "{form.field.icon.color}" }, a$2 = { root: o$3, dropdown: r$2, overlay: d$1, tree: l$1, emptyMessage: e$3, chip: i$2, clearIcon: f$1 };
-var o$2 = { transitionDuration: "{transition.duration}" }, r$1 = { background: "{content.background}", borderColor: "{treetable.border.color}", color: "{content.color}", borderWidth: "0 0 1px 0", padding: "0.75rem 1rem" }, e$2 = { background: "{content.background}", hoverBackground: "{content.hover.background}", selectedBackground: "{highlight.background}", borderColor: "{treetable.border.color}", color: "{content.color}", hoverColor: "{content.hover.color}", selectedColor: "{highlight.color}", gap: "0.5rem", padding: "0.75rem 1rem", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "-1px", shadow: "{focus.ring.shadow}" } }, t$1 = { fontWeight: "600" }, c = { background: "{content.background}", hoverBackground: "{content.hover.background}", selectedBackground: "{highlight.background}", color: "{content.color}", hoverColor: "{content.hover.color}", selectedColor: "{highlight.color}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "-1px", shadow: "{focus.ring.shadow}" } }, n = { borderColor: "{treetable.border.color}", padding: "0.75rem 1rem", gap: "0.5rem" }, d = { background: "{content.background}", borderColor: "{treetable.border.color}", color: "{content.color}", padding: "0.75rem 1rem" }, l = { fontWeight: "600" }, i$1 = { background: "{content.background}", borderColor: "{treetable.border.color}", color: "{content.color}", borderWidth: "0 0 1px 0", padding: "0.75rem 1rem" }, a$1 = { width: "0.5rem" }, g = { width: "1px", color: "{primary.color}" }, s = { color: "{text.muted.color}", hoverColor: "{text.hover.muted.color}", size: "0.875rem" }, u = { size: "2rem" }, h = { hoverBackground: "{content.hover.background}", selectedHoverBackground: "{content.background}", color: "{text.muted.color}", hoverColor: "{text.color}", selectedHoverColor: "{primary.color}", size: "1.75rem", borderRadius: "50%", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, b = { borderColor: "{content.border.color}", borderWidth: "0 0 1px 0" }, f = { borderColor: "{content.border.color}", borderWidth: "0 0 1px 0" }, m$1 = { light: { root: { borderColor: "{content.border.color}" }, bodyCell: { selectedBorderColor: "{primary.100}" } }, dark: { root: { borderColor: "{surface.800}" }, bodyCell: { selectedBorderColor: "{primary.900}" } } }, k = { root: o$2, header: r$1, headerCell: e$2, columnTitle: t$1, row: c, bodyCell: n, footerCell: d, columnFooter: l, footer: i$1, columnResizer: a$1, resizeIndicator: g, sortIcon: s, loadingIcon: u, nodeToggleButton: h, paginatorTop: b, paginatorBottom: f, colorScheme: m$1 };
-var o$1 = { mask: { background: "{content.background}", color: "{text.muted.color}" }, icon: { size: "2rem" } }, e$1 = { loader: o$1 };
-var r = Object.defineProperty, e = Object.defineProperties, m = Object.getOwnPropertyDescriptors, i = Object.getOwnPropertySymbols, t = Object.prototype.hasOwnProperty, a = Object.prototype.propertyIsEnumerable, o = (e2, m2, i2) => m2 in e2 ? r(e2, m2, { enumerable: true, configurable: true, writable: true, value: i2 }) : e2[m2] = i2;
-var Nr, Qr = (Nr = ((r2, e2) => {
-  for (var m2 in e2 || (e2 = {})) t.call(e2, m2) && o(r2, m2, e2[m2]);
-  if (i) for (var m2 of i(e2)) a.call(e2, m2) && o(r2, m2, e2[m2]);
-  return r2;
-})({}, e$R), e(Nr, m({ components: { accordion: c$p, autocomplete: a$F, avatar: n$B, badge: d$v, blockui: o$1h, breadcrumb: t$C, button: e$Q, card: d$u, carousel: t$A, cascadeselect: f$8, checkbox: e$N, chip: s$8, colorpicker: s$7, confirmdialog: r$15, confirmpopup: a$A, contextmenu: c$k, datatable: k$2, dataview: c$i, datepicker: k$1, dialog: e$F, divider: t$v, dock: d$o, drawer: e$D, editor: l$a, fieldset: e$B, fileupload: i$i, floatlabel: d$k, galleria: l$9, iconfield: r$S, iftalabel: i$f, image: e$y, imagecompare: r$Q, inlinemessage: a$q, inplace: n$q, inputchips: f$4, inputgroup: o$O, inputnumber: a$p, inputotp: e$v, inputtext: d$h, knob: c$f, listbox: n$o, megamenu: g$1, menu: r$G, menubar: e$s, message: u$2, metergroup: b$1, multiselect: n$j, orderlist: o$D, organizationchart: n$i, overlaybadge: t$i, paginator: n$h, panel: a$h, panelmenu: a$g, password: n$e, picklist: o$w, popover: e$k, progressbar: t$e, progressspinner: r$s, radiobutton: e$i, rating: i$7, ripple: o$q, scrollpanel: a$d, select: n$d, selectbutton: d$9, skeleton: o$m, slider: a$a, speeddial: a$9, splitbutton: d$8, splitter: t$b, stepper: i$5, steps: c$9, tabmenu: n$8, tabs: i$4, tabview: e$b, tag: n$5, terminal: e$a, textarea: d$5, tieredmenu: c$5, timeline: d$4, toast: u$1, togglebutton: c$3, toggleswitch: c$2, toolbar: r$5, tooltip: e$5, tree: d$2, treeselect: a$2, treetable: k, virtualscroller: e$1 } })));
-const decodeCache = {};
-function getDecodeCache(exclude) {
-  let cache = decodeCache[exclude];
-  if (cache) {
-    return cache;
-  }
-  cache = decodeCache[exclude] = [];
-  for (let i2 = 0; i2 < 128; i2++) {
-    const ch = String.fromCharCode(i2);
-    cache.push(ch);
-  }
-  for (let i2 = 0; i2 < exclude.length; i2++) {
-    const ch = exclude.charCodeAt(i2);
-    cache[ch] = "%" + ("0" + ch.toString(16).toUpperCase()).slice(-2);
-  }
-  return cache;
-}
-function decode$1(string, exclude) {
-  if (typeof exclude !== "string") {
-    exclude = decode$1.defaultChars;
-  }
-  const cache = getDecodeCache(exclude);
-  return string.replace(/(%[a-f0-9]{2})+/gi, function(seq) {
-    let result = "";
-    for (let i2 = 0, l2 = seq.length; i2 < l2; i2 += 3) {
-      const b1 = parseInt(seq.slice(i2 + 1, i2 + 3), 16);
-      if (b1 < 128) {
-        result += cache[b1];
-        continue;
-      }
-      if ((b1 & 224) === 192 && i2 + 3 < l2) {
-        const b2 = parseInt(seq.slice(i2 + 4, i2 + 6), 16);
-        if ((b2 & 192) === 128) {
-          const chr = b1 << 6 & 1984 | b2 & 63;
-          if (chr < 128) {
-            result += "��";
-          } else {
-            result += String.fromCharCode(chr);
-          }
-          i2 += 3;
-          continue;
-        }
-      }
-      if ((b1 & 240) === 224 && i2 + 6 < l2) {
-        const b2 = parseInt(seq.slice(i2 + 4, i2 + 6), 16);
-        const b3 = parseInt(seq.slice(i2 + 7, i2 + 9), 16);
-        if ((b2 & 192) === 128 && (b3 & 192) === 128) {
-          const chr = b1 << 12 & 61440 | b2 << 6 & 4032 | b3 & 63;
-          if (chr < 2048 || chr >= 55296 && chr <= 57343) {
-            result += "���";
-          } else {
-            result += String.fromCharCode(chr);
-          }
-          i2 += 6;
-          continue;
-        }
-      }
-      if ((b1 & 248) === 240 && i2 + 9 < l2) {
-        const b2 = parseInt(seq.slice(i2 + 4, i2 + 6), 16);
-        const b3 = parseInt(seq.slice(i2 + 7, i2 + 9), 16);
-        const b4 = parseInt(seq.slice(i2 + 10, i2 + 12), 16);
-        if ((b2 & 192) === 128 && (b3 & 192) === 128 && (b4 & 192) === 128) {
-          let chr = b1 << 18 & 1835008 | b2 << 12 & 258048 | b3 << 6 & 4032 | b4 & 63;
-          if (chr < 65536 || chr > 1114111) {
-            result += "����";
-          } else {
-            chr -= 65536;
-            result += String.fromCharCode(55296 + (chr >> 10), 56320 + (chr & 1023));
-          }
-          i2 += 9;
-          continue;
-        }
-      }
-      result += "�";
-    }
-    return result;
-  });
-}
-decode$1.defaultChars = ";/?:@&=+$,#";
-decode$1.componentChars = "";
-const encodeCache = {};
-function getEncodeCache(exclude) {
-  let cache = encodeCache[exclude];
-  if (cache) {
-    return cache;
-  }
-  cache = encodeCache[exclude] = [];
-  for (let i2 = 0; i2 < 128; i2++) {
-    const ch = String.fromCharCode(i2);
-    if (/^[0-9a-z]$/i.test(ch)) {
-      cache.push(ch);
-    } else {
-      cache.push("%" + ("0" + i2.toString(16).toUpperCase()).slice(-2));
-    }
-  }
-  for (let i2 = 0; i2 < exclude.length; i2++) {
-    cache[exclude.charCodeAt(i2)] = exclude[i2];
-  }
-  return cache;
-}
-function encode$1(string, exclude, keepEscaped) {
-  if (typeof exclude !== "string") {
-    keepEscaped = exclude;
-    exclude = encode$1.defaultChars;
-  }
-  if (typeof keepEscaped === "undefined") {
-    keepEscaped = true;
-  }
-  const cache = getEncodeCache(exclude);
-  let result = "";
-  for (let i2 = 0, l2 = string.length; i2 < l2; i2++) {
-    const code2 = string.charCodeAt(i2);
-    if (keepEscaped && code2 === 37 && i2 + 2 < l2) {
-      if (/^[0-9a-f]{2}$/i.test(string.slice(i2 + 1, i2 + 3))) {
-        result += string.slice(i2, i2 + 3);
-        i2 += 2;
-        continue;
-      }
-    }
-    if (code2 < 128) {
-      result += cache[code2];
-      continue;
-    }
-    if (code2 >= 55296 && code2 <= 57343) {
-      if (code2 >= 55296 && code2 <= 56319 && i2 + 1 < l2) {
-        const nextCode = string.charCodeAt(i2 + 1);
-        if (nextCode >= 56320 && nextCode <= 57343) {
-          result += encodeURIComponent(string[i2] + string[i2 + 1]);
-          i2++;
-          continue;
-        }
-      }
-      result += "%EF%BF%BD";
-      continue;
-    }
-    result += encodeURIComponent(string[i2]);
-  }
-  return result;
-}
-encode$1.defaultChars = ";/?:@&=+$,-_.!~*'()#";
-encode$1.componentChars = "-_.!~*'()";
-function format(url) {
-  let result = "";
-  result += url.protocol || "";
-  result += url.slashes ? "//" : "";
-  result += url.auth ? url.auth + "@" : "";
-  if (url.hostname && url.hostname.indexOf(":") !== -1) {
-    result += "[" + url.hostname + "]";
-  } else {
-    result += url.hostname || "";
-  }
-  result += url.port ? ":" + url.port : "";
-  result += url.pathname || "";
-  result += url.search || "";
-  result += url.hash || "";
-  return result;
-}
-function Url() {
-  this.protocol = null;
-  this.slashes = null;
-  this.auth = null;
-  this.port = null;
-  this.hostname = null;
-  this.hash = null;
-  this.search = null;
-  this.pathname = null;
-}
-const protocolPattern = /^([a-z0-9.+-]+:)/i;
-const portPattern = /:[0-9]*$/;
-const simplePathPattern = /^(\/\/?(?!\/)[^\?\s]*)(\?[^\s]*)?$/;
-const delims = ["<", ">", '"', "`", " ", "\r", "\n", "	"];
-const unwise = ["{", "}", "|", "\\", "^", "`"].concat(delims);
-const autoEscape = ["'"].concat(unwise);
-const nonHostChars = ["%", "/", "?", ";", "#"].concat(autoEscape);
-const hostEndingChars = ["/", "?", "#"];
-const hostnameMaxLen = 255;
-const hostnamePartPattern = /^[+a-z0-9A-Z_-]{0,63}$/;
-const hostnamePartStart = /^([+a-z0-9A-Z_-]{0,63})(.*)$/;
-const hostlessProtocol = {
-  javascript: true,
-  "javascript:": true
-};
-const slashedProtocol = {
-  http: true,
-  https: true,
-  ftp: true,
-  gopher: true,
-  file: true,
-  "http:": true,
-  "https:": true,
-  "ftp:": true,
-  "gopher:": true,
-  "file:": true
-};
-function urlParse(url, slashesDenoteHost) {
-  if (url && url instanceof Url) return url;
-  const u2 = new Url();
-  u2.parse(url, slashesDenoteHost);
-  return u2;
-}
-Url.prototype.parse = function(url, slashesDenoteHost) {
-  let lowerProto, hec, slashes;
-  let rest = url;
-  rest = rest.trim();
-  if (!slashesDenoteHost && url.split("#").length === 1) {
-    const simplePath = simplePathPattern.exec(rest);
-    if (simplePath) {
-      this.pathname = simplePath[1];
-      if (simplePath[2]) {
-        this.search = simplePath[2];
-      }
-      return this;
-    }
-  }
-  let proto = protocolPattern.exec(rest);
-  if (proto) {
-    proto = proto[0];
-    lowerProto = proto.toLowerCase();
-    this.protocol = proto;
-    rest = rest.substr(proto.length);
-  }
-  if (slashesDenoteHost || proto || rest.match(/^\/\/[^@\/]+@[^@\/]+/)) {
-    slashes = rest.substr(0, 2) === "//";
-    if (slashes && !(proto && hostlessProtocol[proto])) {
-      rest = rest.substr(2);
-      this.slashes = true;
-    }
-  }
-  if (!hostlessProtocol[proto] && (slashes || proto && !slashedProtocol[proto])) {
-    let hostEnd = -1;
-    for (let i2 = 0; i2 < hostEndingChars.length; i2++) {
-      hec = rest.indexOf(hostEndingChars[i2]);
-      if (hec !== -1 && (hostEnd === -1 || hec < hostEnd)) {
-        hostEnd = hec;
-      }
-    }
-    let auth, atSign;
-    if (hostEnd === -1) {
-      atSign = rest.lastIndexOf("@");
-    } else {
-      atSign = rest.lastIndexOf("@", hostEnd);
-    }
-    if (atSign !== -1) {
-      auth = rest.slice(0, atSign);
-      rest = rest.slice(atSign + 1);
-      this.auth = auth;
-    }
-    hostEnd = -1;
-    for (let i2 = 0; i2 < nonHostChars.length; i2++) {
-      hec = rest.indexOf(nonHostChars[i2]);
-      if (hec !== -1 && (hostEnd === -1 || hec < hostEnd)) {
-        hostEnd = hec;
-      }
-    }
-    if (hostEnd === -1) {
-      hostEnd = rest.length;
-    }
-    if (rest[hostEnd - 1] === ":") {
-      hostEnd--;
-    }
-    const host = rest.slice(0, hostEnd);
-    rest = rest.slice(hostEnd);
-    this.parseHost(host);
-    this.hostname = this.hostname || "";
-    const ipv6Hostname = this.hostname[0] === "[" && this.hostname[this.hostname.length - 1] === "]";
-    if (!ipv6Hostname) {
-      const hostparts = this.hostname.split(/\./);
-      for (let i2 = 0, l2 = hostparts.length; i2 < l2; i2++) {
-        const part = hostparts[i2];
-        if (!part) {
-          continue;
-        }
-        if (!part.match(hostnamePartPattern)) {
-          let newpart = "";
-          for (let j = 0, k2 = part.length; j < k2; j++) {
-            if (part.charCodeAt(j) > 127) {
-              newpart += "x";
-            } else {
-              newpart += part[j];
-            }
-          }
-          if (!newpart.match(hostnamePartPattern)) {
-            const validParts = hostparts.slice(0, i2);
-            const notHost = hostparts.slice(i2 + 1);
-            const bit = part.match(hostnamePartStart);
-            if (bit) {
-              validParts.push(bit[1]);
-              notHost.unshift(bit[2]);
-            }
-            if (notHost.length) {
-              rest = notHost.join(".") + rest;
-            }
-            this.hostname = validParts.join(".");
-            break;
-          }
-        }
-      }
-    }
-    if (this.hostname.length > hostnameMaxLen) {
-      this.hostname = "";
-    }
-    if (ipv6Hostname) {
-      this.hostname = this.hostname.substr(1, this.hostname.length - 2);
-    }
-  }
-  const hash = rest.indexOf("#");
-  if (hash !== -1) {
-    this.hash = rest.substr(hash);
-    rest = rest.slice(0, hash);
-  }
-  const qm = rest.indexOf("?");
-  if (qm !== -1) {
-    this.search = rest.substr(qm);
-    rest = rest.slice(0, qm);
-  }
-  if (rest) {
-    this.pathname = rest;
-  }
-  if (slashedProtocol[lowerProto] && this.hostname && !this.pathname) {
-    this.pathname = "";
-  }
-  return this;
-};
-Url.prototype.parseHost = function(host) {
-  let port = portPattern.exec(host);
-  if (port) {
-    port = port[0];
-    if (port !== ":") {
-      this.port = port.substr(1);
-    }
-    host = host.substr(0, host.length - port.length);
-  }
-  if (host) {
-    this.hostname = host;
-  }
-};
-const mdurl = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
-  __proto__: null,
-  decode: decode$1,
-  encode: encode$1,
-  format,
-  parse: urlParse
-}, Symbol.toStringTag, { value: "Module" }));
-const Any = /[\0-\uD7FF\uE000-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF]/;
-const Cc = /[\0-\x1F\x7F-\x9F]/;
-const regex$1 = /[\xAD\u0600-\u0605\u061C\u06DD\u070F\u0890\u0891\u08E2\u180E\u200B-\u200F\u202A-\u202E\u2060-\u2064\u2066-\u206F\uFEFF\uFFF9-\uFFFB]|\uD804[\uDCBD\uDCCD]|\uD80D[\uDC30-\uDC3F]|\uD82F[\uDCA0-\uDCA3]|\uD834[\uDD73-\uDD7A]|\uDB40[\uDC01\uDC20-\uDC7F]/;
-const P = /[!-#%-\*,-\/:;\?@\[-\]_\{\}\xA1\xA7\xAB\xB6\xB7\xBB\xBF\u037E\u0387\u055A-\u055F\u0589\u058A\u05BE\u05C0\u05C3\u05C6\u05F3\u05F4\u0609\u060A\u060C\u060D\u061B\u061D-\u061F\u066A-\u066D\u06D4\u0700-\u070D\u07F7-\u07F9\u0830-\u083E\u085E\u0964\u0965\u0970\u09FD\u0A76\u0AF0\u0C77\u0C84\u0DF4\u0E4F\u0E5A\u0E5B\u0F04-\u0F12\u0F14\u0F3A-\u0F3D\u0F85\u0FD0-\u0FD4\u0FD9\u0FDA\u104A-\u104F\u10FB\u1360-\u1368\u1400\u166E\u169B\u169C\u16EB-\u16ED\u1735\u1736\u17D4-\u17D6\u17D8-\u17DA\u1800-\u180A\u1944\u1945\u1A1E\u1A1F\u1AA0-\u1AA6\u1AA8-\u1AAD\u1B5A-\u1B60\u1B7D\u1B7E\u1BFC-\u1BFF\u1C3B-\u1C3F\u1C7E\u1C7F\u1CC0-\u1CC7\u1CD3\u2010-\u2027\u2030-\u2043\u2045-\u2051\u2053-\u205E\u207D\u207E\u208D\u208E\u2308-\u230B\u2329\u232A\u2768-\u2775\u27C5\u27C6\u27E6-\u27EF\u2983-\u2998\u29D8-\u29DB\u29FC\u29FD\u2CF9-\u2CFC\u2CFE\u2CFF\u2D70\u2E00-\u2E2E\u2E30-\u2E4F\u2E52-\u2E5D\u3001-\u3003\u3008-\u3011\u3014-\u301F\u3030\u303D\u30A0\u30FB\uA4FE\uA4FF\uA60D-\uA60F\uA673\uA67E\uA6F2-\uA6F7\uA874-\uA877\uA8CE\uA8CF\uA8F8-\uA8FA\uA8FC\uA92E\uA92F\uA95F\uA9C1-\uA9CD\uA9DE\uA9DF\uAA5C-\uAA5F\uAADE\uAADF\uAAF0\uAAF1\uABEB\uFD3E\uFD3F\uFE10-\uFE19\uFE30-\uFE52\uFE54-\uFE61\uFE63\uFE68\uFE6A\uFE6B\uFF01-\uFF03\uFF05-\uFF0A\uFF0C-\uFF0F\uFF1A\uFF1B\uFF1F\uFF20\uFF3B-\uFF3D\uFF3F\uFF5B\uFF5D\uFF5F-\uFF65]|\uD800[\uDD00-\uDD02\uDF9F\uDFD0]|\uD801\uDD6F|\uD802[\uDC57\uDD1F\uDD3F\uDE50-\uDE58\uDE7F\uDEF0-\uDEF6\uDF39-\uDF3F\uDF99-\uDF9C]|\uD803[\uDEAD\uDF55-\uDF59\uDF86-\uDF89]|\uD804[\uDC47-\uDC4D\uDCBB\uDCBC\uDCBE-\uDCC1\uDD40-\uDD43\uDD74\uDD75\uDDC5-\uDDC8\uDDCD\uDDDB\uDDDD-\uDDDF\uDE38-\uDE3D\uDEA9]|\uD805[\uDC4B-\uDC4F\uDC5A\uDC5B\uDC5D\uDCC6\uDDC1-\uDDD7\uDE41-\uDE43\uDE60-\uDE6C\uDEB9\uDF3C-\uDF3E]|\uD806[\uDC3B\uDD44-\uDD46\uDDE2\uDE3F-\uDE46\uDE9A-\uDE9C\uDE9E-\uDEA2\uDF00-\uDF09]|\uD807[\uDC41-\uDC45\uDC70\uDC71\uDEF7\uDEF8\uDF43-\uDF4F\uDFFF]|\uD809[\uDC70-\uDC74]|\uD80B[\uDFF1\uDFF2]|\uD81A[\uDE6E\uDE6F\uDEF5\uDF37-\uDF3B\uDF44]|\uD81B[\uDE97-\uDE9A\uDFE2]|\uD82F\uDC9F|\uD836[\uDE87-\uDE8B]|\uD83A[\uDD5E\uDD5F]/;
-const regex = /[\$\+<->\^`\|~\xA2-\xA6\xA8\xA9\xAC\xAE-\xB1\xB4\xB8\xD7\xF7\u02C2-\u02C5\u02D2-\u02DF\u02E5-\u02EB\u02ED\u02EF-\u02FF\u0375\u0384\u0385\u03F6\u0482\u058D-\u058F\u0606-\u0608\u060B\u060E\u060F\u06DE\u06E9\u06FD\u06FE\u07F6\u07FE\u07FF\u0888\u09F2\u09F3\u09FA\u09FB\u0AF1\u0B70\u0BF3-\u0BFA\u0C7F\u0D4F\u0D79\u0E3F\u0F01-\u0F03\u0F13\u0F15-\u0F17\u0F1A-\u0F1F\u0F34\u0F36\u0F38\u0FBE-\u0FC5\u0FC7-\u0FCC\u0FCE\u0FCF\u0FD5-\u0FD8\u109E\u109F\u1390-\u1399\u166D\u17DB\u1940\u19DE-\u19FF\u1B61-\u1B6A\u1B74-\u1B7C\u1FBD\u1FBF-\u1FC1\u1FCD-\u1FCF\u1FDD-\u1FDF\u1FED-\u1FEF\u1FFD\u1FFE\u2044\u2052\u207A-\u207C\u208A-\u208C\u20A0-\u20C0\u2100\u2101\u2103-\u2106\u2108\u2109\u2114\u2116-\u2118\u211E-\u2123\u2125\u2127\u2129\u212E\u213A\u213B\u2140-\u2144\u214A-\u214D\u214F\u218A\u218B\u2190-\u2307\u230C-\u2328\u232B-\u2426\u2440-\u244A\u249C-\u24E9\u2500-\u2767\u2794-\u27C4\u27C7-\u27E5\u27F0-\u2982\u2999-\u29D7\u29DC-\u29FB\u29FE-\u2B73\u2B76-\u2B95\u2B97-\u2BFF\u2CE5-\u2CEA\u2E50\u2E51\u2E80-\u2E99\u2E9B-\u2EF3\u2F00-\u2FD5\u2FF0-\u2FFF\u3004\u3012\u3013\u3020\u3036\u3037\u303E\u303F\u309B\u309C\u3190\u3191\u3196-\u319F\u31C0-\u31E3\u31EF\u3200-\u321E\u322A-\u3247\u3250\u3260-\u327F\u328A-\u32B0\u32C0-\u33FF\u4DC0-\u4DFF\uA490-\uA4C6\uA700-\uA716\uA720\uA721\uA789\uA78A\uA828-\uA82B\uA836-\uA839\uAA77-\uAA79\uAB5B\uAB6A\uAB6B\uFB29\uFBB2-\uFBC2\uFD40-\uFD4F\uFDCF\uFDFC-\uFDFF\uFE62\uFE64-\uFE66\uFE69\uFF04\uFF0B\uFF1C-\uFF1E\uFF3E\uFF40\uFF5C\uFF5E\uFFE0-\uFFE6\uFFE8-\uFFEE\uFFFC\uFFFD]|\uD800[\uDD37-\uDD3F\uDD79-\uDD89\uDD8C-\uDD8E\uDD90-\uDD9C\uDDA0\uDDD0-\uDDFC]|\uD802[\uDC77\uDC78\uDEC8]|\uD805\uDF3F|\uD807[\uDFD5-\uDFF1]|\uD81A[\uDF3C-\uDF3F\uDF45]|\uD82F\uDC9C|\uD833[\uDF50-\uDFC3]|\uD834[\uDC00-\uDCF5\uDD00-\uDD26\uDD29-\uDD64\uDD6A-\uDD6C\uDD83\uDD84\uDD8C-\uDDA9\uDDAE-\uDDEA\uDE00-\uDE41\uDE45\uDF00-\uDF56]|\uD835[\uDEC1\uDEDB\uDEFB\uDF15\uDF35\uDF4F\uDF6F\uDF89\uDFA9\uDFC3]|\uD836[\uDC00-\uDDFF\uDE37-\uDE3A\uDE6D-\uDE74\uDE76-\uDE83\uDE85\uDE86]|\uD838[\uDD4F\uDEFF]|\uD83B[\uDCAC\uDCB0\uDD2E\uDEF0\uDEF1]|\uD83C[\uDC00-\uDC2B\uDC30-\uDC93\uDCA0-\uDCAE\uDCB1-\uDCBF\uDCC1-\uDCCF\uDCD1-\uDCF5\uDD0D-\uDDAD\uDDE6-\uDE02\uDE10-\uDE3B\uDE40-\uDE48\uDE50\uDE51\uDE60-\uDE65\uDF00-\uDFFF]|\uD83D[\uDC00-\uDED7\uDEDC-\uDEEC\uDEF0-\uDEFC\uDF00-\uDF76\uDF7B-\uDFD9\uDFE0-\uDFEB\uDFF0]|\uD83E[\uDC00-\uDC0B\uDC10-\uDC47\uDC50-\uDC59\uDC60-\uDC87\uDC90-\uDCAD\uDCB0\uDCB1\uDD00-\uDE53\uDE60-\uDE6D\uDE70-\uDE7C\uDE80-\uDE88\uDE90-\uDEBD\uDEBF-\uDEC5\uDECE-\uDEDB\uDEE0-\uDEE8\uDEF0-\uDEF8\uDF00-\uDF92\uDF94-\uDFCA]/;
-const Z = /[ \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000]/;
-const ucmicro = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
-  __proto__: null,
-  Any,
-  Cc,
-  Cf: regex$1,
-  P,
-  S: regex,
-  Z
-}, Symbol.toStringTag, { value: "Module" }));
-const htmlDecodeTree = new Uint16Array(
-  // prettier-ignore
-  'ᵁ<Õıʊҝջאٵ۞ޢߖࠏ੊ઑඡ๭༉༦჊ረዡᐕᒝᓃᓟᔥ\0\0\0\0\0\0ᕫᛍᦍᰒᷝ὾⁠↰⊍⏀⏻⑂⠤⤒ⴈ⹈⿎〖㊺㘹㞬㣾㨨㩱㫠㬮ࠀEMabcfglmnoprstu\\bfms¦³¹ÈÏlig耻Æ䃆P耻&䀦cute耻Á䃁reve;䄂Āiyx}rc耻Â䃂;䐐r;쀀𝔄rave耻À䃀pha;䎑acr;䄀d;橓Āgp¡on;䄄f;쀀𝔸plyFunction;恡ing耻Å䃅Ācs¾Ãr;쀀𝒜ign;扔ilde耻Ã䃃ml耻Ä䃄ЀaceforsuåûþėĜĢħĪĀcrêòkslash;或Ŷöø;櫧ed;挆y;䐑ƀcrtąċĔause;戵noullis;愬a;䎒r;쀀𝔅pf;쀀𝔹eve;䋘còēmpeq;扎܀HOacdefhilorsuōőŖƀƞƢƵƷƺǜȕɳɸɾcy;䐧PY耻©䂩ƀcpyŝŢźute;䄆Ā;iŧŨ拒talDifferentialD;慅leys;愭ȀaeioƉƎƔƘron;䄌dil耻Ç䃇rc;䄈nint;戰ot;䄊ĀdnƧƭilla;䂸terDot;䂷òſi;䎧rcleȀDMPTǇǋǑǖot;抙inus;抖lus;投imes;抗oĀcsǢǸkwiseContourIntegral;戲eCurlyĀDQȃȏoubleQuote;思uote;怙ȀlnpuȞȨɇɕonĀ;eȥȦ户;橴ƀgitȯȶȺruent;扡nt;戯ourIntegral;戮ĀfrɌɎ;愂oduct;成nterClockwiseContourIntegral;戳oss;樯cr;쀀𝒞pĀ;Cʄʅ拓ap;才րDJSZacefiosʠʬʰʴʸˋ˗ˡ˦̳ҍĀ;oŹʥtrahd;椑cy;䐂cy;䐅cy;䐏ƀgrsʿ˄ˇger;怡r;憡hv;櫤Āayː˕ron;䄎;䐔lĀ;t˝˞戇a;䎔r;쀀𝔇Āaf˫̧Ācm˰̢riticalȀADGT̖̜̀̆cute;䂴oŴ̋̍;䋙bleAcute;䋝rave;䁠ilde;䋜ond;拄ferentialD;慆Ѱ̽\0\0\0͔͂\0Ѕf;쀀𝔻ƀ;DE͈͉͍䂨ot;惜qual;扐blèCDLRUVͣͲ΂ϏϢϸontourIntegraìȹoɴ͹\0\0ͻ»͉nArrow;懓Āeo·ΤftƀARTΐΖΡrrow;懐ightArrow;懔eåˊngĀLRΫτeftĀARγιrrow;柸ightArrow;柺ightArrow;柹ightĀATϘϞrrow;懒ee;抨pɁϩ\0\0ϯrrow;懑ownArrow;懕erticalBar;戥ǹABLRTaВЪаўѿͼrrowƀ;BUНОТ憓ar;椓pArrow;懵reve;䌑eft˒к\0ц\0ѐightVector;楐eeVector;楞ectorĀ;Bљњ憽ar;楖ightǔѧ\0ѱeeVector;楟ectorĀ;BѺѻ懁ar;楗eeĀ;A҆҇护rrow;憧ĀctҒҗr;쀀𝒟rok;䄐ࠀNTacdfglmopqstuxҽӀӄӋӞӢӧӮӵԡԯԶՒ՝ՠեG;䅊H耻Ð䃐cute耻É䃉ƀaiyӒӗӜron;䄚rc耻Ê䃊;䐭ot;䄖r;쀀𝔈rave耻È䃈ement;戈ĀapӺӾcr;䄒tyɓԆ\0\0ԒmallSquare;旻erySmallSquare;斫ĀgpԦԪon;䄘f;쀀𝔼silon;䎕uĀaiԼՉlĀ;TՂՃ橵ilde;扂librium;懌Āci՗՚r;愰m;橳a;䎗ml耻Ë䃋Āipժկsts;戃onentialE;慇ʀcfiosօֈ֍ֲ׌y;䐤r;쀀𝔉lledɓ֗\0\0֣mallSquare;旼erySmallSquare;斪Ͱֺ\0ֿ\0\0ׄf;쀀𝔽All;戀riertrf;愱cò׋؀JTabcdfgorstר׬ׯ׺؀ؒؖ؛؝أ٬ٲcy;䐃耻>䀾mmaĀ;d׷׸䎓;䏜reve;䄞ƀeiy؇،ؐdil;䄢rc;䄜;䐓ot;䄠r;쀀𝔊;拙pf;쀀𝔾eater̀EFGLSTصلَٖٛ٦qualĀ;Lؾؿ扥ess;招ullEqual;执reater;檢ess;扷lantEqual;橾ilde;扳cr;쀀𝒢;扫ЀAacfiosuڅڋږڛڞڪھۊRDcy;䐪Āctڐڔek;䋇;䁞irc;䄤r;愌lbertSpace;愋ǰگ\0ڲf;愍izontalLine;攀Āctۃۅòکrok;䄦mpńېۘownHumðįqual;扏܀EJOacdfgmnostuۺ۾܃܇܎ܚܞܡܨ݄ݸދޏޕcy;䐕lig;䄲cy;䐁cute耻Í䃍Āiyܓܘrc耻Î䃎;䐘ot;䄰r;愑rave耻Ì䃌ƀ;apܠܯܿĀcgܴܷr;䄪inaryI;慈lieóϝǴ݉\0ݢĀ;eݍݎ戬Āgrݓݘral;戫section;拂isibleĀCTݬݲomma;恣imes;恢ƀgptݿރވon;䄮f;쀀𝕀a;䎙cr;愐ilde;䄨ǫޚ\0ޞcy;䐆l耻Ï䃏ʀcfosuެ޷޼߂ߐĀiyޱ޵rc;䄴;䐙r;쀀𝔍pf;쀀𝕁ǣ߇\0ߌr;쀀𝒥rcy;䐈kcy;䐄΀HJacfosߤߨ߽߬߱ࠂࠈcy;䐥cy;䐌ppa;䎚Āey߶߻dil;䄶;䐚r;쀀𝔎pf;쀀𝕂cr;쀀𝒦րJTaceflmostࠥࠩࠬࡐࡣ঳সে্਷ੇcy;䐉耻<䀼ʀcmnpr࠷࠼ࡁࡄࡍute;䄹bda;䎛g;柪lacetrf;愒r;憞ƀaeyࡗ࡜ࡡron;䄽dil;䄻;䐛Āfsࡨ॰tԀACDFRTUVarࡾࢩࢱࣦ࣠ࣼयज़ΐ४Ānrࢃ࢏gleBracket;柨rowƀ;BR࢙࢚࢞憐ar;懤ightArrow;懆eiling;挈oǵࢷ\0ࣃbleBracket;柦nǔࣈ\0࣒eeVector;楡ectorĀ;Bࣛࣜ懃ar;楙loor;挊ightĀAV࣯ࣵrrow;憔ector;楎Āerँगeƀ;AVउऊऐ抣rrow;憤ector;楚iangleƀ;BEतथऩ抲ar;槏qual;抴pƀDTVषूौownVector;楑eeVector;楠ectorĀ;Bॖॗ憿ar;楘ectorĀ;B॥०憼ar;楒ightáΜs̀EFGLSTॾঋকঝঢভqualGreater;拚ullEqual;扦reater;扶ess;檡lantEqual;橽ilde;扲r;쀀𝔏Ā;eঽা拘ftarrow;懚idot;䄿ƀnpw৔ਖਛgȀLRlr৞৷ਂਐeftĀAR০৬rrow;柵ightArrow;柷ightArrow;柶eftĀarγਊightáοightáϊf;쀀𝕃erĀLRਢਬeftArrow;憙ightArrow;憘ƀchtਾੀੂòࡌ;憰rok;䅁;扪Ѐacefiosuਗ਼੝੠੷੼અઋ઎p;椅y;䐜Ādl੥੯iumSpace;恟lintrf;愳r;쀀𝔐nusPlus;戓pf;쀀𝕄cò੶;䎜ҀJacefostuણધભીଔଙඑ඗ඞcy;䐊cute;䅃ƀaey઴હાron;䅇dil;䅅;䐝ƀgswે૰଎ativeƀMTV૓૟૨ediumSpace;怋hiĀcn૦૘ë૙eryThiî૙tedĀGL૸ଆreaterGreateòٳessLesóੈLine;䀊r;쀀𝔑ȀBnptଢନଷ଺reak;恠BreakingSpace;䂠f;愕ڀ;CDEGHLNPRSTV୕ୖ୪୼஡௫ఄ౞಄ದ೘ൡඅ櫬Āou୛୤ngruent;扢pCap;扭oubleVerticalBar;戦ƀlqxஃஊ஛ement;戉ualĀ;Tஒஓ扠ilde;쀀≂̸ists;戄reater΀;EFGLSTஶஷ஽௉௓௘௥扯qual;扱ullEqual;쀀≧̸reater;쀀≫̸ess;批lantEqual;쀀⩾̸ilde;扵umpń௲௽ownHump;쀀≎̸qual;쀀≏̸eĀfsఊధtTriangleƀ;BEచఛడ拪ar;쀀⧏̸qual;括s̀;EGLSTవశ఼ౄోౘ扮qual;扰reater;扸ess;쀀≪̸lantEqual;쀀⩽̸ilde;扴estedĀGL౨౹reaterGreater;쀀⪢̸essLess;쀀⪡̸recedesƀ;ESಒಓಛ技qual;쀀⪯̸lantEqual;拠ĀeiಫಹverseElement;戌ghtTriangleƀ;BEೋೌ೒拫ar;쀀⧐̸qual;拭ĀquೝഌuareSuĀbp೨೹setĀ;E೰ೳ쀀⊏̸qual;拢ersetĀ;Eഃആ쀀⊐̸qual;拣ƀbcpഓതൎsetĀ;Eഛഞ쀀⊂⃒qual;抈ceedsȀ;ESTലള഻െ抁qual;쀀⪰̸lantEqual;拡ilde;쀀≿̸ersetĀ;E൘൛쀀⊃⃒qual;抉ildeȀ;EFT൮൯൵ൿ扁qual;扄ullEqual;扇ilde;扉erticalBar;戤cr;쀀𝒩ilde耻Ñ䃑;䎝܀Eacdfgmoprstuvලෂ෉෕ෛ෠෧෼ขภยา฿ไlig;䅒cute耻Ó䃓Āiy෎ීrc耻Ô䃔;䐞blac;䅐r;쀀𝔒rave耻Ò䃒ƀaei෮ෲ෶cr;䅌ga;䎩cron;䎟pf;쀀𝕆enCurlyĀDQฎบoubleQuote;怜uote;怘;橔Āclวฬr;쀀𝒪ash耻Ø䃘iŬื฼de耻Õ䃕es;樷ml耻Ö䃖erĀBP๋๠Āar๐๓r;怾acĀek๚๜;揞et;掴arenthesis;揜Ҁacfhilors๿ງຊຏຒດຝະ໼rtialD;戂y;䐟r;쀀𝔓i;䎦;䎠usMinus;䂱Āipຢອncareplanåڝf;愙Ȁ;eio຺ູ໠໤檻cedesȀ;EST່້໏໚扺qual;檯lantEqual;扼ilde;找me;怳Ādp໩໮uct;戏ortionĀ;aȥ໹l;戝Āci༁༆r;쀀𝒫;䎨ȀUfos༑༖༛༟OT耻"䀢r;쀀𝔔pf;愚cr;쀀𝒬؀BEacefhiorsu༾གྷཇའཱིྦྷྪྭ႖ႩႴႾarr;椐G耻®䂮ƀcnrཎནབute;䅔g;柫rĀ;tཛྷཝ憠l;椖ƀaeyཧཬཱron;䅘dil;䅖;䐠Ā;vླྀཹ愜erseĀEUྂྙĀlq྇ྎement;戋uilibrium;懋pEquilibrium;楯r»ཹo;䎡ghtЀACDFTUVa࿁࿫࿳ဢဨၛႇϘĀnr࿆࿒gleBracket;柩rowƀ;BL࿜࿝࿡憒ar;懥eftArrow;懄eiling;按oǵ࿹\0စbleBracket;柧nǔည\0နeeVector;楝ectorĀ;Bဝသ懂ar;楕loor;挋Āerိ၃eƀ;AVဵံြ抢rrow;憦ector;楛iangleƀ;BEၐၑၕ抳ar;槐qual;抵pƀDTVၣၮၸownVector;楏eeVector;楜ectorĀ;Bႂႃ憾ar;楔ectorĀ;B႑႒懀ar;楓Āpuႛ႞f;愝ndImplies;楰ightarrow;懛ĀchႹႼr;愛;憱leDelayed;槴ڀHOacfhimoqstuფჱჷჽᄙᄞᅑᅖᅡᅧᆵᆻᆿĀCcჩხHcy;䐩y;䐨FTcy;䐬cute;䅚ʀ;aeiyᄈᄉᄎᄓᄗ檼ron;䅠dil;䅞rc;䅜;䐡r;쀀𝔖ortȀDLRUᄪᄴᄾᅉownArrow»ОeftArrow»࢚ightArrow»࿝pArrow;憑gma;䎣allCircle;战pf;쀀𝕊ɲᅭ\0\0ᅰt;戚areȀ;ISUᅻᅼᆉᆯ斡ntersection;抓uĀbpᆏᆞsetĀ;Eᆗᆘ抏qual;抑ersetĀ;Eᆨᆩ抐qual;抒nion;抔cr;쀀𝒮ar;拆ȀbcmpᇈᇛሉላĀ;sᇍᇎ拐etĀ;Eᇍᇕqual;抆ĀchᇠህeedsȀ;ESTᇭᇮᇴᇿ扻qual;檰lantEqual;扽ilde;承Tháྌ;我ƀ;esሒሓሣ拑rsetĀ;Eሜም抃qual;抇et»ሓրHRSacfhiorsሾቄ቉ቕ቞ቱቶኟዂወዑORN耻Þ䃞ADE;愢ĀHc቎ቒcy;䐋y;䐦Ābuቚቜ;䀉;䎤ƀaeyብቪቯron;䅤dil;䅢;䐢r;쀀𝔗Āeiቻ኉ǲኀ\0ኇefore;戴a;䎘Ācn኎ኘkSpace;쀀  Space;怉ldeȀ;EFTካኬኲኼ戼qual;扃ullEqual;扅ilde;扈pf;쀀𝕋ipleDot;惛Āctዖዛr;쀀𝒯rok;䅦ૡዷጎጚጦ\0ጬጱ\0\0\0\0\0ጸጽ፷ᎅ\0᏿ᐄᐊᐐĀcrዻጁute耻Ú䃚rĀ;oጇገ憟cir;楉rǣጓ\0጖y;䐎ve;䅬Āiyጞጣrc耻Û䃛;䐣blac;䅰r;쀀𝔘rave耻Ù䃙acr;䅪Ādiፁ፩erĀBPፈ፝Āarፍፐr;䁟acĀekፗፙ;揟et;掵arenthesis;揝onĀ;P፰፱拃lus;抎Āgp፻፿on;䅲f;쀀𝕌ЀADETadps᎕ᎮᎸᏄϨᏒᏗᏳrrowƀ;BDᅐᎠᎤar;椒ownArrow;懅ownArrow;憕quilibrium;楮eeĀ;AᏋᏌ报rrow;憥ownáϳerĀLRᏞᏨeftArrow;憖ightArrow;憗iĀ;lᏹᏺ䏒on;䎥ing;䅮cr;쀀𝒰ilde;䅨ml耻Ü䃜ҀDbcdefosvᐧᐬᐰᐳᐾᒅᒊᒐᒖash;披ar;櫫y;䐒ashĀ;lᐻᐼ抩;櫦Āerᑃᑅ;拁ƀbtyᑌᑐᑺar;怖Ā;iᑏᑕcalȀBLSTᑡᑥᑪᑴar;戣ine;䁼eparator;杘ilde;所ThinSpace;怊r;쀀𝔙pf;쀀𝕍cr;쀀𝒱dash;抪ʀcefosᒧᒬᒱᒶᒼirc;䅴dge;拀r;쀀𝔚pf;쀀𝕎cr;쀀𝒲Ȁfiosᓋᓐᓒᓘr;쀀𝔛;䎞pf;쀀𝕏cr;쀀𝒳ҀAIUacfosuᓱᓵᓹᓽᔄᔏᔔᔚᔠcy;䐯cy;䐇cy;䐮cute耻Ý䃝Āiyᔉᔍrc;䅶;䐫r;쀀𝔜pf;쀀𝕐cr;쀀𝒴ml;䅸ЀHacdefosᔵᔹᔿᕋᕏᕝᕠᕤcy;䐖cute;䅹Āayᕄᕉron;䅽;䐗ot;䅻ǲᕔ\0ᕛoWidtè૙a;䎖r;愨pf;愤cr;쀀𝒵௡ᖃᖊᖐ\0ᖰᖶᖿ\0\0\0\0ᗆᗛᗫᙟ᙭\0ᚕ᚛ᚲᚹ\0ᚾcute耻á䃡reve;䄃̀;Ediuyᖜᖝᖡᖣᖨᖭ戾;쀀∾̳;房rc耻â䃢te肻´̆;䐰lig耻æ䃦Ā;r²ᖺ;쀀𝔞rave耻à䃠ĀepᗊᗖĀfpᗏᗔsym;愵èᗓha;䎱ĀapᗟcĀclᗤᗧr;䄁g;樿ɤᗰ\0\0ᘊʀ;adsvᗺᗻᗿᘁᘇ戧nd;橕;橜lope;橘;橚΀;elmrszᘘᘙᘛᘞᘿᙏᙙ戠;榤e»ᘙsdĀ;aᘥᘦ戡ѡᘰᘲᘴᘶᘸᘺᘼᘾ;榨;榩;榪;榫;榬;榭;榮;榯tĀ;vᙅᙆ戟bĀ;dᙌᙍ抾;榝Āptᙔᙗh;戢»¹arr;捼Āgpᙣᙧon;䄅f;쀀𝕒΀;Eaeiop዁ᙻᙽᚂᚄᚇᚊ;橰cir;橯;扊d;手s;䀧roxĀ;e዁ᚒñᚃing耻å䃥ƀctyᚡᚦᚨr;쀀𝒶;䀪mpĀ;e዁ᚯñʈilde耻ã䃣ml耻ä䃤Āciᛂᛈoninôɲnt;樑ࠀNabcdefiklnoprsu᛭ᛱᜰ᜼ᝃᝈ᝸᝽០៦ᠹᡐᜍ᤽᥈ᥰot;櫭Ācrᛶ᜞kȀcepsᜀᜅᜍᜓong;扌psilon;䏶rime;怵imĀ;e᜚᜛戽q;拍Ŷᜢᜦee;抽edĀ;gᜬᜭ挅e»ᜭrkĀ;t፜᜷brk;掶Āoyᜁᝁ;䐱quo;怞ʀcmprtᝓ᝛ᝡᝤᝨausĀ;eĊĉptyv;榰séᜌnoõēƀahwᝯ᝱ᝳ;䎲;愶een;扬r;쀀𝔟g΀costuvwឍឝឳេ៕៛៞ƀaiuបពរðݠrc;旯p»፱ƀdptឤឨឭot;樀lus;樁imes;樂ɱឹ\0\0ើcup;樆ar;昅riangleĀdu៍្own;施p;斳plus;樄eåᑄåᒭarow;植ƀako៭ᠦᠵĀcn៲ᠣkƀlst៺֫᠂ozenge;槫riangleȀ;dlr᠒᠓᠘᠝斴own;斾eft;旂ight;斸k;搣Ʊᠫ\0ᠳƲᠯ\0ᠱ;斒;斑4;斓ck;斈ĀeoᠾᡍĀ;qᡃᡆ쀀=⃥uiv;쀀≡⃥t;挐Ȁptwxᡙᡞᡧᡬf;쀀𝕓Ā;tᏋᡣom»Ꮜtie;拈؀DHUVbdhmptuvᢅᢖᢪᢻᣗᣛᣬ᣿ᤅᤊᤐᤡȀLRlrᢎᢐᢒᢔ;敗;敔;敖;敓ʀ;DUduᢡᢢᢤᢦᢨ敐;敦;敩;敤;敧ȀLRlrᢳᢵᢷᢹ;敝;敚;敜;教΀;HLRhlrᣊᣋᣍᣏᣑᣓᣕ救;敬;散;敠;敫;敢;敟ox;槉ȀLRlrᣤᣦᣨᣪ;敕;敒;攐;攌ʀ;DUduڽ᣷᣹᣻᣽;敥;敨;攬;攴inus;抟lus;択imes;抠ȀLRlrᤙᤛᤝ᤟;敛;敘;攘;攔΀;HLRhlrᤰᤱᤳᤵᤷ᤻᤹攂;敪;敡;敞;攼;攤;攜Āevģ᥂bar耻¦䂦Ȁceioᥑᥖᥚᥠr;쀀𝒷mi;恏mĀ;e᜚᜜lƀ;bhᥨᥩᥫ䁜;槅sub;柈Ŭᥴ᥾lĀ;e᥹᥺怢t»᥺pƀ;Eeįᦅᦇ;檮Ā;qۜۛೡᦧ\0᧨ᨑᨕᨲ\0ᨷᩐ\0\0᪴\0\0᫁\0\0ᬡᬮ᭍᭒\0᯽\0ᰌƀcpr᦭ᦲ᧝ute;䄇̀;abcdsᦿᧀᧄ᧊᧕᧙戩nd;橄rcup;橉Āau᧏᧒p;橋p;橇ot;橀;쀀∩︀Āeo᧢᧥t;恁îړȀaeiu᧰᧻ᨁᨅǰ᧵\0᧸s;橍on;䄍dil耻ç䃧rc;䄉psĀ;sᨌᨍ橌m;橐ot;䄋ƀdmnᨛᨠᨦil肻¸ƭptyv;榲t脀¢;eᨭᨮ䂢räƲr;쀀𝔠ƀceiᨽᩀᩍy;䑇ckĀ;mᩇᩈ朓ark»ᩈ;䏇r΀;Ecefms᩟᩠ᩢᩫ᪤᪪᪮旋;槃ƀ;elᩩᩪᩭ䋆q;扗eɡᩴ\0\0᪈rrowĀlr᩼᪁eft;憺ight;憻ʀRSacd᪒᪔᪖᪚᪟»ཇ;擈st;抛irc;抚ash;抝nint;樐id;櫯cir;槂ubsĀ;u᪻᪼晣it»᪼ˬ᫇᫔᫺\0ᬊonĀ;eᫍᫎ䀺Ā;qÇÆɭ᫙\0\0᫢aĀ;t᫞᫟䀬;䁀ƀ;fl᫨᫩᫫戁îᅠeĀmx᫱᫶ent»᫩eóɍǧ᫾\0ᬇĀ;dኻᬂot;橭nôɆƀfryᬐᬔᬗ;쀀𝕔oäɔ脀©;sŕᬝr;愗Āaoᬥᬩrr;憵ss;朗Ācuᬲᬷr;쀀𝒸Ābpᬼ᭄Ā;eᭁᭂ櫏;櫑Ā;eᭉᭊ櫐;櫒dot;拯΀delprvw᭠᭬᭷ᮂᮬᯔ᯹arrĀlr᭨᭪;椸;椵ɰ᭲\0\0᭵r;拞c;拟arrĀ;p᭿ᮀ憶;椽̀;bcdosᮏᮐᮖᮡᮥᮨ截rcap;橈Āauᮛᮞp;橆p;橊ot;抍r;橅;쀀∪︀Ȁalrv᮵ᮿᯞᯣrrĀ;mᮼᮽ憷;椼yƀevwᯇᯔᯘqɰᯎ\0\0ᯒreã᭳uã᭵ee;拎edge;拏en耻¤䂤earrowĀlrᯮ᯳eft»ᮀight»ᮽeäᯝĀciᰁᰇoninôǷnt;戱lcty;挭ঀAHabcdefhijlorstuwz᰸᰻᰿ᱝᱩᱵᲊᲞᲬᲷ᳻᳿ᴍᵻᶑᶫᶻ᷆᷍rò΁ar;楥Ȁglrs᱈ᱍ᱒᱔ger;怠eth;愸òᄳhĀ;vᱚᱛ怐»ऊūᱡᱧarow;椏aã̕Āayᱮᱳron;䄏;䐴ƀ;ao̲ᱼᲄĀgrʿᲁr;懊tseq;橷ƀglmᲑᲔᲘ耻°䂰ta;䎴ptyv;榱ĀirᲣᲨsht;楿;쀀𝔡arĀlrᲳᲵ»ࣜ»သʀaegsv᳂͸᳖᳜᳠mƀ;oș᳊᳔ndĀ;ș᳑uit;晦amma;䏝in;拲ƀ;io᳧᳨᳸䃷de脀÷;o᳧ᳰntimes;拇nø᳷cy;䑒cɯᴆ\0\0ᴊrn;挞op;挍ʀlptuwᴘᴝᴢᵉᵕlar;䀤f;쀀𝕕ʀ;emps̋ᴭᴷᴽᵂqĀ;d͒ᴳot;扑inus;戸lus;戔quare;抡blebarwedgåúnƀadhᄮᵝᵧownarrowóᲃarpoonĀlrᵲᵶefôᲴighôᲶŢᵿᶅkaro÷གɯᶊ\0\0ᶎrn;挟op;挌ƀcotᶘᶣᶦĀryᶝᶡ;쀀𝒹;䑕l;槶rok;䄑Ādrᶰᶴot;拱iĀ;fᶺ᠖斿Āah᷀᷃ròЩaòྦangle;榦Āci᷒ᷕy;䑟grarr;柿ऀDacdefglmnopqrstuxḁḉḙḸոḼṉṡṾấắẽỡἪἷὄ὎὚ĀDoḆᴴoôᲉĀcsḎḔute耻é䃩ter;橮ȀaioyḢḧḱḶron;䄛rĀ;cḭḮ扖耻ê䃪lon;払;䑍ot;䄗ĀDrṁṅot;扒;쀀𝔢ƀ;rsṐṑṗ檚ave耻è䃨Ā;dṜṝ檖ot;檘Ȁ;ilsṪṫṲṴ檙nters;揧;愓Ā;dṹṺ檕ot;檗ƀapsẅẉẗcr;䄓tyƀ;svẒẓẕ戅et»ẓpĀ1;ẝẤĳạả;怄;怅怃ĀgsẪẬ;䅋p;怂ĀgpẴẸon;䄙f;쀀𝕖ƀalsỄỎỒrĀ;sỊị拕l;槣us;橱iƀ;lvỚớở䎵on»ớ;䏵ȀcsuvỪỳἋἣĀioữḱrc»Ḯɩỹ\0\0ỻíՈantĀglἂἆtr»ṝess»Ṻƀaeiἒ἖Ἒls;䀽st;扟vĀ;DȵἠD;橸parsl;槥ĀDaἯἳot;打rr;楱ƀcdiἾὁỸr;愯oô͒ĀahὉὋ;䎷耻ð䃰Āmrὓὗl耻ë䃫o;悬ƀcipὡὤὧl;䀡sôծĀeoὬὴctatioîՙnentialåչৡᾒ\0ᾞ\0ᾡᾧ\0\0ῆῌ\0ΐ\0ῦῪ \0 ⁚llingdotseñṄy;䑄male;晀ƀilrᾭᾳ῁lig;耀ﬃɩᾹ\0\0᾽g;耀ﬀig;耀ﬄ;쀀𝔣lig;耀ﬁlig;쀀fjƀaltῙ῜ῡt;晭ig;耀ﬂns;斱of;䆒ǰ΅\0ῳf;쀀𝕗ĀakֿῷĀ;vῼ´拔;櫙artint;樍Āao‌⁕Ācs‑⁒α‚‰‸⁅⁈\0⁐β•‥‧‪‬\0‮耻½䂽;慓耻¼䂼;慕;慙;慛Ƴ‴\0‶;慔;慖ʴ‾⁁\0\0⁃耻¾䂾;慗;慜5;慘ƶ⁌\0⁎;慚;慝8;慞l;恄wn;挢cr;쀀𝒻ࢀEabcdefgijlnorstv₂₉₟₥₰₴⃰⃵⃺⃿℃ℒℸ̗ℾ⅒↞Ā;lٍ₇;檌ƀcmpₐₕ₝ute;䇵maĀ;dₜ᳚䎳;檆reve;䄟Āiy₪₮rc;䄝;䐳ot;䄡Ȁ;lqsؾق₽⃉ƀ;qsؾٌ⃄lanô٥Ȁ;cdl٥⃒⃥⃕c;檩otĀ;o⃜⃝檀Ā;l⃢⃣檂;檄Ā;e⃪⃭쀀⋛︀s;檔r;쀀𝔤Ā;gٳ؛mel;愷cy;䑓Ȁ;Eajٚℌℎℐ;檒;檥;檤ȀEaesℛℝ℩ℴ;扩pĀ;p℣ℤ檊rox»ℤĀ;q℮ℯ檈Ā;q℮ℛim;拧pf;쀀𝕘Āci⅃ⅆr;愊mƀ;el٫ⅎ⅐;檎;檐茀>;cdlqr׮ⅠⅪⅮⅳⅹĀciⅥⅧ;檧r;橺ot;拗Par;榕uest;橼ʀadelsↄⅪ←ٖ↛ǰ↉\0↎proø₞r;楸qĀlqؿ↖lesó₈ií٫Āen↣↭rtneqq;쀀≩︀Å↪ԀAabcefkosy⇄⇇⇱⇵⇺∘∝∯≨≽ròΠȀilmr⇐⇔⇗⇛rsðᒄf»․ilôکĀdr⇠⇤cy;䑊ƀ;cwࣴ⇫⇯ir;楈;憭ar;意irc;䄥ƀalr∁∎∓rtsĀ;u∉∊晥it»∊lip;怦con;抹r;쀀𝔥sĀew∣∩arow;椥arow;椦ʀamopr∺∾≃≞≣rr;懿tht;戻kĀlr≉≓eftarrow;憩ightarrow;憪f;쀀𝕙bar;怕ƀclt≯≴≸r;쀀𝒽asè⇴rok;䄧Ābp⊂⊇ull;恃hen»ᱛૡ⊣\0⊪\0⊸⋅⋎\0⋕⋳\0\0⋸⌢⍧⍢⍿\0⎆⎪⎴cute耻í䃭ƀ;iyݱ⊰⊵rc耻î䃮;䐸Ācx⊼⊿y;䐵cl耻¡䂡ĀfrΟ⋉;쀀𝔦rave耻ì䃬Ȁ;inoܾ⋝⋩⋮Āin⋢⋦nt;樌t;戭fin;槜ta;愩lig;䄳ƀaop⋾⌚⌝ƀcgt⌅⌈⌗r;䄫ƀelpܟ⌏⌓inåގarôܠh;䄱f;抷ed;䆵ʀ;cfotӴ⌬⌱⌽⍁are;愅inĀ;t⌸⌹戞ie;槝doô⌙ʀ;celpݗ⍌⍐⍛⍡al;抺Āgr⍕⍙eróᕣã⍍arhk;樗rod;樼Ȁcgpt⍯⍲⍶⍻y;䑑on;䄯f;쀀𝕚a;䎹uest耻¿䂿Āci⎊⎏r;쀀𝒾nʀ;EdsvӴ⎛⎝⎡ӳ;拹ot;拵Ā;v⎦⎧拴;拳Ā;iݷ⎮lde;䄩ǫ⎸\0⎼cy;䑖l耻ï䃯̀cfmosu⏌⏗⏜⏡⏧⏵Āiy⏑⏕rc;䄵;䐹r;쀀𝔧ath;䈷pf;쀀𝕛ǣ⏬\0⏱r;쀀𝒿rcy;䑘kcy;䑔Ѐacfghjos␋␖␢␧␭␱␵␻ppaĀ;v␓␔䎺;䏰Āey␛␠dil;䄷;䐺r;쀀𝔨reen;䄸cy;䑅cy;䑜pf;쀀𝕜cr;쀀𝓀஀ABEHabcdefghjlmnoprstuv⑰⒁⒆⒍⒑┎┽╚▀♎♞♥♹♽⚚⚲⛘❝❨➋⟀⠁⠒ƀart⑷⑺⑼rò৆òΕail;椛arr;椎Ā;gঔ⒋;檋ar;楢ॣ⒥\0⒪\0⒱\0\0\0\0\0⒵Ⓔ\0ⓆⓈⓍ\0⓹ute;䄺mptyv;榴raîࡌbda;䎻gƀ;dlࢎⓁⓃ;榑åࢎ;檅uo耻«䂫rЀ;bfhlpst࢙ⓞⓦⓩ⓫⓮⓱⓵Ā;f࢝ⓣs;椟s;椝ë≒p;憫l;椹im;楳l;憢ƀ;ae⓿─┄檫il;椙Ā;s┉┊檭;쀀⪭︀ƀabr┕┙┝rr;椌rk;杲Āak┢┬cĀek┨┪;䁻;䁛Āes┱┳;榋lĀdu┹┻;榏;榍Ȁaeuy╆╋╖╘ron;䄾Ādi═╔il;䄼ìࢰâ┩;䐻Ȁcqrs╣╦╭╽a;椶uoĀ;rนᝆĀdu╲╷har;楧shar;楋h;憲ʀ;fgqs▋▌উ◳◿扤tʀahlrt▘▤▷◂◨rrowĀ;t࢙□aé⓶arpoonĀdu▯▴own»њp»०eftarrows;懇ightƀahs◍◖◞rrowĀ;sࣴࢧarpoonó྘quigarro÷⇰hreetimes;拋ƀ;qs▋ও◺lanôবʀ;cdgsব☊☍☝☨c;檨otĀ;o☔☕橿Ā;r☚☛檁;檃Ā;e☢☥쀀⋚︀s;檓ʀadegs☳☹☽♉♋pproøⓆot;拖qĀgq♃♅ôউgtò⒌ôছiíলƀilr♕࣡♚sht;楼;쀀𝔩Ā;Eজ♣;檑š♩♶rĀdu▲♮Ā;l॥♳;楪lk;斄cy;䑙ʀ;achtੈ⚈⚋⚑⚖rò◁orneòᴈard;楫ri;旺Āio⚟⚤dot;䅀ustĀ;a⚬⚭掰che»⚭ȀEaes⚻⚽⛉⛔;扨pĀ;p⛃⛄檉rox»⛄Ā;q⛎⛏檇Ā;q⛎⚻im;拦Ѐabnoptwz⛩⛴⛷✚✯❁❇❐Ānr⛮⛱g;柬r;懽rëࣁgƀlmr⛿✍✔eftĀar০✇ightá৲apsto;柼ightá৽parrowĀlr✥✩efô⓭ight;憬ƀafl✶✹✽r;榅;쀀𝕝us;樭imes;樴š❋❏st;戗áፎƀ;ef❗❘᠀旊nge»❘arĀ;l❤❥䀨t;榓ʀachmt❳❶❼➅➇ròࢨorneòᶌarĀ;d྘➃;業;怎ri;抿̀achiqt➘➝ੀ➢➮➻quo;怹r;쀀𝓁mƀ;egল➪➬;檍;檏Ābu┪➳oĀ;rฟ➹;怚rok;䅂萀<;cdhilqrࠫ⟒☹⟜⟠⟥⟪⟰Āci⟗⟙;檦r;橹reå◲mes;拉arr;楶uest;橻ĀPi⟵⟹ar;榖ƀ;ef⠀भ᠛旃rĀdu⠇⠍shar;楊har;楦Āen⠗⠡rtneqq;쀀≨︀Å⠞܀Dacdefhilnopsu⡀⡅⢂⢎⢓⢠⢥⢨⣚⣢⣤ઃ⣳⤂Dot;戺Ȁclpr⡎⡒⡣⡽r耻¯䂯Āet⡗⡙;時Ā;e⡞⡟朠se»⡟Ā;sျ⡨toȀ;dluျ⡳⡷⡻owîҌefôएðᏑker;斮Āoy⢇⢌mma;権;䐼ash;怔asuredangle»ᘦr;쀀𝔪o;愧ƀcdn⢯⢴⣉ro耻µ䂵Ȁ;acdᑤ⢽⣀⣄sôᚧir;櫰ot肻·Ƶusƀ;bd⣒ᤃ⣓戒Ā;uᴼ⣘;横ţ⣞⣡p;櫛ò−ðઁĀdp⣩⣮els;抧f;쀀𝕞Āct⣸⣽r;쀀𝓂pos»ᖝƀ;lm⤉⤊⤍䎼timap;抸ఀGLRVabcdefghijlmoprstuvw⥂⥓⥾⦉⦘⧚⧩⨕⨚⩘⩝⪃⪕⪤⪨⬄⬇⭄⭿⮮ⰴⱧⱼ⳩Āgt⥇⥋;쀀⋙̸Ā;v⥐௏쀀≫⃒ƀelt⥚⥲⥶ftĀar⥡⥧rrow;懍ightarrow;懎;쀀⋘̸Ā;v⥻ే쀀≪⃒ightarrow;懏ĀDd⦎⦓ash;抯ash;抮ʀbcnpt⦣⦧⦬⦱⧌la»˞ute;䅄g;쀀∠⃒ʀ;Eiop඄⦼⧀⧅⧈;쀀⩰̸d;쀀≋̸s;䅉roø඄urĀ;a⧓⧔普lĀ;s⧓ସǳ⧟\0⧣p肻 ଷmpĀ;e௹ఀʀaeouy⧴⧾⨃⨐⨓ǰ⧹\0⧻;橃on;䅈dil;䅆ngĀ;dൾ⨊ot;쀀⩭̸p;橂;䐽ash;怓΀;Aadqsxஒ⨩⨭⨻⩁⩅⩐rr;懗rĀhr⨳⨶k;椤Ā;oᏲᏰot;쀀≐̸uiöୣĀei⩊⩎ar;椨í஘istĀ;s஠டr;쀀𝔫ȀEest௅⩦⩹⩼ƀ;qs஼⩭௡ƀ;qs஼௅⩴lanô௢ií௪Ā;rஶ⪁»ஷƀAap⪊⪍⪑rò⥱rr;憮ar;櫲ƀ;svྍ⪜ྌĀ;d⪡⪢拼;拺cy;䑚΀AEadest⪷⪺⪾⫂⫅⫶⫹rò⥦;쀀≦̸rr;憚r;急Ȁ;fqs఻⫎⫣⫯tĀar⫔⫙rro÷⫁ightarro÷⪐ƀ;qs఻⪺⫪lanôౕĀ;sౕ⫴»శiíౝĀ;rవ⫾iĀ;eచథiäඐĀpt⬌⬑f;쀀𝕟膀¬;in⬙⬚⬶䂬nȀ;Edvஉ⬤⬨⬮;쀀⋹̸ot;쀀⋵̸ǡஉ⬳⬵;拷;拶iĀ;vಸ⬼ǡಸ⭁⭃;拾;拽ƀaor⭋⭣⭩rȀ;ast୻⭕⭚⭟lleì୻l;쀀⫽⃥;쀀∂̸lint;樔ƀ;ceಒ⭰⭳uåಥĀ;cಘ⭸Ā;eಒ⭽ñಘȀAait⮈⮋⮝⮧rò⦈rrƀ;cw⮔⮕⮙憛;쀀⤳̸;쀀↝̸ghtarrow»⮕riĀ;eೋೖ΀chimpqu⮽⯍⯙⬄୸⯤⯯Ȁ;cerല⯆ഷ⯉uå൅;쀀𝓃ortɭ⬅\0\0⯖ará⭖mĀ;e൮⯟Ā;q൴൳suĀbp⯫⯭å೸åഋƀbcp⯶ⰑⰙȀ;Ees⯿ⰀഢⰄ抄;쀀⫅̸etĀ;eഛⰋqĀ;qണⰀcĀ;eലⰗñസȀ;EesⰢⰣൟⰧ抅;쀀⫆̸etĀ;e൘ⰮqĀ;qൠⰣȀgilrⰽⰿⱅⱇìௗlde耻ñ䃱çృiangleĀlrⱒⱜeftĀ;eచⱚñదightĀ;eೋⱥñ೗Ā;mⱬⱭ䎽ƀ;esⱴⱵⱹ䀣ro;愖p;怇ҀDHadgilrsⲏⲔⲙⲞⲣⲰⲶⳓⳣash;抭arr;椄p;쀀≍⃒ash;抬ĀetⲨⲬ;쀀≥⃒;쀀>⃒nfin;槞ƀAetⲽⳁⳅrr;椂;쀀≤⃒Ā;rⳊⳍ쀀<⃒ie;쀀⊴⃒ĀAtⳘⳜrr;椃rie;쀀⊵⃒im;쀀∼⃒ƀAan⳰⳴ⴂrr;懖rĀhr⳺⳽k;椣Ā;oᏧᏥear;椧ቓ᪕\0\0\0\0\0\0\0\0\0\0\0\0\0ⴭ\0ⴸⵈⵠⵥ⵲ⶄᬇ\0\0ⶍⶫ\0ⷈⷎ\0ⷜ⸙⸫⸾⹃Ācsⴱ᪗ute耻ó䃳ĀiyⴼⵅrĀ;c᪞ⵂ耻ô䃴;䐾ʀabios᪠ⵒⵗǈⵚlac;䅑v;樸old;榼lig;䅓Ācr⵩⵭ir;榿;쀀𝔬ͯ⵹\0\0⵼\0ⶂn;䋛ave耻ò䃲;槁Ābmⶈ෴ar;榵Ȁacitⶕ⶘ⶥⶨrò᪀Āir⶝ⶠr;榾oss;榻nå๒;槀ƀaeiⶱⶵⶹcr;䅍ga;䏉ƀcdnⷀⷅǍron;䎿;榶pf;쀀𝕠ƀaelⷔ⷗ǒr;榷rp;榹΀;adiosvⷪⷫⷮ⸈⸍⸐⸖戨rò᪆Ȁ;efmⷷⷸ⸂⸅橝rĀ;oⷾⷿ愴f»ⷿ耻ª䂪耻º䂺gof;抶r;橖lope;橗;橛ƀclo⸟⸡⸧ò⸁ash耻ø䃸l;折iŬⸯ⸴de耻õ䃵esĀ;aǛ⸺s;樶ml耻ö䃶bar;挽ૡ⹞\0⹽\0⺀⺝\0⺢⺹\0\0⻋ຜ\0⼓\0\0⼫⾼\0⿈rȀ;astЃ⹧⹲຅脀¶;l⹭⹮䂶leìЃɩ⹸\0\0⹻m;櫳;櫽y;䐿rʀcimpt⺋⺏⺓ᡥ⺗nt;䀥od;䀮il;怰enk;怱r;쀀𝔭ƀimo⺨⺰⺴Ā;v⺭⺮䏆;䏕maô੶ne;明ƀ;tv⺿⻀⻈䏀chfork»´;䏖Āau⻏⻟nĀck⻕⻝kĀ;h⇴⻛;愎ö⇴sҀ;abcdemst⻳⻴ᤈ⻹⻽⼄⼆⼊⼎䀫cir;樣ir;樢Āouᵀ⼂;樥;橲n肻±ຝim;樦wo;樧ƀipu⼙⼠⼥ntint;樕f;쀀𝕡nd耻£䂣Ԁ;Eaceinosu່⼿⽁⽄⽇⾁⾉⾒⽾⾶;檳p;檷uå໙Ā;c໎⽌̀;acens່⽙⽟⽦⽨⽾pproø⽃urlyeñ໙ñ໎ƀaes⽯⽶⽺pprox;檹qq;檵im;拨iíໟmeĀ;s⾈ຮ怲ƀEas⽸⾐⽺ð⽵ƀdfp໬⾙⾯ƀals⾠⾥⾪lar;挮ine;挒urf;挓Ā;t໻⾴ï໻rel;抰Āci⿀⿅r;쀀𝓅;䏈ncsp;怈̀fiopsu⿚⋢⿟⿥⿫⿱r;쀀𝔮pf;쀀𝕢rime;恗cr;쀀𝓆ƀaeo⿸〉〓tĀei⿾々rnionóڰnt;樖stĀ;e【】䀿ñἙô༔઀ABHabcdefhilmnoprstux぀けさすムㄎㄫㅇㅢㅲㆎ㈆㈕㈤㈩㉘㉮㉲㊐㊰㊷ƀartぇおがròႳòϝail;検aròᱥar;楤΀cdenqrtとふへみわゔヌĀeuねぱ;쀀∽̱te;䅕iãᅮmptyv;榳gȀ;del࿑らるろ;榒;榥å࿑uo耻»䂻rր;abcfhlpstw࿜ガクシスゼゾダッデナp;極Ā;f࿠ゴs;椠;椳s;椞ë≝ð✮l;楅im;楴l;憣;憝Āaiパフil;椚oĀ;nホボ戶aló༞ƀabrョリヮrò៥rk;杳ĀakンヽcĀekヹ・;䁽;䁝Āes㄂㄄;榌lĀduㄊㄌ;榎;榐Ȁaeuyㄗㄜㄧㄩron;䅙Ādiㄡㄥil;䅗ì࿲âヺ;䑀Ȁclqsㄴㄷㄽㅄa;椷dhar;楩uoĀ;rȎȍh;憳ƀacgㅎㅟངlȀ;ipsླྀㅘㅛႜnåႻarôྩt;断ƀilrㅩဣㅮsht;楽;쀀𝔯ĀaoㅷㆆrĀduㅽㅿ»ѻĀ;l႑ㆄ;楬Ā;vㆋㆌ䏁;䏱ƀgns㆕ㇹㇼht̀ahlrstㆤㆰ㇂㇘㇤㇮rrowĀ;t࿜ㆭaéトarpoonĀduㆻㆿowîㅾp»႒eftĀah㇊㇐rrowó࿪arpoonóՑightarrows;應quigarro÷ニhreetimes;拌g;䋚ingdotseñἲƀahm㈍㈐㈓rò࿪aòՑ;怏oustĀ;a㈞㈟掱che»㈟mid;櫮Ȁabpt㈲㈽㉀㉒Ānr㈷㈺g;柭r;懾rëဃƀafl㉇㉊㉎r;榆;쀀𝕣us;樮imes;樵Āap㉝㉧rĀ;g㉣㉤䀩t;榔olint;樒arò㇣Ȁachq㉻㊀Ⴜ㊅quo;怺r;쀀𝓇Ābu・㊊oĀ;rȔȓƀhir㊗㊛㊠reåㇸmes;拊iȀ;efl㊪ၙᠡ㊫方tri;槎luhar;楨;愞ൡ㋕㋛㋟㌬㌸㍱\0㍺㎤\0\0㏬㏰\0㐨㑈㑚㒭㒱㓊㓱\0㘖\0\0㘳cute;䅛quï➺Ԁ;Eaceinpsyᇭ㋳㋵㋿㌂㌋㌏㌟㌦㌩;檴ǰ㋺\0㋼;檸on;䅡uåᇾĀ;dᇳ㌇il;䅟rc;䅝ƀEas㌖㌘㌛;檶p;檺im;择olint;樓iíሄ;䑁otƀ;be㌴ᵇ㌵担;橦΀Aacmstx㍆㍊㍗㍛㍞㍣㍭rr;懘rĀhr㍐㍒ë∨Ā;oਸ਼਴t耻§䂧i;䀻war;椩mĀin㍩ðnuóñt;朶rĀ;o㍶⁕쀀𝔰Ȁacoy㎂㎆㎑㎠rp;景Āhy㎋㎏cy;䑉;䑈rtɭ㎙\0\0㎜iäᑤaraì⹯耻­䂭Āgm㎨㎴maƀ;fv㎱㎲㎲䏃;䏂Ѐ;deglnprካ㏅㏉㏎㏖㏞㏡㏦ot;橪Ā;q኱ኰĀ;E㏓㏔檞;檠Ā;E㏛㏜檝;檟e;扆lus;樤arr;楲aròᄽȀaeit㏸㐈㐏㐗Āls㏽㐄lsetmé㍪hp;樳parsl;槤Ādlᑣ㐔e;挣Ā;e㐜㐝檪Ā;s㐢㐣檬;쀀⪬︀ƀflp㐮㐳㑂tcy;䑌Ā;b㐸㐹䀯Ā;a㐾㐿槄r;挿f;쀀𝕤aĀdr㑍ЂesĀ;u㑔㑕晠it»㑕ƀcsu㑠㑹㒟Āau㑥㑯pĀ;sᆈ㑫;쀀⊓︀pĀ;sᆴ㑵;쀀⊔︀uĀbp㑿㒏ƀ;esᆗᆜ㒆etĀ;eᆗ㒍ñᆝƀ;esᆨᆭ㒖etĀ;eᆨ㒝ñᆮƀ;afᅻ㒦ְrť㒫ֱ»ᅼaròᅈȀcemt㒹㒾㓂㓅r;쀀𝓈tmîñiì㐕aræᆾĀar㓎㓕rĀ;f㓔ឿ昆Āan㓚㓭ightĀep㓣㓪psiloîỠhé⺯s»⡒ʀbcmnp㓻㕞ሉ㖋㖎Ҁ;Edemnprs㔎㔏㔑㔕㔞㔣㔬㔱㔶抂;櫅ot;檽Ā;dᇚ㔚ot;櫃ult;櫁ĀEe㔨㔪;櫋;把lus;檿arr;楹ƀeiu㔽㕒㕕tƀ;en㔎㕅㕋qĀ;qᇚ㔏eqĀ;q㔫㔨m;櫇Ābp㕚㕜;櫕;櫓c̀;acensᇭ㕬㕲㕹㕻㌦pproø㋺urlyeñᇾñᇳƀaes㖂㖈㌛pproø㌚qñ㌗g;晪ڀ123;Edehlmnps㖩㖬㖯ሜ㖲㖴㗀㗉㗕㗚㗟㗨㗭耻¹䂹耻²䂲耻³䂳;櫆Āos㖹㖼t;檾ub;櫘Ā;dሢ㗅ot;櫄sĀou㗏㗒l;柉b;櫗arr;楻ult;櫂ĀEe㗤㗦;櫌;抋lus;櫀ƀeiu㗴㘉㘌tƀ;enሜ㗼㘂qĀ;qሢ㖲eqĀ;q㗧㗤m;櫈Ābp㘑㘓;櫔;櫖ƀAan㘜㘠㘭rr;懙rĀhr㘦㘨ë∮Ā;oਫ਩war;椪lig耻ß䃟௡㙑㙝㙠ዎ㙳㙹\0㙾㛂\0\0\0\0\0㛛㜃\0㜉㝬\0\0\0㞇ɲ㙖\0\0㙛get;挖;䏄rë๟ƀaey㙦㙫㙰ron;䅥dil;䅣;䑂lrec;挕r;쀀𝔱Ȁeiko㚆㚝㚵㚼ǲ㚋\0㚑eĀ4fኄኁaƀ;sv㚘㚙㚛䎸ym;䏑Ācn㚢㚲kĀas㚨㚮pproø዁im»ኬsðኞĀas㚺㚮ð዁rn耻þ䃾Ǭ̟㛆⋧es膀×;bd㛏㛐㛘䃗Ā;aᤏ㛕r;樱;樰ƀeps㛡㛣㜀á⩍Ȁ;bcf҆㛬㛰㛴ot;挶ir;櫱Ā;o㛹㛼쀀𝕥rk;櫚á㍢rime;怴ƀaip㜏㜒㝤dåቈ΀adempst㜡㝍㝀㝑㝗㝜㝟ngleʀ;dlqr㜰㜱㜶㝀㝂斵own»ᶻeftĀ;e⠀㜾ñम;扜ightĀ;e㊪㝋ñၚot;旬inus;樺lus;樹b;槍ime;樻ezium;揢ƀcht㝲㝽㞁Āry㝷㝻;쀀𝓉;䑆cy;䑛rok;䅧Āio㞋㞎xô᝷headĀlr㞗㞠eftarro÷ࡏightarrow»ཝऀAHabcdfghlmoprstuw㟐㟓㟗㟤㟰㟼㠎㠜㠣㠴㡑㡝㡫㢩㣌㣒㣪㣶ròϭar;楣Ācr㟜㟢ute耻ú䃺òᅐrǣ㟪\0㟭y;䑞ve;䅭Āiy㟵㟺rc耻û䃻;䑃ƀabh㠃㠆㠋ròᎭlac;䅱aòᏃĀir㠓㠘sht;楾;쀀𝔲rave耻ù䃹š㠧㠱rĀlr㠬㠮»ॗ»ႃlk;斀Āct㠹㡍ɯ㠿\0\0㡊rnĀ;e㡅㡆挜r»㡆op;挏ri;旸Āal㡖㡚cr;䅫肻¨͉Āgp㡢㡦on;䅳f;쀀𝕦̀adhlsuᅋ㡸㡽፲㢑㢠ownáᎳarpoonĀlr㢈㢌efô㠭ighô㠯iƀ;hl㢙㢚㢜䏅»ᏺon»㢚parrows;懈ƀcit㢰㣄㣈ɯ㢶\0\0㣁rnĀ;e㢼㢽挝r»㢽op;挎ng;䅯ri;旹cr;쀀𝓊ƀdir㣙㣝㣢ot;拰lde;䅩iĀ;f㜰㣨»᠓Āam㣯㣲rò㢨l耻ü䃼angle;榧ހABDacdeflnoprsz㤜㤟㤩㤭㦵㦸㦽㧟㧤㧨㧳㧹㧽㨁㨠ròϷarĀ;v㤦㤧櫨;櫩asèϡĀnr㤲㤷grt;榜΀eknprst㓣㥆㥋㥒㥝㥤㦖appá␕othinçẖƀhir㓫⻈㥙opô⾵Ā;hᎷ㥢ïㆍĀiu㥩㥭gmá㎳Ābp㥲㦄setneqĀ;q㥽㦀쀀⊊︀;쀀⫋︀setneqĀ;q㦏㦒쀀⊋︀;쀀⫌︀Āhr㦛㦟etá㚜iangleĀlr㦪㦯eft»थight»ၑy;䐲ash»ံƀelr㧄㧒㧗ƀ;beⷪ㧋㧏ar;抻q;扚lip;拮Ābt㧜ᑨaòᑩr;쀀𝔳tré㦮suĀbp㧯㧱»ജ»൙pf;쀀𝕧roð໻tré㦴Ācu㨆㨋r;쀀𝓋Ābp㨐㨘nĀEe㦀㨖»㥾nĀEe㦒㨞»㦐igzag;榚΀cefoprs㨶㨻㩖㩛㩔㩡㩪irc;䅵Ādi㩀㩑Ābg㩅㩉ar;機eĀ;qᗺ㩏;扙erp;愘r;쀀𝔴pf;쀀𝕨Ā;eᑹ㩦atèᑹcr;쀀𝓌ૣណ㪇\0㪋\0㪐㪛\0\0㪝㪨㪫㪯\0\0㫃㫎\0㫘ៜ៟tré៑r;쀀𝔵ĀAa㪔㪗ròσrò৶;䎾ĀAa㪡㪤ròθrò৫að✓is;拻ƀdptឤ㪵㪾Āfl㪺ឩ;쀀𝕩imåឲĀAa㫇㫊ròώròਁĀcq㫒ីr;쀀𝓍Āpt៖㫜ré។Ѐacefiosu㫰㫽㬈㬌㬑㬕㬛㬡cĀuy㫶㫻te耻ý䃽;䑏Āiy㬂㬆rc;䅷;䑋n耻¥䂥r;쀀𝔶cy;䑗pf;쀀𝕪cr;쀀𝓎Ācm㬦㬩y;䑎l耻ÿ䃿Ԁacdefhiosw㭂㭈㭔㭘㭤㭩㭭㭴㭺㮀cute;䅺Āay㭍㭒ron;䅾;䐷ot;䅼Āet㭝㭡træᕟa;䎶r;쀀𝔷cy;䐶grarr;懝pf;쀀𝕫cr;쀀𝓏Ājn㮅㮇;怍j;怌'.split("").map((c2) => c2.charCodeAt(0))
-);
-const xmlDecodeTree = new Uint16Array(
-  // prettier-ignore
-  "Ȁaglq	\x1Bɭ\0\0p;䀦os;䀧t;䀾t;䀼uot;䀢".split("").map((c2) => c2.charCodeAt(0))
-);
-var _a;
-const decodeMap = /* @__PURE__ */ new Map([
-  [0, 65533],
-  // C1 Unicode control character reference replacements
-  [128, 8364],
-  [130, 8218],
-  [131, 402],
-  [132, 8222],
-  [133, 8230],
-  [134, 8224],
-  [135, 8225],
-  [136, 710],
-  [137, 8240],
-  [138, 352],
-  [139, 8249],
-  [140, 338],
-  [142, 381],
-  [145, 8216],
-  [146, 8217],
-  [147, 8220],
-  [148, 8221],
-  [149, 8226],
-  [150, 8211],
-  [151, 8212],
-  [152, 732],
-  [153, 8482],
-  [154, 353],
-  [155, 8250],
-  [156, 339],
-  [158, 382],
-  [159, 376]
-]);
-const fromCodePoint$1 = (
-  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, node/no-unsupported-features/es-builtins
-  (_a = String.fromCodePoint) !== null && _a !== void 0 ? _a : function(codePoint) {
-    let output = "";
-    if (codePoint > 65535) {
-      codePoint -= 65536;
-      output += String.fromCharCode(codePoint >>> 10 & 1023 | 55296);
-      codePoint = 56320 | codePoint & 1023;
-    }
-    output += String.fromCharCode(codePoint);
-    return output;
-  }
-);
-function replaceCodePoint(codePoint) {
-  var _a2;
-  if (codePoint >= 55296 && codePoint <= 57343 || codePoint > 1114111) {
-    return 65533;
-  }
-  return (_a2 = decodeMap.get(codePoint)) !== null && _a2 !== void 0 ? _a2 : codePoint;
-}
-var CharCodes;
-(function(CharCodes2) {
-  CharCodes2[CharCodes2["NUM"] = 35] = "NUM";
-  CharCodes2[CharCodes2["SEMI"] = 59] = "SEMI";
-  CharCodes2[CharCodes2["EQUALS"] = 61] = "EQUALS";
-  CharCodes2[CharCodes2["ZERO"] = 48] = "ZERO";
-  CharCodes2[CharCodes2["NINE"] = 57] = "NINE";
-  CharCodes2[CharCodes2["LOWER_A"] = 97] = "LOWER_A";
-  CharCodes2[CharCodes2["LOWER_F"] = 102] = "LOWER_F";
-  CharCodes2[CharCodes2["LOWER_X"] = 120] = "LOWER_X";
-  CharCodes2[CharCodes2["LOWER_Z"] = 122] = "LOWER_Z";
-  CharCodes2[CharCodes2["UPPER_A"] = 65] = "UPPER_A";
-  CharCodes2[CharCodes2["UPPER_F"] = 70] = "UPPER_F";
-  CharCodes2[CharCodes2["UPPER_Z"] = 90] = "UPPER_Z";
-})(CharCodes || (CharCodes = {}));
-const TO_LOWER_BIT = 32;
-var BinTrieFlags;
-(function(BinTrieFlags2) {
-  BinTrieFlags2[BinTrieFlags2["VALUE_LENGTH"] = 49152] = "VALUE_LENGTH";
-  BinTrieFlags2[BinTrieFlags2["BRANCH_LENGTH"] = 16256] = "BRANCH_LENGTH";
-  BinTrieFlags2[BinTrieFlags2["JUMP_TABLE"] = 127] = "JUMP_TABLE";
-})(BinTrieFlags || (BinTrieFlags = {}));
-function isNumber(code2) {
-  return code2 >= CharCodes.ZERO && code2 <= CharCodes.NINE;
-}
-function isHexadecimalCharacter(code2) {
-  return code2 >= CharCodes.UPPER_A && code2 <= CharCodes.UPPER_F || code2 >= CharCodes.LOWER_A && code2 <= CharCodes.LOWER_F;
-}
-function isAsciiAlphaNumeric(code2) {
-  return code2 >= CharCodes.UPPER_A && code2 <= CharCodes.UPPER_Z || code2 >= CharCodes.LOWER_A && code2 <= CharCodes.LOWER_Z || isNumber(code2);
-}
-function isEntityInAttributeInvalidEnd(code2) {
-  return code2 === CharCodes.EQUALS || isAsciiAlphaNumeric(code2);
-}
-var EntityDecoderState;
-(function(EntityDecoderState2) {
-  EntityDecoderState2[EntityDecoderState2["EntityStart"] = 0] = "EntityStart";
-  EntityDecoderState2[EntityDecoderState2["NumericStart"] = 1] = "NumericStart";
-  EntityDecoderState2[EntityDecoderState2["NumericDecimal"] = 2] = "NumericDecimal";
-  EntityDecoderState2[EntityDecoderState2["NumericHex"] = 3] = "NumericHex";
-  EntityDecoderState2[EntityDecoderState2["NamedEntity"] = 4] = "NamedEntity";
-})(EntityDecoderState || (EntityDecoderState = {}));
-var DecodingMode;
-(function(DecodingMode2) {
-  DecodingMode2[DecodingMode2["Legacy"] = 0] = "Legacy";
-  DecodingMode2[DecodingMode2["Strict"] = 1] = "Strict";
-  DecodingMode2[DecodingMode2["Attribute"] = 2] = "Attribute";
-})(DecodingMode || (DecodingMode = {}));
-class EntityDecoder {
-  constructor(decodeTree, emitCodePoint, errors2) {
-    this.decodeTree = decodeTree;
-    this.emitCodePoint = emitCodePoint;
-    this.errors = errors2;
-    this.state = EntityDecoderState.EntityStart;
-    this.consumed = 1;
-    this.result = 0;
-    this.treeIndex = 0;
-    this.excess = 1;
-    this.decodeMode = DecodingMode.Strict;
-  }
-  /** Resets the instance to make it reusable. */
-  startEntity(decodeMode) {
-    this.decodeMode = decodeMode;
-    this.state = EntityDecoderState.EntityStart;
-    this.result = 0;
-    this.treeIndex = 0;
-    this.excess = 1;
-    this.consumed = 1;
-  }
-  /**
-   * Write an entity to the decoder. This can be called multiple times with partial entities.
-   * If the entity is incomplete, the decoder will return -1.
-   *
-   * Mirrors the implementation of `getDecoder`, but with the ability to stop decoding if the
-   * entity is incomplete, and resume when the next string is written.
-   *
-   * @param string The string containing the entity (or a continuation of the entity).
-   * @param offset The offset at which the entity begins. Should be 0 if this is not the first call.
-   * @returns The number of characters that were consumed, or -1 if the entity is incomplete.
-   */
-  write(str, offset) {
-    switch (this.state) {
-      case EntityDecoderState.EntityStart: {
-        if (str.charCodeAt(offset) === CharCodes.NUM) {
-          this.state = EntityDecoderState.NumericStart;
-          this.consumed += 1;
-          return this.stateNumericStart(str, offset + 1);
-        }
-        this.state = EntityDecoderState.NamedEntity;
-        return this.stateNamedEntity(str, offset);
-      }
-      case EntityDecoderState.NumericStart: {
-        return this.stateNumericStart(str, offset);
-      }
-      case EntityDecoderState.NumericDecimal: {
-        return this.stateNumericDecimal(str, offset);
-      }
-      case EntityDecoderState.NumericHex: {
-        return this.stateNumericHex(str, offset);
-      }
-      case EntityDecoderState.NamedEntity: {
-        return this.stateNamedEntity(str, offset);
-      }
-    }
-  }
-  /**
-   * Switches between the numeric decimal and hexadecimal states.
-   *
-   * Equivalent to the `Numeric character reference state` in the HTML spec.
-   *
-   * @param str The string containing the entity (or a continuation of the entity).
-   * @param offset The current offset.
-   * @returns The number of characters that were consumed, or -1 if the entity is incomplete.
-   */
-  stateNumericStart(str, offset) {
-    if (offset >= str.length) {
-      return -1;
-    }
-    if ((str.charCodeAt(offset) | TO_LOWER_BIT) === CharCodes.LOWER_X) {
-      this.state = EntityDecoderState.NumericHex;
-      this.consumed += 1;
-      return this.stateNumericHex(str, offset + 1);
-    }
-    this.state = EntityDecoderState.NumericDecimal;
-    return this.stateNumericDecimal(str, offset);
-  }
-  addToNumericResult(str, start, end, base2) {
-    if (start !== end) {
-      const digitCount = end - start;
-      this.result = this.result * Math.pow(base2, digitCount) + parseInt(str.substr(start, digitCount), base2);
-      this.consumed += digitCount;
-    }
-  }
-  /**
-   * Parses a hexadecimal numeric entity.
-   *
-   * Equivalent to the `Hexademical character reference state` in the HTML spec.
-   *
-   * @param str The string containing the entity (or a continuation of the entity).
-   * @param offset The current offset.
-   * @returns The number of characters that were consumed, or -1 if the entity is incomplete.
-   */
-  stateNumericHex(str, offset) {
-    const startIdx = offset;
-    while (offset < str.length) {
-      const char = str.charCodeAt(offset);
-      if (isNumber(char) || isHexadecimalCharacter(char)) {
-        offset += 1;
-      } else {
-        this.addToNumericResult(str, startIdx, offset, 16);
-        return this.emitNumericEntity(char, 3);
-      }
-    }
-    this.addToNumericResult(str, startIdx, offset, 16);
-    return -1;
-  }
-  /**
-   * Parses a decimal numeric entity.
-   *
-   * Equivalent to the `Decimal character reference state` in the HTML spec.
-   *
-   * @param str The string containing the entity (or a continuation of the entity).
-   * @param offset The current offset.
-   * @returns The number of characters that were consumed, or -1 if the entity is incomplete.
-   */
-  stateNumericDecimal(str, offset) {
-    const startIdx = offset;
-    while (offset < str.length) {
-      const char = str.charCodeAt(offset);
-      if (isNumber(char)) {
-        offset += 1;
-      } else {
-        this.addToNumericResult(str, startIdx, offset, 10);
-        return this.emitNumericEntity(char, 2);
-      }
-    }
-    this.addToNumericResult(str, startIdx, offset, 10);
-    return -1;
-  }
-  /**
-   * Validate and emit a numeric entity.
-   *
-   * Implements the logic from the `Hexademical character reference start
-   * state` and `Numeric character reference end state` in the HTML spec.
-   *
-   * @param lastCp The last code point of the entity. Used to see if the
-   *               entity was terminated with a semicolon.
-   * @param expectedLength The minimum number of characters that should be
-   *                       consumed. Used to validate that at least one digit
-   *                       was consumed.
-   * @returns The number of characters that were consumed.
-   */
-  emitNumericEntity(lastCp, expectedLength) {
-    var _a2;
-    if (this.consumed <= expectedLength) {
-      (_a2 = this.errors) === null || _a2 === void 0 ? void 0 : _a2.absenceOfDigitsInNumericCharacterReference(this.consumed);
-      return 0;
-    }
-    if (lastCp === CharCodes.SEMI) {
-      this.consumed += 1;
-    } else if (this.decodeMode === DecodingMode.Strict) {
-      return 0;
-    }
-    this.emitCodePoint(replaceCodePoint(this.result), this.consumed);
-    if (this.errors) {
-      if (lastCp !== CharCodes.SEMI) {
-        this.errors.missingSemicolonAfterCharacterReference();
-      }
-      this.errors.validateNumericCharacterReference(this.result);
-    }
-    return this.consumed;
-  }
-  /**
-   * Parses a named entity.
-   *
-   * Equivalent to the `Named character reference state` in the HTML spec.
-   *
-   * @param str The string containing the entity (or a continuation of the entity).
-   * @param offset The current offset.
-   * @returns The number of characters that were consumed, or -1 if the entity is incomplete.
-   */
-  stateNamedEntity(str, offset) {
-    const { decodeTree } = this;
-    let current = decodeTree[this.treeIndex];
-    let valueLength = (current & BinTrieFlags.VALUE_LENGTH) >> 14;
-    for (; offset < str.length; offset++, this.excess++) {
-      const char = str.charCodeAt(offset);
-      this.treeIndex = determineBranch(decodeTree, current, this.treeIndex + Math.max(1, valueLength), char);
-      if (this.treeIndex < 0) {
-        return this.result === 0 || // If we are parsing an attribute
-        this.decodeMode === DecodingMode.Attribute && // We shouldn't have consumed any characters after the entity,
-        (valueLength === 0 || // And there should be no invalid characters.
-        isEntityInAttributeInvalidEnd(char)) ? 0 : this.emitNotTerminatedNamedEntity();
-      }
-      current = decodeTree[this.treeIndex];
-      valueLength = (current & BinTrieFlags.VALUE_LENGTH) >> 14;
-      if (valueLength !== 0) {
-        if (char === CharCodes.SEMI) {
-          return this.emitNamedEntityData(this.treeIndex, valueLength, this.consumed + this.excess);
-        }
-        if (this.decodeMode !== DecodingMode.Strict) {
-          this.result = this.treeIndex;
-          this.consumed += this.excess;
-          this.excess = 0;
-        }
-      }
-    }
-    return -1;
-  }
-  /**
-   * Emit a named entity that was not terminated with a semicolon.
-   *
-   * @returns The number of characters consumed.
-   */
-  emitNotTerminatedNamedEntity() {
-    var _a2;
-    const { result, decodeTree } = this;
-    const valueLength = (decodeTree[result] & BinTrieFlags.VALUE_LENGTH) >> 14;
-    this.emitNamedEntityData(result, valueLength, this.consumed);
-    (_a2 = this.errors) === null || _a2 === void 0 ? void 0 : _a2.missingSemicolonAfterCharacterReference();
-    return this.consumed;
-  }
-  /**
-   * Emit a named entity.
-   *
-   * @param result The index of the entity in the decode tree.
-   * @param valueLength The number of bytes in the entity.
-   * @param consumed The number of characters consumed.
-   *
-   * @returns The number of characters consumed.
-   */
-  emitNamedEntityData(result, valueLength, consumed) {
-    const { decodeTree } = this;
-    this.emitCodePoint(valueLength === 1 ? decodeTree[result] & ~BinTrieFlags.VALUE_LENGTH : decodeTree[result + 1], consumed);
-    if (valueLength === 3) {
-      this.emitCodePoint(decodeTree[result + 2], consumed);
-    }
-    return consumed;
-  }
-  /**
-   * Signal to the parser that the end of the input was reached.
-   *
-   * Remaining data will be emitted and relevant errors will be produced.
-   *
-   * @returns The number of characters consumed.
-   */
-  end() {
-    var _a2;
-    switch (this.state) {
-      case EntityDecoderState.NamedEntity: {
-        return this.result !== 0 && (this.decodeMode !== DecodingMode.Attribute || this.result === this.treeIndex) ? this.emitNotTerminatedNamedEntity() : 0;
-      }
-      // Otherwise, emit a numeric entity if we have one.
-      case EntityDecoderState.NumericDecimal: {
-        return this.emitNumericEntity(0, 2);
-      }
-      case EntityDecoderState.NumericHex: {
-        return this.emitNumericEntity(0, 3);
-      }
-      case EntityDecoderState.NumericStart: {
-        (_a2 = this.errors) === null || _a2 === void 0 ? void 0 : _a2.absenceOfDigitsInNumericCharacterReference(this.consumed);
-        return 0;
-      }
-      case EntityDecoderState.EntityStart: {
-        return 0;
-      }
-    }
-  }
-}
-function getDecoder(decodeTree) {
-  let ret = "";
-  const decoder = new EntityDecoder(decodeTree, (str) => ret += fromCodePoint$1(str));
-  return function decodeWithTrie(str, decodeMode) {
-    let lastIndex = 0;
-    let offset = 0;
-    while ((offset = str.indexOf("&", offset)) >= 0) {
-      ret += str.slice(lastIndex, offset);
-      decoder.startEntity(decodeMode);
-      const len = decoder.write(
-        str,
-        // Skip the "&"
-        offset + 1
-      );
-      if (len < 0) {
-        lastIndex = offset + decoder.end();
-        break;
-      }
-      lastIndex = offset + len;
-      offset = len === 0 ? lastIndex + 1 : lastIndex;
-    }
-    const result = ret + str.slice(lastIndex);
-    ret = "";
-    return result;
-  };
-}
-function determineBranch(decodeTree, current, nodeIdx, char) {
-  const branchCount = (current & BinTrieFlags.BRANCH_LENGTH) >> 7;
-  const jumpOffset = current & BinTrieFlags.JUMP_TABLE;
-  if (branchCount === 0) {
-    return jumpOffset !== 0 && char === jumpOffset ? nodeIdx : -1;
-  }
-  if (jumpOffset) {
-    const value = char - jumpOffset;
-    return value < 0 || value >= branchCount ? -1 : decodeTree[nodeIdx + value] - 1;
-  }
-  let lo = nodeIdx;
-  let hi = lo + branchCount - 1;
-  while (lo <= hi) {
-    const mid = lo + hi >>> 1;
-    const midVal = decodeTree[mid];
-    if (midVal < char) {
-      lo = mid + 1;
-    } else if (midVal > char) {
-      hi = mid - 1;
-    } else {
-      return decodeTree[mid + branchCount];
-    }
-  }
-  return -1;
-}
-const htmlDecoder = getDecoder(htmlDecodeTree);
-getDecoder(xmlDecodeTree);
-function decodeHTML(str, mode = DecodingMode.Legacy) {
-  return htmlDecoder(str, mode);
-}
-function _class$1(obj) {
-  return Object.prototype.toString.call(obj);
-}
-function isString$1(obj) {
-  return _class$1(obj) === "[object String]";
-}
-const _hasOwnProperty = Object.prototype.hasOwnProperty;
-function has(object, key) {
-  return _hasOwnProperty.call(object, key);
-}
-function assign$1(obj) {
-  const sources = Array.prototype.slice.call(arguments, 1);
-  sources.forEach(function(source) {
-    if (!source) {
-      return;
-    }
-    if (typeof source !== "object") {
-      throw new TypeError(source + "must be object");
-    }
-    Object.keys(source).forEach(function(key) {
-      obj[key] = source[key];
-    });
-  });
-  return obj;
-}
-function arrayReplaceAt(src, pos, newElements) {
-  return [].concat(src.slice(0, pos), newElements, src.slice(pos + 1));
-}
-function isValidEntityCode(c2) {
-  if (c2 >= 55296 && c2 <= 57343) {
-    return false;
-  }
-  if (c2 >= 64976 && c2 <= 65007) {
-    return false;
-  }
-  if ((c2 & 65535) === 65535 || (c2 & 65535) === 65534) {
-    return false;
-  }
-  if (c2 >= 0 && c2 <= 8) {
-    return false;
-  }
-  if (c2 === 11) {
-    return false;
-  }
-  if (c2 >= 14 && c2 <= 31) {
-    return false;
-  }
-  if (c2 >= 127 && c2 <= 159) {
-    return false;
-  }
-  if (c2 > 1114111) {
-    return false;
-  }
-  return true;
-}
-function fromCodePoint(c2) {
-  if (c2 > 65535) {
-    c2 -= 65536;
-    const surrogate1 = 55296 + (c2 >> 10);
-    const surrogate2 = 56320 + (c2 & 1023);
-    return String.fromCharCode(surrogate1, surrogate2);
-  }
-  return String.fromCharCode(c2);
-}
-const UNESCAPE_MD_RE = /\\([!"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~])/g;
-const ENTITY_RE = /&([a-z#][a-z0-9]{1,31});/gi;
-const UNESCAPE_ALL_RE = new RegExp(UNESCAPE_MD_RE.source + "|" + ENTITY_RE.source, "gi");
-const DIGITAL_ENTITY_TEST_RE = /^#((?:x[a-f0-9]{1,8}|[0-9]{1,8}))$/i;
-function replaceEntityPattern(match2, name) {
-  if (name.charCodeAt(0) === 35 && DIGITAL_ENTITY_TEST_RE.test(name)) {
-    const code2 = name[1].toLowerCase() === "x" ? parseInt(name.slice(2), 16) : parseInt(name.slice(1), 10);
-    if (isValidEntityCode(code2)) {
-      return fromCodePoint(code2);
-    }
-    return match2;
-  }
-  const decoded = decodeHTML(match2);
-  if (decoded !== match2) {
-    return decoded;
-  }
-  return match2;
-}
-function unescapeMd(str) {
-  if (str.indexOf("\\") < 0) {
-    return str;
-  }
-  return str.replace(UNESCAPE_MD_RE, "$1");
-}
-function unescapeAll(str) {
-  if (str.indexOf("\\") < 0 && str.indexOf("&") < 0) {
-    return str;
-  }
-  return str.replace(UNESCAPE_ALL_RE, function(match2, escaped, entity2) {
-    if (escaped) {
-      return escaped;
-    }
-    return replaceEntityPattern(match2, entity2);
-  });
-}
-const HTML_ESCAPE_TEST_RE = /[&<>"]/;
-const HTML_ESCAPE_REPLACE_RE = /[&<>"]/g;
-const HTML_REPLACEMENTS = {
-  "&": "&amp;",
-  "<": "&lt;",
-  ">": "&gt;",
-  '"': "&quot;"
-};
-function replaceUnsafeChar(ch) {
-  return HTML_REPLACEMENTS[ch];
-}
-function escapeHtml(str) {
-  if (HTML_ESCAPE_TEST_RE.test(str)) {
-    return str.replace(HTML_ESCAPE_REPLACE_RE, replaceUnsafeChar);
-  }
-  return str;
-}
-const REGEXP_ESCAPE_RE = /[.?*+^$[\]\\(){}|-]/g;
-function escapeRE$1(str) {
-  return str.replace(REGEXP_ESCAPE_RE, "\\$&");
-}
-function isSpace(code2) {
-  switch (code2) {
-    case 9:
-    case 32:
-      return true;
-  }
-  return false;
-}
-function isWhiteSpace(code2) {
-  if (code2 >= 8192 && code2 <= 8202) {
-    return true;
-  }
-  switch (code2) {
-    case 9:
-    // \t
-    case 10:
-    // \n
-    case 11:
-    // \v
-    case 12:
-    // \f
-    case 13:
-    // \r
-    case 32:
-    case 160:
-    case 5760:
-    case 8239:
-    case 8287:
-    case 12288:
-      return true;
-  }
-  return false;
-}
-function isPunctChar(ch) {
-  return P.test(ch) || regex.test(ch);
-}
-function isMdAsciiPunct(ch) {
-  switch (ch) {
-    case 33:
-    case 34:
-    case 35:
-    case 36:
-    case 37:
-    case 38:
-    case 39:
-    case 40:
-    case 41:
-    case 42:
-    case 43:
-    case 44:
-    case 45:
-    case 46:
-    case 47:
-    case 58:
-    case 59:
-    case 60:
-    case 61:
-    case 62:
-    case 63:
-    case 64:
-    case 91:
-    case 92:
-    case 93:
-    case 94:
-    case 95:
-    case 96:
-    case 123:
-    case 124:
-    case 125:
-    case 126:
-      return true;
-    default:
-      return false;
-  }
-}
-function normalizeReference(str) {
-  str = str.trim().replace(/\s+/g, " ");
-  if ("ẞ".toLowerCase() === "Ṿ") {
-    str = str.replace(/ẞ/g, "ß");
-  }
-  return str.toLowerCase().toUpperCase();
-}
-const lib$1 = { mdurl, ucmicro };
-const utils = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
-  __proto__: null,
-  arrayReplaceAt,
-  assign: assign$1,
-  escapeHtml,
-  escapeRE: escapeRE$1,
-  fromCodePoint,
-  has,
-  isMdAsciiPunct,
-  isPunctChar,
-  isSpace,
-  isString: isString$1,
-  isValidEntityCode,
-  isWhiteSpace,
-  lib: lib$1,
-  normalizeReference,
-  unescapeAll,
-  unescapeMd
-}, Symbol.toStringTag, { value: "Module" }));
-function parseLinkLabel(state, start, disableNested) {
-  let level, found, marker, prevPos;
-  const max = state.posMax;
-  const oldPos = state.pos;
-  state.pos = start + 1;
-  level = 1;
-  while (state.pos < max) {
-    marker = state.src.charCodeAt(state.pos);
-    if (marker === 93) {
-      level--;
-      if (level === 0) {
-        found = true;
-        break;
-      }
-    }
-    prevPos = state.pos;
-    state.md.inline.skipToken(state);
-    if (marker === 91) {
-      if (prevPos === state.pos - 1) {
-        level++;
-      } else if (disableNested) {
-        state.pos = oldPos;
-        return -1;
-      }
-    }
-  }
-  let labelEnd = -1;
-  if (found) {
-    labelEnd = state.pos;
-  }
-  state.pos = oldPos;
-  return labelEnd;
-}
-function parseLinkDestination(str, start, max) {
-  let code2;
-  let pos = start;
-  const result = {
-    ok: false,
-    pos: 0,
-    str: ""
-  };
-  if (str.charCodeAt(pos) === 60) {
-    pos++;
-    while (pos < max) {
-      code2 = str.charCodeAt(pos);
-      if (code2 === 10) {
-        return result;
-      }
-      if (code2 === 60) {
-        return result;
-      }
-      if (code2 === 62) {
-        result.pos = pos + 1;
-        result.str = unescapeAll(str.slice(start + 1, pos));
-        result.ok = true;
-        return result;
-      }
-      if (code2 === 92 && pos + 1 < max) {
-        pos += 2;
-        continue;
-      }
-      pos++;
-    }
-    return result;
-  }
-  let level = 0;
-  while (pos < max) {
-    code2 = str.charCodeAt(pos);
-    if (code2 === 32) {
-      break;
-    }
-    if (code2 < 32 || code2 === 127) {
-      break;
-    }
-    if (code2 === 92 && pos + 1 < max) {
-      if (str.charCodeAt(pos + 1) === 32) {
-        break;
-      }
-      pos += 2;
-      continue;
-    }
-    if (code2 === 40) {
-      level++;
-      if (level > 32) {
-        return result;
-      }
-    }
-    if (code2 === 41) {
-      if (level === 0) {
-        break;
-      }
-      level--;
-    }
-    pos++;
-  }
-  if (start === pos) {
-    return result;
-  }
-  if (level !== 0) {
-    return result;
-  }
-  result.str = unescapeAll(str.slice(start, pos));
-  result.pos = pos;
-  result.ok = true;
-  return result;
-}
-function parseLinkTitle(str, start, max, prev_state) {
-  let code2;
-  let pos = start;
-  const state = {
-    // if `true`, this is a valid link title
-    ok: false,
-    // if `true`, this link can be continued on the next line
-    can_continue: false,
-    // if `ok`, it's the position of the first character after the closing marker
-    pos: 0,
-    // if `ok`, it's the unescaped title
-    str: "",
-    // expected closing marker character code
-    marker: 0
-  };
-  if (prev_state) {
-    state.str = prev_state.str;
-    state.marker = prev_state.marker;
-  } else {
-    if (pos >= max) {
-      return state;
-    }
-    let marker = str.charCodeAt(pos);
-    if (marker !== 34 && marker !== 39 && marker !== 40) {
-      return state;
-    }
-    start++;
-    pos++;
-    if (marker === 40) {
-      marker = 41;
-    }
-    state.marker = marker;
-  }
-  while (pos < max) {
-    code2 = str.charCodeAt(pos);
-    if (code2 === state.marker) {
-      state.pos = pos + 1;
-      state.str += unescapeAll(str.slice(start, pos));
-      state.ok = true;
-      return state;
-    } else if (code2 === 40 && state.marker === 41) {
-      return state;
-    } else if (code2 === 92 && pos + 1 < max) {
-      pos++;
-    }
-    pos++;
-  }
-  state.can_continue = true;
-  state.str += unescapeAll(str.slice(start, pos));
-  return state;
-}
-const helpers = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
-  __proto__: null,
-  parseLinkDestination,
-  parseLinkLabel,
-  parseLinkTitle
-}, Symbol.toStringTag, { value: "Module" }));
-const default_rules = {};
-default_rules.code_inline = function(tokens, idx, options, env, slf) {
-  const token = tokens[idx];
-  return "<code" + slf.renderAttrs(token) + ">" + escapeHtml(token.content) + "</code>";
-};
-default_rules.code_block = function(tokens, idx, options, env, slf) {
-  const token = tokens[idx];
-  return "<pre" + slf.renderAttrs(token) + "><code>" + escapeHtml(tokens[idx].content) + "</code></pre>\n";
-};
-default_rules.fence = function(tokens, idx, options, env, slf) {
-  const token = tokens[idx];
-  const info = token.info ? unescapeAll(token.info).trim() : "";
-  let langName = "";
-  let langAttrs = "";
-  if (info) {
-    const arr = info.split(/(\s+)/g);
-    langName = arr[0];
-    langAttrs = arr.slice(2).join("");
-  }
-  let highlighted;
-  if (options.highlight) {
-    highlighted = options.highlight(token.content, langName, langAttrs) || escapeHtml(token.content);
-  } else {
-    highlighted = escapeHtml(token.content);
-  }
-  if (highlighted.indexOf("<pre") === 0) {
-    return highlighted + "\n";
-  }
-  if (info) {
-    const i2 = token.attrIndex("class");
-    const tmpAttrs = token.attrs ? token.attrs.slice() : [];
-    if (i2 < 0) {
-      tmpAttrs.push(["class", options.langPrefix + langName]);
-    } else {
-      tmpAttrs[i2] = tmpAttrs[i2].slice();
-      tmpAttrs[i2][1] += " " + options.langPrefix + langName;
-    }
-    const tmpToken = {
-      attrs: tmpAttrs
-    };
-    return `<pre><code${slf.renderAttrs(tmpToken)}>${highlighted}</code></pre>
-`;
-  }
-  return `<pre><code${slf.renderAttrs(token)}>${highlighted}</code></pre>
-`;
-};
-default_rules.image = function(tokens, idx, options, env, slf) {
-  const token = tokens[idx];
-  token.attrs[token.attrIndex("alt")][1] = slf.renderInlineAsText(token.children, options, env);
-  return slf.renderToken(tokens, idx, options);
-};
-default_rules.hardbreak = function(tokens, idx, options) {
-  return options.xhtmlOut ? "<br />\n" : "<br>\n";
-};
-default_rules.softbreak = function(tokens, idx, options) {
-  return options.breaks ? options.xhtmlOut ? "<br />\n" : "<br>\n" : "\n";
-};
-default_rules.text = function(tokens, idx) {
-  return escapeHtml(tokens[idx].content);
-};
-default_rules.html_block = function(tokens, idx) {
-  return tokens[idx].content;
-};
-default_rules.html_inline = function(tokens, idx) {
-  return tokens[idx].content;
-};
-function Renderer() {
-  this.rules = assign$1({}, default_rules);
-}
-Renderer.prototype.renderAttrs = function renderAttrs(token) {
-  let i2, l2, result;
-  if (!token.attrs) {
-    return "";
-  }
-  result = "";
-  for (i2 = 0, l2 = token.attrs.length; i2 < l2; i2++) {
-    result += " " + escapeHtml(token.attrs[i2][0]) + '="' + escapeHtml(token.attrs[i2][1]) + '"';
-  }
-  return result;
-};
-Renderer.prototype.renderToken = function renderToken(tokens, idx, options) {
-  const token = tokens[idx];
-  let result = "";
-  if (token.hidden) {
-    return "";
-  }
-  if (token.block && token.nesting !== -1 && idx && tokens[idx - 1].hidden) {
-    result += "\n";
-  }
-  result += (token.nesting === -1 ? "</" : "<") + token.tag;
-  result += this.renderAttrs(token);
-  if (token.nesting === 0 && options.xhtmlOut) {
-    result += " /";
-  }
-  let needLf = false;
-  if (token.block) {
-    needLf = true;
-    if (token.nesting === 1) {
-      if (idx + 1 < tokens.length) {
-        const nextToken = tokens[idx + 1];
-        if (nextToken.type === "inline" || nextToken.hidden) {
-          needLf = false;
-        } else if (nextToken.nesting === -1 && nextToken.tag === token.tag) {
-          needLf = false;
-        }
-      }
-    }
-  }
-  result += needLf ? ">\n" : ">";
-  return result;
-};
-Renderer.prototype.renderInline = function(tokens, options, env) {
-  let result = "";
-  const rules = this.rules;
-  for (let i2 = 0, len = tokens.length; i2 < len; i2++) {
-    const type = tokens[i2].type;
-    if (typeof rules[type] !== "undefined") {
-      result += rules[type](tokens, i2, options, env, this);
-    } else {
-      result += this.renderToken(tokens, i2, options);
-    }
-  }
-  return result;
-};
-Renderer.prototype.renderInlineAsText = function(tokens, options, env) {
-  let result = "";
-  for (let i2 = 0, len = tokens.length; i2 < len; i2++) {
-    switch (tokens[i2].type) {
-      case "text":
-        result += tokens[i2].content;
-        break;
-      case "image":
-        result += this.renderInlineAsText(tokens[i2].children, options, env);
-        break;
-      case "html_inline":
-      case "html_block":
-        result += tokens[i2].content;
-        break;
-      case "softbreak":
-      case "hardbreak":
-        result += "\n";
-        break;
-    }
-  }
-  return result;
-};
-Renderer.prototype.render = function(tokens, options, env) {
-  let result = "";
-  const rules = this.rules;
-  for (let i2 = 0, len = tokens.length; i2 < len; i2++) {
-    const type = tokens[i2].type;
-    if (type === "inline") {
-      result += this.renderInline(tokens[i2].children, options, env);
-    } else if (typeof rules[type] !== "undefined") {
-      result += rules[type](tokens, i2, options, env, this);
-    } else {
-      result += this.renderToken(tokens, i2, options, env);
-    }
-  }
-  return result;
-};
-function Ruler() {
-  this.__rules__ = [];
-  this.__cache__ = null;
-}
-Ruler.prototype.__find__ = function(name) {
-  for (let i2 = 0; i2 < this.__rules__.length; i2++) {
-    if (this.__rules__[i2].name === name) {
-      return i2;
-    }
-  }
-  return -1;
-};
-Ruler.prototype.__compile__ = function() {
-  const self2 = this;
-  const chains = [""];
-  self2.__rules__.forEach(function(rule) {
-    if (!rule.enabled) {
-      return;
-    }
-    rule.alt.forEach(function(altName) {
-      if (chains.indexOf(altName) < 0) {
-        chains.push(altName);
-      }
-    });
-  });
-  self2.__cache__ = {};
-  chains.forEach(function(chain) {
-    self2.__cache__[chain] = [];
-    self2.__rules__.forEach(function(rule) {
-      if (!rule.enabled) {
-        return;
-      }
-      if (chain && rule.alt.indexOf(chain) < 0) {
-        return;
-      }
-      self2.__cache__[chain].push(rule.fn);
-    });
-  });
-};
-Ruler.prototype.at = function(name, fn, options) {
-  const index = this.__find__(name);
-  const opt = options || {};
-  if (index === -1) {
-    throw new Error("Parser rule not found: " + name);
-  }
-  this.__rules__[index].fn = fn;
-  this.__rules__[index].alt = opt.alt || [];
-  this.__cache__ = null;
-};
-Ruler.prototype.before = function(beforeName, ruleName, fn, options) {
-  const index = this.__find__(beforeName);
-  const opt = options || {};
-  if (index === -1) {
-    throw new Error("Parser rule not found: " + beforeName);
-  }
-  this.__rules__.splice(index, 0, {
-    name: ruleName,
-    enabled: true,
-    fn,
-    alt: opt.alt || []
-  });
-  this.__cache__ = null;
-};
-Ruler.prototype.after = function(afterName, ruleName, fn, options) {
-  const index = this.__find__(afterName);
-  const opt = options || {};
-  if (index === -1) {
-    throw new Error("Parser rule not found: " + afterName);
-  }
-  this.__rules__.splice(index + 1, 0, {
-    name: ruleName,
-    enabled: true,
-    fn,
-    alt: opt.alt || []
-  });
-  this.__cache__ = null;
-};
-Ruler.prototype.push = function(ruleName, fn, options) {
-  const opt = options || {};
-  this.__rules__.push({
-    name: ruleName,
-    enabled: true,
-    fn,
-    alt: opt.alt || []
-  });
-  this.__cache__ = null;
-};
-Ruler.prototype.enable = function(list2, ignoreInvalid) {
-  if (!Array.isArray(list2)) {
-    list2 = [list2];
-  }
-  const result = [];
-  list2.forEach(function(name) {
-    const idx = this.__find__(name);
-    if (idx < 0) {
-      if (ignoreInvalid) {
-        return;
-      }
-      throw new Error("Rules manager: invalid rule name " + name);
-    }
-    this.__rules__[idx].enabled = true;
-    result.push(name);
-  }, this);
-  this.__cache__ = null;
-  return result;
-};
-Ruler.prototype.enableOnly = function(list2, ignoreInvalid) {
-  if (!Array.isArray(list2)) {
-    list2 = [list2];
-  }
-  this.__rules__.forEach(function(rule) {
-    rule.enabled = false;
-  });
-  this.enable(list2, ignoreInvalid);
-};
-Ruler.prototype.disable = function(list2, ignoreInvalid) {
-  if (!Array.isArray(list2)) {
-    list2 = [list2];
-  }
-  const result = [];
-  list2.forEach(function(name) {
-    const idx = this.__find__(name);
-    if (idx < 0) {
-      if (ignoreInvalid) {
-        return;
-      }
-      throw new Error("Rules manager: invalid rule name " + name);
-    }
-    this.__rules__[idx].enabled = false;
-    result.push(name);
-  }, this);
-  this.__cache__ = null;
-  return result;
-};
-Ruler.prototype.getRules = function(chainName) {
-  if (this.__cache__ === null) {
-    this.__compile__();
-  }
-  return this.__cache__[chainName] || [];
-};
-function Token(type, tag, nesting) {
-  this.type = type;
-  this.tag = tag;
-  this.attrs = null;
-  this.map = null;
-  this.nesting = nesting;
-  this.level = 0;
-  this.children = null;
-  this.content = "";
-  this.markup = "";
-  this.info = "";
-  this.meta = null;
-  this.block = false;
-  this.hidden = false;
-}
-Token.prototype.attrIndex = function attrIndex(name) {
-  if (!this.attrs) {
-    return -1;
-  }
-  const attrs3 = this.attrs;
-  for (let i2 = 0, len = attrs3.length; i2 < len; i2++) {
-    if (attrs3[i2][0] === name) {
-      return i2;
-    }
-  }
-  return -1;
-};
-Token.prototype.attrPush = function attrPush(attrData) {
-  if (this.attrs) {
-    this.attrs.push(attrData);
-  } else {
-    this.attrs = [attrData];
-  }
-};
-Token.prototype.attrSet = function attrSet(name, value) {
-  const idx = this.attrIndex(name);
-  const attrData = [name, value];
-  if (idx < 0) {
-    this.attrPush(attrData);
-  } else {
-    this.attrs[idx] = attrData;
-  }
-};
-Token.prototype.attrGet = function attrGet(name) {
-  const idx = this.attrIndex(name);
-  let value = null;
-  if (idx >= 0) {
-    value = this.attrs[idx][1];
-  }
-  return value;
-};
-Token.prototype.attrJoin = function attrJoin(name, value) {
-  const idx = this.attrIndex(name);
-  if (idx < 0) {
-    this.attrPush([name, value]);
-  } else {
-    this.attrs[idx][1] = this.attrs[idx][1] + " " + value;
-  }
-};
-function StateCore(src, md, env) {
-  this.src = src;
-  this.env = env;
-  this.tokens = [];
-  this.inlineMode = false;
-  this.md = md;
-}
-StateCore.prototype.Token = Token;
-const NEWLINES_RE = /\r\n?|\n/g;
-const NULL_RE = /\0/g;
-function normalize(state) {
-  let str;
-  str = state.src.replace(NEWLINES_RE, "\n");
-  str = str.replace(NULL_RE, "�");
-  state.src = str;
-}
-function block(state) {
-  let token;
-  if (state.inlineMode) {
-    token = new state.Token("inline", "", 0);
-    token.content = state.src;
-    token.map = [0, 1];
-    token.children = [];
-    state.tokens.push(token);
-  } else {
-    state.md.block.parse(state.src, state.md, state.env, state.tokens);
-  }
-}
-function inline2(state) {
-  const tokens = state.tokens;
-  for (let i2 = 0, l2 = tokens.length; i2 < l2; i2++) {
-    const tok = tokens[i2];
-    if (tok.type === "inline") {
-      state.md.inline.parse(tok.content, state.md, state.env, tok.children);
-    }
-  }
-}
-function isLinkOpen$1(str) {
-  return /^<a[>\s]/i.test(str);
-}
-function isLinkClose$1(str) {
-  return /^<\/a\s*>/i.test(str);
-}
-function linkify$1(state) {
-  const blockTokens = state.tokens;
-  if (!state.md.options.linkify) {
-    return;
-  }
-  for (let j = 0, l2 = blockTokens.length; j < l2; j++) {
-    if (blockTokens[j].type !== "inline" || !state.md.linkify.pretest(blockTokens[j].content)) {
-      continue;
-    }
-    let tokens = blockTokens[j].children;
-    let htmlLinkLevel = 0;
-    for (let i2 = tokens.length - 1; i2 >= 0; i2--) {
-      const currentToken = tokens[i2];
-      if (currentToken.type === "link_close") {
-        i2--;
-        while (tokens[i2].level !== currentToken.level && tokens[i2].type !== "link_open") {
-          i2--;
-        }
-        continue;
-      }
-      if (currentToken.type === "html_inline") {
-        if (isLinkOpen$1(currentToken.content) && htmlLinkLevel > 0) {
-          htmlLinkLevel--;
-        }
-        if (isLinkClose$1(currentToken.content)) {
-          htmlLinkLevel++;
-        }
-      }
-      if (htmlLinkLevel > 0) {
-        continue;
-      }
-      if (currentToken.type === "text" && state.md.linkify.test(currentToken.content)) {
-        const text2 = currentToken.content;
-        let links = state.md.linkify.match(text2);
-        const nodes = [];
-        let level = currentToken.level;
-        let lastPos = 0;
-        if (links.length > 0 && links[0].index === 0 && i2 > 0 && tokens[i2 - 1].type === "text_special") {
-          links = links.slice(1);
-        }
-        for (let ln = 0; ln < links.length; ln++) {
-          const url = links[ln].url;
-          const fullUrl = state.md.normalizeLink(url);
-          if (!state.md.validateLink(fullUrl)) {
-            continue;
-          }
-          let urlText = links[ln].text;
-          if (!links[ln].schema) {
-            urlText = state.md.normalizeLinkText("http://" + urlText).replace(/^http:\/\//, "");
-          } else if (links[ln].schema === "mailto:" && !/^mailto:/i.test(urlText)) {
-            urlText = state.md.normalizeLinkText("mailto:" + urlText).replace(/^mailto:/, "");
-          } else {
-            urlText = state.md.normalizeLinkText(urlText);
-          }
-          const pos = links[ln].index;
-          if (pos > lastPos) {
-            const token = new state.Token("text", "", 0);
-            token.content = text2.slice(lastPos, pos);
-            token.level = level;
-            nodes.push(token);
-          }
-          const token_o = new state.Token("link_open", "a", 1);
-          token_o.attrs = [["href", fullUrl]];
-          token_o.level = level++;
-          token_o.markup = "linkify";
-          token_o.info = "auto";
-          nodes.push(token_o);
-          const token_t = new state.Token("text", "", 0);
-          token_t.content = urlText;
-          token_t.level = level;
-          nodes.push(token_t);
-          const token_c = new state.Token("link_close", "a", -1);
-          token_c.level = --level;
-          token_c.markup = "linkify";
-          token_c.info = "auto";
-          nodes.push(token_c);
-          lastPos = links[ln].lastIndex;
-        }
-        if (lastPos < text2.length) {
-          const token = new state.Token("text", "", 0);
-          token.content = text2.slice(lastPos);
-          token.level = level;
-          nodes.push(token);
-        }
-        blockTokens[j].children = tokens = arrayReplaceAt(tokens, i2, nodes);
-      }
-    }
-  }
-}
-const RARE_RE = /\+-|\.\.|\?\?\?\?|!!!!|,,|--/;
-const SCOPED_ABBR_TEST_RE = /\((c|tm|r)\)/i;
-const SCOPED_ABBR_RE = /\((c|tm|r)\)/ig;
-const SCOPED_ABBR = {
-  c: "©",
-  r: "®",
-  tm: "™"
-};
-function replaceFn(match2, name) {
-  return SCOPED_ABBR[name.toLowerCase()];
-}
-function replace_scoped(inlineTokens) {
-  let inside_autolink = 0;
-  for (let i2 = inlineTokens.length - 1; i2 >= 0; i2--) {
-    const token = inlineTokens[i2];
-    if (token.type === "text" && !inside_autolink) {
-      token.content = token.content.replace(SCOPED_ABBR_RE, replaceFn);
-    }
-    if (token.type === "link_open" && token.info === "auto") {
-      inside_autolink--;
-    }
-    if (token.type === "link_close" && token.info === "auto") {
-      inside_autolink++;
-    }
-  }
-}
-function replace_rare(inlineTokens) {
-  let inside_autolink = 0;
-  for (let i2 = inlineTokens.length - 1; i2 >= 0; i2--) {
-    const token = inlineTokens[i2];
-    if (token.type === "text" && !inside_autolink) {
-      if (RARE_RE.test(token.content)) {
-        token.content = token.content.replace(/\+-/g, "±").replace(/\.{2,}/g, "…").replace(/([?!])…/g, "$1..").replace(/([?!]){4,}/g, "$1$1$1").replace(/,{2,}/g, ",").replace(/(^|[^-])---(?=[^-]|$)/mg, "$1—").replace(/(^|\s)--(?=\s|$)/mg, "$1–").replace(/(^|[^-\s])--(?=[^-\s]|$)/mg, "$1–");
-      }
-    }
-    if (token.type === "link_open" && token.info === "auto") {
-      inside_autolink--;
-    }
-    if (token.type === "link_close" && token.info === "auto") {
-      inside_autolink++;
-    }
-  }
-}
-function replace(state) {
-  let blkIdx;
-  if (!state.md.options.typographer) {
-    return;
-  }
-  for (blkIdx = state.tokens.length - 1; blkIdx >= 0; blkIdx--) {
-    if (state.tokens[blkIdx].type !== "inline") {
-      continue;
-    }
-    if (SCOPED_ABBR_TEST_RE.test(state.tokens[blkIdx].content)) {
-      replace_scoped(state.tokens[blkIdx].children);
-    }
-    if (RARE_RE.test(state.tokens[blkIdx].content)) {
-      replace_rare(state.tokens[blkIdx].children);
-    }
-  }
-}
-const QUOTE_TEST_RE = /['"]/;
-const QUOTE_RE = /['"]/g;
-const APOSTROPHE = "’";
-function replaceAt(str, index, ch) {
-  return str.slice(0, index) + ch + str.slice(index + 1);
-}
-function process_inlines(tokens, state) {
-  let j;
-  const stack2 = [];
-  for (let i2 = 0; i2 < tokens.length; i2++) {
-    const token = tokens[i2];
-    const thisLevel = tokens[i2].level;
-    for (j = stack2.length - 1; j >= 0; j--) {
-      if (stack2[j].level <= thisLevel) {
-        break;
-      }
-    }
-    stack2.length = j + 1;
-    if (token.type !== "text") {
-      continue;
-    }
-    let text2 = token.content;
-    let pos = 0;
-    let max = text2.length;
-    OUTER:
-      while (pos < max) {
-        QUOTE_RE.lastIndex = pos;
-        const t2 = QUOTE_RE.exec(text2);
-        if (!t2) {
-          break;
-        }
-        let canOpen = true;
-        let canClose = true;
-        pos = t2.index + 1;
-        const isSingle = t2[0] === "'";
-        let lastChar = 32;
-        if (t2.index - 1 >= 0) {
-          lastChar = text2.charCodeAt(t2.index - 1);
-        } else {
-          for (j = i2 - 1; j >= 0; j--) {
-            if (tokens[j].type === "softbreak" || tokens[j].type === "hardbreak") break;
-            if (!tokens[j].content) continue;
-            lastChar = tokens[j].content.charCodeAt(tokens[j].content.length - 1);
-            break;
-          }
-        }
-        let nextChar = 32;
-        if (pos < max) {
-          nextChar = text2.charCodeAt(pos);
-        } else {
-          for (j = i2 + 1; j < tokens.length; j++) {
-            if (tokens[j].type === "softbreak" || tokens[j].type === "hardbreak") break;
-            if (!tokens[j].content) continue;
-            nextChar = tokens[j].content.charCodeAt(0);
-            break;
-          }
-        }
-        const isLastPunctChar = isMdAsciiPunct(lastChar) || isPunctChar(String.fromCharCode(lastChar));
-        const isNextPunctChar = isMdAsciiPunct(nextChar) || isPunctChar(String.fromCharCode(nextChar));
-        const isLastWhiteSpace = isWhiteSpace(lastChar);
-        const isNextWhiteSpace = isWhiteSpace(nextChar);
-        if (isNextWhiteSpace) {
-          canOpen = false;
-        } else if (isNextPunctChar) {
-          if (!(isLastWhiteSpace || isLastPunctChar)) {
-            canOpen = false;
-          }
-        }
-        if (isLastWhiteSpace) {
-          canClose = false;
-        } else if (isLastPunctChar) {
-          if (!(isNextWhiteSpace || isNextPunctChar)) {
-            canClose = false;
-          }
-        }
-        if (nextChar === 34 && t2[0] === '"') {
-          if (lastChar >= 48 && lastChar <= 57) {
-            canClose = canOpen = false;
-          }
-        }
-        if (canOpen && canClose) {
-          canOpen = isLastPunctChar;
-          canClose = isNextPunctChar;
-        }
-        if (!canOpen && !canClose) {
-          if (isSingle) {
-            token.content = replaceAt(token.content, t2.index, APOSTROPHE);
-          }
-          continue;
-        }
-        if (canClose) {
-          for (j = stack2.length - 1; j >= 0; j--) {
-            let item = stack2[j];
-            if (stack2[j].level < thisLevel) {
-              break;
-            }
-            if (item.single === isSingle && stack2[j].level === thisLevel) {
-              item = stack2[j];
-              let openQuote;
-              let closeQuote;
-              if (isSingle) {
-                openQuote = state.md.options.quotes[2];
-                closeQuote = state.md.options.quotes[3];
-              } else {
-                openQuote = state.md.options.quotes[0];
-                closeQuote = state.md.options.quotes[1];
-              }
-              token.content = replaceAt(token.content, t2.index, closeQuote);
-              tokens[item.token].content = replaceAt(
-                tokens[item.token].content,
-                item.pos,
-                openQuote
-              );
-              pos += closeQuote.length - 1;
-              if (item.token === i2) {
-                pos += openQuote.length - 1;
-              }
-              text2 = token.content;
-              max = text2.length;
-              stack2.length = j;
-              continue OUTER;
-            }
-          }
-        }
-        if (canOpen) {
-          stack2.push({
-            token: i2,
-            pos: t2.index,
-            single: isSingle,
-            level: thisLevel
-          });
-        } else if (canClose && isSingle) {
-          token.content = replaceAt(token.content, t2.index, APOSTROPHE);
-        }
-      }
-  }
-}
-function smartquotes(state) {
-  if (!state.md.options.typographer) {
-    return;
-  }
-  for (let blkIdx = state.tokens.length - 1; blkIdx >= 0; blkIdx--) {
-    if (state.tokens[blkIdx].type !== "inline" || !QUOTE_TEST_RE.test(state.tokens[blkIdx].content)) {
-      continue;
-    }
-    process_inlines(state.tokens[blkIdx].children, state);
-  }
-}
-function text_join(state) {
-  let curr, last;
-  const blockTokens = state.tokens;
-  const l2 = blockTokens.length;
-  for (let j = 0; j < l2; j++) {
-    if (blockTokens[j].type !== "inline") continue;
-    const tokens = blockTokens[j].children;
-    const max = tokens.length;
-    for (curr = 0; curr < max; curr++) {
-      if (tokens[curr].type === "text_special") {
-        tokens[curr].type = "text";
-      }
-    }
-    for (curr = last = 0; curr < max; curr++) {
-      if (tokens[curr].type === "text" && curr + 1 < max && tokens[curr + 1].type === "text") {
-        tokens[curr + 1].content = tokens[curr].content + tokens[curr + 1].content;
-      } else {
-        if (curr !== last) {
-          tokens[last] = tokens[curr];
-        }
-        last++;
-      }
-    }
-    if (curr !== last) {
-      tokens.length = last;
-    }
-  }
-}
-const _rules$2 = [
-  ["normalize", normalize],
-  ["block", block],
-  ["inline", inline2],
-  ["linkify", linkify$1],
-  ["replacements", replace],
-  ["smartquotes", smartquotes],
-  // `text_join` finds `text_special` tokens (for escape sequences)
-  // and joins them with the rest of the text
-  ["text_join", text_join]
-];
-function Core() {
-  this.ruler = new Ruler();
-  for (let i2 = 0; i2 < _rules$2.length; i2++) {
-    this.ruler.push(_rules$2[i2][0], _rules$2[i2][1]);
-  }
-}
-Core.prototype.process = function(state) {
-  const rules = this.ruler.getRules("");
-  for (let i2 = 0, l2 = rules.length; i2 < l2; i2++) {
-    rules[i2](state);
-  }
-};
-Core.prototype.State = StateCore;
-function StateBlock(src, md, env, tokens) {
-  this.src = src;
-  this.md = md;
-  this.env = env;
-  this.tokens = tokens;
-  this.bMarks = [];
-  this.eMarks = [];
-  this.tShift = [];
-  this.sCount = [];
-  this.bsCount = [];
-  this.blkIndent = 0;
-  this.line = 0;
-  this.lineMax = 0;
-  this.tight = false;
-  this.ddIndent = -1;
-  this.listIndent = -1;
-  this.parentType = "root";
-  this.level = 0;
-  const s2 = this.src;
-  for (let start = 0, pos = 0, indent = 0, offset = 0, len = s2.length, indent_found = false; pos < len; pos++) {
-    const ch = s2.charCodeAt(pos);
-    if (!indent_found) {
-      if (isSpace(ch)) {
-        indent++;
-        if (ch === 9) {
-          offset += 4 - offset % 4;
-        } else {
-          offset++;
-        }
-        continue;
-      } else {
-        indent_found = true;
-      }
-    }
-    if (ch === 10 || pos === len - 1) {
-      if (ch !== 10) {
-        pos++;
-      }
-      this.bMarks.push(start);
-      this.eMarks.push(pos);
-      this.tShift.push(indent);
-      this.sCount.push(offset);
-      this.bsCount.push(0);
-      indent_found = false;
-      indent = 0;
-      offset = 0;
-      start = pos + 1;
-    }
-  }
-  this.bMarks.push(s2.length);
-  this.eMarks.push(s2.length);
-  this.tShift.push(0);
-  this.sCount.push(0);
-  this.bsCount.push(0);
-  this.lineMax = this.bMarks.length - 1;
-}
-StateBlock.prototype.push = function(type, tag, nesting) {
-  const token = new Token(type, tag, nesting);
-  token.block = true;
-  if (nesting < 0) this.level--;
-  token.level = this.level;
-  if (nesting > 0) this.level++;
-  this.tokens.push(token);
-  return token;
-};
-StateBlock.prototype.isEmpty = function isEmpty2(line) {
-  return this.bMarks[line] + this.tShift[line] >= this.eMarks[line];
-};
-StateBlock.prototype.skipEmptyLines = function skipEmptyLines(from) {
-  for (let max = this.lineMax; from < max; from++) {
-    if (this.bMarks[from] + this.tShift[from] < this.eMarks[from]) {
-      break;
-    }
-  }
-  return from;
-};
-StateBlock.prototype.skipSpaces = function skipSpaces(pos) {
-  for (let max = this.src.length; pos < max; pos++) {
-    const ch = this.src.charCodeAt(pos);
-    if (!isSpace(ch)) {
-      break;
-    }
-  }
-  return pos;
-};
-StateBlock.prototype.skipSpacesBack = function skipSpacesBack(pos, min) {
-  if (pos <= min) {
-    return pos;
-  }
-  while (pos > min) {
-    if (!isSpace(this.src.charCodeAt(--pos))) {
-      return pos + 1;
-    }
-  }
-  return pos;
-};
-StateBlock.prototype.skipChars = function skipChars(pos, code2) {
-  for (let max = this.src.length; pos < max; pos++) {
-    if (this.src.charCodeAt(pos) !== code2) {
-      break;
-    }
-  }
-  return pos;
-};
-StateBlock.prototype.skipCharsBack = function skipCharsBack(pos, code2, min) {
-  if (pos <= min) {
-    return pos;
-  }
-  while (pos > min) {
-    if (code2 !== this.src.charCodeAt(--pos)) {
-      return pos + 1;
-    }
-  }
-  return pos;
-};
-StateBlock.prototype.getLines = function getLines(begin, end, indent, keepLastLF) {
-  if (begin >= end) {
-    return "";
-  }
-  const queue2 = new Array(end - begin);
-  for (let i2 = 0, line = begin; line < end; line++, i2++) {
-    let lineIndent = 0;
-    const lineStart = this.bMarks[line];
-    let first = lineStart;
-    let last;
-    if (line + 1 < end || keepLastLF) {
-      last = this.eMarks[line] + 1;
-    } else {
-      last = this.eMarks[line];
-    }
-    while (first < last && lineIndent < indent) {
-      const ch = this.src.charCodeAt(first);
-      if (isSpace(ch)) {
-        if (ch === 9) {
-          lineIndent += 4 - (lineIndent + this.bsCount[line]) % 4;
-        } else {
-          lineIndent++;
-        }
-      } else if (first - lineStart < this.tShift[line]) {
-        lineIndent++;
-      } else {
-        break;
-      }
-      first++;
-    }
-    if (lineIndent > indent) {
-      queue2[i2] = new Array(lineIndent - indent + 1).join(" ") + this.src.slice(first, last);
-    } else {
-      queue2[i2] = this.src.slice(first, last);
-    }
-  }
-  return queue2.join("");
-};
-StateBlock.prototype.Token = Token;
-const MAX_AUTOCOMPLETED_CELLS = 65536;
-function getLine(state, line) {
-  const pos = state.bMarks[line] + state.tShift[line];
-  const max = state.eMarks[line];
-  return state.src.slice(pos, max);
-}
-function escapedSplit(str) {
-  const result = [];
-  const max = str.length;
-  let pos = 0;
-  let ch = str.charCodeAt(pos);
-  let isEscaped = false;
-  let lastPos = 0;
-  let current = "";
-  while (pos < max) {
-    if (ch === 124) {
-      if (!isEscaped) {
-        result.push(current + str.substring(lastPos, pos));
-        current = "";
-        lastPos = pos + 1;
-      } else {
-        current += str.substring(lastPos, pos - 1);
-        lastPos = pos;
-      }
-    }
-    isEscaped = ch === 92;
-    pos++;
-    ch = str.charCodeAt(pos);
-  }
-  result.push(current + str.substring(lastPos));
-  return result;
-}
-function table(state, startLine, endLine, silent) {
-  if (startLine + 2 > endLine) {
-    return false;
-  }
-  let nextLine = startLine + 1;
-  if (state.sCount[nextLine] < state.blkIndent) {
-    return false;
-  }
-  if (state.sCount[nextLine] - state.blkIndent >= 4) {
-    return false;
-  }
-  let pos = state.bMarks[nextLine] + state.tShift[nextLine];
-  if (pos >= state.eMarks[nextLine]) {
-    return false;
-  }
-  const firstCh = state.src.charCodeAt(pos++);
-  if (firstCh !== 124 && firstCh !== 45 && firstCh !== 58) {
-    return false;
-  }
-  if (pos >= state.eMarks[nextLine]) {
-    return false;
-  }
-  const secondCh = state.src.charCodeAt(pos++);
-  if (secondCh !== 124 && secondCh !== 45 && secondCh !== 58 && !isSpace(secondCh)) {
-    return false;
-  }
-  if (firstCh === 45 && isSpace(secondCh)) {
-    return false;
-  }
-  while (pos < state.eMarks[nextLine]) {
-    const ch = state.src.charCodeAt(pos);
-    if (ch !== 124 && ch !== 45 && ch !== 58 && !isSpace(ch)) {
-      return false;
-    }
-    pos++;
-  }
-  let lineText = getLine(state, startLine + 1);
-  let columns = lineText.split("|");
-  const aligns = [];
-  for (let i2 = 0; i2 < columns.length; i2++) {
-    const t2 = columns[i2].trim();
-    if (!t2) {
-      if (i2 === 0 || i2 === columns.length - 1) {
-        continue;
-      } else {
-        return false;
-      }
-    }
-    if (!/^:?-+:?$/.test(t2)) {
-      return false;
-    }
-    if (t2.charCodeAt(t2.length - 1) === 58) {
-      aligns.push(t2.charCodeAt(0) === 58 ? "center" : "right");
-    } else if (t2.charCodeAt(0) === 58) {
-      aligns.push("left");
-    } else {
-      aligns.push("");
-    }
-  }
-  lineText = getLine(state, startLine).trim();
-  if (lineText.indexOf("|") === -1) {
-    return false;
-  }
-  if (state.sCount[startLine] - state.blkIndent >= 4) {
-    return false;
-  }
-  columns = escapedSplit(lineText);
-  if (columns.length && columns[0] === "") columns.shift();
-  if (columns.length && columns[columns.length - 1] === "") columns.pop();
-  const columnCount = columns.length;
-  if (columnCount === 0 || columnCount !== aligns.length) {
-    return false;
-  }
-  if (silent) {
-    return true;
-  }
-  const oldParentType = state.parentType;
-  state.parentType = "table";
-  const terminatorRules = state.md.block.ruler.getRules("blockquote");
-  const token_to = state.push("table_open", "table", 1);
-  const tableLines = [startLine, 0];
-  token_to.map = tableLines;
-  const token_tho = state.push("thead_open", "thead", 1);
-  token_tho.map = [startLine, startLine + 1];
-  const token_htro = state.push("tr_open", "tr", 1);
-  token_htro.map = [startLine, startLine + 1];
-  for (let i2 = 0; i2 < columns.length; i2++) {
-    const token_ho = state.push("th_open", "th", 1);
-    if (aligns[i2]) {
-      token_ho.attrs = [["style", "text-align:" + aligns[i2]]];
-    }
-    const token_il = state.push("inline", "", 0);
-    token_il.content = columns[i2].trim();
-    token_il.children = [];
-    state.push("th_close", "th", -1);
-  }
-  state.push("tr_close", "tr", -1);
-  state.push("thead_close", "thead", -1);
-  let tbodyLines;
-  let autocompletedCells = 0;
-  for (nextLine = startLine + 2; nextLine < endLine; nextLine++) {
-    if (state.sCount[nextLine] < state.blkIndent) {
-      break;
-    }
-    let terminate = false;
-    for (let i2 = 0, l2 = terminatorRules.length; i2 < l2; i2++) {
-      if (terminatorRules[i2](state, nextLine, endLine, true)) {
-        terminate = true;
-        break;
-      }
-    }
-    if (terminate) {
-      break;
-    }
-    lineText = getLine(state, nextLine).trim();
-    if (!lineText) {
-      break;
-    }
-    if (state.sCount[nextLine] - state.blkIndent >= 4) {
-      break;
-    }
-    columns = escapedSplit(lineText);
-    if (columns.length && columns[0] === "") columns.shift();
-    if (columns.length && columns[columns.length - 1] === "") columns.pop();
-    autocompletedCells += columnCount - columns.length;
-    if (autocompletedCells > MAX_AUTOCOMPLETED_CELLS) {
-      break;
-    }
-    if (nextLine === startLine + 2) {
-      const token_tbo = state.push("tbody_open", "tbody", 1);
-      token_tbo.map = tbodyLines = [startLine + 2, 0];
-    }
-    const token_tro = state.push("tr_open", "tr", 1);
-    token_tro.map = [nextLine, nextLine + 1];
-    for (let i2 = 0; i2 < columnCount; i2++) {
-      const token_tdo = state.push("td_open", "td", 1);
-      if (aligns[i2]) {
-        token_tdo.attrs = [["style", "text-align:" + aligns[i2]]];
-      }
-      const token_il = state.push("inline", "", 0);
-      token_il.content = columns[i2] ? columns[i2].trim() : "";
-      token_il.children = [];
-      state.push("td_close", "td", -1);
-    }
-    state.push("tr_close", "tr", -1);
-  }
-  if (tbodyLines) {
-    state.push("tbody_close", "tbody", -1);
-    tbodyLines[1] = nextLine;
-  }
-  state.push("table_close", "table", -1);
-  tableLines[1] = nextLine;
-  state.parentType = oldParentType;
-  state.line = nextLine;
-  return true;
-}
-function code(state, startLine, endLine) {
-  if (state.sCount[startLine] - state.blkIndent < 4) {
-    return false;
-  }
-  let nextLine = startLine + 1;
-  let last = nextLine;
-  while (nextLine < endLine) {
-    if (state.isEmpty(nextLine)) {
-      nextLine++;
-      continue;
-    }
-    if (state.sCount[nextLine] - state.blkIndent >= 4) {
-      nextLine++;
-      last = nextLine;
-      continue;
-    }
-    break;
-  }
-  state.line = last;
-  const token = state.push("code_block", "code", 0);
-  token.content = state.getLines(startLine, last, 4 + state.blkIndent, false) + "\n";
-  token.map = [startLine, state.line];
-  return true;
-}
-function fence(state, startLine, endLine, silent) {
-  let pos = state.bMarks[startLine] + state.tShift[startLine];
-  let max = state.eMarks[startLine];
-  if (state.sCount[startLine] - state.blkIndent >= 4) {
-    return false;
-  }
-  if (pos + 3 > max) {
-    return false;
-  }
-  const marker = state.src.charCodeAt(pos);
-  if (marker !== 126 && marker !== 96) {
-    return false;
-  }
-  let mem = pos;
-  pos = state.skipChars(pos, marker);
-  let len = pos - mem;
-  if (len < 3) {
-    return false;
-  }
-  const markup = state.src.slice(mem, pos);
-  const params = state.src.slice(pos, max);
-  if (marker === 96) {
-    if (params.indexOf(String.fromCharCode(marker)) >= 0) {
-      return false;
-    }
-  }
-  if (silent) {
-    return true;
-  }
-  let nextLine = startLine;
-  let haveEndMarker = false;
-  for (; ; ) {
-    nextLine++;
-    if (nextLine >= endLine) {
-      break;
-    }
-    pos = mem = state.bMarks[nextLine] + state.tShift[nextLine];
-    max = state.eMarks[nextLine];
-    if (pos < max && state.sCount[nextLine] < state.blkIndent) {
-      break;
-    }
-    if (state.src.charCodeAt(pos) !== marker) {
-      continue;
-    }
-    if (state.sCount[nextLine] - state.blkIndent >= 4) {
-      continue;
-    }
-    pos = state.skipChars(pos, marker);
-    if (pos - mem < len) {
-      continue;
-    }
-    pos = state.skipSpaces(pos);
-    if (pos < max) {
-      continue;
-    }
-    haveEndMarker = true;
-    break;
-  }
-  len = state.sCount[startLine];
-  state.line = nextLine + (haveEndMarker ? 1 : 0);
-  const token = state.push("fence", "code", 0);
-  token.info = params;
-  token.content = state.getLines(startLine + 1, nextLine, len, true);
-  token.markup = markup;
-  token.map = [startLine, state.line];
-  return true;
-}
-function blockquote(state, startLine, endLine, silent) {
-  let pos = state.bMarks[startLine] + state.tShift[startLine];
-  let max = state.eMarks[startLine];
-  const oldLineMax = state.lineMax;
-  if (state.sCount[startLine] - state.blkIndent >= 4) {
-    return false;
-  }
-  if (state.src.charCodeAt(pos) !== 62) {
-    return false;
-  }
-  if (silent) {
-    return true;
-  }
-  const oldBMarks = [];
-  const oldBSCount = [];
-  const oldSCount = [];
-  const oldTShift = [];
-  const terminatorRules = state.md.block.ruler.getRules("blockquote");
-  const oldParentType = state.parentType;
-  state.parentType = "blockquote";
-  let lastLineEmpty = false;
-  let nextLine;
-  for (nextLine = startLine; nextLine < endLine; nextLine++) {
-    const isOutdented = state.sCount[nextLine] < state.blkIndent;
-    pos = state.bMarks[nextLine] + state.tShift[nextLine];
-    max = state.eMarks[nextLine];
-    if (pos >= max) {
-      break;
-    }
-    if (state.src.charCodeAt(pos++) === 62 && !isOutdented) {
-      let initial = state.sCount[nextLine] + 1;
-      let spaceAfterMarker;
-      let adjustTab;
-      if (state.src.charCodeAt(pos) === 32) {
-        pos++;
-        initial++;
-        adjustTab = false;
-        spaceAfterMarker = true;
-      } else if (state.src.charCodeAt(pos) === 9) {
-        spaceAfterMarker = true;
-        if ((state.bsCount[nextLine] + initial) % 4 === 3) {
-          pos++;
-          initial++;
-          adjustTab = false;
-        } else {
-          adjustTab = true;
-        }
-      } else {
-        spaceAfterMarker = false;
-      }
-      let offset = initial;
-      oldBMarks.push(state.bMarks[nextLine]);
-      state.bMarks[nextLine] = pos;
-      while (pos < max) {
-        const ch = state.src.charCodeAt(pos);
-        if (isSpace(ch)) {
-          if (ch === 9) {
-            offset += 4 - (offset + state.bsCount[nextLine] + (adjustTab ? 1 : 0)) % 4;
-          } else {
-            offset++;
-          }
-        } else {
-          break;
-        }
-        pos++;
-      }
-      lastLineEmpty = pos >= max;
-      oldBSCount.push(state.bsCount[nextLine]);
-      state.bsCount[nextLine] = state.sCount[nextLine] + 1 + (spaceAfterMarker ? 1 : 0);
-      oldSCount.push(state.sCount[nextLine]);
-      state.sCount[nextLine] = offset - initial;
-      oldTShift.push(state.tShift[nextLine]);
-      state.tShift[nextLine] = pos - state.bMarks[nextLine];
-      continue;
-    }
-    if (lastLineEmpty) {
-      break;
-    }
-    let terminate = false;
-    for (let i2 = 0, l2 = terminatorRules.length; i2 < l2; i2++) {
-      if (terminatorRules[i2](state, nextLine, endLine, true)) {
-        terminate = true;
-        break;
-      }
-    }
-    if (terminate) {
-      state.lineMax = nextLine;
-      if (state.blkIndent !== 0) {
-        oldBMarks.push(state.bMarks[nextLine]);
-        oldBSCount.push(state.bsCount[nextLine]);
-        oldTShift.push(state.tShift[nextLine]);
-        oldSCount.push(state.sCount[nextLine]);
-        state.sCount[nextLine] -= state.blkIndent;
-      }
-      break;
-    }
-    oldBMarks.push(state.bMarks[nextLine]);
-    oldBSCount.push(state.bsCount[nextLine]);
-    oldTShift.push(state.tShift[nextLine]);
-    oldSCount.push(state.sCount[nextLine]);
-    state.sCount[nextLine] = -1;
-  }
-  const oldIndent = state.blkIndent;
-  state.blkIndent = 0;
-  const token_o = state.push("blockquote_open", "blockquote", 1);
-  token_o.markup = ">";
-  const lines = [startLine, 0];
-  token_o.map = lines;
-  state.md.block.tokenize(state, startLine, nextLine);
-  const token_c = state.push("blockquote_close", "blockquote", -1);
-  token_c.markup = ">";
-  state.lineMax = oldLineMax;
-  state.parentType = oldParentType;
-  lines[1] = state.line;
-  for (let i2 = 0; i2 < oldTShift.length; i2++) {
-    state.bMarks[i2 + startLine] = oldBMarks[i2];
-    state.tShift[i2 + startLine] = oldTShift[i2];
-    state.sCount[i2 + startLine] = oldSCount[i2];
-    state.bsCount[i2 + startLine] = oldBSCount[i2];
-  }
-  state.blkIndent = oldIndent;
-  return true;
-}
-function hr(state, startLine, endLine, silent) {
-  const max = state.eMarks[startLine];
-  if (state.sCount[startLine] - state.blkIndent >= 4) {
-    return false;
-  }
-  let pos = state.bMarks[startLine] + state.tShift[startLine];
-  const marker = state.src.charCodeAt(pos++);
-  if (marker !== 42 && marker !== 45 && marker !== 95) {
-    return false;
-  }
-  let cnt = 1;
-  while (pos < max) {
-    const ch = state.src.charCodeAt(pos++);
-    if (ch !== marker && !isSpace(ch)) {
-      return false;
-    }
-    if (ch === marker) {
-      cnt++;
-    }
-  }
-  if (cnt < 3) {
-    return false;
-  }
-  if (silent) {
-    return true;
-  }
-  state.line = startLine + 1;
-  const token = state.push("hr", "hr", 0);
-  token.map = [startLine, state.line];
-  token.markup = Array(cnt + 1).join(String.fromCharCode(marker));
-  return true;
-}
-function skipBulletListMarker(state, startLine) {
-  const max = state.eMarks[startLine];
-  let pos = state.bMarks[startLine] + state.tShift[startLine];
-  const marker = state.src.charCodeAt(pos++);
-  if (marker !== 42 && marker !== 45 && marker !== 43) {
-    return -1;
-  }
-  if (pos < max) {
-    const ch = state.src.charCodeAt(pos);
-    if (!isSpace(ch)) {
-      return -1;
-    }
-  }
-  return pos;
-}
-function skipOrderedListMarker(state, startLine) {
-  const start = state.bMarks[startLine] + state.tShift[startLine];
-  const max = state.eMarks[startLine];
-  let pos = start;
-  if (pos + 1 >= max) {
-    return -1;
-  }
-  let ch = state.src.charCodeAt(pos++);
-  if (ch < 48 || ch > 57) {
-    return -1;
-  }
-  for (; ; ) {
-    if (pos >= max) {
-      return -1;
-    }
-    ch = state.src.charCodeAt(pos++);
-    if (ch >= 48 && ch <= 57) {
-      if (pos - start >= 10) {
-        return -1;
-      }
-      continue;
-    }
-    if (ch === 41 || ch === 46) {
-      break;
-    }
-    return -1;
-  }
-  if (pos < max) {
-    ch = state.src.charCodeAt(pos);
-    if (!isSpace(ch)) {
-      return -1;
-    }
-  }
-  return pos;
-}
-function markTightParagraphs(state, idx) {
-  const level = state.level + 2;
-  for (let i2 = idx + 2, l2 = state.tokens.length - 2; i2 < l2; i2++) {
-    if (state.tokens[i2].level === level && state.tokens[i2].type === "paragraph_open") {
-      state.tokens[i2 + 2].hidden = true;
-      state.tokens[i2].hidden = true;
-      i2 += 2;
-    }
-  }
-}
-function list(state, startLine, endLine, silent) {
-  let max, pos, start, token;
-  let nextLine = startLine;
-  let tight = true;
-  if (state.sCount[nextLine] - state.blkIndent >= 4) {
-    return false;
-  }
-  if (state.listIndent >= 0 && state.sCount[nextLine] - state.listIndent >= 4 && state.sCount[nextLine] < state.blkIndent) {
-    return false;
-  }
-  let isTerminatingParagraph = false;
-  if (silent && state.parentType === "paragraph") {
-    if (state.sCount[nextLine] >= state.blkIndent) {
-      isTerminatingParagraph = true;
-    }
-  }
-  let isOrdered;
-  let markerValue;
-  let posAfterMarker;
-  if ((posAfterMarker = skipOrderedListMarker(state, nextLine)) >= 0) {
-    isOrdered = true;
-    start = state.bMarks[nextLine] + state.tShift[nextLine];
-    markerValue = Number(state.src.slice(start, posAfterMarker - 1));
-    if (isTerminatingParagraph && markerValue !== 1) return false;
-  } else if ((posAfterMarker = skipBulletListMarker(state, nextLine)) >= 0) {
-    isOrdered = false;
-  } else {
-    return false;
-  }
-  if (isTerminatingParagraph) {
-    if (state.skipSpaces(posAfterMarker) >= state.eMarks[nextLine]) return false;
-  }
-  if (silent) {
-    return true;
-  }
-  const markerCharCode = state.src.charCodeAt(posAfterMarker - 1);
-  const listTokIdx = state.tokens.length;
-  if (isOrdered) {
-    token = state.push("ordered_list_open", "ol", 1);
-    if (markerValue !== 1) {
-      token.attrs = [["start", markerValue]];
-    }
-  } else {
-    token = state.push("bullet_list_open", "ul", 1);
-  }
-  const listLines = [nextLine, 0];
-  token.map = listLines;
-  token.markup = String.fromCharCode(markerCharCode);
-  let prevEmptyEnd = false;
-  const terminatorRules = state.md.block.ruler.getRules("list");
-  const oldParentType = state.parentType;
-  state.parentType = "list";
-  while (nextLine < endLine) {
-    pos = posAfterMarker;
-    max = state.eMarks[nextLine];
-    const initial = state.sCount[nextLine] + posAfterMarker - (state.bMarks[nextLine] + state.tShift[nextLine]);
-    let offset = initial;
-    while (pos < max) {
-      const ch = state.src.charCodeAt(pos);
-      if (ch === 9) {
-        offset += 4 - (offset + state.bsCount[nextLine]) % 4;
-      } else if (ch === 32) {
-        offset++;
-      } else {
-        break;
-      }
-      pos++;
-    }
-    const contentStart = pos;
-    let indentAfterMarker;
-    if (contentStart >= max) {
-      indentAfterMarker = 1;
-    } else {
-      indentAfterMarker = offset - initial;
-    }
-    if (indentAfterMarker > 4) {
-      indentAfterMarker = 1;
-    }
-    const indent = initial + indentAfterMarker;
-    token = state.push("list_item_open", "li", 1);
-    token.markup = String.fromCharCode(markerCharCode);
-    const itemLines = [nextLine, 0];
-    token.map = itemLines;
-    if (isOrdered) {
-      token.info = state.src.slice(start, posAfterMarker - 1);
-    }
-    const oldTight = state.tight;
-    const oldTShift = state.tShift[nextLine];
-    const oldSCount = state.sCount[nextLine];
-    const oldListIndent = state.listIndent;
-    state.listIndent = state.blkIndent;
-    state.blkIndent = indent;
-    state.tight = true;
-    state.tShift[nextLine] = contentStart - state.bMarks[nextLine];
-    state.sCount[nextLine] = offset;
-    if (contentStart >= max && state.isEmpty(nextLine + 1)) {
-      state.line = Math.min(state.line + 2, endLine);
-    } else {
-      state.md.block.tokenize(state, nextLine, endLine, true);
-    }
-    if (!state.tight || prevEmptyEnd) {
-      tight = false;
-    }
-    prevEmptyEnd = state.line - nextLine > 1 && state.isEmpty(state.line - 1);
-    state.blkIndent = state.listIndent;
-    state.listIndent = oldListIndent;
-    state.tShift[nextLine] = oldTShift;
-    state.sCount[nextLine] = oldSCount;
-    state.tight = oldTight;
-    token = state.push("list_item_close", "li", -1);
-    token.markup = String.fromCharCode(markerCharCode);
-    nextLine = state.line;
-    itemLines[1] = nextLine;
-    if (nextLine >= endLine) {
-      break;
-    }
-    if (state.sCount[nextLine] < state.blkIndent) {
-      break;
-    }
-    if (state.sCount[nextLine] - state.blkIndent >= 4) {
-      break;
-    }
-    let terminate = false;
-    for (let i2 = 0, l2 = terminatorRules.length; i2 < l2; i2++) {
-      if (terminatorRules[i2](state, nextLine, endLine, true)) {
-        terminate = true;
-        break;
-      }
-    }
-    if (terminate) {
-      break;
-    }
-    if (isOrdered) {
-      posAfterMarker = skipOrderedListMarker(state, nextLine);
-      if (posAfterMarker < 0) {
-        break;
-      }
-      start = state.bMarks[nextLine] + state.tShift[nextLine];
-    } else {
-      posAfterMarker = skipBulletListMarker(state, nextLine);
-      if (posAfterMarker < 0) {
-        break;
-      }
-    }
-    if (markerCharCode !== state.src.charCodeAt(posAfterMarker - 1)) {
-      break;
-    }
-  }
-  if (isOrdered) {
-    token = state.push("ordered_list_close", "ol", -1);
-  } else {
-    token = state.push("bullet_list_close", "ul", -1);
-  }
-  token.markup = String.fromCharCode(markerCharCode);
-  listLines[1] = nextLine;
-  state.line = nextLine;
-  state.parentType = oldParentType;
-  if (tight) {
-    markTightParagraphs(state, listTokIdx);
-  }
-  return true;
-}
-function reference(state, startLine, _endLine, silent) {
-  let pos = state.bMarks[startLine] + state.tShift[startLine];
-  let max = state.eMarks[startLine];
-  let nextLine = startLine + 1;
-  if (state.sCount[startLine] - state.blkIndent >= 4) {
-    return false;
-  }
-  if (state.src.charCodeAt(pos) !== 91) {
-    return false;
-  }
-  function getNextLine(nextLine2) {
-    const endLine = state.lineMax;
-    if (nextLine2 >= endLine || state.isEmpty(nextLine2)) {
-      return null;
-    }
-    let isContinuation = false;
-    if (state.sCount[nextLine2] - state.blkIndent > 3) {
-      isContinuation = true;
-    }
-    if (state.sCount[nextLine2] < 0) {
-      isContinuation = true;
-    }
-    if (!isContinuation) {
-      const terminatorRules = state.md.block.ruler.getRules("reference");
-      const oldParentType = state.parentType;
-      state.parentType = "reference";
-      let terminate = false;
-      for (let i2 = 0, l2 = terminatorRules.length; i2 < l2; i2++) {
-        if (terminatorRules[i2](state, nextLine2, endLine, true)) {
-          terminate = true;
-          break;
-        }
-      }
-      state.parentType = oldParentType;
-      if (terminate) {
-        return null;
-      }
-    }
-    const pos2 = state.bMarks[nextLine2] + state.tShift[nextLine2];
-    const max2 = state.eMarks[nextLine2];
-    return state.src.slice(pos2, max2 + 1);
-  }
-  let str = state.src.slice(pos, max + 1);
-  max = str.length;
-  let labelEnd = -1;
-  for (pos = 1; pos < max; pos++) {
-    const ch = str.charCodeAt(pos);
-    if (ch === 91) {
-      return false;
-    } else if (ch === 93) {
-      labelEnd = pos;
-      break;
-    } else if (ch === 10) {
-      const lineContent = getNextLine(nextLine);
-      if (lineContent !== null) {
-        str += lineContent;
-        max = str.length;
-        nextLine++;
-      }
-    } else if (ch === 92) {
-      pos++;
-      if (pos < max && str.charCodeAt(pos) === 10) {
-        const lineContent = getNextLine(nextLine);
-        if (lineContent !== null) {
-          str += lineContent;
-          max = str.length;
-          nextLine++;
-        }
-      }
-    }
-  }
-  if (labelEnd < 0 || str.charCodeAt(labelEnd + 1) !== 58) {
-    return false;
-  }
-  for (pos = labelEnd + 2; pos < max; pos++) {
-    const ch = str.charCodeAt(pos);
-    if (ch === 10) {
-      const lineContent = getNextLine(nextLine);
-      if (lineContent !== null) {
-        str += lineContent;
-        max = str.length;
-        nextLine++;
-      }
-    } else if (isSpace(ch)) ;
-    else {
-      break;
-    }
-  }
-  const destRes = state.md.helpers.parseLinkDestination(str, pos, max);
-  if (!destRes.ok) {
-    return false;
-  }
-  const href = state.md.normalizeLink(destRes.str);
-  if (!state.md.validateLink(href)) {
-    return false;
-  }
-  pos = destRes.pos;
-  const destEndPos = pos;
-  const destEndLineNo = nextLine;
-  const start = pos;
-  for (; pos < max; pos++) {
-    const ch = str.charCodeAt(pos);
-    if (ch === 10) {
-      const lineContent = getNextLine(nextLine);
-      if (lineContent !== null) {
-        str += lineContent;
-        max = str.length;
-        nextLine++;
-      }
-    } else if (isSpace(ch)) ;
-    else {
-      break;
-    }
-  }
-  let titleRes = state.md.helpers.parseLinkTitle(str, pos, max);
-  while (titleRes.can_continue) {
-    const lineContent = getNextLine(nextLine);
-    if (lineContent === null) break;
-    str += lineContent;
-    pos = max;
-    max = str.length;
-    nextLine++;
-    titleRes = state.md.helpers.parseLinkTitle(str, pos, max, titleRes);
-  }
-  let title;
-  if (pos < max && start !== pos && titleRes.ok) {
-    title = titleRes.str;
-    pos = titleRes.pos;
-  } else {
-    title = "";
-    pos = destEndPos;
-    nextLine = destEndLineNo;
-  }
-  while (pos < max) {
-    const ch = str.charCodeAt(pos);
-    if (!isSpace(ch)) {
-      break;
-    }
-    pos++;
-  }
-  if (pos < max && str.charCodeAt(pos) !== 10) {
-    if (title) {
-      title = "";
-      pos = destEndPos;
-      nextLine = destEndLineNo;
-      while (pos < max) {
-        const ch = str.charCodeAt(pos);
-        if (!isSpace(ch)) {
-          break;
-        }
-        pos++;
-      }
-    }
-  }
-  if (pos < max && str.charCodeAt(pos) !== 10) {
-    return false;
-  }
-  const label = normalizeReference(str.slice(1, labelEnd));
-  if (!label) {
-    return false;
-  }
-  if (silent) {
-    return true;
-  }
-  if (typeof state.env.references === "undefined") {
-    state.env.references = {};
-  }
-  if (typeof state.env.references[label] === "undefined") {
-    state.env.references[label] = { title, href };
-  }
-  state.line = nextLine;
-  return true;
-}
-const block_names = [
-  "address",
-  "article",
-  "aside",
-  "base",
-  "basefont",
-  "blockquote",
-  "body",
-  "caption",
-  "center",
-  "col",
-  "colgroup",
-  "dd",
-  "details",
-  "dialog",
-  "dir",
-  "div",
-  "dl",
-  "dt",
-  "fieldset",
-  "figcaption",
-  "figure",
-  "footer",
-  "form",
-  "frame",
-  "frameset",
-  "h1",
-  "h2",
-  "h3",
-  "h4",
-  "h5",
-  "h6",
-  "head",
-  "header",
-  "hr",
-  "html",
-  "iframe",
-  "legend",
-  "li",
-  "link",
-  "main",
-  "menu",
-  "menuitem",
-  "nav",
-  "noframes",
-  "ol",
-  "optgroup",
-  "option",
-  "p",
-  "param",
-  "search",
-  "section",
-  "summary",
-  "table",
-  "tbody",
-  "td",
-  "tfoot",
-  "th",
-  "thead",
-  "title",
-  "tr",
-  "track",
-  "ul"
-];
-const attr_name = "[a-zA-Z_:][a-zA-Z0-9:._-]*";
-const unquoted = "[^\"'=<>`\\x00-\\x20]+";
-const single_quoted = "'[^']*'";
-const double_quoted = '"[^"]*"';
-const attr_value = "(?:" + unquoted + "|" + single_quoted + "|" + double_quoted + ")";
-const attribute = "(?:\\s+" + attr_name + "(?:\\s*=\\s*" + attr_value + ")?)";
-const open_tag = "<[A-Za-z][A-Za-z0-9\\-]*" + attribute + "*\\s*\\/?>";
-const close_tag = "<\\/[A-Za-z][A-Za-z0-9\\-]*\\s*>";
-const comment = "<!---?>|<!--(?:[^-]|-[^-]|--[^>])*-->";
-const processing = "<[?][\\s\\S]*?[?]>";
-const declaration = "<![A-Za-z][^>]*>";
-const cdata = "<!\\[CDATA\\[[\\s\\S]*?\\]\\]>";
-const HTML_TAG_RE = new RegExp("^(?:" + open_tag + "|" + close_tag + "|" + comment + "|" + processing + "|" + declaration + "|" + cdata + ")");
-const HTML_OPEN_CLOSE_TAG_RE = new RegExp("^(?:" + open_tag + "|" + close_tag + ")");
-const HTML_SEQUENCES = [
-  [/^<(script|pre|style|textarea)(?=(\s|>|$))/i, /<\/(script|pre|style|textarea)>/i, true],
-  [/^<!--/, /-->/, true],
-  [/^<\?/, /\?>/, true],
-  [/^<![A-Z]/, />/, true],
-  [/^<!\[CDATA\[/, /\]\]>/, true],
-  [new RegExp("^</?(" + block_names.join("|") + ")(?=(\\s|/?>|$))", "i"), /^$/, true],
-  [new RegExp(HTML_OPEN_CLOSE_TAG_RE.source + "\\s*$"), /^$/, false]
-];
-function html_block(state, startLine, endLine, silent) {
-  let pos = state.bMarks[startLine] + state.tShift[startLine];
-  let max = state.eMarks[startLine];
-  if (state.sCount[startLine] - state.blkIndent >= 4) {
-    return false;
-  }
-  if (!state.md.options.html) {
-    return false;
-  }
-  if (state.src.charCodeAt(pos) !== 60) {
-    return false;
-  }
-  let lineText = state.src.slice(pos, max);
-  let i2 = 0;
-  for (; i2 < HTML_SEQUENCES.length; i2++) {
-    if (HTML_SEQUENCES[i2][0].test(lineText)) {
-      break;
-    }
-  }
-  if (i2 === HTML_SEQUENCES.length) {
-    return false;
-  }
-  if (silent) {
-    return HTML_SEQUENCES[i2][2];
-  }
-  let nextLine = startLine + 1;
-  if (!HTML_SEQUENCES[i2][1].test(lineText)) {
-    for (; nextLine < endLine; nextLine++) {
-      if (state.sCount[nextLine] < state.blkIndent) {
-        break;
-      }
-      pos = state.bMarks[nextLine] + state.tShift[nextLine];
-      max = state.eMarks[nextLine];
-      lineText = state.src.slice(pos, max);
-      if (HTML_SEQUENCES[i2][1].test(lineText)) {
-        if (lineText.length !== 0) {
-          nextLine++;
-        }
-        break;
-      }
-    }
-  }
-  state.line = nextLine;
-  const token = state.push("html_block", "", 0);
-  token.map = [startLine, nextLine];
-  token.content = state.getLines(startLine, nextLine, state.blkIndent, true);
-  return true;
-}
-function heading(state, startLine, endLine, silent) {
-  let pos = state.bMarks[startLine] + state.tShift[startLine];
-  let max = state.eMarks[startLine];
-  if (state.sCount[startLine] - state.blkIndent >= 4) {
-    return false;
-  }
-  let ch = state.src.charCodeAt(pos);
-  if (ch !== 35 || pos >= max) {
-    return false;
-  }
-  let level = 1;
-  ch = state.src.charCodeAt(++pos);
-  while (ch === 35 && pos < max && level <= 6) {
-    level++;
-    ch = state.src.charCodeAt(++pos);
-  }
-  if (level > 6 || pos < max && !isSpace(ch)) {
-    return false;
-  }
-  if (silent) {
-    return true;
-  }
-  max = state.skipSpacesBack(max, pos);
-  const tmp = state.skipCharsBack(max, 35, pos);
-  if (tmp > pos && isSpace(state.src.charCodeAt(tmp - 1))) {
-    max = tmp;
-  }
-  state.line = startLine + 1;
-  const token_o = state.push("heading_open", "h" + String(level), 1);
-  token_o.markup = "########".slice(0, level);
-  token_o.map = [startLine, state.line];
-  const token_i = state.push("inline", "", 0);
-  token_i.content = state.src.slice(pos, max).trim();
-  token_i.map = [startLine, state.line];
-  token_i.children = [];
-  const token_c = state.push("heading_close", "h" + String(level), -1);
-  token_c.markup = "########".slice(0, level);
-  return true;
-}
-function lheading(state, startLine, endLine) {
-  const terminatorRules = state.md.block.ruler.getRules("paragraph");
-  if (state.sCount[startLine] - state.blkIndent >= 4) {
-    return false;
-  }
-  const oldParentType = state.parentType;
-  state.parentType = "paragraph";
-  let level = 0;
-  let marker;
-  let nextLine = startLine + 1;
-  for (; nextLine < endLine && !state.isEmpty(nextLine); nextLine++) {
-    if (state.sCount[nextLine] - state.blkIndent > 3) {
-      continue;
-    }
-    if (state.sCount[nextLine] >= state.blkIndent) {
-      let pos = state.bMarks[nextLine] + state.tShift[nextLine];
-      const max = state.eMarks[nextLine];
-      if (pos < max) {
-        marker = state.src.charCodeAt(pos);
-        if (marker === 45 || marker === 61) {
-          pos = state.skipChars(pos, marker);
-          pos = state.skipSpaces(pos);
-          if (pos >= max) {
-            level = marker === 61 ? 1 : 2;
-            break;
-          }
-        }
-      }
-    }
-    if (state.sCount[nextLine] < 0) {
-      continue;
-    }
-    let terminate = false;
-    for (let i2 = 0, l2 = terminatorRules.length; i2 < l2; i2++) {
-      if (terminatorRules[i2](state, nextLine, endLine, true)) {
-        terminate = true;
-        break;
-      }
-    }
-    if (terminate) {
-      break;
-    }
-  }
-  if (!level) {
-    return false;
-  }
-  const content = state.getLines(startLine, nextLine, state.blkIndent, false).trim();
-  state.line = nextLine + 1;
-  const token_o = state.push("heading_open", "h" + String(level), 1);
-  token_o.markup = String.fromCharCode(marker);
-  token_o.map = [startLine, state.line];
-  const token_i = state.push("inline", "", 0);
-  token_i.content = content;
-  token_i.map = [startLine, state.line - 1];
-  token_i.children = [];
-  const token_c = state.push("heading_close", "h" + String(level), -1);
-  token_c.markup = String.fromCharCode(marker);
-  state.parentType = oldParentType;
-  return true;
-}
-function paragraph(state, startLine, endLine) {
-  const terminatorRules = state.md.block.ruler.getRules("paragraph");
-  const oldParentType = state.parentType;
-  let nextLine = startLine + 1;
-  state.parentType = "paragraph";
-  for (; nextLine < endLine && !state.isEmpty(nextLine); nextLine++) {
-    if (state.sCount[nextLine] - state.blkIndent > 3) {
-      continue;
-    }
-    if (state.sCount[nextLine] < 0) {
-      continue;
-    }
-    let terminate = false;
-    for (let i2 = 0, l2 = terminatorRules.length; i2 < l2; i2++) {
-      if (terminatorRules[i2](state, nextLine, endLine, true)) {
-        terminate = true;
-        break;
-      }
-    }
-    if (terminate) {
-      break;
-    }
-  }
-  const content = state.getLines(startLine, nextLine, state.blkIndent, false).trim();
-  state.line = nextLine;
-  const token_o = state.push("paragraph_open", "p", 1);
-  token_o.map = [startLine, state.line];
-  const token_i = state.push("inline", "", 0);
-  token_i.content = content;
-  token_i.map = [startLine, state.line];
-  token_i.children = [];
-  state.push("paragraph_close", "p", -1);
-  state.parentType = oldParentType;
-  return true;
-}
-const _rules$1 = [
-  // First 2 params - rule name & source. Secondary array - list of rules,
-  // which can be terminated by this one.
-  ["table", table, ["paragraph", "reference"]],
-  ["code", code],
-  ["fence", fence, ["paragraph", "reference", "blockquote", "list"]],
-  ["blockquote", blockquote, ["paragraph", "reference", "blockquote", "list"]],
-  ["hr", hr, ["paragraph", "reference", "blockquote", "list"]],
-  ["list", list, ["paragraph", "reference", "blockquote"]],
-  ["reference", reference],
-  ["html_block", html_block, ["paragraph", "reference", "blockquote"]],
-  ["heading", heading, ["paragraph", "reference", "blockquote"]],
-  ["lheading", lheading],
-  ["paragraph", paragraph]
-];
-function ParserBlock() {
-  this.ruler = new Ruler();
-  for (let i2 = 0; i2 < _rules$1.length; i2++) {
-    this.ruler.push(_rules$1[i2][0], _rules$1[i2][1], { alt: (_rules$1[i2][2] || []).slice() });
-  }
-}
-ParserBlock.prototype.tokenize = function(state, startLine, endLine) {
-  const rules = this.ruler.getRules("");
-  const len = rules.length;
-  const maxNesting = state.md.options.maxNesting;
-  let line = startLine;
-  let hasEmptyLines = false;
-  while (line < endLine) {
-    state.line = line = state.skipEmptyLines(line);
-    if (line >= endLine) {
-      break;
-    }
-    if (state.sCount[line] < state.blkIndent) {
-      break;
-    }
-    if (state.level >= maxNesting) {
-      state.line = endLine;
-      break;
-    }
-    const prevLine = state.line;
-    let ok = false;
-    for (let i2 = 0; i2 < len; i2++) {
-      ok = rules[i2](state, line, endLine, false);
-      if (ok) {
-        if (prevLine >= state.line) {
-          throw new Error("block rule didn't increment state.line");
-        }
-        break;
-      }
-    }
-    if (!ok) throw new Error("none of the block rules matched");
-    state.tight = !hasEmptyLines;
-    if (state.isEmpty(state.line - 1)) {
-      hasEmptyLines = true;
-    }
-    line = state.line;
-    if (line < endLine && state.isEmpty(line)) {
-      hasEmptyLines = true;
-      line++;
-      state.line = line;
-    }
-  }
-};
-ParserBlock.prototype.parse = function(src, md, env, outTokens) {
-  if (!src) {
-    return;
-  }
-  const state = new this.State(src, md, env, outTokens);
-  this.tokenize(state, state.line, state.lineMax);
-};
-ParserBlock.prototype.State = StateBlock;
-function StateInline(src, md, env, outTokens) {
-  this.src = src;
-  this.env = env;
-  this.md = md;
-  this.tokens = outTokens;
-  this.tokens_meta = Array(outTokens.length);
-  this.pos = 0;
-  this.posMax = this.src.length;
-  this.level = 0;
-  this.pending = "";
-  this.pendingLevel = 0;
-  this.cache = {};
-  this.delimiters = [];
-  this._prev_delimiters = [];
-  this.backticks = {};
-  this.backticksScanned = false;
-  this.linkLevel = 0;
-}
-StateInline.prototype.pushPending = function() {
-  const token = new Token("text", "", 0);
-  token.content = this.pending;
-  token.level = this.pendingLevel;
-  this.tokens.push(token);
-  this.pending = "";
-  return token;
-};
-StateInline.prototype.push = function(type, tag, nesting) {
-  if (this.pending) {
-    this.pushPending();
-  }
-  const token = new Token(type, tag, nesting);
-  let token_meta = null;
-  if (nesting < 0) {
-    this.level--;
-    this.delimiters = this._prev_delimiters.pop();
-  }
-  token.level = this.level;
-  if (nesting > 0) {
-    this.level++;
-    this._prev_delimiters.push(this.delimiters);
-    this.delimiters = [];
-    token_meta = { delimiters: this.delimiters };
-  }
-  this.pendingLevel = this.level;
-  this.tokens.push(token);
-  this.tokens_meta.push(token_meta);
-  return token;
-};
-StateInline.prototype.scanDelims = function(start, canSplitWord) {
-  const max = this.posMax;
-  const marker = this.src.charCodeAt(start);
-  const lastChar = start > 0 ? this.src.charCodeAt(start - 1) : 32;
-  let pos = start;
-  while (pos < max && this.src.charCodeAt(pos) === marker) {
-    pos++;
-  }
-  const count = pos - start;
-  const nextChar = pos < max ? this.src.charCodeAt(pos) : 32;
-  const isLastPunctChar = isMdAsciiPunct(lastChar) || isPunctChar(String.fromCharCode(lastChar));
-  const isNextPunctChar = isMdAsciiPunct(nextChar) || isPunctChar(String.fromCharCode(nextChar));
-  const isLastWhiteSpace = isWhiteSpace(lastChar);
-  const isNextWhiteSpace = isWhiteSpace(nextChar);
-  const left_flanking = !isNextWhiteSpace && (!isNextPunctChar || isLastWhiteSpace || isLastPunctChar);
-  const right_flanking = !isLastWhiteSpace && (!isLastPunctChar || isNextWhiteSpace || isNextPunctChar);
-  const can_open = left_flanking && (canSplitWord || !right_flanking || isLastPunctChar);
-  const can_close = right_flanking && (canSplitWord || !left_flanking || isNextPunctChar);
-  return { can_open, can_close, length: count };
-};
-StateInline.prototype.Token = Token;
-function isTerminatorChar(ch) {
-  switch (ch) {
-    case 10:
-    case 33:
-    case 35:
-    case 36:
-    case 37:
-    case 38:
-    case 42:
-    case 43:
-    case 45:
-    case 58:
-    case 60:
-    case 61:
-    case 62:
-    case 64:
-    case 91:
-    case 92:
-    case 93:
-    case 94:
-    case 95:
-    case 96:
-    case 123:
-    case 125:
-    case 126:
-      return true;
-    default:
-      return false;
-  }
-}
-function text(state, silent) {
-  let pos = state.pos;
-  while (pos < state.posMax && !isTerminatorChar(state.src.charCodeAt(pos))) {
-    pos++;
-  }
-  if (pos === state.pos) {
-    return false;
-  }
-  if (!silent) {
-    state.pending += state.src.slice(state.pos, pos);
-  }
-  state.pos = pos;
-  return true;
-}
-const SCHEME_RE = /(?:^|[^a-z0-9.+-])([a-z][a-z0-9.+-]*)$/i;
-function linkify(state, silent) {
-  if (!state.md.options.linkify) return false;
-  if (state.linkLevel > 0) return false;
-  const pos = state.pos;
-  const max = state.posMax;
-  if (pos + 3 > max) return false;
-  if (state.src.charCodeAt(pos) !== 58) return false;
-  if (state.src.charCodeAt(pos + 1) !== 47) return false;
-  if (state.src.charCodeAt(pos + 2) !== 47) return false;
-  const match2 = state.pending.match(SCHEME_RE);
-  if (!match2) return false;
-  const proto = match2[1];
-  const link2 = state.md.linkify.matchAtStart(state.src.slice(pos - proto.length));
-  if (!link2) return false;
-  let url = link2.url;
-  if (url.length <= proto.length) return false;
-  url = url.replace(/\*+$/, "");
-  const fullUrl = state.md.normalizeLink(url);
-  if (!state.md.validateLink(fullUrl)) return false;
-  if (!silent) {
-    state.pending = state.pending.slice(0, -proto.length);
-    const token_o = state.push("link_open", "a", 1);
-    token_o.attrs = [["href", fullUrl]];
-    token_o.markup = "linkify";
-    token_o.info = "auto";
-    const token_t = state.push("text", "", 0);
-    token_t.content = state.md.normalizeLinkText(url);
-    const token_c = state.push("link_close", "a", -1);
-    token_c.markup = "linkify";
-    token_c.info = "auto";
-  }
-  state.pos += url.length - proto.length;
-  return true;
-}
-function newline(state, silent) {
-  let pos = state.pos;
-  if (state.src.charCodeAt(pos) !== 10) {
-    return false;
-  }
-  const pmax = state.pending.length - 1;
-  const max = state.posMax;
-  if (!silent) {
-    if (pmax >= 0 && state.pending.charCodeAt(pmax) === 32) {
-      if (pmax >= 1 && state.pending.charCodeAt(pmax - 1) === 32) {
-        let ws = pmax - 1;
-        while (ws >= 1 && state.pending.charCodeAt(ws - 1) === 32) ws--;
-        state.pending = state.pending.slice(0, ws);
-        state.push("hardbreak", "br", 0);
-      } else {
-        state.pending = state.pending.slice(0, -1);
-        state.push("softbreak", "br", 0);
-      }
-    } else {
-      state.push("softbreak", "br", 0);
-    }
-  }
-  pos++;
-  while (pos < max && isSpace(state.src.charCodeAt(pos))) {
-    pos++;
-  }
-  state.pos = pos;
-  return true;
-}
-const ESCAPED = [];
-for (let i2 = 0; i2 < 256; i2++) {
-  ESCAPED.push(0);
-}
-"\\!\"#$%&'()*+,./:;<=>?@[]^_`{|}~-".split("").forEach(function(ch) {
-  ESCAPED[ch.charCodeAt(0)] = 1;
-});
-function escape(state, silent) {
-  let pos = state.pos;
-  const max = state.posMax;
-  if (state.src.charCodeAt(pos) !== 92) return false;
-  pos++;
-  if (pos >= max) return false;
-  let ch1 = state.src.charCodeAt(pos);
-  if (ch1 === 10) {
-    if (!silent) {
-      state.push("hardbreak", "br", 0);
-    }
-    pos++;
-    while (pos < max) {
-      ch1 = state.src.charCodeAt(pos);
-      if (!isSpace(ch1)) break;
-      pos++;
-    }
-    state.pos = pos;
-    return true;
-  }
-  let escapedStr = state.src[pos];
-  if (ch1 >= 55296 && ch1 <= 56319 && pos + 1 < max) {
-    const ch2 = state.src.charCodeAt(pos + 1);
-    if (ch2 >= 56320 && ch2 <= 57343) {
-      escapedStr += state.src[pos + 1];
-      pos++;
-    }
-  }
-  const origStr = "\\" + escapedStr;
-  if (!silent) {
-    const token = state.push("text_special", "", 0);
-    if (ch1 < 256 && ESCAPED[ch1] !== 0) {
-      token.content = escapedStr;
-    } else {
-      token.content = origStr;
-    }
-    token.markup = origStr;
-    token.info = "escape";
-  }
-  state.pos = pos + 1;
-  return true;
-}
-function backtick(state, silent) {
-  let pos = state.pos;
-  const ch = state.src.charCodeAt(pos);
-  if (ch !== 96) {
-    return false;
-  }
-  const start = pos;
-  pos++;
-  const max = state.posMax;
-  while (pos < max && state.src.charCodeAt(pos) === 96) {
-    pos++;
-  }
-  const marker = state.src.slice(start, pos);
-  const openerLength = marker.length;
-  if (state.backticksScanned && (state.backticks[openerLength] || 0) <= start) {
-    if (!silent) state.pending += marker;
-    state.pos += openerLength;
-    return true;
-  }
-  let matchEnd = pos;
-  let matchStart;
-  while ((matchStart = state.src.indexOf("`", matchEnd)) !== -1) {
-    matchEnd = matchStart + 1;
-    while (matchEnd < max && state.src.charCodeAt(matchEnd) === 96) {
-      matchEnd++;
-    }
-    const closerLength = matchEnd - matchStart;
-    if (closerLength === openerLength) {
-      if (!silent) {
-        const token = state.push("code_inline", "code", 0);
-        token.markup = marker;
-        token.content = state.src.slice(pos, matchStart).replace(/\n/g, " ").replace(/^ (.+) $/, "$1");
-      }
-      state.pos = matchEnd;
-      return true;
-    }
-    state.backticks[closerLength] = matchStart;
-  }
-  state.backticksScanned = true;
-  if (!silent) state.pending += marker;
-  state.pos += openerLength;
-  return true;
-}
-function strikethrough_tokenize(state, silent) {
-  const start = state.pos;
-  const marker = state.src.charCodeAt(start);
-  if (silent) {
-    return false;
-  }
-  if (marker !== 126) {
-    return false;
-  }
-  const scanned = state.scanDelims(state.pos, true);
-  let len = scanned.length;
-  const ch = String.fromCharCode(marker);
-  if (len < 2) {
-    return false;
-  }
-  let token;
-  if (len % 2) {
-    token = state.push("text", "", 0);
-    token.content = ch;
-    len--;
-  }
-  for (let i2 = 0; i2 < len; i2 += 2) {
-    token = state.push("text", "", 0);
-    token.content = ch + ch;
-    state.delimiters.push({
-      marker,
-      length: 0,
-      // disable "rule of 3" length checks meant for emphasis
-      token: state.tokens.length - 1,
-      end: -1,
-      open: scanned.can_open,
-      close: scanned.can_close
-    });
-  }
-  state.pos += scanned.length;
-  return true;
-}
-function postProcess$1(state, delimiters) {
-  let token;
-  const loneMarkers = [];
-  const max = delimiters.length;
-  for (let i2 = 0; i2 < max; i2++) {
-    const startDelim = delimiters[i2];
-    if (startDelim.marker !== 126) {
-      continue;
-    }
-    if (startDelim.end === -1) {
-      continue;
-    }
-    const endDelim = delimiters[startDelim.end];
-    token = state.tokens[startDelim.token];
-    token.type = "s_open";
-    token.tag = "s";
-    token.nesting = 1;
-    token.markup = "~~";
-    token.content = "";
-    token = state.tokens[endDelim.token];
-    token.type = "s_close";
-    token.tag = "s";
-    token.nesting = -1;
-    token.markup = "~~";
-    token.content = "";
-    if (state.tokens[endDelim.token - 1].type === "text" && state.tokens[endDelim.token - 1].content === "~") {
-      loneMarkers.push(endDelim.token - 1);
-    }
-  }
-  while (loneMarkers.length) {
-    const i2 = loneMarkers.pop();
-    let j = i2 + 1;
-    while (j < state.tokens.length && state.tokens[j].type === "s_close") {
-      j++;
-    }
-    j--;
-    if (i2 !== j) {
-      token = state.tokens[j];
-      state.tokens[j] = state.tokens[i2];
-      state.tokens[i2] = token;
-    }
-  }
-}
-function strikethrough_postProcess(state) {
-  const tokens_meta = state.tokens_meta;
-  const max = state.tokens_meta.length;
-  postProcess$1(state, state.delimiters);
-  for (let curr = 0; curr < max; curr++) {
-    if (tokens_meta[curr] && tokens_meta[curr].delimiters) {
-      postProcess$1(state, tokens_meta[curr].delimiters);
-    }
-  }
-}
-const r_strikethrough = {
-  tokenize: strikethrough_tokenize,
-  postProcess: strikethrough_postProcess
-};
-function emphasis_tokenize(state, silent) {
-  const start = state.pos;
-  const marker = state.src.charCodeAt(start);
-  if (silent) {
-    return false;
-  }
-  if (marker !== 95 && marker !== 42) {
-    return false;
-  }
-  const scanned = state.scanDelims(state.pos, marker === 42);
-  for (let i2 = 0; i2 < scanned.length; i2++) {
-    const token = state.push("text", "", 0);
-    token.content = String.fromCharCode(marker);
-    state.delimiters.push({
-      // Char code of the starting marker (number).
-      //
-      marker,
-      // Total length of these series of delimiters.
-      //
-      length: scanned.length,
-      // A position of the token this delimiter corresponds to.
-      //
-      token: state.tokens.length - 1,
-      // If this delimiter is matched as a valid opener, `end` will be
-      // equal to its position, otherwise it's `-1`.
-      //
-      end: -1,
-      // Boolean flags that determine if this delimiter could open or close
-      // an emphasis.
-      //
-      open: scanned.can_open,
-      close: scanned.can_close
-    });
-  }
-  state.pos += scanned.length;
-  return true;
-}
-function postProcess(state, delimiters) {
-  const max = delimiters.length;
-  for (let i2 = max - 1; i2 >= 0; i2--) {
-    const startDelim = delimiters[i2];
-    if (startDelim.marker !== 95 && startDelim.marker !== 42) {
-      continue;
-    }
-    if (startDelim.end === -1) {
-      continue;
-    }
-    const endDelim = delimiters[startDelim.end];
-    const isStrong = i2 > 0 && delimiters[i2 - 1].end === startDelim.end + 1 && // check that first two markers match and adjacent
-    delimiters[i2 - 1].marker === startDelim.marker && delimiters[i2 - 1].token === startDelim.token - 1 && // check that last two markers are adjacent (we can safely assume they match)
-    delimiters[startDelim.end + 1].token === endDelim.token + 1;
-    const ch = String.fromCharCode(startDelim.marker);
-    const token_o = state.tokens[startDelim.token];
-    token_o.type = isStrong ? "strong_open" : "em_open";
-    token_o.tag = isStrong ? "strong" : "em";
-    token_o.nesting = 1;
-    token_o.markup = isStrong ? ch + ch : ch;
-    token_o.content = "";
-    const token_c = state.tokens[endDelim.token];
-    token_c.type = isStrong ? "strong_close" : "em_close";
-    token_c.tag = isStrong ? "strong" : "em";
-    token_c.nesting = -1;
-    token_c.markup = isStrong ? ch + ch : ch;
-    token_c.content = "";
-    if (isStrong) {
-      state.tokens[delimiters[i2 - 1].token].content = "";
-      state.tokens[delimiters[startDelim.end + 1].token].content = "";
-      i2--;
-    }
-  }
-}
-function emphasis_post_process(state) {
-  const tokens_meta = state.tokens_meta;
-  const max = state.tokens_meta.length;
-  postProcess(state, state.delimiters);
-  for (let curr = 0; curr < max; curr++) {
-    if (tokens_meta[curr] && tokens_meta[curr].delimiters) {
-      postProcess(state, tokens_meta[curr].delimiters);
-    }
-  }
-}
-const r_emphasis = {
-  tokenize: emphasis_tokenize,
-  postProcess: emphasis_post_process
-};
-function link(state, silent) {
-  let code2, label, res, ref2;
-  let href = "";
-  let title = "";
-  let start = state.pos;
-  let parseReference = true;
-  if (state.src.charCodeAt(state.pos) !== 91) {
-    return false;
-  }
-  const oldPos = state.pos;
-  const max = state.posMax;
-  const labelStart = state.pos + 1;
-  const labelEnd = state.md.helpers.parseLinkLabel(state, state.pos, true);
-  if (labelEnd < 0) {
-    return false;
-  }
-  let pos = labelEnd + 1;
-  if (pos < max && state.src.charCodeAt(pos) === 40) {
-    parseReference = false;
-    pos++;
-    for (; pos < max; pos++) {
-      code2 = state.src.charCodeAt(pos);
-      if (!isSpace(code2) && code2 !== 10) {
-        break;
-      }
-    }
-    if (pos >= max) {
-      return false;
-    }
-    start = pos;
-    res = state.md.helpers.parseLinkDestination(state.src, pos, state.posMax);
-    if (res.ok) {
-      href = state.md.normalizeLink(res.str);
-      if (state.md.validateLink(href)) {
-        pos = res.pos;
-      } else {
-        href = "";
-      }
-      start = pos;
-      for (; pos < max; pos++) {
-        code2 = state.src.charCodeAt(pos);
-        if (!isSpace(code2) && code2 !== 10) {
-          break;
-        }
-      }
-      res = state.md.helpers.parseLinkTitle(state.src, pos, state.posMax);
-      if (pos < max && start !== pos && res.ok) {
-        title = res.str;
-        pos = res.pos;
-        for (; pos < max; pos++) {
-          code2 = state.src.charCodeAt(pos);
-          if (!isSpace(code2) && code2 !== 10) {
-            break;
-          }
-        }
-      }
-    }
-    if (pos >= max || state.src.charCodeAt(pos) !== 41) {
-      parseReference = true;
-    }
-    pos++;
-  }
-  if (parseReference) {
-    if (typeof state.env.references === "undefined") {
-      return false;
-    }
-    if (pos < max && state.src.charCodeAt(pos) === 91) {
-      start = pos + 1;
-      pos = state.md.helpers.parseLinkLabel(state, pos);
-      if (pos >= 0) {
-        label = state.src.slice(start, pos++);
-      } else {
-        pos = labelEnd + 1;
-      }
-    } else {
-      pos = labelEnd + 1;
-    }
-    if (!label) {
-      label = state.src.slice(labelStart, labelEnd);
-    }
-    ref2 = state.env.references[normalizeReference(label)];
-    if (!ref2) {
-      state.pos = oldPos;
-      return false;
-    }
-    href = ref2.href;
-    title = ref2.title;
-  }
-  if (!silent) {
-    state.pos = labelStart;
-    state.posMax = labelEnd;
-    const token_o = state.push("link_open", "a", 1);
-    const attrs3 = [["href", href]];
-    token_o.attrs = attrs3;
-    if (title) {
-      attrs3.push(["title", title]);
-    }
-    state.linkLevel++;
-    state.md.inline.tokenize(state);
-    state.linkLevel--;
-    state.push("link_close", "a", -1);
-  }
-  state.pos = pos;
-  state.posMax = max;
-  return true;
-}
-function image(state, silent) {
-  let code2, content, label, pos, ref2, res, title, start;
-  let href = "";
-  const oldPos = state.pos;
-  const max = state.posMax;
-  if (state.src.charCodeAt(state.pos) !== 33) {
-    return false;
-  }
-  if (state.src.charCodeAt(state.pos + 1) !== 91) {
-    return false;
-  }
-  const labelStart = state.pos + 2;
-  const labelEnd = state.md.helpers.parseLinkLabel(state, state.pos + 1, false);
-  if (labelEnd < 0) {
-    return false;
-  }
-  pos = labelEnd + 1;
-  if (pos < max && state.src.charCodeAt(pos) === 40) {
-    pos++;
-    for (; pos < max; pos++) {
-      code2 = state.src.charCodeAt(pos);
-      if (!isSpace(code2) && code2 !== 10) {
-        break;
-      }
-    }
-    if (pos >= max) {
-      return false;
-    }
-    start = pos;
-    res = state.md.helpers.parseLinkDestination(state.src, pos, state.posMax);
-    if (res.ok) {
-      href = state.md.normalizeLink(res.str);
-      if (state.md.validateLink(href)) {
-        pos = res.pos;
-      } else {
-        href = "";
-      }
-    }
-    start = pos;
-    for (; pos < max; pos++) {
-      code2 = state.src.charCodeAt(pos);
-      if (!isSpace(code2) && code2 !== 10) {
-        break;
-      }
-    }
-    res = state.md.helpers.parseLinkTitle(state.src, pos, state.posMax);
-    if (pos < max && start !== pos && res.ok) {
-      title = res.str;
-      pos = res.pos;
-      for (; pos < max; pos++) {
-        code2 = state.src.charCodeAt(pos);
-        if (!isSpace(code2) && code2 !== 10) {
-          break;
-        }
-      }
-    } else {
-      title = "";
-    }
-    if (pos >= max || state.src.charCodeAt(pos) !== 41) {
-      state.pos = oldPos;
-      return false;
-    }
-    pos++;
-  } else {
-    if (typeof state.env.references === "undefined") {
-      return false;
-    }
-    if (pos < max && state.src.charCodeAt(pos) === 91) {
-      start = pos + 1;
-      pos = state.md.helpers.parseLinkLabel(state, pos);
-      if (pos >= 0) {
-        label = state.src.slice(start, pos++);
-      } else {
-        pos = labelEnd + 1;
-      }
-    } else {
-      pos = labelEnd + 1;
-    }
-    if (!label) {
-      label = state.src.slice(labelStart, labelEnd);
-    }
-    ref2 = state.env.references[normalizeReference(label)];
-    if (!ref2) {
-      state.pos = oldPos;
-      return false;
-    }
-    href = ref2.href;
-    title = ref2.title;
-  }
-  if (!silent) {
-    content = state.src.slice(labelStart, labelEnd);
-    const tokens = [];
-    state.md.inline.parse(
-      content,
-      state.md,
-      state.env,
-      tokens
-    );
-    const token = state.push("image", "img", 0);
-    const attrs3 = [["src", href], ["alt", ""]];
-    token.attrs = attrs3;
-    token.children = tokens;
-    token.content = content;
-    if (title) {
-      attrs3.push(["title", title]);
-    }
-  }
-  state.pos = pos;
-  state.posMax = max;
-  return true;
-}
-const EMAIL_RE = /^([a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*)$/;
-const AUTOLINK_RE = /^([a-zA-Z][a-zA-Z0-9+.-]{1,31}):([^<>\x00-\x20]*)$/;
-function autolink(state, silent) {
-  let pos = state.pos;
-  if (state.src.charCodeAt(pos) !== 60) {
-    return false;
-  }
-  const start = state.pos;
-  const max = state.posMax;
-  for (; ; ) {
-    if (++pos >= max) return false;
-    const ch = state.src.charCodeAt(pos);
-    if (ch === 60) return false;
-    if (ch === 62) break;
-  }
-  const url = state.src.slice(start + 1, pos);
-  if (AUTOLINK_RE.test(url)) {
-    const fullUrl = state.md.normalizeLink(url);
-    if (!state.md.validateLink(fullUrl)) {
-      return false;
-    }
-    if (!silent) {
-      const token_o = state.push("link_open", "a", 1);
-      token_o.attrs = [["href", fullUrl]];
-      token_o.markup = "autolink";
-      token_o.info = "auto";
-      const token_t = state.push("text", "", 0);
-      token_t.content = state.md.normalizeLinkText(url);
-      const token_c = state.push("link_close", "a", -1);
-      token_c.markup = "autolink";
-      token_c.info = "auto";
-    }
-    state.pos += url.length + 2;
-    return true;
-  }
-  if (EMAIL_RE.test(url)) {
-    const fullUrl = state.md.normalizeLink("mailto:" + url);
-    if (!state.md.validateLink(fullUrl)) {
-      return false;
-    }
-    if (!silent) {
-      const token_o = state.push("link_open", "a", 1);
-      token_o.attrs = [["href", fullUrl]];
-      token_o.markup = "autolink";
-      token_o.info = "auto";
-      const token_t = state.push("text", "", 0);
-      token_t.content = state.md.normalizeLinkText(url);
-      const token_c = state.push("link_close", "a", -1);
-      token_c.markup = "autolink";
-      token_c.info = "auto";
-    }
-    state.pos += url.length + 2;
-    return true;
-  }
-  return false;
-}
-function isLinkOpen(str) {
-  return /^<a[>\s]/i.test(str);
-}
-function isLinkClose(str) {
-  return /^<\/a\s*>/i.test(str);
-}
-function isLetter(ch) {
-  const lc = ch | 32;
-  return lc >= 97 && lc <= 122;
-}
-function html_inline(state, silent) {
-  if (!state.md.options.html) {
-    return false;
-  }
-  const max = state.posMax;
-  const pos = state.pos;
-  if (state.src.charCodeAt(pos) !== 60 || pos + 2 >= max) {
-    return false;
-  }
-  const ch = state.src.charCodeAt(pos + 1);
-  if (ch !== 33 && ch !== 63 && ch !== 47 && !isLetter(ch)) {
-    return false;
-  }
-  const match2 = state.src.slice(pos).match(HTML_TAG_RE);
-  if (!match2) {
-    return false;
-  }
-  if (!silent) {
-    const token = state.push("html_inline", "", 0);
-    token.content = match2[0];
-    if (isLinkOpen(token.content)) state.linkLevel++;
-    if (isLinkClose(token.content)) state.linkLevel--;
-  }
-  state.pos += match2[0].length;
-  return true;
-}
-const DIGITAL_RE = /^&#((?:x[a-f0-9]{1,6}|[0-9]{1,7}));/i;
-const NAMED_RE = /^&([a-z][a-z0-9]{1,31});/i;
-function entity(state, silent) {
-  const pos = state.pos;
-  const max = state.posMax;
-  if (state.src.charCodeAt(pos) !== 38) return false;
-  if (pos + 1 >= max) return false;
-  const ch = state.src.charCodeAt(pos + 1);
-  if (ch === 35) {
-    const match2 = state.src.slice(pos).match(DIGITAL_RE);
-    if (match2) {
-      if (!silent) {
-        const code2 = match2[1][0].toLowerCase() === "x" ? parseInt(match2[1].slice(1), 16) : parseInt(match2[1], 10);
-        const token = state.push("text_special", "", 0);
-        token.content = isValidEntityCode(code2) ? fromCodePoint(code2) : fromCodePoint(65533);
-        token.markup = match2[0];
-        token.info = "entity";
-      }
-      state.pos += match2[0].length;
-      return true;
-    }
-  } else {
-    const match2 = state.src.slice(pos).match(NAMED_RE);
-    if (match2) {
-      const decoded = decodeHTML(match2[0]);
-      if (decoded !== match2[0]) {
-        if (!silent) {
-          const token = state.push("text_special", "", 0);
-          token.content = decoded;
-          token.markup = match2[0];
-          token.info = "entity";
-        }
-        state.pos += match2[0].length;
-        return true;
-      }
-    }
-  }
-  return false;
-}
-function processDelimiters(delimiters) {
-  const openersBottom = {};
-  const max = delimiters.length;
-  if (!max) return;
-  let headerIdx = 0;
-  let lastTokenIdx = -2;
-  const jumps = [];
-  for (let closerIdx = 0; closerIdx < max; closerIdx++) {
-    const closer = delimiters[closerIdx];
-    jumps.push(0);
-    if (delimiters[headerIdx].marker !== closer.marker || lastTokenIdx !== closer.token - 1) {
-      headerIdx = closerIdx;
-    }
-    lastTokenIdx = closer.token;
-    closer.length = closer.length || 0;
-    if (!closer.close) continue;
-    if (!openersBottom.hasOwnProperty(closer.marker)) {
-      openersBottom[closer.marker] = [-1, -1, -1, -1, -1, -1];
-    }
-    const minOpenerIdx = openersBottom[closer.marker][(closer.open ? 3 : 0) + closer.length % 3];
-    let openerIdx = headerIdx - jumps[headerIdx] - 1;
-    let newMinOpenerIdx = openerIdx;
-    for (; openerIdx > minOpenerIdx; openerIdx -= jumps[openerIdx] + 1) {
-      const opener = delimiters[openerIdx];
-      if (opener.marker !== closer.marker) continue;
-      if (opener.open && opener.end < 0) {
-        let isOddMatch = false;
-        if (opener.close || closer.open) {
-          if ((opener.length + closer.length) % 3 === 0) {
-            if (opener.length % 3 !== 0 || closer.length % 3 !== 0) {
-              isOddMatch = true;
-            }
-          }
-        }
-        if (!isOddMatch) {
-          const lastJump = openerIdx > 0 && !delimiters[openerIdx - 1].open ? jumps[openerIdx - 1] + 1 : 0;
-          jumps[closerIdx] = closerIdx - openerIdx + lastJump;
-          jumps[openerIdx] = lastJump;
-          closer.open = false;
-          opener.end = closerIdx;
-          opener.close = false;
-          newMinOpenerIdx = -1;
-          lastTokenIdx = -2;
-          break;
-        }
-      }
-    }
-    if (newMinOpenerIdx !== -1) {
-      openersBottom[closer.marker][(closer.open ? 3 : 0) + (closer.length || 0) % 3] = newMinOpenerIdx;
-    }
-  }
-}
-function link_pairs(state) {
-  const tokens_meta = state.tokens_meta;
-  const max = state.tokens_meta.length;
-  processDelimiters(state.delimiters);
-  for (let curr = 0; curr < max; curr++) {
-    if (tokens_meta[curr] && tokens_meta[curr].delimiters) {
-      processDelimiters(tokens_meta[curr].delimiters);
-    }
-  }
-}
-function fragments_join(state) {
-  let curr, last;
-  let level = 0;
-  const tokens = state.tokens;
-  const max = state.tokens.length;
-  for (curr = last = 0; curr < max; curr++) {
-    if (tokens[curr].nesting < 0) level--;
-    tokens[curr].level = level;
-    if (tokens[curr].nesting > 0) level++;
-    if (tokens[curr].type === "text" && curr + 1 < max && tokens[curr + 1].type === "text") {
-      tokens[curr + 1].content = tokens[curr].content + tokens[curr + 1].content;
-    } else {
-      if (curr !== last) {
-        tokens[last] = tokens[curr];
-      }
-      last++;
-    }
-  }
-  if (curr !== last) {
-    tokens.length = last;
-  }
-}
-const _rules = [
-  ["text", text],
-  ["linkify", linkify],
-  ["newline", newline],
-  ["escape", escape],
-  ["backticks", backtick],
-  ["strikethrough", r_strikethrough.tokenize],
-  ["emphasis", r_emphasis.tokenize],
-  ["link", link],
-  ["image", image],
-  ["autolink", autolink],
-  ["html_inline", html_inline],
-  ["entity", entity]
-];
-const _rules2 = [
-  ["balance_pairs", link_pairs],
-  ["strikethrough", r_strikethrough.postProcess],
-  ["emphasis", r_emphasis.postProcess],
-  // rules for pairs separate '**' into its own text tokens, which may be left unused,
-  // rule below merges unused segments back with the rest of the text
-  ["fragments_join", fragments_join]
-];
-function ParserInline() {
-  this.ruler = new Ruler();
-  for (let i2 = 0; i2 < _rules.length; i2++) {
-    this.ruler.push(_rules[i2][0], _rules[i2][1]);
-  }
-  this.ruler2 = new Ruler();
-  for (let i2 = 0; i2 < _rules2.length; i2++) {
-    this.ruler2.push(_rules2[i2][0], _rules2[i2][1]);
-  }
-}
-ParserInline.prototype.skipToken = function(state) {
-  const pos = state.pos;
-  const rules = this.ruler.getRules("");
-  const len = rules.length;
-  const maxNesting = state.md.options.maxNesting;
-  const cache = state.cache;
-  if (typeof cache[pos] !== "undefined") {
-    state.pos = cache[pos];
-    return;
-  }
-  let ok = false;
-  if (state.level < maxNesting) {
-    for (let i2 = 0; i2 < len; i2++) {
-      state.level++;
-      ok = rules[i2](state, true);
-      state.level--;
-      if (ok) {
-        if (pos >= state.pos) {
-          throw new Error("inline rule didn't increment state.pos");
-        }
-        break;
-      }
-    }
-  } else {
-    state.pos = state.posMax;
-  }
-  if (!ok) {
-    state.pos++;
-  }
-  cache[pos] = state.pos;
-};
-ParserInline.prototype.tokenize = function(state) {
-  const rules = this.ruler.getRules("");
-  const len = rules.length;
-  const end = state.posMax;
-  const maxNesting = state.md.options.maxNesting;
-  while (state.pos < end) {
-    const prevPos = state.pos;
-    let ok = false;
-    if (state.level < maxNesting) {
-      for (let i2 = 0; i2 < len; i2++) {
-        ok = rules[i2](state, false);
-        if (ok) {
-          if (prevPos >= state.pos) {
-            throw new Error("inline rule didn't increment state.pos");
-          }
-          break;
-        }
-      }
-    }
-    if (ok) {
-      if (state.pos >= end) {
-        break;
-      }
-      continue;
-    }
-    state.pending += state.src[state.pos++];
-  }
-  if (state.pending) {
-    state.pushPending();
-  }
-};
-ParserInline.prototype.parse = function(str, md, env, outTokens) {
-  const state = new this.State(str, md, env, outTokens);
-  this.tokenize(state);
-  const rules = this.ruler2.getRules("");
-  const len = rules.length;
-  for (let i2 = 0; i2 < len; i2++) {
-    rules[i2](state);
-  }
-};
-ParserInline.prototype.State = StateInline;
-function reFactory(opts) {
-  const re = {};
-  opts = opts || {};
-  re.src_Any = Any.source;
-  re.src_Cc = Cc.source;
-  re.src_Z = Z.source;
-  re.src_P = P.source;
-  re.src_ZPCc = [re.src_Z, re.src_P, re.src_Cc].join("|");
-  re.src_ZCc = [re.src_Z, re.src_Cc].join("|");
-  const text_separators = "[><｜]";
-  re.src_pseudo_letter = "(?:(?!" + text_separators + "|" + re.src_ZPCc + ")" + re.src_Any + ")";
-  re.src_ip4 = "(?:(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)";
-  re.src_auth = "(?:(?:(?!" + re.src_ZCc + "|[@/\\[\\]()]).)+@)?";
-  re.src_port = "(?::(?:6(?:[0-4]\\d{3}|5(?:[0-4]\\d{2}|5(?:[0-2]\\d|3[0-5])))|[1-5]?\\d{1,4}))?";
-  re.src_host_terminator = "(?=$|" + text_separators + "|" + re.src_ZPCc + ")(?!" + (opts["---"] ? "-(?!--)|" : "-|") + "_|:\\d|\\.-|\\.(?!$|" + re.src_ZPCc + "))";
-  re.src_path = "(?:[/?#](?:(?!" + re.src_ZCc + "|" + text_separators + `|[()[\\]{}.,"'?!\\-;]).|\\[(?:(?!` + re.src_ZCc + "|\\]).)*\\]|\\((?:(?!" + re.src_ZCc + "|[)]).)*\\)|\\{(?:(?!" + re.src_ZCc + '|[}]).)*\\}|\\"(?:(?!' + re.src_ZCc + `|["]).)+\\"|\\'(?:(?!` + re.src_ZCc + "|[']).)+\\'|\\'(?=" + re.src_pseudo_letter + "|[-])|\\.{2,}[a-zA-Z0-9%/&]|\\.(?!" + re.src_ZCc + "|[.]|$)|" + (opts["---"] ? "\\-(?!--(?:[^-]|$))(?:-*)|" : "\\-+|") + // allow `,,,` in paths
-  ",(?!" + re.src_ZCc + "|$)|;(?!" + re.src_ZCc + "|$)|\\!+(?!" + re.src_ZCc + "|[!]|$)|\\?(?!" + re.src_ZCc + "|[?]|$))+|\\/)?";
-  re.src_email_name = '[\\-;:&=\\+\\$,\\.a-zA-Z0-9_][\\-;:&=\\+\\$,\\"\\.a-zA-Z0-9_]*';
-  re.src_xn = "xn--[a-z0-9\\-]{1,59}";
-  re.src_domain_root = // Allow letters & digits (http://test1)
-  "(?:" + re.src_xn + "|" + re.src_pseudo_letter + "{1,63})";
-  re.src_domain = "(?:" + re.src_xn + "|(?:" + re.src_pseudo_letter + ")|(?:" + re.src_pseudo_letter + "(?:-|" + re.src_pseudo_letter + "){0,61}" + re.src_pseudo_letter + "))";
-  re.src_host = "(?:(?:(?:(?:" + re.src_domain + ")\\.)*" + re.src_domain + "))";
-  re.tpl_host_fuzzy = "(?:" + re.src_ip4 + "|(?:(?:(?:" + re.src_domain + ")\\.)+(?:%TLDS%)))";
-  re.tpl_host_no_ip_fuzzy = "(?:(?:(?:" + re.src_domain + ")\\.)+(?:%TLDS%))";
-  re.src_host_strict = re.src_host + re.src_host_terminator;
-  re.tpl_host_fuzzy_strict = re.tpl_host_fuzzy + re.src_host_terminator;
-  re.src_host_port_strict = re.src_host + re.src_port + re.src_host_terminator;
-  re.tpl_host_port_fuzzy_strict = re.tpl_host_fuzzy + re.src_port + re.src_host_terminator;
-  re.tpl_host_port_no_ip_fuzzy_strict = re.tpl_host_no_ip_fuzzy + re.src_port + re.src_host_terminator;
-  re.tpl_host_fuzzy_test = "localhost|www\\.|\\.\\d{1,3}\\.|(?:\\.(?:%TLDS%)(?:" + re.src_ZPCc + "|>|$))";
-  re.tpl_email_fuzzy = "(^|" + text_separators + '|"|\\(|' + re.src_ZCc + ")(" + re.src_email_name + "@" + re.tpl_host_fuzzy_strict + ")";
-  re.tpl_link_fuzzy = // Fuzzy link can't be prepended with .:/\- and non punctuation.
-  // but can start with > (markdown blockquote)
-  "(^|(?![.:/\\-_@])(?:[$+<=>^`|｜]|" + re.src_ZPCc + "))((?![$+<=>^`|｜])" + re.tpl_host_port_fuzzy_strict + re.src_path + ")";
-  re.tpl_link_no_ip_fuzzy = // Fuzzy link can't be prepended with .:/\- and non punctuation.
-  // but can start with > (markdown blockquote)
-  "(^|(?![.:/\\-_@])(?:[$+<=>^`|｜]|" + re.src_ZPCc + "))((?![$+<=>^`|｜])" + re.tpl_host_port_no_ip_fuzzy_strict + re.src_path + ")";
-  return re;
-}
-function assign(obj) {
-  const sources = Array.prototype.slice.call(arguments, 1);
-  sources.forEach(function(source) {
-    if (!source) {
-      return;
-    }
-    Object.keys(source).forEach(function(key) {
-      obj[key] = source[key];
-    });
-  });
-  return obj;
-}
-function _class(obj) {
-  return Object.prototype.toString.call(obj);
-}
-function isString(obj) {
-  return _class(obj) === "[object String]";
-}
-function isObject(obj) {
-  return _class(obj) === "[object Object]";
-}
-function isRegExp(obj) {
-  return _class(obj) === "[object RegExp]";
-}
-function isFunction(obj) {
-  return _class(obj) === "[object Function]";
-}
-function escapeRE(str) {
-  return str.replace(/[.?*+^$[\]\\(){}|-]/g, "\\$&");
-}
-const defaultOptions = {
-  fuzzyLink: true,
-  fuzzyEmail: true,
-  fuzzyIP: false
-};
-function isOptionsObj(obj) {
-  return Object.keys(obj || {}).reduce(function(acc, k2) {
-    return acc || defaultOptions.hasOwnProperty(k2);
-  }, false);
-}
-const defaultSchemas = {
-  "http:": {
-    validate: function(text2, pos, self2) {
-      const tail = text2.slice(pos);
-      if (!self2.re.http) {
-        self2.re.http = new RegExp(
-          "^\\/\\/" + self2.re.src_auth + self2.re.src_host_port_strict + self2.re.src_path,
-          "i"
-        );
-      }
-      if (self2.re.http.test(tail)) {
-        return tail.match(self2.re.http)[0].length;
-      }
-      return 0;
-    }
-  },
-  "https:": "http:",
-  "ftp:": "http:",
-  "//": {
-    validate: function(text2, pos, self2) {
-      const tail = text2.slice(pos);
-      if (!self2.re.no_http) {
-        self2.re.no_http = new RegExp(
-          "^" + self2.re.src_auth + // Don't allow single-level domains, because of false positives like '//test'
-          // with code comments
-          "(?:localhost|(?:(?:" + self2.re.src_domain + ")\\.)+" + self2.re.src_domain_root + ")" + self2.re.src_port + self2.re.src_host_terminator + self2.re.src_path,
-          "i"
-        );
-      }
-      if (self2.re.no_http.test(tail)) {
-        if (pos >= 3 && text2[pos - 3] === ":") {
-          return 0;
-        }
-        if (pos >= 3 && text2[pos - 3] === "/") {
-          return 0;
-        }
-        return tail.match(self2.re.no_http)[0].length;
-      }
-      return 0;
-    }
-  },
-  "mailto:": {
-    validate: function(text2, pos, self2) {
-      const tail = text2.slice(pos);
-      if (!self2.re.mailto) {
-        self2.re.mailto = new RegExp(
-          "^" + self2.re.src_email_name + "@" + self2.re.src_host_strict,
-          "i"
-        );
-      }
-      if (self2.re.mailto.test(tail)) {
-        return tail.match(self2.re.mailto)[0].length;
-      }
-      return 0;
-    }
-  }
-};
-const tlds_2ch_src_re = "a[cdefgilmnoqrstuwxz]|b[abdefghijmnorstvwyz]|c[acdfghiklmnoruvwxyz]|d[ejkmoz]|e[cegrstu]|f[ijkmor]|g[abdefghilmnpqrstuwy]|h[kmnrtu]|i[delmnoqrst]|j[emop]|k[eghimnprwyz]|l[abcikrstuvy]|m[acdeghklmnopqrstuvwxyz]|n[acefgilopruz]|om|p[aefghklmnrstwy]|qa|r[eosuw]|s[abcdeghijklmnortuvxyz]|t[cdfghjklmnortvwz]|u[agksyz]|v[aceginu]|w[fs]|y[et]|z[amw]";
-const tlds_default = "biz|com|edu|gov|net|org|pro|web|xxx|aero|asia|coop|info|museum|name|shop|рф".split("|");
-function resetScanCache(self2) {
-  self2.__index__ = -1;
-  self2.__text_cache__ = "";
-}
-function createValidator(re) {
-  return function(text2, pos) {
-    const tail = text2.slice(pos);
-    if (re.test(tail)) {
-      return tail.match(re)[0].length;
-    }
-    return 0;
-  };
-}
-function createNormalizer() {
-  return function(match2, self2) {
-    self2.normalize(match2);
-  };
-}
-function compile(self2) {
-  const re = self2.re = reFactory(self2.__opts__);
-  const tlds2 = self2.__tlds__.slice();
-  self2.onCompile();
-  if (!self2.__tlds_replaced__) {
-    tlds2.push(tlds_2ch_src_re);
-  }
-  tlds2.push(re.src_xn);
-  re.src_tlds = tlds2.join("|");
-  function untpl(tpl) {
-    return tpl.replace("%TLDS%", re.src_tlds);
-  }
-  re.email_fuzzy = RegExp(untpl(re.tpl_email_fuzzy), "i");
-  re.link_fuzzy = RegExp(untpl(re.tpl_link_fuzzy), "i");
-  re.link_no_ip_fuzzy = RegExp(untpl(re.tpl_link_no_ip_fuzzy), "i");
-  re.host_fuzzy_test = RegExp(untpl(re.tpl_host_fuzzy_test), "i");
-  const aliases = [];
-  self2.__compiled__ = {};
-  function schemaError(name, val) {
-    throw new Error('(LinkifyIt) Invalid schema "' + name + '": ' + val);
-  }
-  Object.keys(self2.__schemas__).forEach(function(name) {
-    const val = self2.__schemas__[name];
-    if (val === null) {
-      return;
-    }
-    const compiled = { validate: null, link: null };
-    self2.__compiled__[name] = compiled;
-    if (isObject(val)) {
-      if (isRegExp(val.validate)) {
-        compiled.validate = createValidator(val.validate);
-      } else if (isFunction(val.validate)) {
-        compiled.validate = val.validate;
-      } else {
-        schemaError(name, val);
-      }
-      if (isFunction(val.normalize)) {
-        compiled.normalize = val.normalize;
-      } else if (!val.normalize) {
-        compiled.normalize = createNormalizer();
-      } else {
-        schemaError(name, val);
-      }
-      return;
-    }
-    if (isString(val)) {
-      aliases.push(name);
-      return;
-    }
-    schemaError(name, val);
-  });
-  aliases.forEach(function(alias) {
-    if (!self2.__compiled__[self2.__schemas__[alias]]) {
-      return;
-    }
-    self2.__compiled__[alias].validate = self2.__compiled__[self2.__schemas__[alias]].validate;
-    self2.__compiled__[alias].normalize = self2.__compiled__[self2.__schemas__[alias]].normalize;
-  });
-  self2.__compiled__[""] = { validate: null, normalize: createNormalizer() };
-  const slist = Object.keys(self2.__compiled__).filter(function(name) {
-    return name.length > 0 && self2.__compiled__[name];
-  }).map(escapeRE).join("|");
-  self2.re.schema_test = RegExp("(^|(?!_)(?:[><｜]|" + re.src_ZPCc + "))(" + slist + ")", "i");
-  self2.re.schema_search = RegExp("(^|(?!_)(?:[><｜]|" + re.src_ZPCc + "))(" + slist + ")", "ig");
-  self2.re.schema_at_start = RegExp("^" + self2.re.schema_search.source, "i");
-  self2.re.pretest = RegExp(
-    "(" + self2.re.schema_test.source + ")|(" + self2.re.host_fuzzy_test.source + ")|@",
-    "i"
-  );
-  resetScanCache(self2);
-}
-function Match(self2, shift) {
-  const start = self2.__index__;
-  const end = self2.__last_index__;
-  const text2 = self2.__text_cache__.slice(start, end);
-  this.schema = self2.__schema__.toLowerCase();
-  this.index = start + shift;
-  this.lastIndex = end + shift;
-  this.raw = text2;
-  this.text = text2;
-  this.url = text2;
-}
-function createMatch(self2, shift) {
-  const match2 = new Match(self2, shift);
-  self2.__compiled__[match2.schema].normalize(match2, self2);
-  return match2;
-}
-function LinkifyIt(schemas, options) {
-  if (!(this instanceof LinkifyIt)) {
-    return new LinkifyIt(schemas, options);
-  }
-  if (!options) {
-    if (isOptionsObj(schemas)) {
-      options = schemas;
-      schemas = {};
-    }
-  }
-  this.__opts__ = assign({}, defaultOptions, options);
-  this.__index__ = -1;
-  this.__last_index__ = -1;
-  this.__schema__ = "";
-  this.__text_cache__ = "";
-  this.__schemas__ = assign({}, defaultSchemas, schemas);
-  this.__compiled__ = {};
-  this.__tlds__ = tlds_default;
-  this.__tlds_replaced__ = false;
-  this.re = {};
-  compile(this);
-}
-LinkifyIt.prototype.add = function add(schema, definition) {
-  this.__schemas__[schema] = definition;
-  compile(this);
-  return this;
-};
-LinkifyIt.prototype.set = function set(options) {
-  this.__opts__ = assign(this.__opts__, options);
-  return this;
-};
-LinkifyIt.prototype.test = function test(text2) {
-  this.__text_cache__ = text2;
-  this.__index__ = -1;
-  if (!text2.length) {
-    return false;
-  }
-  let m2, ml, me, len, shift, next, re, tld_pos, at_pos;
-  if (this.re.schema_test.test(text2)) {
-    re = this.re.schema_search;
-    re.lastIndex = 0;
-    while ((m2 = re.exec(text2)) !== null) {
-      len = this.testSchemaAt(text2, m2[2], re.lastIndex);
-      if (len) {
-        this.__schema__ = m2[2];
-        this.__index__ = m2.index + m2[1].length;
-        this.__last_index__ = m2.index + m2[0].length + len;
-        break;
-      }
-    }
-  }
-  if (this.__opts__.fuzzyLink && this.__compiled__["http:"]) {
-    tld_pos = text2.search(this.re.host_fuzzy_test);
-    if (tld_pos >= 0) {
-      if (this.__index__ < 0 || tld_pos < this.__index__) {
-        if ((ml = text2.match(this.__opts__.fuzzyIP ? this.re.link_fuzzy : this.re.link_no_ip_fuzzy)) !== null) {
-          shift = ml.index + ml[1].length;
-          if (this.__index__ < 0 || shift < this.__index__) {
-            this.__schema__ = "";
-            this.__index__ = shift;
-            this.__last_index__ = ml.index + ml[0].length;
-          }
-        }
-      }
-    }
-  }
-  if (this.__opts__.fuzzyEmail && this.__compiled__["mailto:"]) {
-    at_pos = text2.indexOf("@");
-    if (at_pos >= 0) {
-      if ((me = text2.match(this.re.email_fuzzy)) !== null) {
-        shift = me.index + me[1].length;
-        next = me.index + me[0].length;
-        if (this.__index__ < 0 || shift < this.__index__ || shift === this.__index__ && next > this.__last_index__) {
-          this.__schema__ = "mailto:";
-          this.__index__ = shift;
-          this.__last_index__ = next;
-        }
-      }
-    }
-  }
-  return this.__index__ >= 0;
-};
-LinkifyIt.prototype.pretest = function pretest(text2) {
-  return this.re.pretest.test(text2);
-};
-LinkifyIt.prototype.testSchemaAt = function testSchemaAt(text2, schema, pos) {
-  if (!this.__compiled__[schema.toLowerCase()]) {
-    return 0;
-  }
-  return this.__compiled__[schema.toLowerCase()].validate(text2, pos, this);
-};
-LinkifyIt.prototype.match = function match(text2) {
-  const result = [];
-  let shift = 0;
-  if (this.__index__ >= 0 && this.__text_cache__ === text2) {
-    result.push(createMatch(this, shift));
-    shift = this.__last_index__;
-  }
-  let tail = shift ? text2.slice(shift) : text2;
-  while (this.test(tail)) {
-    result.push(createMatch(this, shift));
-    tail = tail.slice(this.__last_index__);
-    shift += this.__last_index__;
-  }
-  if (result.length) {
-    return result;
-  }
-  return null;
-};
-LinkifyIt.prototype.matchAtStart = function matchAtStart(text2) {
-  this.__text_cache__ = text2;
-  this.__index__ = -1;
-  if (!text2.length) return null;
-  const m2 = this.re.schema_at_start.exec(text2);
-  if (!m2) return null;
-  const len = this.testSchemaAt(text2, m2[2], m2[0].length);
-  if (!len) return null;
-  this.__schema__ = m2[2];
-  this.__index__ = m2.index + m2[1].length;
-  this.__last_index__ = m2.index + m2[0].length + len;
-  return createMatch(this, 0);
-};
-LinkifyIt.prototype.tlds = function tlds(list2, keepOld) {
-  list2 = Array.isArray(list2) ? list2 : [list2];
-  if (!keepOld) {
-    this.__tlds__ = list2.slice();
-    this.__tlds_replaced__ = true;
-    compile(this);
-    return this;
-  }
-  this.__tlds__ = this.__tlds__.concat(list2).sort().filter(function(el, idx, arr) {
-    return el !== arr[idx - 1];
-  }).reverse();
-  compile(this);
-  return this;
-};
-LinkifyIt.prototype.normalize = function normalize2(match2) {
-  if (!match2.schema) {
-    match2.url = "http://" + match2.url;
-  }
-  if (match2.schema === "mailto:" && !/^mailto:/i.test(match2.url)) {
-    match2.url = "mailto:" + match2.url;
-  }
-};
-LinkifyIt.prototype.onCompile = function onCompile() {
-};
-const maxInt = 2147483647;
-const base = 36;
-const tMin = 1;
-const tMax = 26;
-const skew = 38;
-const damp = 700;
-const initialBias = 72;
-const initialN = 128;
-const delimiter = "-";
-const regexPunycode = /^xn--/;
-const regexNonASCII = /[^\0-\x7F]/;
-const regexSeparators = /[\x2E\u3002\uFF0E\uFF61]/g;
-const errors = {
-  "overflow": "Overflow: input needs wider integers to process",
-  "not-basic": "Illegal input >= 0x80 (not a basic code point)",
-  "invalid-input": "Invalid input"
-};
-const baseMinusTMin = base - tMin;
-const floor = Math.floor;
-const stringFromCharCode = String.fromCharCode;
-function error(type) {
-  throw new RangeError(errors[type]);
-}
-function map(array, callback) {
-  const result = [];
-  let length = array.length;
-  while (length--) {
-    result[length] = callback(array[length]);
-  }
-  return result;
-}
-function mapDomain(domain, callback) {
-  const parts = domain.split("@");
-  let result = "";
-  if (parts.length > 1) {
-    result = parts[0] + "@";
-    domain = parts[1];
-  }
-  domain = domain.replace(regexSeparators, ".");
-  const labels = domain.split(".");
-  const encoded = map(labels, callback).join(".");
-  return result + encoded;
-}
-function ucs2decode(string) {
-  const output = [];
-  let counter = 0;
-  const length = string.length;
-  while (counter < length) {
-    const value = string.charCodeAt(counter++);
-    if (value >= 55296 && value <= 56319 && counter < length) {
-      const extra = string.charCodeAt(counter++);
-      if ((extra & 64512) == 56320) {
-        output.push(((value & 1023) << 10) + (extra & 1023) + 65536);
-      } else {
-        output.push(value);
-        counter--;
-      }
-    } else {
-      output.push(value);
-    }
-  }
-  return output;
-}
-const ucs2encode = (codePoints) => String.fromCodePoint(...codePoints);
-const basicToDigit = function(codePoint) {
-  if (codePoint >= 48 && codePoint < 58) {
-    return 26 + (codePoint - 48);
-  }
-  if (codePoint >= 65 && codePoint < 91) {
-    return codePoint - 65;
-  }
-  if (codePoint >= 97 && codePoint < 123) {
-    return codePoint - 97;
-  }
-  return base;
-};
-const digitToBasic = function(digit, flag) {
-  return digit + 22 + 75 * (digit < 26) - ((flag != 0) << 5);
-};
-const adapt = function(delta, numPoints, firstTime) {
-  let k2 = 0;
-  delta = firstTime ? floor(delta / damp) : delta >> 1;
-  delta += floor(delta / numPoints);
-  for (; delta > baseMinusTMin * tMax >> 1; k2 += base) {
-    delta = floor(delta / baseMinusTMin);
-  }
-  return floor(k2 + (baseMinusTMin + 1) * delta / (delta + skew));
-};
-const decode = function(input) {
-  const output = [];
-  const inputLength = input.length;
-  let i2 = 0;
-  let n2 = initialN;
-  let bias = initialBias;
-  let basic = input.lastIndexOf(delimiter);
-  if (basic < 0) {
-    basic = 0;
-  }
-  for (let j = 0; j < basic; ++j) {
-    if (input.charCodeAt(j) >= 128) {
-      error("not-basic");
-    }
-    output.push(input.charCodeAt(j));
-  }
-  for (let index = basic > 0 ? basic + 1 : 0; index < inputLength; ) {
-    const oldi = i2;
-    for (let w = 1, k2 = base; ; k2 += base) {
-      if (index >= inputLength) {
-        error("invalid-input");
-      }
-      const digit = basicToDigit(input.charCodeAt(index++));
-      if (digit >= base) {
-        error("invalid-input");
-      }
-      if (digit > floor((maxInt - i2) / w)) {
-        error("overflow");
-      }
-      i2 += digit * w;
-      const t2 = k2 <= bias ? tMin : k2 >= bias + tMax ? tMax : k2 - bias;
-      if (digit < t2) {
-        break;
-      }
-      const baseMinusT = base - t2;
-      if (w > floor(maxInt / baseMinusT)) {
-        error("overflow");
-      }
-      w *= baseMinusT;
-    }
-    const out = output.length + 1;
-    bias = adapt(i2 - oldi, out, oldi == 0);
-    if (floor(i2 / out) > maxInt - n2) {
-      error("overflow");
-    }
-    n2 += floor(i2 / out);
-    i2 %= out;
-    output.splice(i2++, 0, n2);
-  }
-  return String.fromCodePoint(...output);
-};
-const encode = function(input) {
-  const output = [];
-  input = ucs2decode(input);
-  const inputLength = input.length;
-  let n2 = initialN;
-  let delta = 0;
-  let bias = initialBias;
-  for (const currentValue of input) {
-    if (currentValue < 128) {
-      output.push(stringFromCharCode(currentValue));
-    }
-  }
-  const basicLength = output.length;
-  let handledCPCount = basicLength;
-  if (basicLength) {
-    output.push(delimiter);
-  }
-  while (handledCPCount < inputLength) {
-    let m2 = maxInt;
-    for (const currentValue of input) {
-      if (currentValue >= n2 && currentValue < m2) {
-        m2 = currentValue;
-      }
-    }
-    const handledCPCountPlusOne = handledCPCount + 1;
-    if (m2 - n2 > floor((maxInt - delta) / handledCPCountPlusOne)) {
-      error("overflow");
-    }
-    delta += (m2 - n2) * handledCPCountPlusOne;
-    n2 = m2;
-    for (const currentValue of input) {
-      if (currentValue < n2 && ++delta > maxInt) {
-        error("overflow");
-      }
-      if (currentValue === n2) {
-        let q = delta;
-        for (let k2 = base; ; k2 += base) {
-          const t2 = k2 <= bias ? tMin : k2 >= bias + tMax ? tMax : k2 - bias;
-          if (q < t2) {
-            break;
-          }
-          const qMinusT = q - t2;
-          const baseMinusT = base - t2;
-          output.push(
-            stringFromCharCode(digitToBasic(t2 + qMinusT % baseMinusT, 0))
-          );
-          q = floor(qMinusT / baseMinusT);
-        }
-        output.push(stringFromCharCode(digitToBasic(q, 0)));
-        bias = adapt(delta, handledCPCountPlusOne, handledCPCount === basicLength);
-        delta = 0;
-        ++handledCPCount;
-      }
-    }
-    ++delta;
-    ++n2;
-  }
-  return output.join("");
-};
-const toUnicode = function(input) {
-  return mapDomain(input, function(string) {
-    return regexPunycode.test(string) ? decode(string.slice(4).toLowerCase()) : string;
-  });
-};
-const toASCII = function(input) {
-  return mapDomain(input, function(string) {
-    return regexNonASCII.test(string) ? "xn--" + encode(string) : string;
-  });
-};
-const punycode = {
-  /**
-   * A string representing the current Punycode.js version number.
-   * @memberOf punycode
-   * @type String
-   */
-  "version": "2.3.1",
-  /**
-   * An object of methods to convert from JavaScript's internal character
-   * representation (UCS-2) to Unicode code points, and back.
-   * @see <https://mathiasbynens.be/notes/javascript-encoding>
-   * @memberOf punycode
-   * @type Object
-   */
-  "ucs2": {
-    "decode": ucs2decode,
-    "encode": ucs2encode
-  },
-  "decode": decode,
-  "encode": encode,
-  "toASCII": toASCII,
-  "toUnicode": toUnicode
-};
-const cfg_default = {
-  options: {
-    // Enable HTML tags in source
-    html: false,
-    // Use '/' to close single tags (<br />)
-    xhtmlOut: false,
-    // Convert '\n' in paragraphs into <br>
-    breaks: false,
-    // CSS language prefix for fenced blocks
-    langPrefix: "language-",
-    // autoconvert URL-like texts to links
-    linkify: false,
-    // Enable some language-neutral replacements + quotes beautification
-    typographer: false,
-    // Double + single quotes replacement pairs, when typographer enabled,
-    // and smartquotes on. Could be either a String or an Array.
-    //
-    // For example, you can use '«»„“' for Russian, '„“‚‘' for German,
-    // and ['«\xA0', '\xA0»', '‹\xA0', '\xA0›'] for French (including nbsp).
-    quotes: "“”‘’",
-    /* “”‘’ */
-    // Highlighter function. Should return escaped HTML,
-    // or '' if the source string is not changed and should be escaped externaly.
-    // If result starts with <pre... internal wrapper is skipped.
-    //
-    // function (/*str, lang*/) { return ''; }
-    //
-    highlight: null,
-    // Internal protection, recursion limit
-    maxNesting: 100
-  },
-  components: {
-    core: {},
-    block: {},
-    inline: {}
-  }
-};
-const cfg_zero = {
-  options: {
-    // Enable HTML tags in source
-    html: false,
-    // Use '/' to close single tags (<br />)
-    xhtmlOut: false,
-    // Convert '\n' in paragraphs into <br>
-    breaks: false,
-    // CSS language prefix for fenced blocks
-    langPrefix: "language-",
-    // autoconvert URL-like texts to links
-    linkify: false,
-    // Enable some language-neutral replacements + quotes beautification
-    typographer: false,
-    // Double + single quotes replacement pairs, when typographer enabled,
-    // and smartquotes on. Could be either a String or an Array.
-    //
-    // For example, you can use '«»„“' for Russian, '„“‚‘' for German,
-    // and ['«\xA0', '\xA0»', '‹\xA0', '\xA0›'] for French (including nbsp).
-    quotes: "“”‘’",
-    /* “”‘’ */
-    // Highlighter function. Should return escaped HTML,
-    // or '' if the source string is not changed and should be escaped externaly.
-    // If result starts with <pre... internal wrapper is skipped.
-    //
-    // function (/*str, lang*/) { return ''; }
-    //
-    highlight: null,
-    // Internal protection, recursion limit
-    maxNesting: 20
-  },
-  components: {
-    core: {
-      rules: [
-        "normalize",
-        "block",
-        "inline",
-        "text_join"
-      ]
-    },
-    block: {
-      rules: [
-        "paragraph"
-      ]
-    },
-    inline: {
-      rules: [
-        "text"
-      ],
-      rules2: [
-        "balance_pairs",
-        "fragments_join"
-      ]
-    }
-  }
-};
-const cfg_commonmark = {
-  options: {
-    // Enable HTML tags in source
-    html: true,
-    // Use '/' to close single tags (<br />)
-    xhtmlOut: true,
-    // Convert '\n' in paragraphs into <br>
-    breaks: false,
-    // CSS language prefix for fenced blocks
-    langPrefix: "language-",
-    // autoconvert URL-like texts to links
-    linkify: false,
-    // Enable some language-neutral replacements + quotes beautification
-    typographer: false,
-    // Double + single quotes replacement pairs, when typographer enabled,
-    // and smartquotes on. Could be either a String or an Array.
-    //
-    // For example, you can use '«»„“' for Russian, '„“‚‘' for German,
-    // and ['«\xA0', '\xA0»', '‹\xA0', '\xA0›'] for French (including nbsp).
-    quotes: "“”‘’",
-    /* “”‘’ */
-    // Highlighter function. Should return escaped HTML,
-    // or '' if the source string is not changed and should be escaped externaly.
-    // If result starts with <pre... internal wrapper is skipped.
-    //
-    // function (/*str, lang*/) { return ''; }
-    //
-    highlight: null,
-    // Internal protection, recursion limit
-    maxNesting: 20
-  },
-  components: {
-    core: {
-      rules: [
-        "normalize",
-        "block",
-        "inline",
-        "text_join"
-      ]
-    },
-    block: {
-      rules: [
-        "blockquote",
-        "code",
-        "fence",
-        "heading",
-        "hr",
-        "html_block",
-        "lheading",
-        "list",
-        "reference",
-        "paragraph"
-      ]
-    },
-    inline: {
-      rules: [
-        "autolink",
-        "backticks",
-        "emphasis",
-        "entity",
-        "escape",
-        "html_inline",
-        "image",
-        "link",
-        "newline",
-        "text"
-      ],
-      rules2: [
-        "balance_pairs",
-        "emphasis",
-        "fragments_join"
-      ]
-    }
-  }
-};
-const config = {
-  default: cfg_default,
-  zero: cfg_zero,
-  commonmark: cfg_commonmark
-};
-const BAD_PROTO_RE = /^(vbscript|javascript|file|data):/;
-const GOOD_DATA_RE = /^data:image\/(gif|png|jpeg|webp);/;
-function validateLink(url) {
-  const str = url.trim().toLowerCase();
-  return BAD_PROTO_RE.test(str) ? GOOD_DATA_RE.test(str) : true;
-}
-const RECODE_HOSTNAME_FOR = ["http:", "https:", "mailto:"];
-function normalizeLink(url) {
-  const parsed = urlParse(url, true);
-  if (parsed.hostname) {
-    if (!parsed.protocol || RECODE_HOSTNAME_FOR.indexOf(parsed.protocol) >= 0) {
-      try {
-        parsed.hostname = punycode.toASCII(parsed.hostname);
-      } catch (er) {
-      }
-    }
-  }
-  return encode$1(format(parsed));
-}
-function normalizeLinkText(url) {
-  const parsed = urlParse(url, true);
-  if (parsed.hostname) {
-    if (!parsed.protocol || RECODE_HOSTNAME_FOR.indexOf(parsed.protocol) >= 0) {
-      try {
-        parsed.hostname = punycode.toUnicode(parsed.hostname);
-      } catch (er) {
-      }
-    }
-  }
-  return decode$1(format(parsed), decode$1.defaultChars + "%");
-}
-function MarkdownIt(presetName, options) {
-  if (!(this instanceof MarkdownIt)) {
-    return new MarkdownIt(presetName, options);
-  }
-  if (!options) {
-    if (!isString$1(presetName)) {
-      options = presetName || {};
-      presetName = "default";
-    }
-  }
-  this.inline = new ParserInline();
-  this.block = new ParserBlock();
-  this.core = new Core();
-  this.renderer = new Renderer();
-  this.linkify = new LinkifyIt();
-  this.validateLink = validateLink;
-  this.normalizeLink = normalizeLink;
-  this.normalizeLinkText = normalizeLinkText;
-  this.utils = utils;
-  this.helpers = assign$1({}, helpers);
-  this.options = {};
-  this.configure(presetName);
-  if (options) {
-    this.set(options);
-  }
-}
-MarkdownIt.prototype.set = function(options) {
-  assign$1(this.options, options);
-  return this;
-};
-MarkdownIt.prototype.configure = function(presets) {
-  const self2 = this;
-  if (isString$1(presets)) {
-    const presetName = presets;
-    presets = config[presetName];
-    if (!presets) {
-      throw new Error('Wrong `markdown-it` preset "' + presetName + '", check name');
-    }
-  }
-  if (!presets) {
-    throw new Error("Wrong `markdown-it` preset, can't be empty");
-  }
-  if (presets.options) {
-    self2.set(presets.options);
-  }
-  if (presets.components) {
-    Object.keys(presets.components).forEach(function(name) {
-      if (presets.components[name].rules) {
-        self2[name].ruler.enableOnly(presets.components[name].rules);
-      }
-      if (presets.components[name].rules2) {
-        self2[name].ruler2.enableOnly(presets.components[name].rules2);
-      }
-    });
-  }
-  return this;
-};
-MarkdownIt.prototype.enable = function(list2, ignoreInvalid) {
-  let result = [];
-  if (!Array.isArray(list2)) {
-    list2 = [list2];
-  }
-  ["core", "block", "inline"].forEach(function(chain) {
-    result = result.concat(this[chain].ruler.enable(list2, true));
-  }, this);
-  result = result.concat(this.inline.ruler2.enable(list2, true));
-  const missed = list2.filter(function(name) {
-    return result.indexOf(name) < 0;
-  });
-  if (missed.length && !ignoreInvalid) {
-    throw new Error("MarkdownIt. Failed to enable unknown rule(s): " + missed);
-  }
-  return this;
-};
-MarkdownIt.prototype.disable = function(list2, ignoreInvalid) {
-  let result = [];
-  if (!Array.isArray(list2)) {
-    list2 = [list2];
-  }
-  ["core", "block", "inline"].forEach(function(chain) {
-    result = result.concat(this[chain].ruler.disable(list2, true));
-  }, this);
-  result = result.concat(this.inline.ruler2.disable(list2, true));
-  const missed = list2.filter(function(name) {
-    return result.indexOf(name) < 0;
-  });
-  if (missed.length && !ignoreInvalid) {
-    throw new Error("MarkdownIt. Failed to disable unknown rule(s): " + missed);
-  }
-  return this;
-};
-MarkdownIt.prototype.use = function(plugin) {
-  const args = [this].concat(Array.prototype.slice.call(arguments, 1));
-  plugin.apply(plugin, args);
-  return this;
-};
-MarkdownIt.prototype.parse = function(src, env) {
-  if (typeof src !== "string") {
-    throw new Error("Input data should be a String");
-  }
-  const state = new this.core.State(src, this, env);
-  this.core.process(state);
-  return state.tokens;
-};
-MarkdownIt.prototype.render = function(src, env) {
-  env = env || {};
-  return this.renderer.render(this.parse(src, env), this.options, env);
-};
-MarkdownIt.prototype.parseInline = function(src, env) {
-  const state = new this.core.State(src, this, env);
-  state.inlineMode = true;
-  this.core.process(state);
-  return state.tokens;
-};
-MarkdownIt.prototype.renderInline = function(src, env) {
-  env = env || {};
-  return this.renderer.render(this.parseInline(src, env), this.options, env);
-};
 function getDefaultExportFromCjs(x) {
   return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, "default") ? x["default"] : x;
 }
@@ -72503,10 +66882,10 @@ function requireZephir() {
   zephir_1 = zephir;
   return zephir_1;
 }
-var lib;
+var lib$1;
 var hasRequiredLib;
 function requireLib() {
-  if (hasRequiredLib) return lib;
+  if (hasRequiredLib) return lib$1;
   hasRequiredLib = 1;
   var hljs = /* @__PURE__ */ requireCore();
   hljs.registerLanguage("1c", /* @__PURE__ */ require_1c());
@@ -72703,27 +67082,5651 @@ function requireLib() {
   hljs.registerLanguage("zephir", /* @__PURE__ */ requireZephir());
   hljs.HighlightJS = hljs;
   hljs.default = hljs;
-  lib = hljs;
-  return lib;
+  lib$1 = hljs;
+  return lib$1;
 }
 var libExports = /* @__PURE__ */ requireLib();
 const HighlightJS = /* @__PURE__ */ getDefaultExportFromCjs(libExports);
+const _hoisted_1$6 = { class: "container" };
+const _hoisted_2$5 = { class: "App" };
+const _hoisted_3$5 = { class: "MainContent" };
+const _hoisted_4$4 = { class: "tibar" };
+const _hoisted_5$3 = { class: "router-view-wrapper" };
+const _sfc_main$7 = {
+  __name: "App",
+  setup(__props) {
+    HighlightJS.configure({
+      languages: ["javascript", "vue", "html", "css", "json", "bash", "markdown"]
+    });
+    return (_ctx, _cache) => {
+      const _component_router_view = resolveComponent("router-view");
+      return openBlock(), createElementBlock("div", _hoisted_1$6, [
+        createBaseVNode("div", _hoisted_2$5, [
+          createVNode(SidebarNav, { class: "SidebarNav" }),
+          createBaseVNode("div", _hoisted_3$5, [
+            createBaseVNode("div", _hoisted_4$4, [
+              createVNode(_sfc_main$9)
+            ]),
+            createBaseVNode("div", _hoisted_5$3, [
+              createVNode(_component_router_view, null, {
+                default: withCtx(({ Component }) => [
+                  (openBlock(), createBlock(KeepAlive, null, [
+                    (openBlock(), createBlock(resolveDynamicComponent(Component)))
+                  ], 1024))
+                ]),
+                _: 1
+              })
+            ])
+          ])
+        ])
+      ]);
+    };
+  }
+};
+var FilterMatchMode = {
+  STARTS_WITH: "startsWith",
+  CONTAINS: "contains",
+  NOT_CONTAINS: "notContains",
+  ENDS_WITH: "endsWith",
+  EQUALS: "equals",
+  NOT_EQUALS: "notEquals",
+  LESS_THAN: "lt",
+  LESS_THAN_OR_EQUAL_TO: "lte",
+  GREATER_THAN: "gt",
+  GREATER_THAN_OR_EQUAL_TO: "gte",
+  DATE_IS: "dateIs",
+  DATE_IS_NOT: "dateIsNot",
+  DATE_BEFORE: "dateBefore",
+  DATE_AFTER: "dateAfter"
+};
+function _typeof$1(o2) {
+  "@babel/helpers - typeof";
+  return _typeof$1 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o3) {
+    return typeof o3;
+  } : function(o3) {
+    return o3 && "function" == typeof Symbol && o3.constructor === Symbol && o3 !== Symbol.prototype ? "symbol" : typeof o3;
+  }, _typeof$1(o2);
+}
+function ownKeys(e2, r2) {
+  var t2 = Object.keys(e2);
+  if (Object.getOwnPropertySymbols) {
+    var o2 = Object.getOwnPropertySymbols(e2);
+    r2 && (o2 = o2.filter(function(r3) {
+      return Object.getOwnPropertyDescriptor(e2, r3).enumerable;
+    })), t2.push.apply(t2, o2);
+  }
+  return t2;
+}
+function _objectSpread(e2) {
+  for (var r2 = 1; r2 < arguments.length; r2++) {
+    var t2 = null != arguments[r2] ? arguments[r2] : {};
+    r2 % 2 ? ownKeys(Object(t2), true).forEach(function(r3) {
+      _defineProperty$1(e2, r3, t2[r3]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e2, Object.getOwnPropertyDescriptors(t2)) : ownKeys(Object(t2)).forEach(function(r3) {
+      Object.defineProperty(e2, r3, Object.getOwnPropertyDescriptor(t2, r3));
+    });
+  }
+  return e2;
+}
+function _defineProperty$1(e2, r2, t2) {
+  return (r2 = _toPropertyKey$1(r2)) in e2 ? Object.defineProperty(e2, r2, { value: t2, enumerable: true, configurable: true, writable: true }) : e2[r2] = t2, e2;
+}
+function _toPropertyKey$1(t2) {
+  var i2 = _toPrimitive$1(t2, "string");
+  return "symbol" == _typeof$1(i2) ? i2 : i2 + "";
+}
+function _toPrimitive$1(t2, r2) {
+  if ("object" != _typeof$1(t2) || !t2) return t2;
+  var e2 = t2[Symbol.toPrimitive];
+  if (void 0 !== e2) {
+    var i2 = e2.call(t2, r2);
+    if ("object" != _typeof$1(i2)) return i2;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r2 ? String : Number)(t2);
+}
+var defaultOptions$1 = {
+  ripple: false,
+  inputStyle: null,
+  inputVariant: null,
+  locale: {
+    startsWith: "Starts with",
+    contains: "Contains",
+    notContains: "Not contains",
+    endsWith: "Ends with",
+    equals: "Equals",
+    notEquals: "Not equals",
+    noFilter: "No Filter",
+    lt: "Less than",
+    lte: "Less than or equal to",
+    gt: "Greater than",
+    gte: "Greater than or equal to",
+    dateIs: "Date is",
+    dateIsNot: "Date is not",
+    dateBefore: "Date is before",
+    dateAfter: "Date is after",
+    clear: "Clear",
+    apply: "Apply",
+    matchAll: "Match All",
+    matchAny: "Match Any",
+    addRule: "Add Rule",
+    removeRule: "Remove Rule",
+    accept: "Yes",
+    reject: "No",
+    choose: "Choose",
+    upload: "Upload",
+    cancel: "Cancel",
+    completed: "Completed",
+    pending: "Pending",
+    fileSizeTypes: ["B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"],
+    dayNames: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    dayNamesShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    dayNamesMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
+    monthNames: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+    monthNamesShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    chooseYear: "Choose Year",
+    chooseMonth: "Choose Month",
+    chooseDate: "Choose Date",
+    prevDecade: "Previous Decade",
+    nextDecade: "Next Decade",
+    prevYear: "Previous Year",
+    nextYear: "Next Year",
+    prevMonth: "Previous Month",
+    nextMonth: "Next Month",
+    prevHour: "Previous Hour",
+    nextHour: "Next Hour",
+    prevMinute: "Previous Minute",
+    nextMinute: "Next Minute",
+    prevSecond: "Previous Second",
+    nextSecond: "Next Second",
+    am: "am",
+    pm: "pm",
+    today: "Today",
+    weekHeader: "Wk",
+    firstDayOfWeek: 0,
+    showMonthAfterYear: false,
+    dateFormat: "mm/dd/yy",
+    weak: "Weak",
+    medium: "Medium",
+    strong: "Strong",
+    passwordPrompt: "Enter a password",
+    emptyFilterMessage: "No results found",
+    searchMessage: "{0} results are available",
+    selectionMessage: "{0} items selected",
+    emptySelectionMessage: "No selected item",
+    emptySearchMessage: "No results found",
+    fileChosenMessage: "{0} files",
+    noFileChosenMessage: "No file chosen",
+    emptyMessage: "No available options",
+    aria: {
+      trueLabel: "True",
+      falseLabel: "False",
+      nullLabel: "Not Selected",
+      star: "1 star",
+      stars: "{star} stars",
+      selectAll: "All items selected",
+      unselectAll: "All items unselected",
+      close: "Close",
+      previous: "Previous",
+      next: "Next",
+      navigation: "Navigation",
+      scrollTop: "Scroll Top",
+      moveTop: "Move Top",
+      moveUp: "Move Up",
+      moveDown: "Move Down",
+      moveBottom: "Move Bottom",
+      moveToTarget: "Move to Target",
+      moveToSource: "Move to Source",
+      moveAllToTarget: "Move All to Target",
+      moveAllToSource: "Move All to Source",
+      pageLabel: "Page {page}",
+      firstPageLabel: "First Page",
+      lastPageLabel: "Last Page",
+      nextPageLabel: "Next Page",
+      prevPageLabel: "Previous Page",
+      rowsPerPageLabel: "Rows per page",
+      jumpToPageDropdownLabel: "Jump to Page Dropdown",
+      jumpToPageInputLabel: "Jump to Page Input",
+      selectRow: "Row Selected",
+      unselectRow: "Row Unselected",
+      expandRow: "Row Expanded",
+      collapseRow: "Row Collapsed",
+      showFilterMenu: "Show Filter Menu",
+      hideFilterMenu: "Hide Filter Menu",
+      filterOperator: "Filter Operator",
+      filterConstraint: "Filter Constraint",
+      editRow: "Row Edit",
+      saveEdit: "Save Edit",
+      cancelEdit: "Cancel Edit",
+      listView: "List View",
+      gridView: "Grid View",
+      slide: "Slide",
+      slideNumber: "{slideNumber}",
+      zoomImage: "Zoom Image",
+      zoomIn: "Zoom In",
+      zoomOut: "Zoom Out",
+      rotateRight: "Rotate Right",
+      rotateLeft: "Rotate Left",
+      listLabel: "Option List"
+    }
+  },
+  filterMatchModeOptions: {
+    text: [FilterMatchMode.STARTS_WITH, FilterMatchMode.CONTAINS, FilterMatchMode.NOT_CONTAINS, FilterMatchMode.ENDS_WITH, FilterMatchMode.EQUALS, FilterMatchMode.NOT_EQUALS],
+    numeric: [FilterMatchMode.EQUALS, FilterMatchMode.NOT_EQUALS, FilterMatchMode.LESS_THAN, FilterMatchMode.LESS_THAN_OR_EQUAL_TO, FilterMatchMode.GREATER_THAN, FilterMatchMode.GREATER_THAN_OR_EQUAL_TO],
+    date: [FilterMatchMode.DATE_IS, FilterMatchMode.DATE_IS_NOT, FilterMatchMode.DATE_BEFORE, FilterMatchMode.DATE_AFTER]
+  },
+  zIndex: {
+    modal: 1100,
+    overlay: 1e3,
+    menu: 1e3,
+    tooltip: 1100
+  },
+  theme: void 0,
+  unstyled: false,
+  pt: void 0,
+  ptOptions: {
+    mergeSections: true,
+    mergeProps: false
+  },
+  csp: {
+    nonce: void 0
+  }
+};
+var PrimeVueSymbol = Symbol();
+function setup(app2, options) {
+  var PrimeVue2 = {
+    config: reactive(options)
+  };
+  app2.config.globalProperties.$primevue = PrimeVue2;
+  app2.provide(PrimeVueSymbol, PrimeVue2);
+  clearConfig();
+  setupConfig(app2, PrimeVue2);
+  return PrimeVue2;
+}
+var stopWatchers = [];
+function clearConfig() {
+  service_default.clear();
+  stopWatchers.forEach(function(fn) {
+    return fn === null || fn === void 0 ? void 0 : fn();
+  });
+  stopWatchers = [];
+}
+function setupConfig(app2, PrimeVue2) {
+  var isThemeChanged = ref(false);
+  var loadCommonTheme = function loadCommonTheme2() {
+    var _PrimeVue$config;
+    if (((_PrimeVue$config = PrimeVue2.config) === null || _PrimeVue$config === void 0 ? void 0 : _PrimeVue$config.theme) === "none") return;
+    if (!config_default.isStyleNameLoaded("common")) {
+      var _BaseStyle$getCommonT, _PrimeVue$config2;
+      var _ref = ((_BaseStyle$getCommonT = BaseStyle.getCommonTheme) === null || _BaseStyle$getCommonT === void 0 ? void 0 : _BaseStyle$getCommonT.call(BaseStyle)) || {}, primitive = _ref.primitive, semantic = _ref.semantic, global2 = _ref.global, style2 = _ref.style;
+      var styleOptions = {
+        nonce: (_PrimeVue$config2 = PrimeVue2.config) === null || _PrimeVue$config2 === void 0 || (_PrimeVue$config2 = _PrimeVue$config2.csp) === null || _PrimeVue$config2 === void 0 ? void 0 : _PrimeVue$config2.nonce
+      };
+      BaseStyle.load(primitive === null || primitive === void 0 ? void 0 : primitive.css, _objectSpread({
+        name: "primitive-variables"
+      }, styleOptions));
+      BaseStyle.load(semantic === null || semantic === void 0 ? void 0 : semantic.css, _objectSpread({
+        name: "semantic-variables"
+      }, styleOptions));
+      BaseStyle.load(global2 === null || global2 === void 0 ? void 0 : global2.css, _objectSpread({
+        name: "global-variables"
+      }, styleOptions));
+      BaseStyle.loadStyle(_objectSpread({
+        name: "global-style"
+      }, styleOptions), style2);
+      config_default.setLoadedStyleName("common");
+    }
+  };
+  service_default.on("theme:change", function(newTheme) {
+    if (!isThemeChanged.value) {
+      app2.config.globalProperties.$primevue.config.theme = newTheme;
+      isThemeChanged.value = true;
+    }
+  });
+  var stopConfigWatcher = watch(PrimeVue2.config, function(newValue, oldValue) {
+    PrimeVueService.emit("config:change", {
+      newValue,
+      oldValue
+    });
+  }, {
+    immediate: true,
+    deep: true
+  });
+  var stopRippleWatcher = watch(function() {
+    return PrimeVue2.config.ripple;
+  }, function(newValue, oldValue) {
+    PrimeVueService.emit("config:ripple:change", {
+      newValue,
+      oldValue
+    });
+  }, {
+    immediate: true,
+    deep: true
+  });
+  var stopThemeWatcher = watch(function() {
+    return PrimeVue2.config.theme;
+  }, function(newValue, oldValue) {
+    if (!isThemeChanged.value) {
+      config_default.setTheme(newValue);
+    }
+    if (!PrimeVue2.config.unstyled) {
+      loadCommonTheme();
+    }
+    isThemeChanged.value = false;
+    PrimeVueService.emit("config:theme:change", {
+      newValue,
+      oldValue
+    });
+  }, {
+    immediate: true,
+    deep: false
+  });
+  var stopUnstyledWatcher = watch(function() {
+    return PrimeVue2.config.unstyled;
+  }, function(newValue, oldValue) {
+    if (!newValue && PrimeVue2.config.theme) {
+      loadCommonTheme();
+    }
+    PrimeVueService.emit("config:unstyled:change", {
+      newValue,
+      oldValue
+    });
+  }, {
+    immediate: true,
+    deep: true
+  });
+  stopWatchers.push(stopConfigWatcher);
+  stopWatchers.push(stopRippleWatcher);
+  stopWatchers.push(stopThemeWatcher);
+  stopWatchers.push(stopUnstyledWatcher);
+}
+var PrimeVue = {
+  install: function install(app2, options) {
+    var configOptions = mergeKeys(defaultOptions$1, options);
+    setup(app2, configOptions);
+  }
+};
+var o$1m = { transitionDuration: "{transition.duration}" }, r$1j = { borderWidth: "0 0 1px 0", borderColor: "{content.border.color}" }, t$E = { color: "{text.muted.color}", hoverColor: "{text.color}", activeColor: "{text.color}", padding: "1.125rem", fontWeight: "600", borderRadius: "0", borderWidth: "0", borderColor: "{content.border.color}", background: "{content.background}", hoverBackground: "{content.background}", activeBackground: "{content.background}", activeHoverBackground: "{content.background}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "-1px", shadow: "{focus.ring.shadow}" }, toggleIcon: { color: "{text.muted.color}", hoverColor: "{text.color}", activeColor: "{text.color}", activeHoverColor: "{text.color}" }, first: { topBorderRadius: "{content.border.radius}", borderWidth: "0" }, last: { bottomBorderRadius: "{content.border.radius}", activeBottomBorderRadius: "0" } }, e$V = { borderWidth: "0", borderColor: "{content.border.color}", background: "{content.background}", color: "{text.color}", padding: "0 1.125rem 1.125rem 1.125rem" }, c$p = { root: o$1m, panel: r$1j, header: t$E, content: e$V };
+var o$1l = { background: "{form.field.background}", disabledBackground: "{form.field.disabled.background}", filledBackground: "{form.field.filled.background}", filledHoverBackground: "{form.field.filled.hover.background}", filledFocusBackground: "{form.field.filled.focus.background}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.hover.border.color}", focusBorderColor: "{form.field.focus.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", color: "{form.field.color}", disabledColor: "{form.field.disabled.color}", placeholderColor: "{form.field.placeholder.color}", invalidPlaceholderColor: "{form.field.invalid.placeholder.color}", shadow: "{form.field.shadow}", paddingX: "{form.field.padding.x}", paddingY: "{form.field.padding.y}", borderRadius: "{form.field.border.radius}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}" }, r$1i = { background: "{overlay.select.background}", borderColor: "{overlay.select.border.color}", borderRadius: "{overlay.select.border.radius}", color: "{overlay.select.color}", shadow: "{overlay.select.shadow}" }, d$w = { padding: "{list.padding}", gap: "{list.gap}" }, e$U = { focusBackground: "{list.option.focus.background}", selectedBackground: "{list.option.selected.background}", selectedFocusBackground: "{list.option.selected.focus.background}", color: "{list.option.color}", focusColor: "{list.option.focus.color}", selectedColor: "{list.option.selected.color}", selectedFocusColor: "{list.option.selected.focus.color}", padding: "{list.option.padding}", borderRadius: "{list.option.border.radius}" }, l$g = { background: "{list.option.group.background}", color: "{list.option.group.color}", fontWeight: "{list.option.group.font.weight}", padding: "{list.option.group.padding}" }, i$r = { width: "2.5rem", sm: { width: "2rem" }, lg: { width: "3rem" }, borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.border.color}", activeBorderColor: "{form.field.border.color}", borderRadius: "{form.field.border.radius}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, c$o = { borderRadius: "{border.radius.sm}" }, f$9 = { padding: "{list.option.padding}" }, s$9 = { light: { chip: { focusBackground: "{surface.200}", focusColor: "{surface.800}" }, dropdown: { background: "{surface.100}", hoverBackground: "{surface.200}", activeBackground: "{surface.300}", color: "{surface.600}", hoverColor: "{surface.700}", activeColor: "{surface.800}" } }, dark: { chip: { focusBackground: "{surface.700}", focusColor: "{surface.0}" }, dropdown: { background: "{surface.800}", hoverBackground: "{surface.700}", activeBackground: "{surface.600}", color: "{surface.300}", hoverColor: "{surface.200}", activeColor: "{surface.100}" } } }, a$F = { root: o$1l, overlay: r$1i, list: d$w, option: e$U, optionGroup: l$g, dropdown: i$r, chip: c$o, emptyMessage: f$9, colorScheme: s$9 };
+var e$T = { width: "2rem", height: "2rem", fontSize: "1rem", background: "{content.border.color}", color: "{content.color}", borderRadius: "{content.border.radius}" }, r$1h = { size: "1rem" }, o$1k = { borderColor: "{content.background}", offset: "-0.75rem" }, t$D = { width: "3rem", height: "3rem", fontSize: "1.5rem", icon: { size: "1.5rem" }, group: { offset: "-1rem" } }, i$q = { width: "4rem", height: "4rem", fontSize: "2rem", icon: { size: "2rem" }, group: { offset: "-1.5rem" } }, n$B = { root: e$T, icon: r$1h, group: o$1k, lg: t$D, xl: i$q };
+var r$1g = { borderRadius: "{border.radius.md}", padding: "0 0.5rem", fontSize: "0.75rem", fontWeight: "700", minWidth: "1.5rem", height: "1.5rem" }, o$1j = { size: "0.5rem" }, e$S = { fontSize: "0.625rem", minWidth: "1.25rem", height: "1.25rem" }, c$n = { fontSize: "0.875rem", minWidth: "1.75rem", height: "1.75rem" }, a$E = { fontSize: "1rem", minWidth: "2rem", height: "2rem" }, n$A = { light: { primary: { background: "{primary.color}", color: "{primary.contrast.color}" }, secondary: { background: "{surface.100}", color: "{surface.600}" }, success: { background: "{green.500}", color: "{surface.0}" }, info: { background: "{sky.500}", color: "{surface.0}" }, warn: { background: "{orange.500}", color: "{surface.0}" }, danger: { background: "{red.500}", color: "{surface.0}" }, contrast: { background: "{surface.950}", color: "{surface.0}" } }, dark: { primary: { background: "{primary.color}", color: "{primary.contrast.color}" }, secondary: { background: "{surface.800}", color: "{surface.300}" }, success: { background: "{green.400}", color: "{green.950}" }, info: { background: "{sky.400}", color: "{sky.950}" }, warn: { background: "{orange.400}", color: "{orange.950}" }, danger: { background: "{red.400}", color: "{red.950}" }, contrast: { background: "{surface.0}", color: "{surface.950}" } } }, d$v = { root: r$1g, dot: o$1j, sm: e$S, lg: c$n, xl: a$E, colorScheme: n$A };
+var r$1f = { borderRadius: { none: "0", xs: "2px", sm: "4px", md: "6px", lg: "8px", xl: "12px" }, emerald: { 50: "#ecfdf5", 100: "#d1fae5", 200: "#a7f3d0", 300: "#6ee7b7", 400: "#34d399", 500: "#10b981", 600: "#059669", 700: "#047857", 800: "#065f46", 900: "#064e3b", 950: "#022c22" }, green: { 50: "#f0fdf4", 100: "#dcfce7", 200: "#bbf7d0", 300: "#86efac", 400: "#4ade80", 500: "#22c55e", 600: "#16a34a", 700: "#15803d", 800: "#166534", 900: "#14532d", 950: "#052e16" }, lime: { 50: "#f7fee7", 100: "#ecfccb", 200: "#d9f99d", 300: "#bef264", 400: "#a3e635", 500: "#84cc16", 600: "#65a30d", 700: "#4d7c0f", 800: "#3f6212", 900: "#365314", 950: "#1a2e05" }, red: { 50: "#fef2f2", 100: "#fee2e2", 200: "#fecaca", 300: "#fca5a5", 400: "#f87171", 500: "#ef4444", 600: "#dc2626", 700: "#b91c1c", 800: "#991b1b", 900: "#7f1d1d", 950: "#450a0a" }, orange: { 50: "#fff7ed", 100: "#ffedd5", 200: "#fed7aa", 300: "#fdba74", 400: "#fb923c", 500: "#f97316", 600: "#ea580c", 700: "#c2410c", 800: "#9a3412", 900: "#7c2d12", 950: "#431407" }, amber: { 50: "#fffbeb", 100: "#fef3c7", 200: "#fde68a", 300: "#fcd34d", 400: "#fbbf24", 500: "#f59e0b", 600: "#d97706", 700: "#b45309", 800: "#92400e", 900: "#78350f", 950: "#451a03" }, yellow: { 50: "#fefce8", 100: "#fef9c3", 200: "#fef08a", 300: "#fde047", 400: "#facc15", 500: "#eab308", 600: "#ca8a04", 700: "#a16207", 800: "#854d0e", 900: "#713f12", 950: "#422006" }, teal: { 50: "#f0fdfa", 100: "#ccfbf1", 200: "#99f6e4", 300: "#5eead4", 400: "#2dd4bf", 500: "#14b8a6", 600: "#0d9488", 700: "#0f766e", 800: "#115e59", 900: "#134e4a", 950: "#042f2e" }, cyan: { 50: "#ecfeff", 100: "#cffafe", 200: "#a5f3fc", 300: "#67e8f9", 400: "#22d3ee", 500: "#06b6d4", 600: "#0891b2", 700: "#0e7490", 800: "#155e75", 900: "#164e63", 950: "#083344" }, sky: { 50: "#f0f9ff", 100: "#e0f2fe", 200: "#bae6fd", 300: "#7dd3fc", 400: "#38bdf8", 500: "#0ea5e9", 600: "#0284c7", 700: "#0369a1", 800: "#075985", 900: "#0c4a6e", 950: "#082f49" }, blue: { 50: "#eff6ff", 100: "#dbeafe", 200: "#bfdbfe", 300: "#93c5fd", 400: "#60a5fa", 500: "#3b82f6", 600: "#2563eb", 700: "#1d4ed8", 800: "#1e40af", 900: "#1e3a8a", 950: "#172554" }, indigo: { 50: "#eef2ff", 100: "#e0e7ff", 200: "#c7d2fe", 300: "#a5b4fc", 400: "#818cf8", 500: "#6366f1", 600: "#4f46e5", 700: "#4338ca", 800: "#3730a3", 900: "#312e81", 950: "#1e1b4b" }, violet: { 50: "#f5f3ff", 100: "#ede9fe", 200: "#ddd6fe", 300: "#c4b5fd", 400: "#a78bfa", 500: "#8b5cf6", 600: "#7c3aed", 700: "#6d28d9", 800: "#5b21b6", 900: "#4c1d95", 950: "#2e1065" }, purple: { 50: "#faf5ff", 100: "#f3e8ff", 200: "#e9d5ff", 300: "#d8b4fe", 400: "#c084fc", 500: "#a855f7", 600: "#9333ea", 700: "#7e22ce", 800: "#6b21a8", 900: "#581c87", 950: "#3b0764" }, fuchsia: { 50: "#fdf4ff", 100: "#fae8ff", 200: "#f5d0fe", 300: "#f0abfc", 400: "#e879f9", 500: "#d946ef", 600: "#c026d3", 700: "#a21caf", 800: "#86198f", 900: "#701a75", 950: "#4a044e" }, pink: { 50: "#fdf2f8", 100: "#fce7f3", 200: "#fbcfe8", 300: "#f9a8d4", 400: "#f472b6", 500: "#ec4899", 600: "#db2777", 700: "#be185d", 800: "#9d174d", 900: "#831843", 950: "#500724" }, rose: { 50: "#fff1f2", 100: "#ffe4e6", 200: "#fecdd3", 300: "#fda4af", 400: "#fb7185", 500: "#f43f5e", 600: "#e11d48", 700: "#be123c", 800: "#9f1239", 900: "#881337", 950: "#4c0519" }, slate: { 50: "#f8fafc", 100: "#f1f5f9", 200: "#e2e8f0", 300: "#cbd5e1", 400: "#94a3b8", 500: "#64748b", 600: "#475569", 700: "#334155", 800: "#1e293b", 900: "#0f172a", 950: "#020617" }, gray: { 50: "#f9fafb", 100: "#f3f4f6", 200: "#e5e7eb", 300: "#d1d5db", 400: "#9ca3af", 500: "#6b7280", 600: "#4b5563", 700: "#374151", 800: "#1f2937", 900: "#111827", 950: "#030712" }, zinc: { 50: "#fafafa", 100: "#f4f4f5", 200: "#e4e4e7", 300: "#d4d4d8", 400: "#a1a1aa", 500: "#71717a", 600: "#52525b", 700: "#3f3f46", 800: "#27272a", 900: "#18181b", 950: "#09090b" }, neutral: { 50: "#fafafa", 100: "#f5f5f5", 200: "#e5e5e5", 300: "#d4d4d4", 400: "#a3a3a3", 500: "#737373", 600: "#525252", 700: "#404040", 800: "#262626", 900: "#171717", 950: "#0a0a0a" }, stone: { 50: "#fafaf9", 100: "#f5f5f4", 200: "#e7e5e4", 300: "#d6d3d1", 400: "#a8a29e", 500: "#78716c", 600: "#57534e", 700: "#44403c", 800: "#292524", 900: "#1c1917", 950: "#0c0a09" } }, o$1i = { transitionDuration: "0.2s", focusRing: { width: "1px", style: "solid", color: "{primary.color}", offset: "2px", shadow: "none" }, disabledOpacity: "0.6", iconSize: "1rem", anchorGutter: "2px", primary: { 50: "{emerald.50}", 100: "{emerald.100}", 200: "{emerald.200}", 300: "{emerald.300}", 400: "{emerald.400}", 500: "{emerald.500}", 600: "{emerald.600}", 700: "{emerald.700}", 800: "{emerald.800}", 900: "{emerald.900}", 950: "{emerald.950}" }, formField: { paddingX: "0.75rem", paddingY: "0.5rem", sm: { fontSize: "0.875rem", paddingX: "0.625rem", paddingY: "0.375rem" }, lg: { fontSize: "1.125rem", paddingX: "0.875rem", paddingY: "0.625rem" }, borderRadius: "{border.radius.md}", focusRing: { width: "0", style: "none", color: "transparent", offset: "0", shadow: "none" }, transitionDuration: "{transition.duration}" }, list: { padding: "0.25rem 0.25rem", gap: "2px", header: { padding: "0.5rem 1rem 0.25rem 1rem" }, option: { padding: "0.5rem 0.75rem", borderRadius: "{border.radius.sm}" }, optionGroup: { padding: "0.5rem 0.75rem", fontWeight: "600" } }, content: { borderRadius: "{border.radius.md}" }, mask: { transitionDuration: "0.15s" }, navigation: { list: { padding: "0.25rem 0.25rem", gap: "2px" }, item: { padding: "0.5rem 0.75rem", borderRadius: "{border.radius.sm}", gap: "0.5rem" }, submenuLabel: { padding: "0.5rem 0.75rem", fontWeight: "600" }, submenuIcon: { size: "0.875rem" } }, overlay: { select: { borderRadius: "{border.radius.md}", shadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)" }, popover: { borderRadius: "{border.radius.md}", padding: "0.75rem", shadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)" }, modal: { borderRadius: "{border.radius.xl}", padding: "1.25rem", shadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)" }, navigation: { shadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)" } }, colorScheme: { light: { surface: { 0: "#ffffff", 50: "{slate.50}", 100: "{slate.100}", 200: "{slate.200}", 300: "{slate.300}", 400: "{slate.400}", 500: "{slate.500}", 600: "{slate.600}", 700: "{slate.700}", 800: "{slate.800}", 900: "{slate.900}", 950: "{slate.950}" }, primary: { color: "{primary.500}", contrastColor: "#ffffff", hoverColor: "{primary.600}", activeColor: "{primary.700}" }, highlight: { background: "{primary.50}", focusBackground: "{primary.100}", color: "{primary.700}", focusColor: "{primary.800}" }, mask: { background: "rgba(0,0,0,0.4)", color: "{surface.200}" }, formField: { background: "{surface.0}", disabledBackground: "{surface.200}", filledBackground: "{surface.50}", filledHoverBackground: "{surface.50}", filledFocusBackground: "{surface.50}", borderColor: "{surface.300}", hoverBorderColor: "{surface.400}", focusBorderColor: "{primary.color}", invalidBorderColor: "{red.400}", color: "{surface.700}", disabledColor: "{surface.500}", placeholderColor: "{surface.500}", invalidPlaceholderColor: "{red.600}", floatLabelColor: "{surface.500}", floatLabelFocusColor: "{primary.600}", floatLabelActiveColor: "{surface.500}", floatLabelInvalidColor: "{form.field.invalid.placeholder.color}", iconColor: "{surface.400}", shadow: "0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgba(18, 18, 23, 0.05)" }, text: { color: "{surface.700}", hoverColor: "{surface.800}", mutedColor: "{surface.500}", hoverMutedColor: "{surface.600}" }, content: { background: "{surface.0}", hoverBackground: "{surface.100}", borderColor: "{surface.200}", color: "{text.color}", hoverColor: "{text.hover.color}" }, overlay: { select: { background: "{surface.0}", borderColor: "{surface.200}", color: "{text.color}" }, popover: { background: "{surface.0}", borderColor: "{surface.200}", color: "{text.color}" }, modal: { background: "{surface.0}", borderColor: "{surface.200}", color: "{text.color}" } }, list: { option: { focusBackground: "{surface.100}", selectedBackground: "{highlight.background}", selectedFocusBackground: "{highlight.focus.background}", color: "{text.color}", focusColor: "{text.hover.color}", selectedColor: "{highlight.color}", selectedFocusColor: "{highlight.focus.color}", icon: { color: "{surface.400}", focusColor: "{surface.500}" } }, optionGroup: { background: "transparent", color: "{text.muted.color}" } }, navigation: { item: { focusBackground: "{surface.100}", activeBackground: "{surface.100}", color: "{text.color}", focusColor: "{text.hover.color}", activeColor: "{text.hover.color}", icon: { color: "{surface.400}", focusColor: "{surface.500}", activeColor: "{surface.500}" } }, submenuLabel: { background: "transparent", color: "{text.muted.color}" }, submenuIcon: { color: "{surface.400}", focusColor: "{surface.500}", activeColor: "{surface.500}" } } }, dark: { surface: { 0: "#ffffff", 50: "{zinc.50}", 100: "{zinc.100}", 200: "{zinc.200}", 300: "{zinc.300}", 400: "{zinc.400}", 500: "{zinc.500}", 600: "{zinc.600}", 700: "{zinc.700}", 800: "{zinc.800}", 900: "{zinc.900}", 950: "{zinc.950}" }, primary: { color: "{primary.400}", contrastColor: "{surface.900}", hoverColor: "{primary.300}", activeColor: "{primary.200}" }, highlight: { background: "color-mix(in srgb, {primary.400}, transparent 84%)", focusBackground: "color-mix(in srgb, {primary.400}, transparent 76%)", color: "rgba(255,255,255,.87)", focusColor: "rgba(255,255,255,.87)" }, mask: { background: "rgba(0,0,0,0.6)", color: "{surface.200}" }, formField: { background: "{surface.950}", disabledBackground: "{surface.700}", filledBackground: "{surface.800}", filledHoverBackground: "{surface.800}", filledFocusBackground: "{surface.800}", borderColor: "{surface.600}", hoverBorderColor: "{surface.500}", focusBorderColor: "{primary.color}", invalidBorderColor: "{red.300}", color: "{surface.0}", disabledColor: "{surface.400}", placeholderColor: "{surface.400}", invalidPlaceholderColor: "{red.400}", floatLabelColor: "{surface.400}", floatLabelFocusColor: "{primary.color}", floatLabelActiveColor: "{surface.400}", floatLabelInvalidColor: "{form.field.invalid.placeholder.color}", iconColor: "{surface.400}", shadow: "0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgba(18, 18, 23, 0.05)" }, text: { color: "{surface.0}", hoverColor: "{surface.0}", mutedColor: "{surface.400}", hoverMutedColor: "{surface.300}" }, content: { background: "{surface.900}", hoverBackground: "{surface.800}", borderColor: "{surface.700}", color: "{text.color}", hoverColor: "{text.hover.color}" }, overlay: { select: { background: "{surface.900}", borderColor: "{surface.700}", color: "{text.color}" }, popover: { background: "{surface.900}", borderColor: "{surface.700}", color: "{text.color}" }, modal: { background: "{surface.900}", borderColor: "{surface.700}", color: "{text.color}" } }, list: { option: { focusBackground: "{surface.800}", selectedBackground: "{highlight.background}", selectedFocusBackground: "{highlight.focus.background}", color: "{text.color}", focusColor: "{text.hover.color}", selectedColor: "{highlight.color}", selectedFocusColor: "{highlight.focus.color}", icon: { color: "{surface.500}", focusColor: "{surface.400}" } }, optionGroup: { background: "transparent", color: "{text.muted.color}" } }, navigation: { item: { focusBackground: "{surface.800}", activeBackground: "{surface.800}", color: "{text.color}", focusColor: "{text.hover.color}", activeColor: "{text.hover.color}", icon: { color: "{surface.500}", focusColor: "{surface.400}", activeColor: "{surface.400}" } }, submenuLabel: { background: "transparent", color: "{text.muted.color}" }, submenuIcon: { color: "{surface.500}", focusColor: "{surface.400}", activeColor: "{surface.400}" } } } } }, e$R = { primitive: r$1f, semantic: o$1i };
+var r$1e = { borderRadius: "{content.border.radius}" }, o$1h = { root: r$1e };
+var o$1g = { padding: "1rem", background: "{content.background}", gap: "0.5rem", transitionDuration: "{transition.duration}" }, r$1d = { color: "{text.muted.color}", hoverColor: "{text.color}", borderRadius: "{content.border.radius}", gap: "{navigation.item.gap}", icon: { color: "{navigation.item.icon.color}", hoverColor: "{navigation.item.icon.focus.color}" }, focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, i$p = { color: "{navigation.item.icon.color}" }, t$C = { root: o$1g, item: r$1d, separator: i$p };
+var r$1c = { borderRadius: "{form.field.border.radius}", roundedBorderRadius: "2rem", gap: "0.5rem", paddingX: "{form.field.padding.x}", paddingY: "{form.field.padding.y}", iconOnlyWidth: "2.5rem", sm: { fontSize: "{form.field.sm.font.size}", paddingX: "{form.field.sm.padding.x}", paddingY: "{form.field.sm.padding.y}", iconOnlyWidth: "2rem" }, lg: { fontSize: "{form.field.lg.font.size}", paddingX: "{form.field.lg.padding.x}", paddingY: "{form.field.lg.padding.y}", iconOnlyWidth: "3rem" }, label: { fontWeight: "500" }, raisedShadow: "0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12)", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", offset: "{focus.ring.offset}" }, badgeSize: "1rem", transitionDuration: "{form.field.transition.duration}" }, o$1f = { light: { root: { primary: { background: "{primary.color}", hoverBackground: "{primary.hover.color}", activeBackground: "{primary.active.color}", borderColor: "{primary.color}", hoverBorderColor: "{primary.hover.color}", activeBorderColor: "{primary.active.color}", color: "{primary.contrast.color}", hoverColor: "{primary.contrast.color}", activeColor: "{primary.contrast.color}", focusRing: { color: "{primary.color}", shadow: "none" } }, secondary: { background: "{surface.100}", hoverBackground: "{surface.200}", activeBackground: "{surface.300}", borderColor: "{surface.100}", hoverBorderColor: "{surface.200}", activeBorderColor: "{surface.300}", color: "{surface.600}", hoverColor: "{surface.700}", activeColor: "{surface.800}", focusRing: { color: "{surface.600}", shadow: "none" } }, info: { background: "{sky.500}", hoverBackground: "{sky.600}", activeBackground: "{sky.700}", borderColor: "{sky.500}", hoverBorderColor: "{sky.600}", activeBorderColor: "{sky.700}", color: "#ffffff", hoverColor: "#ffffff", activeColor: "#ffffff", focusRing: { color: "{sky.500}", shadow: "none" } }, success: { background: "{green.500}", hoverBackground: "{green.600}", activeBackground: "{green.700}", borderColor: "{green.500}", hoverBorderColor: "{green.600}", activeBorderColor: "{green.700}", color: "#ffffff", hoverColor: "#ffffff", activeColor: "#ffffff", focusRing: { color: "{green.500}", shadow: "none" } }, warn: { background: "{orange.500}", hoverBackground: "{orange.600}", activeBackground: "{orange.700}", borderColor: "{orange.500}", hoverBorderColor: "{orange.600}", activeBorderColor: "{orange.700}", color: "#ffffff", hoverColor: "#ffffff", activeColor: "#ffffff", focusRing: { color: "{orange.500}", shadow: "none" } }, help: { background: "{purple.500}", hoverBackground: "{purple.600}", activeBackground: "{purple.700}", borderColor: "{purple.500}", hoverBorderColor: "{purple.600}", activeBorderColor: "{purple.700}", color: "#ffffff", hoverColor: "#ffffff", activeColor: "#ffffff", focusRing: { color: "{purple.500}", shadow: "none" } }, danger: { background: "{red.500}", hoverBackground: "{red.600}", activeBackground: "{red.700}", borderColor: "{red.500}", hoverBorderColor: "{red.600}", activeBorderColor: "{red.700}", color: "#ffffff", hoverColor: "#ffffff", activeColor: "#ffffff", focusRing: { color: "{red.500}", shadow: "none" } }, contrast: { background: "{surface.950}", hoverBackground: "{surface.900}", activeBackground: "{surface.800}", borderColor: "{surface.950}", hoverBorderColor: "{surface.900}", activeBorderColor: "{surface.800}", color: "{surface.0}", hoverColor: "{surface.0}", activeColor: "{surface.0}", focusRing: { color: "{surface.950}", shadow: "none" } } }, outlined: { primary: { hoverBackground: "{primary.50}", activeBackground: "{primary.100}", borderColor: "{primary.200}", color: "{primary.color}" }, secondary: { hoverBackground: "{surface.50}", activeBackground: "{surface.100}", borderColor: "{surface.200}", color: "{surface.500}" }, success: { hoverBackground: "{green.50}", activeBackground: "{green.100}", borderColor: "{green.200}", color: "{green.500}" }, info: { hoverBackground: "{sky.50}", activeBackground: "{sky.100}", borderColor: "{sky.200}", color: "{sky.500}" }, warn: { hoverBackground: "{orange.50}", activeBackground: "{orange.100}", borderColor: "{orange.200}", color: "{orange.500}" }, help: { hoverBackground: "{purple.50}", activeBackground: "{purple.100}", borderColor: "{purple.200}", color: "{purple.500}" }, danger: { hoverBackground: "{red.50}", activeBackground: "{red.100}", borderColor: "{red.200}", color: "{red.500}" }, contrast: { hoverBackground: "{surface.50}", activeBackground: "{surface.100}", borderColor: "{surface.700}", color: "{surface.950}" }, plain: { hoverBackground: "{surface.50}", activeBackground: "{surface.100}", borderColor: "{surface.200}", color: "{surface.700}" } }, text: { primary: { hoverBackground: "{primary.50}", activeBackground: "{primary.100}", color: "{primary.color}" }, secondary: { hoverBackground: "{surface.50}", activeBackground: "{surface.100}", color: "{surface.500}" }, success: { hoverBackground: "{green.50}", activeBackground: "{green.100}", color: "{green.500}" }, info: { hoverBackground: "{sky.50}", activeBackground: "{sky.100}", color: "{sky.500}" }, warn: { hoverBackground: "{orange.50}", activeBackground: "{orange.100}", color: "{orange.500}" }, help: { hoverBackground: "{purple.50}", activeBackground: "{purple.100}", color: "{purple.500}" }, danger: { hoverBackground: "{red.50}", activeBackground: "{red.100}", color: "{red.500}" }, contrast: { hoverBackground: "{surface.50}", activeBackground: "{surface.100}", color: "{surface.950}" }, plain: { hoverBackground: "{surface.50}", activeBackground: "{surface.100}", color: "{surface.700}" } }, link: { color: "{primary.color}", hoverColor: "{primary.color}", activeColor: "{primary.color}" } }, dark: { root: { primary: { background: "{primary.color}", hoverBackground: "{primary.hover.color}", activeBackground: "{primary.active.color}", borderColor: "{primary.color}", hoverBorderColor: "{primary.hover.color}", activeBorderColor: "{primary.active.color}", color: "{primary.contrast.color}", hoverColor: "{primary.contrast.color}", activeColor: "{primary.contrast.color}", focusRing: { color: "{primary.color}", shadow: "none" } }, secondary: { background: "{surface.800}", hoverBackground: "{surface.700}", activeBackground: "{surface.600}", borderColor: "{surface.800}", hoverBorderColor: "{surface.700}", activeBorderColor: "{surface.600}", color: "{surface.300}", hoverColor: "{surface.200}", activeColor: "{surface.100}", focusRing: { color: "{surface.300}", shadow: "none" } }, info: { background: "{sky.400}", hoverBackground: "{sky.300}", activeBackground: "{sky.200}", borderColor: "{sky.400}", hoverBorderColor: "{sky.300}", activeBorderColor: "{sky.200}", color: "{sky.950}", hoverColor: "{sky.950}", activeColor: "{sky.950}", focusRing: { color: "{sky.400}", shadow: "none" } }, success: { background: "{green.400}", hoverBackground: "{green.300}", activeBackground: "{green.200}", borderColor: "{green.400}", hoverBorderColor: "{green.300}", activeBorderColor: "{green.200}", color: "{green.950}", hoverColor: "{green.950}", activeColor: "{green.950}", focusRing: { color: "{green.400}", shadow: "none" } }, warn: { background: "{orange.400}", hoverBackground: "{orange.300}", activeBackground: "{orange.200}", borderColor: "{orange.400}", hoverBorderColor: "{orange.300}", activeBorderColor: "{orange.200}", color: "{orange.950}", hoverColor: "{orange.950}", activeColor: "{orange.950}", focusRing: { color: "{orange.400}", shadow: "none" } }, help: { background: "{purple.400}", hoverBackground: "{purple.300}", activeBackground: "{purple.200}", borderColor: "{purple.400}", hoverBorderColor: "{purple.300}", activeBorderColor: "{purple.200}", color: "{purple.950}", hoverColor: "{purple.950}", activeColor: "{purple.950}", focusRing: { color: "{purple.400}", shadow: "none" } }, danger: { background: "{red.400}", hoverBackground: "{red.300}", activeBackground: "{red.200}", borderColor: "{red.400}", hoverBorderColor: "{red.300}", activeBorderColor: "{red.200}", color: "{red.950}", hoverColor: "{red.950}", activeColor: "{red.950}", focusRing: { color: "{red.400}", shadow: "none" } }, contrast: { background: "{surface.0}", hoverBackground: "{surface.100}", activeBackground: "{surface.200}", borderColor: "{surface.0}", hoverBorderColor: "{surface.100}", activeBorderColor: "{surface.200}", color: "{surface.950}", hoverColor: "{surface.950}", activeColor: "{surface.950}", focusRing: { color: "{surface.0}", shadow: "none" } } }, outlined: { primary: { hoverBackground: "color-mix(in srgb, {primary.color}, transparent 96%)", activeBackground: "color-mix(in srgb, {primary.color}, transparent 84%)", borderColor: "{primary.700}", color: "{primary.color}" }, secondary: { hoverBackground: "rgba(255,255,255,0.04)", activeBackground: "rgba(255,255,255,0.16)", borderColor: "{surface.700}", color: "{surface.400}" }, success: { hoverBackground: "color-mix(in srgb, {green.400}, transparent 96%)", activeBackground: "color-mix(in srgb, {green.400}, transparent 84%)", borderColor: "{green.700}", color: "{green.400}" }, info: { hoverBackground: "color-mix(in srgb, {sky.400}, transparent 96%)", activeBackground: "color-mix(in srgb, {sky.400}, transparent 84%)", borderColor: "{sky.700}", color: "{sky.400}" }, warn: { hoverBackground: "color-mix(in srgb, {orange.400}, transparent 96%)", activeBackground: "color-mix(in srgb, {orange.400}, transparent 84%)", borderColor: "{orange.700}", color: "{orange.400}" }, help: { hoverBackground: "color-mix(in srgb, {purple.400}, transparent 96%)", activeBackground: "color-mix(in srgb, {purple.400}, transparent 84%)", borderColor: "{purple.700}", color: "{purple.400}" }, danger: { hoverBackground: "color-mix(in srgb, {red.400}, transparent 96%)", activeBackground: "color-mix(in srgb, {red.400}, transparent 84%)", borderColor: "{red.700}", color: "{red.400}" }, contrast: { hoverBackground: "{surface.800}", activeBackground: "{surface.700}", borderColor: "{surface.500}", color: "{surface.0}" }, plain: { hoverBackground: "{surface.800}", activeBackground: "{surface.700}", borderColor: "{surface.600}", color: "{surface.0}" } }, text: { primary: { hoverBackground: "color-mix(in srgb, {primary.color}, transparent 96%)", activeBackground: "color-mix(in srgb, {primary.color}, transparent 84%)", color: "{primary.color}" }, secondary: { hoverBackground: "{surface.800}", activeBackground: "{surface.700}", color: "{surface.400}" }, success: { hoverBackground: "color-mix(in srgb, {green.400}, transparent 96%)", activeBackground: "color-mix(in srgb, {green.400}, transparent 84%)", color: "{green.400}" }, info: { hoverBackground: "color-mix(in srgb, {sky.400}, transparent 96%)", activeBackground: "color-mix(in srgb, {sky.400}, transparent 84%)", color: "{sky.400}" }, warn: { hoverBackground: "color-mix(in srgb, {orange.400}, transparent 96%)", activeBackground: "color-mix(in srgb, {orange.400}, transparent 84%)", color: "{orange.400}" }, help: { hoverBackground: "color-mix(in srgb, {purple.400}, transparent 96%)", activeBackground: "color-mix(in srgb, {purple.400}, transparent 84%)", color: "{purple.400}" }, danger: { hoverBackground: "color-mix(in srgb, {red.400}, transparent 96%)", activeBackground: "color-mix(in srgb, {red.400}, transparent 84%)", color: "{red.400}" }, contrast: { hoverBackground: "{surface.800}", activeBackground: "{surface.700}", color: "{surface.0}" }, plain: { hoverBackground: "{surface.800}", activeBackground: "{surface.700}", color: "{surface.0}" } }, link: { color: "{primary.color}", hoverColor: "{primary.color}", activeColor: "{primary.color}" } } }, e$Q = { root: r$1c, colorScheme: o$1f };
+var o$1e = { background: "{content.background}", borderRadius: "{border.radius.xl}", color: "{content.color}", shadow: "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1)" }, r$1b = { padding: "1.25rem", gap: "0.5rem" }, t$B = { gap: "0.5rem" }, e$P = { fontSize: "1.25rem", fontWeight: "500" }, a$D = { color: "{text.muted.color}" }, d$u = { root: o$1e, body: r$1b, caption: t$B, title: e$P, subtitle: a$D };
+var r$1a = { transitionDuration: "{transition.duration}" }, o$1d = { gap: "0.25rem" }, a$C = { padding: "1rem", gap: "0.5rem" }, i$o = { width: "2rem", height: "0.5rem", borderRadius: "{content.border.radius}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, c$m = { light: { indicator: { background: "{surface.200}", hoverBackground: "{surface.300}", activeBackground: "{primary.color}" } }, dark: { indicator: { background: "{surface.700}", hoverBackground: "{surface.600}", activeBackground: "{primary.color}" } } }, t$A = { root: r$1a, content: o$1d, indicatorList: a$C, indicator: i$o, colorScheme: c$m };
+var o$1c = { background: "{form.field.background}", disabledBackground: "{form.field.disabled.background}", filledBackground: "{form.field.filled.background}", filledHoverBackground: "{form.field.filled.hover.background}", filledFocusBackground: "{form.field.filled.focus.background}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.hover.border.color}", focusBorderColor: "{form.field.focus.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", color: "{form.field.color}", disabledColor: "{form.field.disabled.color}", placeholderColor: "{form.field.placeholder.color}", invalidPlaceholderColor: "{form.field.invalid.placeholder.color}", shadow: "{form.field.shadow}", paddingX: "{form.field.padding.x}", paddingY: "{form.field.padding.y}", borderRadius: "{form.field.border.radius}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}", sm: { fontSize: "{form.field.sm.font.size}", paddingX: "{form.field.sm.padding.x}", paddingY: "{form.field.sm.padding.y}" }, lg: { fontSize: "{form.field.lg.font.size}", paddingX: "{form.field.lg.padding.x}", paddingY: "{form.field.lg.padding.y}" } }, r$19 = { width: "2.5rem", color: "{form.field.icon.color}" }, d$t = { background: "{overlay.select.background}", borderColor: "{overlay.select.border.color}", borderRadius: "{overlay.select.border.radius}", color: "{overlay.select.color}", shadow: "{overlay.select.shadow}" }, l$f = { padding: "{list.padding}", gap: "{list.gap}", mobileIndent: "1rem" }, e$O = { focusBackground: "{list.option.focus.background}", selectedBackground: "{list.option.selected.background}", selectedFocusBackground: "{list.option.selected.focus.background}", color: "{list.option.color}", focusColor: "{list.option.focus.color}", selectedColor: "{list.option.selected.color}", selectedFocusColor: "{list.option.selected.focus.color}", padding: "{list.option.padding}", borderRadius: "{list.option.border.radius}", icon: { color: "{list.option.icon.color}", focusColor: "{list.option.icon.focus.color}", size: "0.875rem" } }, i$n = { color: "{form.field.icon.color}" }, f$8 = { root: o$1c, dropdown: r$19, overlay: d$t, list: l$f, option: e$O, clearIcon: i$n };
+var r$18 = { borderRadius: "{border.radius.sm}", width: "1.25rem", height: "1.25rem", background: "{form.field.background}", checkedBackground: "{primary.color}", checkedHoverBackground: "{primary.hover.color}", disabledBackground: "{form.field.disabled.background}", filledBackground: "{form.field.filled.background}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.hover.border.color}", focusBorderColor: "{form.field.border.color}", checkedBorderColor: "{primary.color}", checkedHoverBorderColor: "{primary.hover.color}", checkedFocusBorderColor: "{primary.color}", checkedDisabledBorderColor: "{form.field.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", shadow: "{form.field.shadow}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}", sm: { width: "1rem", height: "1rem" }, lg: { width: "1.5rem", height: "1.5rem" } }, o$1b = { size: "0.875rem", color: "{form.field.color}", checkedColor: "{primary.contrast.color}", checkedHoverColor: "{primary.contrast.color}", disabledColor: "{form.field.disabled.color}", sm: { size: "0.75rem" }, lg: { size: "1rem" } }, e$N = { root: r$18, icon: o$1b };
+var o$1a = { borderRadius: "16px", paddingX: "0.75rem", paddingY: "0.5rem", gap: "0.5rem", transitionDuration: "{transition.duration}" }, r$17 = { width: "2rem", height: "2rem" }, e$M = { size: "1rem" }, c$l = { size: "1rem", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" } }, i$m = { light: { root: { background: "{surface.100}", color: "{surface.800}" }, icon: { color: "{surface.800}" }, removeIcon: { color: "{surface.800}" } }, dark: { root: { background: "{surface.800}", color: "{surface.0}" }, icon: { color: "{surface.0}" }, removeIcon: { color: "{surface.0}" } } }, s$8 = { root: o$1a, image: r$17, icon: e$M, removeIcon: c$l, colorScheme: i$m };
+var r$16 = { transitionDuration: "{transition.duration}" }, o$19 = { width: "1.5rem", height: "1.5rem", borderRadius: "{form.field.border.radius}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, e$L = { shadow: "{overlay.popover.shadow}", borderRadius: "{overlay.popover.borderRadius}" }, a$B = { light: { panel: { background: "{surface.800}", borderColor: "{surface.900}" }, handle: { color: "{surface.0}" } }, dark: { panel: { background: "{surface.900}", borderColor: "{surface.700}" }, handle: { color: "{surface.0}" } } }, s$7 = { root: r$16, preview: o$19, panel: e$L, colorScheme: a$B };
+var o$18 = { size: "2rem", color: "{overlay.modal.color}" }, e$K = { gap: "1rem" }, r$15 = { icon: o$18, content: e$K };
+var o$17 = { background: "{overlay.popover.background}", borderColor: "{overlay.popover.border.color}", color: "{overlay.popover.color}", borderRadius: "{overlay.popover.border.radius}", shadow: "{overlay.popover.shadow}", gutter: "10px", arrowOffset: "1.25rem" }, r$14 = { padding: "{overlay.popover.padding}", gap: "1rem" }, e$J = { size: "1.5rem", color: "{overlay.popover.color}" }, p$2 = { gap: "0.5rem", padding: "0 {overlay.popover.padding} {overlay.popover.padding} {overlay.popover.padding}" }, a$A = { root: o$17, content: r$14, icon: e$J, footer: p$2 };
+var o$16 = { background: "{content.background}", borderColor: "{content.border.color}", color: "{content.color}", borderRadius: "{content.border.radius}", shadow: "{overlay.navigation.shadow}", transitionDuration: "{transition.duration}" }, i$l = { padding: "{navigation.list.padding}", gap: "{navigation.list.gap}" }, n$z = { focusBackground: "{navigation.item.focus.background}", activeBackground: "{navigation.item.active.background}", color: "{navigation.item.color}", focusColor: "{navigation.item.focus.color}", activeColor: "{navigation.item.active.color}", padding: "{navigation.item.padding}", borderRadius: "{navigation.item.border.radius}", gap: "{navigation.item.gap}", icon: { color: "{navigation.item.icon.color}", focusColor: "{navigation.item.icon.focus.color}", activeColor: "{navigation.item.icon.active.color}" } }, a$z = { mobileIndent: "1rem" }, t$z = { size: "{navigation.submenu.icon.size}", color: "{navigation.submenu.icon.color}", focusColor: "{navigation.submenu.icon.focus.color}", activeColor: "{navigation.submenu.icon.active.color}" }, r$13 = { borderColor: "{content.border.color}" }, c$k = { root: o$16, list: i$l, item: n$z, submenu: a$z, submenuIcon: t$z, separator: r$13 };
+var o$15 = { transitionDuration: "{transition.duration}" }, r$12 = { background: "{content.background}", borderColor: "{datatable.border.color}", color: "{content.color}", borderWidth: "0 0 1px 0", padding: "0.75rem 1rem", sm: { padding: "0.375rem 0.5rem" }, lg: { padding: "1rem 1.25rem" } }, e$I = { background: "{content.background}", hoverBackground: "{content.hover.background}", selectedBackground: "{highlight.background}", borderColor: "{datatable.border.color}", color: "{content.color}", hoverColor: "{content.hover.color}", selectedColor: "{highlight.color}", gap: "0.5rem", padding: "0.75rem 1rem", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "-1px", shadow: "{focus.ring.shadow}" }, sm: { padding: "0.375rem 0.5rem" }, lg: { padding: "1rem 1.25rem" } }, d$s = { fontWeight: "600" }, t$y = { background: "{content.background}", hoverBackground: "{content.hover.background}", selectedBackground: "{highlight.background}", color: "{content.color}", hoverColor: "{content.hover.color}", selectedColor: "{highlight.color}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "-1px", shadow: "{focus.ring.shadow}" } }, l$e = { borderColor: "{datatable.border.color}", padding: "0.75rem 1rem", sm: { padding: "0.375rem 0.5rem" }, lg: { padding: "1rem 1.25rem" } }, c$j = { background: "{content.background}", borderColor: "{datatable.border.color}", color: "{content.color}", padding: "0.75rem 1rem", sm: { padding: "0.375rem 0.5rem" }, lg: { padding: "1rem 1.25rem" } }, n$y = { fontWeight: "600" }, a$y = { background: "{content.background}", borderColor: "{datatable.border.color}", color: "{content.color}", borderWidth: "0 0 1px 0", padding: "0.75rem 1rem", sm: { padding: "0.375rem 0.5rem" }, lg: { padding: "1rem 1.25rem" } }, i$k = { color: "{primary.color}" }, s$6 = { width: "0.5rem" }, g$4 = { width: "1px", color: "{primary.color}" }, u$5 = { color: "{text.muted.color}", hoverColor: "{text.hover.muted.color}", size: "0.875rem" }, b$3 = { size: "2rem" }, p$1 = { hoverBackground: "{content.hover.background}", selectedHoverBackground: "{content.background}", color: "{text.muted.color}", hoverColor: "{text.color}", selectedHoverColor: "{primary.color}", size: "1.75rem", borderRadius: "50%", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, m$3 = { inlineGap: "0.5rem", overlaySelect: { background: "{overlay.select.background}", borderColor: "{overlay.select.border.color}", borderRadius: "{overlay.select.border.radius}", color: "{overlay.select.color}", shadow: "{overlay.select.shadow}" }, overlayPopover: { background: "{overlay.popover.background}", borderColor: "{overlay.popover.border.color}", borderRadius: "{overlay.popover.border.radius}", color: "{overlay.popover.color}", shadow: "{overlay.popover.shadow}", padding: "{overlay.popover.padding}", gap: "0.5rem" }, rule: { borderColor: "{content.border.color}" }, constraintList: { padding: "{list.padding}", gap: "{list.gap}" }, constraint: { focusBackground: "{list.option.focus.background}", selectedBackground: "{list.option.selected.background}", selectedFocusBackground: "{list.option.selected.focus.background}", color: "{list.option.color}", focusColor: "{list.option.focus.color}", selectedColor: "{list.option.selected.color}", selectedFocusColor: "{list.option.selected.focus.color}", separator: { borderColor: "{content.border.color}" }, padding: "{list.option.padding}", borderRadius: "{list.option.border.radius}" } }, h$3 = { borderColor: "{datatable.border.color}", borderWidth: "0 0 1px 0" }, f$7 = { borderColor: "{datatable.border.color}", borderWidth: "0 0 1px 0" }, v$1 = { light: { root: { borderColor: "{content.border.color}" }, row: { stripedBackground: "{surface.50}" }, bodyCell: { selectedBorderColor: "{primary.100}" } }, dark: { root: { borderColor: "{surface.800}" }, row: { stripedBackground: "{surface.950}" }, bodyCell: { selectedBorderColor: "{primary.900}" } } }, k$2 = { root: o$15, header: r$12, headerCell: e$I, columnTitle: d$s, row: t$y, bodyCell: l$e, footerCell: c$j, columnFooter: n$y, footer: a$y, dropPoint: i$k, columnResizer: s$6, resizeIndicator: g$4, sortIcon: u$5, loadingIcon: b$3, rowToggleButton: p$1, filter: m$3, paginatorTop: h$3, paginatorBottom: f$7, colorScheme: v$1 };
+var o$14 = { borderColor: "transparent", borderWidth: "0", borderRadius: "0", padding: "0" }, r$11 = { background: "{content.background}", color: "{content.color}", borderColor: "{content.border.color}", borderWidth: "0 0 1px 0", padding: "0.75rem 1rem", borderRadius: "0" }, d$r = { background: "{content.background}", color: "{content.color}", borderColor: "transparent", borderWidth: "0", padding: "0", borderRadius: "0" }, e$H = { background: "{content.background}", color: "{content.color}", borderColor: "{content.border.color}", borderWidth: "1px 0 0 0", padding: "0.75rem 1rem", borderRadius: "0" }, t$x = { borderColor: "{content.border.color}", borderWidth: "0 0 1px 0" }, n$x = { borderColor: "{content.border.color}", borderWidth: "1px 0 0 0" }, c$i = { root: o$14, header: r$11, content: d$r, footer: e$H, paginatorTop: t$x, paginatorBottom: n$x };
+var o$13 = { transitionDuration: "{transition.duration}" }, r$10 = { background: "{content.background}", borderColor: "{content.border.color}", color: "{content.color}", borderRadius: "{content.border.radius}", shadow: "{overlay.popover.shadow}", padding: "{overlay.popover.padding}" }, e$G = { background: "{content.background}", borderColor: "{content.border.color}", color: "{content.color}", padding: "0 0 0.5rem 0" }, c$h = { gap: "0.5rem", fontWeight: "500" }, d$q = { width: "2.5rem", sm: { width: "2rem" }, lg: { width: "3rem" }, borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.border.color}", activeBorderColor: "{form.field.border.color}", borderRadius: "{form.field.border.radius}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, n$w = { color: "{form.field.icon.color}" }, t$w = { hoverBackground: "{content.hover.background}", color: "{content.color}", hoverColor: "{content.hover.color}", padding: "0.25rem 0.5rem", borderRadius: "{content.border.radius}" }, a$x = { hoverBackground: "{content.hover.background}", color: "{content.color}", hoverColor: "{content.hover.color}", padding: "0.25rem 0.5rem", borderRadius: "{content.border.radius}" }, i$j = { borderColor: "{content.border.color}", gap: "{overlay.popover.padding}" }, l$d = { margin: "0.5rem 0 0 0" }, u$4 = { padding: "0.25rem", fontWeight: "500", color: "{content.color}" }, s$5 = { hoverBackground: "{content.hover.background}", selectedBackground: "{primary.color}", rangeSelectedBackground: "{highlight.background}", color: "{content.color}", hoverColor: "{content.hover.color}", selectedColor: "{primary.contrast.color}", rangeSelectedColor: "{highlight.color}", width: "2rem", height: "2rem", borderRadius: "50%", padding: "0.25rem", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, g$3 = { margin: "0.5rem 0 0 0" }, f$6 = { padding: "0.375rem", borderRadius: "{content.border.radius}" }, h$2 = { margin: "0.5rem 0 0 0" }, b$2 = { padding: "0.375rem", borderRadius: "{content.border.radius}" }, m$2 = { padding: "0.5rem 0 0 0", borderColor: "{content.border.color}" }, p = { padding: "0.5rem 0 0 0", borderColor: "{content.border.color}", gap: "0.5rem", buttonGap: "0.25rem" }, v = { light: { dropdown: { background: "{surface.100}", hoverBackground: "{surface.200}", activeBackground: "{surface.300}", color: "{surface.600}", hoverColor: "{surface.700}", activeColor: "{surface.800}" }, today: { background: "{surface.200}", color: "{surface.900}" } }, dark: { dropdown: { background: "{surface.800}", hoverBackground: "{surface.700}", activeBackground: "{surface.600}", color: "{surface.300}", hoverColor: "{surface.200}", activeColor: "{surface.100}" }, today: { background: "{surface.700}", color: "{surface.0}" } } }, k$1 = { root: o$13, panel: r$10, header: e$G, title: c$h, dropdown: d$q, inputIcon: n$w, selectMonth: t$w, selectYear: a$x, group: i$j, dayView: l$d, weekDay: u$4, date: s$5, monthView: g$3, month: f$6, yearView: h$2, year: b$2, buttonbar: m$2, timePicker: p, colorScheme: v };
+var o$12 = { background: "{overlay.modal.background}", borderColor: "{overlay.modal.border.color}", color: "{overlay.modal.color}", borderRadius: "{overlay.modal.border.radius}", shadow: "{overlay.modal.shadow}" }, a$w = { padding: "{overlay.modal.padding}", gap: "0.5rem" }, d$p = { fontSize: "1.25rem", fontWeight: "600" }, r$$ = { padding: "0 {overlay.modal.padding} {overlay.modal.padding} {overlay.modal.padding}" }, l$c = { padding: "0 {overlay.modal.padding} {overlay.modal.padding} {overlay.modal.padding}", gap: "0.5rem" }, e$F = { root: o$12, header: a$w, title: d$p, content: r$$, footer: l$c };
+var r$_ = { borderColor: "{content.border.color}" }, o$11 = { background: "{content.background}", color: "{text.color}" }, n$v = { margin: "1rem 0", padding: "0 1rem", content: { padding: "0 0.5rem" } }, e$E = { margin: "0 1rem", padding: "0.5rem 0", content: { padding: "0.5rem 0" } }, t$v = { root: r$_, content: o$11, horizontal: n$v, vertical: e$E };
+var r$Z = { background: "rgba(255, 255, 255, 0.1)", borderColor: "rgba(255, 255, 255, 0.2)", padding: "0.5rem", borderRadius: "{border.radius.xl}" }, o$10 = { borderRadius: "{content.border.radius}", padding: "0.5rem", size: "3rem", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, d$o = { root: r$Z, item: o$10 };
+var o$$ = { background: "{overlay.modal.background}", borderColor: "{overlay.modal.border.color}", color: "{overlay.modal.color}", shadow: "{overlay.modal.shadow}" }, a$v = { padding: "{overlay.modal.padding}" }, d$n = { fontSize: "1.5rem", fontWeight: "600" }, r$Y = { padding: "0 {overlay.modal.padding} {overlay.modal.padding} {overlay.modal.padding}" }, l$b = { padding: "{overlay.modal.padding}" }, e$D = { root: o$$, header: a$v, title: d$n, content: r$Y, footer: l$b };
+var o$_ = { background: "{content.background}", borderColor: "{content.border.color}", borderRadius: "{content.border.radius}" }, r$X = { color: "{text.muted.color}", hoverColor: "{text.color}", activeColor: "{primary.color}" }, e$C = { background: "{overlay.select.background}", borderColor: "{overlay.select.border.color}", borderRadius: "{overlay.select.border.radius}", color: "{overlay.select.color}", shadow: "{overlay.select.shadow}", padding: "{list.padding}" }, t$u = { focusBackground: "{list.option.focus.background}", color: "{list.option.color}", focusColor: "{list.option.focus.color}", padding: "{list.option.padding}", borderRadius: "{list.option.border.radius}" }, d$m = { background: "{content.background}", borderColor: "{content.border.color}", color: "{content.color}", borderRadius: "{content.border.radius}" }, l$a = { toolbar: o$_, toolbarItem: r$X, overlay: e$C, overlayOption: t$u, content: d$m };
+var o$Z = { background: "{content.background}", borderColor: "{content.border.color}", borderRadius: "{content.border.radius}", color: "{content.color}", padding: "0 1.125rem 1.125rem 1.125rem", transitionDuration: "{transition.duration}" }, r$W = { background: "{content.background}", hoverBackground: "{content.hover.background}", color: "{content.color}", hoverColor: "{content.hover.color}", borderRadius: "{content.border.radius}", borderWidth: "1px", borderColor: "transparent", padding: "0.5rem 0.75rem", gap: "0.5rem", fontWeight: "600", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, t$t = { color: "{text.muted.color}", hoverColor: "{text.hover.muted.color}" }, n$u = { padding: "0" }, e$B = { root: o$Z, legend: r$W, toggleIcon: t$t, content: n$u };
+var r$V = { background: "{content.background}", borderColor: "{content.border.color}", color: "{content.color}", borderRadius: "{content.border.radius}", transitionDuration: "{transition.duration}" }, o$Y = { background: "transparent", color: "{text.color}", padding: "1.125rem", borderColor: "unset", borderWidth: "0", borderRadius: "0", gap: "0.5rem" }, e$A = { highlightBorderColor: "{primary.color}", padding: "0 1.125rem 1.125rem 1.125rem", gap: "1rem" }, t$s = { padding: "1rem", gap: "1rem", borderColor: "{content.border.color}", info: { gap: "0.5rem" } }, a$u = { gap: "0.5rem" }, n$t = { height: "0.25rem" }, d$l = { gap: "0.5rem" }, i$i = { root: r$V, header: o$Y, content: e$A, file: t$s, fileList: a$u, progressbar: n$t, basic: d$l };
+var o$X = { color: "{form.field.float.label.color}", focusColor: "{form.field.float.label.focus.color}", activeColor: "{form.field.float.label.active.color}", invalidColor: "{form.field.float.label.invalid.color}", transitionDuration: "0.2s", positionX: "{form.field.padding.x}", positionY: "{form.field.padding.y}", fontWeight: "500", active: { fontSize: "0.75rem", fontWeight: "400" } }, i$h = { active: { top: "-1.25rem" } }, r$U = { input: { paddingTop: "1.5rem", paddingBottom: "{form.field.padding.y}" }, active: { top: "{form.field.padding.y}" } }, a$t = { borderRadius: "{border.radius.xs}", active: { background: "{form.field.background}", padding: "0 0.125rem" } }, d$k = { root: o$X, over: i$h, in: r$U, on: a$t };
+var o$W = { borderWidth: "1px", borderColor: "{content.border.color}", borderRadius: "{content.border.radius}", transitionDuration: "{transition.duration}" }, r$T = { background: "rgba(255, 255, 255, 0.1)", hoverBackground: "rgba(255, 255, 255, 0.2)", color: "{surface.100}", hoverColor: "{surface.0}", size: "3rem", gutter: "0.5rem", prev: { borderRadius: "50%" }, next: { borderRadius: "50%" }, focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, e$z = { size: "1.5rem" }, t$r = { background: "{content.background}", padding: "1rem 0.25rem" }, c$g = { size: "2rem", borderRadius: "{content.border.radius}", gutter: "0.5rem", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, n$s = { size: "1rem" }, a$s = { background: "rgba(0, 0, 0, 0.5)", color: "{surface.100}", padding: "1rem" }, s$4 = { gap: "0.5rem", padding: "1rem" }, u$3 = { width: "1rem", height: "1rem", activeBackground: "{primary.color}", borderRadius: "50%", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, i$g = { background: "rgba(0, 0, 0, 0.5)" }, d$j = { background: "rgba(255, 255, 255, 0.4)", hoverBackground: "rgba(255, 255, 255, 0.6)", activeBackground: "rgba(255, 255, 255, 0.9)" }, g$2 = { size: "3rem", gutter: "0.5rem", background: "rgba(255, 255, 255, 0.1)", hoverBackground: "rgba(255, 255, 255, 0.2)", color: "{surface.50}", hoverColor: "{surface.0}", borderRadius: "50%", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, f$5 = { size: "1.5rem" }, h$1 = { light: { thumbnailNavButton: { hoverBackground: "{surface.100}", color: "{surface.600}", hoverColor: "{surface.700}" }, indicatorButton: { background: "{surface.200}", hoverBackground: "{surface.300}" } }, dark: { thumbnailNavButton: { hoverBackground: "{surface.700}", color: "{surface.400}", hoverColor: "{surface.0}" }, indicatorButton: { background: "{surface.700}", hoverBackground: "{surface.600}" } } }, l$9 = { root: o$W, navButton: r$T, navIcon: e$z, thumbnailsContent: t$r, thumbnailNavButton: c$g, thumbnailNavButtonIcon: n$s, caption: a$s, indicatorList: s$4, indicatorButton: u$3, insetIndicatorList: i$g, insetIndicatorButton: d$j, closeButton: g$2, closeButtonIcon: f$5, colorScheme: h$1 };
+var o$V = { color: "{form.field.icon.color}" }, r$S = { icon: o$V };
+var o$U = { color: "{form.field.float.label.color}", focusColor: "{form.field.float.label.focus.color}", invalidColor: "{form.field.float.label.invalid.color}", transitionDuration: "0.2s", positionX: "{form.field.padding.x}", top: "{form.field.padding.y}", fontSize: "0.75rem", fontWeight: "400" }, l$8 = { paddingTop: "1.5rem", paddingBottom: "{form.field.padding.y}" }, i$f = { root: o$U, input: l$8 };
+var o$T = { transitionDuration: "{transition.duration}" }, r$R = { icon: { size: "1.5rem" }, mask: { background: "{mask.background}", color: "{mask.color}" } }, a$r = { position: { left: "auto", right: "1rem", top: "1rem", bottom: "auto" }, blur: "8px", background: "rgba(255,255,255,0.1)", borderColor: "rgba(255,255,255,0.2)", borderWidth: "1px", borderRadius: "30px", padding: ".5rem", gap: "0.5rem" }, i$e = { hoverBackground: "rgba(255,255,255,0.1)", color: "{surface.50}", hoverColor: "{surface.0}", size: "3rem", iconSize: "1.5rem", borderRadius: "50%", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, e$y = { root: o$T, preview: r$R, toolbar: a$r, action: i$e };
+var o$S = { size: "15px", hoverSize: "30px", background: "rgba(255,255,255,0.3)", hoverBackground: "rgba(255,255,255,0.3)", borderColor: "unset", hoverBorderColor: "unset", borderWidth: "0", borderRadius: "50%", transitionDuration: "{transition.duration}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "rgba(255,255,255,0.3)", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, r$Q = { handle: o$S };
+var r$P = { padding: "{form.field.padding.y} {form.field.padding.x}", borderRadius: "{content.border.radius}", gap: "0.5rem" }, o$R = { fontWeight: "500" }, e$x = { size: "1rem" }, n$r = { light: { info: { background: "color-mix(in srgb, {blue.50}, transparent 5%)", borderColor: "{blue.200}", color: "{blue.600}", shadow: "0px 4px 8px 0px color-mix(in srgb, {blue.500}, transparent 96%)" }, success: { background: "color-mix(in srgb, {green.50}, transparent 5%)", borderColor: "{green.200}", color: "{green.600}", shadow: "0px 4px 8px 0px color-mix(in srgb, {green.500}, transparent 96%)" }, warn: { background: "color-mix(in srgb,{yellow.50}, transparent 5%)", borderColor: "{yellow.200}", color: "{yellow.600}", shadow: "0px 4px 8px 0px color-mix(in srgb, {yellow.500}, transparent 96%)" }, error: { background: "color-mix(in srgb, {red.50}, transparent 5%)", borderColor: "{red.200}", color: "{red.600}", shadow: "0px 4px 8px 0px color-mix(in srgb, {red.500}, transparent 96%)" }, secondary: { background: "{surface.100}", borderColor: "{surface.200}", color: "{surface.600}", shadow: "0px 4px 8px 0px color-mix(in srgb, {surface.500}, transparent 96%)" }, contrast: { background: "{surface.900}", borderColor: "{surface.950}", color: "{surface.50}", shadow: "0px 4px 8px 0px color-mix(in srgb, {surface.950}, transparent 96%)" } }, dark: { info: { background: "color-mix(in srgb, {blue.500}, transparent 84%)", borderColor: "color-mix(in srgb, {blue.700}, transparent 64%)", color: "{blue.500}", shadow: "0px 4px 8px 0px color-mix(in srgb, {blue.500}, transparent 96%)" }, success: { background: "color-mix(in srgb, {green.500}, transparent 84%)", borderColor: "color-mix(in srgb, {green.700}, transparent 64%)", color: "{green.500}", shadow: "0px 4px 8px 0px color-mix(in srgb, {green.500}, transparent 96%)" }, warn: { background: "color-mix(in srgb, {yellow.500}, transparent 84%)", borderColor: "color-mix(in srgb, {yellow.700}, transparent 64%)", color: "{yellow.500}", shadow: "0px 4px 8px 0px color-mix(in srgb, {yellow.500}, transparent 96%)" }, error: { background: "color-mix(in srgb, {red.500}, transparent 84%)", borderColor: "color-mix(in srgb, {red.700}, transparent 64%)", color: "{red.500}", shadow: "0px 4px 8px 0px color-mix(in srgb, {red.500}, transparent 96%)" }, secondary: { background: "{surface.800}", borderColor: "{surface.700}", color: "{surface.300}", shadow: "0px 4px 8px 0px color-mix(in srgb, {surface.500}, transparent 96%)" }, contrast: { background: "{surface.0}", borderColor: "{surface.100}", color: "{surface.950}", shadow: "0px 4px 8px 0px color-mix(in srgb, {surface.950}, transparent 96%)" } } }, a$q = { root: r$P, text: o$R, icon: e$x, colorScheme: n$r };
+var o$Q = { padding: "{form.field.padding.y} {form.field.padding.x}", borderRadius: "{content.border.radius}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" }, transitionDuration: "{transition.duration}" }, r$O = { hoverBackground: "{content.hover.background}", hoverColor: "{content.hover.color}" }, n$q = { root: o$Q, display: r$O };
+var o$P = { background: "{form.field.background}", disabledBackground: "{form.field.disabled.background}", filledBackground: "{form.field.filled.background}", filledFocusBackground: "{form.field.filled.focus.background}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.hover.border.color}", focusBorderColor: "{form.field.focus.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", color: "{form.field.color}", disabledColor: "{form.field.disabled.color}", placeholderColor: "{form.field.placeholder.color}", shadow: "{form.field.shadow}", paddingX: "{form.field.padding.x}", paddingY: "{form.field.padding.y}", borderRadius: "{form.field.border.radius}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}" }, r$N = { borderRadius: "{border.radius.sm}" }, d$i = { light: { chip: { focusBackground: "{surface.200}", color: "{surface.800}" } }, dark: { chip: { focusBackground: "{surface.700}", color: "{surface.0}" } } }, f$4 = { root: o$P, chip: r$N, colorScheme: d$i };
+var r$M = { background: "{form.field.background}", borderColor: "{form.field.border.color}", color: "{form.field.icon.color}", borderRadius: "{form.field.border.radius}", padding: "0.5rem", minWidth: "2.5rem" }, o$O = { addon: r$M };
+var r$L = { transitionDuration: "{transition.duration}" }, o$N = { width: "2.5rem", borderRadius: "{form.field.border.radius}", verticalPadding: "{form.field.padding.y}" }, e$w = { light: { button: { background: "transparent", hoverBackground: "{surface.100}", activeBackground: "{surface.200}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.border.color}", activeBorderColor: "{form.field.border.color}", color: "{surface.400}", hoverColor: "{surface.500}", activeColor: "{surface.600}" } }, dark: { button: { background: "transparent", hoverBackground: "{surface.800}", activeBackground: "{surface.700}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.border.color}", activeBorderColor: "{form.field.border.color}", color: "{surface.400}", hoverColor: "{surface.300}", activeColor: "{surface.200}" } } }, a$p = { root: r$L, button: o$N, colorScheme: e$w };
+var r$K = { gap: "0.5rem" }, t$q = { width: "2.5rem", sm: { width: "2rem" }, lg: { width: "3rem" } }, e$v = { root: r$K, input: t$q };
+var o$M = { background: "{form.field.background}", disabledBackground: "{form.field.disabled.background}", filledBackground: "{form.field.filled.background}", filledHoverBackground: "{form.field.filled.hover.background}", filledFocusBackground: "{form.field.filled.focus.background}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.hover.border.color}", focusBorderColor: "{form.field.focus.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", color: "{form.field.color}", disabledColor: "{form.field.disabled.color}", placeholderColor: "{form.field.placeholder.color}", invalidPlaceholderColor: "{form.field.invalid.placeholder.color}", shadow: "{form.field.shadow}", paddingX: "{form.field.padding.x}", paddingY: "{form.field.padding.y}", borderRadius: "{form.field.border.radius}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}", sm: { fontSize: "{form.field.sm.font.size}", paddingX: "{form.field.sm.padding.x}", paddingY: "{form.field.sm.padding.y}" }, lg: { fontSize: "{form.field.lg.font.size}", paddingX: "{form.field.lg.padding.x}", paddingY: "{form.field.lg.padding.y}" } }, d$h = { root: o$M };
+var o$L = { transitionDuration: "{transition.duration}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, r$J = { background: "{primary.color}" }, t$p = { background: "{content.border.color}" }, n$p = { color: "{text.muted.color}" }, c$f = { root: o$L, value: r$J, range: t$p, text: n$p };
+var o$K = { background: "{form.field.background}", disabledBackground: "{form.field.disabled.background}", borderColor: "{form.field.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", color: "{form.field.color}", disabledColor: "{form.field.disabled.color}", shadow: "{form.field.shadow}", borderRadius: "{form.field.border.radius}", transitionDuration: "{form.field.transition.duration}" }, r$I = { padding: "{list.padding}", gap: "{list.gap}", header: { padding: "{list.header.padding}" } }, d$g = { focusBackground: "{list.option.focus.background}", selectedBackground: "{list.option.selected.background}", selectedFocusBackground: "{list.option.selected.focus.background}", color: "{list.option.color}", focusColor: "{list.option.focus.color}", selectedColor: "{list.option.selected.color}", selectedFocusColor: "{list.option.selected.focus.color}", padding: "{list.option.padding}", borderRadius: "{list.option.border.radius}" }, i$d = { background: "{list.option.group.background}", color: "{list.option.group.color}", fontWeight: "{list.option.group.font.weight}", padding: "{list.option.group.padding}" }, t$o = { color: "{list.option.color}", gutterStart: "-0.375rem", gutterEnd: "0.375rem" }, e$u = { padding: "{list.option.padding}" }, l$7 = { light: { option: { stripedBackground: "{surface.50}" } }, dark: { option: { stripedBackground: "{surface.900}" } } }, n$o = { root: o$K, list: r$I, option: d$g, optionGroup: i$d, checkmark: t$o, emptyMessage: e$u, colorScheme: l$7 };
+var o$J = { background: "{content.background}", borderColor: "{content.border.color}", borderRadius: "{content.border.radius}", color: "{content.color}", gap: "0.5rem", verticalOrientation: { padding: "{navigation.list.padding}", gap: "{navigation.list.gap}" }, horizontalOrientation: { padding: "0.5rem 0.75rem", gap: "0.5rem" }, transitionDuration: "{transition.duration}" }, n$n = { borderRadius: "{content.border.radius}", padding: "{navigation.item.padding}" }, i$c = { focusBackground: "{navigation.item.focus.background}", activeBackground: "{navigation.item.active.background}", color: "{navigation.item.color}", focusColor: "{navigation.item.focus.color}", activeColor: "{navigation.item.active.color}", padding: "{navigation.item.padding}", borderRadius: "{navigation.item.border.radius}", gap: "{navigation.item.gap}", icon: { color: "{navigation.item.icon.color}", focusColor: "{navigation.item.icon.focus.color}", activeColor: "{navigation.item.icon.active.color}" } }, a$o = { padding: "0", background: "{content.background}", borderColor: "{content.border.color}", borderRadius: "{content.border.radius}", color: "{content.color}", shadow: "{overlay.navigation.shadow}", gap: "0.5rem" }, r$H = { padding: "{navigation.list.padding}", gap: "{navigation.list.gap}" }, t$n = { padding: "{navigation.submenu.label.padding}", fontWeight: "{navigation.submenu.label.font.weight}", background: "{navigation.submenu.label.background.}", color: "{navigation.submenu.label.color}" }, e$t = { size: "{navigation.submenu.icon.size}", color: "{navigation.submenu.icon.color}", focusColor: "{navigation.submenu.icon.focus.color}", activeColor: "{navigation.submenu.icon.active.color}" }, c$e = { borderColor: "{content.border.color}" }, d$f = { borderRadius: "50%", size: "1.75rem", color: "{text.muted.color}", hoverColor: "{text.hover.muted.color}", hoverBackground: "{content.hover.background}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, g$1 = { root: o$J, baseItem: n$n, item: i$c, overlay: a$o, submenu: r$H, submenuLabel: t$n, submenuIcon: e$t, separator: c$e, mobileButton: d$f };
+var o$I = { background: "{content.background}", borderColor: "{content.border.color}", color: "{content.color}", borderRadius: "{content.border.radius}", shadow: "{overlay.navigation.shadow}", transitionDuration: "{transition.duration}" }, n$m = { padding: "{navigation.list.padding}", gap: "{navigation.list.gap}" }, a$n = { focusBackground: "{navigation.item.focus.background}", color: "{navigation.item.color}", focusColor: "{navigation.item.focus.color}", padding: "{navigation.item.padding}", borderRadius: "{navigation.item.border.radius}", gap: "{navigation.item.gap}", icon: { color: "{navigation.item.icon.color}", focusColor: "{navigation.item.icon.focus.color}" } }, i$b = { padding: "{navigation.submenu.label.padding}", fontWeight: "{navigation.submenu.label.font.weight}", background: "{navigation.submenu.label.background}", color: "{navigation.submenu.label.color}" }, t$m = { borderColor: "{content.border.color}" }, r$G = { root: o$I, list: n$m, item: a$n, submenuLabel: i$b, separator: t$m };
+var o$H = { background: "{content.background}", borderColor: "{content.border.color}", borderRadius: "{content.border.radius}", color: "{content.color}", gap: "0.5rem", padding: "0.5rem 0.75rem", transitionDuration: "{transition.duration}" }, i$a = { borderRadius: "{content.border.radius}", padding: "{navigation.item.padding}" }, n$l = { focusBackground: "{navigation.item.focus.background}", activeBackground: "{navigation.item.active.background}", color: "{navigation.item.color}", focusColor: "{navigation.item.focus.color}", activeColor: "{navigation.item.active.color}", padding: "{navigation.item.padding}", borderRadius: "{navigation.item.border.radius}", gap: "{navigation.item.gap}", icon: { color: "{navigation.item.icon.color}", focusColor: "{navigation.item.icon.focus.color}", activeColor: "{navigation.item.icon.active.color}" } }, r$F = { padding: "{navigation.list.padding}", gap: "{navigation.list.gap}", background: "{content.background}", borderColor: "{content.border.color}", borderRadius: "{content.border.radius}", shadow: "{overlay.navigation.shadow}", mobileIndent: "1rem", icon: { size: "{navigation.submenu.icon.size}", color: "{navigation.submenu.icon.color}", focusColor: "{navigation.submenu.icon.focus.color}", activeColor: "{navigation.submenu.icon.active.color}" } }, a$m = { borderColor: "{content.border.color}" }, t$l = { borderRadius: "50%", size: "1.75rem", color: "{text.muted.color}", hoverColor: "{text.hover.muted.color}", hoverBackground: "{content.hover.background}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, e$s = { root: o$H, baseItem: i$a, item: n$l, submenu: r$F, separator: a$m, mobileButton: t$l };
+var o$G = { borderRadius: "{content.border.radius}", borderWidth: "1px", transitionDuration: "{transition.duration}" }, r$E = { padding: "0.5rem 0.75rem", gap: "0.5rem", sm: { padding: "0.375rem 0.625rem" }, lg: { padding: "0.625rem 0.875rem" } }, e$r = { fontSize: "1rem", fontWeight: "500", sm: { fontSize: "0.875rem" }, lg: { fontSize: "1.125rem" } }, n$k = { size: "1.125rem", sm: { size: "1rem" }, lg: { size: "1.25rem" } }, l$6 = { width: "1.75rem", height: "1.75rem", borderRadius: "50%", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", offset: "{focus.ring.offset}" } }, s$3 = { size: "1rem", sm: { size: "0.875rem" }, lg: { size: "1.125rem" } }, c$d = { root: { borderWidth: "1px" } }, a$l = { content: { padding: "0" } }, d$e = { light: { info: { background: "color-mix(in srgb, {blue.50}, transparent 5%)", borderColor: "{blue.200}", color: "{blue.600}", shadow: "0px 4px 8px 0px color-mix(in srgb, {blue.500}, transparent 96%)", closeButton: { hoverBackground: "{blue.100}", focusRing: { color: "{blue.600}", shadow: "none" } }, outlined: { color: "{blue.600}", borderColor: "{blue.600}" }, simple: { color: "{blue.600}" } }, success: { background: "color-mix(in srgb, {green.50}, transparent 5%)", borderColor: "{green.200}", color: "{green.600}", shadow: "0px 4px 8px 0px color-mix(in srgb, {green.500}, transparent 96%)", closeButton: { hoverBackground: "{green.100}", focusRing: { color: "{green.600}", shadow: "none" } }, outlined: { color: "{green.600}", borderColor: "{green.600}" }, simple: { color: "{green.600}" } }, warn: { background: "color-mix(in srgb,{yellow.50}, transparent 5%)", borderColor: "{yellow.200}", color: "{yellow.600}", shadow: "0px 4px 8px 0px color-mix(in srgb, {yellow.500}, transparent 96%)", closeButton: { hoverBackground: "{yellow.100}", focusRing: { color: "{yellow.600}", shadow: "none" } }, outlined: { color: "{yellow.600}", borderColor: "{yellow.600}" }, simple: { color: "{yellow.600}" } }, error: { background: "color-mix(in srgb, {red.50}, transparent 5%)", borderColor: "{red.200}", color: "{red.600}", shadow: "0px 4px 8px 0px color-mix(in srgb, {red.500}, transparent 96%)", closeButton: { hoverBackground: "{red.100}", focusRing: { color: "{red.600}", shadow: "none" } }, outlined: { color: "{red.600}", borderColor: "{red.600}" }, simple: { color: "{red.600}" } }, secondary: { background: "{surface.100}", borderColor: "{surface.200}", color: "{surface.600}", shadow: "0px 4px 8px 0px color-mix(in srgb, {surface.500}, transparent 96%)", closeButton: { hoverBackground: "{surface.200}", focusRing: { color: "{surface.600}", shadow: "none" } }, outlined: { color: "{surface.500}", borderColor: "{surface.500}" }, simple: { color: "{surface.500}" } }, contrast: { background: "{surface.900}", borderColor: "{surface.950}", color: "{surface.50}", shadow: "0px 4px 8px 0px color-mix(in srgb, {surface.950}, transparent 96%)", closeButton: { hoverBackground: "{surface.800}", focusRing: { color: "{surface.50}", shadow: "none" } }, outlined: { color: "{surface.950}", borderColor: "{surface.950}" }, simple: { color: "{surface.950}" } } }, dark: { info: { background: "color-mix(in srgb, {blue.500}, transparent 84%)", borderColor: "color-mix(in srgb, {blue.700}, transparent 64%)", color: "{blue.500}", shadow: "0px 4px 8px 0px color-mix(in srgb, {blue.500}, transparent 96%)", closeButton: { hoverBackground: "rgba(255, 255, 255, 0.05)", focusRing: { color: "{blue.500}", shadow: "none" } }, outlined: { color: "{blue.500}", borderColor: "{blue.500}" }, simple: { color: "{blue.500}" } }, success: { background: "color-mix(in srgb, {green.500}, transparent 84%)", borderColor: "color-mix(in srgb, {green.700}, transparent 64%)", color: "{green.500}", shadow: "0px 4px 8px 0px color-mix(in srgb, {green.500}, transparent 96%)", closeButton: { hoverBackground: "rgba(255, 255, 255, 0.05)", focusRing: { color: "{green.500}", shadow: "none" } }, outlined: { color: "{green.500}", borderColor: "{green.500}" }, simple: { color: "{green.500}" } }, warn: { background: "color-mix(in srgb, {yellow.500}, transparent 84%)", borderColor: "color-mix(in srgb, {yellow.700}, transparent 64%)", color: "{yellow.500}", shadow: "0px 4px 8px 0px color-mix(in srgb, {yellow.500}, transparent 96%)", closeButton: { hoverBackground: "rgba(255, 255, 255, 0.05)", focusRing: { color: "{yellow.500}", shadow: "none" } }, outlined: { color: "{yellow.500}", borderColor: "{yellow.500}" }, simple: { color: "{yellow.500}" } }, error: { background: "color-mix(in srgb, {red.500}, transparent 84%)", borderColor: "color-mix(in srgb, {red.700}, transparent 64%)", color: "{red.500}", shadow: "0px 4px 8px 0px color-mix(in srgb, {red.500}, transparent 96%)", closeButton: { hoverBackground: "rgba(255, 255, 255, 0.05)", focusRing: { color: "{red.500}", shadow: "none" } }, outlined: { color: "{red.500}", borderColor: "{red.500}" }, simple: { color: "{red.500}" } }, secondary: { background: "{surface.800}", borderColor: "{surface.700}", color: "{surface.300}", shadow: "0px 4px 8px 0px color-mix(in srgb, {surface.500}, transparent 96%)", closeButton: { hoverBackground: "{surface.700}", focusRing: { color: "{surface.300}", shadow: "none" } }, outlined: { color: "{surface.400}", borderColor: "{surface.400}" }, simple: { color: "{surface.400}" } }, contrast: { background: "{surface.0}", borderColor: "{surface.100}", color: "{surface.950}", shadow: "0px 4px 8px 0px color-mix(in srgb, {surface.950}, transparent 96%)", closeButton: { hoverBackground: "{surface.100}", focusRing: { color: "{surface.950}", shadow: "none" } }, outlined: { color: "{surface.0}", borderColor: "{surface.0}" }, simple: { color: "{surface.0}" } } } }, u$2 = { root: o$G, content: r$E, text: e$r, icon: n$k, closeButton: l$6, closeIcon: s$3, outlined: c$d, simple: a$l, colorScheme: d$e };
+var e$q = { borderRadius: "{content.border.radius}", gap: "1rem" }, r$D = { background: "{content.border.color}", size: "0.5rem" }, a$k = { gap: "0.5rem" }, o$F = { size: "0.5rem" }, l$5 = { size: "1rem" }, t$k = { verticalGap: "0.5rem", horizontalGap: "1rem" }, b$1 = { root: e$q, meters: r$D, label: a$k, labelMarker: o$F, labelIcon: l$5, labelList: t$k };
+var o$E = { background: "{form.field.background}", disabledBackground: "{form.field.disabled.background}", filledBackground: "{form.field.filled.background}", filledHoverBackground: "{form.field.filled.hover.background}", filledFocusBackground: "{form.field.filled.focus.background}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.hover.border.color}", focusBorderColor: "{form.field.focus.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", color: "{form.field.color}", disabledColor: "{form.field.disabled.color}", placeholderColor: "{form.field.placeholder.color}", invalidPlaceholderColor: "{form.field.invalid.placeholder.color}", shadow: "{form.field.shadow}", paddingX: "{form.field.padding.x}", paddingY: "{form.field.padding.y}", borderRadius: "{form.field.border.radius}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}", sm: { fontSize: "{form.field.sm.font.size}", paddingX: "{form.field.sm.padding.x}", paddingY: "{form.field.sm.padding.y}" }, lg: { fontSize: "{form.field.lg.font.size}", paddingX: "{form.field.lg.padding.x}", paddingY: "{form.field.lg.padding.y}" } }, d$d = { width: "2.5rem", color: "{form.field.icon.color}" }, r$C = { background: "{overlay.select.background}", borderColor: "{overlay.select.border.color}", borderRadius: "{overlay.select.border.radius}", color: "{overlay.select.color}", shadow: "{overlay.select.shadow}" }, l$4 = { padding: "{list.padding}", gap: "{list.gap}", header: { padding: "{list.header.padding}" } }, i$9 = { focusBackground: "{list.option.focus.background}", selectedBackground: "{list.option.selected.background}", selectedFocusBackground: "{list.option.selected.focus.background}", color: "{list.option.color}", focusColor: "{list.option.focus.color}", selectedColor: "{list.option.selected.color}", selectedFocusColor: "{list.option.selected.focus.color}", padding: "{list.option.padding}", borderRadius: "{list.option.border.radius}", gap: "0.5rem" }, e$p = { background: "{list.option.group.background}", color: "{list.option.group.color}", fontWeight: "{list.option.group.font.weight}", padding: "{list.option.group.padding}" }, f$3 = { color: "{form.field.icon.color}" }, a$j = { borderRadius: "{border.radius.sm}" }, c$c = { padding: "{list.option.padding}" }, n$j = { root: o$E, dropdown: d$d, overlay: r$C, list: l$4, option: i$9, optionGroup: e$p, chip: a$j, clearIcon: f$3, emptyMessage: c$c };
+var r$B = { gap: "1.125rem" }, a$i = { gap: "0.5rem" }, o$D = { root: r$B, controls: a$i };
+var o$C = { gutter: "0.75rem", transitionDuration: "{transition.duration}" }, r$A = { background: "{content.background}", hoverBackground: "{content.hover.background}", selectedBackground: "{highlight.background}", borderColor: "{content.border.color}", color: "{content.color}", selectedColor: "{highlight.color}", hoverColor: "{content.hover.color}", padding: "0.75rem 1rem", toggleablePadding: "0.75rem 1rem 1.25rem 1rem", borderRadius: "{content.border.radius}" }, e$o = { background: "{content.background}", hoverBackground: "{content.hover.background}", borderColor: "{content.border.color}", color: "{text.muted.color}", hoverColor: "{text.color}", size: "1.5rem", borderRadius: "50%", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, t$j = { color: "{content.border.color}", borderRadius: "{content.border.radius}", height: "24px" }, n$i = { root: o$C, node: r$A, nodeToggleButton: e$o, connector: t$j };
+var o$B = { outline: { width: "2px", color: "{content.background}" } }, t$i = { root: o$B };
+var o$A = { padding: "0.5rem 1rem", gap: "0.25rem", borderRadius: "{content.border.radius}", background: "{content.background}", color: "{content.color}", transitionDuration: "{transition.duration}" }, r$z = { background: "transparent", hoverBackground: "{content.hover.background}", selectedBackground: "{highlight.background}", color: "{text.muted.color}", hoverColor: "{text.hover.muted.color}", selectedColor: "{highlight.color}", width: "2.5rem", height: "2.5rem", borderRadius: "50%", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, t$h = { color: "{text.muted.color}" }, e$n = { maxWidth: "2.5rem" }, n$h = { root: o$A, navButton: r$z, currentPageReport: t$h, jumpToPageInput: e$n };
+var r$y = { background: "{content.background}", borderColor: "{content.border.color}", color: "{content.color}", borderRadius: "{content.border.radius}" }, o$z = { background: "transparent", color: "{text.color}", padding: "1.125rem", borderColor: "{content.border.color}", borderWidth: "0", borderRadius: "0" }, e$m = { padding: "0.375rem 1.125rem" }, d$c = { fontWeight: "600" }, t$g = { padding: "0 1.125rem 1.125rem 1.125rem" }, n$g = { padding: "0 1.125rem 1.125rem 1.125rem" }, a$h = { root: r$y, header: o$z, toggleableHeader: e$m, title: d$c, content: t$g, footer: n$g };
+var o$y = { gap: "0.5rem", transitionDuration: "{transition.duration}" }, r$x = { background: "{content.background}", borderColor: "{content.border.color}", borderWidth: "1px", color: "{content.color}", padding: "0.25rem 0.25rem", borderRadius: "{content.border.radius}", first: { borderWidth: "1px", topBorderRadius: "{content.border.radius}" }, last: { borderWidth: "1px", bottomBorderRadius: "{content.border.radius}" } }, n$f = { focusBackground: "{navigation.item.focus.background}", color: "{navigation.item.color}", focusColor: "{navigation.item.focus.color}", gap: "0.5rem", padding: "{navigation.item.padding}", borderRadius: "{content.border.radius}", icon: { color: "{navigation.item.icon.color}", focusColor: "{navigation.item.icon.focus.color}" } }, i$8 = { indent: "1rem" }, t$f = { color: "{navigation.submenu.icon.color}", focusColor: "{navigation.submenu.icon.focus.color}" }, a$g = { root: o$y, panel: r$x, item: n$f, submenu: i$8, submenuIcon: t$f };
+var r$w = { background: "{content.border.color}", borderRadius: "{content.border.radius}", height: ".75rem" }, o$x = { color: "{form.field.icon.color}" }, e$l = { background: "{overlay.popover.background}", borderColor: "{overlay.popover.border.color}", borderRadius: "{overlay.popover.border.radius}", color: "{overlay.popover.color}", padding: "{overlay.popover.padding}", shadow: "{overlay.popover.shadow}" }, a$f = { gap: "0.5rem" }, d$b = { light: { strength: { weakBackground: "{red.500}", mediumBackground: "{amber.500}", strongBackground: "{green.500}" } }, dark: { strength: { weakBackground: "{red.400}", mediumBackground: "{amber.400}", strongBackground: "{green.400}" } } }, n$e = { meter: r$w, icon: o$x, overlay: e$l, content: a$f, colorScheme: d$b };
+var r$v = { gap: "1.125rem" }, a$e = { gap: "0.5rem" }, o$w = { root: r$v, controls: a$e };
+var o$v = { background: "{overlay.popover.background}", borderColor: "{overlay.popover.border.color}", color: "{overlay.popover.color}", borderRadius: "{overlay.popover.border.radius}", shadow: "{overlay.popover.shadow}", gutter: "10px", arrowOffset: "1.25rem" }, r$u = { padding: "{overlay.popover.padding}" }, e$k = { root: o$v, content: r$u };
+var r$t = { background: "{content.border.color}", borderRadius: "{content.border.radius}", height: "1.25rem" }, o$u = { background: "{primary.color}" }, e$j = { color: "{primary.contrast.color}", fontSize: "0.75rem", fontWeight: "600" }, t$e = { root: r$t, value: o$u, label: e$j };
+var o$t = { light: { root: { colorOne: "{red.500}", colorTwo: "{blue.500}", colorThree: "{green.500}", colorFour: "{yellow.500}" } }, dark: { root: { colorOne: "{red.400}", colorTwo: "{blue.400}", colorThree: "{green.400}", colorFour: "{yellow.400}" } } }, r$s = { colorScheme: o$t };
+var o$s = { width: "1.25rem", height: "1.25rem", background: "{form.field.background}", checkedBackground: "{primary.color}", checkedHoverBackground: "{primary.hover.color}", disabledBackground: "{form.field.disabled.background}", filledBackground: "{form.field.filled.background}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.hover.border.color}", focusBorderColor: "{form.field.border.color}", checkedBorderColor: "{primary.color}", checkedHoverBorderColor: "{primary.hover.color}", checkedFocusBorderColor: "{primary.color}", checkedDisabledBorderColor: "{form.field.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", shadow: "{form.field.shadow}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}", sm: { width: "1rem", height: "1rem" }, lg: { width: "1.5rem", height: "1.5rem" } }, r$r = { size: "0.75rem", checkedColor: "{primary.contrast.color}", checkedHoverColor: "{primary.contrast.color}", disabledColor: "{form.field.disabled.color}", sm: { size: "0.5rem" }, lg: { size: "1rem" } }, e$i = { root: o$s, icon: r$r };
+var o$r = { gap: "0.25rem", transitionDuration: "{transition.duration}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, r$q = { size: "1rem", color: "{text.muted.color}", hoverColor: "{primary.color}", activeColor: "{primary.color}" }, i$7 = { root: o$r, icon: r$q };
+var r$p = { light: { root: { background: "rgba(0,0,0,0.1)" } }, dark: { root: { background: "rgba(255,255,255,0.3)" } } }, o$q = { colorScheme: r$p };
+var r$o = { transitionDuration: "{transition.duration}" }, o$p = { size: "9px", borderRadius: "{border.radius.sm}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, s$2 = { light: { bar: { background: "{surface.100}" } }, dark: { bar: { background: "{surface.800}" } } }, a$d = { root: r$o, bar: o$p, colorScheme: s$2 };
+var o$o = { background: "{form.field.background}", disabledBackground: "{form.field.disabled.background}", filledBackground: "{form.field.filled.background}", filledHoverBackground: "{form.field.filled.hover.background}", filledFocusBackground: "{form.field.filled.focus.background}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.hover.border.color}", focusBorderColor: "{form.field.focus.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", color: "{form.field.color}", disabledColor: "{form.field.disabled.color}", placeholderColor: "{form.field.placeholder.color}", invalidPlaceholderColor: "{form.field.invalid.placeholder.color}", shadow: "{form.field.shadow}", paddingX: "{form.field.padding.x}", paddingY: "{form.field.padding.y}", borderRadius: "{form.field.border.radius}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}", sm: { fontSize: "{form.field.sm.font.size}", paddingX: "{form.field.sm.padding.x}", paddingY: "{form.field.sm.padding.y}" }, lg: { fontSize: "{form.field.lg.font.size}", paddingX: "{form.field.lg.padding.x}", paddingY: "{form.field.lg.padding.y}" } }, r$n = { width: "2.5rem", color: "{form.field.icon.color}" }, d$a = { background: "{overlay.select.background}", borderColor: "{overlay.select.border.color}", borderRadius: "{overlay.select.border.radius}", color: "{overlay.select.color}", shadow: "{overlay.select.shadow}" }, l$3 = { padding: "{list.padding}", gap: "{list.gap}", header: { padding: "{list.header.padding}" } }, i$6 = { focusBackground: "{list.option.focus.background}", selectedBackground: "{list.option.selected.background}", selectedFocusBackground: "{list.option.selected.focus.background}", color: "{list.option.color}", focusColor: "{list.option.focus.color}", selectedColor: "{list.option.selected.color}", selectedFocusColor: "{list.option.selected.focus.color}", padding: "{list.option.padding}", borderRadius: "{list.option.border.radius}" }, e$h = { background: "{list.option.group.background}", color: "{list.option.group.color}", fontWeight: "{list.option.group.font.weight}", padding: "{list.option.group.padding}" }, f$2 = { color: "{form.field.icon.color}" }, c$b = { color: "{list.option.color}", gutterStart: "-0.375rem", gutterEnd: "0.375rem" }, a$c = { padding: "{list.option.padding}" }, n$d = { root: o$o, dropdown: r$n, overlay: d$a, list: l$3, option: i$6, optionGroup: e$h, clearIcon: f$2, checkmark: c$b, emptyMessage: a$c };
+var r$m = { borderRadius: "{form.field.border.radius}" }, o$n = { light: { root: { invalidBorderColor: "{form.field.invalid.border.color}" } }, dark: { root: { invalidBorderColor: "{form.field.invalid.border.color}" } } }, d$9 = { root: r$m, colorScheme: o$n };
+var r$l = { borderRadius: "{content.border.radius}" }, a$b = { light: { root: { background: "{surface.200}", animationBackground: "rgba(255,255,255,0.4)" } }, dark: { root: { background: "rgba(255, 255, 255, 0.06)", animationBackground: "rgba(255, 255, 255, 0.04)" } } }, o$m = { root: r$l, colorScheme: a$b };
+var o$l = { transitionDuration: "{transition.duration}" }, r$k = { background: "{content.border.color}", borderRadius: "{content.border.radius}", size: "3px" }, n$c = { background: "{primary.color}" }, t$d = { width: "20px", height: "20px", borderRadius: "50%", background: "{content.border.color}", hoverBackground: "{content.border.color}", content: { borderRadius: "50%", hoverBackground: "{content.background}", width: "16px", height: "16px", shadow: "0px 0.5px 0px 0px rgba(0, 0, 0, 0.08), 0px 1px 1px 0px rgba(0, 0, 0, 0.14)" }, focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, e$g = { light: { handle: { content: { background: "{surface.0}" } } }, dark: { handle: { content: { background: "{surface.950}" } } } }, a$a = { root: o$l, track: r$k, range: n$c, handle: t$d, colorScheme: e$g };
+var t$c = { gap: "0.5rem", transitionDuration: "{transition.duration}" }, a$9 = { root: t$c };
+var r$j = { borderRadius: "{form.field.border.radius}", roundedBorderRadius: "2rem", raisedShadow: "0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12)" }, d$8 = { root: r$j };
+var o$k = { background: "{content.background}", borderColor: "{content.border.color}", color: "{content.color}", transitionDuration: "{transition.duration}" }, r$i = { background: "{content.border.color}" }, n$b = { size: "24px", background: "transparent", borderRadius: "{content.border.radius}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, t$b = { root: o$k, gutter: r$i, handle: n$b };
+var o$j = { transitionDuration: "{transition.duration}" }, r$h = { background: "{content.border.color}", activeBackground: "{primary.color}", margin: "0 0 0 1.625rem", size: "2px" }, e$f = { padding: "0.5rem", gap: "1rem" }, t$a = { padding: "0", borderRadius: "{content.border.radius}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" }, gap: "0.5rem" }, n$a = { color: "{text.muted.color}", activeColor: "{primary.color}", fontWeight: "500" }, a$8 = { background: "{content.background}", activeBackground: "{content.background}", borderColor: "{content.border.color}", activeBorderColor: "{content.border.color}", color: "{text.muted.color}", activeColor: "{primary.color}", size: "2rem", fontSize: "1.143rem", fontWeight: "500", borderRadius: "50%", shadow: "0px 0.5px 0px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12)" }, c$a = { padding: "0.875rem 0.5rem 1.125rem 0.5rem" }, d$7 = { background: "{content.background}", color: "{content.color}", padding: "0", indent: "1rem" }, i$5 = { root: o$j, separator: r$h, step: e$f, stepHeader: t$a, stepTitle: n$a, stepNumber: a$8, steppanels: c$a, steppanel: d$7 };
+var o$i = { transitionDuration: "{transition.duration}" }, r$g = { background: "{content.border.color}" }, t$9 = { borderRadius: "{content.border.radius}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" }, gap: "0.5rem" }, e$e = { color: "{text.muted.color}", activeColor: "{primary.color}", fontWeight: "500" }, n$9 = { background: "{content.background}", activeBackground: "{content.background}", borderColor: "{content.border.color}", activeBorderColor: "{content.border.color}", color: "{text.muted.color}", activeColor: "{primary.color}", size: "2rem", fontSize: "1.143rem", fontWeight: "500", borderRadius: "50%", shadow: "0px 0.5px 0px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12)" }, c$9 = { root: o$i, separator: r$g, itemLink: t$9, itemLabel: e$e, itemNumber: n$9 };
+var o$h = { transitionDuration: "{transition.duration}" }, r$f = { borderWidth: "0 0 1px 0", background: "{content.background}", borderColor: "{content.border.color}" }, t$8 = { background: "transparent", hoverBackground: "transparent", activeBackground: "transparent", borderWidth: "0 0 1px 0", borderColor: "{content.border.color}", hoverBorderColor: "{content.border.color}", activeBorderColor: "{primary.color}", color: "{text.muted.color}", hoverColor: "{text.color}", activeColor: "{primary.color}", padding: "1rem 1.125rem", fontWeight: "600", margin: "0 0 -1px 0", gap: "0.5rem", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, e$d = { color: "{text.muted.color}", hoverColor: "{text.color}", activeColor: "{primary.color}" }, c$8 = { height: "1px", bottom: "-1px", background: "{primary.color}" }, n$8 = { root: o$h, tablist: r$f, item: t$8, itemIcon: e$d, activeBar: c$8 };
+var o$g = { transitionDuration: "{transition.duration}" }, r$e = { borderWidth: "0 0 1px 0", background: "{content.background}", borderColor: "{content.border.color}" }, t$7 = { background: "transparent", hoverBackground: "transparent", activeBackground: "transparent", borderWidth: "0 0 1px 0", borderColor: "{content.border.color}", hoverBorderColor: "{content.border.color}", activeBorderColor: "{primary.color}", color: "{text.muted.color}", hoverColor: "{text.color}", activeColor: "{primary.color}", padding: "1rem 1.125rem", fontWeight: "600", margin: "0 0 -1px 0", gap: "0.5rem", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "-1px", shadow: "{focus.ring.shadow}" } }, n$7 = { background: "{content.background}", color: "{content.color}", padding: "0.875rem 1.125rem 1.125rem 1.125rem", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "inset {focus.ring.shadow}" } }, c$7 = { background: "{content.background}", color: "{text.muted.color}", hoverColor: "{text.color}", width: "2.5rem", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "-1px", shadow: "{focus.ring.shadow}" } }, e$c = { height: "1px", bottom: "-1px", background: "{primary.color}" }, a$7 = { light: { navButton: { shadow: "0px 0px 10px 50px rgba(255, 255, 255, 0.6)" } }, dark: { navButton: { shadow: "0px 0px 10px 50px color-mix(in srgb, {content.background}, transparent 50%)" } } }, i$4 = { root: o$g, tablist: r$e, tab: t$7, tabpanel: n$7, navButton: c$7, activeBar: e$c, colorScheme: a$7 };
+var o$f = { transitionDuration: "{transition.duration}" }, r$d = { background: "{content.background}", borderColor: "{content.border.color}" }, t$6 = { borderColor: "{content.border.color}", activeBorderColor: "{primary.color}", color: "{text.muted.color}", hoverColor: "{text.color}", activeColor: "{primary.color}" }, n$6 = { background: "{content.background}", color: "{content.color}" }, a$6 = { background: "{content.background}", color: "{text.muted.color}", hoverColor: "{text.color}" }, c$6 = { light: { navButton: { shadow: "0px 0px 10px 50px rgba(255, 255, 255, 0.6)" } }, dark: { navButton: { shadow: "0px 0px 10px 50px color-mix(in srgb, {content.background}, transparent 50%)" } } }, e$b = { root: o$f, tabList: r$d, tab: t$6, tabPanel: n$6, navButton: a$6, colorScheme: c$6 };
+var r$c = { fontSize: "0.875rem", fontWeight: "700", padding: "0.25rem 0.5rem", gap: "0.25rem", borderRadius: "{content.border.radius}", roundedBorderRadius: "{border.radius.xl}" }, o$e = { size: "0.75rem" }, a$5 = { light: { primary: { background: "{primary.100}", color: "{primary.700}" }, secondary: { background: "{surface.100}", color: "{surface.600}" }, success: { background: "{green.100}", color: "{green.700}" }, info: { background: "{sky.100}", color: "{sky.700}" }, warn: { background: "{orange.100}", color: "{orange.700}" }, danger: { background: "{red.100}", color: "{red.700}" }, contrast: { background: "{surface.950}", color: "{surface.0}" } }, dark: { primary: { background: "color-mix(in srgb, {primary.500}, transparent 84%)", color: "{primary.300}" }, secondary: { background: "{surface.800}", color: "{surface.300}" }, success: { background: "color-mix(in srgb, {green.500}, transparent 84%)", color: "{green.300}" }, info: { background: "color-mix(in srgb, {sky.500}, transparent 84%)", color: "{sky.300}" }, warn: { background: "color-mix(in srgb, {orange.500}, transparent 84%)", color: "{orange.300}" }, danger: { background: "color-mix(in srgb, {red.500}, transparent 84%)", color: "{red.300}" }, contrast: { background: "{surface.0}", color: "{surface.950}" } } }, n$5 = { root: r$c, icon: o$e, colorScheme: a$5 };
+var r$b = { background: "{form.field.background}", borderColor: "{form.field.border.color}", color: "{form.field.color}", height: "18rem", padding: "{form.field.padding.y} {form.field.padding.x}", borderRadius: "{form.field.border.radius}" }, o$d = { gap: "0.25rem" }, d$6 = { margin: "2px 0" }, e$a = { root: r$b, prompt: o$d, commandResponse: d$6 };
+var o$c = { background: "{form.field.background}", disabledBackground: "{form.field.disabled.background}", filledBackground: "{form.field.filled.background}", filledHoverBackground: "{form.field.filled.hover.background}", filledFocusBackground: "{form.field.filled.focus.background}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.hover.border.color}", focusBorderColor: "{form.field.focus.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", color: "{form.field.color}", disabledColor: "{form.field.disabled.color}", placeholderColor: "{form.field.placeholder.color}", invalidPlaceholderColor: "{form.field.invalid.placeholder.color}", shadow: "{form.field.shadow}", paddingX: "{form.field.padding.x}", paddingY: "{form.field.padding.y}", borderRadius: "{form.field.border.radius}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}", sm: { fontSize: "{form.field.sm.font.size}", paddingX: "{form.field.sm.padding.x}", paddingY: "{form.field.sm.padding.y}" }, lg: { fontSize: "{form.field.lg.font.size}", paddingX: "{form.field.lg.padding.x}", paddingY: "{form.field.lg.padding.y}" } }, d$5 = { root: o$c };
+var o$b = { background: "{content.background}", borderColor: "{content.border.color}", color: "{content.color}", borderRadius: "{content.border.radius}", shadow: "{overlay.navigation.shadow}", transitionDuration: "{transition.duration}" }, i$3 = { padding: "{navigation.list.padding}", gap: "{navigation.list.gap}" }, n$4 = { focusBackground: "{navigation.item.focus.background}", activeBackground: "{navigation.item.active.background}", color: "{navigation.item.color}", focusColor: "{navigation.item.focus.color}", activeColor: "{navigation.item.active.color}", padding: "{navigation.item.padding}", borderRadius: "{navigation.item.border.radius}", gap: "{navigation.item.gap}", icon: { color: "{navigation.item.icon.color}", focusColor: "{navigation.item.icon.focus.color}", activeColor: "{navigation.item.icon.active.color}" } }, a$4 = { mobileIndent: "1rem" }, t$5 = { size: "{navigation.submenu.icon.size}", color: "{navigation.submenu.icon.color}", focusColor: "{navigation.submenu.icon.focus.color}", activeColor: "{navigation.submenu.icon.active.color}" }, r$a = { borderColor: "{content.border.color}" }, c$5 = { root: o$b, list: i$3, item: n$4, submenu: a$4, submenuIcon: t$5, separator: r$a };
+var e$9 = { minHeight: "5rem" }, r$9 = { eventContent: { padding: "1rem 0" } }, o$a = { eventContent: { padding: "0 1rem" } }, n$3 = { size: "1.125rem", borderRadius: "50%", borderWidth: "2px", background: "{content.background}", borderColor: "{content.border.color}", content: { borderRadius: "50%", size: "0.375rem", background: "{primary.color}", insetShadow: "0px 0.5px 0px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12)" } }, t$4 = { color: "{content.border.color}", size: "2px" }, d$4 = { event: e$9, horizontal: r$9, vertical: o$a, eventMarker: n$3, eventConnector: t$4 };
+var o$9 = { width: "25rem", borderRadius: "{content.border.radius}", borderWidth: "1px", transitionDuration: "{transition.duration}" }, r$8 = { size: "1.125rem" }, e$8 = { padding: "{overlay.popover.padding}", gap: "0.5rem" }, n$2 = { gap: "0.5rem" }, a$3 = { fontWeight: "500", fontSize: "1rem" }, s$1 = { fontWeight: "500", fontSize: "0.875rem" }, c$4 = { width: "1.75rem", height: "1.75rem", borderRadius: "50%", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", offset: "{focus.ring.offset}" } }, l$2 = { size: "1rem" }, t$3 = { light: { root: { blur: "1.5px" }, info: { background: "color-mix(in srgb, {blue.50}, transparent 5%)", borderColor: "{blue.200}", color: "{blue.600}", detailColor: "{surface.700}", shadow: "0px 4px 8px 0px color-mix(in srgb, {blue.500}, transparent 96%)", closeButton: { hoverBackground: "{blue.100}", focusRing: { color: "{blue.600}", shadow: "none" } } }, success: { background: "color-mix(in srgb, {green.50}, transparent 5%)", borderColor: "{green.200}", color: "{green.600}", detailColor: "{surface.700}", shadow: "0px 4px 8px 0px color-mix(in srgb, {green.500}, transparent 96%)", closeButton: { hoverBackground: "{green.100}", focusRing: { color: "{green.600}", shadow: "none" } } }, warn: { background: "color-mix(in srgb,{yellow.50}, transparent 5%)", borderColor: "{yellow.200}", color: "{yellow.600}", detailColor: "{surface.700}", shadow: "0px 4px 8px 0px color-mix(in srgb, {yellow.500}, transparent 96%)", closeButton: { hoverBackground: "{yellow.100}", focusRing: { color: "{yellow.600}", shadow: "none" } } }, error: { background: "color-mix(in srgb, {red.50}, transparent 5%)", borderColor: "{red.200}", color: "{red.600}", detailColor: "{surface.700}", shadow: "0px 4px 8px 0px color-mix(in srgb, {red.500}, transparent 96%)", closeButton: { hoverBackground: "{red.100}", focusRing: { color: "{red.600}", shadow: "none" } } }, secondary: { background: "{surface.100}", borderColor: "{surface.200}", color: "{surface.600}", detailColor: "{surface.700}", shadow: "0px 4px 8px 0px color-mix(in srgb, {surface.500}, transparent 96%)", closeButton: { hoverBackground: "{surface.200}", focusRing: { color: "{surface.600}", shadow: "none" } } }, contrast: { background: "{surface.900}", borderColor: "{surface.950}", color: "{surface.50}", detailColor: "{surface.0}", shadow: "0px 4px 8px 0px color-mix(in srgb, {surface.950}, transparent 96%)", closeButton: { hoverBackground: "{surface.800}", focusRing: { color: "{surface.50}", shadow: "none" } } } }, dark: { root: { blur: "10px" }, info: { background: "color-mix(in srgb, {blue.500}, transparent 84%)", borderColor: "color-mix(in srgb, {blue.700}, transparent 64%)", color: "{blue.500}", detailColor: "{surface.0}", shadow: "0px 4px 8px 0px color-mix(in srgb, {blue.500}, transparent 96%)", closeButton: { hoverBackground: "rgba(255, 255, 255, 0.05)", focusRing: { color: "{blue.500}", shadow: "none" } } }, success: { background: "color-mix(in srgb, {green.500}, transparent 84%)", borderColor: "color-mix(in srgb, {green.700}, transparent 64%)", color: "{green.500}", detailColor: "{surface.0}", shadow: "0px 4px 8px 0px color-mix(in srgb, {green.500}, transparent 96%)", closeButton: { hoverBackground: "rgba(255, 255, 255, 0.05)", focusRing: { color: "{green.500}", shadow: "none" } } }, warn: { background: "color-mix(in srgb, {yellow.500}, transparent 84%)", borderColor: "color-mix(in srgb, {yellow.700}, transparent 64%)", color: "{yellow.500}", detailColor: "{surface.0}", shadow: "0px 4px 8px 0px color-mix(in srgb, {yellow.500}, transparent 96%)", closeButton: { hoverBackground: "rgba(255, 255, 255, 0.05)", focusRing: { color: "{yellow.500}", shadow: "none" } } }, error: { background: "color-mix(in srgb, {red.500}, transparent 84%)", borderColor: "color-mix(in srgb, {red.700}, transparent 64%)", color: "{red.500}", detailColor: "{surface.0}", shadow: "0px 4px 8px 0px color-mix(in srgb, {red.500}, transparent 96%)", closeButton: { hoverBackground: "rgba(255, 255, 255, 0.05)", focusRing: { color: "{red.500}", shadow: "none" } } }, secondary: { background: "{surface.800}", borderColor: "{surface.700}", color: "{surface.300}", detailColor: "{surface.0}", shadow: "0px 4px 8px 0px color-mix(in srgb, {surface.500}, transparent 96%)", closeButton: { hoverBackground: "{surface.700}", focusRing: { color: "{surface.300}", shadow: "none" } } }, contrast: { background: "{surface.0}", borderColor: "{surface.100}", color: "{surface.950}", detailColor: "{surface.950}", shadow: "0px 4px 8px 0px color-mix(in srgb, {surface.950}, transparent 96%)", closeButton: { hoverBackground: "{surface.100}", focusRing: { color: "{surface.950}", shadow: "none" } } } } }, u$1 = { root: o$9, icon: r$8, content: e$8, text: n$2, summary: a$3, detail: s$1, closeButton: c$4, closeIcon: l$2, colorScheme: t$3 };
+var r$7 = { padding: "0.25rem", borderRadius: "{content.border.radius}", gap: "0.5rem", fontWeight: "500", disabledBackground: "{form.field.disabled.background}", disabledBorderColor: "{form.field.disabled.background}", disabledColor: "{form.field.disabled.color}", invalidBorderColor: "{form.field.invalid.border.color}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}", sm: { fontSize: "{form.field.sm.font.size}", padding: "0.25rem" }, lg: { fontSize: "{form.field.lg.font.size}", padding: "0.25rem" } }, o$8 = { disabledColor: "{form.field.disabled.color}" }, e$7 = { padding: "0.25rem 0.75rem", borderRadius: "{content.border.radius}", checkedShadow: "0px 1px 2px 0px rgba(0, 0, 0, 0.02), 0px 1px 2px 0px rgba(0, 0, 0, 0.04)", sm: { padding: "0.25rem 0.75rem" }, lg: { padding: "0.25rem 0.75rem" } }, d$3 = { light: { root: { background: "{surface.100}", checkedBackground: "{surface.100}", hoverBackground: "{surface.100}", borderColor: "{surface.100}", color: "{surface.500}", hoverColor: "{surface.700}", checkedColor: "{surface.900}", checkedBorderColor: "{surface.100}" }, content: { checkedBackground: "{surface.0}" }, icon: { color: "{surface.500}", hoverColor: "{surface.700}", checkedColor: "{surface.900}" } }, dark: { root: { background: "{surface.950}", checkedBackground: "{surface.950}", hoverBackground: "{surface.950}", borderColor: "{surface.950}", color: "{surface.400}", hoverColor: "{surface.300}", checkedColor: "{surface.0}", checkedBorderColor: "{surface.950}" }, content: { checkedBackground: "{surface.800}" }, icon: { color: "{surface.400}", hoverColor: "{surface.300}", checkedColor: "{surface.0}" } } }, c$3 = { root: r$7, icon: o$8, content: e$7, colorScheme: d$3 };
+var r$6 = { width: "2.5rem", height: "1.5rem", borderRadius: "30px", gap: "0.25rem", shadow: "{form.field.shadow}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" }, borderWidth: "1px", borderColor: "transparent", hoverBorderColor: "transparent", checkedBorderColor: "transparent", checkedHoverBorderColor: "transparent", invalidBorderColor: "{form.field.invalid.border.color}", transitionDuration: "{form.field.transition.duration}", slideDuration: "0.2s" }, o$7 = { borderRadius: "50%", size: "1rem" }, e$6 = { light: { root: { background: "{surface.300}", disabledBackground: "{form.field.disabled.background}", hoverBackground: "{surface.400}", checkedBackground: "{primary.color}", checkedHoverBackground: "{primary.hover.color}" }, handle: { background: "{surface.0}", disabledBackground: "{form.field.disabled.color}", hoverBackground: "{surface.0}", checkedBackground: "{surface.0}", checkedHoverBackground: "{surface.0}", color: "{text.muted.color}", hoverColor: "{text.color}", checkedColor: "{primary.color}", checkedHoverColor: "{primary.hover.color}" } }, dark: { root: { background: "{surface.700}", disabledBackground: "{surface.600}", hoverBackground: "{surface.600}", checkedBackground: "{primary.color}", checkedHoverBackground: "{primary.hover.color}" }, handle: { background: "{surface.400}", disabledBackground: "{surface.900}", hoverBackground: "{surface.300}", checkedBackground: "{surface.900}", checkedHoverBackground: "{surface.900}", color: "{surface.900}", hoverColor: "{surface.800}", checkedColor: "{primary.color}", checkedHoverColor: "{primary.hover.color}" } } }, c$2 = { root: r$6, handle: o$7, colorScheme: e$6 };
+var o$6 = { background: "{content.background}", borderColor: "{content.border.color}", borderRadius: "{content.border.radius}", color: "{content.color}", gap: "0.5rem", padding: "0.75rem" }, r$5 = { root: o$6 };
+var r$4 = { maxWidth: "12.5rem", gutter: "0.25rem", shadow: "{overlay.popover.shadow}", padding: "0.5rem 0.75rem", borderRadius: "{overlay.popover.border.radius}" }, o$5 = { light: { root: { background: "{surface.700}", color: "{surface.0}" } }, dark: { root: { background: "{surface.700}", color: "{surface.0}" } } }, e$5 = { root: r$4, colorScheme: o$5 };
+var o$4 = { background: "{content.background}", color: "{content.color}", padding: "1rem", gap: "2px", indent: "1rem", transitionDuration: "{transition.duration}" }, r$3 = { padding: "0.25rem 0.5rem", borderRadius: "{content.border.radius}", hoverBackground: "{content.hover.background}", selectedBackground: "{highlight.background}", color: "{text.color}", hoverColor: "{text.hover.color}", selectedColor: "{highlight.color}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "-1px", shadow: "{focus.ring.shadow}" }, gap: "0.25rem" }, e$4 = { color: "{text.muted.color}", hoverColor: "{text.hover.muted.color}", selectedColor: "{highlight.color}" }, t$2 = { borderRadius: "50%", size: "1.75rem", hoverBackground: "{content.hover.background}", selectedHoverBackground: "{content.background}", color: "{text.muted.color}", hoverColor: "{text.hover.muted.color}", selectedHoverColor: "{primary.color}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, c$1 = { size: "2rem" }, n$1 = { margin: "0 0 0.5rem 0" }, d$2 = { root: o$4, node: r$3, nodeIcon: e$4, nodeToggleButton: t$2, loadingIcon: c$1, filter: n$1 };
+var o$3 = { background: "{form.field.background}", disabledBackground: "{form.field.disabled.background}", filledBackground: "{form.field.filled.background}", filledHoverBackground: "{form.field.filled.hover.background}", filledFocusBackground: "{form.field.filled.focus.background}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.hover.border.color}", focusBorderColor: "{form.field.focus.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", color: "{form.field.color}", disabledColor: "{form.field.disabled.color}", placeholderColor: "{form.field.placeholder.color}", invalidPlaceholderColor: "{form.field.invalid.placeholder.color}", shadow: "{form.field.shadow}", paddingX: "{form.field.padding.x}", paddingY: "{form.field.padding.y}", borderRadius: "{form.field.border.radius}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}", sm: { fontSize: "{form.field.sm.font.size}", paddingX: "{form.field.sm.padding.x}", paddingY: "{form.field.sm.padding.y}" }, lg: { fontSize: "{form.field.lg.font.size}", paddingX: "{form.field.lg.padding.x}", paddingY: "{form.field.lg.padding.y}" } }, r$2 = { width: "2.5rem", color: "{form.field.icon.color}" }, d$1 = { background: "{overlay.select.background}", borderColor: "{overlay.select.border.color}", borderRadius: "{overlay.select.border.radius}", color: "{overlay.select.color}", shadow: "{overlay.select.shadow}" }, l$1 = { padding: "{list.padding}" }, e$3 = { padding: "{list.option.padding}" }, i$2 = { borderRadius: "{border.radius.sm}" }, f$1 = { color: "{form.field.icon.color}" }, a$2 = { root: o$3, dropdown: r$2, overlay: d$1, tree: l$1, emptyMessage: e$3, chip: i$2, clearIcon: f$1 };
+var o$2 = { transitionDuration: "{transition.duration}" }, r$1 = { background: "{content.background}", borderColor: "{treetable.border.color}", color: "{content.color}", borderWidth: "0 0 1px 0", padding: "0.75rem 1rem" }, e$2 = { background: "{content.background}", hoverBackground: "{content.hover.background}", selectedBackground: "{highlight.background}", borderColor: "{treetable.border.color}", color: "{content.color}", hoverColor: "{content.hover.color}", selectedColor: "{highlight.color}", gap: "0.5rem", padding: "0.75rem 1rem", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "-1px", shadow: "{focus.ring.shadow}" } }, t$1 = { fontWeight: "600" }, c = { background: "{content.background}", hoverBackground: "{content.hover.background}", selectedBackground: "{highlight.background}", color: "{content.color}", hoverColor: "{content.hover.color}", selectedColor: "{highlight.color}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "-1px", shadow: "{focus.ring.shadow}" } }, n = { borderColor: "{treetable.border.color}", padding: "0.75rem 1rem", gap: "0.5rem" }, d = { background: "{content.background}", borderColor: "{treetable.border.color}", color: "{content.color}", padding: "0.75rem 1rem" }, l = { fontWeight: "600" }, i$1 = { background: "{content.background}", borderColor: "{treetable.border.color}", color: "{content.color}", borderWidth: "0 0 1px 0", padding: "0.75rem 1rem" }, a$1 = { width: "0.5rem" }, g = { width: "1px", color: "{primary.color}" }, s = { color: "{text.muted.color}", hoverColor: "{text.hover.muted.color}", size: "0.875rem" }, u = { size: "2rem" }, h = { hoverBackground: "{content.hover.background}", selectedHoverBackground: "{content.background}", color: "{text.muted.color}", hoverColor: "{text.color}", selectedHoverColor: "{primary.color}", size: "1.75rem", borderRadius: "50%", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, b = { borderColor: "{content.border.color}", borderWidth: "0 0 1px 0" }, f = { borderColor: "{content.border.color}", borderWidth: "0 0 1px 0" }, m$1 = { light: { root: { borderColor: "{content.border.color}" }, bodyCell: { selectedBorderColor: "{primary.100}" } }, dark: { root: { borderColor: "{surface.800}" }, bodyCell: { selectedBorderColor: "{primary.900}" } } }, k = { root: o$2, header: r$1, headerCell: e$2, columnTitle: t$1, row: c, bodyCell: n, footerCell: d, columnFooter: l, footer: i$1, columnResizer: a$1, resizeIndicator: g, sortIcon: s, loadingIcon: u, nodeToggleButton: h, paginatorTop: b, paginatorBottom: f, colorScheme: m$1 };
+var o$1 = { mask: { background: "{content.background}", color: "{text.muted.color}" }, icon: { size: "2rem" } }, e$1 = { loader: o$1 };
+var r = Object.defineProperty, e = Object.defineProperties, m = Object.getOwnPropertyDescriptors, i = Object.getOwnPropertySymbols, t = Object.prototype.hasOwnProperty, a = Object.prototype.propertyIsEnumerable, o = (e2, m2, i2) => m2 in e2 ? r(e2, m2, { enumerable: true, configurable: true, writable: true, value: i2 }) : e2[m2] = i2;
+var Nr, Qr = (Nr = ((r2, e2) => {
+  for (var m2 in e2 || (e2 = {})) t.call(e2, m2) && o(r2, m2, e2[m2]);
+  if (i) for (var m2 of i(e2)) a.call(e2, m2) && o(r2, m2, e2[m2]);
+  return r2;
+})({}, e$R), e(Nr, m({ components: { accordion: c$p, autocomplete: a$F, avatar: n$B, badge: d$v, blockui: o$1h, breadcrumb: t$C, button: e$Q, card: d$u, carousel: t$A, cascadeselect: f$8, checkbox: e$N, chip: s$8, colorpicker: s$7, confirmdialog: r$15, confirmpopup: a$A, contextmenu: c$k, datatable: k$2, dataview: c$i, datepicker: k$1, dialog: e$F, divider: t$v, dock: d$o, drawer: e$D, editor: l$a, fieldset: e$B, fileupload: i$i, floatlabel: d$k, galleria: l$9, iconfield: r$S, iftalabel: i$f, image: e$y, imagecompare: r$Q, inlinemessage: a$q, inplace: n$q, inputchips: f$4, inputgroup: o$O, inputnumber: a$p, inputotp: e$v, inputtext: d$h, knob: c$f, listbox: n$o, megamenu: g$1, menu: r$G, menubar: e$s, message: u$2, metergroup: b$1, multiselect: n$j, orderlist: o$D, organizationchart: n$i, overlaybadge: t$i, paginator: n$h, panel: a$h, panelmenu: a$g, password: n$e, picklist: o$w, popover: e$k, progressbar: t$e, progressspinner: r$s, radiobutton: e$i, rating: i$7, ripple: o$q, scrollpanel: a$d, select: n$d, selectbutton: d$9, skeleton: o$m, slider: a$a, speeddial: a$9, splitbutton: d$8, splitter: t$b, stepper: i$5, steps: c$9, tabmenu: n$8, tabs: i$4, tabview: e$b, tag: n$5, terminal: e$a, textarea: d$5, tieredmenu: c$5, timeline: d$4, toast: u$1, togglebutton: c$3, toggleswitch: c$2, toolbar: r$5, tooltip: e$5, tree: d$2, treeselect: a$2, treetable: k, virtualscroller: e$1 } })));
+const decodeCache = {};
+function getDecodeCache(exclude) {
+  let cache = decodeCache[exclude];
+  if (cache) {
+    return cache;
+  }
+  cache = decodeCache[exclude] = [];
+  for (let i2 = 0; i2 < 128; i2++) {
+    const ch = String.fromCharCode(i2);
+    cache.push(ch);
+  }
+  for (let i2 = 0; i2 < exclude.length; i2++) {
+    const ch = exclude.charCodeAt(i2);
+    cache[ch] = "%" + ("0" + ch.toString(16).toUpperCase()).slice(-2);
+  }
+  return cache;
+}
+function decode$1(string, exclude) {
+  if (typeof exclude !== "string") {
+    exclude = decode$1.defaultChars;
+  }
+  const cache = getDecodeCache(exclude);
+  return string.replace(/(%[a-f0-9]{2})+/gi, function(seq) {
+    let result = "";
+    for (let i2 = 0, l2 = seq.length; i2 < l2; i2 += 3) {
+      const b1 = parseInt(seq.slice(i2 + 1, i2 + 3), 16);
+      if (b1 < 128) {
+        result += cache[b1];
+        continue;
+      }
+      if ((b1 & 224) === 192 && i2 + 3 < l2) {
+        const b2 = parseInt(seq.slice(i2 + 4, i2 + 6), 16);
+        if ((b2 & 192) === 128) {
+          const chr = b1 << 6 & 1984 | b2 & 63;
+          if (chr < 128) {
+            result += "��";
+          } else {
+            result += String.fromCharCode(chr);
+          }
+          i2 += 3;
+          continue;
+        }
+      }
+      if ((b1 & 240) === 224 && i2 + 6 < l2) {
+        const b2 = parseInt(seq.slice(i2 + 4, i2 + 6), 16);
+        const b3 = parseInt(seq.slice(i2 + 7, i2 + 9), 16);
+        if ((b2 & 192) === 128 && (b3 & 192) === 128) {
+          const chr = b1 << 12 & 61440 | b2 << 6 & 4032 | b3 & 63;
+          if (chr < 2048 || chr >= 55296 && chr <= 57343) {
+            result += "���";
+          } else {
+            result += String.fromCharCode(chr);
+          }
+          i2 += 6;
+          continue;
+        }
+      }
+      if ((b1 & 248) === 240 && i2 + 9 < l2) {
+        const b2 = parseInt(seq.slice(i2 + 4, i2 + 6), 16);
+        const b3 = parseInt(seq.slice(i2 + 7, i2 + 9), 16);
+        const b4 = parseInt(seq.slice(i2 + 10, i2 + 12), 16);
+        if ((b2 & 192) === 128 && (b3 & 192) === 128 && (b4 & 192) === 128) {
+          let chr = b1 << 18 & 1835008 | b2 << 12 & 258048 | b3 << 6 & 4032 | b4 & 63;
+          if (chr < 65536 || chr > 1114111) {
+            result += "����";
+          } else {
+            chr -= 65536;
+            result += String.fromCharCode(55296 + (chr >> 10), 56320 + (chr & 1023));
+          }
+          i2 += 9;
+          continue;
+        }
+      }
+      result += "�";
+    }
+    return result;
+  });
+}
+decode$1.defaultChars = ";/?:@&=+$,#";
+decode$1.componentChars = "";
+const encodeCache = {};
+function getEncodeCache(exclude) {
+  let cache = encodeCache[exclude];
+  if (cache) {
+    return cache;
+  }
+  cache = encodeCache[exclude] = [];
+  for (let i2 = 0; i2 < 128; i2++) {
+    const ch = String.fromCharCode(i2);
+    if (/^[0-9a-z]$/i.test(ch)) {
+      cache.push(ch);
+    } else {
+      cache.push("%" + ("0" + i2.toString(16).toUpperCase()).slice(-2));
+    }
+  }
+  for (let i2 = 0; i2 < exclude.length; i2++) {
+    cache[exclude.charCodeAt(i2)] = exclude[i2];
+  }
+  return cache;
+}
+function encode$1(string, exclude, keepEscaped) {
+  if (typeof exclude !== "string") {
+    keepEscaped = exclude;
+    exclude = encode$1.defaultChars;
+  }
+  if (typeof keepEscaped === "undefined") {
+    keepEscaped = true;
+  }
+  const cache = getEncodeCache(exclude);
+  let result = "";
+  for (let i2 = 0, l2 = string.length; i2 < l2; i2++) {
+    const code2 = string.charCodeAt(i2);
+    if (keepEscaped && code2 === 37 && i2 + 2 < l2) {
+      if (/^[0-9a-f]{2}$/i.test(string.slice(i2 + 1, i2 + 3))) {
+        result += string.slice(i2, i2 + 3);
+        i2 += 2;
+        continue;
+      }
+    }
+    if (code2 < 128) {
+      result += cache[code2];
+      continue;
+    }
+    if (code2 >= 55296 && code2 <= 57343) {
+      if (code2 >= 55296 && code2 <= 56319 && i2 + 1 < l2) {
+        const nextCode = string.charCodeAt(i2 + 1);
+        if (nextCode >= 56320 && nextCode <= 57343) {
+          result += encodeURIComponent(string[i2] + string[i2 + 1]);
+          i2++;
+          continue;
+        }
+      }
+      result += "%EF%BF%BD";
+      continue;
+    }
+    result += encodeURIComponent(string[i2]);
+  }
+  return result;
+}
+encode$1.defaultChars = ";/?:@&=+$,-_.!~*'()#";
+encode$1.componentChars = "-_.!~*'()";
+function format(url) {
+  let result = "";
+  result += url.protocol || "";
+  result += url.slashes ? "//" : "";
+  result += url.auth ? url.auth + "@" : "";
+  if (url.hostname && url.hostname.indexOf(":") !== -1) {
+    result += "[" + url.hostname + "]";
+  } else {
+    result += url.hostname || "";
+  }
+  result += url.port ? ":" + url.port : "";
+  result += url.pathname || "";
+  result += url.search || "";
+  result += url.hash || "";
+  return result;
+}
+function Url() {
+  this.protocol = null;
+  this.slashes = null;
+  this.auth = null;
+  this.port = null;
+  this.hostname = null;
+  this.hash = null;
+  this.search = null;
+  this.pathname = null;
+}
+const protocolPattern = /^([a-z0-9.+-]+:)/i;
+const portPattern = /:[0-9]*$/;
+const simplePathPattern = /^(\/\/?(?!\/)[^\?\s]*)(\?[^\s]*)?$/;
+const delims = ["<", ">", '"', "`", " ", "\r", "\n", "	"];
+const unwise = ["{", "}", "|", "\\", "^", "`"].concat(delims);
+const autoEscape = ["'"].concat(unwise);
+const nonHostChars = ["%", "/", "?", ";", "#"].concat(autoEscape);
+const hostEndingChars = ["/", "?", "#"];
+const hostnameMaxLen = 255;
+const hostnamePartPattern = /^[+a-z0-9A-Z_-]{0,63}$/;
+const hostnamePartStart = /^([+a-z0-9A-Z_-]{0,63})(.*)$/;
+const hostlessProtocol = {
+  javascript: true,
+  "javascript:": true
+};
+const slashedProtocol = {
+  http: true,
+  https: true,
+  ftp: true,
+  gopher: true,
+  file: true,
+  "http:": true,
+  "https:": true,
+  "ftp:": true,
+  "gopher:": true,
+  "file:": true
+};
+function urlParse(url, slashesDenoteHost) {
+  if (url && url instanceof Url) return url;
+  const u2 = new Url();
+  u2.parse(url, slashesDenoteHost);
+  return u2;
+}
+Url.prototype.parse = function(url, slashesDenoteHost) {
+  let lowerProto, hec, slashes;
+  let rest = url;
+  rest = rest.trim();
+  if (!slashesDenoteHost && url.split("#").length === 1) {
+    const simplePath = simplePathPattern.exec(rest);
+    if (simplePath) {
+      this.pathname = simplePath[1];
+      if (simplePath[2]) {
+        this.search = simplePath[2];
+      }
+      return this;
+    }
+  }
+  let proto = protocolPattern.exec(rest);
+  if (proto) {
+    proto = proto[0];
+    lowerProto = proto.toLowerCase();
+    this.protocol = proto;
+    rest = rest.substr(proto.length);
+  }
+  if (slashesDenoteHost || proto || rest.match(/^\/\/[^@\/]+@[^@\/]+/)) {
+    slashes = rest.substr(0, 2) === "//";
+    if (slashes && !(proto && hostlessProtocol[proto])) {
+      rest = rest.substr(2);
+      this.slashes = true;
+    }
+  }
+  if (!hostlessProtocol[proto] && (slashes || proto && !slashedProtocol[proto])) {
+    let hostEnd = -1;
+    for (let i2 = 0; i2 < hostEndingChars.length; i2++) {
+      hec = rest.indexOf(hostEndingChars[i2]);
+      if (hec !== -1 && (hostEnd === -1 || hec < hostEnd)) {
+        hostEnd = hec;
+      }
+    }
+    let auth, atSign;
+    if (hostEnd === -1) {
+      atSign = rest.lastIndexOf("@");
+    } else {
+      atSign = rest.lastIndexOf("@", hostEnd);
+    }
+    if (atSign !== -1) {
+      auth = rest.slice(0, atSign);
+      rest = rest.slice(atSign + 1);
+      this.auth = auth;
+    }
+    hostEnd = -1;
+    for (let i2 = 0; i2 < nonHostChars.length; i2++) {
+      hec = rest.indexOf(nonHostChars[i2]);
+      if (hec !== -1 && (hostEnd === -1 || hec < hostEnd)) {
+        hostEnd = hec;
+      }
+    }
+    if (hostEnd === -1) {
+      hostEnd = rest.length;
+    }
+    if (rest[hostEnd - 1] === ":") {
+      hostEnd--;
+    }
+    const host = rest.slice(0, hostEnd);
+    rest = rest.slice(hostEnd);
+    this.parseHost(host);
+    this.hostname = this.hostname || "";
+    const ipv6Hostname = this.hostname[0] === "[" && this.hostname[this.hostname.length - 1] === "]";
+    if (!ipv6Hostname) {
+      const hostparts = this.hostname.split(/\./);
+      for (let i2 = 0, l2 = hostparts.length; i2 < l2; i2++) {
+        const part = hostparts[i2];
+        if (!part) {
+          continue;
+        }
+        if (!part.match(hostnamePartPattern)) {
+          let newpart = "";
+          for (let j = 0, k2 = part.length; j < k2; j++) {
+            if (part.charCodeAt(j) > 127) {
+              newpart += "x";
+            } else {
+              newpart += part[j];
+            }
+          }
+          if (!newpart.match(hostnamePartPattern)) {
+            const validParts = hostparts.slice(0, i2);
+            const notHost = hostparts.slice(i2 + 1);
+            const bit = part.match(hostnamePartStart);
+            if (bit) {
+              validParts.push(bit[1]);
+              notHost.unshift(bit[2]);
+            }
+            if (notHost.length) {
+              rest = notHost.join(".") + rest;
+            }
+            this.hostname = validParts.join(".");
+            break;
+          }
+        }
+      }
+    }
+    if (this.hostname.length > hostnameMaxLen) {
+      this.hostname = "";
+    }
+    if (ipv6Hostname) {
+      this.hostname = this.hostname.substr(1, this.hostname.length - 2);
+    }
+  }
+  const hash = rest.indexOf("#");
+  if (hash !== -1) {
+    this.hash = rest.substr(hash);
+    rest = rest.slice(0, hash);
+  }
+  const qm = rest.indexOf("?");
+  if (qm !== -1) {
+    this.search = rest.substr(qm);
+    rest = rest.slice(0, qm);
+  }
+  if (rest) {
+    this.pathname = rest;
+  }
+  if (slashedProtocol[lowerProto] && this.hostname && !this.pathname) {
+    this.pathname = "";
+  }
+  return this;
+};
+Url.prototype.parseHost = function(host) {
+  let port = portPattern.exec(host);
+  if (port) {
+    port = port[0];
+    if (port !== ":") {
+      this.port = port.substr(1);
+    }
+    host = host.substr(0, host.length - port.length);
+  }
+  if (host) {
+    this.hostname = host;
+  }
+};
+const mdurl = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  decode: decode$1,
+  encode: encode$1,
+  format,
+  parse: urlParse
+}, Symbol.toStringTag, { value: "Module" }));
+const Any = /[\0-\uD7FF\uE000-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF]/;
+const Cc = /[\0-\x1F\x7F-\x9F]/;
+const regex$1 = /[\xAD\u0600-\u0605\u061C\u06DD\u070F\u0890\u0891\u08E2\u180E\u200B-\u200F\u202A-\u202E\u2060-\u2064\u2066-\u206F\uFEFF\uFFF9-\uFFFB]|\uD804[\uDCBD\uDCCD]|\uD80D[\uDC30-\uDC3F]|\uD82F[\uDCA0-\uDCA3]|\uD834[\uDD73-\uDD7A]|\uDB40[\uDC01\uDC20-\uDC7F]/;
+const P = /[!-#%-\*,-\/:;\?@\[-\]_\{\}\xA1\xA7\xAB\xB6\xB7\xBB\xBF\u037E\u0387\u055A-\u055F\u0589\u058A\u05BE\u05C0\u05C3\u05C6\u05F3\u05F4\u0609\u060A\u060C\u060D\u061B\u061D-\u061F\u066A-\u066D\u06D4\u0700-\u070D\u07F7-\u07F9\u0830-\u083E\u085E\u0964\u0965\u0970\u09FD\u0A76\u0AF0\u0C77\u0C84\u0DF4\u0E4F\u0E5A\u0E5B\u0F04-\u0F12\u0F14\u0F3A-\u0F3D\u0F85\u0FD0-\u0FD4\u0FD9\u0FDA\u104A-\u104F\u10FB\u1360-\u1368\u1400\u166E\u169B\u169C\u16EB-\u16ED\u1735\u1736\u17D4-\u17D6\u17D8-\u17DA\u1800-\u180A\u1944\u1945\u1A1E\u1A1F\u1AA0-\u1AA6\u1AA8-\u1AAD\u1B5A-\u1B60\u1B7D\u1B7E\u1BFC-\u1BFF\u1C3B-\u1C3F\u1C7E\u1C7F\u1CC0-\u1CC7\u1CD3\u2010-\u2027\u2030-\u2043\u2045-\u2051\u2053-\u205E\u207D\u207E\u208D\u208E\u2308-\u230B\u2329\u232A\u2768-\u2775\u27C5\u27C6\u27E6-\u27EF\u2983-\u2998\u29D8-\u29DB\u29FC\u29FD\u2CF9-\u2CFC\u2CFE\u2CFF\u2D70\u2E00-\u2E2E\u2E30-\u2E4F\u2E52-\u2E5D\u3001-\u3003\u3008-\u3011\u3014-\u301F\u3030\u303D\u30A0\u30FB\uA4FE\uA4FF\uA60D-\uA60F\uA673\uA67E\uA6F2-\uA6F7\uA874-\uA877\uA8CE\uA8CF\uA8F8-\uA8FA\uA8FC\uA92E\uA92F\uA95F\uA9C1-\uA9CD\uA9DE\uA9DF\uAA5C-\uAA5F\uAADE\uAADF\uAAF0\uAAF1\uABEB\uFD3E\uFD3F\uFE10-\uFE19\uFE30-\uFE52\uFE54-\uFE61\uFE63\uFE68\uFE6A\uFE6B\uFF01-\uFF03\uFF05-\uFF0A\uFF0C-\uFF0F\uFF1A\uFF1B\uFF1F\uFF20\uFF3B-\uFF3D\uFF3F\uFF5B\uFF5D\uFF5F-\uFF65]|\uD800[\uDD00-\uDD02\uDF9F\uDFD0]|\uD801\uDD6F|\uD802[\uDC57\uDD1F\uDD3F\uDE50-\uDE58\uDE7F\uDEF0-\uDEF6\uDF39-\uDF3F\uDF99-\uDF9C]|\uD803[\uDEAD\uDF55-\uDF59\uDF86-\uDF89]|\uD804[\uDC47-\uDC4D\uDCBB\uDCBC\uDCBE-\uDCC1\uDD40-\uDD43\uDD74\uDD75\uDDC5-\uDDC8\uDDCD\uDDDB\uDDDD-\uDDDF\uDE38-\uDE3D\uDEA9]|\uD805[\uDC4B-\uDC4F\uDC5A\uDC5B\uDC5D\uDCC6\uDDC1-\uDDD7\uDE41-\uDE43\uDE60-\uDE6C\uDEB9\uDF3C-\uDF3E]|\uD806[\uDC3B\uDD44-\uDD46\uDDE2\uDE3F-\uDE46\uDE9A-\uDE9C\uDE9E-\uDEA2\uDF00-\uDF09]|\uD807[\uDC41-\uDC45\uDC70\uDC71\uDEF7\uDEF8\uDF43-\uDF4F\uDFFF]|\uD809[\uDC70-\uDC74]|\uD80B[\uDFF1\uDFF2]|\uD81A[\uDE6E\uDE6F\uDEF5\uDF37-\uDF3B\uDF44]|\uD81B[\uDE97-\uDE9A\uDFE2]|\uD82F\uDC9F|\uD836[\uDE87-\uDE8B]|\uD83A[\uDD5E\uDD5F]/;
+const regex = /[\$\+<->\^`\|~\xA2-\xA6\xA8\xA9\xAC\xAE-\xB1\xB4\xB8\xD7\xF7\u02C2-\u02C5\u02D2-\u02DF\u02E5-\u02EB\u02ED\u02EF-\u02FF\u0375\u0384\u0385\u03F6\u0482\u058D-\u058F\u0606-\u0608\u060B\u060E\u060F\u06DE\u06E9\u06FD\u06FE\u07F6\u07FE\u07FF\u0888\u09F2\u09F3\u09FA\u09FB\u0AF1\u0B70\u0BF3-\u0BFA\u0C7F\u0D4F\u0D79\u0E3F\u0F01-\u0F03\u0F13\u0F15-\u0F17\u0F1A-\u0F1F\u0F34\u0F36\u0F38\u0FBE-\u0FC5\u0FC7-\u0FCC\u0FCE\u0FCF\u0FD5-\u0FD8\u109E\u109F\u1390-\u1399\u166D\u17DB\u1940\u19DE-\u19FF\u1B61-\u1B6A\u1B74-\u1B7C\u1FBD\u1FBF-\u1FC1\u1FCD-\u1FCF\u1FDD-\u1FDF\u1FED-\u1FEF\u1FFD\u1FFE\u2044\u2052\u207A-\u207C\u208A-\u208C\u20A0-\u20C0\u2100\u2101\u2103-\u2106\u2108\u2109\u2114\u2116-\u2118\u211E-\u2123\u2125\u2127\u2129\u212E\u213A\u213B\u2140-\u2144\u214A-\u214D\u214F\u218A\u218B\u2190-\u2307\u230C-\u2328\u232B-\u2426\u2440-\u244A\u249C-\u24E9\u2500-\u2767\u2794-\u27C4\u27C7-\u27E5\u27F0-\u2982\u2999-\u29D7\u29DC-\u29FB\u29FE-\u2B73\u2B76-\u2B95\u2B97-\u2BFF\u2CE5-\u2CEA\u2E50\u2E51\u2E80-\u2E99\u2E9B-\u2EF3\u2F00-\u2FD5\u2FF0-\u2FFF\u3004\u3012\u3013\u3020\u3036\u3037\u303E\u303F\u309B\u309C\u3190\u3191\u3196-\u319F\u31C0-\u31E3\u31EF\u3200-\u321E\u322A-\u3247\u3250\u3260-\u327F\u328A-\u32B0\u32C0-\u33FF\u4DC0-\u4DFF\uA490-\uA4C6\uA700-\uA716\uA720\uA721\uA789\uA78A\uA828-\uA82B\uA836-\uA839\uAA77-\uAA79\uAB5B\uAB6A\uAB6B\uFB29\uFBB2-\uFBC2\uFD40-\uFD4F\uFDCF\uFDFC-\uFDFF\uFE62\uFE64-\uFE66\uFE69\uFF04\uFF0B\uFF1C-\uFF1E\uFF3E\uFF40\uFF5C\uFF5E\uFFE0-\uFFE6\uFFE8-\uFFEE\uFFFC\uFFFD]|\uD800[\uDD37-\uDD3F\uDD79-\uDD89\uDD8C-\uDD8E\uDD90-\uDD9C\uDDA0\uDDD0-\uDDFC]|\uD802[\uDC77\uDC78\uDEC8]|\uD805\uDF3F|\uD807[\uDFD5-\uDFF1]|\uD81A[\uDF3C-\uDF3F\uDF45]|\uD82F\uDC9C|\uD833[\uDF50-\uDFC3]|\uD834[\uDC00-\uDCF5\uDD00-\uDD26\uDD29-\uDD64\uDD6A-\uDD6C\uDD83\uDD84\uDD8C-\uDDA9\uDDAE-\uDDEA\uDE00-\uDE41\uDE45\uDF00-\uDF56]|\uD835[\uDEC1\uDEDB\uDEFB\uDF15\uDF35\uDF4F\uDF6F\uDF89\uDFA9\uDFC3]|\uD836[\uDC00-\uDDFF\uDE37-\uDE3A\uDE6D-\uDE74\uDE76-\uDE83\uDE85\uDE86]|\uD838[\uDD4F\uDEFF]|\uD83B[\uDCAC\uDCB0\uDD2E\uDEF0\uDEF1]|\uD83C[\uDC00-\uDC2B\uDC30-\uDC93\uDCA0-\uDCAE\uDCB1-\uDCBF\uDCC1-\uDCCF\uDCD1-\uDCF5\uDD0D-\uDDAD\uDDE6-\uDE02\uDE10-\uDE3B\uDE40-\uDE48\uDE50\uDE51\uDE60-\uDE65\uDF00-\uDFFF]|\uD83D[\uDC00-\uDED7\uDEDC-\uDEEC\uDEF0-\uDEFC\uDF00-\uDF76\uDF7B-\uDFD9\uDFE0-\uDFEB\uDFF0]|\uD83E[\uDC00-\uDC0B\uDC10-\uDC47\uDC50-\uDC59\uDC60-\uDC87\uDC90-\uDCAD\uDCB0\uDCB1\uDD00-\uDE53\uDE60-\uDE6D\uDE70-\uDE7C\uDE80-\uDE88\uDE90-\uDEBD\uDEBF-\uDEC5\uDECE-\uDEDB\uDEE0-\uDEE8\uDEF0-\uDEF8\uDF00-\uDF92\uDF94-\uDFCA]/;
+const Z = /[ \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000]/;
+const ucmicro = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  Any,
+  Cc,
+  Cf: regex$1,
+  P,
+  S: regex,
+  Z
+}, Symbol.toStringTag, { value: "Module" }));
+const htmlDecodeTree = new Uint16Array(
+  // prettier-ignore
+  'ᵁ<Õıʊҝջאٵ۞ޢߖࠏ੊ઑඡ๭༉༦჊ረዡᐕᒝᓃᓟᔥ\0\0\0\0\0\0ᕫᛍᦍᰒᷝ὾⁠↰⊍⏀⏻⑂⠤⤒ⴈ⹈⿎〖㊺㘹㞬㣾㨨㩱㫠㬮ࠀEMabcfglmnoprstu\\bfms¦³¹ÈÏlig耻Æ䃆P耻&䀦cute耻Á䃁reve;䄂Āiyx}rc耻Â䃂;䐐r;쀀𝔄rave耻À䃀pha;䎑acr;䄀d;橓Āgp¡on;䄄f;쀀𝔸plyFunction;恡ing耻Å䃅Ācs¾Ãr;쀀𝒜ign;扔ilde耻Ã䃃ml耻Ä䃄ЀaceforsuåûþėĜĢħĪĀcrêòkslash;或Ŷöø;櫧ed;挆y;䐑ƀcrtąċĔause;戵noullis;愬a;䎒r;쀀𝔅pf;쀀𝔹eve;䋘còēmpeq;扎܀HOacdefhilorsuōőŖƀƞƢƵƷƺǜȕɳɸɾcy;䐧PY耻©䂩ƀcpyŝŢźute;䄆Ā;iŧŨ拒talDifferentialD;慅leys;愭ȀaeioƉƎƔƘron;䄌dil耻Ç䃇rc;䄈nint;戰ot;䄊ĀdnƧƭilla;䂸terDot;䂷òſi;䎧rcleȀDMPTǇǋǑǖot;抙inus;抖lus;投imes;抗oĀcsǢǸkwiseContourIntegral;戲eCurlyĀDQȃȏoubleQuote;思uote;怙ȀlnpuȞȨɇɕonĀ;eȥȦ户;橴ƀgitȯȶȺruent;扡nt;戯ourIntegral;戮ĀfrɌɎ;愂oduct;成nterClockwiseContourIntegral;戳oss;樯cr;쀀𝒞pĀ;Cʄʅ拓ap;才րDJSZacefiosʠʬʰʴʸˋ˗ˡ˦̳ҍĀ;oŹʥtrahd;椑cy;䐂cy;䐅cy;䐏ƀgrsʿ˄ˇger;怡r;憡hv;櫤Āayː˕ron;䄎;䐔lĀ;t˝˞戇a;䎔r;쀀𝔇Āaf˫̧Ācm˰̢riticalȀADGT̖̜̀̆cute;䂴oŴ̋̍;䋙bleAcute;䋝rave;䁠ilde;䋜ond;拄ferentialD;慆Ѱ̽\0\0\0͔͂\0Ѕf;쀀𝔻ƀ;DE͈͉͍䂨ot;惜qual;扐blèCDLRUVͣͲ΂ϏϢϸontourIntegraìȹoɴ͹\0\0ͻ»͉nArrow;懓Āeo·ΤftƀARTΐΖΡrrow;懐ightArrow;懔eåˊngĀLRΫτeftĀARγιrrow;柸ightArrow;柺ightArrow;柹ightĀATϘϞrrow;懒ee;抨pɁϩ\0\0ϯrrow;懑ownArrow;懕erticalBar;戥ǹABLRTaВЪаўѿͼrrowƀ;BUНОТ憓ar;椓pArrow;懵reve;䌑eft˒к\0ц\0ѐightVector;楐eeVector;楞ectorĀ;Bљњ憽ar;楖ightǔѧ\0ѱeeVector;楟ectorĀ;BѺѻ懁ar;楗eeĀ;A҆҇护rrow;憧ĀctҒҗr;쀀𝒟rok;䄐ࠀNTacdfglmopqstuxҽӀӄӋӞӢӧӮӵԡԯԶՒ՝ՠեG;䅊H耻Ð䃐cute耻É䃉ƀaiyӒӗӜron;䄚rc耻Ê䃊;䐭ot;䄖r;쀀𝔈rave耻È䃈ement;戈ĀapӺӾcr;䄒tyɓԆ\0\0ԒmallSquare;旻erySmallSquare;斫ĀgpԦԪon;䄘f;쀀𝔼silon;䎕uĀaiԼՉlĀ;TՂՃ橵ilde;扂librium;懌Āci՗՚r;愰m;橳a;䎗ml耻Ë䃋Āipժկsts;戃onentialE;慇ʀcfiosօֈ֍ֲ׌y;䐤r;쀀𝔉lledɓ֗\0\0֣mallSquare;旼erySmallSquare;斪Ͱֺ\0ֿ\0\0ׄf;쀀𝔽All;戀riertrf;愱cò׋؀JTabcdfgorstר׬ׯ׺؀ؒؖ؛؝أ٬ٲcy;䐃耻>䀾mmaĀ;d׷׸䎓;䏜reve;䄞ƀeiy؇،ؐdil;䄢rc;䄜;䐓ot;䄠r;쀀𝔊;拙pf;쀀𝔾eater̀EFGLSTصلَٖٛ٦qualĀ;Lؾؿ扥ess;招ullEqual;执reater;檢ess;扷lantEqual;橾ilde;扳cr;쀀𝒢;扫ЀAacfiosuڅڋږڛڞڪھۊRDcy;䐪Āctڐڔek;䋇;䁞irc;䄤r;愌lbertSpace;愋ǰگ\0ڲf;愍izontalLine;攀Āctۃۅòکrok;䄦mpńېۘownHumðįqual;扏܀EJOacdfgmnostuۺ۾܃܇܎ܚܞܡܨ݄ݸދޏޕcy;䐕lig;䄲cy;䐁cute耻Í䃍Āiyܓܘrc耻Î䃎;䐘ot;䄰r;愑rave耻Ì䃌ƀ;apܠܯܿĀcgܴܷr;䄪inaryI;慈lieóϝǴ݉\0ݢĀ;eݍݎ戬Āgrݓݘral;戫section;拂isibleĀCTݬݲomma;恣imes;恢ƀgptݿރވon;䄮f;쀀𝕀a;䎙cr;愐ilde;䄨ǫޚ\0ޞcy;䐆l耻Ï䃏ʀcfosuެ޷޼߂ߐĀiyޱ޵rc;䄴;䐙r;쀀𝔍pf;쀀𝕁ǣ߇\0ߌr;쀀𝒥rcy;䐈kcy;䐄΀HJacfosߤߨ߽߬߱ࠂࠈcy;䐥cy;䐌ppa;䎚Āey߶߻dil;䄶;䐚r;쀀𝔎pf;쀀𝕂cr;쀀𝒦րJTaceflmostࠥࠩࠬࡐࡣ঳সে্਷ੇcy;䐉耻<䀼ʀcmnpr࠷࠼ࡁࡄࡍute;䄹bda;䎛g;柪lacetrf;愒r;憞ƀaeyࡗ࡜ࡡron;䄽dil;䄻;䐛Āfsࡨ॰tԀACDFRTUVarࡾࢩࢱࣦ࣠ࣼयज़ΐ४Ānrࢃ࢏gleBracket;柨rowƀ;BR࢙࢚࢞憐ar;懤ightArrow;懆eiling;挈oǵࢷ\0ࣃbleBracket;柦nǔࣈ\0࣒eeVector;楡ectorĀ;Bࣛࣜ懃ar;楙loor;挊ightĀAV࣯ࣵrrow;憔ector;楎Āerँगeƀ;AVउऊऐ抣rrow;憤ector;楚iangleƀ;BEतथऩ抲ar;槏qual;抴pƀDTVषूौownVector;楑eeVector;楠ectorĀ;Bॖॗ憿ar;楘ectorĀ;B॥०憼ar;楒ightáΜs̀EFGLSTॾঋকঝঢভqualGreater;拚ullEqual;扦reater;扶ess;檡lantEqual;橽ilde;扲r;쀀𝔏Ā;eঽা拘ftarrow;懚idot;䄿ƀnpw৔ਖਛgȀLRlr৞৷ਂਐeftĀAR০৬rrow;柵ightArrow;柷ightArrow;柶eftĀarγਊightáοightáϊf;쀀𝕃erĀLRਢਬeftArrow;憙ightArrow;憘ƀchtਾੀੂòࡌ;憰rok;䅁;扪Ѐacefiosuਗ਼੝੠੷੼અઋ઎p;椅y;䐜Ādl੥੯iumSpace;恟lintrf;愳r;쀀𝔐nusPlus;戓pf;쀀𝕄cò੶;䎜ҀJacefostuણધભીଔଙඑ඗ඞcy;䐊cute;䅃ƀaey઴હાron;䅇dil;䅅;䐝ƀgswે૰଎ativeƀMTV૓૟૨ediumSpace;怋hiĀcn૦૘ë૙eryThiî૙tedĀGL૸ଆreaterGreateòٳessLesóੈLine;䀊r;쀀𝔑ȀBnptଢନଷ଺reak;恠BreakingSpace;䂠f;愕ڀ;CDEGHLNPRSTV୕ୖ୪୼஡௫ఄ౞಄ದ೘ൡඅ櫬Āou୛୤ngruent;扢pCap;扭oubleVerticalBar;戦ƀlqxஃஊ஛ement;戉ualĀ;Tஒஓ扠ilde;쀀≂̸ists;戄reater΀;EFGLSTஶஷ஽௉௓௘௥扯qual;扱ullEqual;쀀≧̸reater;쀀≫̸ess;批lantEqual;쀀⩾̸ilde;扵umpń௲௽ownHump;쀀≎̸qual;쀀≏̸eĀfsఊధtTriangleƀ;BEచఛడ拪ar;쀀⧏̸qual;括s̀;EGLSTవశ఼ౄోౘ扮qual;扰reater;扸ess;쀀≪̸lantEqual;쀀⩽̸ilde;扴estedĀGL౨౹reaterGreater;쀀⪢̸essLess;쀀⪡̸recedesƀ;ESಒಓಛ技qual;쀀⪯̸lantEqual;拠ĀeiಫಹverseElement;戌ghtTriangleƀ;BEೋೌ೒拫ar;쀀⧐̸qual;拭ĀquೝഌuareSuĀbp೨೹setĀ;E೰ೳ쀀⊏̸qual;拢ersetĀ;Eഃആ쀀⊐̸qual;拣ƀbcpഓതൎsetĀ;Eഛഞ쀀⊂⃒qual;抈ceedsȀ;ESTലള഻െ抁qual;쀀⪰̸lantEqual;拡ilde;쀀≿̸ersetĀ;E൘൛쀀⊃⃒qual;抉ildeȀ;EFT൮൯൵ൿ扁qual;扄ullEqual;扇ilde;扉erticalBar;戤cr;쀀𝒩ilde耻Ñ䃑;䎝܀Eacdfgmoprstuvලෂ෉෕ෛ෠෧෼ขภยา฿ไlig;䅒cute耻Ó䃓Āiy෎ීrc耻Ô䃔;䐞blac;䅐r;쀀𝔒rave耻Ò䃒ƀaei෮ෲ෶cr;䅌ga;䎩cron;䎟pf;쀀𝕆enCurlyĀDQฎบoubleQuote;怜uote;怘;橔Āclวฬr;쀀𝒪ash耻Ø䃘iŬื฼de耻Õ䃕es;樷ml耻Ö䃖erĀBP๋๠Āar๐๓r;怾acĀek๚๜;揞et;掴arenthesis;揜Ҁacfhilors๿ງຊຏຒດຝະ໼rtialD;戂y;䐟r;쀀𝔓i;䎦;䎠usMinus;䂱Āipຢອncareplanåڝf;愙Ȁ;eio຺ູ໠໤檻cedesȀ;EST່້໏໚扺qual;檯lantEqual;扼ilde;找me;怳Ādp໩໮uct;戏ortionĀ;aȥ໹l;戝Āci༁༆r;쀀𝒫;䎨ȀUfos༑༖༛༟OT耻"䀢r;쀀𝔔pf;愚cr;쀀𝒬؀BEacefhiorsu༾གྷཇའཱིྦྷྪྭ႖ႩႴႾarr;椐G耻®䂮ƀcnrཎནབute;䅔g;柫rĀ;tཛྷཝ憠l;椖ƀaeyཧཬཱron;䅘dil;䅖;䐠Ā;vླྀཹ愜erseĀEUྂྙĀlq྇ྎement;戋uilibrium;懋pEquilibrium;楯r»ཹo;䎡ghtЀACDFTUVa࿁࿫࿳ဢဨၛႇϘĀnr࿆࿒gleBracket;柩rowƀ;BL࿜࿝࿡憒ar;懥eftArrow;懄eiling;按oǵ࿹\0စbleBracket;柧nǔည\0နeeVector;楝ectorĀ;Bဝသ懂ar;楕loor;挋Āerိ၃eƀ;AVဵံြ抢rrow;憦ector;楛iangleƀ;BEၐၑၕ抳ar;槐qual;抵pƀDTVၣၮၸownVector;楏eeVector;楜ectorĀ;Bႂႃ憾ar;楔ectorĀ;B႑႒懀ar;楓Āpuႛ႞f;愝ndImplies;楰ightarrow;懛ĀchႹႼr;愛;憱leDelayed;槴ڀHOacfhimoqstuფჱჷჽᄙᄞᅑᅖᅡᅧᆵᆻᆿĀCcჩხHcy;䐩y;䐨FTcy;䐬cute;䅚ʀ;aeiyᄈᄉᄎᄓᄗ檼ron;䅠dil;䅞rc;䅜;䐡r;쀀𝔖ortȀDLRUᄪᄴᄾᅉownArrow»ОeftArrow»࢚ightArrow»࿝pArrow;憑gma;䎣allCircle;战pf;쀀𝕊ɲᅭ\0\0ᅰt;戚areȀ;ISUᅻᅼᆉᆯ斡ntersection;抓uĀbpᆏᆞsetĀ;Eᆗᆘ抏qual;抑ersetĀ;Eᆨᆩ抐qual;抒nion;抔cr;쀀𝒮ar;拆ȀbcmpᇈᇛሉላĀ;sᇍᇎ拐etĀ;Eᇍᇕqual;抆ĀchᇠህeedsȀ;ESTᇭᇮᇴᇿ扻qual;檰lantEqual;扽ilde;承Tháྌ;我ƀ;esሒሓሣ拑rsetĀ;Eሜም抃qual;抇et»ሓրHRSacfhiorsሾቄ቉ቕ቞ቱቶኟዂወዑORN耻Þ䃞ADE;愢ĀHc቎ቒcy;䐋y;䐦Ābuቚቜ;䀉;䎤ƀaeyብቪቯron;䅤dil;䅢;䐢r;쀀𝔗Āeiቻ኉ǲኀ\0ኇefore;戴a;䎘Ācn኎ኘkSpace;쀀  Space;怉ldeȀ;EFTካኬኲኼ戼qual;扃ullEqual;扅ilde;扈pf;쀀𝕋ipleDot;惛Āctዖዛr;쀀𝒯rok;䅦ૡዷጎጚጦ\0ጬጱ\0\0\0\0\0ጸጽ፷ᎅ\0᏿ᐄᐊᐐĀcrዻጁute耻Ú䃚rĀ;oጇገ憟cir;楉rǣጓ\0጖y;䐎ve;䅬Āiyጞጣrc耻Û䃛;䐣blac;䅰r;쀀𝔘rave耻Ù䃙acr;䅪Ādiፁ፩erĀBPፈ፝Āarፍፐr;䁟acĀekፗፙ;揟et;掵arenthesis;揝onĀ;P፰፱拃lus;抎Āgp፻፿on;䅲f;쀀𝕌ЀADETadps᎕ᎮᎸᏄϨᏒᏗᏳrrowƀ;BDᅐᎠᎤar;椒ownArrow;懅ownArrow;憕quilibrium;楮eeĀ;AᏋᏌ报rrow;憥ownáϳerĀLRᏞᏨeftArrow;憖ightArrow;憗iĀ;lᏹᏺ䏒on;䎥ing;䅮cr;쀀𝒰ilde;䅨ml耻Ü䃜ҀDbcdefosvᐧᐬᐰᐳᐾᒅᒊᒐᒖash;披ar;櫫y;䐒ashĀ;lᐻᐼ抩;櫦Āerᑃᑅ;拁ƀbtyᑌᑐᑺar;怖Ā;iᑏᑕcalȀBLSTᑡᑥᑪᑴar;戣ine;䁼eparator;杘ilde;所ThinSpace;怊r;쀀𝔙pf;쀀𝕍cr;쀀𝒱dash;抪ʀcefosᒧᒬᒱᒶᒼirc;䅴dge;拀r;쀀𝔚pf;쀀𝕎cr;쀀𝒲Ȁfiosᓋᓐᓒᓘr;쀀𝔛;䎞pf;쀀𝕏cr;쀀𝒳ҀAIUacfosuᓱᓵᓹᓽᔄᔏᔔᔚᔠcy;䐯cy;䐇cy;䐮cute耻Ý䃝Āiyᔉᔍrc;䅶;䐫r;쀀𝔜pf;쀀𝕐cr;쀀𝒴ml;䅸ЀHacdefosᔵᔹᔿᕋᕏᕝᕠᕤcy;䐖cute;䅹Āayᕄᕉron;䅽;䐗ot;䅻ǲᕔ\0ᕛoWidtè૙a;䎖r;愨pf;愤cr;쀀𝒵௡ᖃᖊᖐ\0ᖰᖶᖿ\0\0\0\0ᗆᗛᗫᙟ᙭\0ᚕ᚛ᚲᚹ\0ᚾcute耻á䃡reve;䄃̀;Ediuyᖜᖝᖡᖣᖨᖭ戾;쀀∾̳;房rc耻â䃢te肻´̆;䐰lig耻æ䃦Ā;r²ᖺ;쀀𝔞rave耻à䃠ĀepᗊᗖĀfpᗏᗔsym;愵èᗓha;䎱ĀapᗟcĀclᗤᗧr;䄁g;樿ɤᗰ\0\0ᘊʀ;adsvᗺᗻᗿᘁᘇ戧nd;橕;橜lope;橘;橚΀;elmrszᘘᘙᘛᘞᘿᙏᙙ戠;榤e»ᘙsdĀ;aᘥᘦ戡ѡᘰᘲᘴᘶᘸᘺᘼᘾ;榨;榩;榪;榫;榬;榭;榮;榯tĀ;vᙅᙆ戟bĀ;dᙌᙍ抾;榝Āptᙔᙗh;戢»¹arr;捼Āgpᙣᙧon;䄅f;쀀𝕒΀;Eaeiop዁ᙻᙽᚂᚄᚇᚊ;橰cir;橯;扊d;手s;䀧roxĀ;e዁ᚒñᚃing耻å䃥ƀctyᚡᚦᚨr;쀀𝒶;䀪mpĀ;e዁ᚯñʈilde耻ã䃣ml耻ä䃤Āciᛂᛈoninôɲnt;樑ࠀNabcdefiklnoprsu᛭ᛱᜰ᜼ᝃᝈ᝸᝽០៦ᠹᡐᜍ᤽᥈ᥰot;櫭Ācrᛶ᜞kȀcepsᜀᜅᜍᜓong;扌psilon;䏶rime;怵imĀ;e᜚᜛戽q;拍Ŷᜢᜦee;抽edĀ;gᜬᜭ挅e»ᜭrkĀ;t፜᜷brk;掶Āoyᜁᝁ;䐱quo;怞ʀcmprtᝓ᝛ᝡᝤᝨausĀ;eĊĉptyv;榰séᜌnoõēƀahwᝯ᝱ᝳ;䎲;愶een;扬r;쀀𝔟g΀costuvwឍឝឳេ៕៛៞ƀaiuបពរðݠrc;旯p»፱ƀdptឤឨឭot;樀lus;樁imes;樂ɱឹ\0\0ើcup;樆ar;昅riangleĀdu៍្own;施p;斳plus;樄eåᑄåᒭarow;植ƀako៭ᠦᠵĀcn៲ᠣkƀlst៺֫᠂ozenge;槫riangleȀ;dlr᠒᠓᠘᠝斴own;斾eft;旂ight;斸k;搣Ʊᠫ\0ᠳƲᠯ\0ᠱ;斒;斑4;斓ck;斈ĀeoᠾᡍĀ;qᡃᡆ쀀=⃥uiv;쀀≡⃥t;挐Ȁptwxᡙᡞᡧᡬf;쀀𝕓Ā;tᏋᡣom»Ꮜtie;拈؀DHUVbdhmptuvᢅᢖᢪᢻᣗᣛᣬ᣿ᤅᤊᤐᤡȀLRlrᢎᢐᢒᢔ;敗;敔;敖;敓ʀ;DUduᢡᢢᢤᢦᢨ敐;敦;敩;敤;敧ȀLRlrᢳᢵᢷᢹ;敝;敚;敜;教΀;HLRhlrᣊᣋᣍᣏᣑᣓᣕ救;敬;散;敠;敫;敢;敟ox;槉ȀLRlrᣤᣦᣨᣪ;敕;敒;攐;攌ʀ;DUduڽ᣷᣹᣻᣽;敥;敨;攬;攴inus;抟lus;択imes;抠ȀLRlrᤙᤛᤝ᤟;敛;敘;攘;攔΀;HLRhlrᤰᤱᤳᤵᤷ᤻᤹攂;敪;敡;敞;攼;攤;攜Āevģ᥂bar耻¦䂦Ȁceioᥑᥖᥚᥠr;쀀𝒷mi;恏mĀ;e᜚᜜lƀ;bhᥨᥩᥫ䁜;槅sub;柈Ŭᥴ᥾lĀ;e᥹᥺怢t»᥺pƀ;Eeįᦅᦇ;檮Ā;qۜۛೡᦧ\0᧨ᨑᨕᨲ\0ᨷᩐ\0\0᪴\0\0᫁\0\0ᬡᬮ᭍᭒\0᯽\0ᰌƀcpr᦭ᦲ᧝ute;䄇̀;abcdsᦿᧀᧄ᧊᧕᧙戩nd;橄rcup;橉Āau᧏᧒p;橋p;橇ot;橀;쀀∩︀Āeo᧢᧥t;恁îړȀaeiu᧰᧻ᨁᨅǰ᧵\0᧸s;橍on;䄍dil耻ç䃧rc;䄉psĀ;sᨌᨍ橌m;橐ot;䄋ƀdmnᨛᨠᨦil肻¸ƭptyv;榲t脀¢;eᨭᨮ䂢räƲr;쀀𝔠ƀceiᨽᩀᩍy;䑇ckĀ;mᩇᩈ朓ark»ᩈ;䏇r΀;Ecefms᩟᩠ᩢᩫ᪤᪪᪮旋;槃ƀ;elᩩᩪᩭ䋆q;扗eɡᩴ\0\0᪈rrowĀlr᩼᪁eft;憺ight;憻ʀRSacd᪒᪔᪖᪚᪟»ཇ;擈st;抛irc;抚ash;抝nint;樐id;櫯cir;槂ubsĀ;u᪻᪼晣it»᪼ˬ᫇᫔᫺\0ᬊonĀ;eᫍᫎ䀺Ā;qÇÆɭ᫙\0\0᫢aĀ;t᫞᫟䀬;䁀ƀ;fl᫨᫩᫫戁îᅠeĀmx᫱᫶ent»᫩eóɍǧ᫾\0ᬇĀ;dኻᬂot;橭nôɆƀfryᬐᬔᬗ;쀀𝕔oäɔ脀©;sŕᬝr;愗Āaoᬥᬩrr;憵ss;朗Ācuᬲᬷr;쀀𝒸Ābpᬼ᭄Ā;eᭁᭂ櫏;櫑Ā;eᭉᭊ櫐;櫒dot;拯΀delprvw᭠᭬᭷ᮂᮬᯔ᯹arrĀlr᭨᭪;椸;椵ɰ᭲\0\0᭵r;拞c;拟arrĀ;p᭿ᮀ憶;椽̀;bcdosᮏᮐᮖᮡᮥᮨ截rcap;橈Āauᮛᮞp;橆p;橊ot;抍r;橅;쀀∪︀Ȁalrv᮵ᮿᯞᯣrrĀ;mᮼᮽ憷;椼yƀevwᯇᯔᯘqɰᯎ\0\0ᯒreã᭳uã᭵ee;拎edge;拏en耻¤䂤earrowĀlrᯮ᯳eft»ᮀight»ᮽeäᯝĀciᰁᰇoninôǷnt;戱lcty;挭ঀAHabcdefhijlorstuwz᰸᰻᰿ᱝᱩᱵᲊᲞᲬᲷ᳻᳿ᴍᵻᶑᶫᶻ᷆᷍rò΁ar;楥Ȁglrs᱈ᱍ᱒᱔ger;怠eth;愸òᄳhĀ;vᱚᱛ怐»ऊūᱡᱧarow;椏aã̕Āayᱮᱳron;䄏;䐴ƀ;ao̲ᱼᲄĀgrʿᲁr;懊tseq;橷ƀglmᲑᲔᲘ耻°䂰ta;䎴ptyv;榱ĀirᲣᲨsht;楿;쀀𝔡arĀlrᲳᲵ»ࣜ»သʀaegsv᳂͸᳖᳜᳠mƀ;oș᳊᳔ndĀ;ș᳑uit;晦amma;䏝in;拲ƀ;io᳧᳨᳸䃷de脀÷;o᳧ᳰntimes;拇nø᳷cy;䑒cɯᴆ\0\0ᴊrn;挞op;挍ʀlptuwᴘᴝᴢᵉᵕlar;䀤f;쀀𝕕ʀ;emps̋ᴭᴷᴽᵂqĀ;d͒ᴳot;扑inus;戸lus;戔quare;抡blebarwedgåúnƀadhᄮᵝᵧownarrowóᲃarpoonĀlrᵲᵶefôᲴighôᲶŢᵿᶅkaro÷གɯᶊ\0\0ᶎrn;挟op;挌ƀcotᶘᶣᶦĀryᶝᶡ;쀀𝒹;䑕l;槶rok;䄑Ādrᶰᶴot;拱iĀ;fᶺ᠖斿Āah᷀᷃ròЩaòྦangle;榦Āci᷒ᷕy;䑟grarr;柿ऀDacdefglmnopqrstuxḁḉḙḸոḼṉṡṾấắẽỡἪἷὄ὎὚ĀDoḆᴴoôᲉĀcsḎḔute耻é䃩ter;橮ȀaioyḢḧḱḶron;䄛rĀ;cḭḮ扖耻ê䃪lon;払;䑍ot;䄗ĀDrṁṅot;扒;쀀𝔢ƀ;rsṐṑṗ檚ave耻è䃨Ā;dṜṝ檖ot;檘Ȁ;ilsṪṫṲṴ檙nters;揧;愓Ā;dṹṺ檕ot;檗ƀapsẅẉẗcr;䄓tyƀ;svẒẓẕ戅et»ẓpĀ1;ẝẤĳạả;怄;怅怃ĀgsẪẬ;䅋p;怂ĀgpẴẸon;䄙f;쀀𝕖ƀalsỄỎỒrĀ;sỊị拕l;槣us;橱iƀ;lvỚớở䎵on»ớ;䏵ȀcsuvỪỳἋἣĀioữḱrc»Ḯɩỹ\0\0ỻíՈantĀglἂἆtr»ṝess»Ṻƀaeiἒ἖Ἒls;䀽st;扟vĀ;DȵἠD;橸parsl;槥ĀDaἯἳot;打rr;楱ƀcdiἾὁỸr;愯oô͒ĀahὉὋ;䎷耻ð䃰Āmrὓὗl耻ë䃫o;悬ƀcipὡὤὧl;䀡sôծĀeoὬὴctatioîՙnentialåչৡᾒ\0ᾞ\0ᾡᾧ\0\0ῆῌ\0ΐ\0ῦῪ \0 ⁚llingdotseñṄy;䑄male;晀ƀilrᾭᾳ῁lig;耀ﬃɩᾹ\0\0᾽g;耀ﬀig;耀ﬄ;쀀𝔣lig;耀ﬁlig;쀀fjƀaltῙ῜ῡt;晭ig;耀ﬂns;斱of;䆒ǰ΅\0ῳf;쀀𝕗ĀakֿῷĀ;vῼ´拔;櫙artint;樍Āao‌⁕Ācs‑⁒α‚‰‸⁅⁈\0⁐β•‥‧‪‬\0‮耻½䂽;慓耻¼䂼;慕;慙;慛Ƴ‴\0‶;慔;慖ʴ‾⁁\0\0⁃耻¾䂾;慗;慜5;慘ƶ⁌\0⁎;慚;慝8;慞l;恄wn;挢cr;쀀𝒻ࢀEabcdefgijlnorstv₂₉₟₥₰₴⃰⃵⃺⃿℃ℒℸ̗ℾ⅒↞Ā;lٍ₇;檌ƀcmpₐₕ₝ute;䇵maĀ;dₜ᳚䎳;檆reve;䄟Āiy₪₮rc;䄝;䐳ot;䄡Ȁ;lqsؾق₽⃉ƀ;qsؾٌ⃄lanô٥Ȁ;cdl٥⃒⃥⃕c;檩otĀ;o⃜⃝檀Ā;l⃢⃣檂;檄Ā;e⃪⃭쀀⋛︀s;檔r;쀀𝔤Ā;gٳ؛mel;愷cy;䑓Ȁ;Eajٚℌℎℐ;檒;檥;檤ȀEaesℛℝ℩ℴ;扩pĀ;p℣ℤ檊rox»ℤĀ;q℮ℯ檈Ā;q℮ℛim;拧pf;쀀𝕘Āci⅃ⅆr;愊mƀ;el٫ⅎ⅐;檎;檐茀>;cdlqr׮ⅠⅪⅮⅳⅹĀciⅥⅧ;檧r;橺ot;拗Par;榕uest;橼ʀadelsↄⅪ←ٖ↛ǰ↉\0↎proø₞r;楸qĀlqؿ↖lesó₈ií٫Āen↣↭rtneqq;쀀≩︀Å↪ԀAabcefkosy⇄⇇⇱⇵⇺∘∝∯≨≽ròΠȀilmr⇐⇔⇗⇛rsðᒄf»․ilôکĀdr⇠⇤cy;䑊ƀ;cwࣴ⇫⇯ir;楈;憭ar;意irc;䄥ƀalr∁∎∓rtsĀ;u∉∊晥it»∊lip;怦con;抹r;쀀𝔥sĀew∣∩arow;椥arow;椦ʀamopr∺∾≃≞≣rr;懿tht;戻kĀlr≉≓eftarrow;憩ightarrow;憪f;쀀𝕙bar;怕ƀclt≯≴≸r;쀀𝒽asè⇴rok;䄧Ābp⊂⊇ull;恃hen»ᱛૡ⊣\0⊪\0⊸⋅⋎\0⋕⋳\0\0⋸⌢⍧⍢⍿\0⎆⎪⎴cute耻í䃭ƀ;iyݱ⊰⊵rc耻î䃮;䐸Ācx⊼⊿y;䐵cl耻¡䂡ĀfrΟ⋉;쀀𝔦rave耻ì䃬Ȁ;inoܾ⋝⋩⋮Āin⋢⋦nt;樌t;戭fin;槜ta;愩lig;䄳ƀaop⋾⌚⌝ƀcgt⌅⌈⌗r;䄫ƀelpܟ⌏⌓inåގarôܠh;䄱f;抷ed;䆵ʀ;cfotӴ⌬⌱⌽⍁are;愅inĀ;t⌸⌹戞ie;槝doô⌙ʀ;celpݗ⍌⍐⍛⍡al;抺Āgr⍕⍙eróᕣã⍍arhk;樗rod;樼Ȁcgpt⍯⍲⍶⍻y;䑑on;䄯f;쀀𝕚a;䎹uest耻¿䂿Āci⎊⎏r;쀀𝒾nʀ;EdsvӴ⎛⎝⎡ӳ;拹ot;拵Ā;v⎦⎧拴;拳Ā;iݷ⎮lde;䄩ǫ⎸\0⎼cy;䑖l耻ï䃯̀cfmosu⏌⏗⏜⏡⏧⏵Āiy⏑⏕rc;䄵;䐹r;쀀𝔧ath;䈷pf;쀀𝕛ǣ⏬\0⏱r;쀀𝒿rcy;䑘kcy;䑔Ѐacfghjos␋␖␢␧␭␱␵␻ppaĀ;v␓␔䎺;䏰Āey␛␠dil;䄷;䐺r;쀀𝔨reen;䄸cy;䑅cy;䑜pf;쀀𝕜cr;쀀𝓀஀ABEHabcdefghjlmnoprstuv⑰⒁⒆⒍⒑┎┽╚▀♎♞♥♹♽⚚⚲⛘❝❨➋⟀⠁⠒ƀart⑷⑺⑼rò৆òΕail;椛arr;椎Ā;gঔ⒋;檋ar;楢ॣ⒥\0⒪\0⒱\0\0\0\0\0⒵Ⓔ\0ⓆⓈⓍ\0⓹ute;䄺mptyv;榴raîࡌbda;䎻gƀ;dlࢎⓁⓃ;榑åࢎ;檅uo耻«䂫rЀ;bfhlpst࢙ⓞⓦⓩ⓫⓮⓱⓵Ā;f࢝ⓣs;椟s;椝ë≒p;憫l;椹im;楳l;憢ƀ;ae⓿─┄檫il;椙Ā;s┉┊檭;쀀⪭︀ƀabr┕┙┝rr;椌rk;杲Āak┢┬cĀek┨┪;䁻;䁛Āes┱┳;榋lĀdu┹┻;榏;榍Ȁaeuy╆╋╖╘ron;䄾Ādi═╔il;䄼ìࢰâ┩;䐻Ȁcqrs╣╦╭╽a;椶uoĀ;rนᝆĀdu╲╷har;楧shar;楋h;憲ʀ;fgqs▋▌উ◳◿扤tʀahlrt▘▤▷◂◨rrowĀ;t࢙□aé⓶arpoonĀdu▯▴own»њp»०eftarrows;懇ightƀahs◍◖◞rrowĀ;sࣴࢧarpoonó྘quigarro÷⇰hreetimes;拋ƀ;qs▋ও◺lanôবʀ;cdgsব☊☍☝☨c;檨otĀ;o☔☕橿Ā;r☚☛檁;檃Ā;e☢☥쀀⋚︀s;檓ʀadegs☳☹☽♉♋pproøⓆot;拖qĀgq♃♅ôউgtò⒌ôছiíলƀilr♕࣡♚sht;楼;쀀𝔩Ā;Eজ♣;檑š♩♶rĀdu▲♮Ā;l॥♳;楪lk;斄cy;䑙ʀ;achtੈ⚈⚋⚑⚖rò◁orneòᴈard;楫ri;旺Āio⚟⚤dot;䅀ustĀ;a⚬⚭掰che»⚭ȀEaes⚻⚽⛉⛔;扨pĀ;p⛃⛄檉rox»⛄Ā;q⛎⛏檇Ā;q⛎⚻im;拦Ѐabnoptwz⛩⛴⛷✚✯❁❇❐Ānr⛮⛱g;柬r;懽rëࣁgƀlmr⛿✍✔eftĀar০✇ightá৲apsto;柼ightá৽parrowĀlr✥✩efô⓭ight;憬ƀafl✶✹✽r;榅;쀀𝕝us;樭imes;樴š❋❏st;戗áፎƀ;ef❗❘᠀旊nge»❘arĀ;l❤❥䀨t;榓ʀachmt❳❶❼➅➇ròࢨorneòᶌarĀ;d྘➃;業;怎ri;抿̀achiqt➘➝ੀ➢➮➻quo;怹r;쀀𝓁mƀ;egল➪➬;檍;檏Ābu┪➳oĀ;rฟ➹;怚rok;䅂萀<;cdhilqrࠫ⟒☹⟜⟠⟥⟪⟰Āci⟗⟙;檦r;橹reå◲mes;拉arr;楶uest;橻ĀPi⟵⟹ar;榖ƀ;ef⠀भ᠛旃rĀdu⠇⠍shar;楊har;楦Āen⠗⠡rtneqq;쀀≨︀Å⠞܀Dacdefhilnopsu⡀⡅⢂⢎⢓⢠⢥⢨⣚⣢⣤ઃ⣳⤂Dot;戺Ȁclpr⡎⡒⡣⡽r耻¯䂯Āet⡗⡙;時Ā;e⡞⡟朠se»⡟Ā;sျ⡨toȀ;dluျ⡳⡷⡻owîҌefôएðᏑker;斮Āoy⢇⢌mma;権;䐼ash;怔asuredangle»ᘦr;쀀𝔪o;愧ƀcdn⢯⢴⣉ro耻µ䂵Ȁ;acdᑤ⢽⣀⣄sôᚧir;櫰ot肻·Ƶusƀ;bd⣒ᤃ⣓戒Ā;uᴼ⣘;横ţ⣞⣡p;櫛ò−ðઁĀdp⣩⣮els;抧f;쀀𝕞Āct⣸⣽r;쀀𝓂pos»ᖝƀ;lm⤉⤊⤍䎼timap;抸ఀGLRVabcdefghijlmoprstuvw⥂⥓⥾⦉⦘⧚⧩⨕⨚⩘⩝⪃⪕⪤⪨⬄⬇⭄⭿⮮ⰴⱧⱼ⳩Āgt⥇⥋;쀀⋙̸Ā;v⥐௏쀀≫⃒ƀelt⥚⥲⥶ftĀar⥡⥧rrow;懍ightarrow;懎;쀀⋘̸Ā;v⥻ే쀀≪⃒ightarrow;懏ĀDd⦎⦓ash;抯ash;抮ʀbcnpt⦣⦧⦬⦱⧌la»˞ute;䅄g;쀀∠⃒ʀ;Eiop඄⦼⧀⧅⧈;쀀⩰̸d;쀀≋̸s;䅉roø඄urĀ;a⧓⧔普lĀ;s⧓ସǳ⧟\0⧣p肻 ଷmpĀ;e௹ఀʀaeouy⧴⧾⨃⨐⨓ǰ⧹\0⧻;橃on;䅈dil;䅆ngĀ;dൾ⨊ot;쀀⩭̸p;橂;䐽ash;怓΀;Aadqsxஒ⨩⨭⨻⩁⩅⩐rr;懗rĀhr⨳⨶k;椤Ā;oᏲᏰot;쀀≐̸uiöୣĀei⩊⩎ar;椨í஘istĀ;s஠டr;쀀𝔫ȀEest௅⩦⩹⩼ƀ;qs஼⩭௡ƀ;qs஼௅⩴lanô௢ií௪Ā;rஶ⪁»ஷƀAap⪊⪍⪑rò⥱rr;憮ar;櫲ƀ;svྍ⪜ྌĀ;d⪡⪢拼;拺cy;䑚΀AEadest⪷⪺⪾⫂⫅⫶⫹rò⥦;쀀≦̸rr;憚r;急Ȁ;fqs఻⫎⫣⫯tĀar⫔⫙rro÷⫁ightarro÷⪐ƀ;qs఻⪺⫪lanôౕĀ;sౕ⫴»శiíౝĀ;rవ⫾iĀ;eచథiäඐĀpt⬌⬑f;쀀𝕟膀¬;in⬙⬚⬶䂬nȀ;Edvஉ⬤⬨⬮;쀀⋹̸ot;쀀⋵̸ǡஉ⬳⬵;拷;拶iĀ;vಸ⬼ǡಸ⭁⭃;拾;拽ƀaor⭋⭣⭩rȀ;ast୻⭕⭚⭟lleì୻l;쀀⫽⃥;쀀∂̸lint;樔ƀ;ceಒ⭰⭳uåಥĀ;cಘ⭸Ā;eಒ⭽ñಘȀAait⮈⮋⮝⮧rò⦈rrƀ;cw⮔⮕⮙憛;쀀⤳̸;쀀↝̸ghtarrow»⮕riĀ;eೋೖ΀chimpqu⮽⯍⯙⬄୸⯤⯯Ȁ;cerല⯆ഷ⯉uå൅;쀀𝓃ortɭ⬅\0\0⯖ará⭖mĀ;e൮⯟Ā;q൴൳suĀbp⯫⯭å೸åഋƀbcp⯶ⰑⰙȀ;Ees⯿ⰀഢⰄ抄;쀀⫅̸etĀ;eഛⰋqĀ;qണⰀcĀ;eലⰗñസȀ;EesⰢⰣൟⰧ抅;쀀⫆̸etĀ;e൘ⰮqĀ;qൠⰣȀgilrⰽⰿⱅⱇìௗlde耻ñ䃱çృiangleĀlrⱒⱜeftĀ;eచⱚñదightĀ;eೋⱥñ೗Ā;mⱬⱭ䎽ƀ;esⱴⱵⱹ䀣ro;愖p;怇ҀDHadgilrsⲏⲔⲙⲞⲣⲰⲶⳓⳣash;抭arr;椄p;쀀≍⃒ash;抬ĀetⲨⲬ;쀀≥⃒;쀀>⃒nfin;槞ƀAetⲽⳁⳅrr;椂;쀀≤⃒Ā;rⳊⳍ쀀<⃒ie;쀀⊴⃒ĀAtⳘⳜrr;椃rie;쀀⊵⃒im;쀀∼⃒ƀAan⳰⳴ⴂrr;懖rĀhr⳺⳽k;椣Ā;oᏧᏥear;椧ቓ᪕\0\0\0\0\0\0\0\0\0\0\0\0\0ⴭ\0ⴸⵈⵠⵥ⵲ⶄᬇ\0\0ⶍⶫ\0ⷈⷎ\0ⷜ⸙⸫⸾⹃Ācsⴱ᪗ute耻ó䃳ĀiyⴼⵅrĀ;c᪞ⵂ耻ô䃴;䐾ʀabios᪠ⵒⵗǈⵚlac;䅑v;樸old;榼lig;䅓Ācr⵩⵭ir;榿;쀀𝔬ͯ⵹\0\0⵼\0ⶂn;䋛ave耻ò䃲;槁Ābmⶈ෴ar;榵Ȁacitⶕ⶘ⶥⶨrò᪀Āir⶝ⶠr;榾oss;榻nå๒;槀ƀaeiⶱⶵⶹcr;䅍ga;䏉ƀcdnⷀⷅǍron;䎿;榶pf;쀀𝕠ƀaelⷔ⷗ǒr;榷rp;榹΀;adiosvⷪⷫⷮ⸈⸍⸐⸖戨rò᪆Ȁ;efmⷷⷸ⸂⸅橝rĀ;oⷾⷿ愴f»ⷿ耻ª䂪耻º䂺gof;抶r;橖lope;橗;橛ƀclo⸟⸡⸧ò⸁ash耻ø䃸l;折iŬⸯ⸴de耻õ䃵esĀ;aǛ⸺s;樶ml耻ö䃶bar;挽ૡ⹞\0⹽\0⺀⺝\0⺢⺹\0\0⻋ຜ\0⼓\0\0⼫⾼\0⿈rȀ;astЃ⹧⹲຅脀¶;l⹭⹮䂶leìЃɩ⹸\0\0⹻m;櫳;櫽y;䐿rʀcimpt⺋⺏⺓ᡥ⺗nt;䀥od;䀮il;怰enk;怱r;쀀𝔭ƀimo⺨⺰⺴Ā;v⺭⺮䏆;䏕maô੶ne;明ƀ;tv⺿⻀⻈䏀chfork»´;䏖Āau⻏⻟nĀck⻕⻝kĀ;h⇴⻛;愎ö⇴sҀ;abcdemst⻳⻴ᤈ⻹⻽⼄⼆⼊⼎䀫cir;樣ir;樢Āouᵀ⼂;樥;橲n肻±ຝim;樦wo;樧ƀipu⼙⼠⼥ntint;樕f;쀀𝕡nd耻£䂣Ԁ;Eaceinosu່⼿⽁⽄⽇⾁⾉⾒⽾⾶;檳p;檷uå໙Ā;c໎⽌̀;acens່⽙⽟⽦⽨⽾pproø⽃urlyeñ໙ñ໎ƀaes⽯⽶⽺pprox;檹qq;檵im;拨iíໟmeĀ;s⾈ຮ怲ƀEas⽸⾐⽺ð⽵ƀdfp໬⾙⾯ƀals⾠⾥⾪lar;挮ine;挒urf;挓Ā;t໻⾴ï໻rel;抰Āci⿀⿅r;쀀𝓅;䏈ncsp;怈̀fiopsu⿚⋢⿟⿥⿫⿱r;쀀𝔮pf;쀀𝕢rime;恗cr;쀀𝓆ƀaeo⿸〉〓tĀei⿾々rnionóڰnt;樖stĀ;e【】䀿ñἙô༔઀ABHabcdefhilmnoprstux぀けさすムㄎㄫㅇㅢㅲㆎ㈆㈕㈤㈩㉘㉮㉲㊐㊰㊷ƀartぇおがròႳòϝail;検aròᱥar;楤΀cdenqrtとふへみわゔヌĀeuねぱ;쀀∽̱te;䅕iãᅮmptyv;榳gȀ;del࿑らるろ;榒;榥å࿑uo耻»䂻rր;abcfhlpstw࿜ガクシスゼゾダッデナp;極Ā;f࿠ゴs;椠;椳s;椞ë≝ð✮l;楅im;楴l;憣;憝Āaiパフil;椚oĀ;nホボ戶aló༞ƀabrョリヮrò៥rk;杳ĀakンヽcĀekヹ・;䁽;䁝Āes㄂㄄;榌lĀduㄊㄌ;榎;榐Ȁaeuyㄗㄜㄧㄩron;䅙Ādiㄡㄥil;䅗ì࿲âヺ;䑀Ȁclqsㄴㄷㄽㅄa;椷dhar;楩uoĀ;rȎȍh;憳ƀacgㅎㅟངlȀ;ipsླྀㅘㅛႜnåႻarôྩt;断ƀilrㅩဣㅮsht;楽;쀀𝔯ĀaoㅷㆆrĀduㅽㅿ»ѻĀ;l႑ㆄ;楬Ā;vㆋㆌ䏁;䏱ƀgns㆕ㇹㇼht̀ahlrstㆤㆰ㇂㇘㇤㇮rrowĀ;t࿜ㆭaéトarpoonĀduㆻㆿowîㅾp»႒eftĀah㇊㇐rrowó࿪arpoonóՑightarrows;應quigarro÷ニhreetimes;拌g;䋚ingdotseñἲƀahm㈍㈐㈓rò࿪aòՑ;怏oustĀ;a㈞㈟掱che»㈟mid;櫮Ȁabpt㈲㈽㉀㉒Ānr㈷㈺g;柭r;懾rëဃƀafl㉇㉊㉎r;榆;쀀𝕣us;樮imes;樵Āap㉝㉧rĀ;g㉣㉤䀩t;榔olint;樒arò㇣Ȁachq㉻㊀Ⴜ㊅quo;怺r;쀀𝓇Ābu・㊊oĀ;rȔȓƀhir㊗㊛㊠reåㇸmes;拊iȀ;efl㊪ၙᠡ㊫方tri;槎luhar;楨;愞ൡ㋕㋛㋟㌬㌸㍱\0㍺㎤\0\0㏬㏰\0㐨㑈㑚㒭㒱㓊㓱\0㘖\0\0㘳cute;䅛quï➺Ԁ;Eaceinpsyᇭ㋳㋵㋿㌂㌋㌏㌟㌦㌩;檴ǰ㋺\0㋼;檸on;䅡uåᇾĀ;dᇳ㌇il;䅟rc;䅝ƀEas㌖㌘㌛;檶p;檺im;择olint;樓iíሄ;䑁otƀ;be㌴ᵇ㌵担;橦΀Aacmstx㍆㍊㍗㍛㍞㍣㍭rr;懘rĀhr㍐㍒ë∨Ā;oਸ਼਴t耻§䂧i;䀻war;椩mĀin㍩ðnuóñt;朶rĀ;o㍶⁕쀀𝔰Ȁacoy㎂㎆㎑㎠rp;景Āhy㎋㎏cy;䑉;䑈rtɭ㎙\0\0㎜iäᑤaraì⹯耻­䂭Āgm㎨㎴maƀ;fv㎱㎲㎲䏃;䏂Ѐ;deglnprካ㏅㏉㏎㏖㏞㏡㏦ot;橪Ā;q኱ኰĀ;E㏓㏔檞;檠Ā;E㏛㏜檝;檟e;扆lus;樤arr;楲aròᄽȀaeit㏸㐈㐏㐗Āls㏽㐄lsetmé㍪hp;樳parsl;槤Ādlᑣ㐔e;挣Ā;e㐜㐝檪Ā;s㐢㐣檬;쀀⪬︀ƀflp㐮㐳㑂tcy;䑌Ā;b㐸㐹䀯Ā;a㐾㐿槄r;挿f;쀀𝕤aĀdr㑍ЂesĀ;u㑔㑕晠it»㑕ƀcsu㑠㑹㒟Āau㑥㑯pĀ;sᆈ㑫;쀀⊓︀pĀ;sᆴ㑵;쀀⊔︀uĀbp㑿㒏ƀ;esᆗᆜ㒆etĀ;eᆗ㒍ñᆝƀ;esᆨᆭ㒖etĀ;eᆨ㒝ñᆮƀ;afᅻ㒦ְrť㒫ֱ»ᅼaròᅈȀcemt㒹㒾㓂㓅r;쀀𝓈tmîñiì㐕aræᆾĀar㓎㓕rĀ;f㓔ឿ昆Āan㓚㓭ightĀep㓣㓪psiloîỠhé⺯s»⡒ʀbcmnp㓻㕞ሉ㖋㖎Ҁ;Edemnprs㔎㔏㔑㔕㔞㔣㔬㔱㔶抂;櫅ot;檽Ā;dᇚ㔚ot;櫃ult;櫁ĀEe㔨㔪;櫋;把lus;檿arr;楹ƀeiu㔽㕒㕕tƀ;en㔎㕅㕋qĀ;qᇚ㔏eqĀ;q㔫㔨m;櫇Ābp㕚㕜;櫕;櫓c̀;acensᇭ㕬㕲㕹㕻㌦pproø㋺urlyeñᇾñᇳƀaes㖂㖈㌛pproø㌚qñ㌗g;晪ڀ123;Edehlmnps㖩㖬㖯ሜ㖲㖴㗀㗉㗕㗚㗟㗨㗭耻¹䂹耻²䂲耻³䂳;櫆Āos㖹㖼t;檾ub;櫘Ā;dሢ㗅ot;櫄sĀou㗏㗒l;柉b;櫗arr;楻ult;櫂ĀEe㗤㗦;櫌;抋lus;櫀ƀeiu㗴㘉㘌tƀ;enሜ㗼㘂qĀ;qሢ㖲eqĀ;q㗧㗤m;櫈Ābp㘑㘓;櫔;櫖ƀAan㘜㘠㘭rr;懙rĀhr㘦㘨ë∮Ā;oਫ਩war;椪lig耻ß䃟௡㙑㙝㙠ዎ㙳㙹\0㙾㛂\0\0\0\0\0㛛㜃\0㜉㝬\0\0\0㞇ɲ㙖\0\0㙛get;挖;䏄rë๟ƀaey㙦㙫㙰ron;䅥dil;䅣;䑂lrec;挕r;쀀𝔱Ȁeiko㚆㚝㚵㚼ǲ㚋\0㚑eĀ4fኄኁaƀ;sv㚘㚙㚛䎸ym;䏑Ācn㚢㚲kĀas㚨㚮pproø዁im»ኬsðኞĀas㚺㚮ð዁rn耻þ䃾Ǭ̟㛆⋧es膀×;bd㛏㛐㛘䃗Ā;aᤏ㛕r;樱;樰ƀeps㛡㛣㜀á⩍Ȁ;bcf҆㛬㛰㛴ot;挶ir;櫱Ā;o㛹㛼쀀𝕥rk;櫚á㍢rime;怴ƀaip㜏㜒㝤dåቈ΀adempst㜡㝍㝀㝑㝗㝜㝟ngleʀ;dlqr㜰㜱㜶㝀㝂斵own»ᶻeftĀ;e⠀㜾ñम;扜ightĀ;e㊪㝋ñၚot;旬inus;樺lus;樹b;槍ime;樻ezium;揢ƀcht㝲㝽㞁Āry㝷㝻;쀀𝓉;䑆cy;䑛rok;䅧Āio㞋㞎xô᝷headĀlr㞗㞠eftarro÷ࡏightarrow»ཝऀAHabcdfghlmoprstuw㟐㟓㟗㟤㟰㟼㠎㠜㠣㠴㡑㡝㡫㢩㣌㣒㣪㣶ròϭar;楣Ācr㟜㟢ute耻ú䃺òᅐrǣ㟪\0㟭y;䑞ve;䅭Āiy㟵㟺rc耻û䃻;䑃ƀabh㠃㠆㠋ròᎭlac;䅱aòᏃĀir㠓㠘sht;楾;쀀𝔲rave耻ù䃹š㠧㠱rĀlr㠬㠮»ॗ»ႃlk;斀Āct㠹㡍ɯ㠿\0\0㡊rnĀ;e㡅㡆挜r»㡆op;挏ri;旸Āal㡖㡚cr;䅫肻¨͉Āgp㡢㡦on;䅳f;쀀𝕦̀adhlsuᅋ㡸㡽፲㢑㢠ownáᎳarpoonĀlr㢈㢌efô㠭ighô㠯iƀ;hl㢙㢚㢜䏅»ᏺon»㢚parrows;懈ƀcit㢰㣄㣈ɯ㢶\0\0㣁rnĀ;e㢼㢽挝r»㢽op;挎ng;䅯ri;旹cr;쀀𝓊ƀdir㣙㣝㣢ot;拰lde;䅩iĀ;f㜰㣨»᠓Āam㣯㣲rò㢨l耻ü䃼angle;榧ހABDacdeflnoprsz㤜㤟㤩㤭㦵㦸㦽㧟㧤㧨㧳㧹㧽㨁㨠ròϷarĀ;v㤦㤧櫨;櫩asèϡĀnr㤲㤷grt;榜΀eknprst㓣㥆㥋㥒㥝㥤㦖appá␕othinçẖƀhir㓫⻈㥙opô⾵Ā;hᎷ㥢ïㆍĀiu㥩㥭gmá㎳Ābp㥲㦄setneqĀ;q㥽㦀쀀⊊︀;쀀⫋︀setneqĀ;q㦏㦒쀀⊋︀;쀀⫌︀Āhr㦛㦟etá㚜iangleĀlr㦪㦯eft»थight»ၑy;䐲ash»ံƀelr㧄㧒㧗ƀ;beⷪ㧋㧏ar;抻q;扚lip;拮Ābt㧜ᑨaòᑩr;쀀𝔳tré㦮suĀbp㧯㧱»ജ»൙pf;쀀𝕧roð໻tré㦴Ācu㨆㨋r;쀀𝓋Ābp㨐㨘nĀEe㦀㨖»㥾nĀEe㦒㨞»㦐igzag;榚΀cefoprs㨶㨻㩖㩛㩔㩡㩪irc;䅵Ādi㩀㩑Ābg㩅㩉ar;機eĀ;qᗺ㩏;扙erp;愘r;쀀𝔴pf;쀀𝕨Ā;eᑹ㩦atèᑹcr;쀀𝓌ૣណ㪇\0㪋\0㪐㪛\0\0㪝㪨㪫㪯\0\0㫃㫎\0㫘ៜ៟tré៑r;쀀𝔵ĀAa㪔㪗ròσrò৶;䎾ĀAa㪡㪤ròθrò৫að✓is;拻ƀdptឤ㪵㪾Āfl㪺ឩ;쀀𝕩imåឲĀAa㫇㫊ròώròਁĀcq㫒ីr;쀀𝓍Āpt៖㫜ré។Ѐacefiosu㫰㫽㬈㬌㬑㬕㬛㬡cĀuy㫶㫻te耻ý䃽;䑏Āiy㬂㬆rc;䅷;䑋n耻¥䂥r;쀀𝔶cy;䑗pf;쀀𝕪cr;쀀𝓎Ācm㬦㬩y;䑎l耻ÿ䃿Ԁacdefhiosw㭂㭈㭔㭘㭤㭩㭭㭴㭺㮀cute;䅺Āay㭍㭒ron;䅾;䐷ot;䅼Āet㭝㭡træᕟa;䎶r;쀀𝔷cy;䐶grarr;懝pf;쀀𝕫cr;쀀𝓏Ājn㮅㮇;怍j;怌'.split("").map((c2) => c2.charCodeAt(0))
+);
+const xmlDecodeTree = new Uint16Array(
+  // prettier-ignore
+  "Ȁaglq	\x1Bɭ\0\0p;䀦os;䀧t;䀾t;䀼uot;䀢".split("").map((c2) => c2.charCodeAt(0))
+);
+var _a;
+const decodeMap = /* @__PURE__ */ new Map([
+  [0, 65533],
+  // C1 Unicode control character reference replacements
+  [128, 8364],
+  [130, 8218],
+  [131, 402],
+  [132, 8222],
+  [133, 8230],
+  [134, 8224],
+  [135, 8225],
+  [136, 710],
+  [137, 8240],
+  [138, 352],
+  [139, 8249],
+  [140, 338],
+  [142, 381],
+  [145, 8216],
+  [146, 8217],
+  [147, 8220],
+  [148, 8221],
+  [149, 8226],
+  [150, 8211],
+  [151, 8212],
+  [152, 732],
+  [153, 8482],
+  [154, 353],
+  [155, 8250],
+  [156, 339],
+  [158, 382],
+  [159, 376]
+]);
+const fromCodePoint$1 = (
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, node/no-unsupported-features/es-builtins
+  (_a = String.fromCodePoint) !== null && _a !== void 0 ? _a : function(codePoint) {
+    let output = "";
+    if (codePoint > 65535) {
+      codePoint -= 65536;
+      output += String.fromCharCode(codePoint >>> 10 & 1023 | 55296);
+      codePoint = 56320 | codePoint & 1023;
+    }
+    output += String.fromCharCode(codePoint);
+    return output;
+  }
+);
+function replaceCodePoint(codePoint) {
+  var _a2;
+  if (codePoint >= 55296 && codePoint <= 57343 || codePoint > 1114111) {
+    return 65533;
+  }
+  return (_a2 = decodeMap.get(codePoint)) !== null && _a2 !== void 0 ? _a2 : codePoint;
+}
+var CharCodes;
+(function(CharCodes2) {
+  CharCodes2[CharCodes2["NUM"] = 35] = "NUM";
+  CharCodes2[CharCodes2["SEMI"] = 59] = "SEMI";
+  CharCodes2[CharCodes2["EQUALS"] = 61] = "EQUALS";
+  CharCodes2[CharCodes2["ZERO"] = 48] = "ZERO";
+  CharCodes2[CharCodes2["NINE"] = 57] = "NINE";
+  CharCodes2[CharCodes2["LOWER_A"] = 97] = "LOWER_A";
+  CharCodes2[CharCodes2["LOWER_F"] = 102] = "LOWER_F";
+  CharCodes2[CharCodes2["LOWER_X"] = 120] = "LOWER_X";
+  CharCodes2[CharCodes2["LOWER_Z"] = 122] = "LOWER_Z";
+  CharCodes2[CharCodes2["UPPER_A"] = 65] = "UPPER_A";
+  CharCodes2[CharCodes2["UPPER_F"] = 70] = "UPPER_F";
+  CharCodes2[CharCodes2["UPPER_Z"] = 90] = "UPPER_Z";
+})(CharCodes || (CharCodes = {}));
+const TO_LOWER_BIT = 32;
+var BinTrieFlags;
+(function(BinTrieFlags2) {
+  BinTrieFlags2[BinTrieFlags2["VALUE_LENGTH"] = 49152] = "VALUE_LENGTH";
+  BinTrieFlags2[BinTrieFlags2["BRANCH_LENGTH"] = 16256] = "BRANCH_LENGTH";
+  BinTrieFlags2[BinTrieFlags2["JUMP_TABLE"] = 127] = "JUMP_TABLE";
+})(BinTrieFlags || (BinTrieFlags = {}));
+function isNumber(code2) {
+  return code2 >= CharCodes.ZERO && code2 <= CharCodes.NINE;
+}
+function isHexadecimalCharacter(code2) {
+  return code2 >= CharCodes.UPPER_A && code2 <= CharCodes.UPPER_F || code2 >= CharCodes.LOWER_A && code2 <= CharCodes.LOWER_F;
+}
+function isAsciiAlphaNumeric(code2) {
+  return code2 >= CharCodes.UPPER_A && code2 <= CharCodes.UPPER_Z || code2 >= CharCodes.LOWER_A && code2 <= CharCodes.LOWER_Z || isNumber(code2);
+}
+function isEntityInAttributeInvalidEnd(code2) {
+  return code2 === CharCodes.EQUALS || isAsciiAlphaNumeric(code2);
+}
+var EntityDecoderState;
+(function(EntityDecoderState2) {
+  EntityDecoderState2[EntityDecoderState2["EntityStart"] = 0] = "EntityStart";
+  EntityDecoderState2[EntityDecoderState2["NumericStart"] = 1] = "NumericStart";
+  EntityDecoderState2[EntityDecoderState2["NumericDecimal"] = 2] = "NumericDecimal";
+  EntityDecoderState2[EntityDecoderState2["NumericHex"] = 3] = "NumericHex";
+  EntityDecoderState2[EntityDecoderState2["NamedEntity"] = 4] = "NamedEntity";
+})(EntityDecoderState || (EntityDecoderState = {}));
+var DecodingMode;
+(function(DecodingMode2) {
+  DecodingMode2[DecodingMode2["Legacy"] = 0] = "Legacy";
+  DecodingMode2[DecodingMode2["Strict"] = 1] = "Strict";
+  DecodingMode2[DecodingMode2["Attribute"] = 2] = "Attribute";
+})(DecodingMode || (DecodingMode = {}));
+class EntityDecoder {
+  constructor(decodeTree, emitCodePoint, errors2) {
+    this.decodeTree = decodeTree;
+    this.emitCodePoint = emitCodePoint;
+    this.errors = errors2;
+    this.state = EntityDecoderState.EntityStart;
+    this.consumed = 1;
+    this.result = 0;
+    this.treeIndex = 0;
+    this.excess = 1;
+    this.decodeMode = DecodingMode.Strict;
+  }
+  /** Resets the instance to make it reusable. */
+  startEntity(decodeMode) {
+    this.decodeMode = decodeMode;
+    this.state = EntityDecoderState.EntityStart;
+    this.result = 0;
+    this.treeIndex = 0;
+    this.excess = 1;
+    this.consumed = 1;
+  }
+  /**
+   * Write an entity to the decoder. This can be called multiple times with partial entities.
+   * If the entity is incomplete, the decoder will return -1.
+   *
+   * Mirrors the implementation of `getDecoder`, but with the ability to stop decoding if the
+   * entity is incomplete, and resume when the next string is written.
+   *
+   * @param string The string containing the entity (or a continuation of the entity).
+   * @param offset The offset at which the entity begins. Should be 0 if this is not the first call.
+   * @returns The number of characters that were consumed, or -1 if the entity is incomplete.
+   */
+  write(str, offset) {
+    switch (this.state) {
+      case EntityDecoderState.EntityStart: {
+        if (str.charCodeAt(offset) === CharCodes.NUM) {
+          this.state = EntityDecoderState.NumericStart;
+          this.consumed += 1;
+          return this.stateNumericStart(str, offset + 1);
+        }
+        this.state = EntityDecoderState.NamedEntity;
+        return this.stateNamedEntity(str, offset);
+      }
+      case EntityDecoderState.NumericStart: {
+        return this.stateNumericStart(str, offset);
+      }
+      case EntityDecoderState.NumericDecimal: {
+        return this.stateNumericDecimal(str, offset);
+      }
+      case EntityDecoderState.NumericHex: {
+        return this.stateNumericHex(str, offset);
+      }
+      case EntityDecoderState.NamedEntity: {
+        return this.stateNamedEntity(str, offset);
+      }
+    }
+  }
+  /**
+   * Switches between the numeric decimal and hexadecimal states.
+   *
+   * Equivalent to the `Numeric character reference state` in the HTML spec.
+   *
+   * @param str The string containing the entity (or a continuation of the entity).
+   * @param offset The current offset.
+   * @returns The number of characters that were consumed, or -1 if the entity is incomplete.
+   */
+  stateNumericStart(str, offset) {
+    if (offset >= str.length) {
+      return -1;
+    }
+    if ((str.charCodeAt(offset) | TO_LOWER_BIT) === CharCodes.LOWER_X) {
+      this.state = EntityDecoderState.NumericHex;
+      this.consumed += 1;
+      return this.stateNumericHex(str, offset + 1);
+    }
+    this.state = EntityDecoderState.NumericDecimal;
+    return this.stateNumericDecimal(str, offset);
+  }
+  addToNumericResult(str, start, end, base2) {
+    if (start !== end) {
+      const digitCount = end - start;
+      this.result = this.result * Math.pow(base2, digitCount) + parseInt(str.substr(start, digitCount), base2);
+      this.consumed += digitCount;
+    }
+  }
+  /**
+   * Parses a hexadecimal numeric entity.
+   *
+   * Equivalent to the `Hexademical character reference state` in the HTML spec.
+   *
+   * @param str The string containing the entity (or a continuation of the entity).
+   * @param offset The current offset.
+   * @returns The number of characters that were consumed, or -1 if the entity is incomplete.
+   */
+  stateNumericHex(str, offset) {
+    const startIdx = offset;
+    while (offset < str.length) {
+      const char = str.charCodeAt(offset);
+      if (isNumber(char) || isHexadecimalCharacter(char)) {
+        offset += 1;
+      } else {
+        this.addToNumericResult(str, startIdx, offset, 16);
+        return this.emitNumericEntity(char, 3);
+      }
+    }
+    this.addToNumericResult(str, startIdx, offset, 16);
+    return -1;
+  }
+  /**
+   * Parses a decimal numeric entity.
+   *
+   * Equivalent to the `Decimal character reference state` in the HTML spec.
+   *
+   * @param str The string containing the entity (or a continuation of the entity).
+   * @param offset The current offset.
+   * @returns The number of characters that were consumed, or -1 if the entity is incomplete.
+   */
+  stateNumericDecimal(str, offset) {
+    const startIdx = offset;
+    while (offset < str.length) {
+      const char = str.charCodeAt(offset);
+      if (isNumber(char)) {
+        offset += 1;
+      } else {
+        this.addToNumericResult(str, startIdx, offset, 10);
+        return this.emitNumericEntity(char, 2);
+      }
+    }
+    this.addToNumericResult(str, startIdx, offset, 10);
+    return -1;
+  }
+  /**
+   * Validate and emit a numeric entity.
+   *
+   * Implements the logic from the `Hexademical character reference start
+   * state` and `Numeric character reference end state` in the HTML spec.
+   *
+   * @param lastCp The last code point of the entity. Used to see if the
+   *               entity was terminated with a semicolon.
+   * @param expectedLength The minimum number of characters that should be
+   *                       consumed. Used to validate that at least one digit
+   *                       was consumed.
+   * @returns The number of characters that were consumed.
+   */
+  emitNumericEntity(lastCp, expectedLength) {
+    var _a2;
+    if (this.consumed <= expectedLength) {
+      (_a2 = this.errors) === null || _a2 === void 0 ? void 0 : _a2.absenceOfDigitsInNumericCharacterReference(this.consumed);
+      return 0;
+    }
+    if (lastCp === CharCodes.SEMI) {
+      this.consumed += 1;
+    } else if (this.decodeMode === DecodingMode.Strict) {
+      return 0;
+    }
+    this.emitCodePoint(replaceCodePoint(this.result), this.consumed);
+    if (this.errors) {
+      if (lastCp !== CharCodes.SEMI) {
+        this.errors.missingSemicolonAfterCharacterReference();
+      }
+      this.errors.validateNumericCharacterReference(this.result);
+    }
+    return this.consumed;
+  }
+  /**
+   * Parses a named entity.
+   *
+   * Equivalent to the `Named character reference state` in the HTML spec.
+   *
+   * @param str The string containing the entity (or a continuation of the entity).
+   * @param offset The current offset.
+   * @returns The number of characters that were consumed, or -1 if the entity is incomplete.
+   */
+  stateNamedEntity(str, offset) {
+    const { decodeTree } = this;
+    let current = decodeTree[this.treeIndex];
+    let valueLength = (current & BinTrieFlags.VALUE_LENGTH) >> 14;
+    for (; offset < str.length; offset++, this.excess++) {
+      const char = str.charCodeAt(offset);
+      this.treeIndex = determineBranch(decodeTree, current, this.treeIndex + Math.max(1, valueLength), char);
+      if (this.treeIndex < 0) {
+        return this.result === 0 || // If we are parsing an attribute
+        this.decodeMode === DecodingMode.Attribute && // We shouldn't have consumed any characters after the entity,
+        (valueLength === 0 || // And there should be no invalid characters.
+        isEntityInAttributeInvalidEnd(char)) ? 0 : this.emitNotTerminatedNamedEntity();
+      }
+      current = decodeTree[this.treeIndex];
+      valueLength = (current & BinTrieFlags.VALUE_LENGTH) >> 14;
+      if (valueLength !== 0) {
+        if (char === CharCodes.SEMI) {
+          return this.emitNamedEntityData(this.treeIndex, valueLength, this.consumed + this.excess);
+        }
+        if (this.decodeMode !== DecodingMode.Strict) {
+          this.result = this.treeIndex;
+          this.consumed += this.excess;
+          this.excess = 0;
+        }
+      }
+    }
+    return -1;
+  }
+  /**
+   * Emit a named entity that was not terminated with a semicolon.
+   *
+   * @returns The number of characters consumed.
+   */
+  emitNotTerminatedNamedEntity() {
+    var _a2;
+    const { result, decodeTree } = this;
+    const valueLength = (decodeTree[result] & BinTrieFlags.VALUE_LENGTH) >> 14;
+    this.emitNamedEntityData(result, valueLength, this.consumed);
+    (_a2 = this.errors) === null || _a2 === void 0 ? void 0 : _a2.missingSemicolonAfterCharacterReference();
+    return this.consumed;
+  }
+  /**
+   * Emit a named entity.
+   *
+   * @param result The index of the entity in the decode tree.
+   * @param valueLength The number of bytes in the entity.
+   * @param consumed The number of characters consumed.
+   *
+   * @returns The number of characters consumed.
+   */
+  emitNamedEntityData(result, valueLength, consumed) {
+    const { decodeTree } = this;
+    this.emitCodePoint(valueLength === 1 ? decodeTree[result] & ~BinTrieFlags.VALUE_LENGTH : decodeTree[result + 1], consumed);
+    if (valueLength === 3) {
+      this.emitCodePoint(decodeTree[result + 2], consumed);
+    }
+    return consumed;
+  }
+  /**
+   * Signal to the parser that the end of the input was reached.
+   *
+   * Remaining data will be emitted and relevant errors will be produced.
+   *
+   * @returns The number of characters consumed.
+   */
+  end() {
+    var _a2;
+    switch (this.state) {
+      case EntityDecoderState.NamedEntity: {
+        return this.result !== 0 && (this.decodeMode !== DecodingMode.Attribute || this.result === this.treeIndex) ? this.emitNotTerminatedNamedEntity() : 0;
+      }
+      // Otherwise, emit a numeric entity if we have one.
+      case EntityDecoderState.NumericDecimal: {
+        return this.emitNumericEntity(0, 2);
+      }
+      case EntityDecoderState.NumericHex: {
+        return this.emitNumericEntity(0, 3);
+      }
+      case EntityDecoderState.NumericStart: {
+        (_a2 = this.errors) === null || _a2 === void 0 ? void 0 : _a2.absenceOfDigitsInNumericCharacterReference(this.consumed);
+        return 0;
+      }
+      case EntityDecoderState.EntityStart: {
+        return 0;
+      }
+    }
+  }
+}
+function getDecoder(decodeTree) {
+  let ret = "";
+  const decoder = new EntityDecoder(decodeTree, (str) => ret += fromCodePoint$1(str));
+  return function decodeWithTrie(str, decodeMode) {
+    let lastIndex = 0;
+    let offset = 0;
+    while ((offset = str.indexOf("&", offset)) >= 0) {
+      ret += str.slice(lastIndex, offset);
+      decoder.startEntity(decodeMode);
+      const len = decoder.write(
+        str,
+        // Skip the "&"
+        offset + 1
+      );
+      if (len < 0) {
+        lastIndex = offset + decoder.end();
+        break;
+      }
+      lastIndex = offset + len;
+      offset = len === 0 ? lastIndex + 1 : lastIndex;
+    }
+    const result = ret + str.slice(lastIndex);
+    ret = "";
+    return result;
+  };
+}
+function determineBranch(decodeTree, current, nodeIdx, char) {
+  const branchCount = (current & BinTrieFlags.BRANCH_LENGTH) >> 7;
+  const jumpOffset = current & BinTrieFlags.JUMP_TABLE;
+  if (branchCount === 0) {
+    return jumpOffset !== 0 && char === jumpOffset ? nodeIdx : -1;
+  }
+  if (jumpOffset) {
+    const value = char - jumpOffset;
+    return value < 0 || value >= branchCount ? -1 : decodeTree[nodeIdx + value] - 1;
+  }
+  let lo = nodeIdx;
+  let hi = lo + branchCount - 1;
+  while (lo <= hi) {
+    const mid = lo + hi >>> 1;
+    const midVal = decodeTree[mid];
+    if (midVal < char) {
+      lo = mid + 1;
+    } else if (midVal > char) {
+      hi = mid - 1;
+    } else {
+      return decodeTree[mid + branchCount];
+    }
+  }
+  return -1;
+}
+const htmlDecoder = getDecoder(htmlDecodeTree);
+getDecoder(xmlDecodeTree);
+function decodeHTML(str, mode = DecodingMode.Legacy) {
+  return htmlDecoder(str, mode);
+}
+function _class$1(obj) {
+  return Object.prototype.toString.call(obj);
+}
+function isString$1(obj) {
+  return _class$1(obj) === "[object String]";
+}
+const _hasOwnProperty = Object.prototype.hasOwnProperty;
+function has(object, key) {
+  return _hasOwnProperty.call(object, key);
+}
+function assign$1(obj) {
+  const sources = Array.prototype.slice.call(arguments, 1);
+  sources.forEach(function(source) {
+    if (!source) {
+      return;
+    }
+    if (typeof source !== "object") {
+      throw new TypeError(source + "must be object");
+    }
+    Object.keys(source).forEach(function(key) {
+      obj[key] = source[key];
+    });
+  });
+  return obj;
+}
+function arrayReplaceAt(src, pos, newElements) {
+  return [].concat(src.slice(0, pos), newElements, src.slice(pos + 1));
+}
+function isValidEntityCode(c2) {
+  if (c2 >= 55296 && c2 <= 57343) {
+    return false;
+  }
+  if (c2 >= 64976 && c2 <= 65007) {
+    return false;
+  }
+  if ((c2 & 65535) === 65535 || (c2 & 65535) === 65534) {
+    return false;
+  }
+  if (c2 >= 0 && c2 <= 8) {
+    return false;
+  }
+  if (c2 === 11) {
+    return false;
+  }
+  if (c2 >= 14 && c2 <= 31) {
+    return false;
+  }
+  if (c2 >= 127 && c2 <= 159) {
+    return false;
+  }
+  if (c2 > 1114111) {
+    return false;
+  }
+  return true;
+}
+function fromCodePoint(c2) {
+  if (c2 > 65535) {
+    c2 -= 65536;
+    const surrogate1 = 55296 + (c2 >> 10);
+    const surrogate2 = 56320 + (c2 & 1023);
+    return String.fromCharCode(surrogate1, surrogate2);
+  }
+  return String.fromCharCode(c2);
+}
+const UNESCAPE_MD_RE = /\\([!"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~])/g;
+const ENTITY_RE = /&([a-z#][a-z0-9]{1,31});/gi;
+const UNESCAPE_ALL_RE = new RegExp(UNESCAPE_MD_RE.source + "|" + ENTITY_RE.source, "gi");
+const DIGITAL_ENTITY_TEST_RE = /^#((?:x[a-f0-9]{1,8}|[0-9]{1,8}))$/i;
+function replaceEntityPattern(match2, name) {
+  if (name.charCodeAt(0) === 35 && DIGITAL_ENTITY_TEST_RE.test(name)) {
+    const code2 = name[1].toLowerCase() === "x" ? parseInt(name.slice(2), 16) : parseInt(name.slice(1), 10);
+    if (isValidEntityCode(code2)) {
+      return fromCodePoint(code2);
+    }
+    return match2;
+  }
+  const decoded = decodeHTML(match2);
+  if (decoded !== match2) {
+    return decoded;
+  }
+  return match2;
+}
+function unescapeMd(str) {
+  if (str.indexOf("\\") < 0) {
+    return str;
+  }
+  return str.replace(UNESCAPE_MD_RE, "$1");
+}
+function unescapeAll(str) {
+  if (str.indexOf("\\") < 0 && str.indexOf("&") < 0) {
+    return str;
+  }
+  return str.replace(UNESCAPE_ALL_RE, function(match2, escaped, entity2) {
+    if (escaped) {
+      return escaped;
+    }
+    return replaceEntityPattern(match2, entity2);
+  });
+}
+const HTML_ESCAPE_TEST_RE = /[&<>"]/;
+const HTML_ESCAPE_REPLACE_RE = /[&<>"]/g;
+const HTML_REPLACEMENTS = {
+  "&": "&amp;",
+  "<": "&lt;",
+  ">": "&gt;",
+  '"': "&quot;"
+};
+function replaceUnsafeChar(ch) {
+  return HTML_REPLACEMENTS[ch];
+}
+function escapeHtml(str) {
+  if (HTML_ESCAPE_TEST_RE.test(str)) {
+    return str.replace(HTML_ESCAPE_REPLACE_RE, replaceUnsafeChar);
+  }
+  return str;
+}
+const REGEXP_ESCAPE_RE = /[.?*+^$[\]\\(){}|-]/g;
+function escapeRE$1(str) {
+  return str.replace(REGEXP_ESCAPE_RE, "\\$&");
+}
+function isSpace(code2) {
+  switch (code2) {
+    case 9:
+    case 32:
+      return true;
+  }
+  return false;
+}
+function isWhiteSpace(code2) {
+  if (code2 >= 8192 && code2 <= 8202) {
+    return true;
+  }
+  switch (code2) {
+    case 9:
+    // \t
+    case 10:
+    // \n
+    case 11:
+    // \v
+    case 12:
+    // \f
+    case 13:
+    // \r
+    case 32:
+    case 160:
+    case 5760:
+    case 8239:
+    case 8287:
+    case 12288:
+      return true;
+  }
+  return false;
+}
+function isPunctChar(ch) {
+  return P.test(ch) || regex.test(ch);
+}
+function isMdAsciiPunct(ch) {
+  switch (ch) {
+    case 33:
+    case 34:
+    case 35:
+    case 36:
+    case 37:
+    case 38:
+    case 39:
+    case 40:
+    case 41:
+    case 42:
+    case 43:
+    case 44:
+    case 45:
+    case 46:
+    case 47:
+    case 58:
+    case 59:
+    case 60:
+    case 61:
+    case 62:
+    case 63:
+    case 64:
+    case 91:
+    case 92:
+    case 93:
+    case 94:
+    case 95:
+    case 96:
+    case 123:
+    case 124:
+    case 125:
+    case 126:
+      return true;
+    default:
+      return false;
+  }
+}
+function normalizeReference(str) {
+  str = str.trim().replace(/\s+/g, " ");
+  if ("ẞ".toLowerCase() === "Ṿ") {
+    str = str.replace(/ẞ/g, "ß");
+  }
+  return str.toLowerCase().toUpperCase();
+}
+const lib = { mdurl, ucmicro };
+const utils = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  arrayReplaceAt,
+  assign: assign$1,
+  escapeHtml,
+  escapeRE: escapeRE$1,
+  fromCodePoint,
+  has,
+  isMdAsciiPunct,
+  isPunctChar,
+  isSpace,
+  isString: isString$1,
+  isValidEntityCode,
+  isWhiteSpace,
+  lib,
+  normalizeReference,
+  unescapeAll,
+  unescapeMd
+}, Symbol.toStringTag, { value: "Module" }));
+function parseLinkLabel(state, start, disableNested) {
+  let level, found, marker, prevPos;
+  const max = state.posMax;
+  const oldPos = state.pos;
+  state.pos = start + 1;
+  level = 1;
+  while (state.pos < max) {
+    marker = state.src.charCodeAt(state.pos);
+    if (marker === 93) {
+      level--;
+      if (level === 0) {
+        found = true;
+        break;
+      }
+    }
+    prevPos = state.pos;
+    state.md.inline.skipToken(state);
+    if (marker === 91) {
+      if (prevPos === state.pos - 1) {
+        level++;
+      } else if (disableNested) {
+        state.pos = oldPos;
+        return -1;
+      }
+    }
+  }
+  let labelEnd = -1;
+  if (found) {
+    labelEnd = state.pos;
+  }
+  state.pos = oldPos;
+  return labelEnd;
+}
+function parseLinkDestination(str, start, max) {
+  let code2;
+  let pos = start;
+  const result = {
+    ok: false,
+    pos: 0,
+    str: ""
+  };
+  if (str.charCodeAt(pos) === 60) {
+    pos++;
+    while (pos < max) {
+      code2 = str.charCodeAt(pos);
+      if (code2 === 10) {
+        return result;
+      }
+      if (code2 === 60) {
+        return result;
+      }
+      if (code2 === 62) {
+        result.pos = pos + 1;
+        result.str = unescapeAll(str.slice(start + 1, pos));
+        result.ok = true;
+        return result;
+      }
+      if (code2 === 92 && pos + 1 < max) {
+        pos += 2;
+        continue;
+      }
+      pos++;
+    }
+    return result;
+  }
+  let level = 0;
+  while (pos < max) {
+    code2 = str.charCodeAt(pos);
+    if (code2 === 32) {
+      break;
+    }
+    if (code2 < 32 || code2 === 127) {
+      break;
+    }
+    if (code2 === 92 && pos + 1 < max) {
+      if (str.charCodeAt(pos + 1) === 32) {
+        break;
+      }
+      pos += 2;
+      continue;
+    }
+    if (code2 === 40) {
+      level++;
+      if (level > 32) {
+        return result;
+      }
+    }
+    if (code2 === 41) {
+      if (level === 0) {
+        break;
+      }
+      level--;
+    }
+    pos++;
+  }
+  if (start === pos) {
+    return result;
+  }
+  if (level !== 0) {
+    return result;
+  }
+  result.str = unescapeAll(str.slice(start, pos));
+  result.pos = pos;
+  result.ok = true;
+  return result;
+}
+function parseLinkTitle(str, start, max, prev_state) {
+  let code2;
+  let pos = start;
+  const state = {
+    // if `true`, this is a valid link title
+    ok: false,
+    // if `true`, this link can be continued on the next line
+    can_continue: false,
+    // if `ok`, it's the position of the first character after the closing marker
+    pos: 0,
+    // if `ok`, it's the unescaped title
+    str: "",
+    // expected closing marker character code
+    marker: 0
+  };
+  if (prev_state) {
+    state.str = prev_state.str;
+    state.marker = prev_state.marker;
+  } else {
+    if (pos >= max) {
+      return state;
+    }
+    let marker = str.charCodeAt(pos);
+    if (marker !== 34 && marker !== 39 && marker !== 40) {
+      return state;
+    }
+    start++;
+    pos++;
+    if (marker === 40) {
+      marker = 41;
+    }
+    state.marker = marker;
+  }
+  while (pos < max) {
+    code2 = str.charCodeAt(pos);
+    if (code2 === state.marker) {
+      state.pos = pos + 1;
+      state.str += unescapeAll(str.slice(start, pos));
+      state.ok = true;
+      return state;
+    } else if (code2 === 40 && state.marker === 41) {
+      return state;
+    } else if (code2 === 92 && pos + 1 < max) {
+      pos++;
+    }
+    pos++;
+  }
+  state.can_continue = true;
+  state.str += unescapeAll(str.slice(start, pos));
+  return state;
+}
+const helpers = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  parseLinkDestination,
+  parseLinkLabel,
+  parseLinkTitle
+}, Symbol.toStringTag, { value: "Module" }));
+const default_rules = {};
+default_rules.code_inline = function(tokens, idx, options, env, slf) {
+  const token = tokens[idx];
+  return "<code" + slf.renderAttrs(token) + ">" + escapeHtml(token.content) + "</code>";
+};
+default_rules.code_block = function(tokens, idx, options, env, slf) {
+  const token = tokens[idx];
+  return "<pre" + slf.renderAttrs(token) + "><code>" + escapeHtml(tokens[idx].content) + "</code></pre>\n";
+};
+default_rules.fence = function(tokens, idx, options, env, slf) {
+  const token = tokens[idx];
+  const info = token.info ? unescapeAll(token.info).trim() : "";
+  let langName = "";
+  let langAttrs = "";
+  if (info) {
+    const arr = info.split(/(\s+)/g);
+    langName = arr[0];
+    langAttrs = arr.slice(2).join("");
+  }
+  let highlighted;
+  if (options.highlight) {
+    highlighted = options.highlight(token.content, langName, langAttrs) || escapeHtml(token.content);
+  } else {
+    highlighted = escapeHtml(token.content);
+  }
+  if (highlighted.indexOf("<pre") === 0) {
+    return highlighted + "\n";
+  }
+  if (info) {
+    const i2 = token.attrIndex("class");
+    const tmpAttrs = token.attrs ? token.attrs.slice() : [];
+    if (i2 < 0) {
+      tmpAttrs.push(["class", options.langPrefix + langName]);
+    } else {
+      tmpAttrs[i2] = tmpAttrs[i2].slice();
+      tmpAttrs[i2][1] += " " + options.langPrefix + langName;
+    }
+    const tmpToken = {
+      attrs: tmpAttrs
+    };
+    return `<pre><code${slf.renderAttrs(tmpToken)}>${highlighted}</code></pre>
+`;
+  }
+  return `<pre><code${slf.renderAttrs(token)}>${highlighted}</code></pre>
+`;
+};
+default_rules.image = function(tokens, idx, options, env, slf) {
+  const token = tokens[idx];
+  token.attrs[token.attrIndex("alt")][1] = slf.renderInlineAsText(token.children, options, env);
+  return slf.renderToken(tokens, idx, options);
+};
+default_rules.hardbreak = function(tokens, idx, options) {
+  return options.xhtmlOut ? "<br />\n" : "<br>\n";
+};
+default_rules.softbreak = function(tokens, idx, options) {
+  return options.breaks ? options.xhtmlOut ? "<br />\n" : "<br>\n" : "\n";
+};
+default_rules.text = function(tokens, idx) {
+  return escapeHtml(tokens[idx].content);
+};
+default_rules.html_block = function(tokens, idx) {
+  return tokens[idx].content;
+};
+default_rules.html_inline = function(tokens, idx) {
+  return tokens[idx].content;
+};
+function Renderer() {
+  this.rules = assign$1({}, default_rules);
+}
+Renderer.prototype.renderAttrs = function renderAttrs(token) {
+  let i2, l2, result;
+  if (!token.attrs) {
+    return "";
+  }
+  result = "";
+  for (i2 = 0, l2 = token.attrs.length; i2 < l2; i2++) {
+    result += " " + escapeHtml(token.attrs[i2][0]) + '="' + escapeHtml(token.attrs[i2][1]) + '"';
+  }
+  return result;
+};
+Renderer.prototype.renderToken = function renderToken(tokens, idx, options) {
+  const token = tokens[idx];
+  let result = "";
+  if (token.hidden) {
+    return "";
+  }
+  if (token.block && token.nesting !== -1 && idx && tokens[idx - 1].hidden) {
+    result += "\n";
+  }
+  result += (token.nesting === -1 ? "</" : "<") + token.tag;
+  result += this.renderAttrs(token);
+  if (token.nesting === 0 && options.xhtmlOut) {
+    result += " /";
+  }
+  let needLf = false;
+  if (token.block) {
+    needLf = true;
+    if (token.nesting === 1) {
+      if (idx + 1 < tokens.length) {
+        const nextToken = tokens[idx + 1];
+        if (nextToken.type === "inline" || nextToken.hidden) {
+          needLf = false;
+        } else if (nextToken.nesting === -1 && nextToken.tag === token.tag) {
+          needLf = false;
+        }
+      }
+    }
+  }
+  result += needLf ? ">\n" : ">";
+  return result;
+};
+Renderer.prototype.renderInline = function(tokens, options, env) {
+  let result = "";
+  const rules = this.rules;
+  for (let i2 = 0, len = tokens.length; i2 < len; i2++) {
+    const type = tokens[i2].type;
+    if (typeof rules[type] !== "undefined") {
+      result += rules[type](tokens, i2, options, env, this);
+    } else {
+      result += this.renderToken(tokens, i2, options);
+    }
+  }
+  return result;
+};
+Renderer.prototype.renderInlineAsText = function(tokens, options, env) {
+  let result = "";
+  for (let i2 = 0, len = tokens.length; i2 < len; i2++) {
+    switch (tokens[i2].type) {
+      case "text":
+        result += tokens[i2].content;
+        break;
+      case "image":
+        result += this.renderInlineAsText(tokens[i2].children, options, env);
+        break;
+      case "html_inline":
+      case "html_block":
+        result += tokens[i2].content;
+        break;
+      case "softbreak":
+      case "hardbreak":
+        result += "\n";
+        break;
+    }
+  }
+  return result;
+};
+Renderer.prototype.render = function(tokens, options, env) {
+  let result = "";
+  const rules = this.rules;
+  for (let i2 = 0, len = tokens.length; i2 < len; i2++) {
+    const type = tokens[i2].type;
+    if (type === "inline") {
+      result += this.renderInline(tokens[i2].children, options, env);
+    } else if (typeof rules[type] !== "undefined") {
+      result += rules[type](tokens, i2, options, env, this);
+    } else {
+      result += this.renderToken(tokens, i2, options, env);
+    }
+  }
+  return result;
+};
+function Ruler() {
+  this.__rules__ = [];
+  this.__cache__ = null;
+}
+Ruler.prototype.__find__ = function(name) {
+  for (let i2 = 0; i2 < this.__rules__.length; i2++) {
+    if (this.__rules__[i2].name === name) {
+      return i2;
+    }
+  }
+  return -1;
+};
+Ruler.prototype.__compile__ = function() {
+  const self2 = this;
+  const chains = [""];
+  self2.__rules__.forEach(function(rule) {
+    if (!rule.enabled) {
+      return;
+    }
+    rule.alt.forEach(function(altName) {
+      if (chains.indexOf(altName) < 0) {
+        chains.push(altName);
+      }
+    });
+  });
+  self2.__cache__ = {};
+  chains.forEach(function(chain) {
+    self2.__cache__[chain] = [];
+    self2.__rules__.forEach(function(rule) {
+      if (!rule.enabled) {
+        return;
+      }
+      if (chain && rule.alt.indexOf(chain) < 0) {
+        return;
+      }
+      self2.__cache__[chain].push(rule.fn);
+    });
+  });
+};
+Ruler.prototype.at = function(name, fn, options) {
+  const index = this.__find__(name);
+  const opt = options || {};
+  if (index === -1) {
+    throw new Error("Parser rule not found: " + name);
+  }
+  this.__rules__[index].fn = fn;
+  this.__rules__[index].alt = opt.alt || [];
+  this.__cache__ = null;
+};
+Ruler.prototype.before = function(beforeName, ruleName, fn, options) {
+  const index = this.__find__(beforeName);
+  const opt = options || {};
+  if (index === -1) {
+    throw new Error("Parser rule not found: " + beforeName);
+  }
+  this.__rules__.splice(index, 0, {
+    name: ruleName,
+    enabled: true,
+    fn,
+    alt: opt.alt || []
+  });
+  this.__cache__ = null;
+};
+Ruler.prototype.after = function(afterName, ruleName, fn, options) {
+  const index = this.__find__(afterName);
+  const opt = options || {};
+  if (index === -1) {
+    throw new Error("Parser rule not found: " + afterName);
+  }
+  this.__rules__.splice(index + 1, 0, {
+    name: ruleName,
+    enabled: true,
+    fn,
+    alt: opt.alt || []
+  });
+  this.__cache__ = null;
+};
+Ruler.prototype.push = function(ruleName, fn, options) {
+  const opt = options || {};
+  this.__rules__.push({
+    name: ruleName,
+    enabled: true,
+    fn,
+    alt: opt.alt || []
+  });
+  this.__cache__ = null;
+};
+Ruler.prototype.enable = function(list2, ignoreInvalid) {
+  if (!Array.isArray(list2)) {
+    list2 = [list2];
+  }
+  const result = [];
+  list2.forEach(function(name) {
+    const idx = this.__find__(name);
+    if (idx < 0) {
+      if (ignoreInvalid) {
+        return;
+      }
+      throw new Error("Rules manager: invalid rule name " + name);
+    }
+    this.__rules__[idx].enabled = true;
+    result.push(name);
+  }, this);
+  this.__cache__ = null;
+  return result;
+};
+Ruler.prototype.enableOnly = function(list2, ignoreInvalid) {
+  if (!Array.isArray(list2)) {
+    list2 = [list2];
+  }
+  this.__rules__.forEach(function(rule) {
+    rule.enabled = false;
+  });
+  this.enable(list2, ignoreInvalid);
+};
+Ruler.prototype.disable = function(list2, ignoreInvalid) {
+  if (!Array.isArray(list2)) {
+    list2 = [list2];
+  }
+  const result = [];
+  list2.forEach(function(name) {
+    const idx = this.__find__(name);
+    if (idx < 0) {
+      if (ignoreInvalid) {
+        return;
+      }
+      throw new Error("Rules manager: invalid rule name " + name);
+    }
+    this.__rules__[idx].enabled = false;
+    result.push(name);
+  }, this);
+  this.__cache__ = null;
+  return result;
+};
+Ruler.prototype.getRules = function(chainName) {
+  if (this.__cache__ === null) {
+    this.__compile__();
+  }
+  return this.__cache__[chainName] || [];
+};
+function Token(type, tag, nesting) {
+  this.type = type;
+  this.tag = tag;
+  this.attrs = null;
+  this.map = null;
+  this.nesting = nesting;
+  this.level = 0;
+  this.children = null;
+  this.content = "";
+  this.markup = "";
+  this.info = "";
+  this.meta = null;
+  this.block = false;
+  this.hidden = false;
+}
+Token.prototype.attrIndex = function attrIndex(name) {
+  if (!this.attrs) {
+    return -1;
+  }
+  const attrs3 = this.attrs;
+  for (let i2 = 0, len = attrs3.length; i2 < len; i2++) {
+    if (attrs3[i2][0] === name) {
+      return i2;
+    }
+  }
+  return -1;
+};
+Token.prototype.attrPush = function attrPush(attrData) {
+  if (this.attrs) {
+    this.attrs.push(attrData);
+  } else {
+    this.attrs = [attrData];
+  }
+};
+Token.prototype.attrSet = function attrSet(name, value) {
+  const idx = this.attrIndex(name);
+  const attrData = [name, value];
+  if (idx < 0) {
+    this.attrPush(attrData);
+  } else {
+    this.attrs[idx] = attrData;
+  }
+};
+Token.prototype.attrGet = function attrGet(name) {
+  const idx = this.attrIndex(name);
+  let value = null;
+  if (idx >= 0) {
+    value = this.attrs[idx][1];
+  }
+  return value;
+};
+Token.prototype.attrJoin = function attrJoin(name, value) {
+  const idx = this.attrIndex(name);
+  if (idx < 0) {
+    this.attrPush([name, value]);
+  } else {
+    this.attrs[idx][1] = this.attrs[idx][1] + " " + value;
+  }
+};
+function StateCore(src, md, env) {
+  this.src = src;
+  this.env = env;
+  this.tokens = [];
+  this.inlineMode = false;
+  this.md = md;
+}
+StateCore.prototype.Token = Token;
+const NEWLINES_RE = /\r\n?|\n/g;
+const NULL_RE = /\0/g;
+function normalize(state) {
+  let str;
+  str = state.src.replace(NEWLINES_RE, "\n");
+  str = str.replace(NULL_RE, "�");
+  state.src = str;
+}
+function block(state) {
+  let token;
+  if (state.inlineMode) {
+    token = new state.Token("inline", "", 0);
+    token.content = state.src;
+    token.map = [0, 1];
+    token.children = [];
+    state.tokens.push(token);
+  } else {
+    state.md.block.parse(state.src, state.md, state.env, state.tokens);
+  }
+}
+function inline2(state) {
+  const tokens = state.tokens;
+  for (let i2 = 0, l2 = tokens.length; i2 < l2; i2++) {
+    const tok = tokens[i2];
+    if (tok.type === "inline") {
+      state.md.inline.parse(tok.content, state.md, state.env, tok.children);
+    }
+  }
+}
+function isLinkOpen$1(str) {
+  return /^<a[>\s]/i.test(str);
+}
+function isLinkClose$1(str) {
+  return /^<\/a\s*>/i.test(str);
+}
+function linkify$1(state) {
+  const blockTokens = state.tokens;
+  if (!state.md.options.linkify) {
+    return;
+  }
+  for (let j = 0, l2 = blockTokens.length; j < l2; j++) {
+    if (blockTokens[j].type !== "inline" || !state.md.linkify.pretest(blockTokens[j].content)) {
+      continue;
+    }
+    let tokens = blockTokens[j].children;
+    let htmlLinkLevel = 0;
+    for (let i2 = tokens.length - 1; i2 >= 0; i2--) {
+      const currentToken = tokens[i2];
+      if (currentToken.type === "link_close") {
+        i2--;
+        while (tokens[i2].level !== currentToken.level && tokens[i2].type !== "link_open") {
+          i2--;
+        }
+        continue;
+      }
+      if (currentToken.type === "html_inline") {
+        if (isLinkOpen$1(currentToken.content) && htmlLinkLevel > 0) {
+          htmlLinkLevel--;
+        }
+        if (isLinkClose$1(currentToken.content)) {
+          htmlLinkLevel++;
+        }
+      }
+      if (htmlLinkLevel > 0) {
+        continue;
+      }
+      if (currentToken.type === "text" && state.md.linkify.test(currentToken.content)) {
+        const text2 = currentToken.content;
+        let links = state.md.linkify.match(text2);
+        const nodes = [];
+        let level = currentToken.level;
+        let lastPos = 0;
+        if (links.length > 0 && links[0].index === 0 && i2 > 0 && tokens[i2 - 1].type === "text_special") {
+          links = links.slice(1);
+        }
+        for (let ln = 0; ln < links.length; ln++) {
+          const url = links[ln].url;
+          const fullUrl = state.md.normalizeLink(url);
+          if (!state.md.validateLink(fullUrl)) {
+            continue;
+          }
+          let urlText = links[ln].text;
+          if (!links[ln].schema) {
+            urlText = state.md.normalizeLinkText("http://" + urlText).replace(/^http:\/\//, "");
+          } else if (links[ln].schema === "mailto:" && !/^mailto:/i.test(urlText)) {
+            urlText = state.md.normalizeLinkText("mailto:" + urlText).replace(/^mailto:/, "");
+          } else {
+            urlText = state.md.normalizeLinkText(urlText);
+          }
+          const pos = links[ln].index;
+          if (pos > lastPos) {
+            const token = new state.Token("text", "", 0);
+            token.content = text2.slice(lastPos, pos);
+            token.level = level;
+            nodes.push(token);
+          }
+          const token_o = new state.Token("link_open", "a", 1);
+          token_o.attrs = [["href", fullUrl]];
+          token_o.level = level++;
+          token_o.markup = "linkify";
+          token_o.info = "auto";
+          nodes.push(token_o);
+          const token_t = new state.Token("text", "", 0);
+          token_t.content = urlText;
+          token_t.level = level;
+          nodes.push(token_t);
+          const token_c = new state.Token("link_close", "a", -1);
+          token_c.level = --level;
+          token_c.markup = "linkify";
+          token_c.info = "auto";
+          nodes.push(token_c);
+          lastPos = links[ln].lastIndex;
+        }
+        if (lastPos < text2.length) {
+          const token = new state.Token("text", "", 0);
+          token.content = text2.slice(lastPos);
+          token.level = level;
+          nodes.push(token);
+        }
+        blockTokens[j].children = tokens = arrayReplaceAt(tokens, i2, nodes);
+      }
+    }
+  }
+}
+const RARE_RE = /\+-|\.\.|\?\?\?\?|!!!!|,,|--/;
+const SCOPED_ABBR_TEST_RE = /\((c|tm|r)\)/i;
+const SCOPED_ABBR_RE = /\((c|tm|r)\)/ig;
+const SCOPED_ABBR = {
+  c: "©",
+  r: "®",
+  tm: "™"
+};
+function replaceFn(match2, name) {
+  return SCOPED_ABBR[name.toLowerCase()];
+}
+function replace_scoped(inlineTokens) {
+  let inside_autolink = 0;
+  for (let i2 = inlineTokens.length - 1; i2 >= 0; i2--) {
+    const token = inlineTokens[i2];
+    if (token.type === "text" && !inside_autolink) {
+      token.content = token.content.replace(SCOPED_ABBR_RE, replaceFn);
+    }
+    if (token.type === "link_open" && token.info === "auto") {
+      inside_autolink--;
+    }
+    if (token.type === "link_close" && token.info === "auto") {
+      inside_autolink++;
+    }
+  }
+}
+function replace_rare(inlineTokens) {
+  let inside_autolink = 0;
+  for (let i2 = inlineTokens.length - 1; i2 >= 0; i2--) {
+    const token = inlineTokens[i2];
+    if (token.type === "text" && !inside_autolink) {
+      if (RARE_RE.test(token.content)) {
+        token.content = token.content.replace(/\+-/g, "±").replace(/\.{2,}/g, "…").replace(/([?!])…/g, "$1..").replace(/([?!]){4,}/g, "$1$1$1").replace(/,{2,}/g, ",").replace(/(^|[^-])---(?=[^-]|$)/mg, "$1—").replace(/(^|\s)--(?=\s|$)/mg, "$1–").replace(/(^|[^-\s])--(?=[^-\s]|$)/mg, "$1–");
+      }
+    }
+    if (token.type === "link_open" && token.info === "auto") {
+      inside_autolink--;
+    }
+    if (token.type === "link_close" && token.info === "auto") {
+      inside_autolink++;
+    }
+  }
+}
+function replace(state) {
+  let blkIdx;
+  if (!state.md.options.typographer) {
+    return;
+  }
+  for (blkIdx = state.tokens.length - 1; blkIdx >= 0; blkIdx--) {
+    if (state.tokens[blkIdx].type !== "inline") {
+      continue;
+    }
+    if (SCOPED_ABBR_TEST_RE.test(state.tokens[blkIdx].content)) {
+      replace_scoped(state.tokens[blkIdx].children);
+    }
+    if (RARE_RE.test(state.tokens[blkIdx].content)) {
+      replace_rare(state.tokens[blkIdx].children);
+    }
+  }
+}
+const QUOTE_TEST_RE = /['"]/;
+const QUOTE_RE = /['"]/g;
+const APOSTROPHE = "’";
+function replaceAt(str, index, ch) {
+  return str.slice(0, index) + ch + str.slice(index + 1);
+}
+function process_inlines(tokens, state) {
+  let j;
+  const stack2 = [];
+  for (let i2 = 0; i2 < tokens.length; i2++) {
+    const token = tokens[i2];
+    const thisLevel = tokens[i2].level;
+    for (j = stack2.length - 1; j >= 0; j--) {
+      if (stack2[j].level <= thisLevel) {
+        break;
+      }
+    }
+    stack2.length = j + 1;
+    if (token.type !== "text") {
+      continue;
+    }
+    let text2 = token.content;
+    let pos = 0;
+    let max = text2.length;
+    OUTER:
+      while (pos < max) {
+        QUOTE_RE.lastIndex = pos;
+        const t2 = QUOTE_RE.exec(text2);
+        if (!t2) {
+          break;
+        }
+        let canOpen = true;
+        let canClose = true;
+        pos = t2.index + 1;
+        const isSingle = t2[0] === "'";
+        let lastChar = 32;
+        if (t2.index - 1 >= 0) {
+          lastChar = text2.charCodeAt(t2.index - 1);
+        } else {
+          for (j = i2 - 1; j >= 0; j--) {
+            if (tokens[j].type === "softbreak" || tokens[j].type === "hardbreak") break;
+            if (!tokens[j].content) continue;
+            lastChar = tokens[j].content.charCodeAt(tokens[j].content.length - 1);
+            break;
+          }
+        }
+        let nextChar = 32;
+        if (pos < max) {
+          nextChar = text2.charCodeAt(pos);
+        } else {
+          for (j = i2 + 1; j < tokens.length; j++) {
+            if (tokens[j].type === "softbreak" || tokens[j].type === "hardbreak") break;
+            if (!tokens[j].content) continue;
+            nextChar = tokens[j].content.charCodeAt(0);
+            break;
+          }
+        }
+        const isLastPunctChar = isMdAsciiPunct(lastChar) || isPunctChar(String.fromCharCode(lastChar));
+        const isNextPunctChar = isMdAsciiPunct(nextChar) || isPunctChar(String.fromCharCode(nextChar));
+        const isLastWhiteSpace = isWhiteSpace(lastChar);
+        const isNextWhiteSpace = isWhiteSpace(nextChar);
+        if (isNextWhiteSpace) {
+          canOpen = false;
+        } else if (isNextPunctChar) {
+          if (!(isLastWhiteSpace || isLastPunctChar)) {
+            canOpen = false;
+          }
+        }
+        if (isLastWhiteSpace) {
+          canClose = false;
+        } else if (isLastPunctChar) {
+          if (!(isNextWhiteSpace || isNextPunctChar)) {
+            canClose = false;
+          }
+        }
+        if (nextChar === 34 && t2[0] === '"') {
+          if (lastChar >= 48 && lastChar <= 57) {
+            canClose = canOpen = false;
+          }
+        }
+        if (canOpen && canClose) {
+          canOpen = isLastPunctChar;
+          canClose = isNextPunctChar;
+        }
+        if (!canOpen && !canClose) {
+          if (isSingle) {
+            token.content = replaceAt(token.content, t2.index, APOSTROPHE);
+          }
+          continue;
+        }
+        if (canClose) {
+          for (j = stack2.length - 1; j >= 0; j--) {
+            let item = stack2[j];
+            if (stack2[j].level < thisLevel) {
+              break;
+            }
+            if (item.single === isSingle && stack2[j].level === thisLevel) {
+              item = stack2[j];
+              let openQuote;
+              let closeQuote;
+              if (isSingle) {
+                openQuote = state.md.options.quotes[2];
+                closeQuote = state.md.options.quotes[3];
+              } else {
+                openQuote = state.md.options.quotes[0];
+                closeQuote = state.md.options.quotes[1];
+              }
+              token.content = replaceAt(token.content, t2.index, closeQuote);
+              tokens[item.token].content = replaceAt(
+                tokens[item.token].content,
+                item.pos,
+                openQuote
+              );
+              pos += closeQuote.length - 1;
+              if (item.token === i2) {
+                pos += openQuote.length - 1;
+              }
+              text2 = token.content;
+              max = text2.length;
+              stack2.length = j;
+              continue OUTER;
+            }
+          }
+        }
+        if (canOpen) {
+          stack2.push({
+            token: i2,
+            pos: t2.index,
+            single: isSingle,
+            level: thisLevel
+          });
+        } else if (canClose && isSingle) {
+          token.content = replaceAt(token.content, t2.index, APOSTROPHE);
+        }
+      }
+  }
+}
+function smartquotes(state) {
+  if (!state.md.options.typographer) {
+    return;
+  }
+  for (let blkIdx = state.tokens.length - 1; blkIdx >= 0; blkIdx--) {
+    if (state.tokens[blkIdx].type !== "inline" || !QUOTE_TEST_RE.test(state.tokens[blkIdx].content)) {
+      continue;
+    }
+    process_inlines(state.tokens[blkIdx].children, state);
+  }
+}
+function text_join(state) {
+  let curr, last;
+  const blockTokens = state.tokens;
+  const l2 = blockTokens.length;
+  for (let j = 0; j < l2; j++) {
+    if (blockTokens[j].type !== "inline") continue;
+    const tokens = blockTokens[j].children;
+    const max = tokens.length;
+    for (curr = 0; curr < max; curr++) {
+      if (tokens[curr].type === "text_special") {
+        tokens[curr].type = "text";
+      }
+    }
+    for (curr = last = 0; curr < max; curr++) {
+      if (tokens[curr].type === "text" && curr + 1 < max && tokens[curr + 1].type === "text") {
+        tokens[curr + 1].content = tokens[curr].content + tokens[curr + 1].content;
+      } else {
+        if (curr !== last) {
+          tokens[last] = tokens[curr];
+        }
+        last++;
+      }
+    }
+    if (curr !== last) {
+      tokens.length = last;
+    }
+  }
+}
+const _rules$2 = [
+  ["normalize", normalize],
+  ["block", block],
+  ["inline", inline2],
+  ["linkify", linkify$1],
+  ["replacements", replace],
+  ["smartquotes", smartquotes],
+  // `text_join` finds `text_special` tokens (for escape sequences)
+  // and joins them with the rest of the text
+  ["text_join", text_join]
+];
+function Core() {
+  this.ruler = new Ruler();
+  for (let i2 = 0; i2 < _rules$2.length; i2++) {
+    this.ruler.push(_rules$2[i2][0], _rules$2[i2][1]);
+  }
+}
+Core.prototype.process = function(state) {
+  const rules = this.ruler.getRules("");
+  for (let i2 = 0, l2 = rules.length; i2 < l2; i2++) {
+    rules[i2](state);
+  }
+};
+Core.prototype.State = StateCore;
+function StateBlock(src, md, env, tokens) {
+  this.src = src;
+  this.md = md;
+  this.env = env;
+  this.tokens = tokens;
+  this.bMarks = [];
+  this.eMarks = [];
+  this.tShift = [];
+  this.sCount = [];
+  this.bsCount = [];
+  this.blkIndent = 0;
+  this.line = 0;
+  this.lineMax = 0;
+  this.tight = false;
+  this.ddIndent = -1;
+  this.listIndent = -1;
+  this.parentType = "root";
+  this.level = 0;
+  const s2 = this.src;
+  for (let start = 0, pos = 0, indent = 0, offset = 0, len = s2.length, indent_found = false; pos < len; pos++) {
+    const ch = s2.charCodeAt(pos);
+    if (!indent_found) {
+      if (isSpace(ch)) {
+        indent++;
+        if (ch === 9) {
+          offset += 4 - offset % 4;
+        } else {
+          offset++;
+        }
+        continue;
+      } else {
+        indent_found = true;
+      }
+    }
+    if (ch === 10 || pos === len - 1) {
+      if (ch !== 10) {
+        pos++;
+      }
+      this.bMarks.push(start);
+      this.eMarks.push(pos);
+      this.tShift.push(indent);
+      this.sCount.push(offset);
+      this.bsCount.push(0);
+      indent_found = false;
+      indent = 0;
+      offset = 0;
+      start = pos + 1;
+    }
+  }
+  this.bMarks.push(s2.length);
+  this.eMarks.push(s2.length);
+  this.tShift.push(0);
+  this.sCount.push(0);
+  this.bsCount.push(0);
+  this.lineMax = this.bMarks.length - 1;
+}
+StateBlock.prototype.push = function(type, tag, nesting) {
+  const token = new Token(type, tag, nesting);
+  token.block = true;
+  if (nesting < 0) this.level--;
+  token.level = this.level;
+  if (nesting > 0) this.level++;
+  this.tokens.push(token);
+  return token;
+};
+StateBlock.prototype.isEmpty = function isEmpty2(line) {
+  return this.bMarks[line] + this.tShift[line] >= this.eMarks[line];
+};
+StateBlock.prototype.skipEmptyLines = function skipEmptyLines(from) {
+  for (let max = this.lineMax; from < max; from++) {
+    if (this.bMarks[from] + this.tShift[from] < this.eMarks[from]) {
+      break;
+    }
+  }
+  return from;
+};
+StateBlock.prototype.skipSpaces = function skipSpaces(pos) {
+  for (let max = this.src.length; pos < max; pos++) {
+    const ch = this.src.charCodeAt(pos);
+    if (!isSpace(ch)) {
+      break;
+    }
+  }
+  return pos;
+};
+StateBlock.prototype.skipSpacesBack = function skipSpacesBack(pos, min) {
+  if (pos <= min) {
+    return pos;
+  }
+  while (pos > min) {
+    if (!isSpace(this.src.charCodeAt(--pos))) {
+      return pos + 1;
+    }
+  }
+  return pos;
+};
+StateBlock.prototype.skipChars = function skipChars(pos, code2) {
+  for (let max = this.src.length; pos < max; pos++) {
+    if (this.src.charCodeAt(pos) !== code2) {
+      break;
+    }
+  }
+  return pos;
+};
+StateBlock.prototype.skipCharsBack = function skipCharsBack(pos, code2, min) {
+  if (pos <= min) {
+    return pos;
+  }
+  while (pos > min) {
+    if (code2 !== this.src.charCodeAt(--pos)) {
+      return pos + 1;
+    }
+  }
+  return pos;
+};
+StateBlock.prototype.getLines = function getLines(begin, end, indent, keepLastLF) {
+  if (begin >= end) {
+    return "";
+  }
+  const queue2 = new Array(end - begin);
+  for (let i2 = 0, line = begin; line < end; line++, i2++) {
+    let lineIndent = 0;
+    const lineStart = this.bMarks[line];
+    let first = lineStart;
+    let last;
+    if (line + 1 < end || keepLastLF) {
+      last = this.eMarks[line] + 1;
+    } else {
+      last = this.eMarks[line];
+    }
+    while (first < last && lineIndent < indent) {
+      const ch = this.src.charCodeAt(first);
+      if (isSpace(ch)) {
+        if (ch === 9) {
+          lineIndent += 4 - (lineIndent + this.bsCount[line]) % 4;
+        } else {
+          lineIndent++;
+        }
+      } else if (first - lineStart < this.tShift[line]) {
+        lineIndent++;
+      } else {
+        break;
+      }
+      first++;
+    }
+    if (lineIndent > indent) {
+      queue2[i2] = new Array(lineIndent - indent + 1).join(" ") + this.src.slice(first, last);
+    } else {
+      queue2[i2] = this.src.slice(first, last);
+    }
+  }
+  return queue2.join("");
+};
+StateBlock.prototype.Token = Token;
+const MAX_AUTOCOMPLETED_CELLS = 65536;
+function getLine(state, line) {
+  const pos = state.bMarks[line] + state.tShift[line];
+  const max = state.eMarks[line];
+  return state.src.slice(pos, max);
+}
+function escapedSplit(str) {
+  const result = [];
+  const max = str.length;
+  let pos = 0;
+  let ch = str.charCodeAt(pos);
+  let isEscaped = false;
+  let lastPos = 0;
+  let current = "";
+  while (pos < max) {
+    if (ch === 124) {
+      if (!isEscaped) {
+        result.push(current + str.substring(lastPos, pos));
+        current = "";
+        lastPos = pos + 1;
+      } else {
+        current += str.substring(lastPos, pos - 1);
+        lastPos = pos;
+      }
+    }
+    isEscaped = ch === 92;
+    pos++;
+    ch = str.charCodeAt(pos);
+  }
+  result.push(current + str.substring(lastPos));
+  return result;
+}
+function table(state, startLine, endLine, silent) {
+  if (startLine + 2 > endLine) {
+    return false;
+  }
+  let nextLine = startLine + 1;
+  if (state.sCount[nextLine] < state.blkIndent) {
+    return false;
+  }
+  if (state.sCount[nextLine] - state.blkIndent >= 4) {
+    return false;
+  }
+  let pos = state.bMarks[nextLine] + state.tShift[nextLine];
+  if (pos >= state.eMarks[nextLine]) {
+    return false;
+  }
+  const firstCh = state.src.charCodeAt(pos++);
+  if (firstCh !== 124 && firstCh !== 45 && firstCh !== 58) {
+    return false;
+  }
+  if (pos >= state.eMarks[nextLine]) {
+    return false;
+  }
+  const secondCh = state.src.charCodeAt(pos++);
+  if (secondCh !== 124 && secondCh !== 45 && secondCh !== 58 && !isSpace(secondCh)) {
+    return false;
+  }
+  if (firstCh === 45 && isSpace(secondCh)) {
+    return false;
+  }
+  while (pos < state.eMarks[nextLine]) {
+    const ch = state.src.charCodeAt(pos);
+    if (ch !== 124 && ch !== 45 && ch !== 58 && !isSpace(ch)) {
+      return false;
+    }
+    pos++;
+  }
+  let lineText = getLine(state, startLine + 1);
+  let columns = lineText.split("|");
+  const aligns = [];
+  for (let i2 = 0; i2 < columns.length; i2++) {
+    const t2 = columns[i2].trim();
+    if (!t2) {
+      if (i2 === 0 || i2 === columns.length - 1) {
+        continue;
+      } else {
+        return false;
+      }
+    }
+    if (!/^:?-+:?$/.test(t2)) {
+      return false;
+    }
+    if (t2.charCodeAt(t2.length - 1) === 58) {
+      aligns.push(t2.charCodeAt(0) === 58 ? "center" : "right");
+    } else if (t2.charCodeAt(0) === 58) {
+      aligns.push("left");
+    } else {
+      aligns.push("");
+    }
+  }
+  lineText = getLine(state, startLine).trim();
+  if (lineText.indexOf("|") === -1) {
+    return false;
+  }
+  if (state.sCount[startLine] - state.blkIndent >= 4) {
+    return false;
+  }
+  columns = escapedSplit(lineText);
+  if (columns.length && columns[0] === "") columns.shift();
+  if (columns.length && columns[columns.length - 1] === "") columns.pop();
+  const columnCount = columns.length;
+  if (columnCount === 0 || columnCount !== aligns.length) {
+    return false;
+  }
+  if (silent) {
+    return true;
+  }
+  const oldParentType = state.parentType;
+  state.parentType = "table";
+  const terminatorRules = state.md.block.ruler.getRules("blockquote");
+  const token_to = state.push("table_open", "table", 1);
+  const tableLines = [startLine, 0];
+  token_to.map = tableLines;
+  const token_tho = state.push("thead_open", "thead", 1);
+  token_tho.map = [startLine, startLine + 1];
+  const token_htro = state.push("tr_open", "tr", 1);
+  token_htro.map = [startLine, startLine + 1];
+  for (let i2 = 0; i2 < columns.length; i2++) {
+    const token_ho = state.push("th_open", "th", 1);
+    if (aligns[i2]) {
+      token_ho.attrs = [["style", "text-align:" + aligns[i2]]];
+    }
+    const token_il = state.push("inline", "", 0);
+    token_il.content = columns[i2].trim();
+    token_il.children = [];
+    state.push("th_close", "th", -1);
+  }
+  state.push("tr_close", "tr", -1);
+  state.push("thead_close", "thead", -1);
+  let tbodyLines;
+  let autocompletedCells = 0;
+  for (nextLine = startLine + 2; nextLine < endLine; nextLine++) {
+    if (state.sCount[nextLine] < state.blkIndent) {
+      break;
+    }
+    let terminate = false;
+    for (let i2 = 0, l2 = terminatorRules.length; i2 < l2; i2++) {
+      if (terminatorRules[i2](state, nextLine, endLine, true)) {
+        terminate = true;
+        break;
+      }
+    }
+    if (terminate) {
+      break;
+    }
+    lineText = getLine(state, nextLine).trim();
+    if (!lineText) {
+      break;
+    }
+    if (state.sCount[nextLine] - state.blkIndent >= 4) {
+      break;
+    }
+    columns = escapedSplit(lineText);
+    if (columns.length && columns[0] === "") columns.shift();
+    if (columns.length && columns[columns.length - 1] === "") columns.pop();
+    autocompletedCells += columnCount - columns.length;
+    if (autocompletedCells > MAX_AUTOCOMPLETED_CELLS) {
+      break;
+    }
+    if (nextLine === startLine + 2) {
+      const token_tbo = state.push("tbody_open", "tbody", 1);
+      token_tbo.map = tbodyLines = [startLine + 2, 0];
+    }
+    const token_tro = state.push("tr_open", "tr", 1);
+    token_tro.map = [nextLine, nextLine + 1];
+    for (let i2 = 0; i2 < columnCount; i2++) {
+      const token_tdo = state.push("td_open", "td", 1);
+      if (aligns[i2]) {
+        token_tdo.attrs = [["style", "text-align:" + aligns[i2]]];
+      }
+      const token_il = state.push("inline", "", 0);
+      token_il.content = columns[i2] ? columns[i2].trim() : "";
+      token_il.children = [];
+      state.push("td_close", "td", -1);
+    }
+    state.push("tr_close", "tr", -1);
+  }
+  if (tbodyLines) {
+    state.push("tbody_close", "tbody", -1);
+    tbodyLines[1] = nextLine;
+  }
+  state.push("table_close", "table", -1);
+  tableLines[1] = nextLine;
+  state.parentType = oldParentType;
+  state.line = nextLine;
+  return true;
+}
+function code(state, startLine, endLine) {
+  if (state.sCount[startLine] - state.blkIndent < 4) {
+    return false;
+  }
+  let nextLine = startLine + 1;
+  let last = nextLine;
+  while (nextLine < endLine) {
+    if (state.isEmpty(nextLine)) {
+      nextLine++;
+      continue;
+    }
+    if (state.sCount[nextLine] - state.blkIndent >= 4) {
+      nextLine++;
+      last = nextLine;
+      continue;
+    }
+    break;
+  }
+  state.line = last;
+  const token = state.push("code_block", "code", 0);
+  token.content = state.getLines(startLine, last, 4 + state.blkIndent, false) + "\n";
+  token.map = [startLine, state.line];
+  return true;
+}
+function fence(state, startLine, endLine, silent) {
+  let pos = state.bMarks[startLine] + state.tShift[startLine];
+  let max = state.eMarks[startLine];
+  if (state.sCount[startLine] - state.blkIndent >= 4) {
+    return false;
+  }
+  if (pos + 3 > max) {
+    return false;
+  }
+  const marker = state.src.charCodeAt(pos);
+  if (marker !== 126 && marker !== 96) {
+    return false;
+  }
+  let mem = pos;
+  pos = state.skipChars(pos, marker);
+  let len = pos - mem;
+  if (len < 3) {
+    return false;
+  }
+  const markup = state.src.slice(mem, pos);
+  const params = state.src.slice(pos, max);
+  if (marker === 96) {
+    if (params.indexOf(String.fromCharCode(marker)) >= 0) {
+      return false;
+    }
+  }
+  if (silent) {
+    return true;
+  }
+  let nextLine = startLine;
+  let haveEndMarker = false;
+  for (; ; ) {
+    nextLine++;
+    if (nextLine >= endLine) {
+      break;
+    }
+    pos = mem = state.bMarks[nextLine] + state.tShift[nextLine];
+    max = state.eMarks[nextLine];
+    if (pos < max && state.sCount[nextLine] < state.blkIndent) {
+      break;
+    }
+    if (state.src.charCodeAt(pos) !== marker) {
+      continue;
+    }
+    if (state.sCount[nextLine] - state.blkIndent >= 4) {
+      continue;
+    }
+    pos = state.skipChars(pos, marker);
+    if (pos - mem < len) {
+      continue;
+    }
+    pos = state.skipSpaces(pos);
+    if (pos < max) {
+      continue;
+    }
+    haveEndMarker = true;
+    break;
+  }
+  len = state.sCount[startLine];
+  state.line = nextLine + (haveEndMarker ? 1 : 0);
+  const token = state.push("fence", "code", 0);
+  token.info = params;
+  token.content = state.getLines(startLine + 1, nextLine, len, true);
+  token.markup = markup;
+  token.map = [startLine, state.line];
+  return true;
+}
+function blockquote(state, startLine, endLine, silent) {
+  let pos = state.bMarks[startLine] + state.tShift[startLine];
+  let max = state.eMarks[startLine];
+  const oldLineMax = state.lineMax;
+  if (state.sCount[startLine] - state.blkIndent >= 4) {
+    return false;
+  }
+  if (state.src.charCodeAt(pos) !== 62) {
+    return false;
+  }
+  if (silent) {
+    return true;
+  }
+  const oldBMarks = [];
+  const oldBSCount = [];
+  const oldSCount = [];
+  const oldTShift = [];
+  const terminatorRules = state.md.block.ruler.getRules("blockquote");
+  const oldParentType = state.parentType;
+  state.parentType = "blockquote";
+  let lastLineEmpty = false;
+  let nextLine;
+  for (nextLine = startLine; nextLine < endLine; nextLine++) {
+    const isOutdented = state.sCount[nextLine] < state.blkIndent;
+    pos = state.bMarks[nextLine] + state.tShift[nextLine];
+    max = state.eMarks[nextLine];
+    if (pos >= max) {
+      break;
+    }
+    if (state.src.charCodeAt(pos++) === 62 && !isOutdented) {
+      let initial = state.sCount[nextLine] + 1;
+      let spaceAfterMarker;
+      let adjustTab;
+      if (state.src.charCodeAt(pos) === 32) {
+        pos++;
+        initial++;
+        adjustTab = false;
+        spaceAfterMarker = true;
+      } else if (state.src.charCodeAt(pos) === 9) {
+        spaceAfterMarker = true;
+        if ((state.bsCount[nextLine] + initial) % 4 === 3) {
+          pos++;
+          initial++;
+          adjustTab = false;
+        } else {
+          adjustTab = true;
+        }
+      } else {
+        spaceAfterMarker = false;
+      }
+      let offset = initial;
+      oldBMarks.push(state.bMarks[nextLine]);
+      state.bMarks[nextLine] = pos;
+      while (pos < max) {
+        const ch = state.src.charCodeAt(pos);
+        if (isSpace(ch)) {
+          if (ch === 9) {
+            offset += 4 - (offset + state.bsCount[nextLine] + (adjustTab ? 1 : 0)) % 4;
+          } else {
+            offset++;
+          }
+        } else {
+          break;
+        }
+        pos++;
+      }
+      lastLineEmpty = pos >= max;
+      oldBSCount.push(state.bsCount[nextLine]);
+      state.bsCount[nextLine] = state.sCount[nextLine] + 1 + (spaceAfterMarker ? 1 : 0);
+      oldSCount.push(state.sCount[nextLine]);
+      state.sCount[nextLine] = offset - initial;
+      oldTShift.push(state.tShift[nextLine]);
+      state.tShift[nextLine] = pos - state.bMarks[nextLine];
+      continue;
+    }
+    if (lastLineEmpty) {
+      break;
+    }
+    let terminate = false;
+    for (let i2 = 0, l2 = terminatorRules.length; i2 < l2; i2++) {
+      if (terminatorRules[i2](state, nextLine, endLine, true)) {
+        terminate = true;
+        break;
+      }
+    }
+    if (terminate) {
+      state.lineMax = nextLine;
+      if (state.blkIndent !== 0) {
+        oldBMarks.push(state.bMarks[nextLine]);
+        oldBSCount.push(state.bsCount[nextLine]);
+        oldTShift.push(state.tShift[nextLine]);
+        oldSCount.push(state.sCount[nextLine]);
+        state.sCount[nextLine] -= state.blkIndent;
+      }
+      break;
+    }
+    oldBMarks.push(state.bMarks[nextLine]);
+    oldBSCount.push(state.bsCount[nextLine]);
+    oldTShift.push(state.tShift[nextLine]);
+    oldSCount.push(state.sCount[nextLine]);
+    state.sCount[nextLine] = -1;
+  }
+  const oldIndent = state.blkIndent;
+  state.blkIndent = 0;
+  const token_o = state.push("blockquote_open", "blockquote", 1);
+  token_o.markup = ">";
+  const lines = [startLine, 0];
+  token_o.map = lines;
+  state.md.block.tokenize(state, startLine, nextLine);
+  const token_c = state.push("blockquote_close", "blockquote", -1);
+  token_c.markup = ">";
+  state.lineMax = oldLineMax;
+  state.parentType = oldParentType;
+  lines[1] = state.line;
+  for (let i2 = 0; i2 < oldTShift.length; i2++) {
+    state.bMarks[i2 + startLine] = oldBMarks[i2];
+    state.tShift[i2 + startLine] = oldTShift[i2];
+    state.sCount[i2 + startLine] = oldSCount[i2];
+    state.bsCount[i2 + startLine] = oldBSCount[i2];
+  }
+  state.blkIndent = oldIndent;
+  return true;
+}
+function hr(state, startLine, endLine, silent) {
+  const max = state.eMarks[startLine];
+  if (state.sCount[startLine] - state.blkIndent >= 4) {
+    return false;
+  }
+  let pos = state.bMarks[startLine] + state.tShift[startLine];
+  const marker = state.src.charCodeAt(pos++);
+  if (marker !== 42 && marker !== 45 && marker !== 95) {
+    return false;
+  }
+  let cnt = 1;
+  while (pos < max) {
+    const ch = state.src.charCodeAt(pos++);
+    if (ch !== marker && !isSpace(ch)) {
+      return false;
+    }
+    if (ch === marker) {
+      cnt++;
+    }
+  }
+  if (cnt < 3) {
+    return false;
+  }
+  if (silent) {
+    return true;
+  }
+  state.line = startLine + 1;
+  const token = state.push("hr", "hr", 0);
+  token.map = [startLine, state.line];
+  token.markup = Array(cnt + 1).join(String.fromCharCode(marker));
+  return true;
+}
+function skipBulletListMarker(state, startLine) {
+  const max = state.eMarks[startLine];
+  let pos = state.bMarks[startLine] + state.tShift[startLine];
+  const marker = state.src.charCodeAt(pos++);
+  if (marker !== 42 && marker !== 45 && marker !== 43) {
+    return -1;
+  }
+  if (pos < max) {
+    const ch = state.src.charCodeAt(pos);
+    if (!isSpace(ch)) {
+      return -1;
+    }
+  }
+  return pos;
+}
+function skipOrderedListMarker(state, startLine) {
+  const start = state.bMarks[startLine] + state.tShift[startLine];
+  const max = state.eMarks[startLine];
+  let pos = start;
+  if (pos + 1 >= max) {
+    return -1;
+  }
+  let ch = state.src.charCodeAt(pos++);
+  if (ch < 48 || ch > 57) {
+    return -1;
+  }
+  for (; ; ) {
+    if (pos >= max) {
+      return -1;
+    }
+    ch = state.src.charCodeAt(pos++);
+    if (ch >= 48 && ch <= 57) {
+      if (pos - start >= 10) {
+        return -1;
+      }
+      continue;
+    }
+    if (ch === 41 || ch === 46) {
+      break;
+    }
+    return -1;
+  }
+  if (pos < max) {
+    ch = state.src.charCodeAt(pos);
+    if (!isSpace(ch)) {
+      return -1;
+    }
+  }
+  return pos;
+}
+function markTightParagraphs(state, idx) {
+  const level = state.level + 2;
+  for (let i2 = idx + 2, l2 = state.tokens.length - 2; i2 < l2; i2++) {
+    if (state.tokens[i2].level === level && state.tokens[i2].type === "paragraph_open") {
+      state.tokens[i2 + 2].hidden = true;
+      state.tokens[i2].hidden = true;
+      i2 += 2;
+    }
+  }
+}
+function list(state, startLine, endLine, silent) {
+  let max, pos, start, token;
+  let nextLine = startLine;
+  let tight = true;
+  if (state.sCount[nextLine] - state.blkIndent >= 4) {
+    return false;
+  }
+  if (state.listIndent >= 0 && state.sCount[nextLine] - state.listIndent >= 4 && state.sCount[nextLine] < state.blkIndent) {
+    return false;
+  }
+  let isTerminatingParagraph = false;
+  if (silent && state.parentType === "paragraph") {
+    if (state.sCount[nextLine] >= state.blkIndent) {
+      isTerminatingParagraph = true;
+    }
+  }
+  let isOrdered;
+  let markerValue;
+  let posAfterMarker;
+  if ((posAfterMarker = skipOrderedListMarker(state, nextLine)) >= 0) {
+    isOrdered = true;
+    start = state.bMarks[nextLine] + state.tShift[nextLine];
+    markerValue = Number(state.src.slice(start, posAfterMarker - 1));
+    if (isTerminatingParagraph && markerValue !== 1) return false;
+  } else if ((posAfterMarker = skipBulletListMarker(state, nextLine)) >= 0) {
+    isOrdered = false;
+  } else {
+    return false;
+  }
+  if (isTerminatingParagraph) {
+    if (state.skipSpaces(posAfterMarker) >= state.eMarks[nextLine]) return false;
+  }
+  if (silent) {
+    return true;
+  }
+  const markerCharCode = state.src.charCodeAt(posAfterMarker - 1);
+  const listTokIdx = state.tokens.length;
+  if (isOrdered) {
+    token = state.push("ordered_list_open", "ol", 1);
+    if (markerValue !== 1) {
+      token.attrs = [["start", markerValue]];
+    }
+  } else {
+    token = state.push("bullet_list_open", "ul", 1);
+  }
+  const listLines = [nextLine, 0];
+  token.map = listLines;
+  token.markup = String.fromCharCode(markerCharCode);
+  let prevEmptyEnd = false;
+  const terminatorRules = state.md.block.ruler.getRules("list");
+  const oldParentType = state.parentType;
+  state.parentType = "list";
+  while (nextLine < endLine) {
+    pos = posAfterMarker;
+    max = state.eMarks[nextLine];
+    const initial = state.sCount[nextLine] + posAfterMarker - (state.bMarks[nextLine] + state.tShift[nextLine]);
+    let offset = initial;
+    while (pos < max) {
+      const ch = state.src.charCodeAt(pos);
+      if (ch === 9) {
+        offset += 4 - (offset + state.bsCount[nextLine]) % 4;
+      } else if (ch === 32) {
+        offset++;
+      } else {
+        break;
+      }
+      pos++;
+    }
+    const contentStart = pos;
+    let indentAfterMarker;
+    if (contentStart >= max) {
+      indentAfterMarker = 1;
+    } else {
+      indentAfterMarker = offset - initial;
+    }
+    if (indentAfterMarker > 4) {
+      indentAfterMarker = 1;
+    }
+    const indent = initial + indentAfterMarker;
+    token = state.push("list_item_open", "li", 1);
+    token.markup = String.fromCharCode(markerCharCode);
+    const itemLines = [nextLine, 0];
+    token.map = itemLines;
+    if (isOrdered) {
+      token.info = state.src.slice(start, posAfterMarker - 1);
+    }
+    const oldTight = state.tight;
+    const oldTShift = state.tShift[nextLine];
+    const oldSCount = state.sCount[nextLine];
+    const oldListIndent = state.listIndent;
+    state.listIndent = state.blkIndent;
+    state.blkIndent = indent;
+    state.tight = true;
+    state.tShift[nextLine] = contentStart - state.bMarks[nextLine];
+    state.sCount[nextLine] = offset;
+    if (contentStart >= max && state.isEmpty(nextLine + 1)) {
+      state.line = Math.min(state.line + 2, endLine);
+    } else {
+      state.md.block.tokenize(state, nextLine, endLine, true);
+    }
+    if (!state.tight || prevEmptyEnd) {
+      tight = false;
+    }
+    prevEmptyEnd = state.line - nextLine > 1 && state.isEmpty(state.line - 1);
+    state.blkIndent = state.listIndent;
+    state.listIndent = oldListIndent;
+    state.tShift[nextLine] = oldTShift;
+    state.sCount[nextLine] = oldSCount;
+    state.tight = oldTight;
+    token = state.push("list_item_close", "li", -1);
+    token.markup = String.fromCharCode(markerCharCode);
+    nextLine = state.line;
+    itemLines[1] = nextLine;
+    if (nextLine >= endLine) {
+      break;
+    }
+    if (state.sCount[nextLine] < state.blkIndent) {
+      break;
+    }
+    if (state.sCount[nextLine] - state.blkIndent >= 4) {
+      break;
+    }
+    let terminate = false;
+    for (let i2 = 0, l2 = terminatorRules.length; i2 < l2; i2++) {
+      if (terminatorRules[i2](state, nextLine, endLine, true)) {
+        terminate = true;
+        break;
+      }
+    }
+    if (terminate) {
+      break;
+    }
+    if (isOrdered) {
+      posAfterMarker = skipOrderedListMarker(state, nextLine);
+      if (posAfterMarker < 0) {
+        break;
+      }
+      start = state.bMarks[nextLine] + state.tShift[nextLine];
+    } else {
+      posAfterMarker = skipBulletListMarker(state, nextLine);
+      if (posAfterMarker < 0) {
+        break;
+      }
+    }
+    if (markerCharCode !== state.src.charCodeAt(posAfterMarker - 1)) {
+      break;
+    }
+  }
+  if (isOrdered) {
+    token = state.push("ordered_list_close", "ol", -1);
+  } else {
+    token = state.push("bullet_list_close", "ul", -1);
+  }
+  token.markup = String.fromCharCode(markerCharCode);
+  listLines[1] = nextLine;
+  state.line = nextLine;
+  state.parentType = oldParentType;
+  if (tight) {
+    markTightParagraphs(state, listTokIdx);
+  }
+  return true;
+}
+function reference(state, startLine, _endLine, silent) {
+  let pos = state.bMarks[startLine] + state.tShift[startLine];
+  let max = state.eMarks[startLine];
+  let nextLine = startLine + 1;
+  if (state.sCount[startLine] - state.blkIndent >= 4) {
+    return false;
+  }
+  if (state.src.charCodeAt(pos) !== 91) {
+    return false;
+  }
+  function getNextLine(nextLine2) {
+    const endLine = state.lineMax;
+    if (nextLine2 >= endLine || state.isEmpty(nextLine2)) {
+      return null;
+    }
+    let isContinuation = false;
+    if (state.sCount[nextLine2] - state.blkIndent > 3) {
+      isContinuation = true;
+    }
+    if (state.sCount[nextLine2] < 0) {
+      isContinuation = true;
+    }
+    if (!isContinuation) {
+      const terminatorRules = state.md.block.ruler.getRules("reference");
+      const oldParentType = state.parentType;
+      state.parentType = "reference";
+      let terminate = false;
+      for (let i2 = 0, l2 = terminatorRules.length; i2 < l2; i2++) {
+        if (terminatorRules[i2](state, nextLine2, endLine, true)) {
+          terminate = true;
+          break;
+        }
+      }
+      state.parentType = oldParentType;
+      if (terminate) {
+        return null;
+      }
+    }
+    const pos2 = state.bMarks[nextLine2] + state.tShift[nextLine2];
+    const max2 = state.eMarks[nextLine2];
+    return state.src.slice(pos2, max2 + 1);
+  }
+  let str = state.src.slice(pos, max + 1);
+  max = str.length;
+  let labelEnd = -1;
+  for (pos = 1; pos < max; pos++) {
+    const ch = str.charCodeAt(pos);
+    if (ch === 91) {
+      return false;
+    } else if (ch === 93) {
+      labelEnd = pos;
+      break;
+    } else if (ch === 10) {
+      const lineContent = getNextLine(nextLine);
+      if (lineContent !== null) {
+        str += lineContent;
+        max = str.length;
+        nextLine++;
+      }
+    } else if (ch === 92) {
+      pos++;
+      if (pos < max && str.charCodeAt(pos) === 10) {
+        const lineContent = getNextLine(nextLine);
+        if (lineContent !== null) {
+          str += lineContent;
+          max = str.length;
+          nextLine++;
+        }
+      }
+    }
+  }
+  if (labelEnd < 0 || str.charCodeAt(labelEnd + 1) !== 58) {
+    return false;
+  }
+  for (pos = labelEnd + 2; pos < max; pos++) {
+    const ch = str.charCodeAt(pos);
+    if (ch === 10) {
+      const lineContent = getNextLine(nextLine);
+      if (lineContent !== null) {
+        str += lineContent;
+        max = str.length;
+        nextLine++;
+      }
+    } else if (isSpace(ch)) ;
+    else {
+      break;
+    }
+  }
+  const destRes = state.md.helpers.parseLinkDestination(str, pos, max);
+  if (!destRes.ok) {
+    return false;
+  }
+  const href = state.md.normalizeLink(destRes.str);
+  if (!state.md.validateLink(href)) {
+    return false;
+  }
+  pos = destRes.pos;
+  const destEndPos = pos;
+  const destEndLineNo = nextLine;
+  const start = pos;
+  for (; pos < max; pos++) {
+    const ch = str.charCodeAt(pos);
+    if (ch === 10) {
+      const lineContent = getNextLine(nextLine);
+      if (lineContent !== null) {
+        str += lineContent;
+        max = str.length;
+        nextLine++;
+      }
+    } else if (isSpace(ch)) ;
+    else {
+      break;
+    }
+  }
+  let titleRes = state.md.helpers.parseLinkTitle(str, pos, max);
+  while (titleRes.can_continue) {
+    const lineContent = getNextLine(nextLine);
+    if (lineContent === null) break;
+    str += lineContent;
+    pos = max;
+    max = str.length;
+    nextLine++;
+    titleRes = state.md.helpers.parseLinkTitle(str, pos, max, titleRes);
+  }
+  let title;
+  if (pos < max && start !== pos && titleRes.ok) {
+    title = titleRes.str;
+    pos = titleRes.pos;
+  } else {
+    title = "";
+    pos = destEndPos;
+    nextLine = destEndLineNo;
+  }
+  while (pos < max) {
+    const ch = str.charCodeAt(pos);
+    if (!isSpace(ch)) {
+      break;
+    }
+    pos++;
+  }
+  if (pos < max && str.charCodeAt(pos) !== 10) {
+    if (title) {
+      title = "";
+      pos = destEndPos;
+      nextLine = destEndLineNo;
+      while (pos < max) {
+        const ch = str.charCodeAt(pos);
+        if (!isSpace(ch)) {
+          break;
+        }
+        pos++;
+      }
+    }
+  }
+  if (pos < max && str.charCodeAt(pos) !== 10) {
+    return false;
+  }
+  const label = normalizeReference(str.slice(1, labelEnd));
+  if (!label) {
+    return false;
+  }
+  if (silent) {
+    return true;
+  }
+  if (typeof state.env.references === "undefined") {
+    state.env.references = {};
+  }
+  if (typeof state.env.references[label] === "undefined") {
+    state.env.references[label] = { title, href };
+  }
+  state.line = nextLine;
+  return true;
+}
+const block_names = [
+  "address",
+  "article",
+  "aside",
+  "base",
+  "basefont",
+  "blockquote",
+  "body",
+  "caption",
+  "center",
+  "col",
+  "colgroup",
+  "dd",
+  "details",
+  "dialog",
+  "dir",
+  "div",
+  "dl",
+  "dt",
+  "fieldset",
+  "figcaption",
+  "figure",
+  "footer",
+  "form",
+  "frame",
+  "frameset",
+  "h1",
+  "h2",
+  "h3",
+  "h4",
+  "h5",
+  "h6",
+  "head",
+  "header",
+  "hr",
+  "html",
+  "iframe",
+  "legend",
+  "li",
+  "link",
+  "main",
+  "menu",
+  "menuitem",
+  "nav",
+  "noframes",
+  "ol",
+  "optgroup",
+  "option",
+  "p",
+  "param",
+  "search",
+  "section",
+  "summary",
+  "table",
+  "tbody",
+  "td",
+  "tfoot",
+  "th",
+  "thead",
+  "title",
+  "tr",
+  "track",
+  "ul"
+];
+const attr_name = "[a-zA-Z_:][a-zA-Z0-9:._-]*";
+const unquoted = "[^\"'=<>`\\x00-\\x20]+";
+const single_quoted = "'[^']*'";
+const double_quoted = '"[^"]*"';
+const attr_value = "(?:" + unquoted + "|" + single_quoted + "|" + double_quoted + ")";
+const attribute = "(?:\\s+" + attr_name + "(?:\\s*=\\s*" + attr_value + ")?)";
+const open_tag = "<[A-Za-z][A-Za-z0-9\\-]*" + attribute + "*\\s*\\/?>";
+const close_tag = "<\\/[A-Za-z][A-Za-z0-9\\-]*\\s*>";
+const comment = "<!---?>|<!--(?:[^-]|-[^-]|--[^>])*-->";
+const processing = "<[?][\\s\\S]*?[?]>";
+const declaration = "<![A-Za-z][^>]*>";
+const cdata = "<!\\[CDATA\\[[\\s\\S]*?\\]\\]>";
+const HTML_TAG_RE = new RegExp("^(?:" + open_tag + "|" + close_tag + "|" + comment + "|" + processing + "|" + declaration + "|" + cdata + ")");
+const HTML_OPEN_CLOSE_TAG_RE = new RegExp("^(?:" + open_tag + "|" + close_tag + ")");
+const HTML_SEQUENCES = [
+  [/^<(script|pre|style|textarea)(?=(\s|>|$))/i, /<\/(script|pre|style|textarea)>/i, true],
+  [/^<!--/, /-->/, true],
+  [/^<\?/, /\?>/, true],
+  [/^<![A-Z]/, />/, true],
+  [/^<!\[CDATA\[/, /\]\]>/, true],
+  [new RegExp("^</?(" + block_names.join("|") + ")(?=(\\s|/?>|$))", "i"), /^$/, true],
+  [new RegExp(HTML_OPEN_CLOSE_TAG_RE.source + "\\s*$"), /^$/, false]
+];
+function html_block(state, startLine, endLine, silent) {
+  let pos = state.bMarks[startLine] + state.tShift[startLine];
+  let max = state.eMarks[startLine];
+  if (state.sCount[startLine] - state.blkIndent >= 4) {
+    return false;
+  }
+  if (!state.md.options.html) {
+    return false;
+  }
+  if (state.src.charCodeAt(pos) !== 60) {
+    return false;
+  }
+  let lineText = state.src.slice(pos, max);
+  let i2 = 0;
+  for (; i2 < HTML_SEQUENCES.length; i2++) {
+    if (HTML_SEQUENCES[i2][0].test(lineText)) {
+      break;
+    }
+  }
+  if (i2 === HTML_SEQUENCES.length) {
+    return false;
+  }
+  if (silent) {
+    return HTML_SEQUENCES[i2][2];
+  }
+  let nextLine = startLine + 1;
+  if (!HTML_SEQUENCES[i2][1].test(lineText)) {
+    for (; nextLine < endLine; nextLine++) {
+      if (state.sCount[nextLine] < state.blkIndent) {
+        break;
+      }
+      pos = state.bMarks[nextLine] + state.tShift[nextLine];
+      max = state.eMarks[nextLine];
+      lineText = state.src.slice(pos, max);
+      if (HTML_SEQUENCES[i2][1].test(lineText)) {
+        if (lineText.length !== 0) {
+          nextLine++;
+        }
+        break;
+      }
+    }
+  }
+  state.line = nextLine;
+  const token = state.push("html_block", "", 0);
+  token.map = [startLine, nextLine];
+  token.content = state.getLines(startLine, nextLine, state.blkIndent, true);
+  return true;
+}
+function heading(state, startLine, endLine, silent) {
+  let pos = state.bMarks[startLine] + state.tShift[startLine];
+  let max = state.eMarks[startLine];
+  if (state.sCount[startLine] - state.blkIndent >= 4) {
+    return false;
+  }
+  let ch = state.src.charCodeAt(pos);
+  if (ch !== 35 || pos >= max) {
+    return false;
+  }
+  let level = 1;
+  ch = state.src.charCodeAt(++pos);
+  while (ch === 35 && pos < max && level <= 6) {
+    level++;
+    ch = state.src.charCodeAt(++pos);
+  }
+  if (level > 6 || pos < max && !isSpace(ch)) {
+    return false;
+  }
+  if (silent) {
+    return true;
+  }
+  max = state.skipSpacesBack(max, pos);
+  const tmp = state.skipCharsBack(max, 35, pos);
+  if (tmp > pos && isSpace(state.src.charCodeAt(tmp - 1))) {
+    max = tmp;
+  }
+  state.line = startLine + 1;
+  const token_o = state.push("heading_open", "h" + String(level), 1);
+  token_o.markup = "########".slice(0, level);
+  token_o.map = [startLine, state.line];
+  const token_i = state.push("inline", "", 0);
+  token_i.content = state.src.slice(pos, max).trim();
+  token_i.map = [startLine, state.line];
+  token_i.children = [];
+  const token_c = state.push("heading_close", "h" + String(level), -1);
+  token_c.markup = "########".slice(0, level);
+  return true;
+}
+function lheading(state, startLine, endLine) {
+  const terminatorRules = state.md.block.ruler.getRules("paragraph");
+  if (state.sCount[startLine] - state.blkIndent >= 4) {
+    return false;
+  }
+  const oldParentType = state.parentType;
+  state.parentType = "paragraph";
+  let level = 0;
+  let marker;
+  let nextLine = startLine + 1;
+  for (; nextLine < endLine && !state.isEmpty(nextLine); nextLine++) {
+    if (state.sCount[nextLine] - state.blkIndent > 3) {
+      continue;
+    }
+    if (state.sCount[nextLine] >= state.blkIndent) {
+      let pos = state.bMarks[nextLine] + state.tShift[nextLine];
+      const max = state.eMarks[nextLine];
+      if (pos < max) {
+        marker = state.src.charCodeAt(pos);
+        if (marker === 45 || marker === 61) {
+          pos = state.skipChars(pos, marker);
+          pos = state.skipSpaces(pos);
+          if (pos >= max) {
+            level = marker === 61 ? 1 : 2;
+            break;
+          }
+        }
+      }
+    }
+    if (state.sCount[nextLine] < 0) {
+      continue;
+    }
+    let terminate = false;
+    for (let i2 = 0, l2 = terminatorRules.length; i2 < l2; i2++) {
+      if (terminatorRules[i2](state, nextLine, endLine, true)) {
+        terminate = true;
+        break;
+      }
+    }
+    if (terminate) {
+      break;
+    }
+  }
+  if (!level) {
+    return false;
+  }
+  const content = state.getLines(startLine, nextLine, state.blkIndent, false).trim();
+  state.line = nextLine + 1;
+  const token_o = state.push("heading_open", "h" + String(level), 1);
+  token_o.markup = String.fromCharCode(marker);
+  token_o.map = [startLine, state.line];
+  const token_i = state.push("inline", "", 0);
+  token_i.content = content;
+  token_i.map = [startLine, state.line - 1];
+  token_i.children = [];
+  const token_c = state.push("heading_close", "h" + String(level), -1);
+  token_c.markup = String.fromCharCode(marker);
+  state.parentType = oldParentType;
+  return true;
+}
+function paragraph(state, startLine, endLine) {
+  const terminatorRules = state.md.block.ruler.getRules("paragraph");
+  const oldParentType = state.parentType;
+  let nextLine = startLine + 1;
+  state.parentType = "paragraph";
+  for (; nextLine < endLine && !state.isEmpty(nextLine); nextLine++) {
+    if (state.sCount[nextLine] - state.blkIndent > 3) {
+      continue;
+    }
+    if (state.sCount[nextLine] < 0) {
+      continue;
+    }
+    let terminate = false;
+    for (let i2 = 0, l2 = terminatorRules.length; i2 < l2; i2++) {
+      if (terminatorRules[i2](state, nextLine, endLine, true)) {
+        terminate = true;
+        break;
+      }
+    }
+    if (terminate) {
+      break;
+    }
+  }
+  const content = state.getLines(startLine, nextLine, state.blkIndent, false).trim();
+  state.line = nextLine;
+  const token_o = state.push("paragraph_open", "p", 1);
+  token_o.map = [startLine, state.line];
+  const token_i = state.push("inline", "", 0);
+  token_i.content = content;
+  token_i.map = [startLine, state.line];
+  token_i.children = [];
+  state.push("paragraph_close", "p", -1);
+  state.parentType = oldParentType;
+  return true;
+}
+const _rules$1 = [
+  // First 2 params - rule name & source. Secondary array - list of rules,
+  // which can be terminated by this one.
+  ["table", table, ["paragraph", "reference"]],
+  ["code", code],
+  ["fence", fence, ["paragraph", "reference", "blockquote", "list"]],
+  ["blockquote", blockquote, ["paragraph", "reference", "blockquote", "list"]],
+  ["hr", hr, ["paragraph", "reference", "blockquote", "list"]],
+  ["list", list, ["paragraph", "reference", "blockquote"]],
+  ["reference", reference],
+  ["html_block", html_block, ["paragraph", "reference", "blockquote"]],
+  ["heading", heading, ["paragraph", "reference", "blockquote"]],
+  ["lheading", lheading],
+  ["paragraph", paragraph]
+];
+function ParserBlock() {
+  this.ruler = new Ruler();
+  for (let i2 = 0; i2 < _rules$1.length; i2++) {
+    this.ruler.push(_rules$1[i2][0], _rules$1[i2][1], { alt: (_rules$1[i2][2] || []).slice() });
+  }
+}
+ParserBlock.prototype.tokenize = function(state, startLine, endLine) {
+  const rules = this.ruler.getRules("");
+  const len = rules.length;
+  const maxNesting = state.md.options.maxNesting;
+  let line = startLine;
+  let hasEmptyLines = false;
+  while (line < endLine) {
+    state.line = line = state.skipEmptyLines(line);
+    if (line >= endLine) {
+      break;
+    }
+    if (state.sCount[line] < state.blkIndent) {
+      break;
+    }
+    if (state.level >= maxNesting) {
+      state.line = endLine;
+      break;
+    }
+    const prevLine = state.line;
+    let ok = false;
+    for (let i2 = 0; i2 < len; i2++) {
+      ok = rules[i2](state, line, endLine, false);
+      if (ok) {
+        if (prevLine >= state.line) {
+          throw new Error("block rule didn't increment state.line");
+        }
+        break;
+      }
+    }
+    if (!ok) throw new Error("none of the block rules matched");
+    state.tight = !hasEmptyLines;
+    if (state.isEmpty(state.line - 1)) {
+      hasEmptyLines = true;
+    }
+    line = state.line;
+    if (line < endLine && state.isEmpty(line)) {
+      hasEmptyLines = true;
+      line++;
+      state.line = line;
+    }
+  }
+};
+ParserBlock.prototype.parse = function(src, md, env, outTokens) {
+  if (!src) {
+    return;
+  }
+  const state = new this.State(src, md, env, outTokens);
+  this.tokenize(state, state.line, state.lineMax);
+};
+ParserBlock.prototype.State = StateBlock;
+function StateInline(src, md, env, outTokens) {
+  this.src = src;
+  this.env = env;
+  this.md = md;
+  this.tokens = outTokens;
+  this.tokens_meta = Array(outTokens.length);
+  this.pos = 0;
+  this.posMax = this.src.length;
+  this.level = 0;
+  this.pending = "";
+  this.pendingLevel = 0;
+  this.cache = {};
+  this.delimiters = [];
+  this._prev_delimiters = [];
+  this.backticks = {};
+  this.backticksScanned = false;
+  this.linkLevel = 0;
+}
+StateInline.prototype.pushPending = function() {
+  const token = new Token("text", "", 0);
+  token.content = this.pending;
+  token.level = this.pendingLevel;
+  this.tokens.push(token);
+  this.pending = "";
+  return token;
+};
+StateInline.prototype.push = function(type, tag, nesting) {
+  if (this.pending) {
+    this.pushPending();
+  }
+  const token = new Token(type, tag, nesting);
+  let token_meta = null;
+  if (nesting < 0) {
+    this.level--;
+    this.delimiters = this._prev_delimiters.pop();
+  }
+  token.level = this.level;
+  if (nesting > 0) {
+    this.level++;
+    this._prev_delimiters.push(this.delimiters);
+    this.delimiters = [];
+    token_meta = { delimiters: this.delimiters };
+  }
+  this.pendingLevel = this.level;
+  this.tokens.push(token);
+  this.tokens_meta.push(token_meta);
+  return token;
+};
+StateInline.prototype.scanDelims = function(start, canSplitWord) {
+  const max = this.posMax;
+  const marker = this.src.charCodeAt(start);
+  const lastChar = start > 0 ? this.src.charCodeAt(start - 1) : 32;
+  let pos = start;
+  while (pos < max && this.src.charCodeAt(pos) === marker) {
+    pos++;
+  }
+  const count = pos - start;
+  const nextChar = pos < max ? this.src.charCodeAt(pos) : 32;
+  const isLastPunctChar = isMdAsciiPunct(lastChar) || isPunctChar(String.fromCharCode(lastChar));
+  const isNextPunctChar = isMdAsciiPunct(nextChar) || isPunctChar(String.fromCharCode(nextChar));
+  const isLastWhiteSpace = isWhiteSpace(lastChar);
+  const isNextWhiteSpace = isWhiteSpace(nextChar);
+  const left_flanking = !isNextWhiteSpace && (!isNextPunctChar || isLastWhiteSpace || isLastPunctChar);
+  const right_flanking = !isLastWhiteSpace && (!isLastPunctChar || isNextWhiteSpace || isNextPunctChar);
+  const can_open = left_flanking && (canSplitWord || !right_flanking || isLastPunctChar);
+  const can_close = right_flanking && (canSplitWord || !left_flanking || isNextPunctChar);
+  return { can_open, can_close, length: count };
+};
+StateInline.prototype.Token = Token;
+function isTerminatorChar(ch) {
+  switch (ch) {
+    case 10:
+    case 33:
+    case 35:
+    case 36:
+    case 37:
+    case 38:
+    case 42:
+    case 43:
+    case 45:
+    case 58:
+    case 60:
+    case 61:
+    case 62:
+    case 64:
+    case 91:
+    case 92:
+    case 93:
+    case 94:
+    case 95:
+    case 96:
+    case 123:
+    case 125:
+    case 126:
+      return true;
+    default:
+      return false;
+  }
+}
+function text(state, silent) {
+  let pos = state.pos;
+  while (pos < state.posMax && !isTerminatorChar(state.src.charCodeAt(pos))) {
+    pos++;
+  }
+  if (pos === state.pos) {
+    return false;
+  }
+  if (!silent) {
+    state.pending += state.src.slice(state.pos, pos);
+  }
+  state.pos = pos;
+  return true;
+}
+const SCHEME_RE = /(?:^|[^a-z0-9.+-])([a-z][a-z0-9.+-]*)$/i;
+function linkify(state, silent) {
+  if (!state.md.options.linkify) return false;
+  if (state.linkLevel > 0) return false;
+  const pos = state.pos;
+  const max = state.posMax;
+  if (pos + 3 > max) return false;
+  if (state.src.charCodeAt(pos) !== 58) return false;
+  if (state.src.charCodeAt(pos + 1) !== 47) return false;
+  if (state.src.charCodeAt(pos + 2) !== 47) return false;
+  const match2 = state.pending.match(SCHEME_RE);
+  if (!match2) return false;
+  const proto = match2[1];
+  const link2 = state.md.linkify.matchAtStart(state.src.slice(pos - proto.length));
+  if (!link2) return false;
+  let url = link2.url;
+  if (url.length <= proto.length) return false;
+  url = url.replace(/\*+$/, "");
+  const fullUrl = state.md.normalizeLink(url);
+  if (!state.md.validateLink(fullUrl)) return false;
+  if (!silent) {
+    state.pending = state.pending.slice(0, -proto.length);
+    const token_o = state.push("link_open", "a", 1);
+    token_o.attrs = [["href", fullUrl]];
+    token_o.markup = "linkify";
+    token_o.info = "auto";
+    const token_t = state.push("text", "", 0);
+    token_t.content = state.md.normalizeLinkText(url);
+    const token_c = state.push("link_close", "a", -1);
+    token_c.markup = "linkify";
+    token_c.info = "auto";
+  }
+  state.pos += url.length - proto.length;
+  return true;
+}
+function newline(state, silent) {
+  let pos = state.pos;
+  if (state.src.charCodeAt(pos) !== 10) {
+    return false;
+  }
+  const pmax = state.pending.length - 1;
+  const max = state.posMax;
+  if (!silent) {
+    if (pmax >= 0 && state.pending.charCodeAt(pmax) === 32) {
+      if (pmax >= 1 && state.pending.charCodeAt(pmax - 1) === 32) {
+        let ws = pmax - 1;
+        while (ws >= 1 && state.pending.charCodeAt(ws - 1) === 32) ws--;
+        state.pending = state.pending.slice(0, ws);
+        state.push("hardbreak", "br", 0);
+      } else {
+        state.pending = state.pending.slice(0, -1);
+        state.push("softbreak", "br", 0);
+      }
+    } else {
+      state.push("softbreak", "br", 0);
+    }
+  }
+  pos++;
+  while (pos < max && isSpace(state.src.charCodeAt(pos))) {
+    pos++;
+  }
+  state.pos = pos;
+  return true;
+}
+const ESCAPED = [];
+for (let i2 = 0; i2 < 256; i2++) {
+  ESCAPED.push(0);
+}
+"\\!\"#$%&'()*+,./:;<=>?@[]^_`{|}~-".split("").forEach(function(ch) {
+  ESCAPED[ch.charCodeAt(0)] = 1;
+});
+function escape(state, silent) {
+  let pos = state.pos;
+  const max = state.posMax;
+  if (state.src.charCodeAt(pos) !== 92) return false;
+  pos++;
+  if (pos >= max) return false;
+  let ch1 = state.src.charCodeAt(pos);
+  if (ch1 === 10) {
+    if (!silent) {
+      state.push("hardbreak", "br", 0);
+    }
+    pos++;
+    while (pos < max) {
+      ch1 = state.src.charCodeAt(pos);
+      if (!isSpace(ch1)) break;
+      pos++;
+    }
+    state.pos = pos;
+    return true;
+  }
+  let escapedStr = state.src[pos];
+  if (ch1 >= 55296 && ch1 <= 56319 && pos + 1 < max) {
+    const ch2 = state.src.charCodeAt(pos + 1);
+    if (ch2 >= 56320 && ch2 <= 57343) {
+      escapedStr += state.src[pos + 1];
+      pos++;
+    }
+  }
+  const origStr = "\\" + escapedStr;
+  if (!silent) {
+    const token = state.push("text_special", "", 0);
+    if (ch1 < 256 && ESCAPED[ch1] !== 0) {
+      token.content = escapedStr;
+    } else {
+      token.content = origStr;
+    }
+    token.markup = origStr;
+    token.info = "escape";
+  }
+  state.pos = pos + 1;
+  return true;
+}
+function backtick(state, silent) {
+  let pos = state.pos;
+  const ch = state.src.charCodeAt(pos);
+  if (ch !== 96) {
+    return false;
+  }
+  const start = pos;
+  pos++;
+  const max = state.posMax;
+  while (pos < max && state.src.charCodeAt(pos) === 96) {
+    pos++;
+  }
+  const marker = state.src.slice(start, pos);
+  const openerLength = marker.length;
+  if (state.backticksScanned && (state.backticks[openerLength] || 0) <= start) {
+    if (!silent) state.pending += marker;
+    state.pos += openerLength;
+    return true;
+  }
+  let matchEnd = pos;
+  let matchStart;
+  while ((matchStart = state.src.indexOf("`", matchEnd)) !== -1) {
+    matchEnd = matchStart + 1;
+    while (matchEnd < max && state.src.charCodeAt(matchEnd) === 96) {
+      matchEnd++;
+    }
+    const closerLength = matchEnd - matchStart;
+    if (closerLength === openerLength) {
+      if (!silent) {
+        const token = state.push("code_inline", "code", 0);
+        token.markup = marker;
+        token.content = state.src.slice(pos, matchStart).replace(/\n/g, " ").replace(/^ (.+) $/, "$1");
+      }
+      state.pos = matchEnd;
+      return true;
+    }
+    state.backticks[closerLength] = matchStart;
+  }
+  state.backticksScanned = true;
+  if (!silent) state.pending += marker;
+  state.pos += openerLength;
+  return true;
+}
+function strikethrough_tokenize(state, silent) {
+  const start = state.pos;
+  const marker = state.src.charCodeAt(start);
+  if (silent) {
+    return false;
+  }
+  if (marker !== 126) {
+    return false;
+  }
+  const scanned = state.scanDelims(state.pos, true);
+  let len = scanned.length;
+  const ch = String.fromCharCode(marker);
+  if (len < 2) {
+    return false;
+  }
+  let token;
+  if (len % 2) {
+    token = state.push("text", "", 0);
+    token.content = ch;
+    len--;
+  }
+  for (let i2 = 0; i2 < len; i2 += 2) {
+    token = state.push("text", "", 0);
+    token.content = ch + ch;
+    state.delimiters.push({
+      marker,
+      length: 0,
+      // disable "rule of 3" length checks meant for emphasis
+      token: state.tokens.length - 1,
+      end: -1,
+      open: scanned.can_open,
+      close: scanned.can_close
+    });
+  }
+  state.pos += scanned.length;
+  return true;
+}
+function postProcess$1(state, delimiters) {
+  let token;
+  const loneMarkers = [];
+  const max = delimiters.length;
+  for (let i2 = 0; i2 < max; i2++) {
+    const startDelim = delimiters[i2];
+    if (startDelim.marker !== 126) {
+      continue;
+    }
+    if (startDelim.end === -1) {
+      continue;
+    }
+    const endDelim = delimiters[startDelim.end];
+    token = state.tokens[startDelim.token];
+    token.type = "s_open";
+    token.tag = "s";
+    token.nesting = 1;
+    token.markup = "~~";
+    token.content = "";
+    token = state.tokens[endDelim.token];
+    token.type = "s_close";
+    token.tag = "s";
+    token.nesting = -1;
+    token.markup = "~~";
+    token.content = "";
+    if (state.tokens[endDelim.token - 1].type === "text" && state.tokens[endDelim.token - 1].content === "~") {
+      loneMarkers.push(endDelim.token - 1);
+    }
+  }
+  while (loneMarkers.length) {
+    const i2 = loneMarkers.pop();
+    let j = i2 + 1;
+    while (j < state.tokens.length && state.tokens[j].type === "s_close") {
+      j++;
+    }
+    j--;
+    if (i2 !== j) {
+      token = state.tokens[j];
+      state.tokens[j] = state.tokens[i2];
+      state.tokens[i2] = token;
+    }
+  }
+}
+function strikethrough_postProcess(state) {
+  const tokens_meta = state.tokens_meta;
+  const max = state.tokens_meta.length;
+  postProcess$1(state, state.delimiters);
+  for (let curr = 0; curr < max; curr++) {
+    if (tokens_meta[curr] && tokens_meta[curr].delimiters) {
+      postProcess$1(state, tokens_meta[curr].delimiters);
+    }
+  }
+}
+const r_strikethrough = {
+  tokenize: strikethrough_tokenize,
+  postProcess: strikethrough_postProcess
+};
+function emphasis_tokenize(state, silent) {
+  const start = state.pos;
+  const marker = state.src.charCodeAt(start);
+  if (silent) {
+    return false;
+  }
+  if (marker !== 95 && marker !== 42) {
+    return false;
+  }
+  const scanned = state.scanDelims(state.pos, marker === 42);
+  for (let i2 = 0; i2 < scanned.length; i2++) {
+    const token = state.push("text", "", 0);
+    token.content = String.fromCharCode(marker);
+    state.delimiters.push({
+      // Char code of the starting marker (number).
+      //
+      marker,
+      // Total length of these series of delimiters.
+      //
+      length: scanned.length,
+      // A position of the token this delimiter corresponds to.
+      //
+      token: state.tokens.length - 1,
+      // If this delimiter is matched as a valid opener, `end` will be
+      // equal to its position, otherwise it's `-1`.
+      //
+      end: -1,
+      // Boolean flags that determine if this delimiter could open or close
+      // an emphasis.
+      //
+      open: scanned.can_open,
+      close: scanned.can_close
+    });
+  }
+  state.pos += scanned.length;
+  return true;
+}
+function postProcess(state, delimiters) {
+  const max = delimiters.length;
+  for (let i2 = max - 1; i2 >= 0; i2--) {
+    const startDelim = delimiters[i2];
+    if (startDelim.marker !== 95 && startDelim.marker !== 42) {
+      continue;
+    }
+    if (startDelim.end === -1) {
+      continue;
+    }
+    const endDelim = delimiters[startDelim.end];
+    const isStrong = i2 > 0 && delimiters[i2 - 1].end === startDelim.end + 1 && // check that first two markers match and adjacent
+    delimiters[i2 - 1].marker === startDelim.marker && delimiters[i2 - 1].token === startDelim.token - 1 && // check that last two markers are adjacent (we can safely assume they match)
+    delimiters[startDelim.end + 1].token === endDelim.token + 1;
+    const ch = String.fromCharCode(startDelim.marker);
+    const token_o = state.tokens[startDelim.token];
+    token_o.type = isStrong ? "strong_open" : "em_open";
+    token_o.tag = isStrong ? "strong" : "em";
+    token_o.nesting = 1;
+    token_o.markup = isStrong ? ch + ch : ch;
+    token_o.content = "";
+    const token_c = state.tokens[endDelim.token];
+    token_c.type = isStrong ? "strong_close" : "em_close";
+    token_c.tag = isStrong ? "strong" : "em";
+    token_c.nesting = -1;
+    token_c.markup = isStrong ? ch + ch : ch;
+    token_c.content = "";
+    if (isStrong) {
+      state.tokens[delimiters[i2 - 1].token].content = "";
+      state.tokens[delimiters[startDelim.end + 1].token].content = "";
+      i2--;
+    }
+  }
+}
+function emphasis_post_process(state) {
+  const tokens_meta = state.tokens_meta;
+  const max = state.tokens_meta.length;
+  postProcess(state, state.delimiters);
+  for (let curr = 0; curr < max; curr++) {
+    if (tokens_meta[curr] && tokens_meta[curr].delimiters) {
+      postProcess(state, tokens_meta[curr].delimiters);
+    }
+  }
+}
+const r_emphasis = {
+  tokenize: emphasis_tokenize,
+  postProcess: emphasis_post_process
+};
+function link(state, silent) {
+  let code2, label, res, ref2;
+  let href = "";
+  let title = "";
+  let start = state.pos;
+  let parseReference = true;
+  if (state.src.charCodeAt(state.pos) !== 91) {
+    return false;
+  }
+  const oldPos = state.pos;
+  const max = state.posMax;
+  const labelStart = state.pos + 1;
+  const labelEnd = state.md.helpers.parseLinkLabel(state, state.pos, true);
+  if (labelEnd < 0) {
+    return false;
+  }
+  let pos = labelEnd + 1;
+  if (pos < max && state.src.charCodeAt(pos) === 40) {
+    parseReference = false;
+    pos++;
+    for (; pos < max; pos++) {
+      code2 = state.src.charCodeAt(pos);
+      if (!isSpace(code2) && code2 !== 10) {
+        break;
+      }
+    }
+    if (pos >= max) {
+      return false;
+    }
+    start = pos;
+    res = state.md.helpers.parseLinkDestination(state.src, pos, state.posMax);
+    if (res.ok) {
+      href = state.md.normalizeLink(res.str);
+      if (state.md.validateLink(href)) {
+        pos = res.pos;
+      } else {
+        href = "";
+      }
+      start = pos;
+      for (; pos < max; pos++) {
+        code2 = state.src.charCodeAt(pos);
+        if (!isSpace(code2) && code2 !== 10) {
+          break;
+        }
+      }
+      res = state.md.helpers.parseLinkTitle(state.src, pos, state.posMax);
+      if (pos < max && start !== pos && res.ok) {
+        title = res.str;
+        pos = res.pos;
+        for (; pos < max; pos++) {
+          code2 = state.src.charCodeAt(pos);
+          if (!isSpace(code2) && code2 !== 10) {
+            break;
+          }
+        }
+      }
+    }
+    if (pos >= max || state.src.charCodeAt(pos) !== 41) {
+      parseReference = true;
+    }
+    pos++;
+  }
+  if (parseReference) {
+    if (typeof state.env.references === "undefined") {
+      return false;
+    }
+    if (pos < max && state.src.charCodeAt(pos) === 91) {
+      start = pos + 1;
+      pos = state.md.helpers.parseLinkLabel(state, pos);
+      if (pos >= 0) {
+        label = state.src.slice(start, pos++);
+      } else {
+        pos = labelEnd + 1;
+      }
+    } else {
+      pos = labelEnd + 1;
+    }
+    if (!label) {
+      label = state.src.slice(labelStart, labelEnd);
+    }
+    ref2 = state.env.references[normalizeReference(label)];
+    if (!ref2) {
+      state.pos = oldPos;
+      return false;
+    }
+    href = ref2.href;
+    title = ref2.title;
+  }
+  if (!silent) {
+    state.pos = labelStart;
+    state.posMax = labelEnd;
+    const token_o = state.push("link_open", "a", 1);
+    const attrs3 = [["href", href]];
+    token_o.attrs = attrs3;
+    if (title) {
+      attrs3.push(["title", title]);
+    }
+    state.linkLevel++;
+    state.md.inline.tokenize(state);
+    state.linkLevel--;
+    state.push("link_close", "a", -1);
+  }
+  state.pos = pos;
+  state.posMax = max;
+  return true;
+}
+function image(state, silent) {
+  let code2, content, label, pos, ref2, res, title, start;
+  let href = "";
+  const oldPos = state.pos;
+  const max = state.posMax;
+  if (state.src.charCodeAt(state.pos) !== 33) {
+    return false;
+  }
+  if (state.src.charCodeAt(state.pos + 1) !== 91) {
+    return false;
+  }
+  const labelStart = state.pos + 2;
+  const labelEnd = state.md.helpers.parseLinkLabel(state, state.pos + 1, false);
+  if (labelEnd < 0) {
+    return false;
+  }
+  pos = labelEnd + 1;
+  if (pos < max && state.src.charCodeAt(pos) === 40) {
+    pos++;
+    for (; pos < max; pos++) {
+      code2 = state.src.charCodeAt(pos);
+      if (!isSpace(code2) && code2 !== 10) {
+        break;
+      }
+    }
+    if (pos >= max) {
+      return false;
+    }
+    start = pos;
+    res = state.md.helpers.parseLinkDestination(state.src, pos, state.posMax);
+    if (res.ok) {
+      href = state.md.normalizeLink(res.str);
+      if (state.md.validateLink(href)) {
+        pos = res.pos;
+      } else {
+        href = "";
+      }
+    }
+    start = pos;
+    for (; pos < max; pos++) {
+      code2 = state.src.charCodeAt(pos);
+      if (!isSpace(code2) && code2 !== 10) {
+        break;
+      }
+    }
+    res = state.md.helpers.parseLinkTitle(state.src, pos, state.posMax);
+    if (pos < max && start !== pos && res.ok) {
+      title = res.str;
+      pos = res.pos;
+      for (; pos < max; pos++) {
+        code2 = state.src.charCodeAt(pos);
+        if (!isSpace(code2) && code2 !== 10) {
+          break;
+        }
+      }
+    } else {
+      title = "";
+    }
+    if (pos >= max || state.src.charCodeAt(pos) !== 41) {
+      state.pos = oldPos;
+      return false;
+    }
+    pos++;
+  } else {
+    if (typeof state.env.references === "undefined") {
+      return false;
+    }
+    if (pos < max && state.src.charCodeAt(pos) === 91) {
+      start = pos + 1;
+      pos = state.md.helpers.parseLinkLabel(state, pos);
+      if (pos >= 0) {
+        label = state.src.slice(start, pos++);
+      } else {
+        pos = labelEnd + 1;
+      }
+    } else {
+      pos = labelEnd + 1;
+    }
+    if (!label) {
+      label = state.src.slice(labelStart, labelEnd);
+    }
+    ref2 = state.env.references[normalizeReference(label)];
+    if (!ref2) {
+      state.pos = oldPos;
+      return false;
+    }
+    href = ref2.href;
+    title = ref2.title;
+  }
+  if (!silent) {
+    content = state.src.slice(labelStart, labelEnd);
+    const tokens = [];
+    state.md.inline.parse(
+      content,
+      state.md,
+      state.env,
+      tokens
+    );
+    const token = state.push("image", "img", 0);
+    const attrs3 = [["src", href], ["alt", ""]];
+    token.attrs = attrs3;
+    token.children = tokens;
+    token.content = content;
+    if (title) {
+      attrs3.push(["title", title]);
+    }
+  }
+  state.pos = pos;
+  state.posMax = max;
+  return true;
+}
+const EMAIL_RE = /^([a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*)$/;
+const AUTOLINK_RE = /^([a-zA-Z][a-zA-Z0-9+.-]{1,31}):([^<>\x00-\x20]*)$/;
+function autolink(state, silent) {
+  let pos = state.pos;
+  if (state.src.charCodeAt(pos) !== 60) {
+    return false;
+  }
+  const start = state.pos;
+  const max = state.posMax;
+  for (; ; ) {
+    if (++pos >= max) return false;
+    const ch = state.src.charCodeAt(pos);
+    if (ch === 60) return false;
+    if (ch === 62) break;
+  }
+  const url = state.src.slice(start + 1, pos);
+  if (AUTOLINK_RE.test(url)) {
+    const fullUrl = state.md.normalizeLink(url);
+    if (!state.md.validateLink(fullUrl)) {
+      return false;
+    }
+    if (!silent) {
+      const token_o = state.push("link_open", "a", 1);
+      token_o.attrs = [["href", fullUrl]];
+      token_o.markup = "autolink";
+      token_o.info = "auto";
+      const token_t = state.push("text", "", 0);
+      token_t.content = state.md.normalizeLinkText(url);
+      const token_c = state.push("link_close", "a", -1);
+      token_c.markup = "autolink";
+      token_c.info = "auto";
+    }
+    state.pos += url.length + 2;
+    return true;
+  }
+  if (EMAIL_RE.test(url)) {
+    const fullUrl = state.md.normalizeLink("mailto:" + url);
+    if (!state.md.validateLink(fullUrl)) {
+      return false;
+    }
+    if (!silent) {
+      const token_o = state.push("link_open", "a", 1);
+      token_o.attrs = [["href", fullUrl]];
+      token_o.markup = "autolink";
+      token_o.info = "auto";
+      const token_t = state.push("text", "", 0);
+      token_t.content = state.md.normalizeLinkText(url);
+      const token_c = state.push("link_close", "a", -1);
+      token_c.markup = "autolink";
+      token_c.info = "auto";
+    }
+    state.pos += url.length + 2;
+    return true;
+  }
+  return false;
+}
+function isLinkOpen(str) {
+  return /^<a[>\s]/i.test(str);
+}
+function isLinkClose(str) {
+  return /^<\/a\s*>/i.test(str);
+}
+function isLetter(ch) {
+  const lc = ch | 32;
+  return lc >= 97 && lc <= 122;
+}
+function html_inline(state, silent) {
+  if (!state.md.options.html) {
+    return false;
+  }
+  const max = state.posMax;
+  const pos = state.pos;
+  if (state.src.charCodeAt(pos) !== 60 || pos + 2 >= max) {
+    return false;
+  }
+  const ch = state.src.charCodeAt(pos + 1);
+  if (ch !== 33 && ch !== 63 && ch !== 47 && !isLetter(ch)) {
+    return false;
+  }
+  const match2 = state.src.slice(pos).match(HTML_TAG_RE);
+  if (!match2) {
+    return false;
+  }
+  if (!silent) {
+    const token = state.push("html_inline", "", 0);
+    token.content = match2[0];
+    if (isLinkOpen(token.content)) state.linkLevel++;
+    if (isLinkClose(token.content)) state.linkLevel--;
+  }
+  state.pos += match2[0].length;
+  return true;
+}
+const DIGITAL_RE = /^&#((?:x[a-f0-9]{1,6}|[0-9]{1,7}));/i;
+const NAMED_RE = /^&([a-z][a-z0-9]{1,31});/i;
+function entity(state, silent) {
+  const pos = state.pos;
+  const max = state.posMax;
+  if (state.src.charCodeAt(pos) !== 38) return false;
+  if (pos + 1 >= max) return false;
+  const ch = state.src.charCodeAt(pos + 1);
+  if (ch === 35) {
+    const match2 = state.src.slice(pos).match(DIGITAL_RE);
+    if (match2) {
+      if (!silent) {
+        const code2 = match2[1][0].toLowerCase() === "x" ? parseInt(match2[1].slice(1), 16) : parseInt(match2[1], 10);
+        const token = state.push("text_special", "", 0);
+        token.content = isValidEntityCode(code2) ? fromCodePoint(code2) : fromCodePoint(65533);
+        token.markup = match2[0];
+        token.info = "entity";
+      }
+      state.pos += match2[0].length;
+      return true;
+    }
+  } else {
+    const match2 = state.src.slice(pos).match(NAMED_RE);
+    if (match2) {
+      const decoded = decodeHTML(match2[0]);
+      if (decoded !== match2[0]) {
+        if (!silent) {
+          const token = state.push("text_special", "", 0);
+          token.content = decoded;
+          token.markup = match2[0];
+          token.info = "entity";
+        }
+        state.pos += match2[0].length;
+        return true;
+      }
+    }
+  }
+  return false;
+}
+function processDelimiters(delimiters) {
+  const openersBottom = {};
+  const max = delimiters.length;
+  if (!max) return;
+  let headerIdx = 0;
+  let lastTokenIdx = -2;
+  const jumps = [];
+  for (let closerIdx = 0; closerIdx < max; closerIdx++) {
+    const closer = delimiters[closerIdx];
+    jumps.push(0);
+    if (delimiters[headerIdx].marker !== closer.marker || lastTokenIdx !== closer.token - 1) {
+      headerIdx = closerIdx;
+    }
+    lastTokenIdx = closer.token;
+    closer.length = closer.length || 0;
+    if (!closer.close) continue;
+    if (!openersBottom.hasOwnProperty(closer.marker)) {
+      openersBottom[closer.marker] = [-1, -1, -1, -1, -1, -1];
+    }
+    const minOpenerIdx = openersBottom[closer.marker][(closer.open ? 3 : 0) + closer.length % 3];
+    let openerIdx = headerIdx - jumps[headerIdx] - 1;
+    let newMinOpenerIdx = openerIdx;
+    for (; openerIdx > minOpenerIdx; openerIdx -= jumps[openerIdx] + 1) {
+      const opener = delimiters[openerIdx];
+      if (opener.marker !== closer.marker) continue;
+      if (opener.open && opener.end < 0) {
+        let isOddMatch = false;
+        if (opener.close || closer.open) {
+          if ((opener.length + closer.length) % 3 === 0) {
+            if (opener.length % 3 !== 0 || closer.length % 3 !== 0) {
+              isOddMatch = true;
+            }
+          }
+        }
+        if (!isOddMatch) {
+          const lastJump = openerIdx > 0 && !delimiters[openerIdx - 1].open ? jumps[openerIdx - 1] + 1 : 0;
+          jumps[closerIdx] = closerIdx - openerIdx + lastJump;
+          jumps[openerIdx] = lastJump;
+          closer.open = false;
+          opener.end = closerIdx;
+          opener.close = false;
+          newMinOpenerIdx = -1;
+          lastTokenIdx = -2;
+          break;
+        }
+      }
+    }
+    if (newMinOpenerIdx !== -1) {
+      openersBottom[closer.marker][(closer.open ? 3 : 0) + (closer.length || 0) % 3] = newMinOpenerIdx;
+    }
+  }
+}
+function link_pairs(state) {
+  const tokens_meta = state.tokens_meta;
+  const max = state.tokens_meta.length;
+  processDelimiters(state.delimiters);
+  for (let curr = 0; curr < max; curr++) {
+    if (tokens_meta[curr] && tokens_meta[curr].delimiters) {
+      processDelimiters(tokens_meta[curr].delimiters);
+    }
+  }
+}
+function fragments_join(state) {
+  let curr, last;
+  let level = 0;
+  const tokens = state.tokens;
+  const max = state.tokens.length;
+  for (curr = last = 0; curr < max; curr++) {
+    if (tokens[curr].nesting < 0) level--;
+    tokens[curr].level = level;
+    if (tokens[curr].nesting > 0) level++;
+    if (tokens[curr].type === "text" && curr + 1 < max && tokens[curr + 1].type === "text") {
+      tokens[curr + 1].content = tokens[curr].content + tokens[curr + 1].content;
+    } else {
+      if (curr !== last) {
+        tokens[last] = tokens[curr];
+      }
+      last++;
+    }
+  }
+  if (curr !== last) {
+    tokens.length = last;
+  }
+}
+const _rules = [
+  ["text", text],
+  ["linkify", linkify],
+  ["newline", newline],
+  ["escape", escape],
+  ["backticks", backtick],
+  ["strikethrough", r_strikethrough.tokenize],
+  ["emphasis", r_emphasis.tokenize],
+  ["link", link],
+  ["image", image],
+  ["autolink", autolink],
+  ["html_inline", html_inline],
+  ["entity", entity]
+];
+const _rules2 = [
+  ["balance_pairs", link_pairs],
+  ["strikethrough", r_strikethrough.postProcess],
+  ["emphasis", r_emphasis.postProcess],
+  // rules for pairs separate '**' into its own text tokens, which may be left unused,
+  // rule below merges unused segments back with the rest of the text
+  ["fragments_join", fragments_join]
+];
+function ParserInline() {
+  this.ruler = new Ruler();
+  for (let i2 = 0; i2 < _rules.length; i2++) {
+    this.ruler.push(_rules[i2][0], _rules[i2][1]);
+  }
+  this.ruler2 = new Ruler();
+  for (let i2 = 0; i2 < _rules2.length; i2++) {
+    this.ruler2.push(_rules2[i2][0], _rules2[i2][1]);
+  }
+}
+ParserInline.prototype.skipToken = function(state) {
+  const pos = state.pos;
+  const rules = this.ruler.getRules("");
+  const len = rules.length;
+  const maxNesting = state.md.options.maxNesting;
+  const cache = state.cache;
+  if (typeof cache[pos] !== "undefined") {
+    state.pos = cache[pos];
+    return;
+  }
+  let ok = false;
+  if (state.level < maxNesting) {
+    for (let i2 = 0; i2 < len; i2++) {
+      state.level++;
+      ok = rules[i2](state, true);
+      state.level--;
+      if (ok) {
+        if (pos >= state.pos) {
+          throw new Error("inline rule didn't increment state.pos");
+        }
+        break;
+      }
+    }
+  } else {
+    state.pos = state.posMax;
+  }
+  if (!ok) {
+    state.pos++;
+  }
+  cache[pos] = state.pos;
+};
+ParserInline.prototype.tokenize = function(state) {
+  const rules = this.ruler.getRules("");
+  const len = rules.length;
+  const end = state.posMax;
+  const maxNesting = state.md.options.maxNesting;
+  while (state.pos < end) {
+    const prevPos = state.pos;
+    let ok = false;
+    if (state.level < maxNesting) {
+      for (let i2 = 0; i2 < len; i2++) {
+        ok = rules[i2](state, false);
+        if (ok) {
+          if (prevPos >= state.pos) {
+            throw new Error("inline rule didn't increment state.pos");
+          }
+          break;
+        }
+      }
+    }
+    if (ok) {
+      if (state.pos >= end) {
+        break;
+      }
+      continue;
+    }
+    state.pending += state.src[state.pos++];
+  }
+  if (state.pending) {
+    state.pushPending();
+  }
+};
+ParserInline.prototype.parse = function(str, md, env, outTokens) {
+  const state = new this.State(str, md, env, outTokens);
+  this.tokenize(state);
+  const rules = this.ruler2.getRules("");
+  const len = rules.length;
+  for (let i2 = 0; i2 < len; i2++) {
+    rules[i2](state);
+  }
+};
+ParserInline.prototype.State = StateInline;
+function reFactory(opts) {
+  const re = {};
+  opts = opts || {};
+  re.src_Any = Any.source;
+  re.src_Cc = Cc.source;
+  re.src_Z = Z.source;
+  re.src_P = P.source;
+  re.src_ZPCc = [re.src_Z, re.src_P, re.src_Cc].join("|");
+  re.src_ZCc = [re.src_Z, re.src_Cc].join("|");
+  const text_separators = "[><｜]";
+  re.src_pseudo_letter = "(?:(?!" + text_separators + "|" + re.src_ZPCc + ")" + re.src_Any + ")";
+  re.src_ip4 = "(?:(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)";
+  re.src_auth = "(?:(?:(?!" + re.src_ZCc + "|[@/\\[\\]()]).)+@)?";
+  re.src_port = "(?::(?:6(?:[0-4]\\d{3}|5(?:[0-4]\\d{2}|5(?:[0-2]\\d|3[0-5])))|[1-5]?\\d{1,4}))?";
+  re.src_host_terminator = "(?=$|" + text_separators + "|" + re.src_ZPCc + ")(?!" + (opts["---"] ? "-(?!--)|" : "-|") + "_|:\\d|\\.-|\\.(?!$|" + re.src_ZPCc + "))";
+  re.src_path = "(?:[/?#](?:(?!" + re.src_ZCc + "|" + text_separators + `|[()[\\]{}.,"'?!\\-;]).|\\[(?:(?!` + re.src_ZCc + "|\\]).)*\\]|\\((?:(?!" + re.src_ZCc + "|[)]).)*\\)|\\{(?:(?!" + re.src_ZCc + '|[}]).)*\\}|\\"(?:(?!' + re.src_ZCc + `|["]).)+\\"|\\'(?:(?!` + re.src_ZCc + "|[']).)+\\'|\\'(?=" + re.src_pseudo_letter + "|[-])|\\.{2,}[a-zA-Z0-9%/&]|\\.(?!" + re.src_ZCc + "|[.]|$)|" + (opts["---"] ? "\\-(?!--(?:[^-]|$))(?:-*)|" : "\\-+|") + // allow `,,,` in paths
+  ",(?!" + re.src_ZCc + "|$)|;(?!" + re.src_ZCc + "|$)|\\!+(?!" + re.src_ZCc + "|[!]|$)|\\?(?!" + re.src_ZCc + "|[?]|$))+|\\/)?";
+  re.src_email_name = '[\\-;:&=\\+\\$,\\.a-zA-Z0-9_][\\-;:&=\\+\\$,\\"\\.a-zA-Z0-9_]*';
+  re.src_xn = "xn--[a-z0-9\\-]{1,59}";
+  re.src_domain_root = // Allow letters & digits (http://test1)
+  "(?:" + re.src_xn + "|" + re.src_pseudo_letter + "{1,63})";
+  re.src_domain = "(?:" + re.src_xn + "|(?:" + re.src_pseudo_letter + ")|(?:" + re.src_pseudo_letter + "(?:-|" + re.src_pseudo_letter + "){0,61}" + re.src_pseudo_letter + "))";
+  re.src_host = "(?:(?:(?:(?:" + re.src_domain + ")\\.)*" + re.src_domain + "))";
+  re.tpl_host_fuzzy = "(?:" + re.src_ip4 + "|(?:(?:(?:" + re.src_domain + ")\\.)+(?:%TLDS%)))";
+  re.tpl_host_no_ip_fuzzy = "(?:(?:(?:" + re.src_domain + ")\\.)+(?:%TLDS%))";
+  re.src_host_strict = re.src_host + re.src_host_terminator;
+  re.tpl_host_fuzzy_strict = re.tpl_host_fuzzy + re.src_host_terminator;
+  re.src_host_port_strict = re.src_host + re.src_port + re.src_host_terminator;
+  re.tpl_host_port_fuzzy_strict = re.tpl_host_fuzzy + re.src_port + re.src_host_terminator;
+  re.tpl_host_port_no_ip_fuzzy_strict = re.tpl_host_no_ip_fuzzy + re.src_port + re.src_host_terminator;
+  re.tpl_host_fuzzy_test = "localhost|www\\.|\\.\\d{1,3}\\.|(?:\\.(?:%TLDS%)(?:" + re.src_ZPCc + "|>|$))";
+  re.tpl_email_fuzzy = "(^|" + text_separators + '|"|\\(|' + re.src_ZCc + ")(" + re.src_email_name + "@" + re.tpl_host_fuzzy_strict + ")";
+  re.tpl_link_fuzzy = // Fuzzy link can't be prepended with .:/\- and non punctuation.
+  // but can start with > (markdown blockquote)
+  "(^|(?![.:/\\-_@])(?:[$+<=>^`|｜]|" + re.src_ZPCc + "))((?![$+<=>^`|｜])" + re.tpl_host_port_fuzzy_strict + re.src_path + ")";
+  re.tpl_link_no_ip_fuzzy = // Fuzzy link can't be prepended with .:/\- and non punctuation.
+  // but can start with > (markdown blockquote)
+  "(^|(?![.:/\\-_@])(?:[$+<=>^`|｜]|" + re.src_ZPCc + "))((?![$+<=>^`|｜])" + re.tpl_host_port_no_ip_fuzzy_strict + re.src_path + ")";
+  return re;
+}
+function assign(obj) {
+  const sources = Array.prototype.slice.call(arguments, 1);
+  sources.forEach(function(source) {
+    if (!source) {
+      return;
+    }
+    Object.keys(source).forEach(function(key) {
+      obj[key] = source[key];
+    });
+  });
+  return obj;
+}
+function _class(obj) {
+  return Object.prototype.toString.call(obj);
+}
+function isString(obj) {
+  return _class(obj) === "[object String]";
+}
+function isObject(obj) {
+  return _class(obj) === "[object Object]";
+}
+function isRegExp(obj) {
+  return _class(obj) === "[object RegExp]";
+}
+function isFunction(obj) {
+  return _class(obj) === "[object Function]";
+}
+function escapeRE(str) {
+  return str.replace(/[.?*+^$[\]\\(){}|-]/g, "\\$&");
+}
+const defaultOptions = {
+  fuzzyLink: true,
+  fuzzyEmail: true,
+  fuzzyIP: false
+};
+function isOptionsObj(obj) {
+  return Object.keys(obj || {}).reduce(function(acc, k2) {
+    return acc || defaultOptions.hasOwnProperty(k2);
+  }, false);
+}
+const defaultSchemas = {
+  "http:": {
+    validate: function(text2, pos, self2) {
+      const tail = text2.slice(pos);
+      if (!self2.re.http) {
+        self2.re.http = new RegExp(
+          "^\\/\\/" + self2.re.src_auth + self2.re.src_host_port_strict + self2.re.src_path,
+          "i"
+        );
+      }
+      if (self2.re.http.test(tail)) {
+        return tail.match(self2.re.http)[0].length;
+      }
+      return 0;
+    }
+  },
+  "https:": "http:",
+  "ftp:": "http:",
+  "//": {
+    validate: function(text2, pos, self2) {
+      const tail = text2.slice(pos);
+      if (!self2.re.no_http) {
+        self2.re.no_http = new RegExp(
+          "^" + self2.re.src_auth + // Don't allow single-level domains, because of false positives like '//test'
+          // with code comments
+          "(?:localhost|(?:(?:" + self2.re.src_domain + ")\\.)+" + self2.re.src_domain_root + ")" + self2.re.src_port + self2.re.src_host_terminator + self2.re.src_path,
+          "i"
+        );
+      }
+      if (self2.re.no_http.test(tail)) {
+        if (pos >= 3 && text2[pos - 3] === ":") {
+          return 0;
+        }
+        if (pos >= 3 && text2[pos - 3] === "/") {
+          return 0;
+        }
+        return tail.match(self2.re.no_http)[0].length;
+      }
+      return 0;
+    }
+  },
+  "mailto:": {
+    validate: function(text2, pos, self2) {
+      const tail = text2.slice(pos);
+      if (!self2.re.mailto) {
+        self2.re.mailto = new RegExp(
+          "^" + self2.re.src_email_name + "@" + self2.re.src_host_strict,
+          "i"
+        );
+      }
+      if (self2.re.mailto.test(tail)) {
+        return tail.match(self2.re.mailto)[0].length;
+      }
+      return 0;
+    }
+  }
+};
+const tlds_2ch_src_re = "a[cdefgilmnoqrstuwxz]|b[abdefghijmnorstvwyz]|c[acdfghiklmnoruvwxyz]|d[ejkmoz]|e[cegrstu]|f[ijkmor]|g[abdefghilmnpqrstuwy]|h[kmnrtu]|i[delmnoqrst]|j[emop]|k[eghimnprwyz]|l[abcikrstuvy]|m[acdeghklmnopqrstuvwxyz]|n[acefgilopruz]|om|p[aefghklmnrstwy]|qa|r[eosuw]|s[abcdeghijklmnortuvxyz]|t[cdfghjklmnortvwz]|u[agksyz]|v[aceginu]|w[fs]|y[et]|z[amw]";
+const tlds_default = "biz|com|edu|gov|net|org|pro|web|xxx|aero|asia|coop|info|museum|name|shop|рф".split("|");
+function resetScanCache(self2) {
+  self2.__index__ = -1;
+  self2.__text_cache__ = "";
+}
+function createValidator(re) {
+  return function(text2, pos) {
+    const tail = text2.slice(pos);
+    if (re.test(tail)) {
+      return tail.match(re)[0].length;
+    }
+    return 0;
+  };
+}
+function createNormalizer() {
+  return function(match2, self2) {
+    self2.normalize(match2);
+  };
+}
+function compile(self2) {
+  const re = self2.re = reFactory(self2.__opts__);
+  const tlds2 = self2.__tlds__.slice();
+  self2.onCompile();
+  if (!self2.__tlds_replaced__) {
+    tlds2.push(tlds_2ch_src_re);
+  }
+  tlds2.push(re.src_xn);
+  re.src_tlds = tlds2.join("|");
+  function untpl(tpl) {
+    return tpl.replace("%TLDS%", re.src_tlds);
+  }
+  re.email_fuzzy = RegExp(untpl(re.tpl_email_fuzzy), "i");
+  re.link_fuzzy = RegExp(untpl(re.tpl_link_fuzzy), "i");
+  re.link_no_ip_fuzzy = RegExp(untpl(re.tpl_link_no_ip_fuzzy), "i");
+  re.host_fuzzy_test = RegExp(untpl(re.tpl_host_fuzzy_test), "i");
+  const aliases = [];
+  self2.__compiled__ = {};
+  function schemaError(name, val) {
+    throw new Error('(LinkifyIt) Invalid schema "' + name + '": ' + val);
+  }
+  Object.keys(self2.__schemas__).forEach(function(name) {
+    const val = self2.__schemas__[name];
+    if (val === null) {
+      return;
+    }
+    const compiled = { validate: null, link: null };
+    self2.__compiled__[name] = compiled;
+    if (isObject(val)) {
+      if (isRegExp(val.validate)) {
+        compiled.validate = createValidator(val.validate);
+      } else if (isFunction(val.validate)) {
+        compiled.validate = val.validate;
+      } else {
+        schemaError(name, val);
+      }
+      if (isFunction(val.normalize)) {
+        compiled.normalize = val.normalize;
+      } else if (!val.normalize) {
+        compiled.normalize = createNormalizer();
+      } else {
+        schemaError(name, val);
+      }
+      return;
+    }
+    if (isString(val)) {
+      aliases.push(name);
+      return;
+    }
+    schemaError(name, val);
+  });
+  aliases.forEach(function(alias) {
+    if (!self2.__compiled__[self2.__schemas__[alias]]) {
+      return;
+    }
+    self2.__compiled__[alias].validate = self2.__compiled__[self2.__schemas__[alias]].validate;
+    self2.__compiled__[alias].normalize = self2.__compiled__[self2.__schemas__[alias]].normalize;
+  });
+  self2.__compiled__[""] = { validate: null, normalize: createNormalizer() };
+  const slist = Object.keys(self2.__compiled__).filter(function(name) {
+    return name.length > 0 && self2.__compiled__[name];
+  }).map(escapeRE).join("|");
+  self2.re.schema_test = RegExp("(^|(?!_)(?:[><｜]|" + re.src_ZPCc + "))(" + slist + ")", "i");
+  self2.re.schema_search = RegExp("(^|(?!_)(?:[><｜]|" + re.src_ZPCc + "))(" + slist + ")", "ig");
+  self2.re.schema_at_start = RegExp("^" + self2.re.schema_search.source, "i");
+  self2.re.pretest = RegExp(
+    "(" + self2.re.schema_test.source + ")|(" + self2.re.host_fuzzy_test.source + ")|@",
+    "i"
+  );
+  resetScanCache(self2);
+}
+function Match(self2, shift) {
+  const start = self2.__index__;
+  const end = self2.__last_index__;
+  const text2 = self2.__text_cache__.slice(start, end);
+  this.schema = self2.__schema__.toLowerCase();
+  this.index = start + shift;
+  this.lastIndex = end + shift;
+  this.raw = text2;
+  this.text = text2;
+  this.url = text2;
+}
+function createMatch(self2, shift) {
+  const match2 = new Match(self2, shift);
+  self2.__compiled__[match2.schema].normalize(match2, self2);
+  return match2;
+}
+function LinkifyIt(schemas, options) {
+  if (!(this instanceof LinkifyIt)) {
+    return new LinkifyIt(schemas, options);
+  }
+  if (!options) {
+    if (isOptionsObj(schemas)) {
+      options = schemas;
+      schemas = {};
+    }
+  }
+  this.__opts__ = assign({}, defaultOptions, options);
+  this.__index__ = -1;
+  this.__last_index__ = -1;
+  this.__schema__ = "";
+  this.__text_cache__ = "";
+  this.__schemas__ = assign({}, defaultSchemas, schemas);
+  this.__compiled__ = {};
+  this.__tlds__ = tlds_default;
+  this.__tlds_replaced__ = false;
+  this.re = {};
+  compile(this);
+}
+LinkifyIt.prototype.add = function add(schema, definition) {
+  this.__schemas__[schema] = definition;
+  compile(this);
+  return this;
+};
+LinkifyIt.prototype.set = function set(options) {
+  this.__opts__ = assign(this.__opts__, options);
+  return this;
+};
+LinkifyIt.prototype.test = function test(text2) {
+  this.__text_cache__ = text2;
+  this.__index__ = -1;
+  if (!text2.length) {
+    return false;
+  }
+  let m2, ml, me, len, shift, next, re, tld_pos, at_pos;
+  if (this.re.schema_test.test(text2)) {
+    re = this.re.schema_search;
+    re.lastIndex = 0;
+    while ((m2 = re.exec(text2)) !== null) {
+      len = this.testSchemaAt(text2, m2[2], re.lastIndex);
+      if (len) {
+        this.__schema__ = m2[2];
+        this.__index__ = m2.index + m2[1].length;
+        this.__last_index__ = m2.index + m2[0].length + len;
+        break;
+      }
+    }
+  }
+  if (this.__opts__.fuzzyLink && this.__compiled__["http:"]) {
+    tld_pos = text2.search(this.re.host_fuzzy_test);
+    if (tld_pos >= 0) {
+      if (this.__index__ < 0 || tld_pos < this.__index__) {
+        if ((ml = text2.match(this.__opts__.fuzzyIP ? this.re.link_fuzzy : this.re.link_no_ip_fuzzy)) !== null) {
+          shift = ml.index + ml[1].length;
+          if (this.__index__ < 0 || shift < this.__index__) {
+            this.__schema__ = "";
+            this.__index__ = shift;
+            this.__last_index__ = ml.index + ml[0].length;
+          }
+        }
+      }
+    }
+  }
+  if (this.__opts__.fuzzyEmail && this.__compiled__["mailto:"]) {
+    at_pos = text2.indexOf("@");
+    if (at_pos >= 0) {
+      if ((me = text2.match(this.re.email_fuzzy)) !== null) {
+        shift = me.index + me[1].length;
+        next = me.index + me[0].length;
+        if (this.__index__ < 0 || shift < this.__index__ || shift === this.__index__ && next > this.__last_index__) {
+          this.__schema__ = "mailto:";
+          this.__index__ = shift;
+          this.__last_index__ = next;
+        }
+      }
+    }
+  }
+  return this.__index__ >= 0;
+};
+LinkifyIt.prototype.pretest = function pretest(text2) {
+  return this.re.pretest.test(text2);
+};
+LinkifyIt.prototype.testSchemaAt = function testSchemaAt(text2, schema, pos) {
+  if (!this.__compiled__[schema.toLowerCase()]) {
+    return 0;
+  }
+  return this.__compiled__[schema.toLowerCase()].validate(text2, pos, this);
+};
+LinkifyIt.prototype.match = function match(text2) {
+  const result = [];
+  let shift = 0;
+  if (this.__index__ >= 0 && this.__text_cache__ === text2) {
+    result.push(createMatch(this, shift));
+    shift = this.__last_index__;
+  }
+  let tail = shift ? text2.slice(shift) : text2;
+  while (this.test(tail)) {
+    result.push(createMatch(this, shift));
+    tail = tail.slice(this.__last_index__);
+    shift += this.__last_index__;
+  }
+  if (result.length) {
+    return result;
+  }
+  return null;
+};
+LinkifyIt.prototype.matchAtStart = function matchAtStart(text2) {
+  this.__text_cache__ = text2;
+  this.__index__ = -1;
+  if (!text2.length) return null;
+  const m2 = this.re.schema_at_start.exec(text2);
+  if (!m2) return null;
+  const len = this.testSchemaAt(text2, m2[2], m2[0].length);
+  if (!len) return null;
+  this.__schema__ = m2[2];
+  this.__index__ = m2.index + m2[1].length;
+  this.__last_index__ = m2.index + m2[0].length + len;
+  return createMatch(this, 0);
+};
+LinkifyIt.prototype.tlds = function tlds(list2, keepOld) {
+  list2 = Array.isArray(list2) ? list2 : [list2];
+  if (!keepOld) {
+    this.__tlds__ = list2.slice();
+    this.__tlds_replaced__ = true;
+    compile(this);
+    return this;
+  }
+  this.__tlds__ = this.__tlds__.concat(list2).sort().filter(function(el, idx, arr) {
+    return el !== arr[idx - 1];
+  }).reverse();
+  compile(this);
+  return this;
+};
+LinkifyIt.prototype.normalize = function normalize2(match2) {
+  if (!match2.schema) {
+    match2.url = "http://" + match2.url;
+  }
+  if (match2.schema === "mailto:" && !/^mailto:/i.test(match2.url)) {
+    match2.url = "mailto:" + match2.url;
+  }
+};
+LinkifyIt.prototype.onCompile = function onCompile() {
+};
+const maxInt = 2147483647;
+const base = 36;
+const tMin = 1;
+const tMax = 26;
+const skew = 38;
+const damp = 700;
+const initialBias = 72;
+const initialN = 128;
+const delimiter = "-";
+const regexPunycode = /^xn--/;
+const regexNonASCII = /[^\0-\x7F]/;
+const regexSeparators = /[\x2E\u3002\uFF0E\uFF61]/g;
+const errors = {
+  "overflow": "Overflow: input needs wider integers to process",
+  "not-basic": "Illegal input >= 0x80 (not a basic code point)",
+  "invalid-input": "Invalid input"
+};
+const baseMinusTMin = base - tMin;
+const floor = Math.floor;
+const stringFromCharCode = String.fromCharCode;
+function error(type) {
+  throw new RangeError(errors[type]);
+}
+function map(array, callback) {
+  const result = [];
+  let length = array.length;
+  while (length--) {
+    result[length] = callback(array[length]);
+  }
+  return result;
+}
+function mapDomain(domain, callback) {
+  const parts = domain.split("@");
+  let result = "";
+  if (parts.length > 1) {
+    result = parts[0] + "@";
+    domain = parts[1];
+  }
+  domain = domain.replace(regexSeparators, ".");
+  const labels = domain.split(".");
+  const encoded = map(labels, callback).join(".");
+  return result + encoded;
+}
+function ucs2decode(string) {
+  const output = [];
+  let counter = 0;
+  const length = string.length;
+  while (counter < length) {
+    const value = string.charCodeAt(counter++);
+    if (value >= 55296 && value <= 56319 && counter < length) {
+      const extra = string.charCodeAt(counter++);
+      if ((extra & 64512) == 56320) {
+        output.push(((value & 1023) << 10) + (extra & 1023) + 65536);
+      } else {
+        output.push(value);
+        counter--;
+      }
+    } else {
+      output.push(value);
+    }
+  }
+  return output;
+}
+const ucs2encode = (codePoints) => String.fromCodePoint(...codePoints);
+const basicToDigit = function(codePoint) {
+  if (codePoint >= 48 && codePoint < 58) {
+    return 26 + (codePoint - 48);
+  }
+  if (codePoint >= 65 && codePoint < 91) {
+    return codePoint - 65;
+  }
+  if (codePoint >= 97 && codePoint < 123) {
+    return codePoint - 97;
+  }
+  return base;
+};
+const digitToBasic = function(digit, flag) {
+  return digit + 22 + 75 * (digit < 26) - ((flag != 0) << 5);
+};
+const adapt = function(delta, numPoints, firstTime) {
+  let k2 = 0;
+  delta = firstTime ? floor(delta / damp) : delta >> 1;
+  delta += floor(delta / numPoints);
+  for (; delta > baseMinusTMin * tMax >> 1; k2 += base) {
+    delta = floor(delta / baseMinusTMin);
+  }
+  return floor(k2 + (baseMinusTMin + 1) * delta / (delta + skew));
+};
+const decode = function(input) {
+  const output = [];
+  const inputLength = input.length;
+  let i2 = 0;
+  let n2 = initialN;
+  let bias = initialBias;
+  let basic = input.lastIndexOf(delimiter);
+  if (basic < 0) {
+    basic = 0;
+  }
+  for (let j = 0; j < basic; ++j) {
+    if (input.charCodeAt(j) >= 128) {
+      error("not-basic");
+    }
+    output.push(input.charCodeAt(j));
+  }
+  for (let index = basic > 0 ? basic + 1 : 0; index < inputLength; ) {
+    const oldi = i2;
+    for (let w = 1, k2 = base; ; k2 += base) {
+      if (index >= inputLength) {
+        error("invalid-input");
+      }
+      const digit = basicToDigit(input.charCodeAt(index++));
+      if (digit >= base) {
+        error("invalid-input");
+      }
+      if (digit > floor((maxInt - i2) / w)) {
+        error("overflow");
+      }
+      i2 += digit * w;
+      const t2 = k2 <= bias ? tMin : k2 >= bias + tMax ? tMax : k2 - bias;
+      if (digit < t2) {
+        break;
+      }
+      const baseMinusT = base - t2;
+      if (w > floor(maxInt / baseMinusT)) {
+        error("overflow");
+      }
+      w *= baseMinusT;
+    }
+    const out = output.length + 1;
+    bias = adapt(i2 - oldi, out, oldi == 0);
+    if (floor(i2 / out) > maxInt - n2) {
+      error("overflow");
+    }
+    n2 += floor(i2 / out);
+    i2 %= out;
+    output.splice(i2++, 0, n2);
+  }
+  return String.fromCodePoint(...output);
+};
+const encode = function(input) {
+  const output = [];
+  input = ucs2decode(input);
+  const inputLength = input.length;
+  let n2 = initialN;
+  let delta = 0;
+  let bias = initialBias;
+  for (const currentValue of input) {
+    if (currentValue < 128) {
+      output.push(stringFromCharCode(currentValue));
+    }
+  }
+  const basicLength = output.length;
+  let handledCPCount = basicLength;
+  if (basicLength) {
+    output.push(delimiter);
+  }
+  while (handledCPCount < inputLength) {
+    let m2 = maxInt;
+    for (const currentValue of input) {
+      if (currentValue >= n2 && currentValue < m2) {
+        m2 = currentValue;
+      }
+    }
+    const handledCPCountPlusOne = handledCPCount + 1;
+    if (m2 - n2 > floor((maxInt - delta) / handledCPCountPlusOne)) {
+      error("overflow");
+    }
+    delta += (m2 - n2) * handledCPCountPlusOne;
+    n2 = m2;
+    for (const currentValue of input) {
+      if (currentValue < n2 && ++delta > maxInt) {
+        error("overflow");
+      }
+      if (currentValue === n2) {
+        let q = delta;
+        for (let k2 = base; ; k2 += base) {
+          const t2 = k2 <= bias ? tMin : k2 >= bias + tMax ? tMax : k2 - bias;
+          if (q < t2) {
+            break;
+          }
+          const qMinusT = q - t2;
+          const baseMinusT = base - t2;
+          output.push(
+            stringFromCharCode(digitToBasic(t2 + qMinusT % baseMinusT, 0))
+          );
+          q = floor(qMinusT / baseMinusT);
+        }
+        output.push(stringFromCharCode(digitToBasic(q, 0)));
+        bias = adapt(delta, handledCPCountPlusOne, handledCPCount === basicLength);
+        delta = 0;
+        ++handledCPCount;
+      }
+    }
+    ++delta;
+    ++n2;
+  }
+  return output.join("");
+};
+const toUnicode = function(input) {
+  return mapDomain(input, function(string) {
+    return regexPunycode.test(string) ? decode(string.slice(4).toLowerCase()) : string;
+  });
+};
+const toASCII = function(input) {
+  return mapDomain(input, function(string) {
+    return regexNonASCII.test(string) ? "xn--" + encode(string) : string;
+  });
+};
+const punycode = {
+  /**
+   * A string representing the current Punycode.js version number.
+   * @memberOf punycode
+   * @type String
+   */
+  "version": "2.3.1",
+  /**
+   * An object of methods to convert from JavaScript's internal character
+   * representation (UCS-2) to Unicode code points, and back.
+   * @see <https://mathiasbynens.be/notes/javascript-encoding>
+   * @memberOf punycode
+   * @type Object
+   */
+  "ucs2": {
+    "decode": ucs2decode,
+    "encode": ucs2encode
+  },
+  "decode": decode,
+  "encode": encode,
+  "toASCII": toASCII,
+  "toUnicode": toUnicode
+};
+const cfg_default = {
+  options: {
+    // Enable HTML tags in source
+    html: false,
+    // Use '/' to close single tags (<br />)
+    xhtmlOut: false,
+    // Convert '\n' in paragraphs into <br>
+    breaks: false,
+    // CSS language prefix for fenced blocks
+    langPrefix: "language-",
+    // autoconvert URL-like texts to links
+    linkify: false,
+    // Enable some language-neutral replacements + quotes beautification
+    typographer: false,
+    // Double + single quotes replacement pairs, when typographer enabled,
+    // and smartquotes on. Could be either a String or an Array.
+    //
+    // For example, you can use '«»„“' for Russian, '„“‚‘' for German,
+    // and ['«\xA0', '\xA0»', '‹\xA0', '\xA0›'] for French (including nbsp).
+    quotes: "“”‘’",
+    /* “”‘’ */
+    // Highlighter function. Should return escaped HTML,
+    // or '' if the source string is not changed and should be escaped externaly.
+    // If result starts with <pre... internal wrapper is skipped.
+    //
+    // function (/*str, lang*/) { return ''; }
+    //
+    highlight: null,
+    // Internal protection, recursion limit
+    maxNesting: 100
+  },
+  components: {
+    core: {},
+    block: {},
+    inline: {}
+  }
+};
+const cfg_zero = {
+  options: {
+    // Enable HTML tags in source
+    html: false,
+    // Use '/' to close single tags (<br />)
+    xhtmlOut: false,
+    // Convert '\n' in paragraphs into <br>
+    breaks: false,
+    // CSS language prefix for fenced blocks
+    langPrefix: "language-",
+    // autoconvert URL-like texts to links
+    linkify: false,
+    // Enable some language-neutral replacements + quotes beautification
+    typographer: false,
+    // Double + single quotes replacement pairs, when typographer enabled,
+    // and smartquotes on. Could be either a String or an Array.
+    //
+    // For example, you can use '«»„“' for Russian, '„“‚‘' for German,
+    // and ['«\xA0', '\xA0»', '‹\xA0', '\xA0›'] for French (including nbsp).
+    quotes: "“”‘’",
+    /* “”‘’ */
+    // Highlighter function. Should return escaped HTML,
+    // or '' if the source string is not changed and should be escaped externaly.
+    // If result starts with <pre... internal wrapper is skipped.
+    //
+    // function (/*str, lang*/) { return ''; }
+    //
+    highlight: null,
+    // Internal protection, recursion limit
+    maxNesting: 20
+  },
+  components: {
+    core: {
+      rules: [
+        "normalize",
+        "block",
+        "inline",
+        "text_join"
+      ]
+    },
+    block: {
+      rules: [
+        "paragraph"
+      ]
+    },
+    inline: {
+      rules: [
+        "text"
+      ],
+      rules2: [
+        "balance_pairs",
+        "fragments_join"
+      ]
+    }
+  }
+};
+const cfg_commonmark = {
+  options: {
+    // Enable HTML tags in source
+    html: true,
+    // Use '/' to close single tags (<br />)
+    xhtmlOut: true,
+    // Convert '\n' in paragraphs into <br>
+    breaks: false,
+    // CSS language prefix for fenced blocks
+    langPrefix: "language-",
+    // autoconvert URL-like texts to links
+    linkify: false,
+    // Enable some language-neutral replacements + quotes beautification
+    typographer: false,
+    // Double + single quotes replacement pairs, when typographer enabled,
+    // and smartquotes on. Could be either a String or an Array.
+    //
+    // For example, you can use '«»„“' for Russian, '„“‚‘' for German,
+    // and ['«\xA0', '\xA0»', '‹\xA0', '\xA0›'] for French (including nbsp).
+    quotes: "“”‘’",
+    /* “”‘’ */
+    // Highlighter function. Should return escaped HTML,
+    // or '' if the source string is not changed and should be escaped externaly.
+    // If result starts with <pre... internal wrapper is skipped.
+    //
+    // function (/*str, lang*/) { return ''; }
+    //
+    highlight: null,
+    // Internal protection, recursion limit
+    maxNesting: 20
+  },
+  components: {
+    core: {
+      rules: [
+        "normalize",
+        "block",
+        "inline",
+        "text_join"
+      ]
+    },
+    block: {
+      rules: [
+        "blockquote",
+        "code",
+        "fence",
+        "heading",
+        "hr",
+        "html_block",
+        "lheading",
+        "list",
+        "reference",
+        "paragraph"
+      ]
+    },
+    inline: {
+      rules: [
+        "autolink",
+        "backticks",
+        "emphasis",
+        "entity",
+        "escape",
+        "html_inline",
+        "image",
+        "link",
+        "newline",
+        "text"
+      ],
+      rules2: [
+        "balance_pairs",
+        "emphasis",
+        "fragments_join"
+      ]
+    }
+  }
+};
+const config = {
+  default: cfg_default,
+  zero: cfg_zero,
+  commonmark: cfg_commonmark
+};
+const BAD_PROTO_RE = /^(vbscript|javascript|file|data):/;
+const GOOD_DATA_RE = /^data:image\/(gif|png|jpeg|webp);/;
+function validateLink(url) {
+  const str = url.trim().toLowerCase();
+  return BAD_PROTO_RE.test(str) ? GOOD_DATA_RE.test(str) : true;
+}
+const RECODE_HOSTNAME_FOR = ["http:", "https:", "mailto:"];
+function normalizeLink(url) {
+  const parsed = urlParse(url, true);
+  if (parsed.hostname) {
+    if (!parsed.protocol || RECODE_HOSTNAME_FOR.indexOf(parsed.protocol) >= 0) {
+      try {
+        parsed.hostname = punycode.toASCII(parsed.hostname);
+      } catch (er) {
+      }
+    }
+  }
+  return encode$1(format(parsed));
+}
+function normalizeLinkText(url) {
+  const parsed = urlParse(url, true);
+  if (parsed.hostname) {
+    if (!parsed.protocol || RECODE_HOSTNAME_FOR.indexOf(parsed.protocol) >= 0) {
+      try {
+        parsed.hostname = punycode.toUnicode(parsed.hostname);
+      } catch (er) {
+      }
+    }
+  }
+  return decode$1(format(parsed), decode$1.defaultChars + "%");
+}
+function MarkdownIt(presetName, options) {
+  if (!(this instanceof MarkdownIt)) {
+    return new MarkdownIt(presetName, options);
+  }
+  if (!options) {
+    if (!isString$1(presetName)) {
+      options = presetName || {};
+      presetName = "default";
+    }
+  }
+  this.inline = new ParserInline();
+  this.block = new ParserBlock();
+  this.core = new Core();
+  this.renderer = new Renderer();
+  this.linkify = new LinkifyIt();
+  this.validateLink = validateLink;
+  this.normalizeLink = normalizeLink;
+  this.normalizeLinkText = normalizeLinkText;
+  this.utils = utils;
+  this.helpers = assign$1({}, helpers);
+  this.options = {};
+  this.configure(presetName);
+  if (options) {
+    this.set(options);
+  }
+}
+MarkdownIt.prototype.set = function(options) {
+  assign$1(this.options, options);
+  return this;
+};
+MarkdownIt.prototype.configure = function(presets) {
+  const self2 = this;
+  if (isString$1(presets)) {
+    const presetName = presets;
+    presets = config[presetName];
+    if (!presets) {
+      throw new Error('Wrong `markdown-it` preset "' + presetName + '", check name');
+    }
+  }
+  if (!presets) {
+    throw new Error("Wrong `markdown-it` preset, can't be empty");
+  }
+  if (presets.options) {
+    self2.set(presets.options);
+  }
+  if (presets.components) {
+    Object.keys(presets.components).forEach(function(name) {
+      if (presets.components[name].rules) {
+        self2[name].ruler.enableOnly(presets.components[name].rules);
+      }
+      if (presets.components[name].rules2) {
+        self2[name].ruler2.enableOnly(presets.components[name].rules2);
+      }
+    });
+  }
+  return this;
+};
+MarkdownIt.prototype.enable = function(list2, ignoreInvalid) {
+  let result = [];
+  if (!Array.isArray(list2)) {
+    list2 = [list2];
+  }
+  ["core", "block", "inline"].forEach(function(chain) {
+    result = result.concat(this[chain].ruler.enable(list2, true));
+  }, this);
+  result = result.concat(this.inline.ruler2.enable(list2, true));
+  const missed = list2.filter(function(name) {
+    return result.indexOf(name) < 0;
+  });
+  if (missed.length && !ignoreInvalid) {
+    throw new Error("MarkdownIt. Failed to enable unknown rule(s): " + missed);
+  }
+  return this;
+};
+MarkdownIt.prototype.disable = function(list2, ignoreInvalid) {
+  let result = [];
+  if (!Array.isArray(list2)) {
+    list2 = [list2];
+  }
+  ["core", "block", "inline"].forEach(function(chain) {
+    result = result.concat(this[chain].ruler.disable(list2, true));
+  }, this);
+  result = result.concat(this.inline.ruler2.disable(list2, true));
+  const missed = list2.filter(function(name) {
+    return result.indexOf(name) < 0;
+  });
+  if (missed.length && !ignoreInvalid) {
+    throw new Error("MarkdownIt. Failed to disable unknown rule(s): " + missed);
+  }
+  return this;
+};
+MarkdownIt.prototype.use = function(plugin) {
+  const args = [this].concat(Array.prototype.slice.call(arguments, 1));
+  plugin.apply(plugin, args);
+  return this;
+};
+MarkdownIt.prototype.parse = function(src, env) {
+  if (typeof src !== "string") {
+    throw new Error("Input data should be a String");
+  }
+  const state = new this.core.State(src, this, env);
+  this.core.process(state);
+  return state.tokens;
+};
+MarkdownIt.prototype.render = function(src, env) {
+  env = env || {};
+  return this.renderer.render(this.parse(src, env), this.options, env);
+};
+MarkdownIt.prototype.parseInline = function(src, env) {
+  const state = new this.core.State(src, this, env);
+  state.inlineMode = true;
+  this.core.process(state);
+  return state.tokens;
+};
+MarkdownIt.prototype.renderInline = function(src, env) {
+  env = env || {};
+  return this.renderer.render(this.parseInline(src, env), this.options, env);
+};
 const _hoisted_1$5 = { class: "chat-history" };
 const _hoisted_2$4 = {
   key: 0,
   class: "sender-label"
 };
-const _hoisted_3$3 = {
+const _hoisted_3$4 = {
   key: 1,
   class: "text-message"
 };
-const _hoisted_4$2 = {
+const _hoisted_4$3 = {
   key: 0,
   class: "message-bubble user-bubble"
 };
-const _hoisted_5$1 = ["innerHTML"];
-const _hoisted_6 = { key: 2 };
-const _hoisted_7 = {
+const _hoisted_5$2 = ["innerHTML"];
+const _hoisted_6$2 = { key: 2 };
+const _hoisted_7$1 = {
   key: 2,
   class: "tool-message tool-call"
 };
@@ -72766,21 +72769,29 @@ const _sfc_main$6 = {
             class: normalizeClass(["chat-item", msg.source])
           }, [
             index === 0 || __props.messages[index - 1].source !== msg.source ? (openBlock(), createElementBlock("div", _hoisted_2$4, toDisplayString(msg.source === "user" ? "你" : "GIS 助手"), 1)) : createCommentVNode("", true),
-            msg.type === "TextMessage" ? (openBlock(), createElementBlock("div", _hoisted_3$3, [
-              msg.source === "user" && typeof msg.content === "string" ? (openBlock(), createElementBlock("div", _hoisted_4$2, toDisplayString(msg.content), 1)) : msg.source === "assistant" && typeof msg.content === "string" ? (openBlock(), createElementBlock("div", {
+            msg.type === "TextMessage" ? (openBlock(), createElementBlock("div", _hoisted_3$4, [
+              msg.source === "user" && typeof msg.content === "string" ? (openBlock(), createElementBlock("div", _hoisted_4$3, toDisplayString(msg.content), 1)) : msg.source === "assistant" && typeof msg.content === "string" ? (openBlock(), createElementBlock("div", {
                 key: 1,
                 innerHTML: renderMarkdown(msg.content),
                 class: "assistant-markdown"
-              }, null, 8, _hoisted_5$1)) : (openBlock(), createElementBlock("pre", _hoisted_6, toDisplayString(JSON.stringify(msg.content, null, 2)), 1))
-            ])) : msg.type === "ToolCallRequestEvent" ? (openBlock(), createElementBlock("div", _hoisted_7, [
-              _cache[0] || (_cache[0] = createTextVNode(" 调用工具： ")),
-              createBaseVNode("strong", null, toDisplayString(msg.content[0].name), 1),
-              _cache[1] || (_cache[1] = createTextVNode(" 参数：")),
-              createBaseVNode("code", null, toDisplayString(msg.content[0].arguments), 1)
+              }, null, 8, _hoisted_5$2)) : (openBlock(), createElementBlock("pre", _hoisted_6$2, toDisplayString(JSON.stringify(msg.content, null, 2)), 1))
+            ])) : msg.type === "ToolCallRequestEvent" ? (openBlock(), createElementBlock("div", _hoisted_7$1, [
+              (openBlock(true), createElementBlock(Fragment, null, renderList(msg.content, (tool, toolIndex) => {
+                return openBlock(), createElementBlock("div", { key: toolIndex }, [
+                  _cache[0] || (_cache[0] = createTextVNode(" 调用工具：")),
+                  createBaseVNode("strong", null, toDisplayString(tool.name), 1),
+                  _cache[1] || (_cache[1] = createTextVNode(" 参数：")),
+                  createBaseVNode("code", null, toDisplayString(tool.arguments), 1)
+                ]);
+              }), 128))
             ])) : msg.type === "ToolCallExecutionEvent" ? (openBlock(), createElementBlock("div", _hoisted_8, [
-              _cache[2] || (_cache[2] = createTextVNode(" 工具 ")),
-              createBaseVNode("strong", null, toDisplayString(msg.content[0].name), 1),
-              createTextVNode(" 执行成功： " + toDisplayString(msg.content[0].content), 1)
+              (openBlock(true), createElementBlock(Fragment, null, renderList(msg.content, (tool, toolIndex) => {
+                return openBlock(), createElementBlock("div", { key: toolIndex }, [
+                  _cache[2] || (_cache[2] = createTextVNode(" 工具 ")),
+                  createBaseVNode("strong", null, toDisplayString(tool.name), 1),
+                  createTextVNode(" 执行成功：" + toDisplayString(tool.content), 1)
+                ]);
+              }), 128))
             ])) : (openBlock(), createElementBlock("div", _hoisted_9, " ⚠️ 不支持的消息类型：" + toDisplayString(msg.type), 1))
           ], 2);
         }), 128))
@@ -72788,11 +72799,11 @@ const _sfc_main$6 = {
     };
   }
 };
-const ChatHistory = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["__scopeId", "data-v-80c46aa7"]]);
+const ChatHistory = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["__scopeId", "data-v-f43d1070"]]);
 const _hoisted_1$4 = { class: "chat-container" };
 const _hoisted_2$3 = ["disabled"];
-const _hoisted_3$2 = { class: "button-bar" };
-const _hoisted_4$1 = ["disabled"];
+const _hoisted_3$3 = { class: "button-bar" };
+const _hoisted_4$2 = ["disabled"];
 const _sfc_main$5 = {
   __name: "chat",
   setup(__props) {
@@ -72871,7 +72882,7 @@ const _sfc_main$5 = {
           }, null, 40, _hoisted_2$3), [
             [vModelText, input.value]
           ]),
-          createBaseVNode("div", _hoisted_3$2, [
+          createBaseVNode("div", _hoisted_3$3, [
             _cache[3] || (_cache[3] = createBaseVNode("div", { class: "left-buttons" }, [
               createBaseVNode("i", {
                 class: "pi pi-file",
@@ -72896,7 +72907,7 @@ const _sfc_main$5 = {
               ], 64)) : (openBlock(), createElementBlock(Fragment, { key: 1 }, [
                 createTextVNode(" 发送 ")
               ], 64))
-            ], 8, _hoisted_4$1)
+            ], 8, _hoisted_4$2)
           ])
         ], 32)
       ]);
@@ -72904,69 +72915,655 @@ const _sfc_main$5 = {
   }
 };
 const Chat = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-c88497c6"]]);
-const _hoisted_1$3 = { class: "map-wrapper" };
-const _hoisted_2$2 = { class: "round" };
-const _sfc_main$4 = {
-  __name: "baidumap",
-  setup(__props, { expose: __expose }) {
-    const mapContainer = ref(null);
-    let map2 = null;
-    onMounted(() => {
-      if (!mapContainer.value) return;
-      map2 = new BMap.Map(mapContainer.value);
-      map2.enableScrollWheelZoom(true);
-      map2.centerAndZoom(new BMap.Point(116.404, 39.915), 12);
+class MapUtils {
+  constructor(map2) {
+    this.map = map2;
+    this.layers = /* @__PURE__ */ new Map();
+    this.boundaryOverlays = [];
+  }
+  /**
+   * 生成唯一图层 ID
+   * @returns {string} 图层 ID
+   */
+  generateLayerId() {
+    return `layer_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  }
+  /**
+   * 添加图层
+   * @param {Object} overlay - 覆盖物对象
+   * @param {string} type - 图层类型（点、线、面等）
+   * @param {string} name - 图层名称
+   * @returns {string} 图层 ID
+   */
+  addLayer(overlay, type, name) {
+    const layerId = this.generateLayerId();
+    this.layers.set(layerId, {
+      id: layerId,
+      overlay,
+      type,
+      name,
+      createTime: /* @__PURE__ */ new Date()
     });
-    const drawBoundaryByName = (cityName) => {
-      return new Promise((resolve2, reject) => {
-        const bd = new BMap.Boundary();
-        bd.get(cityName, (rs) => {
-          if (!rs.boundaries.length) {
-            reject(`未能获取 ${cityName} 的边界`);
-            return;
-          }
-          map2.clearOverlays();
-          const polygons = rs.boundaries.map((path) => {
+    this.map.addOverlay(overlay);
+    const event = new CustomEvent("layer-updated", {
+      detail: { type: "add", layerId }
+    });
+    this.map.getContainer().dispatchEvent(event);
+    return layerId;
+  }
+  /**
+   * 删除指定图层
+   * @param {string} layerId - 图层 ID
+   * @returns {boolean} 是否删除成功
+   */
+  removeLayer(layerId) {
+    const layer = this.layers.get(layerId);
+    if (layer) {
+      if (Array.isArray(layer.overlay)) {
+        layer.overlay.forEach((overlay) => {
+          this.map.removeOverlay(overlay);
+        });
+      } else {
+        this.map.removeOverlay(layer.overlay);
+      }
+      this.layers.delete(layerId);
+      return true;
+    }
+    return false;
+  }
+  /**
+   * 获取所有图层信息
+   * @returns {Array} 图层信息数组
+   */
+  getAllLayers() {
+    return Array.from(this.layers.values());
+  }
+  /**
+   * 根据城市名称绘制边界
+   * @param {string} cityName - 城市名称
+   * @returns {Promise} - 返回边界信息
+   */
+  drawBoundaryByName(cityName) {
+    return new Promise((resolve2, reject) => {
+      const bd = new BMap.Boundary();
+      bd.get(cityName, (rs) => {
+        if (!rs.boundaries.length) {
+          reject(`未能获取 ${cityName} 的边界`);
+          return;
+        }
+        try {
+          const layerIds = [];
+          const polygons = rs.boundaries.map((path, index) => {
             const ply = new BMap.Polygon(path, {
               strokeWeight: 2,
               strokeColor: "#ff0000",
               fillColor: "#ffcccc",
               fillOpacity: 0.4
             });
-            map2.addOverlay(ply);
+            const layerId = this.addLayer(ply, "边界", `${cityName}边界${index + 1}`);
+            layerIds.push(layerId);
             return ply;
           });
-          const bounds = polygons.reduce(
-            (acc, poly) => acc.union(poly.getBounds()),
-            polygons[0].getBounds()
-          );
-          map2.setViewport(bounds);
-          if (window.BMapLib?.AreaRestriction) {
-            BMapLib.AreaRestriction.setBounds(map2, bounds);
-          } else {
-            console.warn("AreaRestriction 插件未加载");
-          }
-          resolve2({ bounds, polygons });
-        });
+          const bounds = new BMap.Bounds();
+          polygons.forEach((poly) => {
+            const polyBounds = poly.getBounds();
+            bounds.extend(polyBounds.getSouthWest());
+            bounds.extend(polyBounds.getNorthEast());
+          });
+          this.map.setViewport(bounds);
+          resolve2({ bounds, polygons, layerIds });
+        } catch (error2) {
+          console.error("绘制边界时发生错误:", error2);
+          reject(error2);
+        }
       });
+    });
+  }
+  /**
+   * 添加点标记
+   * @param {BMap.Point} point - 坐标点
+   * @param {string} name - 标记名称
+   * @returns {string} 图层 ID
+   */
+  addMarker(point, name) {
+    const marker = new BMap.Marker(point);
+    return this.addLayer(marker, "点", name);
+  }
+  /**
+   * 添加折线
+   * @param {Array<BMap.Point>} points - 坐标点数组
+   * @param {string} name - 折线名称
+   * @returns {string} 图层 ID
+   */
+  addPolyline(points, name) {
+    const polyline = new BMap.Polyline(points, {
+      strokeColor: "#0000ff",
+      strokeWeight: 2,
+      strokeOpacity: 0.8
+    });
+    return this.addLayer(polyline, "线", name);
+  }
+  /**
+   * 添加多边形
+   * @param {Array<BMap.Point>} points - 坐标点数组
+   * @param {string} name - 多边形名称
+   * @returns {string} 图层 ID
+   */
+  addPolygon(points, name) {
+    const polygon = new BMap.Polygon(points, {
+      strokeColor: "#ff0000",
+      strokeWeight: 2,
+      fillColor: "#ffcccc",
+      fillOpacity: 0.4
+    });
+    return this.addLayer(polygon, "面", name);
+  }
+  /**
+   * 清除所有边界图层
+   */
+  clearBoundaryOverlays() {
+    this.boundaryOverlays.forEach((overlay) => {
+      this.map.removeOverlay(overlay);
+    });
+    this.boundaryOverlays = [];
+  }
+  /**
+   * 初始化地图
+   * @param {HTMLElement} container - 地图容器元素
+   * @param {Object} options - 初始化选项
+   */
+  static initMap(container, options = {}) {
+    const map2 = new BMap.Map(container);
+    map2.enableScrollWheelZoom(true);
+    const defaultCenter = new BMap.Point(114.305393, 30.593099);
+    const defaultZoom = 13;
+    map2.centerAndZoom(
+      options.center || defaultCenter,
+      options.zoom || defaultZoom
+    );
+    return map2;
+  }
+  /**
+   * 添加 GeoJSON 图层
+   * @param {Object} geojson - GeoJSON 数据
+   * @param {string} name - 图层名称
+   * @param {Object} style - 样式配置
+   * @returns {string} 图层 ID
+   */
+  addGeoJSONLayer(geojson, name, style2 = {}) {
+    const defaultStyle = {
+      strokeColor: "#0000ff",
+      strokeWeight: 2,
+      strokeOpacity: 0.8,
+      fillColor: "#ffcccc",
+      fillOpacity: 0.4
     };
+    const finalStyle = { ...defaultStyle, ...style2 };
+    const overlays = [];
+    geojson.features.forEach((feature) => {
+      const geometry = feature.geometry;
+      const properties = feature.properties;
+      switch (geometry.type) {
+        case "Point":
+          const point = new BMap.Point(geometry.coordinates[0], geometry.coordinates[1]);
+          const marker = new BMap.Marker(point);
+          if (properties.title) {
+            marker.setTitle(properties.title);
+          }
+          overlays.push(marker);
+          break;
+        case "LineString":
+          const points = geometry.coordinates.map(
+            (coord) => new BMap.Point(coord[0], coord[1])
+          );
+          const polyline = new BMap.Polyline(points, {
+            strokeColor: finalStyle.strokeColor,
+            strokeWeight: finalStyle.strokeWeight,
+            strokeOpacity: finalStyle.strokeOpacity
+          });
+          overlays.push(polyline);
+          break;
+        case "Polygon":
+          const paths = geometry.coordinates.map(
+            (ring) => ring.map((coord) => new BMap.Point(coord[0], coord[1]))
+          );
+          const polygon = new BMap.Polygon(paths, {
+            strokeColor: finalStyle.strokeColor,
+            strokeWeight: finalStyle.strokeWeight,
+            strokeOpacity: finalStyle.strokeOpacity,
+            fillColor: finalStyle.fillColor,
+            fillOpacity: finalStyle.fillOpacity
+          });
+          overlays.push(polygon);
+          break;
+      }
+    });
+    const layerId = this.generateLayerId();
+    this.layers.set(layerId, {
+      id: layerId,
+      overlay: overlays,
+      type: "GeoJSON",
+      name,
+      createTime: /* @__PURE__ */ new Date()
+    });
+    overlays.forEach((overlay) => {
+      this.map.addOverlay(overlay);
+    });
+    const event = new CustomEvent("layer-updated", {
+      detail: { type: "add", layerId }
+    });
+    this.map.getContainer().dispatchEvent(event);
+    return layerId;
+  }
+  /**
+   * 添加图片图层
+   * @param {string} url - 图片URL
+   * @param {BMap.Bounds} bounds - 图片显示范围
+   * @param {string} name - 图层名称
+   * @param {Object} options - 配置选项
+   * @returns {string} 图层 ID
+   */
+  addImageLayer(url, bounds, name, options = {}) {
+    const defaultOptions2 = {
+      opacity: 0.5,
+      displayOnMinLevel: 0,
+      displayOnMaxLevel: 18
+    };
+    const finalOptions = { ...defaultOptions2, ...options };
+    const imageLayer = new BMap.GroundOverlay(bounds, {
+      type: "image",
+      url,
+      opacity: finalOptions.opacity,
+      displayOnMinLevel: finalOptions.displayOnMinLevel,
+      displayOnMaxLevel: finalOptions.displayOnMaxLevel
+    });
+    const layerId = this.addLayer(imageLayer, "图片", name);
+    this.map.setViewport(bounds);
+    return layerId;
+  }
+}
+const _hoisted_1$3 = { class: "round" };
+const _hoisted_2$2 = { class: "hemisphere-inner" };
+const _hoisted_3$2 = { class: "sidebar-content" };
+const _hoisted_4$1 = { class: "layer-list" };
+const _hoisted_5$1 = ["onClick"];
+const _hoisted_6$1 = { class: "layer-name" };
+const _hoisted_7 = ["onClick"];
+const _sfc_main$4 = {
+  __name: "baidumap",
+  setup(__props, { expose: __expose }) {
+    const mapContainer = ref(null);
+    let map2 = null;
+    let mapUtils = null;
+    const isSidebarOpen = ref(false);
+    const layers = ref([]);
+    const testPoints = {
+      point: new BMap.Point(114.305393, 30.593099),
+      polyline: [
+        new BMap.Point(114.305393, 30.593099),
+        new BMap.Point(114.315393, 30.603099)
+      ],
+      polygon: [
+        new BMap.Point(114.305393, 30.593099),
+        new BMap.Point(114.315393, 30.593099),
+        new BMap.Point(114.315393, 30.603099)
+      ]
+    };
+    const testGeoJSON = {
+      type: "FeatureCollection",
+      features: [
+        {
+          type: "Feature",
+          properties: { title: "测试点" },
+          geometry: {
+            type: "Point",
+            coordinates: [114.305393, 30.593099]
+          }
+        },
+        {
+          type: "Feature",
+          properties: {},
+          geometry: {
+            type: "LineString",
+            coordinates: [
+              [114.305393, 30.593099],
+              [114.315393, 30.603099]
+            ]
+          }
+        },
+        {
+          type: "Feature",
+          properties: {},
+          geometry: {
+            type: "Polygon",
+            coordinates: [[
+              [114.305393, 30.593099],
+              [114.315393, 30.593099],
+              [114.315393, 30.603099],
+              [114.305393, 30.593099]
+            ]]
+          }
+        }
+      ]
+    };
+    const getAllLayers = () => {
+      layers.value = mapUtils.getAllLayers();
+    };
+    const removeLayer = (layerId) => {
+      if (mapUtils.removeLayer(layerId)) {
+        getAllLayers();
+      }
+    };
+    const addMarker = (point, name) => {
+      const layerId = mapUtils.addMarker(point, name);
+      getAllLayers();
+      isSidebarOpen.value = true;
+      return layerId;
+    };
+    const addPolyline = (points, name) => {
+      const layerId = mapUtils.addPolyline(points, name);
+      getAllLayers();
+      isSidebarOpen.value = true;
+      return layerId;
+    };
+    const addPolygon = (points, name) => {
+      const layerId = mapUtils.addPolygon(points, name);
+      getAllLayers();
+      isSidebarOpen.value = true;
+      return layerId;
+    };
+    const drawBoundaryByName = async (cityName) => {
+      try {
+        console.log("开始绘制边界:", cityName);
+        const result = await mapUtils.drawBoundaryByName(cityName);
+        console.log("边界绘制结果:", result);
+        getAllLayers();
+        isSidebarOpen.value = true;
+        return result;
+      } catch (error2) {
+        console.error("绘制边界失败:", error2);
+        throw error2;
+      }
+    };
+    const addGeoJSON = (geojson, name, style2 = {}) => {
+      if (!mapUtils) return;
+      const layerId = mapUtils.addGeoJSONLayer(geojson, name, style2);
+      getAllLayers();
+      isSidebarOpen.value = true;
+      return layerId;
+    };
+    const addImageLayer = (url, bounds, name, options = {}) => {
+      if (!mapUtils) return;
+      const layerId = mapUtils.addImageLayer(url, bounds, name, options);
+      getAllLayers();
+      isSidebarOpen.value = true;
+      return layerId;
+    };
+    const addTestPoint = () => {
+      if (!mapUtils) return;
+      addMarker(testPoints.point, "测试点");
+    };
+    const addTestLine = () => {
+      if (!mapUtils) return;
+      addPolyline(testPoints.polyline, "测试线");
+    };
+    const addTestPolygon = () => {
+      if (!mapUtils) return;
+      addPolygon(testPoints.polygon, "测试面");
+    };
+    const addTestGeoJSON = () => {
+      if (!mapUtils) return;
+      addGeoJSON(testGeoJSON, "测试 GeoJSON");
+    };
+    const addTestImageLayer = () => {
+      if (!mapUtils) return;
+      const bounds = new BMap.Bounds(
+        new BMap.Point(114.295393, 30.583099),
+        // 西南角
+        new BMap.Point(114.325393, 30.613099)
+        // 东北角
+      );
+      const options = {
+        opacity: 1,
+        // 完全不透明
+        displayOnMinLevel: 0,
+        displayOnMaxLevel: 19
+      };
+      addImageLayer(
+        "https://cdn.pixabay.com/photo/2016/09/19/22/46/lake-1681485_640.jpg",
+        bounds,
+        "测试图片图层",
+        options
+      );
+      map2.setViewport(bounds);
+      map2.setZoom(13);
+      getAllLayers();
+    };
+    const getTypeIcon = (type) => {
+      switch (type) {
+        case "点":
+          return "pi pi-map-marker";
+        case "线":
+          return "pi pi-link";
+        case "面":
+          return "pi pi-stop";
+        case "边界":
+          return "pi pi-globe";
+        case "GeoJSON":
+          return "pi pi-file";
+        case "图片":
+          return "pi pi-image";
+        default:
+          return "pi pi-question";
+      }
+    };
+    const toggleSidebar = () => {
+      isSidebarOpen.value = !isSidebarOpen.value;
+    };
+    const handleWrapperClick = () => {
+      if (isSidebarOpen.value) {
+        isSidebarOpen.value = false;
+      }
+    };
+    const locateToLayer = (layer) => {
+      if (!mapUtils) return;
+      if (Array.isArray(layer.overlay)) {
+        const bounds = new BMap.Bounds();
+        layer.overlay.forEach((overlay) => {
+          if (overlay instanceof BMap.Marker) {
+            bounds.extend(overlay.getPosition());
+          } else if (overlay instanceof BMap.Polyline) {
+            overlay.getPath().forEach((point) => bounds.extend(point));
+          } else if (overlay instanceof BMap.Polygon) {
+            const polygonBounds = overlay.getBounds();
+            bounds.extend(polygonBounds.getSouthWest());
+            bounds.extend(polygonBounds.getNorthEast());
+          }
+        });
+        map2.setViewport(bounds);
+      } else {
+        if (layer.overlay instanceof BMap.Marker) {
+          map2.centerAndZoom(layer.overlay.getPosition(), map2.getZoom());
+        } else if (layer.overlay instanceof BMap.Polyline) {
+          const bounds = new BMap.Bounds();
+          layer.overlay.getPath().forEach((point) => bounds.extend(point));
+          map2.setViewport(bounds);
+        } else if (layer.overlay instanceof BMap.Polygon || layer.overlay instanceof BMap.GroundOverlay) {
+          map2.setViewport(layer.overlay.getBounds());
+        }
+      }
+    };
+    onMounted(() => {
+      if (!mapContainer.value) return;
+      map2 = MapUtils.initMap(mapContainer.value);
+      mapUtils = new MapUtils(map2);
+      getAllLayers();
+      mapContainer.value.addEventListener("layer-updated", () => {
+        getAllLayers();
+      });
+    });
     __expose({
-      drawBoundaryByName
+      drawBoundaryByName,
+      addMarker,
+      addPolyline,
+      addPolygon,
+      getAllLayers,
+      addGeoJSON,
+      addImageLayer
     });
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$3, [
-        createBaseVNode("div", _hoisted_2$2, [
+      return openBlock(), createElementBlock("div", {
+        class: "map-wrapper",
+        onClick: handleWrapperClick
+      }, [
+        createBaseVNode("div", _hoisted_1$3, [
           createBaseVNode("div", {
             class: "map-container",
             ref_key: "mapContainer",
             ref: mapContainer
           }, null, 512)
-        ])
+        ]),
+        createBaseVNode("div", {
+          class: normalizeClass(["sidebar", { "sidebar-open": isSidebarOpen.value }]),
+          onClick: _cache[0] || (_cache[0] = withModifiers(() => {
+          }, ["stop"]))
+        }, [
+          createBaseVNode("div", {
+            class: "hemisphere",
+            onClick: toggleSidebar
+          }, [
+            createBaseVNode("div", _hoisted_2$2, [
+              createBaseVNode("i", {
+                class: normalizeClass(isSidebarOpen.value ? "pi pi-angle-left" : "pi pi-angle-right")
+              }, null, 2)
+            ])
+          ]),
+          createBaseVNode("div", _hoisted_3$2, [
+            _cache[7] || (_cache[7] = createBaseVNode("h3", null, "图层管理", -1)),
+            createBaseVNode("div", { class: "toolbar" }, [
+              createBaseVNode("button", {
+                class: "tool-btn",
+                onClick: addTestPoint
+              }, _cache[1] || (_cache[1] = [
+                createBaseVNode("i", { class: "pi pi-map-marker" }, null, -1)
+              ])),
+              createBaseVNode("button", {
+                class: "tool-btn",
+                onClick: addTestLine
+              }, _cache[2] || (_cache[2] = [
+                createBaseVNode("i", { class: "pi pi-link" }, null, -1)
+              ])),
+              createBaseVNode("button", {
+                class: "tool-btn",
+                onClick: addTestPolygon
+              }, _cache[3] || (_cache[3] = [
+                createBaseVNode("i", { class: "pi pi-stop" }, null, -1)
+              ])),
+              createBaseVNode("button", {
+                class: "tool-btn",
+                onClick: addTestGeoJSON
+              }, _cache[4] || (_cache[4] = [
+                createBaseVNode("i", { class: "pi pi-file" }, null, -1)
+              ])),
+              createBaseVNode("button", {
+                class: "tool-btn",
+                onClick: addTestImageLayer
+              }, _cache[5] || (_cache[5] = [
+                createBaseVNode("i", { class: "pi pi-image" }, null, -1)
+              ]))
+            ]),
+            _cache[8] || (_cache[8] = createBaseVNode("div", { class: "divider" }, null, -1)),
+            createBaseVNode("div", _hoisted_4$1, [
+              (openBlock(true), createElementBlock(Fragment, null, renderList(layers.value, (layer) => {
+                return openBlock(), createElementBlock("div", {
+                  class: "layer-item",
+                  key: layer.id,
+                  onClick: ($event) => locateToLayer(layer)
+                }, [
+                  createBaseVNode("i", {
+                    class: normalizeClass([getTypeIcon(layer.type), "type-icon"])
+                  }, null, 2),
+                  createBaseVNode("span", _hoisted_6$1, toDisplayString(layer.name), 1),
+                  createBaseVNode("button", {
+                    class: "delete-btn",
+                    onClick: withModifiers(($event) => removeLayer(layer.id), ["stop"])
+                  }, _cache[6] || (_cache[6] = [
+                    createBaseVNode("i", { class: "pi pi-trash" }, null, -1)
+                  ]), 8, _hoisted_7)
+                ], 8, _hoisted_5$1);
+              }), 128))
+            ])
+          ])
+        ], 2)
       ]);
     };
   }
 };
-const baidumap = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__scopeId", "data-v-884eeeba"]]);
+const baidumap = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__scopeId", "data-v-26893a4b"]]);
+const handleWebSocketMessage = (event, mapRef) => {
+  const msg = JSON.parse(event.data);
+  console.log("收到消息:", msg);
+  switch (msg.type) {
+    case "map":
+      switch (msg.operation) {
+        case "draw-boundary":
+          console.log("绘制边界");
+          mapRef.value.drawBoundaryByName(msg.data);
+          break;
+        case "draw-line":
+          console.log("绘制线路");
+          break;
+        case "draw-point":
+          console.log("绘制点");
+          break;
+        case "draw-polygon":
+          console.log("绘制多边形");
+          break;
+        case "draw-circle":
+          console.log("绘制圆");
+          break;
+        case "draw-rectangle":
+          console.log("绘制矩形");
+          break;
+        case "draw-text":
+          console.log("绘制文本");
+          break;
+        case "draw-image":
+          console.log("绘制图片");
+          break;
+        case "draw-video":
+          console.log("绘制视频");
+          break;
+        case "draw-audio":
+          console.log("绘制音频");
+          break;
+        case "move-map":
+          console.log("移动地图");
+          break;
+        case "zoom-map":
+          console.log("缩放地图");
+          break;
+        case "locate-map":
+          console.log("定位地图");
+          break;
+      }
+      break;
+    // 在这里可以添加更多的消息类型处理
+    case "file":
+      console.log("处理文件上传");
+      break;
+    default:
+      console.log("未知的消息类型:", msg.type);
+  }
+};
+const createWebSocket = (mapRef) => {
+  const ws = new WebSocket("ws://127.0.0.1:8000/ws");
+  ws.onopen = () => {
+    console.log("WebSocket 连接成功");
+  };
+  ws.onmessage = (event) => handleWebSocketMessage(event, mapRef);
+  return ws;
+};
 const _hoisted_1$2 = { class: "page-wrapper" };
 const _hoisted_2$1 = { class: "Map" };
 const _hoisted_3$1 = { class: "chat-wrapper" };
@@ -72976,18 +73573,7 @@ const _sfc_main$3 = {
     const ws = ref(null);
     const mapRef = ref(null);
     onMounted(() => {
-      ws.value = new WebSocket("ws://127.0.0.1:8000/ws");
-      ws.value.onopen = () => {
-        console.log("WebSocket 连接成功");
-      };
-      ws.value.onmessage = (event) => {
-        const msg = JSON.parse(event.data);
-        console.log(msg);
-        if (msg.type == "draw-city") {
-          console.log("draw-city run");
-          mapRef.value.drawBoundaryByName(msg.data);
-        }
-      };
+      ws.value = createWebSocket(mapRef);
     });
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", _hoisted_1$2, [
@@ -73004,7 +73590,7 @@ const _sfc_main$3 = {
     };
   }
 };
-const Main = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-b77285ef"]]);
+const Main = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-7eb42b73"]]);
 const _sfc_main$2 = {};
 function _sfc_render$1(_ctx, _cache) {
   return " 12312312 ";
@@ -73368,11 +73954,18 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, $options.attrs), null, 16, _hoisted_1$1);
 }
 script.render = render;
-const _hoisted_1 = { class: "p-4" };
-const _hoisted_2 = { key: 0 };
-const _hoisted_3 = ["for"];
-const _hoisted_4 = { class: "button-container" };
-const _hoisted_5 = { key: 1 };
+const _hoisted_1 = { class: "config-container" };
+const _hoisted_2 = {
+  key: 0,
+  class: "config-content"
+};
+const _hoisted_3 = { class: "config-form" };
+const _hoisted_4 = ["for"];
+const _hoisted_5 = { class: "button-container" };
+const _hoisted_6 = {
+  key: 1,
+  class: "loading-container"
+};
 const _sfc_main$1 = {
   __name: "Config",
   setup(__props) {
@@ -73413,36 +74006,45 @@ const _sfc_main$1 = {
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", _hoisted_1, [
         configLoaded.value ? (openBlock(), createElementBlock("div", _hoisted_2, [
-          (openBlock(true), createElementBlock(Fragment, null, renderList(config2, (value, key) => {
-            return openBlock(), createElementBlock("div", {
-              key,
-              class: "p-field p-my-3"
-            }, [
-              createBaseVNode("label", {
-                for: key,
-                class: "p-d-block"
-              }, toDisplayString(key), 9, _hoisted_3),
-              createVNode(unref(script), {
-                id: key,
-                modelValue: config2[key],
-                "onUpdate:modelValue": ($event) => config2[key] = $event,
-                class: "p-inputtext-sm p-d-block"
-              }, null, 8, ["id", "modelValue", "onUpdate:modelValue"])
-            ]);
-          }), 128)),
-          createBaseVNode("div", _hoisted_4, [
-            createVNode(unref(script$6), {
-              label: "保存配置",
-              icon: "pi pi-check",
-              onClick: submitConfig
-            })
+          _cache[0] || (_cache[0] = createBaseVNode("h2", { class: "config-title" }, "系统配置", -1)),
+          createBaseVNode("div", _hoisted_3, [
+            (openBlock(true), createElementBlock(Fragment, null, renderList(config2, (value, key) => {
+              return openBlock(), createElementBlock("div", {
+                key,
+                class: "config-field"
+              }, [
+                createBaseVNode("label", {
+                  for: key,
+                  class: "field-label"
+                }, toDisplayString(key), 9, _hoisted_4),
+                createVNode(unref(script), {
+                  id: key,
+                  modelValue: config2[key],
+                  "onUpdate:modelValue": ($event) => config2[key] = $event,
+                  class: "field-input"
+                }, null, 8, ["id", "modelValue", "onUpdate:modelValue"])
+              ]);
+            }), 128)),
+            createBaseVNode("div", _hoisted_5, [
+              createVNode(unref(script$6), {
+                label: "保存配置",
+                class: "save-button",
+                onClick: submitConfig
+              })
+            ])
           ])
-        ])) : (openBlock(), createElementBlock("div", _hoisted_5, "加载中..."))
+        ])) : (openBlock(), createElementBlock("div", _hoisted_6, _cache[1] || (_cache[1] = [
+          createBaseVNode("i", {
+            class: "pi pi-spin pi-spinner",
+            style: { "font-size": "2rem" }
+          }, null, -1),
+          createBaseVNode("span", { class: "loading-text" }, "加载中...", -1)
+        ])))
       ]);
     };
   }
 };
-const Config = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-28977401"]]);
+const Config = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-f175cb1d"]]);
 const _sfc_main = {};
 function _sfc_render(_ctx, _cache) {
   return " 123123121231231 ";
