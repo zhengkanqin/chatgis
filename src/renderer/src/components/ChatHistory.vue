@@ -40,12 +40,16 @@ const renderMarkdown = (content) => md.render(content)
         </div>
 
         <div v-else-if="msg.type === 'ToolCallRequestEvent'" class="tool-message tool-call">
-            调用工具：<strong>{{ msg.content[0].name }}</strong>
-            参数：<code>{{ msg.content[0].arguments }}</code>
+            <div v-for="(tool, toolIndex) in msg.content" :key="toolIndex">
+                调用工具：<strong>{{ tool.name }}</strong>
+                参数：<code>{{ tool.arguments }}</code>
+            </div>
         </div>
 
         <div v-else-if="msg.type === 'ToolCallExecutionEvent'" class="tool-message tool-response">
-          工具 <strong>{{ msg.content[0].name }}</strong> 执行成功：  {{ msg.content[0].content }}
+            <div v-for="(tool, toolIndex) in msg.content" :key="toolIndex">
+                工具 <strong>{{ tool.name }}</strong> 执行成功：{{ tool.content }}
+            </div>
         </div>
 
         <div v-else class="tool-message unknown">

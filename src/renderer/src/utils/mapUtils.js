@@ -109,11 +109,8 @@ export class MapUtils {
             bounds.extend(polyBounds.getNorthEast());
           });
 
-          if (window.BMapLib?.AreaRestriction) {
-            BMapLib.AreaRestriction.setBounds(this.map, bounds);
-          } else {
-            console.warn("AreaRestriction 插件未加载");
-          }
+          // 设置地图视图到边界范围
+          this.map.setViewport(bounds);
 
           resolve({ bounds, polygons, layerIds });
         } catch (error) {
