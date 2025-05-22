@@ -57,8 +57,8 @@ export class MapUtils {
     const map = new BMap.Map(container);
     map.enableScrollWheelZoom(true);
     
-    const defaultCenter = new BMap.Point(116.404, 39.915);
-    const defaultZoom = 12;
+    const defaultCenter = new BMap.Point(114.305393, 30.593099);
+    const defaultZoom = 13;
     
     map.centerAndZoom(
       options.center || defaultCenter, 

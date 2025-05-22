@@ -27,53 +27,32 @@ const renderMarkdown = (content) => md.render(content)
 </script>
 
 <template>
+
   <div class="chat-history">
-    <div
-      v-for="(msg, index) in messages"
-      :key="index"
-      class="chat-item"
-      :class="msg.source"
-    >
-    <div
-    class="sender-label"
-    v-if="index === 0 || messages[index - 1].source !== msg.source"
-  >
-    {{ msg.source === 'user' ? '你' : 'GIS 助手' }}
-  </div>
+    <div v-for="(msg, index) in messages":key="index" class="chat-item" :class="msg.source">
 
+        <div class="sender-label" v-if="index === 0 || messages[index - 1].source !== msg.source">{{ msg.source === 'user' ? '你' : 'GIS 助手' }}</div>
 
-  <div v-if="msg.type === 'TextMessage'" class="text-message">
-    <div v-if="msg.source === 'user' && typeof msg.content === 'string'"class="message-bubble user-bubble">{{ msg.content }}</div>
+        <div v-if="msg.type === 'TextMessage'" class="text-message">
+          <div v-if="msg.source === 'user' && typeof msg.content === 'string'"class="message-bubble user-bubble">{{ msg.content }}</div>
+          <div v-else-if="msg.source === 'assistant' && typeof msg.content === 'string'" v-html="renderMarkdown(msg.content)" class="assistant-markdown"></div>
+          <pre v-else>{{ JSON.stringify(msg.content, null, 2) }}</pre>
+        </div>
 
-    <div
-      v-else-if="msg.source === 'assistant' && typeof msg.content === 'string'"
-      v-html="renderMarkdown(msg.content)"
-      class="assistant-markdown"
-    ></div>
+        <div v-else-if="msg.type === 'ToolCallRequestEvent'" class="tool-message tool-call">
+            调用工具：<strong>{{ msg.content[0].name }}</strong>
+            参数：<code>{{ msg.content[0].arguments }}</code>
+        </div>
 
-    <pre v-else>{{ JSON.stringify(msg.content, null, 2) }}</pre>
-  </div>
+        <div v-else-if="msg.type === 'ToolCallExecutionEvent'" class="tool-message tool-response">
+          工具 <strong>{{ msg.content[0].name }}</strong> 执行成功：  {{ msg.content[0].content }}
+        </div>
 
-  <div
-    v-else-if="msg.type === 'ToolCallRequestEvent'"
-    class="tool-message tool-call"
-  >
-    调用工具：  <strong>{{ msg.content[0].name }}</strong>
-      参数：<code>{{ msg.content[0].arguments }}</code>
-  </div>
+        <div v-else class="tool-message unknown">
+          ⚠️ 不支持的消息类型：{{ msg.type }}
+        </div>
 
-  <div
-    v-else-if="msg.type === 'ToolCallExecutionEvent'"
-    class="tool-message tool-response"
-  >
-    工具 <strong>{{ msg.content[0].name }}</strong> 执行成功：  
-    {{ msg.content[0].content }}
-  </div>
-
-  <div v-else class="tool-message unknown">
-    ⚠️ 不支持的消息类型：{{ msg.type }}
-  </div>
-</div>
+    </div>
 
 
   </div>
