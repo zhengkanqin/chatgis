@@ -7443,7 +7443,7 @@ function normalizeContainer(container) {
   }
   return container;
 }
-const _hoisted_1$b = { class: "tibar" };
+const _hoisted_1$c = { class: "tibar" };
 const _sfc_main$9 = {
   __name: "tibar",
   setup(__props) {
@@ -7454,7 +7454,7 @@ const _sfc_main$9 = {
       window.api.closeWindow();
     };
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$b, [
+      return openBlock(), createElementBlock("div", _hoisted_1$c, [
         _cache[0] || (_cache[0] = createBaseVNode("div", { class: "title" }, "ChatGIS", -1)),
         createBaseVNode("div", { class: "window-controls" }, [
           createBaseVNode("i", {
@@ -12854,14 +12854,14 @@ var script$7 = {
     }
   }
 };
-var _hoisted_1$a = ["data-p"];
+var _hoisted_1$b = ["data-p"];
 function render$4(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock("span", mergeProps({
     "class": _ctx.cx("root"),
     "data-p": $options.dataP
   }, _ctx.ptmi("root")), [renderSlot(_ctx.$slots, "default", {}, function() {
     return [createTextVNode(toDisplayString(_ctx.value), 1)];
-  })], 16, _hoisted_1$a);
+  })], 16, _hoisted_1$b);
 }
 script$7.render = render$4;
 var style$3 = css$2`
@@ -13919,8 +13919,8 @@ var script$6 = {
     ripple: Ripple
   }
 };
-var _hoisted_1$9 = ["data-p"];
-var _hoisted_2$8 = ["data-p"];
+var _hoisted_1$a = ["data-p"];
+var _hoisted_2$9 = ["data-p"];
 function render$3(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_SpinnerIcon = resolveComponent("SpinnerIcon");
   var _component_Badge = resolveComponent("Badge");
@@ -13952,12 +13952,12 @@ function render$3(_ctx, _cache, $props, $setup, $data, $options) {
             key: 0,
             "class": [_ctx.cx("icon"), _ctx.icon, _ctx.iconClass],
             "data-p": $options.dataIconP
-          }, _ctx.ptm("icon")), null, 16, _hoisted_1$9)) : createCommentVNode("", true)];
+          }, _ctx.ptm("icon")), null, 16, _hoisted_1$a)) : createCommentVNode("", true)];
         }), createBaseVNode("span", mergeProps({
           "class": _ctx.cx("label")
         }, _ctx.ptm("label"), {
           "data-p": $options.dataLabelP
-        }), toDisplayString(_ctx.label || " "), 17, _hoisted_2$8), _ctx.badge ? (openBlock(), createBlock(_component_Badge, {
+        }), toDisplayString(_ctx.label || " "), 17, _hoisted_2$9), _ctx.badge ? (openBlock(), createBlock(_component_Badge, {
           key: 2,
           value: _ctx.badge,
           "class": normalizeClass(_ctx.badgeClass),
@@ -14888,10 +14888,10 @@ function _toPrimitive$2(t2, r2) {
   }
   return ("string" === r2 ? String : Number)(t2);
 }
-var _hoisted_1$8 = ["data-p"];
-var _hoisted_2$7 = ["aria-labelledby", "aria-modal", "data-p"];
-var _hoisted_3$6 = ["id"];
-var _hoisted_4$5 = ["data-p"];
+var _hoisted_1$9 = ["data-p"];
+var _hoisted_2$8 = ["aria-labelledby", "aria-modal", "data-p"];
+var _hoisted_3$7 = ["id"];
+var _hoisted_4$6 = ["data-p"];
 function render$1(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Button = resolveComponent("Button");
   var _component_Portal = resolveComponent("Portal");
@@ -14956,7 +14956,7 @@ function render$1(_ctx, _cache, $props, $setup, $data, $options) {
               key: 0,
               id: $options.ariaLabelledById,
               "class": _ctx.cx("title")
-            }, _ctx.ptm("title")), toDisplayString(_ctx.header), 17, _hoisted_3$6)) : createCommentVNode("", true)];
+            }, _ctx.ptm("title")), toDisplayString(_ctx.header), 17, _hoisted_3$7)) : createCommentVNode("", true)];
           }), createBaseVNode("div", mergeProps({
             "class": _ctx.cx("headerActions")
           }, _ctx.ptm("headerActions")), [_ctx.maximizable ? renderSlot(_ctx.$slots, "maximizebutton", {
@@ -15017,18 +15017,18 @@ function render$1(_ctx, _cache, $props, $setup, $data, $options) {
             "class": [_ctx.cx("content"), _ctx.contentClass],
             style: _ctx.contentStyle,
             "data-p": $options.dataP
-          }, _objectSpread$1(_objectSpread$1({}, _ctx.contentProps), _ctx.ptm("content"))), [renderSlot(_ctx.$slots, "default")], 16, _hoisted_4$5), _ctx.footer || _ctx.$slots.footer ? (openBlock(), createElementBlock("div", mergeProps({
+          }, _objectSpread$1(_objectSpread$1({}, _ctx.contentProps), _ctx.ptm("content"))), [renderSlot(_ctx.$slots, "default")], 16, _hoisted_4$6), _ctx.footer || _ctx.$slots.footer ? (openBlock(), createElementBlock("div", mergeProps({
             key: 1,
             ref: $options.footerContainerRef,
             "class": _ctx.cx("footer")
           }, _ctx.ptm("footer")), [renderSlot(_ctx.$slots, "footer", {}, function() {
             return [createTextVNode(toDisplayString(_ctx.footer), 1)];
-          })], 16)) : createCommentVNode("", true)], 64))], 16, _hoisted_2$7)), [[_directive_focustrap, {
+          })], 16)) : createCommentVNode("", true)], 64))], 16, _hoisted_2$8)), [[_directive_focustrap, {
             disabled: !_ctx.modal
           }]]) : createCommentVNode("", true)];
         }),
         _: 3
-      }, 16, ["onEnter", "onAfterEnter", "onBeforeLeave", "onLeave", "onAfterLeave"])], 16, _hoisted_1$8)) : createCommentVNode("", true)];
+      }, 16, ["onEnter", "onAfterEnter", "onBeforeLeave", "onLeave", "onAfterLeave"])], 16, _hoisted_1$9)) : createCommentVNode("", true)];
     }),
     _: 3
   }, 8, ["appendTo"]);
@@ -15041,8 +15041,8 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const _hoisted_1$7 = { class: "sidebar-nav" };
-const _hoisted_2$6 = ["onClick"];
+const _hoisted_1$8 = { class: "sidebar-nav" };
+const _hoisted_2$7 = ["onClick"];
 const __default__ = {
   directives: {
     tooltip: Tooltip
@@ -15062,7 +15062,7 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign(__default__, {
     const visible = ref(false);
     return (_ctx, _cache) => {
       const _directive_tooltip = resolveDirective("tooltip");
-      return openBlock(), createElementBlock("div", _hoisted_1$7, [
+      return openBlock(), createElementBlock("div", _hoisted_1$8, [
         (openBlock(), createElementBlock(Fragment, null, renderList(items, (item) => {
           return withDirectives(createBaseVNode("div", {
             key: item.path,
@@ -15072,7 +15072,7 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign(__default__, {
             createBaseVNode("i", {
               class: normalizeClass(item.icon)
             }, null, 2)
-          ], 10, _hoisted_2$6), [
+          ], 10, _hoisted_2$7), [
             [
               _directive_tooltip,
               item.label,
@@ -67087,10 +67087,10 @@ function requireLib() {
 }
 var libExports = /* @__PURE__ */ requireLib();
 const HighlightJS = /* @__PURE__ */ getDefaultExportFromCjs(libExports);
-const _hoisted_1$6 = { class: "container" };
-const _hoisted_2$5 = { class: "App" };
-const _hoisted_3$5 = { class: "MainContent" };
-const _hoisted_4$4 = { class: "tibar" };
+const _hoisted_1$7 = { class: "container" };
+const _hoisted_2$6 = { class: "App" };
+const _hoisted_3$6 = { class: "MainContent" };
+const _hoisted_4$5 = { class: "tibar" };
 const _hoisted_5$3 = { class: "router-view-wrapper" };
 const _sfc_main$7 = {
   __name: "App",
@@ -67100,11 +67100,11 @@ const _sfc_main$7 = {
     });
     return (_ctx, _cache) => {
       const _component_router_view = resolveComponent("router-view");
-      return openBlock(), createElementBlock("div", _hoisted_1$6, [
-        createBaseVNode("div", _hoisted_2$5, [
+      return openBlock(), createElementBlock("div", _hoisted_1$7, [
+        createBaseVNode("div", _hoisted_2$6, [
           createVNode(SidebarNav, { class: "SidebarNav" }),
-          createBaseVNode("div", _hoisted_3$5, [
-            createBaseVNode("div", _hoisted_4$4, [
+          createBaseVNode("div", _hoisted_3$6, [
+            createBaseVNode("div", _hoisted_4$5, [
               createVNode(_sfc_main$9)
             ]),
             createBaseVNode("div", _hoisted_5$3, [
@@ -72711,16 +72711,16 @@ MarkdownIt.prototype.renderInline = function(src, env) {
   env = env || {};
   return this.renderer.render(this.parseInline(src, env), this.options, env);
 };
-const _hoisted_1$5 = { class: "chat-history" };
-const _hoisted_2$4 = {
+const _hoisted_1$6 = { class: "chat-history" };
+const _hoisted_2$5 = {
   key: 0,
   class: "sender-label"
 };
-const _hoisted_3$4 = {
+const _hoisted_3$5 = {
   key: 1,
   class: "text-message"
 };
-const _hoisted_4$3 = {
+const _hoisted_4$4 = {
   key: 0,
   class: "message-bubble user-bubble"
 };
@@ -72730,11 +72730,11 @@ const _hoisted_7$1 = {
   key: 2,
   class: "tool-message tool-call"
 };
-const _hoisted_8 = {
+const _hoisted_8$1 = {
   key: 3,
   class: "tool-message tool-response"
 };
-const _hoisted_9 = {
+const _hoisted_9$1 = {
   key: 4,
   class: "tool-message unknown"
 };
@@ -72762,15 +72762,15 @@ const _sfc_main$6 = {
     });
     const renderMarkdown = (content) => md.render(content);
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$5, [
+      return openBlock(), createElementBlock("div", _hoisted_1$6, [
         (openBlock(true), createElementBlock(Fragment, null, renderList(__props.messages, (msg, index) => {
           return openBlock(), createElementBlock("div", {
             key: index,
             class: normalizeClass(["chat-item", msg.source])
           }, [
-            index === 0 || __props.messages[index - 1].source !== msg.source ? (openBlock(), createElementBlock("div", _hoisted_2$4, toDisplayString(msg.source === "user" ? "你" : "GIS 助手"), 1)) : createCommentVNode("", true),
-            msg.type === "TextMessage" ? (openBlock(), createElementBlock("div", _hoisted_3$4, [
-              msg.source === "user" && typeof msg.content === "string" ? (openBlock(), createElementBlock("div", _hoisted_4$3, toDisplayString(msg.content), 1)) : msg.source === "assistant" && typeof msg.content === "string" ? (openBlock(), createElementBlock("div", {
+            index === 0 || __props.messages[index - 1].source !== msg.source ? (openBlock(), createElementBlock("div", _hoisted_2$5, toDisplayString(msg.source === "user" ? "你" : "GIS 助手"), 1)) : createCommentVNode("", true),
+            msg.type === "TextMessage" ? (openBlock(), createElementBlock("div", _hoisted_3$5, [
+              msg.source === "user" && typeof msg.content === "string" ? (openBlock(), createElementBlock("div", _hoisted_4$4, toDisplayString(msg.content), 1)) : msg.source === "assistant" && typeof msg.content === "string" ? (openBlock(), createElementBlock("div", {
                 key: 1,
                 innerHTML: renderMarkdown(msg.content),
                 class: "assistant-markdown"
@@ -72784,7 +72784,7 @@ const _sfc_main$6 = {
                   createBaseVNode("code", null, toDisplayString(tool.arguments), 1)
                 ]);
               }), 128))
-            ])) : msg.type === "ToolCallExecutionEvent" ? (openBlock(), createElementBlock("div", _hoisted_8, [
+            ])) : msg.type === "ToolCallExecutionEvent" ? (openBlock(), createElementBlock("div", _hoisted_8$1, [
               (openBlock(true), createElementBlock(Fragment, null, renderList(msg.content, (tool, toolIndex) => {
                 return openBlock(), createElementBlock("div", { key: toolIndex }, [
                   _cache[2] || (_cache[2] = createTextVNode(" 工具 ")),
@@ -72792,7 +72792,7 @@ const _sfc_main$6 = {
                   createTextVNode(" 执行成功：" + toDisplayString(tool.content), 1)
                 ]);
               }), 128))
-            ])) : (openBlock(), createElementBlock("div", _hoisted_9, " ⚠️ 不支持的消息类型：" + toDisplayString(msg.type), 1))
+            ])) : (openBlock(), createElementBlock("div", _hoisted_9$1, " ⚠️ 不支持的消息类型：" + toDisplayString(msg.type), 1))
           ], 2);
         }), 128))
       ]);
@@ -72800,10 +72800,10 @@ const _sfc_main$6 = {
   }
 };
 const ChatHistory = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["__scopeId", "data-v-f43d1070"]]);
-const _hoisted_1$4 = { class: "chat-container" };
-const _hoisted_2$3 = ["disabled"];
-const _hoisted_3$3 = { class: "button-bar" };
-const _hoisted_4$2 = ["disabled"];
+const _hoisted_1$5 = { class: "chat-container" };
+const _hoisted_2$4 = ["disabled"];
+const _hoisted_3$4 = { class: "button-bar" };
+const _hoisted_4$3 = ["disabled"];
 const _sfc_main$5 = {
   __name: "chat",
   setup(__props) {
@@ -72859,7 +72859,7 @@ const _sfc_main$5 = {
       adjustHeight();
     });
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$4, [
+      return openBlock(), createElementBlock("div", _hoisted_1$5, [
         createVNode(ChatHistory, {
           ref_key: "historyRef",
           ref: historyRef,
@@ -72879,10 +72879,10 @@ const _sfc_main$5 = {
             rows: "1",
             onInput: adjustHeight,
             onKeydown: withKeys(handleEnter, ["enter"])
-          }, null, 40, _hoisted_2$3), [
+          }, null, 40, _hoisted_2$4), [
             [vModelText, input.value]
           ]),
-          createBaseVNode("div", _hoisted_3$3, [
+          createBaseVNode("div", _hoisted_3$4, [
             _cache[3] || (_cache[3] = createBaseVNode("div", { class: "left-buttons" }, [
               createBaseVNode("i", {
                 class: "pi pi-file",
@@ -72907,14 +72907,14 @@ const _sfc_main$5 = {
               ], 64)) : (openBlock(), createElementBlock(Fragment, { key: 1 }, [
                 createTextVNode(" 发送 ")
               ], 64))
-            ], 8, _hoisted_4$2)
+            ], 8, _hoisted_4$3)
           ])
         ], 32)
       ]);
     };
   }
 };
-const Chat = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-c88497c6"]]);
+const Chat = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-9e9c3500"]]);
 class MapUtils {
   constructor(map2) {
     this.map = map2;
@@ -72942,9 +72942,15 @@ class MapUtils {
       overlay,
       type,
       name,
+      visible: true,
+      // 默认显示
       createTime: /* @__PURE__ */ new Date()
     });
-    this.map.addOverlay(overlay);
+    if (Array.isArray(overlay)) {
+      overlay.forEach((item) => this.map.addOverlay(item));
+    } else {
+      this.map.addOverlay(overlay);
+    }
     const event = new CustomEvent("layer-updated", {
       detail: { type: "add", layerId }
     });
@@ -72985,7 +72991,7 @@ class MapUtils {
    */
   drawBoundaryByName(cityName) {
     return new Promise((resolve2, reject) => {
-      const bd = new BMap.Boundary();
+      const bd = new BMapGL.Boundary();
       bd.get(cityName, (rs) => {
         if (!rs.boundaries.length) {
           reject(`未能获取 ${cityName} 的边界`);
@@ -72993,22 +72999,27 @@ class MapUtils {
         }
         try {
           const layerIds = [];
-          const polygons = rs.boundaries.map((path, index) => {
-            const ply = new BMap.Polygon(path, {
-              strokeWeight: 2,
-              strokeColor: "#ff0000",
-              fillColor: "#ffcccc",
-              fillOpacity: 0.4
+          const polygons = rs.boundaries.map((boundary, index) => {
+            const points = boundary.split(";").map((pointStr) => {
+              const [lng, lat] = pointStr.split(",").map(Number);
+              return new BMapGL.Point(lng, lat);
             });
-            const layerId = this.addLayer(ply, "边界", `${cityName}边界${index + 1}`);
+            const polygon = new BMapGL.Polygon(points, {
+              strokeColor: "#ff0000",
+              strokeWeight: 2,
+              fillColor: "#ffcccc",
+              fillOpacity: 0.4,
+              enableEditing: false,
+              enableClicking: true
+            });
+            const layerId = this.addLayer(polygon, "边界", `${cityName}边界${index + 1}`);
             layerIds.push(layerId);
-            return ply;
+            return polygon;
           });
-          const bounds = new BMap.Bounds();
+          const bounds = new BMapGL.Bounds();
           polygons.forEach((poly) => {
-            const polyBounds = poly.getBounds();
-            bounds.extend(polyBounds.getSouthWest());
-            bounds.extend(polyBounds.getNorthEast());
+            const path = poly.getPath();
+            path.forEach((point) => bounds.extend(point));
           });
           this.map.setViewport(bounds);
           resolve2({ bounds, polygons, layerIds });
@@ -73026,7 +73037,7 @@ class MapUtils {
    * @returns {string} 图层 ID
    */
   addMarker(point, name) {
-    const marker = new BMap.Marker(point);
+    const marker = new BMapGL.Marker(point);
     return this.addLayer(marker, "点", name);
   }
   /**
@@ -73036,10 +73047,12 @@ class MapUtils {
    * @returns {string} 图层 ID
    */
   addPolyline(points, name) {
-    const polyline = new BMap.Polyline(points, {
+    const polyline = new BMapGL.Polyline(points, {
       strokeColor: "#0000ff",
       strokeWeight: 2,
-      strokeOpacity: 0.8
+      strokeOpacity: 0.8,
+      enableEditing: false,
+      enableClicking: true
     });
     return this.addLayer(polyline, "线", name);
   }
@@ -73050,11 +73063,13 @@ class MapUtils {
    * @returns {string} 图层 ID
    */
   addPolygon(points, name) {
-    const polygon = new BMap.Polygon(points, {
+    const polygon = new BMapGL.Polygon(points, {
       strokeColor: "#ff0000",
       strokeWeight: 2,
       fillColor: "#ffcccc",
-      fillOpacity: 0.4
+      fillOpacity: 0.4,
+      enableEditing: false,
+      enableClicking: true
     });
     return this.addLayer(polygon, "面", name);
   }
@@ -73073,9 +73088,9 @@ class MapUtils {
    * @param {Object} options - 初始化选项
    */
   static initMap(container, options = {}) {
-    const map2 = new BMap.Map(container);
+    const map2 = new BMapGL.Map(container);
     map2.enableScrollWheelZoom(true);
-    const defaultCenter = new BMap.Point(114.305393, 30.593099);
+    const defaultCenter = new BMapGL.Point(114.305393, 30.593099);
     const defaultZoom = 13;
     map2.centerAndZoom(
       options.center || defaultCenter,
@@ -73096,7 +73111,9 @@ class MapUtils {
       strokeWeight: 2,
       strokeOpacity: 0.8,
       fillColor: "#ffcccc",
-      fillOpacity: 0.4
+      fillOpacity: 0.4,
+      enableEditing: false,
+      enableClicking: true
     };
     const finalStyle = { ...defaultStyle, ...style2 };
     const overlays = [];
@@ -73105,8 +73122,8 @@ class MapUtils {
       const properties = feature.properties;
       switch (geometry.type) {
         case "Point":
-          const point = new BMap.Point(geometry.coordinates[0], geometry.coordinates[1]);
-          const marker = new BMap.Marker(point);
+          const point = new BMapGL.Point(geometry.coordinates[0], geometry.coordinates[1]);
+          const marker = new BMapGL.Marker(point);
           if (properties.title) {
             marker.setTitle(properties.title);
           }
@@ -73114,25 +73131,29 @@ class MapUtils {
           break;
         case "LineString":
           const points = geometry.coordinates.map(
-            (coord) => new BMap.Point(coord[0], coord[1])
+            (coord) => new BMapGL.Point(coord[0], coord[1])
           );
-          const polyline = new BMap.Polyline(points, {
+          const polyline = new BMapGL.Polyline(points, {
             strokeColor: finalStyle.strokeColor,
             strokeWeight: finalStyle.strokeWeight,
-            strokeOpacity: finalStyle.strokeOpacity
+            strokeOpacity: finalStyle.strokeOpacity,
+            enableEditing: false,
+            enableClicking: true
           });
           overlays.push(polyline);
           break;
         case "Polygon":
           const paths = geometry.coordinates.map(
-            (ring) => ring.map((coord) => new BMap.Point(coord[0], coord[1]))
+            (ring) => ring.map((coord) => new BMapGL.Point(coord[0], coord[1]))
           );
-          const polygon = new BMap.Polygon(paths, {
+          const polygon = new BMapGL.Polygon(paths, {
             strokeColor: finalStyle.strokeColor,
             strokeWeight: finalStyle.strokeWeight,
             strokeOpacity: finalStyle.strokeOpacity,
             fillColor: finalStyle.fillColor,
-            fillOpacity: finalStyle.fillOpacity
+            fillOpacity: finalStyle.fillOpacity,
+            enableEditing: false,
+            enableClicking: true
           });
           overlays.push(polygon);
           break;
@@ -73170,7 +73191,7 @@ class MapUtils {
       displayOnMaxLevel: 18
     };
     const finalOptions = { ...defaultOptions2, ...options };
-    const imageLayer = new BMap.GroundOverlay(bounds, {
+    const imageLayer = new BMapGL.GroundOverlay(bounds, {
       type: "image",
       url,
       opacity: finalOptions.opacity,
@@ -73181,14 +73202,263 @@ class MapUtils {
     this.map.setViewport(bounds);
     return layerId;
   }
+  /**
+   * 平移地图
+   * @param {number} x - X轴平移距离
+   * @param {number} y - Y轴平移距离
+   */
+  panBy(x, y) {
+    if (!this.map) return;
+    this.map.panBy(x, y);
+  }
+  /**
+   * 放大一级
+   */
+  zoomIn() {
+    if (!this.map) return;
+    const zoom = this.map.getZoom();
+    this.map.setZoom(zoom + 1);
+  }
+  /**
+   * 缩小一级
+   */
+  zoomOut() {
+    if (!this.map) return;
+    const zoom = this.map.getZoom();
+    this.map.setZoom(zoom - 1);
+  }
+  /**
+   * 设置缩放级别
+   * @param {number} zoom - 缩放级别
+   */
+  setZoom(zoom) {
+    if (!this.map) return;
+    this.map.setZoom(zoom);
+  }
+  /**
+   * 获取当前缩放级别
+   * @returns {number|null} 当前缩放级别
+   */
+  getZoom() {
+    if (!this.map) return null;
+    return this.map.getZoom();
+  }
+  /**
+   * 获取地图中心点
+   * @returns {BMapGL.Point|null} 地图中心点
+   */
+  getCenter() {
+    if (!this.map) return null;
+    return this.map.getCenter();
+  }
+  /**
+   * 设置地图中心点
+   * @param {BMapGL.Point} point - 中心点坐标
+   */
+  setCenter(point) {
+    if (!this.map || !point) return;
+    this.map.setCenter(point);
+  }
+  /**
+   * 设置地图类型
+   * @param {string} type - 地图类型：'normal'|'satellite'|'hybrid'
+   */
+  setMapType(type) {
+    if (!this.map) return;
+    switch (type) {
+      case "normal":
+        this.map.setMapType(BMAP_NORMAL_MAP);
+        break;
+      case "satellite":
+        this.map.setMapType(BMAP_SATELLITE_MAP);
+        break;
+      case "hybrid":
+        this.map.setMapType(BMAP_HYBRID_MAP);
+        break;
+      default:
+        console.warn("未知的地图类型:", type);
+    }
+  }
+  /**
+   * 获取当前地图类型
+   * @returns {string|null} 地图类型：'normal'|'satellite'|'hybrid'
+   */
+  getMapType() {
+    if (!this.map) return null;
+    const type = this.map.getMapType();
+    if (type === BMAP_NORMAL_MAP) return "normal";
+    if (type === BMAP_SATELLITE_MAP) return "satellite";
+    if (type === BMAP_HYBRID_MAP) return "hybrid";
+    return null;
+  }
+  /**
+   * 启用/禁用滚轮缩放
+   * @param {boolean} enable - 是否启用
+   */
+  enableScrollWheelZoom(enable = true) {
+    if (!this.map) return;
+    if (enable) {
+      this.map.enableScrollWheelZoom();
+    } else {
+      this.map.disableScrollWheelZoom();
+    }
+  }
+  /**
+   * 启用/禁用拖拽
+   * @param {boolean} enable - 是否启用
+   */
+  enableDragging(enable = true) {
+    if (!this.map) return;
+    if (enable) {
+      this.map.enableDragging();
+    } else {
+      this.map.disableDragging();
+    }
+  }
+  /**
+   * 启用/禁用双击缩放
+   * @param {boolean} enable - 是否启用
+   */
+  enableDoubleClickZoom(enable = true) {
+    if (!this.map) return;
+    if (enable) {
+      this.map.enableDoubleClickZoom();
+    } else {
+      this.map.disableDoubleClickZoom();
+    }
+  }
+  /**
+   * 启用/禁用键盘控制
+   * @param {boolean} enable - 是否启用
+   */
+  enableKeyboard(enable = true) {
+    if (!this.map) return;
+    if (enable) {
+      this.map.enableKeyboard();
+    } else {
+      this.map.disableKeyboard();
+    }
+  }
+  /**
+   * 启用/禁用惯性拖拽
+   * @param {boolean} enable - 是否启用
+   */
+  enableInertialDragging(enable = true) {
+    if (!this.map) return;
+    if (enable) {
+      this.map.enableInertialDragging();
+    } else {
+      this.map.disableInertialDragging();
+    }
+  }
+  /**
+   * 启用/禁用连续缩放
+   * @param {boolean} enable - 是否启用
+   */
+  enableContinuousZoom(enable = true) {
+    if (!this.map) return;
+    if (enable) {
+      this.map.enableContinuousZoom();
+    } else {
+      this.map.disableContinuousZoom();
+    }
+  }
+  /**
+   * 启用/禁用双指缩放
+   * @param {boolean} enable - 是否启用
+   */
+  enablePinchToZoom(enable = true) {
+    if (!this.map) return;
+    if (enable) {
+      this.map.enablePinchToZoom();
+    } else {
+      this.map.disablePinchToZoom();
+    }
+  }
+  /**
+   * 启用/禁用自动调整大小
+   * @param {boolean} enable - 是否启用
+   */
+  enableAutoResize(enable = true) {
+    if (!this.map) return;
+    if (enable) {
+      this.map.enableAutoResize();
+    } else {
+      this.map.disableAutoResize();
+    }
+  }
+  /**
+   * 重置地图到默认状态
+   */
+  reset() {
+    if (!this.map) return;
+    const defaultCenter = new BMapGL.Point(114.305393, 30.593099);
+    const defaultZoom = 13;
+    this.map.centerAndZoom(defaultCenter, defaultZoom);
+  }
+  /**
+   * 设置图层显示状态
+   * @param {string} layerId - 图层 ID
+   * @param {boolean} visible - 是否显示
+   * @returns {boolean} 是否设置成功
+   */
+  setLayerVisible(layerId, visible) {
+    const layer = this.layers.get(layerId);
+    if (!layer) return false;
+    if (Array.isArray(layer.overlay)) {
+      layer.overlay.forEach((overlay) => {
+        if (visible) {
+          this.map.addOverlay(overlay);
+        } else {
+          this.map.removeOverlay(overlay);
+        }
+      });
+    } else {
+      if (visible) {
+        this.map.addOverlay(layer.overlay);
+      } else {
+        this.map.removeOverlay(layer.overlay);
+      }
+    }
+    layer.visible = visible;
+    this.layers.set(layerId, layer);
+    const event = new CustomEvent("layer-updated", {
+      detail: { type: "visibility", layerId, visible }
+    });
+    this.map.getContainer().dispatchEvent(event);
+    return true;
+  }
+  /**
+   * 获取图层显示状态
+   * @param {string} layerId - 图层 ID
+   * @returns {boolean|null} 图层显示状态
+   */
+  getLayerVisible(layerId) {
+    const layer = this.layers.get(layerId);
+    return layer ? layer.visible : null;
+  }
+  /**
+   * 切换图层显示状态
+   * @param {string} layerId - 图层 ID
+   * @returns {boolean} 切换后的显示状态
+   */
+  toggleLayerVisible(layerId) {
+    const layer = this.layers.get(layerId);
+    if (!layer) return false;
+    const newVisible = !layer.visible;
+    this.setLayerVisible(layerId, newVisible);
+    return newVisible;
+  }
 }
-const _hoisted_1$3 = { class: "round" };
-const _hoisted_2$2 = { class: "hemisphere-inner" };
-const _hoisted_3$2 = { class: "sidebar-content" };
-const _hoisted_4$1 = { class: "layer-list" };
+const _hoisted_1$4 = { class: "round" };
+const _hoisted_2$3 = { class: "hemisphere-inner" };
+const _hoisted_3$3 = { class: "sidebar-content" };
+const _hoisted_4$2 = { class: "layer-list" };
 const _hoisted_5$1 = ["onClick"];
 const _hoisted_6$1 = { class: "layer-name" };
-const _hoisted_7 = ["onClick"];
+const _hoisted_7 = { class: "layer-actions" };
+const _hoisted_8 = ["onClick", "title"];
+const _hoisted_9 = ["onClick"];
 const _sfc_main$4 = {
   __name: "baidumap",
   setup(__props, { expose: __expose }) {
@@ -73198,15 +73468,15 @@ const _sfc_main$4 = {
     const isSidebarOpen = ref(false);
     const layers = ref([]);
     const testPoints = {
-      point: new BMap.Point(114.305393, 30.593099),
+      point: new BMapGL.Point(114.305393, 30.593099),
       polyline: [
-        new BMap.Point(114.305393, 30.593099),
-        new BMap.Point(114.315393, 30.603099)
+        new BMapGL.Point(114.305393, 30.593099),
+        new BMapGL.Point(114.315393, 30.603099)
       ],
       polygon: [
-        new BMap.Point(114.305393, 30.593099),
-        new BMap.Point(114.315393, 30.593099),
-        new BMap.Point(114.315393, 30.603099)
+        new BMapGL.Point(114.305393, 30.593099),
+        new BMapGL.Point(114.315393, 30.593099),
+        new BMapGL.Point(114.315393, 30.603099)
       ]
     };
     const testGeoJSON = {
@@ -73317,10 +73587,10 @@ const _sfc_main$4 = {
     };
     const addTestImageLayer = () => {
       if (!mapUtils) return;
-      const bounds = new BMap.Bounds(
-        new BMap.Point(114.295393, 30.583099),
+      const bounds = new BMapGL.Bounds(
+        new BMapGL.Point(114.295393, 30.583099),
         // 西南角
-        new BMap.Point(114.325393, 30.613099)
+        new BMapGL.Point(114.325393, 30.613099)
         // 东北角
       );
       const options = {
@@ -73366,32 +73636,54 @@ const _sfc_main$4 = {
       }
     };
     const locateToLayer = (layer) => {
-      if (!mapUtils) return;
-      if (Array.isArray(layer.overlay)) {
-        const bounds = new BMap.Bounds();
-        layer.overlay.forEach((overlay) => {
-          if (overlay instanceof BMap.Marker) {
-            bounds.extend(overlay.getPosition());
-          } else if (overlay instanceof BMap.Polyline) {
-            overlay.getPath().forEach((point) => bounds.extend(point));
-          } else if (overlay instanceof BMap.Polygon) {
-            const polygonBounds = overlay.getBounds();
-            bounds.extend(polygonBounds.getSouthWest());
-            bounds.extend(polygonBounds.getNorthEast());
+      if (!mapUtils || !layer.overlay) return;
+      try {
+        const bounds = new BMapGL.Bounds();
+        if (Array.isArray(layer.overlay)) {
+          layer.overlay.forEach((overlay) => {
+            if (overlay instanceof BMapGL.Marker) {
+              bounds.extend(overlay.getPosition());
+            } else if (overlay instanceof BMapGL.Polyline) {
+              const path = overlay.getPath();
+              path.forEach((point) => bounds.extend(point));
+            } else if (overlay instanceof BMapGL.Polygon) {
+              const path = overlay.getPath();
+              path.forEach((point) => bounds.extend(point));
+            }
+          });
+        } else {
+          if (layer.overlay instanceof BMapGL.Marker) {
+            const position = layer.overlay.getPosition();
+            bounds.extend(position);
+          } else if (layer.overlay instanceof BMapGL.Polyline) {
+            const path = layer.overlay.getPath();
+            path.forEach((point) => bounds.extend(point));
+          } else if (layer.overlay instanceof BMapGL.Polygon) {
+            const path = layer.overlay.getPath();
+            path.forEach((point) => bounds.extend(point));
+          } else if (layer.overlay instanceof BMapGL.GroundOverlay) {
+            const overlayBounds = layer.overlay.getBounds();
+            if (overlayBounds) {
+              bounds.extend(overlayBounds.sw);
+              bounds.extend(overlayBounds.ne);
+            }
           }
-        });
-        map2.setViewport(bounds);
-      } else {
-        if (layer.overlay instanceof BMap.Marker) {
-          map2.centerAndZoom(layer.overlay.getPosition(), map2.getZoom());
-        } else if (layer.overlay instanceof BMap.Polyline) {
-          const bounds = new BMap.Bounds();
-          layer.overlay.getPath().forEach((point) => bounds.extend(point));
-          map2.setViewport(bounds);
-        } else if (layer.overlay instanceof BMap.Polygon || layer.overlay instanceof BMap.GroundOverlay) {
-          map2.setViewport(layer.overlay.getBounds());
         }
+        if (!bounds.isEmpty()) {
+          const viewport = map2.getViewport(bounds, {
+            enableAnimation: true,
+            margins: [50, 50, 50, 50]
+            // 上右下左边距
+          });
+          map2.setViewport(viewport);
+        }
+      } catch (error2) {
+        console.error("定位图层时发生错误:", error2);
       }
+    };
+    const toggleLayerVisibility = (layerId) => {
+      if (!mapUtils) return;
+      mapUtils.toggleLayerVisible(layerId);
     };
     onMounted(() => {
       if (!mapContainer.value) return;
@@ -73409,14 +73701,37 @@ const _sfc_main$4 = {
       addPolygon,
       getAllLayers,
       addGeoJSON,
-      addImageLayer
+      addImageLayer,
+      // 地图操作接口
+      panBy: (x, y) => mapUtils?.panBy(x, y),
+      zoomIn: () => mapUtils?.zoomIn(),
+      zoomOut: () => mapUtils?.zoomOut(),
+      setZoom: (zoom) => mapUtils?.setZoom(zoom),
+      getZoom: () => mapUtils?.getZoom(),
+      getCenter: () => mapUtils?.getCenter(),
+      setCenter: (point) => mapUtils?.setCenter(point),
+      setMapType: (type) => mapUtils?.setMapType(type),
+      getMapType: () => mapUtils?.getMapType(),
+      enableScrollWheelZoom: (enable) => mapUtils?.enableScrollWheelZoom(enable),
+      enableDragging: (enable) => mapUtils?.enableDragging(enable),
+      enableDoubleClickZoom: (enable) => mapUtils?.enableDoubleClickZoom(enable),
+      enableKeyboard: (enable) => mapUtils?.enableKeyboard(enable),
+      enableInertialDragging: (enable) => mapUtils?.enableInertialDragging(enable),
+      enableContinuousZoom: (enable) => mapUtils?.enableContinuousZoom(enable),
+      enablePinchToZoom: (enable) => mapUtils?.enablePinchToZoom(enable),
+      enableAutoResize: (enable) => mapUtils?.enableAutoResize(enable),
+      reset: () => mapUtils?.reset(),
+      // 图层显示控制接口
+      setLayerVisible: (layerId, visible) => mapUtils?.setLayerVisible(layerId, visible),
+      getLayerVisible: (layerId) => mapUtils?.getLayerVisible(layerId),
+      toggleLayerVisible: (layerId) => mapUtils?.toggleLayerVisible(layerId)
     });
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", {
         class: "map-wrapper",
         onClick: handleWrapperClick
       }, [
-        createBaseVNode("div", _hoisted_1$3, [
+        createBaseVNode("div", _hoisted_1$4, [
           createBaseVNode("div", {
             class: "map-container",
             ref_key: "mapContainer",
@@ -73432,13 +73747,13 @@ const _sfc_main$4 = {
             class: "hemisphere",
             onClick: toggleSidebar
           }, [
-            createBaseVNode("div", _hoisted_2$2, [
+            createBaseVNode("div", _hoisted_2$3, [
               createBaseVNode("i", {
                 class: normalizeClass(isSidebarOpen.value ? "pi pi-angle-left" : "pi pi-angle-right")
               }, null, 2)
             ])
           ]),
-          createBaseVNode("div", _hoisted_3$2, [
+          createBaseVNode("div", _hoisted_3$3, [
             _cache[7] || (_cache[7] = createBaseVNode("h3", null, "图层管理", -1)),
             createBaseVNode("div", { class: "toolbar" }, [
               createBaseVNode("button", {
@@ -73473,7 +73788,7 @@ const _sfc_main$4 = {
               ]))
             ]),
             _cache[8] || (_cache[8] = createBaseVNode("div", { class: "divider" }, null, -1)),
-            createBaseVNode("div", _hoisted_4$1, [
+            createBaseVNode("div", _hoisted_4$2, [
               (openBlock(true), createElementBlock(Fragment, null, renderList(layers.value, (layer) => {
                 return openBlock(), createElementBlock("div", {
                   class: "layer-item",
@@ -73484,12 +73799,23 @@ const _sfc_main$4 = {
                     class: normalizeClass([getTypeIcon(layer.type), "type-icon"])
                   }, null, 2),
                   createBaseVNode("span", _hoisted_6$1, toDisplayString(layer.name), 1),
-                  createBaseVNode("button", {
-                    class: "delete-btn",
-                    onClick: withModifiers(($event) => removeLayer(layer.id), ["stop"])
-                  }, _cache[6] || (_cache[6] = [
-                    createBaseVNode("i", { class: "pi pi-trash" }, null, -1)
-                  ]), 8, _hoisted_7)
+                  createBaseVNode("div", _hoisted_7, [
+                    createBaseVNode("button", {
+                      class: "action-btn",
+                      onClick: withModifiers(($event) => toggleLayerVisibility(layer.id), ["stop"]),
+                      title: layer.visible ? "隐藏" : "显示"
+                    }, [
+                      createBaseVNode("i", {
+                        class: normalizeClass(layer.visible ? "pi pi-eye" : "pi pi-eye-slash")
+                      }, null, 2)
+                    ], 8, _hoisted_8),
+                    createBaseVNode("button", {
+                      class: "delete-btn",
+                      onClick: withModifiers(($event) => removeLayer(layer.id), ["stop"])
+                    }, _cache[6] || (_cache[6] = [
+                      createBaseVNode("i", { class: "pi pi-trash" }, null, -1)
+                    ]), 8, _hoisted_9)
+                  ])
                 ], 8, _hoisted_5$1);
               }), 128))
             ])
@@ -73499,7 +73825,7 @@ const _sfc_main$4 = {
     };
   }
 };
-const baidumap = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__scopeId", "data-v-26893a4b"]]);
+const baidumap = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__scopeId", "data-v-5d563d02"]]);
 const handleWebSocketMessage = (event, mapRef) => {
   const msg = JSON.parse(event.data);
   console.log("收到消息:", msg);
@@ -73564,9 +73890,9 @@ const createWebSocket = (mapRef) => {
   ws.onmessage = (event) => handleWebSocketMessage(event, mapRef);
   return ws;
 };
-const _hoisted_1$2 = { class: "page-wrapper" };
-const _hoisted_2$1 = { class: "Map" };
-const _hoisted_3$1 = { class: "chat-wrapper" };
+const _hoisted_1$3 = { class: "page-wrapper" };
+const _hoisted_2$2 = { class: "Map" };
+const _hoisted_3$2 = { class: "chat-wrapper" };
 const _sfc_main$3 = {
   __name: "Main",
   setup(__props) {
@@ -73576,14 +73902,14 @@ const _sfc_main$3 = {
       ws.value = createWebSocket(mapRef);
     });
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$2, [
-        createBaseVNode("div", _hoisted_2$1, [
+      return openBlock(), createElementBlock("div", _hoisted_1$3, [
+        createBaseVNode("div", _hoisted_2$2, [
           createVNode(baidumap, {
             ref_key: "mapRef",
             ref: mapRef
           }, null, 512)
         ]),
-        createBaseVNode("div", _hoisted_3$1, [
+        createBaseVNode("div", _hoisted_3$2, [
           createVNode(Chat)
         ])
       ]);
@@ -73592,10 +73918,10 @@ const _sfc_main$3 = {
 };
 const Main = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-7eb42b73"]]);
 const _sfc_main$2 = {};
-function _sfc_render$1(_ctx, _cache) {
+function _sfc_render(_ctx, _cache) {
   return " 12312312 ";
 }
-const Data = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$1]]);
+const Data = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render]]);
 var script$3 = {
   name: "BaseEditableHolder",
   "extends": script$d,
@@ -73938,7 +74264,7 @@ var script = {
     }
   }
 };
-var _hoisted_1$1 = ["value", "name", "disabled", "aria-invalid", "data-p"];
+var _hoisted_1$2 = ["value", "name", "disabled", "aria-invalid", "data-p"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock("input", mergeProps({
     type: "text",
@@ -73951,16 +74277,16 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onInput: _cache[0] || (_cache[0] = function() {
       return $options.onInput && $options.onInput.apply($options, arguments);
     })
-  }, $options.attrs), null, 16, _hoisted_1$1);
+  }, $options.attrs), null, 16, _hoisted_1$2);
 }
 script.render = render;
-const _hoisted_1 = { class: "config-container" };
-const _hoisted_2 = {
+const _hoisted_1$1 = { class: "config-container" };
+const _hoisted_2$1 = {
   key: 0,
   class: "config-content"
 };
-const _hoisted_3 = { class: "config-form" };
-const _hoisted_4 = ["for"];
+const _hoisted_3$1 = { class: "config-form" };
+const _hoisted_4$1 = ["for"];
 const _hoisted_5 = { class: "button-container" };
 const _hoisted_6 = {
   key: 1,
@@ -74004,10 +74330,10 @@ const _sfc_main$1 = {
       }
     }
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1, [
-        configLoaded.value ? (openBlock(), createElementBlock("div", _hoisted_2, [
+      return openBlock(), createElementBlock("div", _hoisted_1$1, [
+        configLoaded.value ? (openBlock(), createElementBlock("div", _hoisted_2$1, [
           _cache[0] || (_cache[0] = createBaseVNode("h2", { class: "config-title" }, "系统配置", -1)),
-          createBaseVNode("div", _hoisted_3, [
+          createBaseVNode("div", _hoisted_3$1, [
             (openBlock(true), createElementBlock(Fragment, null, renderList(config2, (value, key) => {
               return openBlock(), createElementBlock("div", {
                 key,
@@ -74016,7 +74342,7 @@ const _sfc_main$1 = {
                 createBaseVNode("label", {
                   for: key,
                   class: "field-label"
-                }, toDisplayString(key), 9, _hoisted_4),
+                }, toDisplayString(key), 9, _hoisted_4$1),
                 createVNode(unref(script), {
                   id: key,
                   modelValue: config2[key],
@@ -74044,17 +74370,160 @@ const _sfc_main$1 = {
     };
   }
 };
-const Config = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-f175cb1d"]]);
-const _sfc_main = {};
-function _sfc_render(_ctx, _cache) {
-  return " 123123121231231 ";
-}
-const Info = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render]]);
+const Config = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-009d76f5"]]);
+const _hoisted_1 = { id: "app" };
+const _hoisted_2 = { style: { "position": "absolute", "bottom": "10px", "left": "50%", "transform": "translateX(-50%)", "z-index": "1000" } };
+const _hoisted_3 = { style: { "margin-top": "10px" } };
+const _hoisted_4 = { style: { "margin-top": "10px" } };
+const _sfc_main = {
+  __name: "Info",
+  setup(__props) {
+    const mapInstance = ref(null);
+    const imageUrl = ref(null);
+    const imageOverlay = ref(null);
+    const swLng = ref(108.25);
+    const swLat = ref(29.05);
+    const neLng = ref(116.2);
+    const neLat = ref(33);
+    const fileInput = ref(null);
+    const initMap = () => {
+      if (window.BMapGL) {
+        mapInstance.value = new BMapGL.Map("map");
+        mapInstance.value.centerAndZoom(new BMapGL.Point(114.3054, 30.5929), 6);
+        mapInstance.value.enableScrollWheelZoom(true);
+      } else {
+        console.error("百度地图 API 未加载，将在 1 秒后重试");
+        setTimeout(() => {
+          initMap();
+        }, 1e3);
+      }
+    };
+    const handleFileUpload = (event) => {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (e2) => {
+          imageUrl.value = e2.target.result;
+        };
+        reader.onerror = (error2) => {
+          console.error("文件读取失败:", error2);
+        };
+        reader.readAsDataURL(file);
+      }
+    };
+    const createImageOverlay = (imageUrl2, swLng2, swLat2, neLng2, neLat2) => {
+      if (!imageUrl2) {
+        console.error("没有上传图片");
+        return;
+      }
+      if (imageOverlay.value) {
+        mapInstance.value.removeOverlay(imageOverlay.value);
+      }
+      try {
+        const bounds = new BMapGL.Bounds(
+          new BMapGL.Point(swLng2, swLat2),
+          new BMapGL.Point(neLng2, neLat2)
+        );
+        imageOverlay.value = new BMapGL.GroundOverlay(bounds, {
+          url: imageUrl2,
+          opacity: 0.5
+          // 设置透明度为 50%
+        });
+        mapInstance.value.addOverlay(imageOverlay.value);
+      } catch (error2) {
+        console.error("创建图片覆盖物时发生错误:", error2);
+      }
+    };
+    const updateImageOverlay = () => {
+      createImageOverlay(
+        imageUrl.value,
+        swLng.value,
+        swLat.value,
+        neLng.value,
+        neLat.value
+      );
+    };
+    const triggerFileInput = () => {
+      fileInput.value.click();
+    };
+    onMounted(() => {
+      initMap();
+    });
+    return (_ctx, _cache) => {
+      return openBlock(), createElementBlock("div", _hoisted_1, [
+        _cache[8] || (_cache[8] = createBaseVNode("div", {
+          id: "map",
+          style: { "width": "100%", "height": "100%" }
+        }, null, -1)),
+        createBaseVNode("div", _hoisted_2, [
+          createBaseVNode("input", {
+            type: "file",
+            onChange: handleFileUpload,
+            accept: "image/png",
+            style: { "display": "none" },
+            ref_key: "fileInput",
+            ref: fileInput
+          }, null, 544),
+          createBaseVNode("button", { onClick: triggerFileInput }, "上传图片"),
+          createBaseVNode("div", _hoisted_3, [
+            createBaseVNode("div", null, [
+              _cache[4] || (_cache[4] = createBaseVNode("label", { for: "swLng" }, "西南角经度:", -1)),
+              withDirectives(createBaseVNode("input", {
+                type: "number",
+                id: "swLng",
+                "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => swLng.value = $event),
+                step: "any"
+              }, null, 512), [
+                [vModelText, swLng.value]
+              ])
+            ]),
+            createBaseVNode("div", null, [
+              _cache[5] || (_cache[5] = createBaseVNode("label", { for: "swLat" }, "西南角纬度:", -1)),
+              withDirectives(createBaseVNode("input", {
+                type: "number",
+                id: "swLat",
+                "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => swLat.value = $event),
+                step: "any"
+              }, null, 512), [
+                [vModelText, swLat.value]
+              ])
+            ])
+          ]),
+          createBaseVNode("div", _hoisted_4, [
+            createBaseVNode("div", null, [
+              _cache[6] || (_cache[6] = createBaseVNode("label", { for: "neLng" }, "东北角经度:", -1)),
+              withDirectives(createBaseVNode("input", {
+                type: "number",
+                id: "neLng",
+                "onUpdate:modelValue": _cache[2] || (_cache[2] = ($event) => neLng.value = $event),
+                step: "any"
+              }, null, 512), [
+                [vModelText, neLng.value]
+              ])
+            ]),
+            createBaseVNode("div", null, [
+              _cache[7] || (_cache[7] = createBaseVNode("label", { for: "neLat" }, "东北角纬度:", -1)),
+              withDirectives(createBaseVNode("input", {
+                type: "number",
+                id: "neLat",
+                "onUpdate:modelValue": _cache[3] || (_cache[3] = ($event) => neLat.value = $event),
+                step: "any"
+              }, null, 512), [
+                [vModelText, neLat.value]
+              ])
+            ])
+          ]),
+          createBaseVNode("button", { onClick: updateImageOverlay }, "更新图片位置")
+        ])
+      ]);
+    };
+  }
+};
 const routes = [
   { path: "/main", component: Main },
   { path: "/data", component: Data },
   { path: "/config", component: Config },
-  { path: "/info", component: Info },
+  { path: "/info", component: _sfc_main },
   { path: "/", redirect: "/main" }
   // 默认跳转
 ];
