@@ -38,9 +38,14 @@
           >
             <i :class="getTypeIcon(layer.type)" class="type-icon"></i>
             <span class="layer-name">{{ layer.name }}</span>
-            <button class="delete-btn" @click.stop="removeLayer(layer.id)">
-              <i class="pi pi-trash"></i>
-            </button>
+            <div class="layer-actions">
+              <button class="action-btn" @click.stop="toggleLayerVisibility(layer.id)" :title="layer.visible ? '隐藏' : '显示'">
+                <i :class="layer.visible ? 'pi pi-eye' : 'pi pi-eye-slash'"></i>
+              </button>
+              <button class="delete-btn" @click.stop="removeLayer(layer.id)">
+                <i class="pi pi-trash"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -63,15 +68,15 @@ const layers = ref([]);
 
 // 测试数据
 const testPoints = {
-  point: new BMap.Point(114.305393, 30.593099),
+  point: new BMapGL.Point(114.305393, 30.593099),
   polyline: [
-    new BMap.Point(114.305393, 30.593099),
-    new BMap.Point(114.315393, 30.603099)
+    new BMapGL.Point(114.305393, 30.593099),
+    new BMapGL.Point(114.315393, 30.603099)
   ],
   polygon: [
-    new BMap.Point(114.305393, 30.593099),
-    new BMap.Point(114.315393, 30.593099),
-    new BMap.Point(114.315393, 30.603099)
+    new BMapGL.Point(114.305393, 30.593099),
+    new BMapGL.Point(114.315393, 30.593099),
+    new BMapGL.Point(114.315393, 30.603099)
   ]
 };
 
@@ -214,9 +219,9 @@ const addTestImageLayer = () => {
   if (!mapUtils) return;
   
   // 设置更大的显示范围
-  const bounds = new BMap.Bounds(
-    new BMap.Point(114.295393, 30.583099), // 西南角
-    new BMap.Point(114.325393, 30.613099)  // 东北角
+  const bounds = new BMapGL.Bounds(
+    new BMapGL.Point(114.295393, 30.583099), // 西南角
+    new BMapGL.Point(114.325393, 30.613099)  // 东北角
   );
 
   const options = {
@@ -264,36 +269,61 @@ const handleWrapperClick = () => {
 
 // 定位到图层
 const locateToLayer = (layer) => {
-  if (!mapUtils) return;
+  if (!mapUtils || !layer.overlay) return;
   
-  if (Array.isArray(layer.overlay)) {
-    // 处理 GeoJSON 图层
-    const bounds = new BMap.Bounds();
-    layer.overlay.forEach(overlay => {
-      if (overlay instanceof BMap.Marker) {
-        bounds.extend(overlay.getPosition());
-      } else if (overlay instanceof BMap.Polyline) {
-        overlay.getPath().forEach(point => bounds.extend(point));
-      } else if (overlay instanceof BMap.Polygon) {
-        const polygonBounds = overlay.getBounds();
-        // 使用 extend 方法扩展边界
-        bounds.extend(polygonBounds.getSouthWest());
-        bounds.extend(polygonBounds.getNorthEast());
+  try {
+    const bounds = new BMapGL.Bounds();
+    
+    if (Array.isArray(layer.overlay)) {
+      // 处理 GeoJSON 图层
+      layer.overlay.forEach(overlay => {
+        if (overlay instanceof BMapGL.Marker) {
+          bounds.extend(overlay.getPosition());
+        } else if (overlay instanceof BMapGL.Polyline) {
+          const path = overlay.getPath();
+          path.forEach(point => bounds.extend(point));
+        } else if (overlay instanceof BMapGL.Polygon) {
+          const path = overlay.getPath();
+          path.forEach(point => bounds.extend(point));
+        }
+      });
+    } else {
+      // 处理单个覆盖物
+      if (layer.overlay instanceof BMapGL.Marker) {
+        const position = layer.overlay.getPosition();
+        bounds.extend(position);
+      } else if (layer.overlay instanceof BMapGL.Polyline) {
+        const path = layer.overlay.getPath();
+        path.forEach(point => bounds.extend(point));
+      } else if (layer.overlay instanceof BMapGL.Polygon) {
+        const path = layer.overlay.getPath();
+        path.forEach(point => bounds.extend(point));
+      } else if (layer.overlay instanceof BMapGL.GroundOverlay) {
+        const overlayBounds = layer.overlay.getBounds();
+        if (overlayBounds) {
+          bounds.extend(overlayBounds.sw);
+          bounds.extend(overlayBounds.ne);
+        }
       }
-    });
-    map.setViewport(bounds);
-  } else {
-    // 处理其他类型图层
-    if (layer.overlay instanceof BMap.Marker) {
-      map.centerAndZoom(layer.overlay.getPosition(), map.getZoom());
-    } else if (layer.overlay instanceof BMap.Polyline) {
-      const bounds = new BMap.Bounds();
-      layer.overlay.getPath().forEach(point => bounds.extend(point));
-      map.setViewport(bounds);
-    } else if (layer.overlay instanceof BMap.Polygon || layer.overlay instanceof BMap.GroundOverlay) {
-      map.setViewport(layer.overlay.getBounds());
     }
+    
+    // 设置视图范围，并添加适当的边距
+    if (!bounds.isEmpty()) {
+      const viewport = map.getViewport(bounds, {
+        enableAnimation: true,
+        margins: [50, 50, 50, 50] // 上右下左边距
+      });
+      map.setViewport(viewport);
+    }
+  } catch (error) {
+    console.error('定位图层时发生错误:', error);
   }
+};
+
+// 切换图层显示状态
+const toggleLayerVisibility = (layerId) => {
+  if (!mapUtils) return;
+  mapUtils.toggleLayerVisible(layerId);
 };
 
 onMounted(() => {
@@ -315,7 +345,30 @@ defineExpose({
   addPolygon,
   getAllLayers,
   addGeoJSON,
-  addImageLayer
+  addImageLayer,
+  // 地图操作接口
+  panBy: (x, y) => mapUtils?.panBy(x, y),
+  zoomIn: () => mapUtils?.zoomIn(),
+  zoomOut: () => mapUtils?.zoomOut(),
+  setZoom: (zoom) => mapUtils?.setZoom(zoom),
+  getZoom: () => mapUtils?.getZoom(),
+  getCenter: () => mapUtils?.getCenter(),
+  setCenter: (point) => mapUtils?.setCenter(point),
+  setMapType: (type) => mapUtils?.setMapType(type),
+  getMapType: () => mapUtils?.getMapType(),
+  enableScrollWheelZoom: (enable) => mapUtils?.enableScrollWheelZoom(enable),
+  enableDragging: (enable) => mapUtils?.enableDragging(enable),
+  enableDoubleClickZoom: (enable) => mapUtils?.enableDoubleClickZoom(enable),
+  enableKeyboard: (enable) => mapUtils?.enableKeyboard(enable),
+  enableInertialDragging: (enable) => mapUtils?.enableInertialDragging(enable),
+  enableContinuousZoom: (enable) => mapUtils?.enableContinuousZoom(enable),
+  enablePinchToZoom: (enable) => mapUtils?.enablePinchToZoom(enable),
+  enableAutoResize: (enable) => mapUtils?.enableAutoResize(enable),
+  reset: () => mapUtils?.reset(),
+  // 图层显示控制接口
+  setLayerVisible: (layerId, visible) => mapUtils?.setLayerVisible(layerId, visible),
+  getLayerVisible: (layerId) => mapUtils?.getLayerVisible(layerId),
+  toggleLayerVisible: (layerId) => mapUtils?.toggleLayerVisible(layerId)
 });
 </script>
 
@@ -533,6 +586,39 @@ defineExpose({
 }
 
 .delete-btn i {
+  font-size: 14px;
+}
+
+.layer-actions {
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.layer-item:hover .layer-actions {
+  opacity: 1;
+}
+
+.action-btn {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: none;
+  color: #1890ff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.action-btn:hover {
+  background: #e6f7ff;
+}
+
+.action-btn i {
   font-size: 14px;
 }
 </style>

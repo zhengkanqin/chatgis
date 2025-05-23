@@ -27,9 +27,15 @@ export class MapUtils {
       overlay,
       type,
       name,
+      visible: true, // 默认显示
       createTime: new Date()
     });
-    this.map.addOverlay(overlay);
+    
+    if (Array.isArray(overlay)) {
+      overlay.forEach(item => this.map.addOverlay(item));
+    } else {
+      this.map.addOverlay(overlay);
+    }
     
     // 触发自定义事件通知图层更新
     const event = new CustomEvent('layer-updated', {
@@ -78,7 +84,7 @@ export class MapUtils {
    */
   drawBoundaryByName(cityName) {
     return new Promise((resolve, reject) => {
-      const bd = new BMap.Boundary();
+      const bd = new BMapGL.Boundary();
       bd.get(cityName, (rs) => {
         if (!rs.boundaries.length) {
           reject(`未能获取 ${cityName} 的边界`);
@@ -87,31 +93,33 @@ export class MapUtils {
 
         try {
           const layerIds = [];
-          const polygons = rs.boundaries.map((path, index) => {
-            const ply = new BMap.Polygon(path, {
-              strokeWeight: 2,
-              strokeColor: "#ff0000",
-              fillColor: "#ffcccc",
-              fillOpacity: 0.4
+          const polygons = rs.boundaries.map((boundary, index) => {
+            // 将边界字符串转换为点数组
+            const points = boundary.split(';').map(pointStr => {
+              const [lng, lat] = pointStr.split(',').map(Number);
+              return new BMapGL.Point(lng, lat);
             });
-            // 使用图层管理系统添加边界
-            const layerId = this.addLayer(ply, '边界', `${cityName}边界${index + 1}`);
+
+            const polygon = new BMapGL.Polygon(points, {
+              strokeColor: "#ff0000",
+              strokeWeight: 2,
+              fillColor: "#ffcccc",
+              fillOpacity: 0.4,
+              enableEditing: false,
+              enableClicking: true
+            });
+            const layerId = this.addLayer(polygon, '边界', `${cityName}边界${index + 1}`);
             layerIds.push(layerId);
-            return ply;
+            return polygon;
           });
 
-          // 使用第一个多边形的边界作为初始值
-          const bounds = new BMap.Bounds();
-          // 遍历所有多边形，扩展边界
+          const bounds = new BMapGL.Bounds();
           polygons.forEach(poly => {
-            const polyBounds = poly.getBounds();
-            bounds.extend(polyBounds.getSouthWest());
-            bounds.extend(polyBounds.getNorthEast());
+            const path = poly.getPath();
+            path.forEach(point => bounds.extend(point));
           });
 
-          // 设置地图视图到边界范围
           this.map.setViewport(bounds);
-
           resolve({ bounds, polygons, layerIds });
         } catch (error) {
           console.error('绘制边界时发生错误:', error);
@@ -128,7 +136,7 @@ export class MapUtils {
    * @returns {string} 图层 ID
    */
   addMarker(point, name) {
-    const marker = new BMap.Marker(point);
+    const marker = new BMapGL.Marker(point);
     return this.addLayer(marker, '点', name);
   }
 
@@ -139,10 +147,12 @@ export class MapUtils {
    * @returns {string} 图层 ID
    */
   addPolyline(points, name) {
-    const polyline = new BMap.Polyline(points, {
+    const polyline = new BMapGL.Polyline(points, {
       strokeColor: "#0000ff",
       strokeWeight: 2,
-      strokeOpacity: 0.8
+      strokeOpacity: 0.8,
+      enableEditing: false,
+      enableClicking: true
     });
     return this.addLayer(polyline, '线', name);
   }
@@ -154,11 +164,13 @@ export class MapUtils {
    * @returns {string} 图层 ID
    */
   addPolygon(points, name) {
-    const polygon = new BMap.Polygon(points, {
+    const polygon = new BMapGL.Polygon(points, {
       strokeColor: "#ff0000",
       strokeWeight: 2,
       fillColor: "#ffcccc",
-      fillOpacity: 0.4
+      fillOpacity: 0.4,
+      enableEditing: false,
+      enableClicking: true
     });
     return this.addLayer(polygon, '面', name);
   }
@@ -179,10 +191,10 @@ export class MapUtils {
    * @param {Object} options - 初始化选项
    */
   static initMap(container, options = {}) {
-    const map = new BMap.Map(container);
+    const map = new BMapGL.Map(container);
     map.enableScrollWheelZoom(true);
     
-    const defaultCenter = new BMap.Point(114.305393, 30.593099);
+    const defaultCenter = new BMapGL.Point(114.305393, 30.593099);
     const defaultZoom = 13;
     
     map.centerAndZoom(
@@ -206,21 +218,22 @@ export class MapUtils {
       strokeWeight: 2,
       strokeOpacity: 0.8,
       fillColor: "#ffcccc",
-      fillOpacity: 0.4
+      fillOpacity: 0.4,
+      enableEditing: false,
+      enableClicking: true
     };
     const finalStyle = { ...defaultStyle, ...style };
 
     const overlays = [];
     
-    // 处理不同类型的 GeoJSON 要素
     geojson.features.forEach(feature => {
       const geometry = feature.geometry;
       const properties = feature.properties;
       
       switch (geometry.type) {
         case 'Point':
-          const point = new BMap.Point(geometry.coordinates[0], geometry.coordinates[1]);
-          const marker = new BMap.Marker(point);
+          const point = new BMapGL.Point(geometry.coordinates[0], geometry.coordinates[1]);
+          const marker = new BMapGL.Marker(point);
           if (properties.title) {
             marker.setTitle(properties.title);
           }
@@ -229,33 +242,36 @@ export class MapUtils {
 
         case 'LineString':
           const points = geometry.coordinates.map(coord => 
-            new BMap.Point(coord[0], coord[1])
+            new BMapGL.Point(coord[0], coord[1])
           );
-          const polyline = new BMap.Polyline(points, {
+          const polyline = new BMapGL.Polyline(points, {
             strokeColor: finalStyle.strokeColor,
             strokeWeight: finalStyle.strokeWeight,
-            strokeOpacity: finalStyle.strokeOpacity
+            strokeOpacity: finalStyle.strokeOpacity,
+            enableEditing: false,
+            enableClicking: true
           });
           overlays.push(polyline);
           break;
 
         case 'Polygon':
           const paths = geometry.coordinates.map(ring =>
-            ring.map(coord => new BMap.Point(coord[0], coord[1]))
+            ring.map(coord => new BMapGL.Point(coord[0], coord[1]))
           );
-          const polygon = new BMap.Polygon(paths, {
+          const polygon = new BMapGL.Polygon(paths, {
             strokeColor: finalStyle.strokeColor,
             strokeWeight: finalStyle.strokeWeight,
             strokeOpacity: finalStyle.strokeOpacity,
             fillColor: finalStyle.fillColor,
-            fillOpacity: finalStyle.fillOpacity
+            fillOpacity: finalStyle.fillOpacity,
+            enableEditing: false,
+            enableClicking: true
           });
           overlays.push(polygon);
           break;
       }
     });
 
-    // 将所有覆盖物作为一个图层组添加
     const layerId = this.generateLayerId();
     this.layers.set(layerId, {
       id: layerId,
@@ -265,12 +281,10 @@ export class MapUtils {
       createTime: new Date()
     });
 
-    // 添加所有覆盖物到地图
     overlays.forEach(overlay => {
       this.map.addOverlay(overlay);
     });
 
-    // 触发自定义事件通知图层更新
     const event = new CustomEvent('layer-updated', {
       detail: { type: 'add', layerId }
     });
@@ -295,7 +309,7 @@ export class MapUtils {
     };
     const finalOptions = { ...defaultOptions, ...options };
 
-    const imageLayer = new BMap.GroundOverlay(bounds, {
+    const imageLayer = new BMapGL.GroundOverlay(bounds, {
       type: 'image',
       url: url,
       opacity: finalOptions.opacity,
@@ -310,5 +324,282 @@ export class MapUtils {
     this.map.setViewport(bounds);
     
     return layerId;
+  }
+
+  /**
+   * 平移地图
+   * @param {number} x - X轴平移距离
+   * @param {number} y - Y轴平移距离
+   */
+  panBy(x, y) {
+    if (!this.map) return;
+    this.map.panBy(x, y);
+  }
+
+  /**
+   * 放大一级
+   */
+  zoomIn() {
+    if (!this.map) return;
+    const zoom = this.map.getZoom();
+    this.map.setZoom(zoom + 1);
+  }
+
+  /**
+   * 缩小一级
+   */
+  zoomOut() {
+    if (!this.map) return;
+    const zoom = this.map.getZoom();
+    this.map.setZoom(zoom - 1);
+  }
+
+  /**
+   * 设置缩放级别
+   * @param {number} zoom - 缩放级别
+   */
+  setZoom(zoom) {
+    if (!this.map) return;
+    this.map.setZoom(zoom);
+  }
+
+  /**
+   * 获取当前缩放级别
+   * @returns {number|null} 当前缩放级别
+   */
+  getZoom() {
+    if (!this.map) return null;
+    return this.map.getZoom();
+  }
+
+  /**
+   * 获取地图中心点
+   * @returns {BMapGL.Point|null} 地图中心点
+   */
+  getCenter() {
+    if (!this.map) return null;
+    return this.map.getCenter();
+  }
+
+  /**
+   * 设置地图中心点
+   * @param {BMapGL.Point} point - 中心点坐标
+   */
+  setCenter(point) {
+    if (!this.map || !point) return;
+    this.map.setCenter(point);
+  }
+
+  /**
+   * 设置地图类型
+   * @param {string} type - 地图类型：'normal'|'satellite'|'hybrid'
+   */
+  setMapType(type) {
+    if (!this.map) return;
+    switch (type) {
+      case 'normal':
+        this.map.setMapType(BMAP_NORMAL_MAP);
+        break;
+      case 'satellite':
+        this.map.setMapType(BMAP_SATELLITE_MAP);
+        break;
+      case 'hybrid':
+        this.map.setMapType(BMAP_HYBRID_MAP);
+        break;
+      default:
+        console.warn('未知的地图类型:', type);
+    }
+  }
+
+  /**
+   * 获取当前地图类型
+   * @returns {string|null} 地图类型：'normal'|'satellite'|'hybrid'
+   */
+  getMapType() {
+    if (!this.map) return null;
+    const type = this.map.getMapType();
+    if (type === BMAP_NORMAL_MAP) return 'normal';
+    if (type === BMAP_SATELLITE_MAP) return 'satellite';
+    if (type === BMAP_HYBRID_MAP) return 'hybrid';
+    return null;
+  }
+
+  /**
+   * 启用/禁用滚轮缩放
+   * @param {boolean} enable - 是否启用
+   */
+  enableScrollWheelZoom(enable = true) {
+    if (!this.map) return;
+    if (enable) {
+      this.map.enableScrollWheelZoom();
+    } else {
+      this.map.disableScrollWheelZoom();
+    }
+  }
+
+  /**
+   * 启用/禁用拖拽
+   * @param {boolean} enable - 是否启用
+   */
+  enableDragging(enable = true) {
+    if (!this.map) return;
+    if (enable) {
+      this.map.enableDragging();
+    } else {
+      this.map.disableDragging();
+    }
+  }
+
+  /**
+   * 启用/禁用双击缩放
+   * @param {boolean} enable - 是否启用
+   */
+  enableDoubleClickZoom(enable = true) {
+    if (!this.map) return;
+    if (enable) {
+      this.map.enableDoubleClickZoom();
+    } else {
+      this.map.disableDoubleClickZoom();
+    }
+  }
+
+  /**
+   * 启用/禁用键盘控制
+   * @param {boolean} enable - 是否启用
+   */
+  enableKeyboard(enable = true) {
+    if (!this.map) return;
+    if (enable) {
+      this.map.enableKeyboard();
+    } else {
+      this.map.disableKeyboard();
+    }
+  }
+
+  /**
+   * 启用/禁用惯性拖拽
+   * @param {boolean} enable - 是否启用
+   */
+  enableInertialDragging(enable = true) {
+    if (!this.map) return;
+    if (enable) {
+      this.map.enableInertialDragging();
+    } else {
+      this.map.disableInertialDragging();
+    }
+  }
+
+  /**
+   * 启用/禁用连续缩放
+   * @param {boolean} enable - 是否启用
+   */
+  enableContinuousZoom(enable = true) {
+    if (!this.map) return;
+    if (enable) {
+      this.map.enableContinuousZoom();
+    } else {
+      this.map.disableContinuousZoom();
+    }
+  }
+
+  /**
+   * 启用/禁用双指缩放
+   * @param {boolean} enable - 是否启用
+   */
+  enablePinchToZoom(enable = true) {
+    if (!this.map) return;
+    if (enable) {
+      this.map.enablePinchToZoom();
+    } else {
+      this.map.disablePinchToZoom();
+    }
+  }
+
+  /**
+   * 启用/禁用自动调整大小
+   * @param {boolean} enable - 是否启用
+   */
+  enableAutoResize(enable = true) {
+    if (!this.map) return;
+    if (enable) {
+      this.map.enableAutoResize();
+    } else {
+      this.map.disableAutoResize();
+    }
+  }
+
+  /**
+   * 重置地图到默认状态
+   */
+  reset() {
+    if (!this.map) return;
+    const defaultCenter = new BMapGL.Point(114.305393, 30.593099);
+    const defaultZoom = 13;
+    this.map.centerAndZoom(defaultCenter, defaultZoom);
+  }
+
+  /**
+   * 设置图层显示状态
+   * @param {string} layerId - 图层 ID
+   * @param {boolean} visible - 是否显示
+   * @returns {boolean} 是否设置成功
+   */
+  setLayerVisible(layerId, visible) {
+    const layer = this.layers.get(layerId);
+    if (!layer) return false;
+
+    if (Array.isArray(layer.overlay)) {
+      // 处理 GeoJSON 图层
+      layer.overlay.forEach(overlay => {
+        if (visible) {
+          this.map.addOverlay(overlay);
+        } else {
+          this.map.removeOverlay(overlay);
+        }
+      });
+    } else {
+      // 处理单个覆盖物
+      if (visible) {
+        this.map.addOverlay(layer.overlay);
+      } else {
+        this.map.removeOverlay(layer.overlay);
+      }
+    }
+
+    // 更新图层状态
+    layer.visible = visible;
+    this.layers.set(layerId, layer);
+
+    // 触发自定义事件通知图层更新
+    const event = new CustomEvent('layer-updated', {
+      detail: { type: 'visibility', layerId, visible }
+    });
+    this.map.getContainer().dispatchEvent(event);
+
+    return true;
+  }
+
+  /**
+   * 获取图层显示状态
+   * @param {string} layerId - 图层 ID
+   * @returns {boolean|null} 图层显示状态
+   */
+  getLayerVisible(layerId) {
+    const layer = this.layers.get(layerId);
+    return layer ? layer.visible : null;
+  }
+
+  /**
+   * 切换图层显示状态
+   * @param {string} layerId - 图层 ID
+   * @returns {boolean} 切换后的显示状态
+   */
+  toggleLayerVisible(layerId) {
+    const layer = this.layers.get(layerId);
+    if (!layer) return false;
+
+    const newVisible = !layer.visible;
+    this.setLayerVisible(layerId, newVisible);
+    return newVisible;
   }
 } 
