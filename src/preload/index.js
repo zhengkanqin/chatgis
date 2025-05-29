@@ -1,17 +1,10 @@
 import { contextBridge, ipcRenderer } from 'electron';
 import { electronAPI } from '@electron-toolkit/preload';
-const path = require("path");
-const fs = require('fs');
-
 
 let isDev = false;
 ipcRenderer.on('is-dev', (_, value) => {
   isDev = value;
 });
-contextBridge.exposeInMainWorld('env', {
-  isDev: () => isDev
-});
-
 
 // Custom APIs for renderer
 const api = {
@@ -19,17 +12,19 @@ const api = {
   closeWindow: () => {ipcRenderer.send('close-window')},
   readConfig: (configPath) => ipcRenderer.invoke('read-config', configPath),
   saveConfig: (configPath, config) => ipcRenderer.invoke('save-config', configPath, config),
+  selectFolder: () => ipcRenderer.invoke('select-folder'),
+  selectFile: () => ipcRenderer.invoke('select-file'),
+  readDirectory: (dirPath) => ipcRenderer.invoke('read-directory', dirPath),
+  getFileStats: (filePath) => ipcRenderer.invoke('get-file-stats', filePath)
 };
 
-
-if (process.contextIsolated) {
-  try {
-    contextBridge.exposeInMainWorld('electron', electronAPI);
-    contextBridge.exposeInMainWorld('api', api);
-  } catch (error) {
-    console.error(error);
-  }
-} else {
-  window.electron = electronAPI;
-  window.api = api;
+// 确保 API 被正确暴露
+try {
+  contextBridge.exposeInMainWorld('env', {
+    isDev: () => isDev
+  });
+  contextBridge.exposeInMainWorld('electron', electronAPI);
+  contextBridge.exposeInMainWorld('api', api);
+} catch (error) {
+  console.error('Error exposing APIs:', error);
 }

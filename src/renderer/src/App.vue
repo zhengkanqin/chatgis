@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <Toast position="bottom-right" />
     <div class="App">
       <SidebarNav class="SidebarNav" />
       <div class="MainContent">
@@ -20,6 +21,7 @@
 <script setup>
 import tibar from './components/tibar.vue';
 import SidebarNav from './SidebarNav.vue';
+import Toast from 'primevue/toast';
 import 'highlight.js/styles/github.css';
 import hljs from 'highlight.js';
 

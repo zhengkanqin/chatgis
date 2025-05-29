@@ -6,6 +6,7 @@ const child_process = require("child_process")
 const fs = require('fs').promises; // 推荐使用 Promise API
 const icon = path.join(__dirname, "../../resources/icon.png")
 const { screen } = electron
+const { dialog } = electron
 
 if (typeof electron === "string") {
   throw new TypeError("Not running in an Electron environment!")
@@ -70,7 +71,11 @@ function createWindow() {
     ...process.platform === "linux" ? { icon } : {},
     webPreferences: {
       preload: path.join(__dirname, "../preload/index.js"),
-      sandbox: false
+      sandbox: false,
+      nodeIntegration: false,
+      contextIsolation: true,
+      enableRemoteModule: false,
+      webSecurity: false  // 禁用web安全策略，允许file://协议
     }
   })
 
@@ -143,6 +148,53 @@ electron.app.whenReady().then(() => {
       return { success: false, error: error.message };
     }
   });
+
+  // 添加文件夹选择处理程序
+  electron.ipcMain.handle('select-folder', async () => {
+    const result = await dialog.showOpenDialog({
+      properties: ['openDirectory']
+    });
+    return result;
+  });
+
+  // 添加文件选择处理程序
+  electron.ipcMain.handle('select-file', async () => {
+    const result = await dialog.showOpenDialog({
+      properties: ['openFile'],
+      filters: [
+        { name: '支持的文件', extensions: ['shp', 'tif', 'png', 'jpg', 'gdb', 'doc', 'docx', 'pdf'] }
+      ]
+    });
+    return result;
+  });
+
+  // 添加文件系统操作处理程序
+  electron.ipcMain.handle('read-directory', async (event, dirPath) => {
+    try {
+      const items = await fs.readdir(dirPath);
+      return { success: true, data: items };
+    } catch (error) {
+      return { success: false, error: error.message };
+    }
+  });
+
+  electron.ipcMain.handle('get-file-stats', async (event, filePath) => {
+    try {
+      const stats = await fs.stat(filePath);
+      return { 
+        success: true, 
+        data: {
+          isDirectory: stats.isDirectory(),
+          isFile: stats.isFile(),
+          size: stats.size,
+          mtime: stats.mtime
+        }
+      };
+    } catch (error) {
+      return { success: false, error: error.message };
+    }
+  });
+
   createWindow()
 
   electron.app.on("activate", function () {
