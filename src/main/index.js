@@ -195,6 +195,16 @@ electron.app.whenReady().then(() => {
     }
   });
 
+  // 添加读取文件为Buffer的处理程序
+  electron.ipcMain.handle('read-file-as-buffer', async (event, filePath) => {
+    try {
+      const buffer = await fs.readFile(filePath);
+      return { success: true, data: buffer };
+    } catch (error) {
+      return { success: false, error: error.message };
+    }
+  });
+
   createWindow()
 
   electron.app.on("activate", function () {

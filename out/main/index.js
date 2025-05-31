@@ -168,6 +168,14 @@ electron.app.whenReady().then(() => {
       return { success: false, error: error.message };
     }
   });
+  electron.ipcMain.handle("read-file-as-buffer", async (event, filePath) => {
+    try {
+      const buffer = await fs.readFile(filePath);
+      return { success: true, data: buffer };
+    } catch (error) {
+      return { success: false, error: error.message };
+    }
+  });
   createWindow();
   electron.app.on("activate", function() {
     if (electron.BrowserWindow.getAllWindows().length === 0) createWindow();

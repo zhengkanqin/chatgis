@@ -15,7 +15,8 @@ const api = {
   selectFolder: () => ipcRenderer.invoke('select-folder'),
   selectFile: () => ipcRenderer.invoke('select-file'),
   readDirectory: (dirPath) => ipcRenderer.invoke('read-directory', dirPath),
-  getFileStats: (filePath) => ipcRenderer.invoke('get-file-stats', filePath)
+  getFileStats: (filePath) => ipcRenderer.invoke('get-file-stats', filePath),
+  readFileAsBuffer: (filePath) => ipcRenderer.invoke('read-file-as-buffer', filePath)
 };
 
 // 确保 API 被正确暴露

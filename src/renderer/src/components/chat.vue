@@ -110,6 +110,7 @@ const triggerFileInput = async () => {
         type: isImageFile(fileName) ? 'pic' : 'file'
       }
       fileList.push(newFile)
+      console.log('fileList:', fileList)
       await nextTick()
     }
   } catch (error) {

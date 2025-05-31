@@ -17,7 +17,8 @@ const api = {
   selectFolder: () => electron.ipcRenderer.invoke("select-folder"),
   selectFile: () => electron.ipcRenderer.invoke("select-file"),
   readDirectory: (dirPath) => electron.ipcRenderer.invoke("read-directory", dirPath),
-  getFileStats: (filePath) => electron.ipcRenderer.invoke("get-file-stats", filePath)
+  getFileStats: (filePath) => electron.ipcRenderer.invoke("get-file-stats", filePath),
+  readFileAsBuffer: (filePath) => electron.ipcRenderer.invoke("read-file-as-buffer", filePath)
 };
 try {
   electron.contextBridge.exposeInMainWorld("env", {
