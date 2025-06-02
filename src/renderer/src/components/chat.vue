@@ -133,7 +133,7 @@ const sendMessage = async () => {
   // 如果有文件，先添加文件消息
   for (const file of currentFiles) {
     messages.value.push({
-      type: file.type,
+      type: file.type === 'pic' ? 'ImageMessage' : 'FileMessage',
       source: 'user',
       content: file.type === 'pic' ? file.path : file.name
     })
@@ -237,10 +237,7 @@ const sendMessage = async () => {
                   return {
                     type: 'GroundOverlay',
                     url: originalData.url,
-                    bounds: {
-                      sw: [originalData.bounds.sw.lng, originalData.bounds.sw.lat],
-                      ne: [originalData.bounds.ne.lng, originalData.bounds.ne.lat]
-                    }
+                    bounds: JSON.parse(originalData.bounds)
                   };
                 }
 
@@ -281,6 +278,21 @@ const sendMessage = async () => {
                           type: 'Polygon',
                           path: path.map(point => [point.lng, point.lat])
                         };
+                      } else if (item instanceof BMapGL.Circle) {
+                        const center = item.getCenter();
+                        const radius = item.getRadius();
+                        return {
+                          type: 'Circle',
+                          center: [center.lng, center.lat],
+                          radius: radius
+                        };
+                      } else if (item instanceof BMapGL.Label) {
+                        const position = item.getPosition();
+                        return {
+                          type: 'Label',
+                          position: [position.lng, position.lat],
+                          content: item.getContent()
+                        };
                       }
                       return null;
                     } catch (error) {
@@ -308,6 +320,21 @@ const sendMessage = async () => {
                       type: 'Polygon',
                       path: path.map(point => [point.lng, point.lat])
                     };
+                  } else if (overlay instanceof BMapGL.Circle) {
+                    const center = overlay.getCenter();
+                    const radius = overlay.getRadius();
+                    return {
+                      type: 'Circle',
+                      center: [center.lng, center.lat],
+                      radius: radius
+                    };
+                  } else if (overlay instanceof BMapGL.Label) {
+                    const position = overlay.getPosition();
+                    return {
+                      type: 'Label',
+                      position: [position.lng, position.lat],
+                      content: overlay.getContent()
+                    };
                   }
                 }
                 return null;
@@ -324,14 +351,6 @@ const sendMessage = async () => {
             return null;
           }
 
-          // 打印每个图层的处理结果
-          console.log('处理后的图层数据:', {
-            name: layerData.name,
-            type: layerData.type,
-            dataType: typeof layerData.data,
-            hasData: !!layerData.data
-          });
-
           return layerData;
         }).filter(Boolean); // 过滤掉无效的图层数据
 
@@ -339,14 +358,6 @@ const sendMessage = async () => {
         if (requestBody.layers.length === 0) {
           delete requestBody.layers;
         }
-
-        // 在发送请求前验证数据
-        const requestString = JSON.stringify(requestBody);
-        console.log('发送的请求数据:', requestString);
-        
-        // 尝试解析验证数据格式
-        JSON.parse(requestString);
-
       } catch (error) {
         console.error('处理图层数据时出错:', error);
         // 如果处理图层数据出错，移除 layers 字段

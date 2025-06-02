@@ -82,16 +82,16 @@ const layers = ref([]);
 
 // 测试数据
 const testPoints = {
-  point: new BMapGL.Point(114.305393, 30.593099),
-  polyline: [
-    new BMapGL.Point(114.305393, 30.593099),
-    new BMapGL.Point(114.315393, 30.603099)
-  ],
-  polygon: [
-    new BMapGL.Point(114.305393, 30.593099),
-    new BMapGL.Point(114.315393, 30.593099),
-    new BMapGL.Point(114.315393, 30.603099)
-  ]
+  point: JSON.stringify([114.305393, 30.593099]),
+  polyline: JSON.stringify([
+    [114.305393, 30.593099],
+    [114.315393, 30.603099]
+  ]),
+  polygon: JSON.stringify([
+    [114.305393, 30.593099],
+    [114.315393, 30.593099],
+    [114.315393, 30.603099]
+  ])
 };
 
 // 测试 GeoJSON 数据
@@ -237,24 +237,50 @@ const removeLayer = (layerId) => {
 };
 
 // 添加点标记
-const addMarker = (point, name) => {
-  const layerId = mapUtils.addMarker(point, name);
+const addMarker = (data) => {
+  console.log('绘制点',data)
+  const layerId = mapUtils.addMarker(data.point,data.name);
   getAllLayers();
   isSidebarOpen.value = true;
   return layerId;
 };
 
 // 添加折线
-const addPolyline = (points, name) => {
-  const layerId = mapUtils.addPolyline(points, name);
+const addPolyline = (data) => {
+  const layerId = mapUtils.addPolyline(data.points, data.name);
   getAllLayers();
   isSidebarOpen.value = true;
   return layerId;
 };
 
 // 添加多边形
-const addPolygon = (points, name) => {
-  const layerId = mapUtils.addPolygon(points, name);
+const addPolygon = (data) => {
+  const layerId = mapUtils.addPolygon(data.points, data.name);
+  getAllLayers();
+  isSidebarOpen.value = true;
+  return layerId;
+};
+
+
+// 添加圆
+const addCircle = (data) => {
+  const layerId = mapUtils.addCircle(data.point, data.radius, data.name);
+  getAllLayers();
+  isSidebarOpen.value = true;
+  return layerId;
+};
+
+// 添加矩形
+const addRectangle = (data) => {
+  const layerId = mapUtils.addRectangle(data.points, data.name);
+  getAllLayers();
+  isSidebarOpen.value = true;
+  return layerId;
+};
+
+// 添加文本
+const addLabel = (data) => {
+  const layerId = mapUtils.addLabel(data.point, data.name);
   getAllLayers();
   isSidebarOpen.value = true;
   return layerId;
@@ -276,13 +302,13 @@ const drawBoundaryByName = async (cityName) => {
 };
 
 // 添加 GeoJSON 图层
-const addGeoJSON = (geojson, name, style = {}) => {
+const addGeoJSON = (data) => {
   if (!mapUtils) return;
-  const layerId = mapUtils.addGeoJSONLayer(geojson, name, style);
-  // 保存原始GeoJSON数据
+  const layerId = mapUtils.addGeoJSONLayer(data.geojson, data.name, data.style={});
+  // 保存原始数据
   const layer = layers.value.find(l => l.id === layerId);
   if (layer) {
-    layer.originalData = geojson;  // 保存原始数据
+    layer.originalData = data.geojson;  // 保存原始 GeoJSON 数据
   }
   getAllLayers();
   isSidebarOpen.value = true;
@@ -290,13 +316,17 @@ const addGeoJSON = (geojson, name, style = {}) => {
 };
 
 // 添加图片图层
-const addImageLayer = (url, bounds, name, options = {}) => {
+const addImageLayer = (data) => {
   if (!mapUtils) return;
-  const layerId = mapUtils.addImageLayer(url, bounds, name, options);
-  // 保存原始图片数据
+  const layerId = mapUtils.addImageLayer(data.url, data.bounds, data.name, data.options);
+  // 保存原始数据
   const layer = layers.value.find(l => l.id === layerId);
   if (layer) {
-    layer.originalData = { url, bounds, options };  // 保存原始数据
+    layer.originalData = {
+      url: data.url,
+      bounds: data.bounds,
+      options: data.options
+    };
   }
   getAllLayers();
   isSidebarOpen.value = true;
@@ -308,25 +338,41 @@ const addImageLayer = (url, bounds, name, options = {}) => {
 // 添加测试点
 const addTestPoint = () => {
   if (!mapUtils) return;
-  addMarker(testPoints.point, '测试点');
+  const data = {
+    point: testPoints.point,
+    name: '测试点'
+  };
+  addMarker(data);
 };
 
 // 添加测试线
 const addTestLine = () => {
   if (!mapUtils) return;
-  addPolyline(testPoints.polyline, '测试线');
+  const data = {
+    points: testPoints.polyline,
+    name: '测试线'
+  };
+  addPolyline(data);
 };
 
 // 添加测试面
 const addTestPolygon = () => {
   if (!mapUtils) return;
-  addPolygon(testPoints.polygon, '测试面');
+  const data = {
+    points: testPoints.polygon,
+    name: '测试面'
+  };
+  addPolygon(data);
 };
 
 // 添加测试 GeoJSON
 const addTestGeoJSON = () => {
   if (!mapUtils) return;
-  addGeoJSON(testGeoJSON, '测试 GeoJSON');
+  const data = {
+    geojson: testGeoJSON,
+    name: '测试 GeoJSON'
+  };
+  addGeoJSON(data);
 };
 
 // 添加测试图片图层
@@ -334,27 +380,31 @@ const addTestImageLayer = () => {
   if (!mapUtils) return;
   
   // 设置更大的显示范围
-  const bounds = new BMapGL.Bounds(
-    new BMapGL.Point(114.295393, 30.583099), // 西南角
-    new BMapGL.Point(114.325393, 30.613099)  // 东北角
-  );
+  const bounds = JSON.stringify([
+    [114.295393, 30.583099], // 西南角
+    [114.325393, 30.613099]  // 东北角
+  ]);
 
-  const options = {
-    opacity: 1.0,  // 完全不透明
-    displayOnMinLevel: 0,
-    displayOnMaxLevel: 19
+  const data = {
+    url: 'https://cdn.pixabay.com/photo/2016/09/19/22/46/lake-1681485_640.jpg',
+    bounds: bounds,
+    name: '测试图片图层',
+    options: JSON.stringify({
+      opacity: 1.0,  // 完全不透明
+      displayOnMinLevel: 0,
+      displayOnMaxLevel: 19
+    })
   };
 
   // 使用 addImageLayer 添加图层
-  const layerId = addImageLayer(
-    'https://cdn.pixabay.com/photo/2016/09/19/22/46/lake-1681485_640.jpg',
-    bounds,
-    '测试图片图层',
-    options
-  );
+  addImageLayer(data);
   
   // 确保地图视野正确显示图片
-  map.setViewport(bounds);
+  const boundsObj = new BMapGL.Bounds(
+    new BMapGL.Point(114.295393, 30.583099),
+    new BMapGL.Point(114.325393, 30.613099)
+  );
+  map.setViewport(boundsObj);
   map.setZoom(13);  // 调整缩放级别
   
   getAllLayers();
@@ -368,6 +418,9 @@ const getTypeIcon = (type) => {
     case '边界': return 'pi pi-globe';
     case 'GeoJSON': return 'pi pi-file';
     case '图片': return 'pi pi-image';
+    case '圆': return 'pi pi-stop';
+    case '矩形': return 'pi pi-square';
+    case '文本': return 'pi pi-tag';
     default: return 'pi pi-question';
   }
 };
@@ -483,6 +536,9 @@ defineExpose({
   addMarker,
   addPolyline,
   addPolygon,
+  addCircle,
+  addRectangle,
+  addLabel,
   getAllLayers,
   addGeoJSON,
   addImageLayer,

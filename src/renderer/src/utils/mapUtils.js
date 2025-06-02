@@ -136,7 +136,9 @@ export class MapUtils {
    * @returns {string} 图层 ID
    */
   addMarker(point, name) {
-    const marker = new BMapGL.Marker(point);
+    const marker_point = JSON.parse(point);
+    const [lng, lat] = marker_point;
+    const marker = new BMapGL.Marker(new BMapGL.Point(lng, lat));
     return this.addLayer(marker, '点', name);
   }
 
@@ -147,7 +149,10 @@ export class MapUtils {
    * @returns {string} 图层 ID
    */
   addPolyline(points, name) {
-    const polyline = new BMapGL.Polyline(points, {
+    const pointsArray = JSON.parse(points);
+    const line_points = pointsArray.map(point => new BMapGL.Point(point[0], point[1]));
+    console.log("折线",line_points,name)
+    const polyline = new BMapGL.Polyline(line_points, {
       strokeColor: "#0000ff",
       strokeWeight: 2,
       strokeOpacity: 0.8,
@@ -157,6 +162,28 @@ export class MapUtils {
     return this.addLayer(polyline, '线', name);
   }
 
+/**
+   * 添加圆
+   * @param {BMap.Point} point - 坐标点
+   * @param {string} name - 圆名称
+   * @returns {string} 图层 ID
+   */
+addCircle(point, radius, name) {
+  const circle_point = JSON.parse(point);
+  console.log(circle_point);
+  const circle_radius = JSON.parse(parseFloat(radius));
+  const [lng, lat] = circle_point;
+  const circle = new BMapGL.Circle(new BMapGL.Point(lng, lat), circle_radius, {
+    strokeColor: "#0000ff",    
+    fillColor: "#ff8605",     
+    strokeWeight: 3,          
+    strokeOpacity: 0.8,        
+    fillOpacity: 0.4,          
+    strokeStyle: 'solid'       
+  });
+  return this.addLayer(circle, '圆', name);
+}
+
   /**
    * 添加多边形
    * @param {Array<BMap.Point>} points - 坐标点数组
@@ -164,7 +191,9 @@ export class MapUtils {
    * @returns {string} 图层 ID
    */
   addPolygon(points, name) {
-    const polygon = new BMapGL.Polygon(points, {
+    const pointsArray = JSON.parse(points);
+    const polygon_points = pointsArray.map(point => new BMapGL.Point(point[0], point[1]));
+    const polygon = new BMapGL.Polygon(polygon_points, {
       strokeColor: "#ff0000",
       strokeWeight: 2,
       fillColor: "#ffcccc",
@@ -174,6 +203,57 @@ export class MapUtils {
     });
     return this.addLayer(polygon, '面', name);
   }
+
+    /**
+   * 添加矩形
+   * @param {Array<BMap.Point>} points - 坐标点数组
+   * @param {string} name - 矩形名称
+   * @returns {string} 图层 ID
+   */
+    addRectangle(points, name) {
+      const pointsArray = JSON.parse(points);
+      const rectangle_points = pointsArray.map(point => new BMapGL.Point(point[0], point[1]));
+      console.log(rectangle_points);
+      const rectangle = new BMapGL.Polygon(rectangle_points, {
+        strokeColor: "#0000ff",    
+        fillColor: "#ff8605",      
+        strokeWeight: 3,           
+        strokeOpacity: 0.8,        
+        fillOpacity: 0.4,          
+        strokeStyle: 'solid'      
+      });
+      return this.addLayer(rectangle, '矩形', name);
+    }
+  
+      /**
+     * 添加文本
+     * @param {BMap.Point} point - 坐标点
+     * @param {string} name - 矩形名称
+     * @returns {string} 图层 ID
+     */
+      addLabel(point, name) {
+        const label_point = JSON.parse(point);
+        const [lng, lat] = label_point;
+        console.log(label_point,name);
+        const label = new BMapGL.Label(name, {
+          position: new BMapGL.Point(lng, lat), 
+          offset: new BMapGL.Size(20, -10), 
+          style: {
+            color: "red", 
+            fontSize: "16px",
+            height: "20px",
+            lineHeight: "20px", 
+            fontFamily: "微软雅黑", 
+            backgroundColor: "rgba(255, 255, 255, 0.8)", 
+            padding: "5px", 
+            borderRadius: "5px", 
+            border: "0px solid #ccc"
+          }
+        });
+        return this.addLayer(label, '文本', name);
+      }
+  
+
 
   /**
    * 清除所有边界图层
@@ -294,6 +374,7 @@ export class MapUtils {
       overlay: overlays,
       type: 'GeoJSON',
       name,
+      originalData: geojson,  // 保存原始 GeoJSON 数据
       createTime: new Date()
     });
 
@@ -346,30 +427,51 @@ export class MapUtils {
    * @returns {string} 图层 ID
    */
   addImageLayer(url, bounds, name, options = {}) {
+    const boundsArray = JSON.parse(bounds);
+    const optionsObj = JSON.parse(options);
+    const swLng = boundsArray[0][0]; 
+    const swLat =  boundsArray[0][1];
+    const neLng = boundsArray[1][0];
+    const neLat =boundsArray[1][1];
+    const image_bounds = new BMapGL.Bounds(
+      new BMapGL.Point(swLng, swLat), 
+      new BMapGL.Point(neLng, neLat) 
+    ); 
+    console.log(image_bounds);
     const defaultOptions = {
       opacity: 0.5,
       displayOnMinLevel: 0,
       displayOnMaxLevel: 18
     };
-    const finalOptions = { ...defaultOptions, ...options };
-
-    const imageLayer = new BMapGL.GroundOverlay(bounds, {
-      type: 'image',
+    const finalOptions = { ...defaultOptions, ...optionsObj };
+    const imageLayer = new BMapGL.GroundOverlay(image_bounds, {
       url: url,
       opacity: finalOptions.opacity,
-      displayOnMinLevel: finalOptions.displayOnMinLevel,
-      displayOnMaxLevel: finalOptions.displayOnMaxLevel
+      displayOnMinLevel:finalOptions.displayOnMinLevel,
+      displayOnMaxLevel:finalOptions.displayOnMaxLevel
     });
 
     // 使用 addLayer 方法添加图层
     const layerId = this.addLayer(imageLayer, '图片', name);
     
+    // 保存原始数据
+    const layer = this.layers.get(layerId);
+    if (layer) {
+      layer.originalData = {
+        url: url,
+        bounds: bounds,
+        options: options
+      };
+    }
+    
     // 调整地图视野以显示图片
-    this.map.setViewport(bounds);
+    this.map.setViewport(image_bounds);
     
     return layerId;
   }
 
+
+  
   /**
    * 平移地图
    * @param {number} x - X轴平移距离
