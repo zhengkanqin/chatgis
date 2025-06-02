@@ -5,3 +5,4 @@ dist
 *.log*
 config.json
 out\back\config.json
+out/back/config.json
