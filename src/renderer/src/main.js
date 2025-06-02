@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import { createPinia } from 'pinia'
 import App from './App.vue'
 import PrimeVue from 'primevue/config';
 import Aura from '@primeuix/themes/aura';
@@ -11,6 +12,8 @@ import ToastService from 'primevue/toastservice';
 import router from './router'
 
 const app = createApp(App)
+const pinia = createPinia()
+
 app.use(PrimeVue, {
     theme: {
         preset: Aura
@@ -19,4 +22,5 @@ app.use(PrimeVue, {
 app.use(ToastService);
 app.use(ElementPlus)
 app.use(router)
+app.use(pinia)
 app.mount('#app')

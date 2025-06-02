@@ -4,3 +4,4 @@ dist
 .eslintcache
 *.log*
 config.json
+out\back\config.json

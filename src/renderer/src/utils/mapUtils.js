@@ -191,17 +191,9 @@ export class MapUtils {
    * @param {Object} options - 初始化选项
    */
   static initMap(container, options = {}) {
-    const map = new BMapGL.Map(container);
-    map.enableScrollWheelZoom(true);
-    
-    const defaultCenter = new BMapGL.Point(114.305393, 30.593099);
-    const defaultZoom = 13;
-    
-    map.centerAndZoom(
-      options.center || defaultCenter, 
-      options.zoom || defaultZoom
-    );
-    
+    const map = new BMapGL.Map(container, options);
+    map.centerAndZoom(new BMapGL.Point(114.305393, 30.593099), 12);
+    map.enableScrollWheelZoom();
     return map;
   }
 
@@ -237,6 +229,14 @@ export class MapUtils {
           if (properties.title) {
             marker.setTitle(properties.title);
           }
+          marker.addEventListener('mouseover', () => {
+            const event = new CustomEvent('feature-hover', { detail: { properties, geometry } });
+            this.map.getContainer().dispatchEvent(event);
+          });
+          marker.addEventListener('mouseout', () => {
+            const event = new CustomEvent('feature-hover', { detail: null });
+            this.map.getContainer().dispatchEvent(event);
+          });
           overlays.push(marker);
           break;
 
@@ -250,6 +250,14 @@ export class MapUtils {
             strokeOpacity: finalStyle.strokeOpacity,
             enableEditing: false,
             enableClicking: true
+          });
+          polyline.addEventListener('mouseover', () => {
+            const event = new CustomEvent('feature-hover', { detail: { properties, geometry } });
+            this.map.getContainer().dispatchEvent(event);
+          });
+          polyline.addEventListener('mouseout', () => {
+            const event = new CustomEvent('feature-hover', { detail: null });
+            this.map.getContainer().dispatchEvent(event);
           });
           overlays.push(polyline);
           break;
@@ -266,6 +274,14 @@ export class MapUtils {
             fillOpacity: finalStyle.fillOpacity,
             enableEditing: false,
             enableClicking: true
+          });
+          polygon.addEventListener('mouseover', () => {
+            const event = new CustomEvent('feature-hover', { detail: { properties, geometry } });
+            this.map.getContainer().dispatchEvent(event);
+          });
+          polygon.addEventListener('mouseout', () => {
+            const event = new CustomEvent('feature-hover', { detail: null });
+            this.map.getContainer().dispatchEvent(event);
           });
           overlays.push(polygon);
           break;
@@ -291,6 +307,34 @@ export class MapUtils {
     this.map.getContainer().dispatchEvent(event);
 
     return layerId;
+  }
+
+  /**
+   * 创建信息窗口内容
+   * @param {Object} properties - 属性对象
+   * @returns {string} HTML内容
+   */
+  createInfoContent(properties) {
+    let content = '<div style="padding: 5px;">';
+    
+    const formatValue = (value) => {
+      if (Array.isArray(value)) {
+        return value.join(', ');
+      } else if (typeof value === 'object' && value !== null) {
+        return Object.entries(value)
+          .map(([k, v]) => `${k}: ${formatValue(v)}`)
+          .join('<br>');
+      }
+      return value;
+    };
+
+    for (const [key, value] of Object.entries(properties)) {
+      if (key === 'title') continue; // 跳过标题，因为已经在窗口标题中显示
+      content += `<p><strong>${key}:</strong> ${formatValue(value)}</p>`;
+    }
+    
+    content += '</div>';
+    return content;
   }
 
   /**

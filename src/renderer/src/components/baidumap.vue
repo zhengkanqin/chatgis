@@ -42,12 +42,24 @@
               <button class="action-btn" @click.stop="toggleLayerVisibility(layer.id)" :title="layer.visible ? '隐藏' : '显示'">
                 <i :class="layer.visible ? 'pi pi-eye' : 'pi pi-eye-slash'"></i>
               </button>
+              <button class="action-btn" @click.stop="selectLayer(layer)" :title="'选中图层'" :class="{ 'selected': mapStore.selectedLayers.some(l => l.id === layer.id) }">
+                <i class="pi pi-check"></i>
+              </button>
               <button class="delete-btn" @click.stop="removeLayer(layer.id)">
                 <i class="pi pi-trash"></i>
               </button>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div v-if="hoveredFeature" class="feature-tooltip">
+      <h4>{{ hoveredFeature.properties.title || '属性信息' }}</h4>
+      <div v-for="(val, key) in hoveredFeature.properties" :key="key" v-if="key !== 'title'">
+        <strong>{{ key }}:</strong>
+        <span v-if="Array.isArray(val)">{{ val.join(', ') }}</span>
+        <span v-else-if="typeof val === 'object' && val !== null">{{ JSON.stringify(val, null, 2) }}</span>
+        <span v-else>{{ val }}</span>
       </div>
     </div>
   </div>
@@ -57,11 +69,13 @@
 import { onMounted, ref } from 'vue';
 import 'primeicons/primeicons.css';
 import { MapUtils } from '../utils/mapUtils';
+import { useMapStore } from '../stores/mapStore';
 
 const mapContainer = ref(null);
 let map = null;
 let mapUtils = null;
 const isSidebarOpen = ref(false);
+const mapStore = useMapStore();
 
 // 图层数据
 const layers = ref([]);
@@ -86,7 +100,15 @@ const testGeoJSON = {
   features: [
     {
       type: "Feature",
-      properties: { title: "测试点" },
+      properties: { 
+        title: "武汉大学",
+        type: "教育机构",
+        address: "湖北省武汉市武昌区珞珈山",
+        established: "1893年",
+        area: "5187亩",
+        population: "约50000人",
+        description: "中国著名高等学府，国家'双一流'建设高校"
+      },
       geometry: {
         type: "Point",
         coordinates: [114.305393, 30.593099]
@@ -94,30 +116,113 @@ const testGeoJSON = {
     },
     {
       type: "Feature",
-      properties: {},
+      properties: {
+        title: "东湖绿道",
+        type: "旅游景点",
+        length: "101.98公里",
+        openTime: "全天开放",
+        description: "世界级绿道，串联东湖各大景区",
+        facilities: ["自行车道", "步行道", "观景台", "休息区"],
+        bestTime: "春秋季节"
+      },
       geometry: {
         type: "LineString",
         coordinates: [
           [114.305393, 30.593099],
-          [114.315393, 30.603099]
+          [114.315393, 30.603099],
+          [114.325393, 30.613099],
+          [114.335393, 30.623099]
         ]
       }
     },
     {
       type: "Feature",
-      properties: {},
+      properties: {
+        title: "东湖生态旅游区",
+        type: "景区",
+        area: "88平方公里",
+        level: "5A级景区",
+        openTime: "08:00-17:30",
+        ticket: "免费",
+        description: "中国最大的城中湖，集观光、休闲、娱乐于一体",
+        attractions: ["磨山", "听涛", "落雁", "吹笛"],
+        facilities: ["游客中心", "停车场", "餐饮区", "厕所"],
+        history: "东湖风景区始建于1950年，是武汉市最早建立的风景名胜区",
+        environment: {
+          waterQuality: "II类水质",
+          forestCoverage: "85%",
+          biodiversity: "丰富"
+        },
+        transportation: {
+          publicTransport: ["402路", "413路", "515路"],
+          parking: {
+            total: "2000个",
+            fee: "10元/小时"
+          }
+        },
+        activities: ["观光游览", "生态科普", "休闲娱乐", "摄影采风"],
+        bestTime: {
+          season: "春秋两季",
+          time: "上午9:00-11:00，下午14:00-16:00"
+        },
+        contact: {
+          phone: "027-12345678",
+          website: "www.donghu.com",
+          email: "info@donghu.com"
+        }
+      },
       geometry: {
         type: "Polygon",
         coordinates: [[
           [114.305393, 30.593099],
           [114.315393, 30.593099],
           [114.315393, 30.603099],
+          [114.325393, 30.603099],
+          [114.325393, 30.593099],
           [114.305393, 30.593099]
         ]]
+      }
+    },
+    {
+      type: "Feature",
+      properties: {
+        title: "光谷广场",
+        type: "商业中心",
+        area: "约10万平方米",
+        openTime: "10:00-22:00",
+        description: "武汉最大的商业综合体之一",
+        facilities: ["购物中心", "餐饮", "娱乐", "停车场"],
+        traffic: ["地铁2号线", "多条公交线路"]
+      },
+      geometry: {
+        type: "Point",
+        coordinates: [114.315393, 30.603099]
+      }
+    },
+    {
+      type: "Feature",
+      properties: {
+        title: "长江大桥",
+        type: "交通设施",
+        length: "1670米",
+        built: "1957年",
+        description: "万里长江第一桥，武汉地标性建筑",
+        traffic: ["机动车道", "人行道", "自行车道"],
+        history: "中国第一座跨越长江的公路铁路两用桥"
+      },
+      geometry: {
+        type: "LineString",
+        coordinates: [
+          [114.305393, 30.593099],
+          [114.315393, 30.593099],
+          [114.325393, 30.593099]
+        ]
       }
     }
   ]
 };
+
+const hoveredFeature = ref(null); // 新增：用于存储悬浮要素信息
 
 // 获取所有图层
 const getAllLayers = () => {
@@ -174,6 +279,11 @@ const drawBoundaryByName = async (cityName) => {
 const addGeoJSON = (geojson, name, style = {}) => {
   if (!mapUtils) return;
   const layerId = mapUtils.addGeoJSONLayer(geojson, name, style);
+  // 保存原始GeoJSON数据
+  const layer = layers.value.find(l => l.id === layerId);
+  if (layer) {
+    layer.originalData = geojson;  // 保存原始数据
+  }
   getAllLayers();
   isSidebarOpen.value = true;
   return layerId;
@@ -183,6 +293,11 @@ const addGeoJSON = (geojson, name, style = {}) => {
 const addImageLayer = (url, bounds, name, options = {}) => {
   if (!mapUtils) return;
   const layerId = mapUtils.addImageLayer(url, bounds, name, options);
+  // 保存原始图片数据
+  const layer = layers.value.find(l => l.id === layerId);
+  if (layer) {
+    layer.originalData = { url, bounds, options };  // 保存原始数据
+  }
   getAllLayers();
   isSidebarOpen.value = true;
   return layerId;
@@ -326,15 +441,40 @@ const toggleLayerVisibility = (layerId) => {
   mapUtils.toggleLayerVisible(layerId);
 };
 
+// 选中图层
+const selectLayer = (layer) => {
+  const layerData = {
+    id: layer.id,
+    name: layer.name,
+    type: layer.type,
+    data: layer.overlay,
+    originalData: layer.originalData,  // 添加原始数据
+    createTime: layer.createTime
+  };
+  mapStore.toggleSelectedLayer(layerData);
+};
+
 onMounted(() => {
   if (!mapContainer.value) return;
-  map = MapUtils.initMap(mapContainer.value);
+  
+  // 初始化地图时添加preserveDrawingBuffer配置
+  const mapOptions = {
+    preserveDrawingBuffer: true  // 添加此配置以支持截图
+  };
+  
+  map = MapUtils.initMap(mapContainer.value, mapOptions);
   mapUtils = new MapUtils(map);
+  mapStore.setMap(map);
   getAllLayers();
 
   // 添加图层更新事件监听
   mapContainer.value.addEventListener('layer-updated', () => {
     getAllLayers();
+  });
+
+  // 新增：监听 feature-hover 事件
+  mapContainer.value.addEventListener('feature-hover', (e) => {
+    hoveredFeature.value = e.detail;
   });
 });
 
@@ -346,6 +486,8 @@ defineExpose({
   getAllLayers,
   addGeoJSON,
   addImageLayer,
+  // 新增获取选中图层的方法
+  getSelectedLayer: () => mapStore.selectedLayer,
   // 地图操作接口
   panBy: (x, y) => mapUtils?.panBy(x, y),
   zoomIn: () => mapUtils?.zoomIn(),
@@ -574,11 +716,6 @@ defineExpose({
   justify-content: center;
   border-radius: 4px;
   transition: all 0.2s;
-  opacity: 0;
-}
-
-.layer-item:hover .delete-btn {
-  opacity: 1;
 }
 
 .delete-btn:hover {
@@ -592,12 +729,6 @@ defineExpose({
 .layer-actions {
   display: flex;
   gap: 4px;
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-
-.layer-item:hover .layer-actions {
-  opacity: 1;
 }
 
 .action-btn {
@@ -618,7 +749,36 @@ defineExpose({
   background: #e6f7ff;
 }
 
+.action-btn.selected {
+  background-color: #1890ff;
+  color: white;
+}
+
+.action-btn.selected:hover {
+  background-color: #40a9ff;
+}
+
 .action-btn i {
   font-size: 14px;
+}
+
+.selected {
+  background-color: #e6f7ff;
+}
+
+.feature-tooltip {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  z-index: 2000;
+  background: #fff;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  padding: 12px 18px;
+  min-width: 220px;
+  pointer-events: none;
+  max-width: 350px;
+  word-break: break-all;
 }
 </style>

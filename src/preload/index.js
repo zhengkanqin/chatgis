@@ -16,7 +16,8 @@ const api = {
   selectFile: () => ipcRenderer.invoke('select-file'),
   readDirectory: (dirPath) => ipcRenderer.invoke('read-directory', dirPath),
   getFileStats: (filePath) => ipcRenderer.invoke('get-file-stats', filePath),
-  readFileAsBuffer: (filePath) => ipcRenderer.invoke('read-file-as-buffer', filePath)
+  readFileAsBuffer: (filePath) => ipcRenderer.invoke('read-file-as-buffer', filePath),
+  saveFile: (options) => ipcRenderer.invoke('save-file', options)
 };
 
 // 确保 API 被正确暴露
@@ -24,7 +25,13 @@ try {
   contextBridge.exposeInMainWorld('env', {
     isDev: () => isDev
   });
-  contextBridge.exposeInMainWorld('electron', electronAPI);
+  contextBridge.exposeInMainWorld('electron', {
+    ipcRenderer: {
+      invoke: (channel, ...args) => ipcRenderer.invoke(channel, ...args),
+      on: (channel, func) => ipcRenderer.on(channel, func),
+      send: (channel, ...args) => ipcRenderer.send(channel, ...args)
+    }
+  });
   contextBridge.exposeInMainWorld('api', api);
 } catch (error) {
   console.error('Error exposing APIs:', error);

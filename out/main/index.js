@@ -176,6 +176,15 @@ electron.app.whenReady().then(() => {
       return { success: false, error: error.message };
     }
   });
+  electron.ipcMain.handle("save-file", async (event, { filePath, data }) => {
+    try {
+      await fs.writeFile(filePath, Buffer.from(data));
+      return { success: true };
+    } catch (error) {
+      console.error("保存文件失败:", error);
+      return { success: false, error: error.message };
+    }
+  });
   createWindow();
   electron.app.on("activate", function() {
     if (electron.BrowserWindow.getAllWindows().length === 0) createWindow();

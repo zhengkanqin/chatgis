@@ -18,7 +18,6 @@
         <div class="left-buttons">
           <i class="pi pi-file" title="文件" @click.stop="toggleFilePopover"></i>
           <i class="pi pi-book" title="知识库"></i>
-          <i class="pi pi-paperclip" title="连接"></i>
         </div>
         <button type="submit" :disabled="!input.trim() || isSending">
           <template v-if="isSending">
@@ -63,6 +62,9 @@ import { ref, nextTick, onMounted, watch, reactive } from 'vue'
 import ChatHistory from './ChatHistory.vue'
 import Popover from 'primevue/popover'
 import Button from 'primevue/button'
+import { useMapStore } from '../stores/mapStore'
+import html2canvas from 'html2canvas'
+import { ElMessage } from 'element-plus'
 
 const input = ref('')
 const messages = ref([])
@@ -71,6 +73,7 @@ const textarea = ref(null)
 const historyRef = ref(null)
 const filePopover = ref(null)
 const fileList = reactive([])
+const mapStore = useMapStore()
 
 const isImageFile = (fileName) => {
   const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.webp']
@@ -78,20 +81,15 @@ const isImageFile = (fileName) => {
 }
 
 const toggleFilePopover = (event) => {
-  console.log('toggleFilePopover called')
   const buttonRect = event.target.getBoundingClientRect()
   const popover = filePopover.value
   popover.toggle(event)
   
-  // 在下一个 tick 中设置位置
   nextTick(() => {
     const popoverEl = popover.$el
     if (popoverEl) {
-      // 计算位置，使其显示在按钮上方
-      const top = buttonRect.top - popoverEl.offsetHeight - 5 // 5px 的间距
+      const top = buttonRect.top - popoverEl.offsetHeight - 5
       const left = buttonRect.left
-      
-      // 设置位置
       popoverEl.style.top = `${top}px`
       popoverEl.style.left = `${left}px`
     }
@@ -110,16 +108,14 @@ const triggerFileInput = async () => {
         type: isImageFile(fileName) ? 'pic' : 'file'
       }
       fileList.push(newFile)
-      console.log('fileList:', fileList)
       await nextTick()
     }
   } catch (error) {
-    console.error('选择文件失败:', error)
+    ElMessage.error('选择文件失败')
   }
 }
 
 const removeFile = (index) => {
-  console.log('removeFile called with index:', index)
   fileList.splice(index, 1)
 }
 
@@ -156,6 +152,206 @@ const sendMessage = async () => {
     // 只有当有文件时才添加 filelist
     if (currentFiles.length > 0) {
       requestBody.filelist = currentFiles.map(file => file.path)
+    }
+
+    // 添加地图截图
+    try {
+      const map = mapStore.map;
+      console.log('地图实例状态:', !!map);
+      
+      if (map) {
+        const container = map.getContainer();
+        console.log('地图容器尺寸:', container.clientWidth, container.clientHeight);
+        
+        const base64Image = map.getMapScreenshot({
+          width: container.clientWidth,
+          height: container.clientHeight,
+          format: 'png',
+          quality: 1,
+          preserveDrawingBuffer: true
+        });
+        
+        console.log('截图结果:', !!base64Image);
+
+        if (base64Image) {
+          const base64Data = base64Image.split(',')[1];
+          const binaryString = atob(base64Data);
+          const arrayBuffer = new ArrayBuffer(binaryString.length);
+          const uint8Array = new Uint8Array(arrayBuffer);
+          for (let i = 0; i < binaryString.length; i++) {
+            uint8Array[i] = binaryString.charCodeAt(i);
+          }
+
+          const savePath = 'C:\\Users\\Administrator\\Pictures\\map.png';
+          console.log('保存路径:', savePath);
+
+          const result = await window.electron.ipcRenderer.invoke('save-file', {
+            filePath: savePath,
+            data: arrayBuffer
+          });
+
+          console.log('保存结果:', result);
+
+          if (result.success) {
+            requestBody.mapinfo = savePath;
+            console.log('已添加 mapinfo:', savePath);
+          } else {
+            console.error('保存截图失败:', result.error);
+          }
+        } else {
+          console.error('获取地图截图失败: 返回的 base64Image 为空');
+        }
+      } else {
+        console.error('地图实例未找到');
+      }
+    } catch (error) {
+      console.error('地图截图过程出错:', error);
+    }
+
+    // 添加选中的图层信息
+    if (mapStore.selectedLayers.length > 0) {
+      try {
+        requestBody.layers = mapStore.selectedLayers.map(layer => {
+          // 提取必要的数据，避免循环引用
+          const layerData = {
+            name: layer.name,
+            type: layer.type,
+            // 根据不同类型提取必要的数据
+            data: (() => {
+              try {
+                const overlay = layer.data;
+                if (!overlay) {
+                  console.warn('图层数据为空:', layer.name);
+                  return null;
+                }
+
+                // 处理图片图层
+                if (layer.type === '图片') {
+                  // 使用保存的原始数据
+                  const originalData = layer.originalData;
+                  if (!originalData || !originalData.url) {
+                    console.warn('图片图层原始数据无效:', layer.name);
+                    return null;
+                  }
+
+                  return {
+                    type: 'GroundOverlay',
+                    url: originalData.url,
+                    bounds: {
+                      sw: [originalData.bounds.sw.lng, originalData.bounds.sw.lat],
+                      ne: [originalData.bounds.ne.lng, originalData.bounds.ne.lat]
+                    }
+                  };
+                }
+
+                // 处理GeoJSON图层
+                if (layer.type === 'GeoJSON') {
+                  // 使用保存的原始数据
+                  const originalData = layer.originalData;
+                  if (!originalData || !originalData.features) {
+                    console.warn('GeoJSON图层原始数据无效:', layer.name);
+                    return null;
+                  }
+
+                  return {
+                    type: 'GeoJSON',
+                    data: originalData
+                  };
+                }
+
+                // 处理其他类型的图层
+                if (Array.isArray(overlay)) {
+                  return overlay.map(item => {
+                    try {
+                      if (item instanceof BMapGL.Marker) {
+                        const position = item.getPosition();
+                        return {
+                          type: 'Marker',
+                          position: [position.lng, position.lat]
+                        };
+                      } else if (item instanceof BMapGL.Polyline) {
+                        const path = item.getPath();
+                        return {
+                          type: 'Polyline',
+                          path: path.map(point => [point.lng, point.lat])
+                        };
+                      } else if (item instanceof BMapGL.Polygon) {
+                        const path = item.getPath();
+                        return {
+                          type: 'Polygon',
+                          path: path.map(point => [point.lng, point.lat])
+                        };
+                      }
+                      return null;
+                    } catch (error) {
+                      console.error('处理覆盖物数据时出错:', error);
+                      return null;
+                    }
+                  }).filter(Boolean);
+                } else {
+                  // 处理单个覆盖物
+                  if (overlay instanceof BMapGL.Marker) {
+                    const position = overlay.getPosition();
+                    return {
+                      type: 'Marker',
+                      position: [position.lng, position.lat]
+                    };
+                  } else if (overlay instanceof BMapGL.Polyline) {
+                    const path = overlay.getPath();
+                    return {
+                      type: 'Polyline',
+                      path: path.map(point => [point.lng, point.lat])
+                    };
+                  } else if (overlay instanceof BMapGL.Polygon) {
+                    const path = overlay.getPath();
+                    return {
+                      type: 'Polygon',
+                      path: path.map(point => [point.lng, point.lat])
+                    };
+                  }
+                }
+                return null;
+              } catch (error) {
+                console.error('处理图层数据时出错:', error);
+                return null;
+              }
+            })()
+          };
+
+          // 验证数据完整性
+          if (!layerData.data) {
+            console.warn('图层数据无效:', layer.name);
+            return null;
+          }
+
+          // 打印每个图层的处理结果
+          console.log('处理后的图层数据:', {
+            name: layerData.name,
+            type: layerData.type,
+            dataType: typeof layerData.data,
+            hasData: !!layerData.data
+          });
+
+          return layerData;
+        }).filter(Boolean); // 过滤掉无效的图层数据
+
+        // 如果没有有效的图层数据，则不添加 layers 字段
+        if (requestBody.layers.length === 0) {
+          delete requestBody.layers;
+        }
+
+        // 在发送请求前验证数据
+        const requestString = JSON.stringify(requestBody);
+        console.log('发送的请求数据:', requestString);
+        
+        // 尝试解析验证数据格式
+        JSON.parse(requestString);
+
+      } catch (error) {
+        console.error('处理图层数据时出错:', error);
+        // 如果处理图层数据出错，移除 layers 字段
+        delete requestBody.layers;
+      }
     }
 
     const response = await fetch('http://127.0.0.1:8000/chat', {
@@ -294,6 +490,15 @@ onMounted(() => {
   adjustHeight()
 })
 </script>
+
+
+
+
+
+
+
+
+
 
 <style scoped>
 .chat-container {

@@ -23,7 +23,8 @@
 
     <!-- PrimeVue 弹窗组件 -->
     <Dialog v-model:visible="visible" modal header="ChatGIS" :style="{ width: '350px' }" :draggable="false">
-      <p>Version：1.0</p>
+      <p>Version：2.0</p>
+      <p>开发团队：武汉大学</p>
       <p>QQ：2335987512</p>
       <a href="https://github.com/zhengkanqin/chatgis" target="_blank" style="color: #5aa878; text-decoration: underline;">
     GitHub开源地址：ChatGIS
