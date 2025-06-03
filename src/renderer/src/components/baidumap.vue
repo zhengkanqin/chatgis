@@ -302,14 +302,64 @@ const drawBoundaryByName = async (cityName) => {
 };
 
 // 添加 GeoJSON 图层
-const addGeoJSON = (data) => {
+const addGeoJSON = async (data) => {
   if (!mapUtils) return;
-  const layerId = mapUtils.addGeoJSONLayer(data.geojson, data.name, data.style={});
+  
+  let geojsonData = data.geojson;
+  
+  // 如果输入是字符串
+  if (typeof geojsonData === 'string') {
+    // 检查是否为 URL 或文件路径
+    if (geojsonData.startsWith('http://') || geojsonData.startsWith('https://')) {
+      try {
+        // 如果是 URL，使用 fetch 获取数据
+        const response = await fetch(geojsonData);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        geojsonData = await response.json();
+      } catch (error) {
+        console.error('获取 GeoJSON 数据失败:', error);
+        throw error;
+      }
+    } 
+    // 检查是否为文件路径（Windows 或 Unix 风格）
+    else if (geojsonData.match(/^[a-zA-Z]:\\|^\/|^\.\/|^\.\.\//)) {
+      try {
+        // 使用 window.api.readTextFile 读取文件
+        const result = await window.api.readTextFile(geojsonData);
+        if (!result.success) {
+          throw new Error(result.error);
+        }
+        geojsonData = JSON.parse(result.data);
+      } catch (error) {
+        console.error('读取 GeoJSON 文件失败:', error);
+        throw error;
+      }
+    } else {
+      // 如果不是 URL 或文件路径，尝试直接解析 JSON
+      try {
+        geojsonData = JSON.parse(geojsonData);
+      } catch (error) {
+        console.error('解析 GeoJSON 字符串失败:', error);
+        throw error;
+      }
+    }
+  }
+
+  // 处理样式
+  if(typeof data.style === 'string' && data.style !== ''){
+    data.style = JSON.parse(data.style);
+  }
+
+  const layerId = mapUtils.addGeoJSONLayer(geojsonData, data.name, data.style={});
+  
   // 保存原始数据
   const layer = layers.value.find(l => l.id === layerId);
   if (layer) {
-    layer.originalData = data.geojson;  // 保存原始 GeoJSON 数据
+    layer.originalData = geojsonData;  // 保存原始 GeoJSON 数据
   }
+  
   getAllLayers();
   isSidebarOpen.value = true;
   return layerId;

@@ -285,6 +285,8 @@ addCircle(point, radius, name) {
    * @returns {string} 图层 ID
    */
   addGeoJSONLayer(geojson, name, style = {}) {
+
+   
     const defaultStyle = {
       strokeColor: "#0000ff",
       strokeWeight: 2,

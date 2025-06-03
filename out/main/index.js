@@ -185,6 +185,15 @@ electron.app.whenReady().then(() => {
       return { success: false, error: error.message };
     }
   });
+  electron.ipcMain.handle("read-text-file", async (event, filePath) => {
+    try {
+      const content = await fs.readFile(filePath, "utf-8");
+      return { success: true, data: content };
+    } catch (error) {
+      console.error("读取文本文件失败:", error);
+      return { success: false, error: error.message };
+    }
+  });
   createWindow();
   electron.app.on("activate", function() {
     if (electron.BrowserWindow.getAllWindows().length === 0) createWindow();

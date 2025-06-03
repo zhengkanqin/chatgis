@@ -49,7 +49,7 @@ export const handleWebSocketMessage = (event, mapRef) => {
           //止 更改操作
   
           case 'draw-geojson':
-            mapRef.value.addGeoJSONLayer(msg.data);
+            mapRef.value.addGeoJSON(msg.data);
             console.log('绘制geojson');
             break;
           case 'draw-video':

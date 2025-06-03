@@ -216,6 +216,17 @@ electron.app.whenReady().then(() => {
     }
   });
 
+  // 添加读取文本文件的处理程序
+  electron.ipcMain.handle('read-text-file', async (event, filePath) => {
+    try {
+      const content = await fs.readFile(filePath, 'utf-8');
+      return { success: true, data: content };
+    } catch (error) {
+      console.error('读取文本文件失败:', error);
+      return { success: false, error: error.message };
+    }
+  });
+
   createWindow()
 
   electron.app.on("activate", function () {

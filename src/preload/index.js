@@ -17,7 +17,8 @@ const api = {
   readDirectory: (dirPath) => ipcRenderer.invoke('read-directory', dirPath),
   getFileStats: (filePath) => ipcRenderer.invoke('get-file-stats', filePath),
   readFileAsBuffer: (filePath) => ipcRenderer.invoke('read-file-as-buffer', filePath),
-  saveFile: (options) => ipcRenderer.invoke('save-file', options)
+  saveFile: (options) => ipcRenderer.invoke('save-file', options),
+  readTextFile: (filePath) => ipcRenderer.invoke('read-text-file', filePath)
 };
 
 // 确保 API 被正确暴露
