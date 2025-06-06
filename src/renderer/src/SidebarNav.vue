@@ -24,8 +24,9 @@
     <!-- PrimeVue 弹窗组件 -->
     <Dialog v-model:visible="visible" modal header="ChatGIS" :style="{ width: '350px' }" :draggable="false">
       <p>Version：2.0</p>
-      <p>开发团队：武汉大学</p>
-      <p>QQ：2335987512</p>
+      <p>开发团队：郑堪钦 普贝吉 余佩瀚</p>
+      <p>指导老师：应申</p>
+      <p>意见反馈QQ：2335987512</p>
       <a href="https://github.com/zhengkanqin/chatgis" target="_blank" style="color: #5aa878; text-decoration: underline;">
     GitHub开源地址：ChatGIS
   </a>
@@ -46,6 +47,7 @@ const items = [
   { path: '/main', label: '主页', icon: 'pi pi-map' },
   { path: '/info', label: '文件', icon: 'pi pi-file' },
   { path: '/data', label: '数据', icon: 'pi pi-database' },
+  { path: '/knowledge', label: '知识', icon: 'pi pi-book' },
   { path: '/config', label: '配置', icon: 'pi pi-sliders-v' }
 ]
 

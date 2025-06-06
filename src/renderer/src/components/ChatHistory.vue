@@ -50,13 +50,13 @@ const renderMarkdown = (content) => md.render(content)
           <pre v-else>{{ JSON.stringify(msg.content, null, 2) }}</pre>
         </div>
 
-        <div v-else-if="msg.type === 'pic'" class="pic-message">
+        <div v-else-if="msg.type === 'ImageMessage'" class="pic-message">
           <div class="message-bubble user-bubble">
             <img :src="msg.content" class="chat-image" alt="图片" />
           </div>
         </div>
 
-        <div v-else-if="msg.type === 'file'" class="file-message">
+        <div v-else-if="msg.type === 'FileMessage'" class="file-message">
           <div class="message-bubble user-bubble file-bubble">
             <i class="pi pi-file"></i>
             <span class="file-name">{{ msg.content }}</span>

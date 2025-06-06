@@ -1,50 +1,6 @@
 <template>
     <div class="container">
       <TabView @tab-change="(e) => activeTabIndex = e.index">
-        <TabPanel header="添加地理数据">
-          <div class="form-container">
-            <form @submit.prevent="submitForm" class="flex flex-column h-full">
-              <div class="field">
-                <Textarea
-                  v-model="formData.content"
-                  placeholder="请输入内容"
-                  class="w-full"
-                  autoResize
-                  :disabled="!formData.filepath"
-                  :rows="10"
-                />
-              </div>
-              
-              <div class="field">
-                <div class="flex flex-row gap-3 w-full button-container">
-                  <InputText
-                    v-model="formData.filepath"
-                    placeholder="请选择文件"
-                    readonly
-                    class="w-5"
-                  />
-                  <Button @click="selectFile" label="选择文件" class="w-2 light-button" />
-                  <Button 
-                    @click="getFileContentForForm"
-                    icon="pi pi-book"
-                    class="w-2 light-button"
-                    :disabled="!formData.filepath"
-                    :loading="loading"
-                  />
-                  <Button 
-                    type="submit" 
-                    :loading="loading"
-                    severity="success"
-                    :disabled="!formData.content || !formData.filepath"
-                  >
-                    {{ loading ? '提交中...' : '提交' }}
-                  </Button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </TabPanel>
-  
         <TabPanel header="地理数据列表">
           <div class="memory-list">
             <div class="list-header">
@@ -162,6 +118,50 @@
               template="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink RowsPerPageDropdown"
               class="pagination-footer"
             />
+          </div>
+        </TabPanel>
+  
+        <TabPanel header="添加地理数据">
+          <div class="form-container">
+            <form @submit.prevent="submitForm" class="flex flex-column h-full">
+              <div class="field">
+                <Textarea
+                  v-model="formData.content"
+                  placeholder="请输入内容"
+                  class="w-full"
+                  autoResize
+                  :disabled="!formData.filepath"
+                  :rows="10"
+                />
+              </div>
+              
+              <div class="field">
+                <div class="flex flex-row gap-3 w-full button-container">
+                  <InputText
+                    v-model="formData.filepath"
+                    placeholder="请选择文件"
+                    readonly
+                    class="w-5"
+                  />
+                  <Button @click="selectFile" label="选择文件" class="w-2 light-button" />
+                  <Button 
+                    @click="getFileContentForForm"
+                    icon="pi pi-book"
+                    class="w-2 light-button"
+                    :disabled="!formData.filepath"
+                    :loading="loading"
+                  />
+                  <Button 
+                    type="submit" 
+                    :loading="loading"
+                    severity="success"
+                    :disabled="!formData.content || !formData.filepath"
+                  >
+                    {{ loading ? '提交中...' : '提交' }}
+                  </Button>
+                </div>
+              </div>
+            </form>
           </div>
         </TabPanel>
   

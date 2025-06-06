@@ -278,15 +278,41 @@ addCircle(point, radius, name) {
   }
 
   /**
+   * 生成颜色条带
+   * @param {number} value - 当前值
+   * @param {number} min - 最小值
+   * @param {number} max - 最大值
+   * @returns {string} 颜色值
+   */
+  getColorByValue(value, min, max) {
+    // 计算当前值在范围内的比例
+    const ratio = (value - min) / (max - min);
+    
+    // 使用 RGB 颜色空间，从蓝色到红色
+    const r = Math.round(255 * ratio);
+    const b = Math.round(255 * (1 - ratio));
+    const g = 0;
+    
+    console.log('颜色计算:', {
+      value,
+      min,
+      max,
+      ratio,
+      color: `rgb(${r}, ${g}, ${b})`
+    });
+    
+    return `rgb(${r}, ${g}, ${b})`;
+  }
+
+  /**
    * 添加 GeoJSON 图层
    * @param {Object} geojson - GeoJSON 数据
    * @param {string} name - 图层名称
    * @param {Object} style - 样式配置
+   * @param {string} [properties] - 用于颜色条带处理的属性名
    * @returns {string} 图层 ID
    */
-  addGeoJSONLayer(geojson, name, style = {}) {
-
-   
+  addGeoJSONLayer(geojson, name, style = {}, properties = null) {
     const defaultStyle = {
       strokeColor: "#0000ff",
       strokeWeight: 2,
@@ -296,23 +322,49 @@ addCircle(point, radius, name) {
       enableEditing: false,
       enableClicking: true
     };
-    const finalStyle = { ...defaultStyle, ...style };
+
+    // 如果指定了属性名，计算该属性的最大最小值
+    let minValue = Infinity;
+    let maxValue = -Infinity;
+    if (properties) {
+      geojson.features.forEach(feature => {
+        const value = feature.properties[properties];
+        if (typeof value === 'number') {
+          minValue = Math.min(minValue, value);
+          maxValue = Math.max(maxValue, value);
+        }
+      });
+    }
 
     const overlays = [];
     
     geojson.features.forEach(feature => {
       const geometry = feature.geometry;
-      const properties = feature.properties;
+      const featureProperties = feature.properties;
+      
+      // 根据属性值生成颜色
+      let featureStyle = { ...defaultStyle };
+      
+      // 如果指定了属性名，使用颜色条带
+      if (properties && typeof featureProperties[properties] === 'number') {
+        const value = featureProperties[properties];
+        const color = this.getColorByValue(value, minValue, maxValue);
+        featureStyle.fillColor = color;
+        featureStyle.strokeColor = color;
+      } else {
+        // 如果没有指定属性名，则使用用户传入的样式
+        featureStyle = { ...featureStyle, ...style };
+      }
       
       switch (geometry.type) {
         case 'Point':
           const point = new BMapGL.Point(geometry.coordinates[0], geometry.coordinates[1]);
           const marker = new BMapGL.Marker(point);
-          if (properties.title) {
-            marker.setTitle(properties.title);
+          if (featureProperties.title) {
+            marker.setTitle(featureProperties.title);
           }
           marker.addEventListener('mouseover', () => {
-            const event = new CustomEvent('feature-hover', { detail: { properties, geometry } });
+            const event = new CustomEvent('feature-hover', { detail: { properties: featureProperties, geometry } });
             this.map.getContainer().dispatchEvent(event);
           });
           marker.addEventListener('mouseout', () => {
@@ -327,14 +379,14 @@ addCircle(point, radius, name) {
             new BMapGL.Point(coord[0], coord[1])
           );
           const polyline = new BMapGL.Polyline(points, {
-            strokeColor: finalStyle.strokeColor,
-            strokeWeight: finalStyle.strokeWeight,
-            strokeOpacity: finalStyle.strokeOpacity,
+            strokeColor: featureStyle.strokeColor,
+            strokeWeight: featureStyle.strokeWeight,
+            strokeOpacity: featureStyle.strokeOpacity,
             enableEditing: false,
             enableClicking: true
           });
           polyline.addEventListener('mouseover', () => {
-            const event = new CustomEvent('feature-hover', { detail: { properties, geometry } });
+            const event = new CustomEvent('feature-hover', { detail: { properties: featureProperties, geometry } });
             this.map.getContainer().dispatchEvent(event);
           });
           polyline.addEventListener('mouseout', () => {
@@ -349,16 +401,16 @@ addCircle(point, radius, name) {
             ring.map(coord => new BMapGL.Point(coord[0], coord[1]))
           );
           const polygon = new BMapGL.Polygon(paths, {
-            strokeColor: finalStyle.strokeColor,
-            strokeWeight: finalStyle.strokeWeight,
-            strokeOpacity: finalStyle.strokeOpacity,
-            fillColor: finalStyle.fillColor,
-            fillOpacity: finalStyle.fillOpacity,
+            strokeColor: featureStyle.strokeColor,
+            strokeWeight: featureStyle.strokeWeight,
+            strokeOpacity: featureStyle.strokeOpacity,
+            fillColor: featureStyle.fillColor,
+            fillOpacity: featureStyle.fillOpacity,
             enableEditing: false,
             enableClicking: true
           });
           polygon.addEventListener('mouseover', () => {
-            const event = new CustomEvent('feature-hover', { detail: { properties, geometry } });
+            const event = new CustomEvent('feature-hover', { detail: { properties: featureProperties, geometry } });
             this.map.getContainer().dispatchEvent(event);
           });
           polygon.addEventListener('mouseout', () => {
@@ -376,7 +428,7 @@ addCircle(point, radius, name) {
       overlay: overlays,
       type: 'GeoJSON',
       name,
-      originalData: geojson,  // 保存原始 GeoJSON 数据
+      originalData: geojson,
       createTime: new Date()
     });
 

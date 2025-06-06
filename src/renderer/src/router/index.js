@@ -4,11 +4,13 @@ import Main from '../Main.vue'
 import Data from '../Data.vue'
 import Config from '../Config.vue'
 import Info from '../Info.vue'
+import Knowledge from '../knowledge.vue'
 const routes = [
   { path: '/main', component: Main },
   { path: '/data', component: Data },
   { path: '/config', component: Config },
   { path: '/info', component: Info},
+  { path: '/knowledge', component: Knowledge},
   { path: '/', redirect: '/main' } // 默认跳转
 ]
 
