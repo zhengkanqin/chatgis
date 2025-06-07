@@ -419,6 +419,33 @@ addCircle(point, radius, name) {
           });
           overlays.push(polygon);
           break;
+
+        case 'MultiPolygon':
+          // 处理 MultiPolygon 类型
+          geometry.coordinates.forEach(polygonCoords => {
+            const paths = polygonCoords.map(ring =>
+              ring.map(coord => new BMapGL.Point(coord[0], coord[1]))
+            );
+            const polygon = new BMapGL.Polygon(paths, {
+              strokeColor: featureStyle.strokeColor,
+              strokeWeight: featureStyle.strokeWeight,
+              strokeOpacity: featureStyle.strokeOpacity,
+              fillColor: featureStyle.fillColor,
+              fillOpacity: featureStyle.fillOpacity,
+              enableEditing: false,
+              enableClicking: true
+            });
+            polygon.addEventListener('mouseover', () => {
+              const event = new CustomEvent('feature-hover', { detail: { properties: featureProperties, geometry } });
+              this.map.getContainer().dispatchEvent(event);
+            });
+            polygon.addEventListener('mouseout', () => {
+              const event = new CustomEvent('feature-hover', { detail: null });
+              this.map.getContainer().dispatchEvent(event);
+            });
+            overlays.push(polygon);
+          });
+          break;
       }
     });
 

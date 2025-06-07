@@ -393,7 +393,7 @@ const sendMessage = async () => {
       for (const line of lines) {
         if (line.startsWith('data: ')) {
           const data = JSON.parse(line.slice(6))
-          
+          console.log('data:', data)
           switch(data.type) {
             case 'tool_start':
               const toolInfo = data.content.split('...')[0]

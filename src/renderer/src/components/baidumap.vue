@@ -110,6 +110,7 @@ let map = null;
 let mapUtils = null;
 const isSidebarOpen = ref(false);
 const mapStore = useMapStore();
+const hoveredFeature = ref(null);
 
 // 图层数据
 const layers = ref([]);

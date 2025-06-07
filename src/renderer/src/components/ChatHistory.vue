@@ -35,18 +35,30 @@ const md = new MarkdownIt({
 })
 
 const renderMarkdown = (content) => md.render(content)
+
+const filterSystemWords = (content) => {
+  if (typeof content !== 'string') return content;
+  
+  // 过滤所有系统词汇
+  return content
+    .replace(/\[\$help\].*?\[\$help\]/g, '')
+    .replace(/\[\$fail\].*?\[\$fail\]/g, '')
+    .replace(/\[\$end\].*?\[\$end\]/g, '')
+    .replace(/\[\$sender\].*?\[\$sender\]/g, '')
+    .trim();
+}
 </script>
 
 <template>
 
   <div class="chat-history">
-    <div v-for="(msg, index) in messages":key="index" class="chat-item" :class="msg.source">
+    <div v-for="(msg, index) in messages":key="index" class="chat-item" :class="[msg.source, msg.sender === 'reflection_operation_node' ? 'reflection-message' : '']">
 
         <div class="sender-label" v-if="index === 0 || messages[index - 1].source !== msg.source">{{ msg.source === 'user' ? '你' : 'GIS 助手' }}</div>
 
         <div v-if="msg.type === 'TextMessage'" class="text-message">
-          <div v-if="msg.source === 'user' && typeof msg.content === 'string'"class="message-bubble user-bubble">{{ msg.content }}</div>
-          <div v-else-if="msg.source === 'assistant' && typeof msg.content === 'string'" v-html="renderMarkdown(msg.content)" class="assistant-markdown"></div>
+          <div v-if="msg.source === 'user' && typeof msg.content === 'string'"class="message-bubble user-bubble">{{ filterSystemWords(msg.content) }}</div>
+          <div v-else-if="msg.source === 'assistant' && typeof msg.content === 'string'" v-html="renderMarkdown(filterSystemWords(msg.content))" class="assistant-markdown"></div>
           <pre v-else>{{ JSON.stringify(msg.content, null, 2) }}</pre>
         </div>
 
@@ -362,5 +374,12 @@ const renderMarkdown = (content) => md.render(content)
   font-size: 0.9rem;
   color: #333;
   word-break: break-all;
+}
+
+.reflection-message {
+  background-color: #e6f7e6;
+  border-radius: 8px;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
 }
 </style>
