@@ -23,7 +23,7 @@
 
     <!-- PrimeVue 弹窗组件 -->
     <Dialog v-model:visible="visible" modal header="ChatGIS" :style="{ width: '350px' }" :draggable="false">
-      <p>Version：2.0</p>
+      <p>Version：3.0</p>
       <p>开发团队：郑堪钦 普贝吉 余佩瀚</p>
       <p>指导老师：应申</p>
       <p>意见反馈QQ：2335987512</p>
@@ -71,6 +71,9 @@ export default {
   align-items: center;
   padding-top: 40px;
   box-shadow: -4px 0 10px rgba(0, 0, 0, 0.3);
+  background: #fff;
+  position: relative;
+  z-index: 10;
 }
 
 .nav-icon {

@@ -982,11 +982,11 @@
   .container {
     width: 100%;
     height: calc(100vh - 40px); /* 减去 tibar 的高度 */
-    margin: 0;
-    padding: 0 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    margin-left: 0px;
   }
   
   :deep(.p-tabview) {

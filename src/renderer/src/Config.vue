@@ -63,8 +63,10 @@
     const res = await window.api.saveConfig(configPath, rawConfig);
     if (res.success) {
       alert('配置保存成功！');
+      // 调用重启接口
+      fetch('http://127.0.0.1:8000/restart');
     } else {
-      alert('配置保存失败：' + res.error);
+      alert('配置保存失败：' + res.error );
     }
   } catch (error) {
     alert('保存时出错：' + error.message);
@@ -78,6 +80,7 @@
     min-height: 100vh;
     background-color: #f8f9fa;
     overflow: hidden;
+    
   }
 
   .config-content {

@@ -345,10 +345,13 @@ onMounted(() => {
   width: 100%;
   height: calc(100vh - 40px);
   margin: 0;
-  padding: 0 20px;
+  /* margin-left: 10px; */
+  padding: 10px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  background: #fff;
+
 }
 
 :deep(.p-tabview) {
@@ -518,7 +521,7 @@ onMounted(() => {
 
 .memory-item:hover {
   border-color: #67c23a;
-  box-shadow: 0 2px 12px 0 rgba(103, 194, 58, 0.1);
+  /* box-shadow: 0 2px 12px 0 rgba(103, 194, 58, 0.1); */
 }
 
 .memory-header {

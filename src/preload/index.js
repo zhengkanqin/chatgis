@@ -10,6 +10,10 @@ ipcRenderer.on('is-dev', (_, value) => {
 const api = {
   minimizeWindow: () => {ipcRenderer.send('minimize-window')},
   closeWindow: () => {ipcRenderer.send('close-window')},
+  toggleMaximize: () => {ipcRenderer.send('toggle-maximize')},
+  onWindowStateChange: (callback) => {
+    ipcRenderer.on('window-state-change', (_, state) => callback(state));
+  },
   readConfig: (configPath) => ipcRenderer.invoke('read-config', configPath),
   saveConfig: (configPath, config) => ipcRenderer.invoke('save-config', configPath, config),
   selectFolder: () => ipcRenderer.invoke('select-folder'),

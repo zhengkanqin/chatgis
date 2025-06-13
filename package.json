@@ -15,13 +15,15 @@
     "build:unpack": "npm run build && electron-builder --dir",
     "build:win": "npm run build && electron-builder --win",
     "build:mac": "npm run build && electron-builder --mac",
-    "build:linux": "npm run build && electron-builder --linux"
+    "build:linux": "npm run build && electron-builder --linux",
+    "electron:generate-icons": "electron-icon-builder --input=resources/icon.png --output=build --flatten"
   },
   "dependencies": {
     "@electron-toolkit/preload": "^3.0.1",
     "@electron-toolkit/utils": "^4.0.0",
     "@primeuix/themes": "^1.1.1",
     "axios": "^1.9.0",
+    "electron-icon-builder": "^2.0.1",
     "element-plus": "^2.9.11",
     "github-markdown-css": "^5.8.1",
     "highlight.js": "^11.11.1",
@@ -81,7 +83,8 @@
       }
     ],
     "win": {
-      "target": "nsis"
+      "target": "nsis",
+      "icon": "resources/icon.ico"
     }
   }
 }

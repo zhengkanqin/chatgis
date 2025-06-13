@@ -327,8 +327,9 @@ addCircle(point, radius, name) {
     let minValue = Infinity;
     let maxValue = -Infinity;
     if (properties) {
-      geojson.features.forEach(feature => {
-        const value = feature.properties[properties];
+      const features = this.getFeaturesFromGeoJSON(geojson);
+      features.forEach(feature => {
+        const value = feature.properties?.[properties];
         if (typeof value === 'number') {
           minValue = Math.min(minValue, value);
           maxValue = Math.max(maxValue, value);
@@ -337,10 +338,11 @@ addCircle(point, radius, name) {
     }
 
     const overlays = [];
+    const features = this.getFeaturesFromGeoJSON(geojson);
     
-    geojson.features.forEach(feature => {
+    features.forEach(feature => {
       const geometry = feature.geometry;
-      const featureProperties = feature.properties;
+      const featureProperties = feature.properties || {};
       
       // 根据属性值生成颜色
       let featureStyle = { ...defaultStyle };
@@ -469,6 +471,36 @@ addCircle(point, radius, name) {
     this.map.getContainer().dispatchEvent(event);
 
     return layerId;
+  }
+
+  /**
+   * 从 GeoJSON 数据中提取 features 数组
+   * @param {Object} geojson - GeoJSON 数据
+   * @returns {Array} features 数组
+   */
+  getFeaturesFromGeoJSON(geojson) {
+    if (!geojson) return [];
+    
+    // 如果是 FeatureCollection
+    if (geojson.type === 'FeatureCollection' && Array.isArray(geojson.features)) {
+      return geojson.features;
+    }
+    
+    // 如果是单个 Feature
+    if (geojson.type === 'Feature' && geojson.geometry) {
+      return [geojson];
+    }
+    
+    // 如果是单个 Geometry
+    if (geojson.type && geojson.coordinates) {
+      return [{
+        type: 'Feature',
+        geometry: geojson,
+        properties: {}
+      }];
+    }
+    
+    return [];
   }
 
   /**

@@ -214,64 +214,76 @@ const drawBoundaryByName = async (cityName) => {
 const addGeoJSON = async (data) => {
   if (!mapUtils) return;
   
-  let geojsonData = data.geojson;
+  // 将单个对象转换为数组
+  const dataArray = Array.isArray(data) ? data : [data];
+  const results = [];
   
-  // 如果输入是字符串
-  if (typeof geojsonData === 'string') {
-    // 检查是否为 URL 或文件路径
-    if (geojsonData.startsWith('http://') || geojsonData.startsWith('https://')) {
-      try {
-        // 如果是 URL，使用 fetch 获取数据
-        const response = await fetch(geojsonData);
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+  for (const data of dataArray) {
+    let geojsonData = data.geojson;
+    
+    // 如果输入是字符串
+    if (typeof geojsonData === 'string') {
+      // 检查是否为 URL 或文件路径
+      if (geojsonData.startsWith('http://') || geojsonData.startsWith('https://')) {
+        try {
+          // 如果是 URL，使用 fetch 获取数据
+          const response = await fetch(geojsonData);
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          geojsonData = await response.json();
+        } catch (error) {
+          console.error('获取 GeoJSON 数据失败:', error);
+          throw error;
         }
-        geojsonData = await response.json();
-      } catch (error) {
-        console.error('获取 GeoJSON 数据失败:', error);
-        throw error;
-      }
-    } 
-    // 检查是否为文件路径（Windows 或 Unix 风格）
-    else if (geojsonData.match(/^[a-zA-Z]:\\|^\/|^\.\/|^\.\.\//)) {
-      try {
-        // 使用 window.api.readTextFile 读取文件
-        const result = await window.api.readTextFile(geojsonData);
-        if (!result.success) {
-          throw new Error(result.error);
+      } 
+      // 检查是否为文件路径（Windows 或 Unix 风格）
+      else if (geojsonData.match(/^[a-zA-Z]:\\|^\/|^\.\/|^\.\.\//)) {
+        try {
+          // 使用 window.api.readTextFile 读取文件
+          const result = await window.api.readTextFile(geojsonData);
+          if (!result.success) {
+            throw new Error(result.error);
+          }
+          geojsonData = JSON.parse(result.data);
+        } catch (error) {
+          console.error('读取 GeoJSON 文件失败:', error);
+          throw error;
         }
-        geojsonData = JSON.parse(result.data);
-      } catch (error) {
-        console.error('读取 GeoJSON 文件失败:', error);
-        throw error;
-      }
-    } else {
-      // 如果不是 URL 或文件路径，尝试直接解析 JSON
-      try {
-        geojsonData = JSON.parse(geojsonData);
-      } catch (error) {
-        console.error('解析 GeoJSON 字符串失败:', error);
-        throw error;
+      } else {
+        // 如果不是 URL 或文件路径，尝试直接解析 JSON
+        try {
+          geojsonData = JSON.parse(geojsonData);
+        } catch (error) {
+          console.error('解析 GeoJSON 字符串失败:', error);
+          throw error;
+        }
       }
     }
-  }
 
-  // 处理样式
-  if(typeof data.style === 'string' && data.style !== ''){
-    data.style = JSON.parse(data.style);
-  }
+    // 处理样式
+    if(typeof data.style === 'string' && data.style !== ''){
+      data.style = JSON.parse(data.style);
+    }
 
-  const layerId = mapUtils.addGeoJSONLayer(geojsonData, data.name, data.style, data.properties);
-  
-  // 保存原始数据
-  const layer = layers.value.find(l => l.id === layerId);
-  if (layer) {
-    layer.originalData = geojsonData;  // 保存原始 GeoJSON 数据
+    const layerId = mapUtils.addGeoJSONLayer(geojsonData, data.name, data.style, data.properties);
+    
+    // 保存原始数据
+    const layer = layers.value.find(l => l.id === layerId);
+    if (layer) {
+      layer.originalData = geojsonData;  // 保存原始 GeoJSON 数据
+    }
+    
+    results.push({
+      layerId,
+      name: data.name,
+      success: true
+    });
   }
   
   getAllLayers();
   isSidebarOpen.value = true;
-  return layerId;
+  return results;
 };
 
 // 添加图片图层
@@ -731,6 +743,10 @@ defineExpose({
   height: 100%;
   min-height: 500px;
   border-radius: 1%;
+  user-select: none;  /* 防止文本选中 */
+  -webkit-user-select: none;  /* Safari 支持 */
+  -moz-user-select: none;  /* Firefox 支持 */
+  -ms-user-select: none;  /* IE/Edge 支持 */
 }
 
 .map-wrapper {
@@ -741,6 +757,10 @@ defineExpose({
   padding-right: 0;
   padding-top: 0;
   overflow: hidden;
+  user-select: none;  /* 防止文本选中 */
+  -webkit-user-select: none;  /* Safari 支持 */
+  -moz-user-select: none;  /* Firefox 支持 */
+  -ms-user-select: none;  /* IE/Edge 支持 */
 }
 
 .round {

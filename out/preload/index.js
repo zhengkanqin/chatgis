@@ -12,6 +12,12 @@ const api = {
   closeWindow: () => {
     electron.ipcRenderer.send("close-window");
   },
+  toggleMaximize: () => {
+    electron.ipcRenderer.send("toggle-maximize");
+  },
+  onWindowStateChange: (callback) => {
+    electron.ipcRenderer.on("window-state-change", (_, state) => callback(state));
+  },
   readConfig: (configPath) => electron.ipcRenderer.invoke("read-config", configPath),
   saveConfig: (configPath, config) => electron.ipcRenderer.invoke("save-config", configPath, config),
   selectFolder: () => electron.ipcRenderer.invoke("select-folder"),

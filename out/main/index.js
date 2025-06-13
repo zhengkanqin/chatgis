@@ -4,7 +4,7 @@ const path = require("path");
 const utils = require("@electron-toolkit/utils");
 const child_process = require("child_process");
 const fs = require("fs").promises;
-const icon = path.join(__dirname, "../../resources/icon.png");
+const icon = path.join(__dirname, "../../resources/icon.ico");
 const { screen } = electron;
 const { dialog } = electron;
 if (typeof electron === "string") {
@@ -45,23 +45,29 @@ function createWindow() {
   const { width: screenWidth, height: screenHeight } = screen.getPrimaryDisplay().workAreaSize;
   const winWidth = Math.floor(screenWidth * 0.8);
   const winHeight = Math.floor(screenHeight * 0.8);
+  const minWidth = Math.floor(screenWidth * 0.5);
+  const minHeight = Math.floor(screenHeight * 0.5);
   mainWindow = new electron.BrowserWindow({
     width: winWidth,
     height: winHeight,
+    minWidth,
+    minHeight,
     x: Math.floor((screenWidth - winWidth) / 2),
     y: Math.floor((screenHeight - winHeight) / 2),
     frame: false,
     // 去掉系统默认窗口框架，使用自定义标题栏
-    resizable: false,
-    // 禁止调整大小
-    maximizable: false,
-    // 禁止最大化
+    resizable: true,
+    // 允许调整大小
+    maximizable: true,
+    // 允许最大化
     minimizable: true,
     // 允许最小化（可选）
     hasShadow: true,
     // 窗口阴影
     autoHideMenuBar: true,
     show: false,
+    transparent: true,
+    // 启用透明支持
     ...process.platform === "linux" ? { icon } : {},
     webPreferences: {
       preload: path.join(__dirname, "../preload/index.js"),
@@ -75,6 +81,12 @@ function createWindow() {
   });
   mainWindow.on("ready-to-show", () => {
     mainWindow.show();
+  });
+  mainWindow.on("maximize", () => {
+    mainWindow.webContents.send("window-state-change", { isMaximized: true });
+  });
+  mainWindow.on("unmaximize", () => {
+    mainWindow.webContents.send("window-state-change", { isMaximized: false });
   });
   mainWindow.webContents.once("did-finish-load", () => {
     mainWindow.webContents.send("is-dev", isDev);
@@ -110,6 +122,14 @@ electron.app.whenReady().then(() => {
   electron.ipcMain.on("close-window", () => {
     console.log("Close event received");
     mainWindow.close();
+  });
+  electron.ipcMain.on("toggle-maximize", () => {
+    console.log("Toggle maximize event received");
+    if (mainWindow.isMaximized()) {
+      mainWindow.unmaximize();
+    } else {
+      mainWindow.maximize();
+    }
   });
   electron.ipcMain.handle("save-config", async (event, configPath, config) => {
     try {

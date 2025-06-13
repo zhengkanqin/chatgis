@@ -32,10 +32,30 @@ hljs.configure({
 </script>
 
 <style>
+:root {
+  background-color: transparent;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#app {
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100vh;
+  background-color: transparent;
+}
+
 html, body, #app {
   height: 100%;
   margin: 0;
-  border-radius: 50px;
+  border-radius: 8px;
+  background-color: transparent;
 }
 
 * {
@@ -57,6 +77,10 @@ html, body, #app {
   width: 100%;
   display: flex;
   flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .App {
@@ -70,6 +94,7 @@ html, body, #app {
 .SidebarNav {
   width: 70px;
   flex-shrink: 0;  /* 禁止缩小 */
+  background: #fff;
 }
 
 .MainContent {
