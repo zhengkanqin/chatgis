@@ -396,7 +396,7 @@ const sendMessage = async () => {
           console.log('data:', data)
           switch(data.type) {
             case 'tool_start':
-              if (data.sender === 'FailCurrentSubtask' || data.sender === 'FinishCurrentSubtask') {
+              if (data.sender === 'FailCurrentSubtask' || data.sender === 'FinishCurrentSubtask' || data.sender === 'DoAddSubtask' ||data.sender === 'DoDeleteSubtask' ||data.sender === 'ReviseSubtask') {
                 // 不显示这些工具调用
                 break
               } else if (data.sender === 'Query_Knowledge') {
