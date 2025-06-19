@@ -45,7 +45,7 @@ function createWindow() {
   const { width: screenWidth, height: screenHeight } = screen.getPrimaryDisplay().workAreaSize;
   const winWidth = Math.floor(screenWidth * 0.8);
   const winHeight = Math.floor(screenHeight * 0.8);
-  const minWidth = Math.floor(screenWidth * 0.5);
+  const minWidth = 1200;
   const minHeight = Math.floor(screenHeight * 0.5);
   mainWindow = new electron.BrowserWindow({
     width: winWidth,

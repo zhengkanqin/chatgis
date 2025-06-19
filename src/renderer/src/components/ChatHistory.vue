@@ -104,6 +104,14 @@ const filterSystemWords = (content) => {
             <div class="interrupt-content">{{ msg.content }}</div>
         </div>
 
+        <div v-else-if="msg.type === 'QueryKnowledgeEvent'" class="cool-query-knowledge-box">
+          <div class="cool-title">知识库查询</div>
+          <div class="cool-content">
+            <i class="pi pi-book" style="font-size: 1.5em; color: #4f8cff; margin-right: 0.5em;"></i>
+            <span>{{ msg.content }}</span>
+          </div>
+        </div>
+
         <div v-else class="tool-message unknown">
           ⚠️ 不支持的消息类型：{{ msg.type }}
         </div>
@@ -382,5 +390,30 @@ const filterSystemWords = (content) => {
   border-radius: 8px;
   padding: 0.5rem;
   margin: 0.5rem 0;
+}
+
+.cool-query-knowledge-box {
+  border: 2px dashed #4f8cff;
+  background: linear-gradient(90deg, #e0f0ff 0%, #f0f7ff 100%);
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0 2px 12px #4f8cff22;
+  animation: pulse 1.5s infinite alternate;
+}
+.cool-title {
+  font-weight: bold;
+  color: #4f8cff;
+  margin-bottom: 0.5em;
+  font-size: 1.1em;
+}
+.cool-content {
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+}
+@keyframes pulse {
+  from { box-shadow: 0 2px 12px #4f8cff22; }
+  to   { box-shadow: 0 4px 24px #4f8cff66; }
 }
 </style>

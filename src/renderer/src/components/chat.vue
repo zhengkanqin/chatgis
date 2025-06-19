@@ -396,17 +396,29 @@ const sendMessage = async () => {
           console.log('data:', data)
           switch(data.type) {
             case 'tool_start':
-              const toolInfo = data.content.split('...')[0]
-              const toolName = toolInfo.replace('正在执行', '').trim()
-              messages.value.push({ 
-                type: 'ToolCallRequestEvent', 
-                source: 'assistant',
-                content: [{ 
-                  name: toolName,
-                  result: '执行中...'
-                }]
-              })
-              break
+              if (data.sender === 'FailCurrentSubtask' || data.sender === 'FinishCurrentSubtask') {
+                // 不显示这些工具调用
+                break
+              } else if (data.sender === 'Query_Knowledge') {
+                messages.value.push({
+                  type: 'QueryKnowledgeEvent',
+                  source: 'assistant',
+                  content: data.content
+                })
+                break
+              } else {
+                const toolInfo = data.content.split('...')[0]
+                const toolName = toolInfo.replace('正在执行', '').trim()
+                messages.value.push({ 
+                  type: 'ToolCallRequestEvent', 
+                  source: 'assistant',
+                  content: [{ 
+                    name: toolName,
+                    result: '执行中...'
+                  }]
+                })
+                break
+              }
             case 'tool_result':
               const lastToolMessage = [...messages.value].reverse().find(msg => 
                 msg.type === 'ToolCallRequestEvent' && 
