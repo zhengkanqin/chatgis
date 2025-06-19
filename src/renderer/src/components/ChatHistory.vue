@@ -45,6 +45,7 @@ const filterSystemWords = (content) => {
     .replace(/\[\$fail\].*?\[\$fail\]/g, '')
     .replace(/\[\$end\].*?\[\$end\]/g, '')
     .replace(/\[\$sender\].*?\[\$sender\]/g, '')
+    .replace(/\[\$execute\].*?\[\$execute\]/g, '')
     .trim();
 }
 </script>
