@@ -104,12 +104,13 @@ const filterSystemWords = (content) => {
             <div class="interrupt-content">{{ msg.content }}</div>
         </div>
 
-        <div v-else-if="msg.type === 'QueryKnowledgeEvent'" class="cool-query-knowledge-box">
+        <div v-else-if="msg.type === 'QueryKnowledgeEvent'" class="cool-query-knowledge-box" :class="{ 'querying': msg.querying }">
           <div class="cool-title">知识库查询</div>
           <div class="cool-content">
             <i class="pi pi-book" style="font-size: 1.5em; color: #4f8cff; margin-right: 0.5em;"></i>
             <span>{{ msg.content }}</span>
           </div>
+          <div class="shimmer-effect" v-if="msg.querying"></div>
         </div>
 
         <div v-else class="tool-message unknown">
@@ -399,21 +400,54 @@ const filterSystemWords = (content) => {
   padding: 1rem;
   margin: 1rem 0;
   box-shadow: 0 2px 12px #4f8cff22;
-  animation: pulse 1.5s infinite alternate;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
+
+.cool-query-knowledge-box.querying {
+  animation: pulse 1.5s infinite alternate;
+  border-color: #4f8cff;
+  background: linear-gradient(90deg, #e0f0ff 0%, #f0f7ff 100%);
+}
+
+.cool-query-knowledge-box:not(.querying) {
+  border-color: #52c41a;
+  background: linear-gradient(90deg, #f0fff0 0%, #f7fff0 100%);
+  box-shadow: 0 2px 12px #52c41a22;
+}
+
 .cool-title {
   font-weight: bold;
   color: #4f8cff;
   margin-bottom: 0.5em;
   font-size: 1.1em;
 }
+
 .cool-content {
   display: flex;
   align-items: center;
   font-size: 1.1em;
 }
-@keyframes pulse {
-  from { box-shadow: 0 2px 12px #4f8cff22; }
-  to   { box-shadow: 0 4px 24px #4f8cff66; }
+
+.shimmer-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 25%, rgba(79, 140, 255, 0.1) 50%, transparent 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 </style>
