@@ -18,6 +18,7 @@
         <div class="left-buttons">
           <i class="pi pi-file" title="文件" @click.stop="toggleFilePopover"></i>
           <i class="pi pi-book" title="计划" @click.stop="togglePlanPopover"></i>
+          <i class="pi pi-refresh" title="新会话" @click.stop="newThread"></i>
         </div>
         <button type="submit" :disabled="!input.trim() || isSending">
           <template v-if="isSending">
@@ -156,6 +157,20 @@ const triggerFileInput = async () => {
 
 const removeFile = (index) => {
   fileList.splice(index, 1)
+}
+
+const newThread = async () => {
+  try {
+    const response = await fetch('http://127.0.0.1:8000/new_threads')
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`)
+    }
+    messages.value = []
+    ElMessage.success('新会话已开启')
+  } catch (error) {
+    console.error('开启新会话失败:', error)
+    ElMessage.error('开启新会话失败，请查看控制台。')
+  }
 }
 
 const sendMessage = async () => {
