@@ -403,8 +403,7 @@ const sendMessage = async () => {
                 messages.value.push({
                   type: 'QueryKnowledgeEvent',
                   source: 'assistant',
-                  content: data.content,
-                  querying: true
+                  content: data.content
                 })
                 break
               } else {
@@ -427,14 +426,6 @@ const sendMessage = async () => {
               )
               if (lastToolMessage) {
                 lastToolMessage.content[0].result = data.content
-              }
-              
-              // 更新知识库查询状态
-              const lastQueryMessage = [...messages.value].reverse().find(msg => 
-                msg.type === 'QueryKnowledgeEvent' && msg.querying === true
-              )
-              if (lastQueryMessage) {
-                lastQueryMessage.querying = false
               }
               break
             case 'message':
