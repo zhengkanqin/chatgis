@@ -1,6 +1,6 @@
 # ChatGIS
 
-**版本：** 4 thinking 版本
+**版本：** V4-thinking
 
 ## 测试
 ```bash
