@@ -23,7 +23,7 @@
 
     <!-- PrimeVue 弹窗组件 -->
     <Dialog v-model:visible="visible" modal header="ChatGIS" :style="{ width: '350px' }" :draggable="false">
-      <p>Version：3.0</p>
+      <p>Version：4.0 thinking_version</p>
       <p>开发团队：郑堪钦 普贝吉 余佩瀚</p>
       <p>指导老师：应申</p>
       <p>意见反馈QQ：2335987512</p>

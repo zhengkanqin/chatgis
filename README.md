@@ -1,6 +1,5 @@
 # ChatGIS
-verison: 1
-
+verison: 4 thinking版本
 ## 测试：
 npm run dev
 
