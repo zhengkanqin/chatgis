@@ -17,7 +17,7 @@
       <div class="button-bar">
         <div class="left-buttons">
           <i class="pi pi-file" title="文件" @click.stop="toggleFilePopover"></i>
-          <i class="pi pi-book" title="知识库"></i>
+          <i class="pi pi-book" title="计划" @click.stop="togglePlanPopover"></i>
         </div>
         <button type="submit" :disabled="!input.trim() || isSending">
           <template v-if="isSending">
@@ -54,17 +54,35 @@
         </div>
       </div>
     </Popover>
+
+    <!-- 计划弹窗 -->
+    <Popover ref="planPopover" :showCloseIcon="true" appendTo="self" position="top">
+      <div class="plan-manager">
+        <div class="plan-header">
+          <h3>执行计划</h3>
+        </div>
+        <div class="plan-content" v-if="currentPlan">
+          <div v-html="renderMarkdown(currentPlan)" class="plan-markdown"></div>
+        </div>
+        <div class="plan-content" v-else>
+          <div class="no-plan">暂无执行计划</div>
+        </div>
+      </div>
+    </Popover>
   </div>
 </template>
 
 <script setup>
-import { ref, nextTick, onMounted, watch, reactive } from 'vue'
+import { ref, nextTick, onMounted, watch, reactive, onUnmounted } from 'vue'
 import ChatHistory from './ChatHistory.vue'
 import Popover from 'primevue/popover'
 import Button from 'primevue/button'
 import { useMapStore } from '../stores/mapStore'
 import html2canvas from 'html2canvas'
 import { ElMessage } from 'element-plus'
+import MarkdownIt from 'markdown-it'
+import hljs from 'highlight.js'
+import 'highlight.js/styles/github.css'
 
 const input = ref('')
 const messages = ref([])
@@ -72,8 +90,29 @@ const isSending = ref(false)
 const textarea = ref(null)
 const historyRef = ref(null)
 const filePopover = ref(null)
+const planPopover = ref(null)
 const fileList = reactive([])
+const currentPlan = ref('')
 const mapStore = useMapStore()
+
+// 初始化markdown渲染器
+const md = new MarkdownIt({
+  html: true,
+  linkify: true,
+  typographer: true,
+  breaks: true,
+  highlight: function (str, lang) {
+    if (lang && hljs.getLanguage(lang)) {
+      try {
+        const highlighted = hljs.highlight(str, { language: lang }).value
+        return `<pre><code class="hljs ${lang}">${highlighted}</code></pre>`
+      } catch (__) {}
+    }
+    return `<pre><code>${md.utils.escapeHtml(str)}</code></pre>`
+  }
+})
+
+const renderMarkdown = (content) => md.render(content)
 
 const isImageFile = (fileName) => {
   const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.webp']
@@ -509,19 +548,64 @@ const formatFileName = (fileName) => {
   return `${firstPart}...${lastPart}${extension}`;
 }
 
+const togglePlanPopover = (event) => {
+  const buttonRect = event.target.getBoundingClientRect()
+  const popover = planPopover.value
+  popover.toggle(event)
+  
+  nextTick(() => {
+    const popoverEl = popover.$el
+    if (popoverEl) {
+      const top = buttonRect.top - popoverEl.offsetHeight - 5
+      const left = buttonRect.left
+      popoverEl.style.top = `${top}px`
+      popoverEl.style.left = `${left}px`
+    }
+  })
+}
+
+// 处理plan类型的消息
+const handlePlanMessage = (msg) => {
+  if (msg.type === 'plan' && msg.data) {
+    currentPlan.value = msg.data
+    // 可以在这里添加通知用户有新计划的逻辑
+    console.log('收到新的执行计划:', msg.data)
+  }
+}
+
+// 监听WebSocket消息，处理plan类型
+const handleWebSocketPlanMessage = (event) => {
+  try {
+    const msg = JSON.parse(event.data)
+    if (msg.type === 'plan') {
+      handlePlanMessage(msg)
+    }
+  } catch (error) {
+    console.error('解析plan消息失败:', error)
+  }
+}
+
+// 在组件挂载时添加WebSocket监听
 onMounted(() => {
   adjustHeight()
+  
+  // 监听plan消息事件
+  window.addEventListener('plan-message', handlePlanMessageEvent)
 })
+
+// 在组件卸载时移除事件监听器
+onUnmounted(() => {
+  window.removeEventListener('plan-message', handlePlanMessageEvent)
+})
+
+// 处理plan消息事件
+const handlePlanMessageEvent = (event) => {
+  const { type, data } = event.detail
+  if (type === 'plan') {
+    handlePlanMessage({ type, data })
+  }
+}
 </script>
-
-
-
-
-
-
-
-
-
 
 <style scoped>
 .chat-container {
@@ -572,7 +656,6 @@ onMounted(() => {
   border-color: #2ea44f; /* 改成绿色边框 */
   box-shadow: 0 0 5px 2px #2ea44f80; /* 绿色阴影，颜色透明度自己调 */
 }
-
 
 .button-bar {
   display: flex;
@@ -729,5 +812,154 @@ button:hover:not(:disabled) {
 .file-list {
   max-height: 300px;
   overflow-y: auto;
+}
+
+.plan-manager {
+  padding: 1rem;
+  width: 300px; /* 固定宽度 */
+  background: white;
+  border-radius: 6px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+.plan-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.plan-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.5rem;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.no-plan {
+  text-align: center;
+  color: #666;
+  padding: 1rem;
+}
+
+.plan-markdown {
+  line-height: 1.6;
+  color: #333;
+}
+
+/* 添加表格样式 */
+:deep(.plan-markdown table) {
+  border-collapse: collapse;
+  margin: 1rem 0;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+:deep(.plan-markdown th),
+:deep(.plan-markdown td) {
+  border: 1px solid #ddd;
+  padding: 6px;
+  text-align: left;
+}
+
+:deep(.plan-markdown th) {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+:deep(.plan-markdown tr:nth-child(even)) {
+  background-color: #f9f9f9;
+}
+
+:deep(.plan-markdown tr:hover) {
+  background-color: #f0f0f0;
+}
+
+/* 代码块样式 */
+:deep(.plan-markdown pre) {
+  background-color: #f6f8fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  padding: 16px;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+:deep(.plan-markdown code) {
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  padding: 2px 4px;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.9em;
+}
+
+:deep(.plan-markdown pre code) {
+  background-color: transparent;
+  padding: 0;
+}
+
+/* 标题样式 */
+:deep(.plan-markdown h1),
+:deep(.plan-markdown h2),
+:deep(.plan-markdown h3),
+:deep(.plan-markdown h4),
+:deep(.plan-markdown h5),
+:deep(.plan-markdown h6) {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+:deep(.plan-markdown h1) { font-size: 1.5rem; }
+:deep(.plan-markdown h2) { font-size: 1.3rem; }
+:deep(.plan-markdown h3) { font-size: 1.1rem; }
+
+/* 列表样式 */
+:deep(.plan-markdown ul),
+:deep(.plan-markdown ol) {
+  padding-left: 2rem;
+  margin: 1rem 0;
+}
+
+:deep(.plan-markdown li) {
+  margin: 0.25rem 0;
+}
+
+/* 引用样式 */
+:deep(.plan-markdown blockquote) {
+  border-left: 4px solid #dfe2e5;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: #6a737d;
+}
+
+/* 链接样式 */
+:deep(.plan-markdown a) {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+:deep(.plan-markdown a:hover) {
+  text-decoration: underline;
+}
+
+/* 强调样式 */
+:deep(.plan-markdown strong) {
+  font-weight: 600;
+}
+
+:deep(.plan-markdown em) {
+  font-style: italic;
 }
 </style>

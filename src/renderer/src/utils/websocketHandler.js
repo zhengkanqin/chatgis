@@ -69,6 +69,13 @@ export const handleWebSocketMessage = (event, mapRef) => {
             break; 
         }
         break;
+    case 'plan':
+      console.log('收到执行计划:', msg.data);
+      // 触发自定义事件，让chat组件可以监听
+      window.dispatchEvent(new CustomEvent('plan-message', { 
+        detail: { type: 'plan', data: msg.data } 
+      }));
+      break;
     // 在这里可以添加更多的消息类型处理
     case 'file':
       console.log('处理文件上传');
