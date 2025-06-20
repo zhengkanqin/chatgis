@@ -108,7 +108,7 @@ const filterSystemWords = (content) => {
           <div class="cool-title">查询知识库</div>
           <div class="cool-content">
             <i class="pi pi-book" style="font-size: 1.5em; color: #4f8cff; margin-right: 0.5em;"></i>
-            <!-- <span>{{ msg.content }}</span> -->
+            <span>知识库版本：ChatGIS_Version_1.0(本地)</span>
           </div>
         </div>
 
